@@ -1,0 +1,560 @@
+newline  {
+
+}
+
+BasicDefense	{Basic Defense}
+perkBasicDefense
+{
+Incoming damage to the character is reduced by 10%.
+}
+
+AdvancedDefense	{Advanced Defense}
+perkAdvancedDefense
+{
+Incoming damage to the character is reduced by 20%.
+}
+
+CriticalHit	{Critical Hit}
+perkCriticalHit
+{
+Character receives a 5% chance to land a critical hit on the opponent.
+}
+
+Ciras	{Cuirass}
+perkCiras
+{
+This skill allows the usage of cuirasses.
+}
+
+SwordplayProfessional	{Professional Fighter}
+perkSwordplayProfessional
+{
+15% chance to land a critical hit on an enemy. Incoming damage to the character is reduced by 30%.
+}
+
+Grus	{Pack Mule}
+perkGrus
+{
+This ability allows you to carry an additional 30 pounds.
+}
+
+Rush	{The Ometochtli tincture}
+perkRush
+{
+Intoxicating tincture, contributing to the instantaneous manifestation of tremendous strength and endurance, a significant increase in dexterity and quickness of reaction with intense aggression and insensitivity to pain.
+For 12 seconds, the character's attacks become much more powerful and the incoming damage is reduced.
+~
+This ability has a 1 minute cooldown.
+}
+
+Tireless	{Tireless}
+perkTireless
+{
+You get your second wind in combat, which helps you reduce fighting fatigue. +15% energy recovery.
+}
+
+HardHitter {Hard Hitter}
+perkHardHitter
+{
+A successful Heavy Attack gets a 30% damage bonus.
+}
+
+BladeDancer	{Blade Dance}
+perkBladeDancer
+{
+A successful Group Attack gets a 30% damage bonus.
+}
+
+Sliding	{Irresistible Strike}
+perkSliding
+{
+You have an additional 20% chance to strike through the enemy's blocking. 
+1% extra per each (S).
+}
+
+Gunman {Musketeer}
+perkGunman
+{
+The character uses handguns more effectively: reload is 10% faster and accuracy is increased by 10%.
+~ 
+You can use arquebuses, muskets, mortars and other heavy one-barrel weaponry. 
+~
+Only the main character and very specific Vanguards can equip guns like this.
+}
+
+GunProfessional {Skirmisher}
+perkGunProfessional
+{
+25% faster reloading of firearms. 25% increase in accuracy.
+~
+You can use multibarreled and repeating firearms.
+~
+The character can fire a musket through allies without hitting them. Bullseye!
+}
+
+IronWill	{Iron Will}
+perkIronWill
+{
+Character can survive a mortal blow once in three minutes.
+~
+Reduced a mutiny chance.
+~
+Works for the main character, his Bosun and Vanguards.
+}
+
+SharedExperience	{Quick Learning}
+perkSharedExperience
+{
+Faster levelling and gaining skill points, equivalent to gaining an additional point of Talent (T).
+~
+The experience gained on the hero's skills is shared with passengers, officers and companions with twice the amount and is 10%, 50% and 33%, respectively.
+}
+
+Medic	{Excellent Health}
+perkMedic
+{
+You to restore health faster, if no serious wounds had to be endured during the day. Reduces the decrease of health if the character is wounded. Works while sailing, but slower.
+~
+~
+Available only for player
+}
+
+HPPlus	{Growing Life}
+perkHPPlus
+{
+This ability increases the maximum hitpoints of the hero by one additional point per each new level. Retroactive.
+}
+
+EnergyPlus	{Growing Energy}
+perkEnergyPlus
+{
+Increases the maximum energy points of the hero by one point per each new level. Retroactive.
+}
+
+ByWorker	{Moonlighting}
+perkByWorker
+{
+This character can occupy two officer positions at once.
+~
+~
+~
+~
+~
+Officers only.		 
+}
+
+ByWorker2	{Jack of All Trades}
+perkByWorker2
+{
+This character can occupy three officer positions at once.
+~
+~
+~
+~
+~
+Officers only.		
+}
+
+Trustworthy	{Trustworthy}
+perkTrustworthy
+{
+Negative honor no longer hinders quest opportunities.
+~
+Enhanced ability to deceive guards.
+~
+Access to additional crew members and officers for hire in taverns.
+~
+Unlocks unique options in select quests.
+~
+Main character only.
+}
+
+ShipEscape	{Emergency Rescue}
+perkShipEscape
+{
+You can use a life boat to save yourself from a sinking ship.
+~
+If a companion has this ability, he or her will escape a sinking ship or a brander, returning to you on a life boat.
+}
+
+Alchemy	{Alchemy}
+perkAlchemy
+{
+Allows to craft items without the use of special tools such as an alchemist's chest.
+~
+~
+~
+~
+Available only for player	
+}
+
+FastReload {Fast Reloading}
+perkFastReload
+{
+Reloading of cannons is accelerated by 10%.
+}
+
+ImmediateReload	{Prepared Reloading}
+perkImmediateReload
+{
+After using this ability the next reload will proceed 30% faster. This ability has a 5 min cooldown.
+}
+
+HullDamageUp	{Increased Hull Damage}
+perkHullDamageUp
+{
+Damage to an enemy ship's hull is increased by 15%.
+}
+
+SailsDamageUp	{Increased Sails Damage}
+perkSailsDamageUp
+{
+Damage to an enemy ship's sails is increased by 15%.
+}
+
+CrewDamageUp {Increased Crew Damage}
+perkCrewDamageUp
+{
+Damage to an enemy ship's crew is increased by 15%.
+}
+
+CriticalShoot	{Critical Shot}
+perkCriticalShoot
+{
+The character gets a 5% chance to score a critical hit with a volley fired at the enemy.
+}
+
+LongRangeShoot	{Increased Firing Range}
+perkLongRangeShoot
+{
+Firing range of cannons is increased by 15%.
+}
+
+CannonProfessional	{Professional Gunner}
+perkCannonProfessional
+{
+Damage to any part of the enemy ship is increased by 30%. Chance to score a critical hit is increased by 15%.
+}
+
+LongRangeGrappling	{Effective Boarding}
+perkLongRangeGrappling
+{
+The boarding range is increased by 15%.
+}
+
+MusketsShoot {Musket Salvo}
+perkMusketsShoot
+{
+A musket salvo is shot right before boarding.
+~
+The enemy's casualties depend on the ship's size and on the amount of active Vanguards.
+}
+
+GrapplingProfessional	{Professional Boarding}
+perkGrapplingProfessional
+{
+The boarding range is increased by 25%. A ship can now be boarded at any angle and ship speed.
+}
+
+BasicBattleState	{Basic Ship Defense}
+perkBasicBattleState
+{
+Generic damage dealt to the ship is reduced by 15%.
+}
+
+AdvancedBattleState	{Improved Ship Defense}
+perkAdvancedBattleState
+{
+Generic damage dealt to the ship is reduced by 25%.
+}
+
+ShipDefenseProfessional	{Professional Ship Defense}
+perkShipDefenseProfessional
+{
+Generic damage dealt to the ship is reduced by 25%. The chance to receive a critical hit is reduced by 70%.
+}
+
+
+ShipSpeedUp	{Increased Speed}
+perkShipSpeedUp
+{
+The maximum speed of the ship is increased by 15%.
+}
+
+ShipTurnRateUp	{Increased Maneuverability}
+perkShipTurnRateUp
+{
+Maneuverability of the ship is increased by 15%.
+}
+
+StormProfessional	{Survival in Storms}
+perkStormProfessional
+{
+Damage dealt by storms is reduced by 30%.
+}
+
+Turn180	{Quick Turnaround}
+perkTurn180
+{
+For 1 minute, the speed of the turnaround is 4 times faster. This ability has a 3 min cooldown.
+}
+
+SailingProfessional	{Skilled Seafarer}
+perkSailingProfessional
+{
+The speed and maneuverability of the ship is increased by 20%. 3/4 of the ordinary ships on the world map can be bypassed.
+}
+
+SeaDogProfessional	{Scourge of the Seas}
+perkSeaDogProfessional
+{
+Even the inveterate adventurers and brigands will not dare to try their luck when they see the flag of the Scourge of the Seas. Protects from attacks by enemy squadrons. Doesn't work on small ships.
+~
+~
+~
+Ability available only for player
+}
+
+FlagPir	{Pirate Flag}
+perkFlagPir
+{
+Gives the opportunity to change your flag to the Jolly Roger.
+~
+~
+~
+Available only for player	
+}
+
+FlagEng	{English Flag}
+perkFlagEng
+{
+Gives the opportunity to change your flag to the flag of England. The chance that your disguise will not work depends on stealth, number and classes of ships in the squadron and on the number of enemy ships and bounties.
+~
+~
+~
+Available only for player	
+}
+
+FlagFra	{French Flag}
+perkFlagFra
+{
+Gives the opportunity to change your flag to the flag of France. The chance that your disguise will not work depends on stealth, number and classes of ships in the squadron and on the number of enemy ships and bounties.
+~
+~
+~
+Available only for player
+}
+
+FlagSpa	{Spanish Flag}
+perkFlagSpa
+{
+Gives the opportunity to change your flag to the flag of Spain. The chance that your disguise will not work depends on stealth, number and classes of ships in the squadron and on the number of enemy ships and bounties.
+~
+~
+~
+Available only for player
+}
+
+FlagHol	{Dutch Flag}
+perkFlagHol
+{
+Gives the opportunity to change your flag to the flag of Holland. The chance that your disguise will not work depends on stealth, number and classes of ships in the squadron and on the number of enemy ships and bounties.
+~
+~
+~
+Available only for player
+}
+
+Brander	{Brander}
+perkBrander
+{
+Unlocks a tactic to send an allied ship to detonate near a enemy ship, dealing huge damage.
+}
+
+Troopers	{Siege Tactics}
+perkTroopers
+{
+Gives the opportunity to use the crews from all ships in your fleet to assault a fort, sending them as a united force.
+Reduces the squad size needed for a land assault on the settlement.
+}
+
+BasicCommerce	{Basic Commerce}
+perkBasicCommerce
+{
+Extra 10% discount on all trading operations.
+}
+
+AdvancedCommerce	{Advanced Commerce}
+perkAdvancedCommerce
+{
+Extra 10% selling bonus on all trading operations.
+}
+
+ProfessionalCommerce	{Professional Commerce}
+perkProfessionalCommerce
+{
+Extra 15% discount and 15% selling bonus on all trading operations.
+}
+
+Carpenter	{Autonomous Repair}
+perkCarpenter
+{
+This skill works during adventures on land or on the global map. On the ship, if the captain possesses this ability, a damaged hull or rigging on existing masts is slowly restored. Requires planks to repair the hull and sailcloth to fix sails.
+}
+
+InstantRepair	{Combat Repair}
+perkInstantRepair
+{
+A quick repair, which can be done even in the heat of a battle in exchange of a massive amount of planks and sailcloth. Fallen masts cannot be restored.
+Maximum restoration of the ship's hull 80%, depending on Repair skills, equipped items and Repair skill.
+90 seconds cooldown.
+}
+
+LightRepair	{Emergency Repair}
+perkLightRepair
+{
+This skill allows to quickly patch the ship's hull in combat - maximum 10% of the available hull HP. Also prevents a ship from starting to sink after if its HP is less than 10%.
+Works for 60 seconds once every 3 minutes.
+The autonomous repair is accelerated by 50%.
+}
+
+Builder	{Professional Repair}
+perkBuilder
+{
+Any repair requires 25% less of planks and sailcloth. The autonomous repair is accelerated by 100%.
+}
+
+SelfRepair {Full Repair}
+perkSelfRepair
+{
+Allows to fully repair the ship with the efforts of your crew on any convenient shore. Planks and sailcloth are required. Allows to completely restore the hull, sails and masts.
+Repair can only be performed on land in a coastal location.
+}
+
+WindCatcher	{Increased Dynamics}
+perkWindCatcher
+{
+You can feel the slightest change in wind direction and can use it to your advantage. Ship accelerates 10% faster.
+}
+
+SailsMan	{Fast Sails}
+perkSailsMan
+{
+You managed to speed all operation of sails by 10%.
+}
+
+Doctor1	{Physician}
+perkDoctor1
+{
+Decreases the casualties from wounds and grapeshot by 10% in naval combat.
+}
+
+Doctor2	{Surgeon}
+perkDoctor2
+{
+Decreases the casualties from wounds and grapeshot by 20% in naval combat.
+}
+
+InstantBoarding {Instant Boarding}
+FencingMaster {Duelist}
+perkFencingMaster
+{
+Getting hit in combat doesn't deplete energy.
+~
+10% chance of landing a critical hit.
+~
+A successful Fast Attack gets a 30% damage bonus.
+~
+Duelist background only.
+}
+
+TannedLeather {Thick Skin}
+perkTannedLeather
+{
+Light armor and clothes protect 20% more effectively.
+~
+~
+~
+Duelist background only.
+}
+
+RatsWolf {Rat Wolf}
+perkRatsWolf
+{
+Your ship is unlikely to be harmed by rats or other pests.
+~
+~
+~
+Accountant background only.
+}
+
+Mimicry {Natural Pretender}
+perkMimicry
+{
+The probability of being detected by warships and forts is reduced by 50%.
+~
+~
+~
+Accountant background only.
+}
+
+TreasureHunter {Treasure Hunter}
+perkTreasureHunter
+{
+Excellent flair allows you to find treasures with better content.
+~
+~
+~
+Accountant background only.
+}
+
+Dragoon {Bronze Horseman}
+perkDragoon
+{
+Cuirasses protect 15% more effectively.
+~
+Successful Slash and Heavy Attacks get a 15% and 30% damage bonus, respectively.
+~
+~
+Athlete background only.
+}
+
+SecondWind {Living Breath}
+perkSecondWind
+{
+Energy recovery is 15% faster.
+~
+~
+~
+Athlete background only.
+}
+
+Jager {Jager}
+perkJager
+{
+Firearms reloading is 40% faster.
+~
+~
+~
+Sharpshooter background only.
+}
+
+Bombardier {Bombardier}
+perkBombardier
+{
+Cannons survive longer in a fight.
+~
+~
+~
+Sharpshooter background only.
+}
+
+Sniper {Sniper}
+perkSniper
+{
+Shooting personal firearms shocks the target and forces it to lose energy.
+~
+~
+~
+Sharpshooter background only.
+}

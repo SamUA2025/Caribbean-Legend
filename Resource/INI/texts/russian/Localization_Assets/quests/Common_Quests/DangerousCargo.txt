@@ -1,0 +1,12 @@
+DangerousCargo_1
+{
+Нормандия
+}
+DangerousCargo_2
+{
+Маленький
+}
+DangerousCargo_3
+{
+Джимми
+}

@@ -1,0 +1,198 @@
+newline  {
+
+}
+
+headers { 17 }
+
+header_1_text {  }
+header_1_color { yellow }
+header_1_lines { 0 }
+header_1_skip { 9 }
+
+======================================
+
+header_2_text { Руководитель проекта }
+header_2_lines { 1 }
+header_2_line_1 { Михаил Коваленко }
+header_3_text { Гейм-дизайн }
+header_3_lines { 3 }
+header_3_line_1 { Тимофей (Tymofei) Скляров }
+header_3_line_2 { Денис (Jason) Забавский }
+header_3_line_3 { Иван (Joruba) Помыткин }
+header_4_text { 3D-моделирование }
+header_4_lines { 5 }
+header_4_line_1 { Тимофей (Tymofei) Скляров }
+header_4_line_2 { Александр Тураев }
+header_4_line_3 { Александр (roderik) Фролов }
+header_4_line_4 { Михаил (d'Artagnan) Мельник }
+header_4_line_5 { Сергей (wulfrein) Федосов }
+header_5_text { Текстурирование и растровая графика }
+header_5_lines { 9 }
+header_5_line_1 { Олег (Metazot) Зотов }
+header_5_line_2 { Тимофей (Tymofei) Скляров }
+header_5_line_3 { Александр Тураев }
+header_5_line_4 { Александр (roderik) Фролов }
+header_5_line_5 { Александр (os_) Ольховников }
+header_5_line_6 { Сергей Карпенко }
+header_5_line_7 { Михаил (d'Artagnan) Мельник }
+header_5_line_8 { Сергей (wulfrein) Федосов }
+header_5_line_9 { Константин Васильев }
+header_6_text { UX/UI-дизайн и программирование }
+header_6_lines { 3 }
+header_6_line_1 { Сергей Карпенко }
+header_6_line_2 { Константин (mitrokosta) Митрофанов }
+header_6_line_3 { Александр (BelAmour) Миронов }
+header_7_text { Программисты }
+header_7_lines { 7 }
+header_7_line_1 { Евгений (ugeen) Плисковский }
+header_7_line_2 { Денис (Jason) Забавский }
+header_7_line_3 { Антон (Warship) Коваленко }
+header_7_line_4 { Александр (BelAmour) Миронов }
+header_7_line_5 { Константин (mitrokosta) Митрофанов }
+header_7_line_6 { Сергей Карпенко }
+header_7_line_7 { Никита (nik) Крапивин }
+header_8_text { Авторы сценария }
+header_8_lines { 3 }
+header_8_line_1 { Олег (Metazot) Зотов }
+header_8_line_2 { Денис (Jason) Забавский }
+header_8_line_3 { Иван (Joruba) Помыткин }
+header_9_text { Режиссура и постановка квестов }
+header_9_lines { 2 }
+header_9_line_1 { Денис (Jason) Забавский }
+header_9_line_2 { Иван (Joruba) Помыткин }
+header_10_text { Диалоги }
+header_10_lines { 3 }
+header_10_line_1 { Денис (Jason) Забавский }
+header_10_line_2 { Олег (Metazot) Зотов }
+header_10_line_3 { Иван (Joruba) Помыткин }
+header_11_text { Композитор }
+header_11_lines { 1 }
+header_11_line_1 { Александр Дроздов }
+header_12_text { Режиссер озвучания }
+header_12_lines { 1 }
+header_12_line_1 { Алексей (Vinnie) Никифоров }
+header_13_text { Звукоинженер }
+header_13_lines { 1 }
+header_13_line_1 { Александр Красавцев "In-Line studio" }
+header_14_text { Актеры }
+header_14_lines { 7 }
+header_14_line_1 { Игорь Корнилов }
+header_14_line_2 { Александр Терехов }
+header_14_line_3 { Олеся Асеева }
+header_14_line_4 { Виктор Солодков }
+header_14_line_5 { Валентин Самохин }
+header_14_line_6 { Александр Новиков }
+header_14_line_7 { Алексей (Vinnie) Никифоров }
+header_15_text { Художник }
+header_15_lines { 1 }
+header_15_line_1 { Александр (lyah) Ляхов }
+header_16_text { Видеоматериалы }
+header_16_lines { 2 }
+header_16_line_1 { Теса (Tesa) Кровичене }
+header_16_line_2 { Михаил (d'Artagnan) Мельник }
+header_17_text { Студия выражает благодарность }
+header_17_lines { 104 }
+header_17_line_1 { Александру (Reefership) Мосяжу }
+header_17_line_2 { Андрею (Hawcker) Амарфию }
+header_17_line_3 { Одноглазый }
+header_17_line_4 { Елене (makarena) Макаровой }
+header_17_line_5 { Валерию (валера) Мошатину }
+header_17_line_6 { Дмитрию (dim10) Трубецкому }
+header_17_line_7 { Шоте (Ван дер Декен) Губелидзе }
+header_17_line_8 { Игорю (delfin_) Чернею }
+header_17_line_9 { Максиму (Shomaan) Шиманскому }
+header_17_line_10 { Матвею (Mett) Топчилко }
+header_17_line_11 { Алексею (q4a) Комарову }
+header_17_line_12 { Сергею (Serginio) Капцану }
+header_17_line_13 { Виталию (Альмейде) Нечхаеву }
+header_17_line_14 { Александру (Lexanni) Волчкову }
+header_17_line_15 { Александру (Шурик) Шпехту }
+header_17_line_16 { Александру (Captain Flint) Кожушко }
+header_17_line_17 { Дмитрию (Джафару) Стреляеву }
+header_17_line_18 { Юрию (Ursus) Рогачу }
+header_17_line_19 { Алексею (AlexusB) Бобровникову }
+header_17_line_20 { Алексею (Soni) Рябову }
+header_17_line_21 { Montbrain }
+header_17_line_22 { pirat1 }
+header_17_line_23 { Zagolsky }
+header_17_line_24 { Ивану (kb31) Кондакову }
+header_17_line_25 { Артему Кононенко }
+header_17_line_26 { Sam Hambrouck  }
+header_17_line_27 { Ивану Якимчаку }
+header_17_line_28 { Andrea Mangione  }
+header_17_line_29 { Константину Облаухову }
+header_17_line_30 { Артему Воротникову }
+header_17_line_31 { Вадиму Грудеву }
+header_17_line_32 { Andrei Shtabel  }
+header_17_line_33 { Szymon J.  }
+header_17_line_34 { Anthony Lapenok  }
+header_17_line_35 { Станиславу Жукову }
+header_17_line_36 { Asapin  }
+header_17_line_37 { Евгению Шалыгину }
+header_17_line_38 { kk-se  }
+header_17_line_39 { Егору Олефиренко }
+header_17_line_40 { TotalCaesar659  }
+header_17_line_41 { CaptainBeltrop  }
+header_17_line_42 { Николаю Пригодичу }
+header_17_line_43 { wildam }
+header_17_line_44 { EvgAnat }
+header_17_line_45 { Nikk }
+header_17_line_46 { Johnny88 }
+header_17_line_47 { Xenon }
+header_17_line_48 { Павлу Ловцову }
+header_17_line_49 { Алексею Уткину }
+header_17_line_50 { Сергею Арифулину }
+header_17_line_51 { Георгию Неприенко }
+header_17_line_52 { Александру Кузнецову }
+header_17_line_53 { Владиславу Масенко }
+header_17_line_54 { Роману Ковалеву }
+header_17_line_55 { Артему Толстоброву }
+header_17_line_56 { Максиму Хохрину }
+header_17_line_57 { Сардиону Млхоеву }
+header_17_line_58 { Тимуру Буачидзе }
+header_17_line_59 { Сергею Попову }
+header_17_line_60 { Алексею Коновалову }
+header_17_line_61 { Максиму Вандушеву }
+header_17_line_62 { Дмитрию Миропольскому }
+header_17_line_63 { Сергею Порывкину }
+header_17_line_64 { Дмитрию Лапину }
+header_17_line_65 { Федору Гончарову }
+header_17_line_66 { Михаилу Еремееву }
+header_17_line_67 { Вячеславу Никитину }
+header_17_line_68 { Антону Пантелееву }
+header_17_line_69 { Александру Заливако }
+header_17_line_70 { Герману Горшкову }
+header_17_line_71 { Jason Rhodes }
+header_17_line_72 { Eric Smith }
+header_17_line_73 { Владиславу Гольцу }
+header_17_line_74 { Damien Pittet }
+header_17_line_75 { Maik Pfarrherr }
+header_17_line_76 { Alessio Casarin }
+header_17_line_77 { Kyle J. S. }
+header_17_line_78 { Александру Меркушину }
+header_17_line_79 { Sam Muench }
+header_17_line_80 { Michael Perkins }
+header_17_line_81 { Bud Buddy }
+header_17_line_82 { Lartan }
+header_17_line_83 { Xenon Casper }
+header_17_line_84 { Анастасии Авериной }
+header_17_line_85 { Артему Вентцелю }
+header_17_line_86 { Alessio Casarin }
+header_17_line_87 { Sam Muench }
+header_17_line_88 { Franciszek Jureczka }
+header_17_line_89 { William Nelson }
+header_17_line_90 { Dmytro Kekukh }
+header_17_line_91 { Maris Jurgenbergs }
+header_17_line_92 { Daniel Helmenstein }
+header_17_line_93 { Sami Vahtera }
+header_17_line_94 { Vova Bezruchuk }
+header_17_line_95 { Jakub R. K. Szczygiel }
+header_17_line_96 { Sergiy Bezruchuk }
+header_17_line_97 { Peter Mitchell }
+header_17_line_98 { Bartlomiej Borkowski }
+header_17_line_99 { Igor Juhas }
+header_17_line_100 { Mark Brooks }
+header_17_line_101 { Jonas Kaufmann }
+header_17_line_102 { ScreamPassion }
+header_17_line_103 { Дмитрию (Капитан Фадей) Кидуну }
+header_17_line_104 { Денису (John Prelone) Худякову }

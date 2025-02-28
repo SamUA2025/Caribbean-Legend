@@ -1,0 +1,103 @@
+RPGUtilite_1
+{
+Получен опыт ~
+}
+
+RPGUtilite_2
+{
+ужасное
+}
+RPGUtilite_3
+{
+плохое
+}
+
+RPGUtilite_4
+{
+неважное
+}
+
+RPGUtilite_5
+{
+среднее
+}
+
+RPGUtilite_6
+{
+хорошее
+}
+
+RPGUtilite_7
+{
+отличное
+}
+
+RPGUtilite_8
+{
+Здоровье улучшилось
+}
+
+RPGUtilite_9
+{
+Здоровье ухудшилось
+}
+
+RPGUtilite_10
+{
+Награда за голову выросла
+}
+
+RPGUtilite_11
+{
+Отношение улучшилось
+}
+
+RPGUtilite_12
+{
+Отношение улучшилось
+}
+
+RPGUtilite_13
+{
+Отношение ухудшилось
+}
+
+RPGUtilite_14
+{
+Награда за голову 
+}
+
+RPGUtilite_15
+{
+Враждебная
+}
+
+RPGUtilite_16
+{
+Нейтральная
+}
+
+RPGUtilite_17
+{
+Хорошая
+}
+
+RPGUtilite_18
+{
+Отличная
+}
+
+RPGUtilite_19
+{
+Восхищение
+}
+
+RPGUtilite_20
+{
+Радуга
+}
+
+RPGUtilite_21
+{
+Быстрый вепрь
+}

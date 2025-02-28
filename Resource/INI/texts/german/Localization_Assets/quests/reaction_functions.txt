@@ -1,0 +1,19 @@
+reaction_functions_1
+{
+Mangarosa potion overdose!
+}
+
+reaction_functions_2
+{
+You got poisoned
+}
+
+reaction_functions_3
+{
+Special Mangarosa Potion Used!
+}
+
+reaction_functions_4
+{
+The effect of the mangarosa potion has ended
+}
