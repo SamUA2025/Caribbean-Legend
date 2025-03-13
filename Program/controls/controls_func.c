@@ -238,8 +238,10 @@ void Process_Controls(string ControlName)
 			else
 				kZoom = stf(locCamera.zoom);
 			kZoom += 0.05;
-			if(kZoom > 1.0)
-				kZoom = 1.0;
+			if(!bBettaTestMode)
+			{
+				if(kZoom > 1.0) kZoom = 1.0;
+			}
 			locCamera.zoom = kZoom;
 			locCameraSetRadius(stf(locCamera.maxRadius)*kZoom);
 		break;

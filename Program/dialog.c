@@ -438,7 +438,7 @@ void AddDialogMeta() {
 		}
 		else
 		{
-			if(!CheckAttribute(link, linkName + ".edit")) link.(linkName) = XI_ConvertString("Continue");
+			if(!CheckAttribute(link, linkName + ".edit")) link.(linkName) = "...";
 		}
 	}
 }

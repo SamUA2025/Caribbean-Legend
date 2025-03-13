@@ -421,16 +421,43 @@ void ProcessDialogEvent()
 		
 		// торговля шелком
 		case "trade_silk":
-			dialog.text = "Sicher, Kapitän. Ihre Seide wartet auf Sie. Sind Sie bereit, dafür zu bezahlen?";
-			if (PCharDublonsTotal() >= 600)
+			if (CheckAttribute(pchar, "questTemp.UpgradeSilk"))
 			{
-				link.l1 = "Sicher! Hier, nimm sechshundert Dublonen.";
-				link.l1.go = "trade_silk_1";
+				dialog.text = "Sicher, Kapitän. Ihre Seide wartet auf Sie. Sind Sie bereit, dafür zu bezahlen?";
+				if (PCharDublonsTotal() >= 2550)
+				{
+					link.l1 = "Sicher! Hier, nimm 2550 Dublonen.";
+					link.l1.go = "trade_silk_1";
+				}
+				else
+				{
+					link.l1 = "Verdammt, ich habe das Geld auf meinem Schiff vergessen. Ich bringe es in einer Sekunde!";
+					link.l1.go = "exit";
+				}
 			}
 			else
 			{
-				link.l1 = "Verdammt, ich habe das Geld auf meinem Schiff vergessen. Ich bringe es in einer Sekunde!";
-				link.l1.go = "exit";
+				dialog.text = "Sicher, Kapitän. Ihre Seide wartet auf Sie. Sind Sie bereit, dafür zu bezahlen?";
+				if (PCharDublonsTotal() >= 600)
+				{
+					link.l1 = "Sicher! Hier, nimm sechshundert Dublonen.";
+					link.l1.go = "trade_silk_1";
+				}
+				else
+				{
+					link.l1 = "Verdammt, ich habe das Geld auf meinem Schiff vergessen. Ich bringe es in einer Sekunde!";
+					link.l1.go = "exit";
+				}
+			}
+			if(sti(pchar.questTemp.GVIKSilk) >= 1 && !CheckAttribute(pchar, "questTemp.GVIKSilkBlock")) // увеличить объём поставок шёлка
+			{
+				link.l4 = "Mijnheer "+npchar.name+", ich möchte gerne die Möglichkeit besprechen, die Seidenlieferungen zu erhöhen.";
+				link.l4.go = "UpgradeSilk";
+			}
+			if(sti(pchar.questTemp.GVIKSilk) >= 1 && CheckAttribute(pchar, "questTemp.GVIKSilkPotom") && PCharDublonsTotal() >= 3000) // увеличить объём поставок шёлка, если в первый раз не принесли
+			{
+				link.l4 = "Ich habe Ihre Dublonen gebracht, Mijnheer "+npchar.name+". Bitte nehmen Sie sie entgegen.";
+				link.l4.go = "UpgradeSilk_Agreed";
 			}
 			NextDiag.TempNode = "HWIC_Boss";
 		break;
@@ -452,6 +479,78 @@ void ProcessDialogEvent()
 			DeleteAttribute(npchar, "quest.silk");
 			SetFunctionTimerCondition("Silk_TraderAttrReturn", 0, 0, 1, false); // таймер
 			AddCharacterExpToSkill(pchar, "Commerce", 150);
+			NextDiag.TempNode = "HWIC_Boss";
+		break;
+		
+		case "UpgradeSilk": //
+			if (GetSummonSkillFromName(pchar, SKILL_COMMERCE) >= 80)
+			{
+				dialog.text = "Ich schätze Ihren geschäftlichen Ansatz und bin bereit, Ihre Anfrage zu prüfen. Vielleicht könnten wir das Volumen, sagen wir, verfünffachen. Allerdings wird die Organisation solcher Lieferungen erhebliche Ressourcen erfordern. Wir müssen Lagerräume erweitern, die Sicherheit verstärken und zuverlässige Lieferwege gewährleisten. Da dies auch Ihnen zugute kommt, schlage ich vor, dass wir diese Kosten unter uns aufteilen.";
+				link.l1 = "Das klingt alles vernünftig. Welchen Betrag halten Sie für notwendig, um diese Ausgaben zu decken?";
+				link.l1.go = "UpgradeSilk_1";
+				notification("Skill Check Passed", SKILL_COMMERCE);
+			}
+			else
+			{
+				dialog.text = "Ich verstehe Ihr Interesse an einer Erhöhung der Lieferungen, allerdings fällt es mir in dieser Phase schwer, solchen Änderungen zuzustimmen. Ich zweifle nicht an Ihrem Streben nach Entwicklung, aber für diese Art von Transaktion benötigt man viel mehr Erfahrung in Handelsangelegenheiten und Vertrauen in die eigenen Handlungen. Ich schlage vor, dass Sie Ihre Kenntnisse in der Kunst der Verhandlung erweitern und dann mit einem konkreteren Vorschlag zu mir zurückkehren. Wenn Sie bereit sind, freue ich mich darauf, unsere Zusammenarbeit zu stärken.";
+				link.l1 = "Hmm... Gut. Ich werde später auf dieses Gespräch zurückkommen.";
+				link.l1.go = "exit";
+				notification("Skill Check Failed (80)", SKILL_COMMERCE);
+			}
+			NextDiag.TempNode = "HWIC_Boss";
+		break;
+		
+		case "UpgradeSilk_1":
+			dialog.text = "Unter Berücksichtigung aller Feinheiten wird Ihr Kostenanteil dreitausend goldene Dublonen betragen. Diese Mittel werden es uns ermöglichen, die notwendigen Maßnahmen ohne Verzögerung zu organisieren.";
+			link.l1 = "Mijnheer "+npchar.name+", dreitausend Dublonen? Ist das ein Scherz? Ich bin mit einem ehrlichen Angebot zu Ihnen gekommen, und Sie wollen, dass ich einen solch unglaublichen Betrag für die Organisation von Lieferungen zahle?";
+			link.l1.go = "UpgradeSilk_2";
+		break;
+		
+		case "UpgradeSilk_2":
+			dialog.text = "Ich bitte Sie, mich richtig zu verstehen. Ich versuche nicht, Sie zu täuschen. Dieses Geld ist der Betrag, der es uns ermöglichen wird, die richtige Ordnung bei der Organisation der Lieferungen zu gewährleisten. Es geht nicht nur um die Erweiterung von Lagern und Sicherheit, sondern auch darum, die Lieferung von Waren ohne Verzögerungen und Verluste zu garantieren, trotz aller Unvorhersehbarkeit dieses Geschäfts. Dies sind Standardausgaben für solche Mengen. Letztendlich werden sich Ihre Investitionen rechtfertigen, und Sie erhalten die Waren in einwandfreiem Zustand und pünktlich.";
+			link.l1 = "Ihre Erklärungen beruhigen mich etwas, Mijnheer. Aber trotzdem bleibt dieser Betrag zu hoch. Ich bin bereit, Ihren Bedingungen zuzustimmen, wenn Sie den Preis auf mindestens zweieinhalbtausend Dublonen senken. Ich bin sicher, dass dies für die Organisation von Lieferungen und die Einhaltung aller Sicherheitsmaßnahmen ausreichen wird.";
+			link.l1.go = "UpgradeSilk_3";
+		break;
+		
+		case "UpgradeSilk_3":
+			dialog.text = " Ich verstehe, der Betrag ist groß, aber wie ich bereits sagte, ist er für die ordnungsgemäße Ausführung der Arbeit notwendig. Ich kann ihn nicht reduzieren, da dies alle unsere Bemühungen gefährden würde. Damit Sie sich jedoch nicht betrogen fühlen, bin ich bereit, Ihnen einen Rabatt von fünfzehn Prozent auf alle zukünftigen Lieferungen anzubieten. Dies wird Ihnen hoffentlich helfen, die Kosten auszugleichen.";
+			if (PCharDublonsTotal() >= 3000)
+			{
+				link.l1 = "Hmm, ein Rabatt von fünfzehn Prozent ist natürlich ein Schritt entgegen. In Ordnung. Ich bin bereit, Ihr Angebot anzunehmen, obwohl mir der Preis äußerst hoch erscheint. Ich hoffe, unsere Zusammenarbeit wird meine Erwartungen erfüllen. Hier ist Ihr Geld.";
+				link.l1.go = "UpgradeSilk_Agreed";
+			}
+			link.l2 = "Mijnheer "+npchar.name+", Ihr Angebot lässt mir keine Wahl. Es sollen dreitausend Dublonen sein, obwohl es eine beträchtliche Summe ist. Allerdings kann ich jetzt nicht alles auf einmal bezahlen. Ich werde zurückkehren, sobald ich das Geld habe.";
+			link.l2.go = "UpgradeSilk_5";
+			link.l3 = "Ein Rabatt von fünfzehn Prozent? Mijnheer "+npchar.name+", das ist nicht das, was ich erwartet habe. Dieser Betrag sind nicht nur Kosten, das ist offener und unverhohlener Raub! Aber ich beabsichtige nicht, die Geschäftsbeziehungen mit Ihnen abzubrechen. Wir werden zu den vorherigen Bedingungen zurückkehren - 30 Rollen Seide zu je 20 Dublonen.";
+			link.l3.go = "UpgradeSilk_4";
+		break;
+		
+		case "UpgradeSilk_Agreed":
+			dialog.text = " Ich freue mich, dass Sie einverstanden sind, "+pchar.name+". Nun zu den Details: 150 Rollen Seide zu je 17 Dublonen. Insgesamt - 2550 Dublonen für die gesamte Partie. Sie können die Waren wie üblich abholen - am 1. und 15. jeden Monats. Ich denke, dieses Geschäft wird für beide Seiten einen guten Gewinn bringen.";
+			link.l1 = "Отлично! Вот это - уже неплохой размах. Всего доброго, минхер. Скоро увидимся.";
+			link.l1.go = "exit";
+			NextDiag.TempNode = "HWIC_Boss";
+			RemoveDublonsFromPCharTotal(3000);
+			AddQuestRecord("Unique_Goods", "3_1");
+			pchar.questTemp.UpgradeSilk = true;
+			pchar.questTemp.GVIKSilkBlock = true;
+			DeleteAttribute(pchar, "questTemp.GVIKSilkPotom");
+		break;
+		
+		case "UpgradeSilk_4":
+			dialog.text = "Das ist nur ein geschäftlicher Ansatz und kein Raub, wie es Ihnen erschienen sein mag. Aber wie Sie wünschen. Kommen Sie wie gewohnt am 1. und 15. für eine Partie Seide, ich freue mich auf ein neues Geschäft.";
+			link.l1 = "Gewiss, Mijnheer. Alles Gute.";
+			link.l1.go = "exit";
+			pchar.questTemp.GVIKSilkBlock = true;
+			NextDiag.TempNode = "HWIC_Boss";
+		break;
+		
+		case "UpgradeSilk_5":
+			dialog.text = "Ich bin froh, dass Sie die richtige Entscheidung getroffen haben. Sobald Sie das Geld bringen, werden wir alle Details des Geschäfts besprechen und mit der Umsetzung beginnen.";
+			link.l1 = "Auf Wiedersehen, Mijnheer "+npchar.name+". Wir sehen uns, sobald ich den erforderlichen Betrag zusammenhabe.";
+			link.l1.go = "exit";
+			pchar.questTemp.GVIKSilkBlock = true;
+			pchar.questTemp.GVIKSilkPotom = true;
 			NextDiag.TempNode = "HWIC_Boss";
 		break;
 		

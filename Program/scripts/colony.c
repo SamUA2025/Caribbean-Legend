@@ -1001,7 +1001,7 @@ void TWN_ExitForPay() // мэр даёт откуп - табличка приб�
 					}
 				break;
 				case 3:
-					switch(drand(5))
+					switch(drand(7))
 					{
 						case 0:
 							GiveItem2Character(pchar, GetGeneratedItem("topor_04"));
@@ -1026,6 +1026,15 @@ void TWN_ExitForPay() // мэр даёт откуп - табличка приб�
 						case 5:
 							GiveItem2Character(pchar, "grape_mushket");
 							log_info(StringFromKey("colony_7")+GetConvertStr("itmname_grape_mushket", "ItemsDescribe.txt"));
+						break;
+						case 6:
+							GiveItem2Character(pchar, "hat4");
+							log_info(StringFromKey("colony_7")+GetConvertStr("itmname_hat4", "ItemsDescribe.txt"));
+						break;
+						
+						case 7:
+							GiveItem2Character(pchar, "hat6");
+							log_info(StringFromKey("colony_7")+GetConvertStr("itmname_hat6", "ItemsDescribe.txt"));
 						break;
 					}
 				break;

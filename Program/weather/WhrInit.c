@@ -245,52 +245,52 @@ int Whr_InitStdWeather( int		_index,
 	{
 		// night (0 - 5)
 		case "0 Hour" 			:
-			whr.Sun.Color 						= argb(  0, 30, 40, 50 );
-			whr.Sun.Ambient 					= argb(  0, 15, 20, 25 );
-            whr.Sun.SeaColor 					= argb(  0, 35, 45, 55 );
-			whr.Sun.SeaAmbient 					= argb(  0, 15, 20, 25 );
+			whr.Sun.Color 						= argb(  0, 45, 55, 65 );
+			whr.Sun.Ambient 					= argb(  0, 25, 30, 35 );
+            whr.Sun.SeaColor 					= argb(  0, 45, 55, 65 );
+			whr.Sun.SeaAmbient 					= argb(  0, 25, 30, 35 );
 			whr.Fog.Color 						= argb(  0,  6, 13, 23 );
 			whr.Rain.DropsColor 				= argb( 43,255,255,255 );
 		break;
 		
 		case "1 Hour" 			:
-			whr.Sun.Color 						= argb(  0, 30, 40, 50 );
-			whr.Sun.Ambient 					= argb(  0, 15, 20, 25 );			
-            whr.Sun.SeaColor 					= argb(  0, 35, 45, 55 );
-			whr.Sun.SeaAmbient 					= argb(  0, 15, 20, 25 );
+			whr.Sun.Color 						= argb(  0, 45, 55, 65 );
+			whr.Sun.Ambient 					= argb(  0, 25, 30, 35 );
+            whr.Sun.SeaColor 					= argb(  0, 45, 55, 65 );
+			whr.Sun.SeaAmbient 					= argb(  0, 25, 30, 35 );
 			whr.Fog.Color 						= argb(  0,  5, 12, 19 );
 			whr.Rain.DropsColor 				= argb( 43,255,255,255 );
 		break;
 		
 		case "2 Hour" 			:
-			whr.Sun.Color 						= argb(  0, 30, 40, 50 );
-			whr.Sun.Ambient 					= argb(  0, 15, 20, 25 );
-			whr.Sun.SeaColor 					= argb(  0, 35, 45, 55 );
-			whr.Sun.SeaAmbient 					= argb(  0, 15, 20, 25 );
+			whr.Sun.Color 						= argb(  0, 45, 55, 65 );
+			whr.Sun.Ambient 					= argb(  0, 25, 30, 35 );
+            whr.Sun.SeaColor 					= argb(  0, 45, 55, 65 );
+			whr.Sun.SeaAmbient 					= argb(  0, 25, 30, 35 );
 			whr.Fog.Color 						= argb(  0,  5, 12, 19 );
 			whr.Rain.DropsColor 				= argb( 43,255,255,255 );
 		break;	
 
 		case "3 Hour" 			:
-			whr.Sun.Color 						= argb(  0, 30, 40, 50 );
-			whr.Sun.Ambient 					= argb(  0, 15, 20, 25 );
-            whr.Sun.SeaColor 					= argb(  0, 35, 45, 55 );
-			whr.Sun.SeaAmbient 					= argb(  0, 15, 20, 25 );
+			whr.Sun.Color 						= argb(  0, 45, 55, 65 );
+			whr.Sun.Ambient 					= argb(  0, 25, 30, 35 );
+            whr.Sun.SeaColor 					= argb(  0, 45, 55, 65 );
+			whr.Sun.SeaAmbient 					= argb(  0, 25, 30, 35 );
 			whr.Fog.Color 						= argb(  0,  3,  8, 15 );
 			whr.Rain.DropsColor 				= argb( 43,255,255,255 );
 		break;	
 
 		case "4 Hour" 			:
-			whr.Sun.Color 						= argb(  0, 35, 45, 55 );
-			whr.Sun.Ambient 					= argb(  0, 15, 20, 25 );		
-            whr.Sun.SeaColor 					= argb(  0, 35, 45, 55 );
-			whr.Sun.SeaAmbient 					= argb(  0, 15, 20, 25 );
+			whr.Sun.Color 						= argb(  0, 45, 55, 65 );
+			whr.Sun.Ambient 					= argb(  0, 25, 30, 35 );
+            whr.Sun.SeaColor 					= argb(  0, 45, 55, 65 );
+			whr.Sun.SeaAmbient 					= argb(  0, 25, 30, 35 );
 			whr.Fog.Color 						= argb(  0,  5, 13, 26 );
 			whr.Rain.DropsColor 				= argb( 43,255,255,255 );
 		break;	
 
 		case "5 Hour" 			:
-			whr.Sun.Color 						= argb(  0, 40, 50, 60 );
+			whr.Sun.Color 						= argb(  0, 45, 55, 65 );
 			whr.Sun.Ambient 					= argb(  0, 25, 30, 35 );
             whr.Sun.SeaColor 					= argb(  0, 45, 55, 65 );
 			whr.Sun.SeaAmbient 					= argb(  0, 25, 30, 35 );
@@ -457,9 +457,9 @@ int Whr_InitStdWeather( int		_index,
 		break;	
 
 		case "21 Hour" 			:
-			whr.Sun.Color 						= argb(  0, 40, 50, 60 );
+			whr.Sun.Color 						= argb(  0, 45, 55, 65 );
 			whr.Sun.Ambient 					= argb(  0, 25, 30, 35 );
-			whr.Sun.SeaColor 					= argb(  0, 45, 55, 65 );
+            whr.Sun.SeaColor 					= argb(  0, 45, 55, 65 );
 			whr.Sun.SeaAmbient 					= argb(  0, 25, 30, 35 );
 			whr.Fog.Color 						= argb(  0,  7, 15, 23 );
 			whr.Rain.DropsColor 				= argb( 56,255,255,255 );
@@ -475,10 +475,10 @@ int Whr_InitStdWeather( int		_index,
 		break;	
 
 		case "22 Hour" 			:
-			whr.Sun.Color 						= argb(  0, 35, 45, 55 );
-			whr.Sun.Ambient 					= argb(  0, 15, 20, 25 );
-            whr.Sun.SeaColor 					= argb(  0, 35, 45, 55 );
-			whr.Sun.SeaAmbient 					= argb(  0, 15, 20, 25 );
+			whr.Sun.Color 						= argb(  0, 45, 55, 65 );
+			whr.Sun.Ambient 					= argb(  0, 25, 30, 35 );
+            whr.Sun.SeaColor 					= argb(  0, 45, 55, 65 );
+			whr.Sun.SeaAmbient 					= argb(  0, 25, 30, 35 );
 			whr.Fog.Color 						= argb(  0,  5, 12, 20 );
 			whr.Rain.DropsColor 				= argb( 52,255,255,255 );
 
@@ -493,10 +493,10 @@ int Whr_InitStdWeather( int		_index,
 		break;	
 
 		case "23 Hour" 			:
-			whr.Sun.Color 						= argb(  0, 30, 40, 50 );
-			whr.Sun.Ambient 					= argb(  0, 15, 20, 25 );
-            whr.Sun.SeaColor 					= argb(  0, 35, 45, 55 );
-			whr.Sun.SeaAmbient 					= argb(  0, 15, 20, 25 );
+			whr.Sun.Color 						= argb(  0, 45, 55, 65 );
+			whr.Sun.Ambient 					= argb(  0, 25, 30, 35 );
+            whr.Sun.SeaColor 					= argb(  0, 45, 55, 65 );
+			whr.Sun.SeaAmbient 					= argb(  0, 25, 30, 35 );
 			whr.Fog.Color 						= argb(  0,  6, 13, 21 );
 			whr.Rain.DropsColor 				= argb( 46,255,255,255 );
 

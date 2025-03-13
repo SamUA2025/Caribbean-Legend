@@ -375,6 +375,7 @@ UnderWater {Под водой}
 Grotto	{Грот}
 Dunes house	{Дом в дюнах}
 Torture room {Пыточная}
+Wine Cellar {Винный погреб}
 
 cabine	{Каюта}
 My_Campus	{Кают-компания}

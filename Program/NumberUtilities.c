@@ -5,27 +5,6 @@
 #define PIm2 6.28318530
 #define PId2 1.57079632
 
-float FRAND(float _x)
-{
-	return rand(32768) / 32768.0 * _x;
-}
-
-float uniform(float x, float y)
-{
-  return x + frand(y - x);
-}
-
-float uniform_angle(float left, float right) 
-{
-  return uniform(PI * left / 180.0, PI * right / 180.0);
-}
-
-// boal
-float frandSmall(float _x)
-{
-	return rand(32) / 32.0 * _x;
-}
-
 // Warship 30.07.09. -->
 // Рандом 0.0 ... 1.0
 float Random()
@@ -145,7 +124,7 @@ int iabs(int num)
 		return num;
 }
 
-// код ниже взят из Новых Горизонтов с разрешения Питера Боелена дабы самому не изобретать велосипед
+// Код ниже взят из Новых Горизонтов с разрешения Питера Боелена, дабы самому не изобретать велосипед
 // Natural logarithm
 // Useful for normally distributed random numbers among other calcs
 float logN(float num)
@@ -183,31 +162,6 @@ float logN(float num)
 float log10(float num)
 {
 	return logN(num) / 2.302585093;	// for log base 10, divide by logN(10)
-}
-
-//  Return a normally distributed random number with specified mean and standard deviation
-//  68% of samples will be within 1 stdev of mean, 95% within 2 stdev's, 99% within 3 stdev's.
-//  100% should be within 4.56 stdev's due to frnd() and accuracy of math in this system
-//  This is the standard "bell curve"
-float randnorm2 = 9999.0;
-float randnorm(float mean, float stdev)
-{
-    float  r, u;
-    float  randnorm1;
-
-	if (randnorm2 != 9999.0)
-	{
-		float rc = randnorm2 * stdev + mean;
-		randnorm2 = 9999.0;
-		return rc;
-	}
-
-	r = sqrt(-2.0 * logN(frnd()));	// .000030519 is lowest frnd() (besides zero, 1.2 occurences in 30,000), 4.5601 is largest r
-	u = frnd();
-	randnorm1 = r * sin(PIm2 * u);
-	randnorm2 = r * cos(PIm2 * u);
-
-	return ( randnorm1 * stdev + mean );
 }
 
 //Mett: универсальная функция для диапазона чисел
@@ -248,6 +202,7 @@ int wPercentInt(int _num, int _percent)
 }
 
 // belamour Линейная интерполяция
+// Bring2Range, Bring2RangeNoCheck
 float linear_interpolate(float x, float x1, float y1, float x2, float y2)
 {
 	// если вдруг за пределами интерполяции

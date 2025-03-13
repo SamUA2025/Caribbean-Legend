@@ -249,6 +249,7 @@ bool FilterItems(ref Item)
 			 (groupID == CIRASS_ITEM_TYPE) ||   // костюмы и доспехи
 			 (groupID == TOOL_ITEM_TYPE) ||     // навигационные приборы котороые можно экипировать в спецслот
 			 (groupID == LANTERN_ITEM_TYPE) ||  // фонарь
+			 (groupID == HAT_ITEM_TYPE) ||  	// шляпы
 			 (groupID == AMMO_ITEM_TYPE);		// расходники для огнестрела
 
 	items4 = (groupID == ITEM_SLOT_TYPE) 	|| 	// амулеты

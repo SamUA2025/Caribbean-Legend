@@ -1,6 +1,20 @@
-// клады из ВМЛ
 
-//  Карты сокровищ  ГЕНЕРАТОР -->
+// TO_DO: В следующем патче убираем Render и используем нормальные объекты
+// object TreasureTiers[15]
+
+extern void InitTreasureTiers();
+extern void InitTreasureTiers_Additions(bool SandBoxMode);
+
+void TreasureTiersInit(bool SandBoxMode)
+{
+	if(LoadSegment("scripts\Treasure_Init.c"))
+	{
+		InitTreasureTiers();
+        InitTreasureTiers_Additions(SandBoxMode)
+		UnloadSegment("scripts\Treasure_Init.c");
+	}
+}
+
 string GetIslandForTreasure()
 {
 	int iNum, m;
@@ -45,7 +59,7 @@ bool CheckTreasureMaps(string sIsland)
 	{
 		itm = ItemsFromID("map_full");
 		if(CheckAttribute(itm, "MapIslId") && itm.MapIslId == sIsland) return true;
-	}	
+	}
 	return false;
 }
 
@@ -74,39 +88,11 @@ string GetBoxForTreasure(string island, string location)
     iNum = rand(iNum-1);
     
     arImt = GetAttributeN(arDest, iNum);
-	return GetAttributeValue(arImt);  // тут не атрибут, а значеие
+	return GetAttributeValue(arImt);
 }
 
-void GenerateMapsTreasure(ref item, int iProbability1, int iProbability2)
-{		
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_jam")) 		item.BoxTreasure.map_jam 		= 1;
-	if(rand(iProbability2) == 1 && !CheckMainHeroMap("map_cayman")) 	item.BoxTreasure.map_cayman 	= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_barbados")) 	item.BoxTreasure.map_barbados 	= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_trinidad")) 	item.BoxTreasure.map_trinidad 	= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_Curacao")) 	item.BoxTreasure.map_Curacao 	= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_martiniqua")) item.BoxTreasure.map_martiniqua = 1;
-	if(rand(iProbability2) == 1 && !CheckMainHeroMap("map_dominica")) 	item.BoxTreasure.map_dominica 	= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_puerto")) 	item.BoxTreasure.map_puerto 	= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_cuba")) 		item.BoxTreasure.map_cuba 		= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_hisp")) 		item.BoxTreasure.map_hisp 		= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_nevis")) 		item.BoxTreasure.map_nevis 		= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_guad")) 		item.BoxTreasure.map_guad 		= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_antigua")) 	item.BoxTreasure.map_antigua 	= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_TORTUGA")) 	item.BoxTreasure.map_TORTUGA 	= 1;
-	if(rand(iProbability2) == 1 && !CheckMainHeroMap("map_terks")) 		item.BoxTreasure.map_terks 		= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_sm")) 		item.BoxTreasure.map_sm 		= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_bermudas")) 	item.BoxTreasure.map_bermudas 	= 1;
-	if(rand(iProbability2) == 1 && !CheckMainHeroMap("map_Pearl")) 		item.BoxTreasure.map_Pearl 		= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_beliz")) 		item.BoxTreasure.map_beliz 		= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_santa")) 		item.BoxTreasure.map_santa 		= 1;
-	if(rand(iProbability2) == 1 && !CheckMainHeroMap("map_maine_1")) 	item.BoxTreasure.map_maine_1	= 1;
-	if(rand(iProbability2) == 1 && !CheckMainHeroMap("map_maine_2")) 	item.BoxTreasure.map_maine_2 	= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_panama")) 	item.BoxTreasure.map_panama 	= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_maracaibo")) 	item.BoxTreasure.map_maracaibo 	= 1;
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_cumana")) 	item.BoxTreasure.map_cumana 	= 1;
-}
-
-void GenerateAdmiralMapsTreasure(ref item, int abl) // Jason, адмиральские карты по 1 шт 240912
+// TO_DO: DEL
+void GenerateAdmiralMapsTreasure(ref item, int abl)
 {
 	if (!CheckAttribute(pchar, "questTemp.AdmiralMap")) return;
 	if (rand(abl) == 1)
@@ -116,464 +102,286 @@ void GenerateAdmiralMapsTreasure(ref item, int abl) // Jason, адмиральс
 	}
 }
 
-
 void FillMapForTreasure(ref item)
 {
     item.MapIslId   = GetIslandForTreasure();
     item.MapLocId   = GetLocationForTreasure(item.MapIslId);
     item.MapBoxId   = GetBoxForTreasure(item.MapIslId, item.MapLocId);
-    item.MapTypeIdx = rand(2);
-
-    // генерим клад
+    if (!CheckAttribute(Pchar, "GenQuest.TreasureBuild") && rand(15) == 1)
+        item.MapTypeIdx = -1; // Подделка 6.25%
+    else // TO_DO: Для TreasureBuild можно особые описания добавить
+        item.MapTypeIdx = rand(2); // Описание из MapDescribe.txt
     DeleteAttribute(item, "BoxTreasure");
-    FillBoxForTreasure(item, rand(3));
-    FillBoxForTreasureAddition(item);
 
-    if (!CheckAttribute(Pchar, "GenQuest.TreasureBuild"))
-    {
-        if (rand(15) == 1) item.MapTypeIdx = -1;
-    }
-    else
-    {
-       FillBoxForTreasureSuper(item);
-    }
-    DeleteAttribute(Pchar, "GenQuest.TreasureBuild"); //сборный
-
+    // Legendary edition - Новая система кладов
     if (sti(item.MapTypeIdx) != -1)
     {
+        FillBoxForTreasure(item); // Всё тут
+        DeleteAttribute(Pchar, "GenQuest.TreasureBuild");
         Pchar.quest.SetTreasureFromMap.win_condition.l1          = "location";
         Pchar.quest.SetTreasureFromMap.win_condition.l1.location = item.MapLocId;
         Pchar.quest.SetTreasureFromMap.win_condition             = "SetTreasureFromMap";
-		
-		pchar.GenQuest.Treasure.Vario = rand(5); // определяем событие
-		locations[FindLocation(item.MapLocId)].DisableEncounters = true; //энкаутеры закрыть
+		Pchar.GenQuest.Treasure.Vario = rand(5); // Определяем событие
+		locations[FindLocation(item.MapLocId)].DisableEncounters = true;
     }
 }
-void FillBoxForTreasure(ref item, int i)
-{
-	float     nLuck   = GetCharacterSkillToOld(Pchar, SKILL_FORTUNE);
-	if(CheckCharacterPerk(pchar,"HT2")) nLuck += 4.0;
-	// определяем тип
-	switch (i)
-	{
-		// good
-		case 0:
-		    if (rand(1) == 1)
-	        {
-            	item.BoxTreasure.jewelry2 = 2 + rand(30);
-	        }
-	        else
-	        {
-	            item.BoxTreasure.jewelry3 = 10 + rand(3);
-	        }
-			if (rand(1) == 1)
-	        {
-            	item.BoxTreasure.gold_dublon = 20 + rand(100);
-	        }
-	        if (rand(1) == 1)
-	        {
-            	item.BoxTreasure.jewelry3 = 1 + rand(30);
-	        }
-	        if (rand(1) == 1)
-	        {
-            	item.BoxTreasure.jewelry5 = 5 + rand(60);
-	        }
-	        if (rand(1) == 1)
-	        {
-            	item.BoxTreasure.jewelry40 = 15 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.jewelry41 = 15 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.jewelry42 = 5 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.jewelry43 = 5 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.jewelry44 = 5 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.jewelry45 = 5 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.mineral2 = 5 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.mineral5 = 5 + rand(100);
-	        }
-	        if (rand(4) == 1 && nLuck > 4.9)
-	        {
-            	item.BoxTreasure.cirass6 = 1;
-	        }
-			if (rand(4) == 1 && nLuck > 4.9)
-	        {
-            	item.BoxTreasure.cirass7 = 1;
-	        }
-			GenerateMapsTreasure(item, 35, 70);
-			GenerateAdmiralMapsTreasure(item, 40); // 240912
-	    break;
-	    // best
-	    case 1:
-            if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.chest = 1 + rand(14);
-	        }
-	        else
-	        {
-	            item.BoxTreasure.jewelry53 = 10 + rand(3);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.icollection = 1 + rand(4);
-	        }
-	        if (rand(1) == 1)
-	        {
-            	item.BoxTreasure.jewelry1 = 15 + rand(100);
-	        }
-	        if (rand(1) == 1)
-	        {
-            	item.BoxTreasure.jewelry53 = 15 + rand(100);
-	        }
-	        if (rand(1) == 1)
-	        {
-            	item.BoxTreasure.jewelry52 = 15 + rand(100);
-	        }
-	        if (rand(1) == 1)
-	        {
-            	item.BoxTreasure.jewelry6 = 5 + rand(100);
-	        }
-	        if (rand(4) == 1 && nLuck > 4.9)
-	        {
-            	item.BoxTreasure.cirass3 = 1;
-	        }
-			if (rand(1) == 1)
-	        {
-            	item.BoxTreasure.gold_dublon = 50 + rand(150);
-	        }
-			if (drand(5) == 1)
-			{
-				item.BoxTreasure.rat_poison = 1;
-			}
-			if (rand(10) == 1 && nLuck > 4.9)
-	        {
-            	item.BoxTreasure.pistol11 = 1;
-	        }
-			GenerateMapsTreasure(item, 25, 50);
-			GenerateAdmiralMapsTreasure(item, 20); // 240912
-	    break;
-	    // bad
-	    case 2:
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.slave_01 = 20 + rand(80);
-	        }
-	        else
-	        {
-                item.BoxTreasure.blade_05 = 5 + rand(100);//fix
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.blade_07 = 5 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.slave_02 = 5 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.jewelry16 = 5 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.mineral4 = 5 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.mineral6 = 5 + rand(200);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.mineral7 = 5 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.mineral9 = 5 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.mineral10 = 25 + rand(300);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.mineral1 = 15 + rand(300);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.mineral11 = 5 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.mineral12 = 5 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.mineral13 = 5 + rand(100);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.mineral16 = 5 + rand(200);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.mineral23 = 10 + rand(100);
-	        }
-			if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.mineral22 = 5 + rand(50);
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.blade_03 = 1;
-	        }
-	        if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.cirass1 = 1;
-	        }
-			if (rand(3) == 1)
-	        {
-            	item.BoxTreasure.cirass5 = 1;
-	        }
-			if (rand(2) == 1)
-	        {
-            	item.BoxTreasure.Chest_open = 3;
-	        }
-	    break;
 
-	    case 3:
-	        FillBoxForTreasure(item, 0);
-	    break;
-	}
+int GetTresuareTier(int iTier)
+{
+    ref LTR = &Render;
+
+    aref Lottery;
+    makearef(Lottery, LTR.TresuareMap);
+    DeleteAttribute(Lottery, "");
+
+    string sTemp = "T" + iTier;
+    Lottery.(sTemp).weight = LTR.TresuareMapTier.(sTemp).weight;
+    if(iTier != 1)
+    {
+        sTemp = "T" + (iTier-1);
+        Lottery.(sTemp).weight = LTR.TresuareMapTier.(sTemp).weight;
+    }
+    if(iTier != 15)
+    {
+        sTemp = "T" + (iTier+1);
+        Lottery.(sTemp).weight = LTR.TresuareMapTier.(sTemp).weight;
+    }
+
+    sTemp = wrand("TresuareMap");
+    CorrectWeightParameters("TresuareMapTier", sTemp, "Treasure");
+    return sti(LTR.TresuareMapTier.(sTemp));
 }
 
-void FillBoxForTreasureAddition(ref item)
+// Выбрать вещь и выбросить её из пулла
+string GetRandEnabledItem(aref aTier, string sType)
 {
-    float   nLuck   = GetCharacterSkillToOld(Pchar, SKILL_FORTUNE);
-	// belamour legendary edition бонус кладоискателю 
-	if(CheckCharacterPerk(pchar,"HT2")) nLuck += 3.0; 
-    if (5*nLuck > rand(55))
+    ref TEV = &Render;
+
+    string sItem, sTemp;
+    aref aType, aItem;
+    makearef(aType, aTier.(sType));
+    int i, num = GetAttributesNum(aType);
+    if(num == 0 && sType == "Quest") return ""; //не осталось квестовых
+    DeleteAttribute(&TEV, "RandItem"); //типа динамический массив
+    for(i = 0; i < num; i++)
     {
-	    if (GetCharacterItem(Pchar, "map_part1") == 0)
-	    {
-	        item.BoxTreasure.map_part1 = 1;
-	    }
-	    else
-	    {
-	        if (GetCharacterItem(Pchar, "map_part2") == 0)
-		    {
-		        item.BoxTreasure.map_part2 = 1;
-		    }
-	    }
-	}
-	// +1 вещи
-	switch (rand(40))
-	{
-		case 1:
-		    item.BoxTreasure.gold_dublon = rand(40) + 20; // 160912
-		break;
-		case 2:
-		    item.BoxTreasure.jewelry10 = 1;
-		break;
-		case 3:
-		    item.BoxTreasure.jewelry11 = 1;
-		break;
-		case 4:
-		    item.BoxTreasure.jewelry12 = 1;
-		break;
-		case 5:
-		    item.BoxTreasure.indian_6 = 1;
-		break;
-		case 6:
-		    item.BoxTreasure.indian_2 = 1;
-		break;
-		case 7:
-		    item.BoxTreasure.jewelry13 = 1;
-		break;
-		case 8:
-		    item.BoxTreasure.indian_3 = 1;
-		break;
-		case 9:
-		    item.BoxTreasure.indian_1 = 1;
-		break;
-		case 10:
-		    item.BoxTreasure.indian_4 = 1;
-		break;
-		case 11:
-		    item.BoxTreasure.indian_5 = 1;
-		break;
-		case 12:
-		    item.BoxTreasure.indian_7 = 1;
-		break;
-		case 13:
-		    item.BoxTreasure.indian_8 = 1;
-		break;
-		case 14:
-		    item.BoxTreasure.indian_9 = 1;
-		break;
-		case 15:
-		    item.BoxTreasure.indian_10 = 1;
-		break;
-		case 16:
-		    item.BoxTreasure.indian_11 = 1;
-		break;
-		case 17:
-		    item.BoxTreasure.amulet_1 = 1;
-		break;
-		case 18:
-		    item.BoxTreasure.amulet_2 = 1;
-		break;
-		case 19:
-		    item.BoxTreasure.amulet_3 = 1;
-		break;
-		case 20:
-		    item.BoxTreasure.amulet_4 = 1;
-		break;
-		case 21:
-		    item.BoxTreasure.amulet_5 = 1;
-		break;
-		case 22:
-		    item.BoxTreasure.Mineral14 = 1;
-		break;
-		case 23:
-		    item.BoxTreasure.Mineral15 = 1;
-		break;
-		case 24:
-		    item.BoxTreasure.gold_dublon = rand(40) + 20; // 160912
-		break;
-		case 25:
-		    item.BoxTreasure.amulet_6 = 1;
-		break;
-		case 26:
-		    item.BoxTreasure.amulet_7 = 1;
-		break;
-		case 27:
-		    item.BoxTreasure.amulet_8 = 1;
-		break;
-		case 28:
-		    item.BoxTreasure.gold_dublon = rand(40) + 20;
-		break;
-	}
-	GenerateMapsTreasure(item, 10, 20);
-	
+        aItem = GetAttributeN(aType, i);
+        if(GetAttributeValue(aItem) == "On")
+        {
+            sTemp = i; //Safe moment
+            TEV.RandItem.(sTemp) = GetAttributeName(aItem);
+        }
+    }
+    makearef(aItem, TEV.RandItem);
+    int numItems = GetAttributesNum(aItem);
+
+    // Ни одной вещи не нашлось, нужен ресет пулла
+    if(numItems == 0)
+    {
+        for(i = 0; i < num; i++)
+        {
+            sItem = GetAttributeName(GetAttributeN(aType, i));
+            for(int j = 1; j <= 15; j++)
+            {
+                sTemp = "T" + j;
+                if(CheckAttribute(&Render, sTemp + "." + sType + "." + sItem))
+                    Render.(sTemp).(sType).(sItem) = "On";
+            }
+        }
+        // Ещё раз рандомим
+        return GetRandEnabledItem(aTier, sType);
+    }
+
+    // Рандомим и выкидываем из пулла
+    sItem = GetAttributeValue(GetAttributeN(aItem, rand(numItems-1)));
+    if(CheckAttribute(&Render, "SingleTreasure." + sItem))
+    {
+        for(i = 1; i <= 15; i++)
+        {
+            sTemp = "T" + i;
+            DeleteAttribute(&Render, sTemp + "." + sType + "." + sItem);
+        }
+        DeleteAttribute(&Render, "SingleTreasure." + sItem);
+    }
+    else
+    {
+        for(i = 1; i <= 15; i++)
+        {
+            sTemp = "T" + i;
+            if(CheckAttribute(&Render, sTemp + "." + sType + "." + sItem))
+                Render.(sTemp).(sType).(sItem) = "Off";
+        }
+    }
+    // Уникальные предметы, которые нужно генерировать
+    if(sType == "Equip" && IsGenerableItem(sItem))
+    {
+        sItem = GetGeneratedItem(sItem);
+    }
+    return sItem;
 }
 
-void FillBoxForTreasureSuper(ref item)
+void FillBoxForTreasure(ref item)
 {
-    float     nLuck   = GetCharacterSkillToOld(Pchar, SKILL_FORTUNE);
-	int     i;
-	string  itmName;
-	int rank = sti(pchar.rank);
-	// belamour legendary edition бонус кладоискателю 
-	if(CheckCharacterPerk(pchar,"HT2")) nLuck += 4.0;
-    if (nLuck > 4.9 && 3*nLuck > rand(21))// ещё поди найди 2 куска
+    string sTemp;
+    int iTier = 0;
+    aref aTier;
+
+    if(!CheckAttribute(PChar, "Statistic.Treasure"))
+        PChar.Statistic.Treasure = 0;
+
+    // Определяем тир (15 отрезков в диапазоне от 3 до 680)
+    iTier += GetCharacterSkill(PChar,SKILL_FORTUNE)*3;                //Везение (min 1)
+    iTier += iClamp(0, 12, sti(PChar.Statistic.Treasure))*25;         //Количество найденных кладов
+    if(CheckAttribute(PChar,"GenQuest.TreasureBuild")) iTier += 80;   //Сборная карта
+    if(CheckCharacterPerk(PChar,"HT2")) iTier += MakeInt(iTier*0.25); //Счетовод
+    iTier = iClamp(0, 14, iTier/46);    // Неполное частное от 0 до 14 (ниже +1 будет от 1 до 15)
+    iTier = GetTresuareTier(iTier + 1); // Среди соседей взять рандомом по весу
+    item.TreasureTier = iTier;
+
+    sTemp = "T" + iTier;
+    makearef(aTier, Render.(sTemp));
+
+    // Заполняем
+    int iBonus = 0;
+    if(CheckCharacterPerk(PChar,"HT2")) iBonus = 25;
+    FillBoxForNotes(item); //Записки
+    //FillBoxForQuest(item, aTier, iBonus, true);   //Квестовое
+    FillBoxForEquip(item, aTier, iBonus, true);   //Экипировка
+    FillBoxForJewelry(item, aTier, iBonus, true); //Ценности
+    FillBoxForSpecial(item, aTier, iBonus, true); //Специальные предметы
+}
+
+void FillBoxForEquip(ref item, aref aTier, int iBonus, bool bOtherSlots)
+{
+    string itmName = GetRandEnabledItem(aTier, "Equip");
+    item.BoxTreasure.(itmName) = 1; // Весь эквип выдаётся штучно
+    if(bOtherSlots)
     {
-		i = 0;
-		itmName = "";
-		while (itmName == "" && i < 15)
-		{
-            switch (rand(22))
-			{
-                case 0:
-        			itmName = "pistol4";
-				break;
-				case 1:
-					itmName = "cirass1";
-				break;
-				case 2:
-					itmName = "cirass2";
-				break;
-				case 3:
-					itmName = "spyglass3";
-				break;
-				case 4:
-					itmName = "mushket1";
-				break;
-				case 5:
-        			itmName = "talisman8";
-				break;
-				case 6:
-					itmName = GetGeneratedItem("topor_04");
-				break;
-				case 7:
-        			itmName = "spyglass4";
-				break;
-				case 8:
-        			itmName = GetGeneratedItem("blade_17");
-				break;
-				case 9:
-        			itmName = GetGeneratedItem("blade_21");
-				break;
-				case 10:
-        			itmName = "cirass3";
-				break;
-				case 11:
-        			itmName = GetGeneratedItem("blade_19");
-				break;
-				case 12:
-        			itmName = "cirass7";
-				break;
-				case 13:
-        			itmName = GetGeneratedItem("blade_18");
-				break;
-				case 14:
-        			itmName = GetGeneratedItem("blade_20");
-				break;
-				case 15:
-        			itmName = "cirass6";
-				break;				
-				case 16:
-        			itmName = "mushket2";
-				break;					
-				case 17:
-        			itmName = "mushket3";
-				break;	
-                case 18:
-        			itmName = GetGeneratedItem("shamshir"); // belamour клинок ДиС
-				break;	
-                case 19:
-        			itmName = "howdah";                    // belamour картечница ДиС
-				break;
-				case 20:
-					if(GetDLCenabled(DLC_APPID_1)) itmName = "talisman12";
-					else itmName = "cirass3";
-				break;
-				case 21:
-					itmName = "mushket7";
-				break;
-				case 22:
-					itmName = GetGeneratedItem("blade_39");
-				break;
-			}
-			if (GetCharacterItem(Pchar, itmName) > 0)
-		    {
-          		itmName = "";
-		    }
-		    i++;
-	    }
-	    if (itmName != "")
-	    {
-	        item.BoxTreasure.(itmName) = 1;
-	    }
-		GenerateAdmiralMapsTreasure(item, 15); // 240912
-	}
+        if(50 + iBonus > rand(99)) FillBoxForEquip(item, aTier, iBonus, false);
+        if(25 + iBonus > rand(99)) FillBoxForEquip(item, aTier, iBonus, false);
+    }
+}
+
+void FillBoxForJewelry(ref item, aref aTier, int iBonus, bool bOtherSlots)
+{
+    if(bOtherSlots)
+    {
+        // Золото в первый слот
+        item.BoxTreasure.gold = sti(aTier.gold.min) + rand(sti(aTier.gold.dif));
+        // Остальные четыре слота
+        if(75 + iBonus > rand(99)) FillBoxForJewelry(item, aTier, iBonus, false);
+        if(65 + iBonus > rand(99)) FillBoxForJewelry(item, aTier, iBonus, false);
+        if(50 + iBonus > rand(99)) FillBoxForJewelry(item, aTier, iBonus, false);
+        if(35 + iBonus > rand(99)) FillBoxForJewelry(item, aTier, iBonus, false);
+    }
+    else
+    {
+        string itmName = GetRandEnabledItem(aTier, "Jewelry");
+        item.BoxTreasure.(itmName) = sti(aTier.Jewelry.(itmName).min) + rand(sti(aTier.Jewelry.(itmName).dif));
+    }
+}
+
+void FillBoxForSpecial(ref item, aref aTier, int iBonus, bool bOtherSlots)
+{
+    string itmName = GetRandEnabledItem(aTier, "Special");
+    if(itmName == "map" || itmName == "map_a") // Подбор карты
+    {
+        if(!SandBoxMode && !CheckAttribute(pchar, "questTemp.AdmiralMap"))
+            itmName = "map"; // Пока нельзя
+
+        bool bExcellent = (itmName == "map_a");
+        int qMiss = MAPS_IN_ATLAS - sti(PChar.MapsAtlasCount); // Сколько на момент генерации не хватало обычных карт
+        int qTy = sti(aTier.Special.(itmName).min) + rand(sti(aTier.Special.(itmName).dif));
+        for(int i = 0; i < qTy; i++)
+        {
+            if(bExcellent)
+            {
+                itmName = SelectAdmiralMaps();
+                if(itmName != "")
+                {
+                    Render.map_a.(itmName) = ""; // Чтобы не генерило одинаковые адмиралки в клад
+                    item.BoxTreasure.(itmName) = 1;
+                }
+                else
+                {
+                    bExcellent = false;
+                    i = 0;
+                    qTy = 1 + (qTy - i) * 2; // Адмиралки закончились, выдаём обычные в удвоенном количестве
+                    if(qTy > 7) qTy = 7; // Но не более 6-ти (i начнёт с 1)
+                }
+            }
+            else
+            {
+                itmName = SelectUsualMaps(item, &qMiss);
+                if(CheckAttribute(item, "BoxTreasure." + itmName))
+                    item.BoxTreasure.(itmName) = sti(item.BoxTreasure.(itmName)) + 1;
+                else
+                    item.BoxTreasure.(itmName) = 1;
+            }
+        }
+        DeleteAttribute(&Render, "map_a");
+    }
+    else
+    {
+        item.BoxTreasure.(itmName) = sti(aTier.Special.(itmName).min) + rand(sti(aTier.Special.(itmName).dif));
+    }
+
+    if(bOtherSlots)
+    {
+        // Половинку карты во второй слот
+        if(25 + iBonus > rand(99))
+        {
+            if (GetCharacterItem(PChar, "map_part1") == 0)
+                item.BoxTreasure.map_part1 = 1;
+            else if (GetCharacterItem(PChar, "map_part2") == 0)
+                item.BoxTreasure.map_part2 = 1;
+        }
+        // Остальные три слота
+        if(65 + iBonus > rand(99)) FillBoxForSpecial(item, aTier, iBonus, false);
+        if(35 + iBonus > rand(99)) FillBoxForSpecial(item, aTier, iBonus, false);
+        if(15 + iBonus > rand(99)) FillBoxForSpecial(item, aTier, iBonus, false);
+    }
+}
+
+void FillBoxForNotes(ref item)
+{
+    string itmName = "";
+
+    string notes[TREASURE_NOTES];
+	int i;
+    for(i = 0; i < TREASURE_NOTES; i++) notes[i] = "treasure_note_" + (i+1);
+
+    string storeArray[TREASURE_NOTES];
+    int howStore = 0;
+    string sTemp;
+
+    for (i = 0; i < TREASURE_NOTES; i++)
+    {
+        sTemp = notes[i];
+        if (!CheckAttribute(PChar, "questTemp.Treasure_Stories." + sTemp) && !CheckCharacterItem(PChar, sTemp))
+        {
+            storeArray[howStore] = sTemp;
+            howStore++;
+        }
+    }
+
+    if (howStore > 0)
+        itmName = storeArray[rand(howStore - 1)];
+
+    if(itmName != "")
+        item.BoxTreasure.(itmName) = 1;
+}
+
+void FillBoxForQuest(ref item, aref aTier, int iBonus, bool bOtherSlots)
+{
+    string itmName = GetRandEnabledItem(aTier, "Quest");
+    if(itmName == "") return;
+
+    item.BoxTreasure.(itmName) = 1;
+    /*if(bOtherSlots)
+    {
+       
+    }*/
 }
 
 void SetTreasureBoxFromMap()
@@ -588,18 +396,7 @@ void SetTreasureBoxFromMap()
     {
         Log_Info(XI_ConvertString("TreasuresNear"));
         PlaySound("interface\notebook.wav");
-		Statistic_AddValue(Pchar, "Treasure", 1);
-		Achievment_SetStat(8, 1);
-		if(SandBoxMode)
-		{
-			//if(CheckAttribute(pchar,"questTemp.SanBoxTarget"))
-			//{
-				//if(makeint(pchar.questTemp.SanBoxTarget) > 3)
-				//{
-					Achievment_SetStat(101, 1);
-				//}
-			//}
-		}
+
         // немного веселой жизни
         if (rand(1) == 0) TraderHunterOnMap();
 		else CoolTraderHunterOnMap();
@@ -626,18 +423,17 @@ void SetTreasureBoxFromMap()
         CopyAttributes(arToBox, arFromBox);
 
         loc.(box) = Items_MakeTime(GetTime(), GetDataDay(), GetDataMonth(), GetDataYear());
-        loc.(box).Treasure =  true; // признак сокровища в сундуке
+        loc.(box).Treasure = sti(item.TreasureTier); // признак сокровища в сундуке; запоминаем тир для ачивки
 
         DeleteAttribute(item, "MapIslId");
         TakeNItems(Pchar, "map_full", -1);
     }
 }
-//  Карты сокровищ  ГЕНЕРАТОР <--
 
-// погодня за ГГ на карте
+// Погоня за ГГ на карте
 void  TraderHunterOnMap()
 {
-    // немного веселой жизни
+    // Немного веселой жизни
     ref  sld;
     int  i;
 
@@ -793,4 +589,90 @@ ref SetFantomSkeletForts(string group, string locator, string enemygroup, string
 	    }
     }
     return Cr;
+}
+
+string SelectUsualMaps(ref item, ref qMiss) // Выбор обычной неповторяющейся карты
+{	
+    string sMap = "";
+    string map[23];
+    map[0] = "map_jam";
+    map[1] = "map_cayman";
+    map[2] = "map_barbados";
+    map[3] = "map_trinidad";
+    map[4] = "map_Curacao";
+    map[5] = "map_martiniqua";
+    map[6] = "map_dominica";
+    map[7] = "map_puerto";
+    map[8] = "map_cuba";
+    map[9] = "map_hisp";
+    map[10] = "map_nevis";
+    map[11] = "map_guad";
+    map[12] = "map_antigua";
+    map[13] = "map_TORTUGA";
+    map[14] = "map_terks";
+    map[15] = "map_sm";
+    map[16] = "map_bermudas";
+    map[17] = "map_beliz";
+    map[18] = "map_santa";
+    map[19] = "map_maine_1";
+    map[20] = "map_maine_2";
+    map[21] = "map_panama";
+    map[22] = "map_cumana";
+
+    string storeArray[23];
+    int howStore = 0;
+    string sTemp;
+
+    if(qMiss > 0)
+    {
+        for (int i = 0; i < 23; i++)
+        {
+            sTemp = map[i];
+            if (!CheckMainHeroMap(sTemp) && !CheckAttribute(item, "BoxTreasure." + sTemp))
+            {
+                storeArray[howStore] = sTemp;
+                howStore++;
+            }
+        }
+        qMiss--;
+    }
+    else
+        howStore = 23; // У игрока на пару с текущим кладом имеются все карты, теперь можно рандомить любую
+
+    if (howStore > 0)
+        sMap = storeArray[rand(howStore - 1)];
+
+    return sMap;
+}
+
+void AddQuestItemToTreasures(string itemID,
+                             int minTier, int maxTier,
+                             int minQty,  int dif,
+                             bool bSingle)
+{
+    if(GetItemIndex(itemID) == -1)
+    {
+        Log_Info("AddQuestItemToTreasures: BAD IDX FOR ITEM " + itemID + "!");
+        return;
+    }
+
+    string sTemp;
+    for(int i = minTier; i <= maxTier; i++)
+    {
+        sTemp = "T" + i;
+        Render.(sTemp).Quest.(itemID) = "On";
+        Render.(sTemp).Quest.(itemID).min = minQty;
+        Render.(sTemp).Quest.(itemID).dif = dif;
+    }
+    if(bSingle) Render.SingleTreasure.(itemID) = "";
+}
+
+void RemoveQuestItemFromTreasures(string itemID)
+{
+    string sTemp;
+    for(int i = 1; i <= 15; i++)
+    {
+        sTemp = "T" + i;
+        DeleteAttribute(&Render, sTemp + ".Quest." + itemID);
+    }
 }

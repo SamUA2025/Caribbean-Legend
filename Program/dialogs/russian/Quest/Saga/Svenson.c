@@ -4,7 +4,7 @@ void ProcessDialogEvent()
 	ref NPChar, sld;
 	aref Link, NextDiag;
 	int i, iTemp;
-	string sTemp;
+	string sTemp, sStr;
 
 	DeleteAttribute(&Dialog,"Links");
 
@@ -1619,22 +1619,49 @@ void ProcessDialogEvent()
 		
 	//-----------------------------------генератор торговли бакаутом--------------------------------------------
 		case "trade_bakaut":
-			dialog.text = "Хорошо, я не возражаю. У меня на складе есть двадцать пять единиц. Как ты помнишь, цена - по тридцать дублонов за штуку.";
-			if (PCharDublonsTotal() >= 750)
+			if (CheckAttribute(pchar, "questTemp.UpgradeBakaut"))
 			{
-				link.l1 = "Всё по уговору. Вот, держи свои семьсот пятьдесят дублонов.";
-				link.l1.go = "trade_bakaut_1";
+				dialog.text = "Хорошо, я не возражаю. У меня на складе есть сто двадцать пять единиц. Как ты помнишь, цена - 3150 дублонов.";
+				if (PCharDublonsTotal() >= 3150)
+				{
+					link.l1 = "Всё по уговору. Вот, держи свои 3150 дублонов.";
+					link.l1.go = "trade_bakaut_1";
+				}
+				else
+				{
+					link.l1 = "Вот незадача, забыл"+GetSexPhrase("","а")+" деньги на корабле. Сейчас принесу!";
+					link.l1.go = "exit";
+				}
 			}
 			else
 			{
-				link.l1 = "Вот незадача, забыл"+GetSexPhrase("","а")+" деньги на корабле. Сейчас принесу!";
-				link.l1.go = "exit";
+				dialog.text = "Хорошо, я не возражаю. У меня на складе есть двадцать пять единиц. Как ты помнишь, цена - по тридцать дублонов за штуку.";
+				if (PCharDublonsTotal() >= 750)
+				{
+					link.l1 = "Всё по уговору. Вот, держи свои семьсот пятьдесят дублонов.";
+					link.l1.go = "trade_bakaut_1";
+				}
+				else
+				{
+					link.l1 = "Вот незадача, забыл"+GetSexPhrase("","а")+" деньги на корабле. Сейчас принесу!";
+					link.l1.go = "exit";
+				}
+			}
+			if(sti(pchar.questTemp.SvensonBakaut) >= 1 && !CheckAttribute(pchar, "questTemp.SvensonBakautBlock")) // увеличить объём поставок бакаута
+			{
+				link.l4 = "Ян, а нельзя ли увеличить размеры партий бакаута?";
+				link.l4.go = "UpgradeBakaut";
+			}
+			if(sti(pchar.questTemp.SvensonBakaut) >= 1 && CheckAttribute(pchar, "questTemp.SvensonBakautPotom") && PCharDublonsTotal() >= 3000) // увеличить объём поставок бакаута, если в первый раз не принесли
+			{
+				link.l4 = "Ян, я собрал"+GetSexPhrase("","а")+" три тысячи золотых. Держи, можешь преподнести этот подарок нашим нахлебничкам. Полагаю, у них сегодня будет счастливый день.";
+				link.l4.go = "UpgradeBakaut_Agreed";
 			}
 		break;
 		
 		case "trade_bakaut_1":
-			RemoveDublonsFromPCharTotal(750);
-			Log_Info("Вы отдали 750 дублонов");
+			if (CheckAttribute(pchar, "questTemp.UpgradeBakaut")) RemoveDublonsFromPCharTotal(3150);
+			else RemoveDublonsFromPCharTotal(750);
 			PlaySound("interface\important_item.wav");
 			dialog.text = "Отлично. Я прикажу своим людям перенести бакаут на твой корабль.";
 			link.l1 = "Спасибо!";
@@ -1645,10 +1672,92 @@ void ProcessDialogEvent()
 			dialog.text = "Захочешь ещё купить - приходи через две недели. Я соберу очередную партию.";
 			link.l1 = "Хорошо, Ян. До встречи!";
 			link.l1.go = "exit";
-			AddCharacterGoods(pchar, GOOD_SANDAL, 25);
+			if (CheckAttribute(pchar, "questTemp.UpgradeBakaut")) AddCharacterGoods(pchar, GOOD_SANDAL, 125);
+			else AddCharacterGoods(pchar, GOOD_SANDAL, 25);
 			DeleteAttribute(npchar, "quest.trade_bakaut");
 			SetFunctionTimerCondition("Bakaut_SvensonAttrReturn", 0, 0, 1, false); // таймер
 			AddCharacterExpToSkill(pchar, "Commerce", 100);
+			pchar.questTemp.SvensonBakaut = sti(pchar.questTemp.SvensonBakaut) + 1; // счётчик покупок
+		break;
+		
+		case "UpgradeBakaut": //
+			if (startHeroType == 1) sStr = "дружище";
+			if (startHeroType == 2) sStr = "дружище";
+			if (startHeroType == 3) sStr = "дружище";
+			if (startHeroType == 4) sStr = "Элен";
+			if (GetSummonSkillFromName(pchar, SKILL_COMMERCE) >= 80)
+			{
+				dialog.text = "Рад, что бакаут тебе по вкусу, " + sStr + ". Увеличить партии - не проблема, но есть тут одно 'но', сам"+GetSexPhrase("","а")+" понимаешь. С увеличением объёмов появляется и след, который может привлечь ненужное внимание, особенно со стороны английских властей. Но если добавить к делу надёжные руки, верные уши, и людей в резиденции, которые помогут остаться в тени, всё можно устроить. Правда, обойдётся это недёшево - три тысячи дублонов, за обход казны города и нужд Англии. Тогда и в пять раз больше смогу тебе поставить. Что скажешь?";
+				link.l1 = "Три тысячи дублонов? Ян, да это же грабёж средь бела дня! Нельзя ли как-то обойтись меньшими затратами? Может, есть способ уладить дело без таких баснословных сумм?";
+				link.l1.go = "UpgradeBakaut_1";
+				notification("Проверка пройдена", SKILL_COMMERCE);
+			}
+			else
+			{
+				dialog.text = "Идея хорошая, но должен сказать, для таких объёмов в торговых делах нужно немного больше опыта и сноровки. Поторопишься - больше риска, чем пользы. Давай так: набери ещё немного опыта, а когда будешь готов"+GetSexPhrase("","а")+" к большим партиям, заходи. Тогда обсудим всё как следует.";
+				link.l1 = "Хм... Ладно. Вернёмся к этому разговору позже.";
+				link.l1.go = "exit";
+				notification("Недостаточно развит навык (80)", SKILL_COMMERCE);
+			}
+		break;
+		
+		case "UpgradeBakaut_1":
+			dialog.text = "Увы, "+pchar.name+", такова уж нынче цена покоя - аппетиты этих господ в париках и мундирах растут с каждым днём. Ничего их не прельщает больше, чем дублоны, звенящие в их сундуках. Я гарантирую тебе скидку в пятнадцать процентов, на все последующие партии, если тебя это утешит.";
+			link.l1 = "Да чтоб их! Такие суммы запрашивать! С такой жадностью им только сокровища королей скупать, а не за молчание торговаться! Ян, а может того… покажем им, кто на архипелаге реальная сила, а?";
+			link.l1.go = "UpgradeBakaut_2";
+		break;
+		
+		case "UpgradeBakaut_2":
+			if (startHeroType == 1) sStr = "дружище";
+			if (startHeroType == 2) sStr = "дружище";
+			if (startHeroType == 3) sStr = "дружище";
+			if (startHeroType == 4) sStr = "Элен";
+			dialog.text = "Ха! Ну и задор у тебя, " + sStr + "! Но против всей Англии идти мне сейчас не с руки, да и годы уже не те. Давай просто заплатим этим кровопийцам, и пусть себе сидят тихо - нам своё дело делать. Собери нужную сумму, и наш путь будет свободен, без лишних вопросов!";
+			if (PCharDublonsTotal() >= 3000)
+			{
+				link.l1 = "Ну хорошо, Ян, уговорил. Пусть будет так, раз уж иначе не обойти. Держи свои три тысячи дублонов. Только запомни: вечно подкармливать этих скряг не собираюсь.";
+				link.l1.go = "UpgradeBakaut_Agreed";
+			}
+			link.l2 = "Дьявол их раздери, Ян! Ты правда считаешь что иного выхода нет? Ладно. Я найду эти дублоны. Но прямо сейчас таких денег у меня нет.";
+			link.l2.go = "UpgradeBakaut_4";
+			link.l3 = "Чёрт возьми, Ян, неужели ты хочешь, чтобы я кормил"+GetSexPhrase("","а")+" этих чинуш с их холёными дамами? Они сидят на своих креслах, ничего не делают, а только требуют деньги! Нет, мне это не по душе! Я не собираюсь наполнять их карманы своими потом и кровью! Вернёмся к прежним условиям. Хватит мне и того.";
+			link.l3.go = "UpgradeBakaut_3";
+		break;
+		
+		case "UpgradeBakaut_Agreed":
+			dialog.text = "Вот это другой разговор! С твоим вкладом наши дела пойдут как по маслу, а эти скряги получат своё - и перестанут даже смотреть в сторону бакаута. Уверяю тебя, скоро мы отобьём все вложения сторицей.";
+			link.l1 = "Надеюсь, Ян, надеюсь.";
+			link.l1.go = "UpgradeBakaut_Agreed_1";
+			RemoveDublonsFromPCharTotal(3000);
+			AddQuestRecord("Unique_Goods", "1_1");
+			pchar.questTemp.UpgradeBakaut = true;
+			pchar.questTemp.SvensonBakautBlock = true;
+			DeleteAttribute(pchar, "questTemp.SvensonBakautPotom");
+		break;
+		
+		case "UpgradeBakaut_Agreed_1":
+			dialog.text = "Дела пойдут, как надо, можешь не беспокоиться. А теперь, что до наших будущих сделок: буду держать для тебя наготове 125 бревен бакаута, как и прежде, к 14-му и 28-му числам каждого месяца. Всю партию сможешь забрать за 3150 дублонов.";
+			link.l1 = "Такие разговоры мне куда больше по душе! Сто двадцать пять бревен, значит? Прекрасно, Ян. Что ж, до скорой встречи, буду ждать поставки!";
+			link.l1.go = "exit";
+		break;
+		
+		case "UpgradeBakaut_3":
+			if (startHeroType == 1) sStr = "дружище";
+			if (startHeroType == 2) sStr = "дружище";
+			if (startHeroType == 3) sStr = "дружище";
+			if (startHeroType == 4) sStr = "Элен";
+			dialog.text = "Как пожелаешь, " + sStr + ". И не кипятись ты так. Так уж устроен этот мир.";
+			link.l1 = "Да, Ян, я знаю, как устроен этот мир. Но это не значит, что я долж"+GetSexPhrase("ен","на")+" это терпеть. Ладно, мне пора.";
+			link.l1.go = "exit";
+			pchar.questTemp.SvensonBakautBlock = true;
+		break;
+		
+		case "UpgradeBakaut_4":
+			dialog.text = "Я подожду, когда соберёшь деньги. Знаю, что ты найдёшь способ. Как только будешь готов"+GetSexPhrase("","а")+" - жду тебя с деньгами, и мы продолжим.";
+			link.l1 = "Хорошо.";
+			link.l1.go = "exit";
+			pchar.questTemp.SvensonBakautBlock = true;
+			pchar.questTemp.SvensonBakautPotom = true;
 		break;
 		// <-- генератор бакаута
 		

@@ -1269,6 +1269,24 @@ void QuestCheckUseButton(aref _location, string _locator, string _itemId) /// <<
 		if (CheckAttribute(pchar, "questTemp.Caleuche.QuestionFail")) Caleuche_PutSkull();
 		else Caleuche_GiveGrant();
     }
+	if (_location.id == "PortRoyal_WineCellar" && _locator == "button01")
+    {
+		PlaySound("Ambient\Teno_inside\big_ring.wav");
+		PlaySound("interface\key.wav");
+		OpenWardrobe_PortRoyal();
+	}
+	if (_location.id == "FortFrance_WineCellar" && _locator == "button01")
+    {
+		PlaySound("Ambient\Teno_inside\big_ring.wav");
+		PlaySound("interface\key.wav");
+		OpenWardrobe_FortFrance();
+	}
+	if (_location.id == "Villemstad_WineCellar" && _locator == "button01")
+    {
+		PlaySound("Ambient\Teno_inside\big_ring.wav");
+		PlaySound("interface\key.wav");
+		OpenWardrobe_Villemstad();
+	}
 }
 //проверка взятия предметов из локатора item
 void QuestCheckTakeItem(aref _location, string _itemId)
@@ -1300,6 +1318,12 @@ void QuestCheckTakeItem(aref _location, string _itemId)
 	if (_itemId == "pirate_cutlass_ground") {
 		GiveItem2Character(pchar, GetGeneratedItem("pirate_cutlass"));
 		TakeItemFromCharacter(pchar, "pirate_cutlass_ground");
+	}
+	
+	if (_itemId == "PR_Letter")
+	{
+		PR_Letter_Reaction();
+		TakeItemFromCharacter(pchar, "PR_Letter");
 	}
 }
 

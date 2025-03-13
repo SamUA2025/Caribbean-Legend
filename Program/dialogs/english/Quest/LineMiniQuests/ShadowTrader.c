@@ -41,7 +41,7 @@ void ProcessDialogEvent()
 			GetCharacterPos(pchar, &locx, &locy, &locz);
 			ChangeCharacterAddressGroup(sld, pchar.questTemp.Shadowtrader.City + "_tavern", "goto", LAi_FindNearestFreeLocator("goto", locx, locy, locz));
 			LAi_SetActorType(sld);
-			LAi_ActorRunToLocation(sld, "reload", "reload1_back", pchar.questTemp.Shadowtrader.City +"_store", "goto", "goto2", "OpenTheDoors", -1);
+			LAi_ActorRunToLocation(sld, "reload", "reload1_back", pchar.questTemp.Shadowtrader.City +"_store", "goto", "goto2", "OpenTheDoors", 6);
 			pchar.questTemp.Shadowtrader = "begin";
 			AddLandQuestMark(characterFromId("BasTer_trader"), "questmarkmain");
 		break;

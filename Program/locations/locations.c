@@ -295,3 +295,96 @@ bool Location_AddReload(string _LocID, int iNum, string _name, string _go, strin
 	return true;
 }
 // <-- Warship
+
+// belamour добавление новой локации
+void ExpandLocationsArray() 
+{
+	MAX_LOCATIONS++;
+	SetArraySize(&locations, MAX_LOCATIONS);
+	InitAddLoc(MAX_LOCATIONS - 1);
+} 
+
+void InitAddLoc(int index)
+{
+	ref loc;
+	makeref(loc, Locations[index]);
+	DeleteAttribute(loc, "");
+	loc.id = "";
+	loc.index = index;
+	loc.image = "loading\sea_0" + rand(2) + ".tga";
+	loc.music = "enplav.ogg";
+	loc.locators_radius.reload = 1.0;
+	loc.locators_radius.rld = 1.0;
+	loc.locators_radius.camdetector = 1.0;
+	loc.locators_radius.camera = 0.3;
+	loc.locators_radius.characters = 0.5;
+	loc.locators_radius.goto = 0.5;		
+	loc.locators_radius.sit = 0.5;		
+	loc.locators_radius.item = 0.5;		
+	loc.locators_radius.officers = 0.5;
+	loc.locators_radius.merchant = 1.0;
+	loc.locators_radius.box = 1.0;
+	loc.locators_radius.candles = 0.1;
+	loc.locators_radius.candles_medium = 0.2;
+	loc.locators_radius.chandeliers = 0.5;
+	loc.locators_radius.heaters = 1.0;
+	loc.locators_radius.torchlightes = 0.3;
+	loc.locators_radius.torchlightes_o = 0.3;
+	loc.locators_radius.fonar = 0.4;
+	loc.locators_radius.outside = 2.0;
+	loc.locators_radius.incas_light = 0.8;
+	loc.locators_radius.incas_sky = 1.0;
+	loc.locators_radius.randitem = 1.5;
+	loc.locators_radius.waitress = 1.0;
+	loc.locators_radius.tables = 0.5;
+	loc.locators_radius.barmen = 1.0;
+	loc.locators_radius.lamp = 0.2;
+	loc.locators_radius.blueteleport = 0.2;
+	loc.locators_radius.redteleport = 0.2;
+	loc.locators_radius.greenteleport = 0.2;
+	loc.locators_radius.magsteleport = 0.2;
+	loc.locators_radius.EncDetector = 8.0;
+	loc.locators_radius.teleport = 1.0;
+	loc.locators_radius.quest = 1.0;
+	if (MOD_BETTATESTMODE == "On")
+	{// чтоб было видно в отладке Boal 18.08.06
+		loc.locators_radius.soldiers = 0.5;
+		loc.locators_radius.patrol = 0.5;
+		loc.locators_radius.Smugglers = 0.5;
+		loc.locators_radius.monsters = 0.5;
+	}
+	
+	//Day dynamic light
+	loc.models.day.lights.candles = "candle";
+	loc.models.day.lights.candles_medium = "candelabrum";
+	loc.models.day.lights.chandeliers = "chandelier";
+	loc.models.day.lights.heaters = "heater";
+	loc.models.day.lights.torchlightes = "torchlight";		
+	loc.models.day.lights.fireglows = "fireglow";		
+	loc.models.day.lights.outside = "outside_day";
+	loc.models.day.lights.incas_light = "incas";
+	loc.models.day.lights.incas_sky = "incasskyday";
+	loc.models.day.lights.lamp = "lamp";
+	loc.models.day.lights.blueteleport = "blueteleport";
+	loc.models.day.lights.redteleport = "redteleport";
+	loc.models.day.lights.greenteleport = "greenteleport";
+	loc.models.day.lights.magsteleport = "magsteleport";
+
+	//Night dynamic light
+	loc.models.night.lights.candles = "candle";
+	loc.models.night.lights.candles_medium = "candelabrum";
+	loc.models.night.lights.chandeliers = "chandelier";
+	loc.models.night.lights.heaters = "heater";
+	loc.models.night.lights.torchlightes = "torchlight";
+	loc.models.night.lights.torchlightes_o = "torchlight";
+	loc.models.night.lights.fireglows = "fireglow";		
+	loc.models.night.lights.fonar = "lamp";
+	loc.models.night.lights.outside = "outside_night";		
+	loc.models.night.lights.incas_light = "incas";
+	loc.models.night.lights.incas_sky = "incasskynight";
+	loc.models.night.lights.lamp = "lamp";
+	loc.models.night.lights.blueteleport = "blueteleport";
+	loc.models.night.lights.redteleport = "redteleport";
+	loc.models.night.lights.greenteleport = "greenteleport";
+	loc.models.night.lights.magsteleport = "magsteleport";
+}

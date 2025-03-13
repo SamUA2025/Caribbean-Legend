@@ -1492,11 +1492,11 @@ void ProcessDialogEvent()
 		case "Angerran":
 			if (pchar.questTemp.Sharlie == "escape")
 			{
-				dialog.text = "A famous Captain you say? The one who repelled the Spanish assault almost scorched this tiny town? I see. What is you poison?";
+				dialog.text = "A famous Captain you say? The one who repelled the Spanish assault almost scorched this tiny town? I see. What is your poison?";
 			}
 			else
 			{
-				dialog.text = "A famous Captain you say? I've never heard of you... What is you poison?";
+				dialog.text = "A famous Captain you say? I've never heard of you... What is your poison?";
 			}
 			link.l1 = "...";
 			if (pchar.questTemp.GoldenGirl.Vine == "red") link.l1.go = "Angerran_1";

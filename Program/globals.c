@@ -2,7 +2,7 @@
 #include "storm-engine\messages.h"
 #include "sound.c"
 
-string savefile_info = "ver 1.3.5";
+string savefile_info = "ver 1.4.0";
 // --------- DLC globals ---------------------------------------------
 #define DLC_AVAILABLE	  1
 #define MAIN_APPID		  2230980
@@ -66,6 +66,10 @@ string sgMusicName = "?";
 
 ref pchar;
 
+// TO_DO: В следующем патче убираем Render и используем нормальные объекты
+//object TEV; // Temporary events
+//object LTR; // Lottery
+
 //--------------------------------------------------------------------
 // Bool section
 //--------------------------------------------------------------------
@@ -105,7 +109,7 @@ int     MAX_CHARACTERS   = 10;
 int storeArray[2];
 SetArraySize(&storeArray, MAX_LOCATIONS);*/
 
-int MAX_LOCATIONS = 1061; //1016 //1031
+int MAX_LOCATIONS = 1072; //1016 //1031
 int MAX_ISLANDS = 38;
 int MAX_COLONIES = 43;
 
@@ -142,13 +146,13 @@ string 	sSpManGenNames[21], sSpWomenGenNames[9], sSpGenFamilies[54];
 
 Object Names;
 
-object  	NullCharacter;
+object  NullCharacter;
 object	Characters[TOTAL_CHARACTERS];
-object	Locations[1061]; //1016 //1031
+object	Locations[1072]; //1016 //1031
 object	Islands[38];
 object	Colonies[43];
 
-object  	Environment;
+object  Environment;
 int		nMainCharacterIndex = 1;//-1;
 
 int		nLocationsNum;

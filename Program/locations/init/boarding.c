@@ -3443,6 +3443,88 @@ int LocationInitBoarding(int n)
 	Locations[n].boarding.nextdeck = "Boarding_Cargohold";
 	Locations[n].UpDeckType = true;
 	
+	n = n + 1;
+	
+	//ID
+	Locations[n].id = "BOARDING_3_WAR_SM";
+	locations[n].id.label = "Boarding deck";
+	//Info
+	Locations[n].type = "deck_fight";
+	Locations[n].filespath.models = "locations\decks\boarding_3_war_sm";
+	Locations[n].image = "loading\Boarding_A" + rand(2) + ".tga";
+
+	Locations[n].lockCamAngle = 0.2;
+	Locations[n].camshuttle = 1;	
+	//Models	
+	//Always
+	Locations[n].models.always.boarding_3_war = "boarding_3_war";
+	Locations[n].models.always.parts = "boarding_3_war_parts";
+	Locations[n].models.always.ropes = "boarding_3_war_ropes";
+	Locations[n].models.always.locators = "boarding_3_war_locators";	
+	Locations[n].models.always.decals = "boarding_3_war_decals";
+	Locations[n].models.always.decals.tech = "Blood";
+	Locations[n].models.always.windows = "boarding_3_war_windows";
+	Locations[n].models.always.windows.tech = "LocationWindows";
+	locations[n].models.always.windows.level = 65539;
+	Locations[n].models.always.watermask = "boarding_3_war_watermask";
+	Locations[n].models.always.watermask.tech = "WaterMask";
+	//Day
+	Locations[n].models.day.charactersPatch = "boarding_3_war_patch";
+	Locations[n].models.day.deckFonarsDay = "boarding_3_war_fd";
+	Locations[n].models.day.jumpPatch = "boarding_3_war_jump";
+	//Night
+	Locations[n].models.night.charactersPatch = "boarding_3_war_patch";
+	Locations[n].models.night.deckMediumBigNight = "boarding_3_war_fn";	
+	Locations[n].models.night.jumpPatch = "boarding_3_war_jump";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "true";
+
+	Locations[n].boarding = "true";
+	Locations[n].boarding.locatorNum = 11;
+	Locations[n].boarding.nextdeck = "Boarding_Cargohold";
+	Locations[n].UpDeckType = true;
+	
+	n = n + 1;
+	
+	//ID
+	Locations[n].id = "BOARDING_3_TRADE";
+	locations[n].id.label = "Boarding deck";
+	//Info
+	Locations[n].type = "deck_fight";
+	Locations[n].filespath.models = "locations\decks\boarding_3_trade";
+	Locations[n].image = "loading\Boarding_A" + rand(2) + ".tga";
+	Locations[n].lockCamAngle = 0.2;
+	Locations[n].camshuttle = 1;	
+	//Models	
+	//Always
+	Locations[n].models.always.boarding_3_trade = "boarding_3_trade";
+	Locations[n].models.always.parts = "boarding_3_trade_parts";
+	Locations[n].models.always.ropes = "boarding_3_trade_ropes";
+	Locations[n].models.always.locators = "boarding_3_trade_locators";	
+	Locations[n].models.always.decals = "boarding_3_trade_decals";
+	Locations[n].models.always.decals.tech = "Blood";
+	Locations[n].models.always.windows = "boarding_3_trade_windows";
+	Locations[n].models.always.windows.tech = "LocationWindows";
+	locations[n].models.always.windows.level = 65539;
+	Locations[n].models.always.watermask = "boarding_3_trade_watermask";
+	Locations[n].models.always.watermask.tech = "WaterMask";
+	//Day
+	Locations[n].models.day.charactersPatch = "boarding_3_trade_patch";
+	Locations[n].models.day.deckFonarsDay = "boarding_3_trade_fd";
+	Locations[n].models.day.jumpPatch = "boarding_3_trade_jump";
+	//Night
+	Locations[n].models.night.charactersPatch = "boarding_3_trade_patch";
+	Locations[n].models.night.deckMediumBigNight = "boarding_3_trade_fn";	
+	Locations[n].models.night.jumpPatch = "boarding_3_trade_jump";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "true";
+	Locations[n].boarding = "true";
+	Locations[n].boarding.locatorNum = 11;
+	Locations[n].boarding.nextdeck = "Boarding_Cargohold";
+	Locations[n].UpDeckType = true;
+	
 	n = n + 1;	
 	
 	////////////////////////////////////////////////////////////////////////////////////////////////////////

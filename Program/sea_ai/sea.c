@@ -341,6 +341,7 @@ void Sea_LandLoad()
 		if(CheckAttribute(pchar,"StealtDeceptionPenalty")) DeleteAttribute(pchar,"StealtDeceptionPenalty");
 		Group_FreeAllDead();
 	}
+	DoQuestFunctionDelay("Hat6_deal", 2.5);
 }
 
 void Sea_MapStartFade()

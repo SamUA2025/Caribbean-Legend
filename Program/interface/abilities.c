@@ -1229,6 +1229,12 @@ void RefreshPerksPictures() {
 				pictureName = "base_officer";
 				SendMessage(&GameInterface,"lsll",MSG_INTERFACE_MSG_TO_NODE, bnodeName, 5, 1 );
 			}
+			/* if(GetCharacterEquipByGroup(pchar, HAT_ITEM_TYPE) == "hat5" && IsCompanion(xi_refCharacter) && GetOfficersPerkUsing(xi_refCharacter, perkName))
+			{
+				pictureGroup = "PERKS_ENABLE";
+				pictureName = "base_officer";
+				SendMessage(&GameInterface,"lsll",MSG_INTERFACE_MSG_TO_NODE, bnodeName, 5, 1 );
+			} */
 		}
 		SetNewGroupPicture(nodeName, pictureGroup, perkName);
 		SetNewGroupPicture(bnodeName, pictureGroup, pictureName);

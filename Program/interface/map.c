@@ -329,6 +329,12 @@ void wdmRecalcReloadToSea()
 						totalInfo = GetConvertStr("SM_WorldMap", "SantaMisericordia.txt");
 						sOkBtn = XI_ConvertString("map_attack");
 					break;
+					
+					case "LadyBeth_cap":
+						SetNewPicture("INFO_PICTURE", "interfaces\le\sea_sm.tga"); 
+						totalInfo = "Противник занял тактически верную позицию и сумел избежать сражения.";
+						sOkBtn = XI_ConvertString("map_ok");
+					break;
 					SetNewPicture("INFO_PICTURE", loadScr); 
 					totalInfo = XI_ConvertString("NavalSignal") + XI_ConvertString("someone sails") + totalInfo;
 				}

@@ -2498,20 +2498,8 @@ void ProcessDialogEvent()
 		case "VsD_GiumDyubua_5":
 			dialog.text = "Благодарю вас, капитан. Я сейчас же сообщу нашей погрузочной команде, благо они ещё не закончили с '" + PChar.Ship.Name + "'. Удачи вам на задании!";
 			link.l1 = "Спасибо, а то и правда, бардак. До свидания, лейтенант.";
-			link.l1.go = "VsD_GiumDyubua_6";
-		break;
-		
-		case "VsD_GiumDyubua_6":
-			DialogExit();
-			
-			sld = CharacterFromID("GiumDyubua");
-			sld.location = "None";
-			LAi_SetActorType(sld);
-			LAi_ActorRunToLocation(sld, "reload", "reload1_back", "none", "", "", "", -1);
-			
-			PChar.quest.VsD_Vzriv.win_condition.l1 = "location";
-			PChar.quest.VsD_Vzriv.win_condition.l1.location = "PortPax_ExitTown";
-			PChar.quest.VsD_Vzriv.function = "VsD_Vzriv";
+			link.l1.go = "exit";
+			AddDialogExitQuestFunction("VsD_GoToCity");
 		break;
 		
 		//Фульк или Алонсо по квесту "Встреча с Диего"
@@ -2537,7 +2525,8 @@ void ProcessDialogEvent()
 			dialog.text = "Цел?! Простите, капитан. Точно сказать пока ничего нельзя, но, судя по всему, взрыв произошёл прямо на верхней палубе, а не внутри. Активного пожара я не наблюдаю, и думаю, что мы ещё легко отделались, и корабль не потеряем.";
 			link.l1 = "...";
 			link.l1.go = "VsD_FolkeAlonso_5";
-			sld = CharacterFromID("PortPaxAmmoOff");
+			sld = GetCharacter(CreateCharacterClone(CharacterFromID("PortPaxAmmoOff"), 0));
+			sld.id = "PortPaxAmmoOff_clone";
 			LAi_LoginInCaptureTown(sld, true);
 			ChangeCharacterAddressGroup(sld, "PortPax_town", "quest", "quest1");
 			LAi_SetActorType(sld);
@@ -2545,7 +2534,13 @@ void ProcessDialogEvent()
 		break;
 		
 		case "VsD_FolkeAlonso_5":
-			StartInstantDialog("PortPaxAmmoOff", "VsD_Komendant", "Quest\Sharlie\OtherNPC.c");
+			DialogExit();
+			LAi_SetStayType(pchar);
+			sld = CharacterFromID("PortPaxAmmoOff_clone");
+			sld.dialog.filename = "Quest\Sharlie\OtherNPC.c";
+			sld.dialog.currentnode = "VsD_Komendant";
+			LAi_SetActorType(sld);
+			LAi_ActorDialog(sld, pchar, "", 3, 0);
 		break;
 		
 		case "VsD_Komendant":
@@ -2615,7 +2610,7 @@ void ProcessDialogEvent()
 			link.l1 = "Вы серьёзно? И это всё, что вы можете сделать?";
 			link.l1.go = "VsD_Komendant_7";
 			sld = CharacterFromID("VsD_Tsyganka");
-			ChangeCharacterAddressGroup(sld, "PortPax_town", "patrol", "patrol14");
+			ChangeCharacterAddressGroup(sld, "PortPax_town", "reload", "reload5_back");
 			LAi_CharacterEnableDialog(sld);
 			LAi_SetActorType(sld);
 			LAi_ActorFollow(sld, pchar, "", -1);
@@ -2642,7 +2637,19 @@ void ProcessDialogEvent()
 		break;
 		
 		case "VsD_Komendant_9":
-			StartInstantDialog("VsD_Tsyganka", "VsD_Tsyganka", "Quest\Sharlie\OtherNPC.c");
+			DialogExit();
+			LAi_SetStayType(pchar);
+			
+			sld = CharacterFromID("VsD_Tsyganka");
+			sld.dialog.filename = "Quest\Sharlie\OtherNPC.c";
+			sld.dialog.currentnode = "VsD_Tsyganka";
+			LAi_SetActorType(sld);
+			LAi_ActorDialog(sld, pchar, "", 3, 0);
+			
+			sld = CharacterFromID("PortPaxAmmoOff_clone");
+			sld.lifeday = 0;
+			LAi_SetActorType(sld);
+			LAi_ActorGoToLocation(sld, "reload", "gate_back", "none", "", "", "", -1);
 		break;
 		
 		case "VsD_Tsyganka":
@@ -2689,18 +2696,6 @@ void ProcessDialogEvent()
 			LAi_LocationFightDisable(&Locations[FindLocation("PortPax_town")], false);
 			LAi_LocationFightDisable(&Locations[FindLocation("PortPax_Fort")], false);
 			
-			sld = CharacterFromID("PortPaxAmmoOff");
-			LAi_LoginInCaptureTown(sld, false);
-			sld.City = "PortPax";
-			sld.CityType = "soldier";
-			sld.standUp = true;
-			sld.Dialog.Filename = "Common_Ammo.c";
-			sld.dialog.currentnode = "First time";
-			LAi_SetLoginTime(sld, 0.0, 24.0);
-			LAi_SetHuberType(sld);
-			LAi_group_MoveCharacter(sld, "FRANCE_CITIZENS");
-			ChangeCharacterAddressGroup(sld, "PortPax_ammo", "sit", "sit1");
-			
 			for (i=1; i<=5; i++)
 			{
 				sld = CharacterFromID("VsD_Guard_"+i);
@@ -2740,6 +2735,7 @@ void ProcessDialogEvent()
 		
 		case "VsD_Tsyganka_Net":
 			DialogExit();
+			LAi_SetPlayerType(pchar);
 			AddQuestRecord("Trial", "7_1");
 			LAi_SetCitizenType(npchar);
 			LAi_CharacterDisableDialog(npchar);
@@ -2747,6 +2743,7 @@ void ProcessDialogEvent()
 		
 		case "VsD_Tsyganka_Da":
 			DialogExit();
+			LAi_SetPlayerType(pchar);
 			AddQuestRecord("Trial", "7_1");
 			AddCharacterExpToSkill(pchar, "Repair", 20);
 			AddMoneyToCharacter(pchar, -1000);

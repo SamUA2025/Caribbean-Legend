@@ -42,7 +42,7 @@ int LocationInitJamaica(int n)
 	locations[n].models.always.Waterfall1.level = 50;
 	
 	locations[n].models.always.Waterfall2 = "river2";
-	locations[n].models.always.Waterfall2.uvslide.v0 = 0.3;
+	locations[n].models.always.Waterfall2.uvslide.v0 = 0.1;
     locations[n].models.always.Waterfall2.uvslide.v1 = 0.0;
 	locations[n].models.always.Waterfall2.tech = "LocationWaterFall";
 	locations[n].models.always.Waterfall2.level = 49;
@@ -54,17 +54,18 @@ int LocationInitJamaica(int n)
 	Locations[n].models.always.MillFan.rotate.x = 0.0;
 	Locations[n].models.always.MillFan.rotate.y = 0.0;
 	Locations[n].models.always.MillFan.rotate.z = 0.3;
-	
-	locations[n].models.always.L2 = "Barracks_Door";
-    locations[n].models.always.L2.tech = "DLightModel";
 
 	//Day
 	locations[n].models.day.fonar = "PortRoyal_fd";
-	locations[n].models.day.charactersPatch = "PortRoyal_patch_day";
 	locations[n].models.day.rinok = "PortRoyal_rinok";
+	locations[n].models.day.gates = "PortRoyal_gates_day";
+	locations[n].models.day.charactersPatch = "PortRoyal_patch_day";
+	locations[n].models.day.jumpPatch = "PortRoyal_jump_patch";
 	//Night
 	locations[n].models.night.fonar = "PortRoyal_fn";
+	locations[n].models.night.gates = "PortRoyal_gates_night";
 	locations[n].models.night.charactersPatch = "PortRoyal_patch_night";
+	locations[n].models.night.jumpPatch = "PortRoyal_jump_patch";
 	//Environment
 	locations[n].environment.weather = "true";
 	locations[n].environment.sea = "true";
@@ -171,30 +172,132 @@ int LocationInitJamaica(int n)
 	locations[n].reload.l12.label = "Loxly_house";
 	locations[n].reload.l12.close_for_night = 1;
 	
-	locations[n].reload.l22.name = "houseSp3";
-	locations[n].reload.l22.go = "PortRoyal_houseSp3";
-	locations[n].reload.l22.emerge = "reload1";
-	locations[n].reload.l22.autoreload = "0";
-	locations[n].reload.l22.label = "House";
+	locations[n].reload.l13.name = "houseSp3";
+	locations[n].reload.l13.go = "PortRoyal_houseSp3";
+	locations[n].reload.l13.emerge = "reload1";
+	locations[n].reload.l13.autoreload = "0";
+	locations[n].reload.l13.label = "House";
+	
+	locations[n].reload.l14.name = "houseS1";
+	locations[n].reload.l14.go = "PortRoyal_houseS1";
+	locations[n].reload.l14.emerge = "reload1";
+	locations[n].reload.l14.autoreload = "0";
+	locations[n].reload.l14.label = "House";
 
-	// --> Комоны, загрушки. Номера с начинаются с 20.
-	locations[n].reload.l20.name = "houseF1";
-	locations[n].reload.l20.go = "CommonRoom_MH3";
-	locations[n].reload.l20.emerge = "reload1";
-	locations[n].reload.l20.autoreload = "0";
-	locations[n].reload.l20.label = "House";
-    
- 	locations[n].reload.l21.name = "houseSp2";
-	locations[n].reload.l21.go = "CommonStoneHouse";
+	locations[n].reload.l15.name = "houseBH1";
+	locations[n].reload.l15.go = "PortRoyal_houseBH1";
+	locations[n].reload.l15.emerge = "reload2";
+	locations[n].reload.l15.autoreload = "0";
+	locations[n].reload.l15.label = "House";
+
+	locations[n].reload.l16.name = "houseBH2";
+	locations[n].reload.l16.go = "PortRoyal_houseBH1";
+	locations[n].reload.l16.emerge = "reload1";
+	locations[n].reload.l16.autoreload = "0";
+	locations[n].reload.l16.label = "House";
+
+	locations[n].reload.l18.name = "houseK3";
+	locations[n].reload.l18.go = "PortRoyal_BigHouse6";
+	locations[n].reload.l18.emerge = "reload1";
+	locations[n].reload.l18.autoreload = "0";
+	locations[n].reload.l18.label = "House";
+
+	locations[n].reload.l19.name = "houseK2";
+	locations[n].reload.l19.go = "PortRoyal_BigHouse6";
+	locations[n].reload.l19.emerge = "reload2";
+	locations[n].reload.l19.autoreload = "0";
+	locations[n].reload.l19.label = "House";
+	locations[n].reload.l19.disable = 1; //закроем
+
+	// locations[n].reload.l20.name = "houseSk5";
+	// locations[n].reload.l20.go = "PortRoyal_sklad02";
+	// locations[n].reload.l20.emerge = "reload1";
+	// locations[n].reload.l20.autoreload = "0";
+	// locations[n].reload.l20.label = "Sklad";
+	// locations[n].reload.l20.close_for_night = 1;
+	
+	locations[n].reload.l21.name = "houseSk4"; // винный погреб
+	locations[n].reload.l21.go = "PortRoyal_WineCellar"; 
 	locations[n].reload.l21.emerge = "reload1";
 	locations[n].reload.l21.autoreload = "0";
-	locations[n].reload.l21.label = "House";
+	locations[n].reload.l21.label = "Wine Cellar";
 
-	locations[n].reload.l23.name = "houseS1";
-	locations[n].reload.l23.go = "CommonResidence_2";
-	locations[n].reload.l23.emerge = "reload1";
-	locations[n].reload.l23.autoreload = "0";
-	locations[n].reload.l23.label = "House";
+	// locations[n].reload.l22.name = "houseSk3";
+	// locations[n].reload.l22.go = "PortRoyal_sklad02";
+	// locations[n].reload.l22.emerge = "reload1";
+	// locations[n].reload.l22.autoreload = "0";
+	// locations[n].reload.l22.label = "Sklad";
+	// locations[n].reload.l22.disable = 1; //закроем
+
+	// --> Комоны, загрушки. Номера с начинаются с 30.
+	locations[n].reload.l30.name = "houseF1";
+	locations[n].reload.l30.go = "CommonRoom_MH";
+	locations[n].reload.l30.emerge = "reload1";
+	locations[n].reload.l30.autoreload = "0";
+	locations[n].reload.l30.label = "House";
+    
+ 	locations[n].reload.l31.name = "houseSp2";
+	locations[n].reload.l31.go = "CommonStoneHouse";
+	locations[n].reload.l31.emerge = "reload1";
+	locations[n].reload.l31.autoreload = "0";
+	locations[n].reload.l31.label = "House";
+
+	locations[n].reload.l32.name = "houseH1";
+	locations[n].reload.l32.go = "CommonRoom_MH3";
+	locations[n].reload.l32.emerge = "reload1";
+	locations[n].reload.l32.autoreload = "0";
+	locations[n].reload.l32.label = "House";
+
+	locations[n].reload.l33.name = "houseK1";
+	locations[n].reload.l33.go = "CommonCobHouse";
+	locations[n].reload.l33.emerge = "reload1";
+	locations[n].reload.l33.autoreload = "0";
+	locations[n].reload.l33.label = "House";
+
+	locations[n].reload.l34.name = "houseH2";
+	locations[n].reload.l34.go = "CommonRoom_MH9";
+	locations[n].reload.l34.emerge = "reload1";
+	locations[n].reload.l34.autoreload = "0";
+	locations[n].reload.l34.label = "House";
+	
+	SetItemInLocation("PR_Letter", "PortRoyal_town", "letter1");
+	locations[n].locators_radius.item.letter1 = 1.0;
+	QuestPointerToLoc("PortRoyal_town", "item", "letter1");
+	
+	SetItemInLocation("PR_Letter", "PortRoyal_town", "letter2");
+	locations[n].locators_radius.item.letter2 = 1.2;
+	QuestPointerToLoc("PortRoyal_town", "item", "letter2");
+	
+	SetItemInLocation("PR_Letter", "PortRoyal_town", "letter3");
+	locations[n].locators_radius.item.letter3 = 1.0;
+	QuestPointerToLoc("PortRoyal_town", "item", "letter3");
+	
+	SetItemInLocation("PR_Letter", "PortRoyal_town", "letter4");
+	locations[n].locators_radius.item.letter4 = 1.0;
+	QuestPointerToLoc("PortRoyal_town", "item", "letter4");	
+	
+	locations[n].locators_radius.item.key1 = 1.0;
+	
+	SetItemInLocation("blade_12", "PortRoyal_town", "item1");
+	locations[n].locators_radius.item.item1 = 1.0;
+	//QuestPointerToLoc("PortRoyal_town", "item", "item1");
+	
+	SetItemInLocation("pistol3", "PortRoyal_town", "item2");
+	locations[n].locators_radius.item.item2 = 1.0;
+	//QuestPointerToLoc("PortRoyal_town", "item", "item2");
+	
+	SetItemInLocation("indian_10", "PortRoyal_town", "item3");
+	locations[n].locators_radius.item.item3 = 1.0;
+	//QuestPointerToLoc("PortRoyal_town", "item", "item3");
+	
+	SetItemInLocation("spyglass2", "PortRoyal_town", "item4");
+	locations[n].locators_radius.item.item4 = 1.5;
+	//QuestPointerToLoc("PortRoyal_town", "item", "item4");
+	
+	SetItemInLocation("purse1", "PortRoyal_town", "item5");
+	locations[n].locators_radius.item.item5 = 1.0;
+	//QuestPointerToLoc("PortRoyal_town", "item", "item5");
+	
 	n = n + 1;
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1077,6 +1180,240 @@ int LocationInitJamaica(int n)
 	locations[n].reload.l1.emerge = "reload2";
 	locations[n].reload.l1.autoreload = "0";
 	locations[n].reload.l1.label = "House";
+	n = n + 1;
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Богатая резиденция
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "PortRoyal_houseS1"; // c переходом в малую резиденцию
+	locations[n].id.label = "House";
+	locations[n].image = "loading\inside\mediumhouse10.tga";
+ 	//Town sack
+	locations[n].townsack = "PortRoyal";
+	locations[n].lockWeather = "Inside";
+	//Sound
+	locations[n].type = "house";
+	locations[n].fastreload = "PortRoyal";
+ 	locations[n].islandId = "Jamaica";
+	//Models
+	//Always
+	locations[n].filespath.models = "locations\inside\BigHouse02\";
+	locations[n].models.always.models = "BigHouse02";
+	locations[n].models.always.models.level = 65538;
+	locations[n].models.always.boxes = "BigHouse02_boxes";
+	locations[n].models.always.boxes.level = 65539;
+	locations[n].models.always.window = "BigHouse02_windows";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 65540;
+
+	locations[n].models.always.back = "..\inside_back";
+	//Day
+	locations[n].models.day.charactersPatch = "BigHouse02_patch";
+	locations[n].models.day.locators = "BigHouse02_PrLocators";
+	//Night
+	locations[n].models.night.charactersPatch = "BigHouse02_patch";
+	locations[n].models.night.locators = "BigHouse02_PrNlocators";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "PortRoyal_town";
+	locations[n].reload.l1.emerge = "houseS1";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Street";
+
+	locations[n].reload.l2.name = "reload2";
+	locations[n].reload.l2.go = "CommonBedroom";
+	locations[n].reload.l2.emerge = "reload1";
+	locations[n].reload.l2.autoreload = "0";
+	locations[n].reload.l2.label = "Room";
+	n = n + 1;
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Большой дом с двумя входами
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "PortRoyal_houseBH1";
+	locations[n].id.label = "House";
+	locations[n].image = "loading\inside\mediumhouse10.tga";
+	locations[n].MustSetReloadBack = true;
+ 	//Town sack
+	locations[n].townsack = "PortRoyal";
+	locations[n].lockWeather = "Inside";
+	//Sound
+	locations[n].type = "house";
+	locations[n].fastreload = "PortRoyal";
+ 	locations[n].islandId = "Jamaica";
+	//Models
+	locations[n].filespath.models = "locations\inside\FlamHouse";
+	//Always
+	locations[n].models.always.tavern = "FlamHouse";
+	locations[n].models.always.tavern.level = 65538;
+	locations[n].models.always.window = "FlamHouse_window";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 65539;
+	locations[n].models.day.locators = "FlamHouse_locators";
+	locations[n].models.night.locators = "FlamHouse_Nlocators";
+
+	locations[n].models.always.back = "..\inside_back";
+	locations[n].models.always.back.level = 65529;
+	//Day
+	locations[n].models.day.charactersPatch = "FlamHouse_patch";
+	//Night
+	locations[n].models.night.charactersPatch = "FlamHouse_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "PortRoyal_town";
+	locations[n].reload.l1.emerge = "houseBH2";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "house";
+
+	locations[n].reload.l2.name = "reload2";
+	locations[n].reload.l2.go = "PortRoyal_town";
+	locations[n].reload.l2.emerge = "houseBH1";
+	locations[n].reload.l2.autoreload = "0";
+	locations[n].reload.l2.label = "house";
+
+	locations[n].reload.l3.name = "reload4";
+	locations[n].reload.l3.go = "CommonRoom_MH3";
+	locations[n].reload.l3.emerge = "reload1";
+	locations[n].reload.l3.autoreload = "0";
+	locations[n].reload.l3.label = "Room";
+	
+	locations[n].reload.l4.name = "reload3";
+	locations[n].reload.l4.go = "CommonRoom_MH4";
+	locations[n].reload.l4.emerge = "reload1";
+	locations[n].reload.l4.autoreload = "0";
+	locations[n].reload.l4.label = "Room";
+	
+	n = n + 1;
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//  Винный погреб
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "PortRoyal_WineCellar";
+	locations[n].image = "loading\inside\sklad.tga";
+	locations[n].id.label = "Wine Cellar";
+	//Sound
+	locations[n].townsack = "PortRoyal";
+	locations[n].type = "house";
+	locations[n].fastreload = "PortRoyal";
+	locations[n].islandId = "Jamaica";
+	//Models
+	//Always
+	locations[n].filespath.models = "locations\inside\WineCellar";
+	locations[n].models.always.WineCellar = "WineCellar";
+	locations[n].models.always.WineCellar_parts = "WineCellar_parts";
+	locations[n].models.always.WineCellar_Room = "WineCellar_RoomClosed";
+	locations[n].models.always.locators = "WineCellar_locators";
+	//Day
+	//locations[n].models.day.charactersPatch = "WineCellar_RoomOpened_patch";
+	locations[n].models.day.charactersPatch = "WineCellar_RoomClosed_patch";
+	//Night
+	//locations[n].models.night.charactersPatch = "WineCellar_RoomOpened_patch";
+	locations[n].models.night.charactersPatch = "WineCellar_RoomClosed_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	Locations[n].lockWeather = "Inside";
+	Locations[n].QuestlockWeather = "23 Hour";
+	locations[n].environment.sea = "false";
+	locations[n].environment.weather.rain = false;
+ 	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "PortRoyal_town";
+	locations[n].reload.l1.emerge = "houseSk4";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "house";
+	n = n + 1;
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//  Дом с 3 дверьми
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "PortRoyal_BigHouse6";
+ 	locations[n].id.label = "House";
+	locations[n].image = "loading\inside\mediumhouse10.tga";
+ 	//Town sack
+	locations[n].townsack = "PortRoyal";
+	locations[n].lockWeather = "Inside";
+	//Sound
+	locations[n].type = "house";
+	locations[n].fastreload = "PortRoyal";
+ 	locations[n].islandId = "Jamaica";
+	//Models
+	locations[n].filespath.models = "locations\inside\BigHouse06\";
+	//Always
+	locations[n].models.always.house = "BigHouse06";
+	locations[n].models.always.house.level = 65538;
+	locations[n].models.always.window = "BigHouse06_windows";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 65539;
+	locations[n].models.always.locators = "BigHouse06_locators";
+
+	locations[n].models.always.back = "..\inside_back3";
+	locations[n].models.always.back.level = 65529;
+	//Day
+	locations[n].models.day.charactersPatch = "BigHouse06_patch";
+	//Night
+	locations[n].models.night.charactersPatch = "BigHouse06_patch";
+	locations[n].models.night.locators = "BigHouse06_Nlocators";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "PortRoyal_town";
+	locations[n].reload.l1.emerge = "houseK3";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Street";
+
+	locations[n].reload.l2.name = "reload2";
+	locations[n].reload.l2.go = "PortRoyal_BigHouse6";
+	locations[n].reload.l2.emerge = "reload1";
+	locations[n].reload.l2.autoreload = "0";
+	locations[n].reload.l2.label = "Room";
+	locations[n].reload.l2.disable = 1; //закроем
+	n = n + 1;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Склад 02
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "PortRoyal_sklad02";
+	locations[n].id.label = "packhouse";
+	locations[n].image = "loading\inside\sklad.tga";
+	locations[n].MustSetReloadBack = true;
+	locations[n].packhouse = true;
+	//Town sack
+	locations[n].townsack = "PortRoyal";
+	locations[n].lockWeather = "Inside";
+	//Sound
+	locations[n].type = "house";
+	locations[n].fastreload = "PortRoyal";
+	locations[n].islandId = "Jamaica";
+	//Models
+	locations[n].filespath.models = "locations\inside\Sklad02";
+	//Always
+	locations[n].models.always.locators = "sklad02_locators";
+	locations[n].models.always.modelSklad = "sklad02";
+	locations[n].models.always.modelSklad.level = 65538;
+	//Day
+	locations[n].models.day.charactersPatch = "sklad02_patch";
+	//Night
+	locations[n].models.night.charactersPatch = "sklad02_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	Locations[n].lockWeather = "Inside";
+	Locations[n].QuestlockWeather = "23 Hour";
+	locations[n].environment.sea = "false";
+	locations[n].environment.weather.rain = false;
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "PortRoyal_town";
+	locations[n].reload.l1.emerge = "houseSk5";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "Street";
 	n = n + 1;
 	
 	////////////////////// prison ////////////////////////////

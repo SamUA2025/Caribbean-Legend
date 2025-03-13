@@ -1,6 +1,6 @@
 SharlieTrial_1
 {
-Your loan from the Abbé Benoit has expired!
+Ihr Darlehen vom Abbé Benoit ist abgelaufen!
 }
 
 SharlieTrial_2
@@ -14,46 +14,46 @@ Lavua
 
 SharlieTrial_4
 {
-Boat
+Boot
 }
 
 SharlieTrial_5
 {
-Your ship is ready! Head to the pier and go out to sea!
+Euer Schiff ist bereit! Begeben Sie sich zur Anlegestelle und stechen Sie in See!
 }
 
 SharlieTrial_6
 {
-Ghost
+Geist
 }
 
 SharlieTrial_7
 {
-Head to the opposite side of the island to complete your quest. Exit the bay to the right and stick to the shoreline!
+Begeben Sie sich auf die gegenüberliegende Seite der Insel, um Ihre Aufgabe zu erfüllen. Verlasst die Bucht auf der rechten Seite und haltet Euch an der Küstenlinie!
 }
 
 SharlieTrial_8
 {
-Sea mode controls are available in the game options.
+Die Steuerung des Seemodus ist in den Spieloptionen verfügbar.
 }
 
 SharlieTrial_9
 {
-You are too late for the meeting!
+Sie kommen zu spät zum Treffen!
 }
 
 SharlieTrial_10
 {
-An hour passed...@<NewStr()>Rum was loaded on your boat
+Eine Stunde verging...@<NewStr()>Rum wurde auf Ihr Boot geladen
 }
 
 SharlieTrial_11
 {
-Use Action Menu to return back to your ship (enter).
+Verwenden Sie das Aktionsmenü, um zu Ihrem Schiff zurückzukehren (Enter).
 }
 SharlieTrial_12
 {
-Transport the rum to Le Francois. Keep sailing around the island.
+Transportieren Sie den Rum nach Le Francois. Segeln Sie weiter um die Insel.
 }
 
 SharlieTrial_13
@@ -67,12 +67,12 @@ Montane
 
 SharlieTrial_15
 {
-A challenging fight awaits ahead. (F6) for quick save.
+Ein anspruchsvoller Kampf wartet auf Sie. Drücken Sie (F6) für schnelles Speichern.
 }
 
 SharlieTrial_16
 {
-Someone got killed nearby! In case of a murder, use the Action Menu (ENTER) or the assigned hotkey to loot the deceased.
+Jemand wurde in der Nähe getötet! Im Falle eines Mordes benutzen Sie das Aktionsmenü (ENTER) oder den zugewiesenen Hotkey, um den Verstorbenen zu plündern.
 }
 
 SharlieTrial_17
@@ -113,12 +113,12 @@ Catcher
 
 SharlieTrial_25
 {
-Sink her with bombs, or immediately board her if the wind allows.
+Versenken Sie sie mit Bomben oder entern Sie sie sofort, wenn der Wind es zulässt.
 }
 
 SharlieTrial_26
 {
-Excellent job! Open the Global Map via the Action Menu and set sail north towards Guadeloupe!
+Ausgezeichnete Arbeit! Öffnen Sie die Weltkarte über das Aktionsmenü und setzen Sie die Segel in Richtung Norden nach Guadeloupe!
 }
 
 SharlieTrial_27
@@ -164,7 +164,7 @@ Shoke
 
 SharlieTrial_36
 {
-"Three hours passed...@<NewStr()>The cannons were loaded on the frigate"
+"Drei Stunden vergingen...@<NewStr()>Die Kanonen wurden auf die Fregatte geladen"
 }
 
 SharlieTrial_37
@@ -205,17 +205,17 @@ Valinnie
 
 SharlieTrial_45
 {
-Access your quest log by pressing F3.
+Rufen Sie Ihr Logbuch auf, indem Sie F3 drücken.
 }
 
 SharlieTrial_46
 {
-From now on you're on your own in this cruel world.
+Von nun an bist du auf dich allein gestellt in dieser grausamen Welt.
 }
 
 SharlieTrial_47
 {
-Tichingitu changed his mind.
+Tichingitu hat seine Meinung geändert.
 }
 
 SharlieTrial_48
@@ -234,12 +234,12 @@ Henry
 
 SharlieTrial_51
 {
-barque 'Henry'
+Barke 'Henry'
 }
 
 SharlieTrial_52
 {
-An opportunity to loot the dead for valuable items!
+Eine Gelegenheit, die Toten für wertvolle Gegenstände zu plündern!
 }
 
 SharlieTrial_53

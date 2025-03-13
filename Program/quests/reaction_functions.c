@@ -333,7 +333,16 @@ void Treasure_SetOfficerWarrior(string qName) //
 	}
 }
 
-void TownPirate_battle(string qName) //
+void Treasure_Stories(string attr) // открыли записку из клада
+{
+    pchar.questTemp.Treasure_Stories.(attr) = "";
+	pchar.questTemp.Treasure_Stories = sti(pchar.questTemp.Treasure_Stories) + 1;
+	//if (sti(pchar.questTemp.Treasure_Stories) == 4) Achievment_Set("ach_CL_98");
+	//if (sti(pchar.questTemp.Treasure_Stories) == 9) Achievment_Set("ach_CL_98");
+	//if (sti(pchar.questTemp.Treasure_Stories) == 18) Achievment_Set("ach_CL_98");
+}
+
+void TownPirate_battle(string qName)
 {
 	bDisableFastReload = false;//открыть переход
 	chrDisableReloadToLocation = true;
@@ -663,4 +672,246 @@ void Return_IronsOfficer()
 	LAi_ActorFollow(sld, pchar, "", -1);
 	LAi_SetOfficerType(sld);
 	LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
+}
+
+void Hat6_deal(string qName)
+{
+	if(!CheckAttribute(pchar, "questTemp.Hat6_deal"))
+	{
+		if(GetCharacterEquipByGroup(pchar, HAT_ITEM_TYPE) == "hat6" && bFastEnable())
+		{
+			ref loc = &locations[FindLocation(pchar.location)];
+			if(CheckAttribute(loc, "type") && loc.type == "town")
+			{
+				int iGood = GOOD_COFFEE + rand(10);
+				ref rColony = GetColonyByIndex(FindColony(GetCityNameByIsland(GiveArealByLocation(loc))));
+				int iPrice = sti(GetStoreGoodsPrice(&stores[sti(rColony.StoreNum)], iGood, PRICE_TYPE_BUY, pchar, 1));
+				
+				log_testinfo("Hat6_deal Good " + Goods[iGood].name + " price " + iPrice);
+				
+				int money = GetSummonSkillFromName(pchar, SKILL_COMMERCE) * 100 + (-ChangeCharacterHunterScore(Pchar, NationShortName(sti(rColony.nation)) + "hunter", 0) * 20) + sti(pow(sti(pchar.money), 0.5));
+				
+				AddCharacterGoods(pchar, iGood, money/iPrice);
+				ChangeCharacterHunterScore(Pchar, NationShortName(sti(rColony.nation)) + "hunter", -(GetSummonSkillFromName(pchar, SKILL_COMMERCE)/20));
+				notification(StringFromKey("reaction_functions_5") + money/iPrice, Goods[iGood].name);
+				pchar.questTemp.Hat6_deal = true;
+				SetFunctionTimerCondition("Hat6_NewDeal", 0, 0, 3, false);
+			}
+		}
+	}
+}
+
+void Hat6_NewDeal(string qName)
+{
+	if(CheckAttribute(pchar, "questTemp.Hat6_deal"))
+		DeleteAttribute(pchar, "questTemp.Hat6_deal");
+}
+
+/* void Hat6_deal_OLD(string qName) // belamour пока оставим, возможно, вернемся к этому варианту
+{
+	if(!CheckAttribute(pchar, "questTemp.Hat6_deal"))
+	{
+		if(GetCharacterEquipByGroup(pchar, HAT_ITEM_TYPE) == "hat6" && bFastEnable())
+		{
+			ref loc = &locations[FindLocation(pchar.location)];
+			ref isl = GetIslandByID(GiveArealByLocation(loc));
+			if(CheckAttribute(isl, "Trade.Export"))
+			{
+				aref arGoods;
+				makearef(arGoods, isl.Trade.Export);
+				int iGood = rand(GetAttributesNum(arGoods)-1);
+				aref arCurGood = GetAttributeN(arGoods, iGood);
+				string sGood = GetAttributeValue(arCurGood);
+				
+				
+				ref rColony = GetColonyByIndex(FindColony(GetCityNameByIsland(GiveArealByLocation(loc))));
+				int iPrice = sti(GetStoreGoodsPrice(&stores[sti(rColony.StoreNum)], sti(sGood), PRICE_TYPE_BUY, pchar, 1);
+				
+				log_testinfo("Hat6_deal Good " + Goods[sti(sGood)].name + " price " + iPrice);
+				
+				int money = GetSummonSkillFromName(pchar, SKILL_COMMERCE) * 100 + (-ChangeCharacterHunterScore(Pchar, NationShortName(sti(rColony.nation)) + "hunter", 0) * 20) + sti(pow(sti(pchar.money), 0.5));
+				
+				AddCharacterGoods(pchar, sti(sGood), money/iPrice);
+				ChangeCharacterHunterScore(Pchar, NationShortName(sti(rColony.nation)) + "hunter", -(GetSummonSkillFromName(pchar, SKILL_COMMERCE)/20));
+				notification("Удачный день для сделки, трюмы пополнены! +" + money/iPrice, Goods[sti(sGood)].name);
+				pchar.questTemp.Hat6_deal = true;
+				SetFunctionTimerCondition("Hat6_NewDeal", 0, 0, 3, false);
+			}
+		}
+	}
+} */
+
+// Открытие комнаты в винном погребе
+void OpenWardrobe_Sound(string qName)
+{
+	PlaySound("Ambient\Teno_inside\door_1.wav");
+}
+
+void OpenWardrobe_PortRoyal()
+{
+	DeleteAttribute(&locations[FindLocation("PortRoyal_WineCellar")], "models.always.WineCellar_Room");
+	sld = &Locations[FindLocation("PortRoyal_WineCellar")];
+	sld.models.always.WineCellar_Room = "WineCellar_RoomOpened";
+	sld.models.day.charactersPatch = "WineCellar_RoomOpened_patch";
+	sld.models.night.charactersPatch = "WineCellar_RoomOpened_patch";
+	
+	LAi_SetActorType(pchar);
+	DoQuestFunctionDelay("OpenWardrobe_Sound", 0.85);
+	DoQuestFunctionDelay("OpenWardrobe_PortRoyal_2", 2.0);
+}
+
+void OpenWardrobe_PortRoyal_2(string qName)
+{
+	LAi_SetPlayerType(pchar);
+	pchar.GenQuestBox.PortRoyal_WineCellar.box3.items.gold_dublon = 75;
+	pchar.GenQuestBox.PortRoyal_WineCellar.box3.items.gold = 10000;
+	pchar.GenQuestBox.PortRoyal_WineCellar.box3.items.jewelry2 = 8;
+	pchar.GenQuestBox.PortRoyal_WineCellar.box3.items.jewelry3 = 4;
+	pchar.GenQuestBox.PortRoyal_WineCellar.box3.items.jewelry52 = 20;
+	pchar.GenQuestBox.PortRoyal_WineCellar.box3.items.jewelry15 = 2;
+	pchar.GenQuestBox.PortRoyal_WineCellar.box3.items.jewelry5 = 10;
+	pchar.GenQuestBox.PortRoyal_WineCellar.box3.items.jewelry6 = 17;
+	pchar.GenQuestBox.PortRoyal_WineCellar.box3.items.PR_Letter = 1;
+	
+	PChar.quest.Find_PR_Letter.win_condition.l1 = "item";
+	PChar.quest.Find_PR_Letter.win_condition.l1.item = "PR_Letter";
+	PChar.quest.Find_PR_Letter.function = "Find_PR_Letter";
+	
+	chrDisableReloadToLocation = true;
+	
+	DoFunctionReloadToLocation("PortRoyal_WineCellar", "item", "button01", "");
+}
+
+void OpenWardrobe_FortFrance()
+{
+	DeleteAttribute(&locations[FindLocation("FortFrance_WineCellar")], "models.always.WineCellar_Room");
+	sld = &Locations[FindLocation("FortFrance_WineCellar")];
+	sld.models.always.WineCellar_Room = "WineCellar_RoomOpened";
+	sld.models.day.charactersPatch = "WineCellar_RoomOpened_patch";
+	sld.models.night.charactersPatch = "WineCellar_RoomOpened_patch";
+	
+	LAi_SetActorType(pchar);
+	DoQuestFunctionDelay("OpenWardrobe_Sound", 0.85);
+	DoQuestFunctionDelay("OpenWardrobe_FortFrance_2", 2.0);
+}
+
+void OpenWardrobe_FortFrance_2(string qName)
+{
+	LAi_SetPlayerType(pchar);
+	pchar.GenQuestBox.FortFrance_WineCellar.box3.items.gold_dublon = 100;
+	pchar.GenQuestBox.FortFrance_WineCellar.box3.items.gold = 5000;
+	pchar.GenQuestBox.FortFrance_WineCellar.box3.items.jewelry8 = 12;
+	pchar.GenQuestBox.FortFrance_WineCellar.box3.items.jewelry52 = 5;
+	pchar.GenQuestBox.FortFrance_WineCellar.box3.items.jewelry41 = 3;
+	pchar.GenQuestBox.FortFrance_WineCellar.box3.items.jewelry40 = 4;
+	pchar.GenQuestBox.FortFrance_WineCellar.box3.items.jewelry45 = 5;
+	pchar.GenQuestBox.FortFrance_WineCellar.box3.items.jewelry43 = 2;
+	pchar.GenQuestBox.FortFrance_WineCellar.box3.items.jewelry37 = 2;
+	DoFunctionReloadToLocation("FortFrance_WineCellar", "item", "button01", "");
+}
+
+void OpenWardrobe_Villemstad()
+{
+	DeleteAttribute(&locations[FindLocation("Villemstad_WineCellar")], "models.always.WineCellar_Room");
+	sld = &Locations[FindLocation("Villemstad_WineCellar")];
+	sld.models.always.WineCellar_Room = "WineCellar_RoomOpened";
+	sld.models.day.charactersPatch = "WineCellar_RoomOpened_patch";
+	sld.models.night.charactersPatch = "WineCellar_RoomOpened_patch";
+	
+	LAi_SetActorType(pchar);
+	DoQuestFunctionDelay("OpenWardrobe_Sound", 0.85);
+	DoQuestFunctionDelay("OpenWardrobe_Villemstad_2", 2.0);
+}
+
+void OpenWardrobe_Villemstad_2(string qName)
+{
+	LAi_SetPlayerType(pchar);
+	pchar.GenQuestBox.Villemstad_WineCellar.box3.items.gold_dublon = 50;
+	pchar.GenQuestBox.Villemstad_WineCellar.box3.items.blade_11 = 1;
+	pchar.GenQuestBox.Villemstad_WineCellar.box3.items.cirass6 = 1;
+	pchar.GenQuestBox.Villemstad_WineCellar.box3.items.pistol6 = 1;
+	pchar.GenQuestBox.Villemstad_WineCellar.box3.items.spyglass2 = 1;
+	pchar.GenQuestBox.Villemstad_WineCellar.box3.items.GunPowder = 50;
+	pchar.GenQuestBox.Villemstad_WineCellar.box3.items.bullet = 50;
+	pchar.GenQuestBox.Villemstad_WineCellar.box3.items.potion1 = 10;
+	pchar.GenQuestBox.Villemstad_WineCellar.box3.items.PR_Letter = 1;
+	
+	PChar.quest.Find_PR_Letter.win_condition.l1 = "item";
+	PChar.quest.Find_PR_Letter.win_condition.l1.item = "PR_Letter";
+	PChar.quest.Find_PR_Letter.function = "Find_PR_Letter";
+	
+	chrDisableReloadToLocation = true;
+	
+	DoFunctionReloadToLocation("Villemstad_WineCellar", "item", "button01", "");
+}
+
+void PR_Letter_Reaction()
+{
+	string locId = pchar.location;
+	ref rItem = ItemsFromID("PR_Letter");
+	
+	if(HasSubStr(locId, "WineCellar")) locId = FindStringBeforeChar(locId, "WineCellar") + "town";
+	
+	if(!CheckAttribute(rItem, locId + ".find")) rItem.(locId).find = 0;
+	rItem.(locId).find = sti(rItem.(locId).find) + 1;
+	AddQuestRecordInfo(locId+"_Letter", rItem.(locId).find);
+	
+	if(locId == "PortRoyal_town")
+	{
+		if(sti(rItem.(locId).find) == 4)
+		{
+			//SetItemInLocation("key_candlestick_PortRoyal", "PortRoyal_town", "key1");
+			QuestPointerToLoc("PortRoyal_town", "item", "key1");
+			rItem = ItemsFromID("key_candlestick_PortRoyal");
+			rItem.shown = true;
+			rItem.startLocation = "PortRoyal_town";
+			rItem.startLocator = "key1";
+			Item_OnLoadLocation("PortRoyal_town");
+		}
+	}
+	
+	if(locId == "Villemstad_town")
+	{
+		switch (sti(rItem.(locId).find))
+		{
+			case 1: AddCharacterSkillDontClearExp(pchar, SKILL_SAILING, 1); break;
+			case 2: AddCharacterSkillDontClearExp(pchar, SKILL_SNEAK, 1); break;
+			case 3: AddCharacterSkillDontClearExp(pchar, SKILL_LEADERSHIP, 1); break;
+			case 4: AddCharacterSkillDontClearExp(pchar, SKILL_COMMERCE, 1); break;
+		}
+		
+		if(sti(rItem.(locId).find) == 4)
+		{
+			QuestPointerToLoc("Villemstad_town", "item", "key1");
+			rItem = ItemsFromID("key_candlestick_Villemstad");
+			rItem.shown = true;
+			rItem.startLocation = "Villemstad_town";
+			rItem.startLocator = "key1";
+			Item_OnLoadLocation("Villemstad_town");
+		}
+		else if(sti(rItem.(locId).find) < 4)
+		{
+			DoQuestFunctionDelay("Show_Next_PR_Letter", 1.0);
+		}
+	}
+}
+
+void Show_Next_PR_Letter(string qName)
+{
+	string locId = pchar.location;
+	ref rItem = ItemsFromID("PR_Letter");
+	string sLocator = "letter"+sti(1 + sti(rItem.(locId).find));
+	rItem.shown = true;
+	rItem.startLocation = "Villemstad_town";
+	rItem.startLocator = sLocator;
+	SendMessage(&itemModels[Items_FindItemIdx("PR_Letter")], "lslff", MSG_MODEL_BLEND, "blenditem", 1000, 0.0, 1.0);
+	QuestPointerToLoc("Villemstad_town", "item", sLocator);
+	Item_OnLoadLocation("Villemstad_town");
+}
+
+void Find_PR_Letter(string qName)
+{
+	PR_Letter_Reaction();
+	TakeItemFromCharacter(pchar, "PR_Letter");
+	chrDisableReloadToLocation = false;
 }

@@ -9,11 +9,11 @@ Fox
 
 SharlieFinal_3
 {
-Exploration mode: timer extended. Complete the quest!"
+Erkundungsmodus: Timer verlängert. Schließe die Quest ab!"
 }
 SharlieFinal_4
 {
-Catherine Fox died of calenture!
+Catherine Fox starb an einer Lungenentzündung!
 }
 
 SharlieFinal_5
@@ -46,12 +46,12 @@ Enphanta
 
 SharlieFinal_11
 {
-spain convoy
+Spanischer Konvoi
 }
 
 SharlieFinal_12
 {
-Victory
+Sieg
 }
 SharlieFinal_13
 {
@@ -67,7 +67,7 @@ Loyal London
 }
 SharlieFinal_16
 {
-Haughty
+Hochmütig
 }
 
 SharlieFinal_17
@@ -93,7 +93,7 @@ Apostle
 
 SharlieFinal_22
 {
-Cage has been opened!
+Der Käfig wurde geöffnet!
 }
 
 SharlieFinal_23
@@ -116,12 +116,12 @@ Duble
 
 SharlieFinal_27
 {
-Delicious
+Köstlich
 }
 
 SharlieFinal_28
 {
-boatswain Serge
+Bootsmann Serge
 }
 SharlieFinal_29
 {
@@ -153,7 +153,7 @@ Marshe
 
 SharlieFinal_35
 {
-A day passed...@<NewStr()>Vanilla was loaded on the carrack...
+Ein Tag verging...@<NewStr()>Vanille wurde auf die Karacke verladen...
 }
 
 SharlieFinal_36
@@ -167,7 +167,7 @@ Flayer
 
 SharlieFinal_38
 {
-Father Vincento
+Vater Vincento
 }
 SharlieFinal_39
 {
@@ -208,7 +208,7 @@ Carrier lugger 'Shadow'
 
 SharlieFinal_47
 {
-Whole powder supply got exploded on 'Shadow'!
+Ein ganzer Pulvervorrat ist auf der 'Shadow' explodiert!
 }
 
 SharlieFinal_48
@@ -218,16 +218,16 @@ Fortune
 
 SharlieFinal_49
 {
-captain
+Kapitän
 }
 SharlieFinal_50
 {
-of 'Santa Quiteria'
+der 'Santa Quiteria'
 }
 
 SharlieFinal_51
 {
-father Adrian
+Vater Adrian
 }
 SharlieFinal_52
 {
@@ -236,7 +236,7 @@ SharlieFinal_52
 
 SharlieFinal_53
 {
-Stranger
+Fremder
 }
 SharlieFinal_54
 {
@@ -245,12 +245,12 @@ SharlieFinal_54
 
 SharlieFinal_55
 {
-Enemies in ambush - @<n>
+Feinde aus dem Hinterhalt - @<n>
 }
 
 SharlieFinal_56
 {
-I should get in my cabin
+Ich sollte in meine Kajüte gehen
 }
 
 SharlieFinal_57
@@ -273,17 +273,17 @@ SharlieFinal_60
 
 SharlieFinal_61
 {
-Itzha's treasury has been opened
+Itzha's Schatzkammer wurde geöffnet
 }
 
 SharlieFinal_62
 {
-The Mask of Kukulcan is destroyed@<NewStr()>Portals are eliminated!
+Die Maske von Kukulcan ist zerstört@<NewStr()>Portale sind eliminiert!
 }
 
 SharlieFinal_63
 {
-Several days passed...@<NewStr()>The ship has arrived to the bay
+Einige Tage sind vergangen...@<NewStr()>Das Schiff ist in der Bucht angekommen
 }
 
 SharlieFinal_64
@@ -297,12 +297,12 @@ Rosetty
 
 SharlieFinal_66
 {
-It took half an hour@<NewStr()>You have established the right course
+Es hat eine halbe Stunde gedauert@<NewStr()>Sie haben den richtigen Kurs eingeschlagen
 }
 
 SharlieFinal_67
 {
-Guard of the Mask
+Wächter der Maske
 }
 SharlieFinal_68
 {
@@ -311,22 +311,22 @@ SharlieFinal_68
 
 SharlieFinal_69
 {
-The Guardian has recovered completely!
+Der Wächter hat sich vollständig erholt!
 }
 
 SharlieFinal_70
 {
-You are feeling stronger
+Sie fühlen sich stärker
 }
 
 SharlieFinal_71
 {
-You are feeling more enduring
+Sie haben mehr Ausdauer
 }
 
 SharlieFinal_72
 {
-You are feeling more agile
+Sie fühlen sich beweglicher
 }
 
 SharlieFinal_73
@@ -340,7 +340,7 @@ SharlieFinal_74
 
 SharlieFinal_75
 {
-Boarding officer @<GetFullName(sld)> has used@<sTemp> a Comanche potion
+Enteroffizier @<GetFullName(sld)> hat@<sTemp> einen Komantschentrankes benutzt
 }
 
 SharlieFinal_76
@@ -354,17 +354,17 @@ SharlieFinal_77
 
 SharlieFinal_78
 {
-Boarding officer @<GetFullName(sld)>  died@<sTemp> because of an absence of a Comanche potion
+Enteroffizier @<GetFullName(sld)> starb@<sTemp> wegen des Fehlens eines Komantschentrankes
 }
 
 SharlieFinal_79
 {
-Kukulcan managed to get in the past@<NewStr()>You failed to stop him...
+Kukulcan hat es geschafft, in die Vergangenheit zu gelangen@<NewStr()>Sie haben es nicht geschafft, ihn aufzuhalten...
 }
 
 SharlieFinal_80
 {
-captain
+Kapitän
 }
 SharlieFinal_81
 {
@@ -373,7 +373,7 @@ Gobart
 
 SharlieFinal_82
 {
-colonel
+Colonel
 }
 SharlieFinal_83
 {
@@ -382,5 +382,5 @@ Kirk
 
 SharlieFinal_84
 {
-The world has changed and so did your hero@<NewStr()> But  that's another story...
+Die Welt hat sich verändert und euer Held@<NewStr()> auch, aber das ist eine andere Geschichte...
 }

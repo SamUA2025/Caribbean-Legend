@@ -121,6 +121,14 @@ void AffairOfHonor_LighthouseLocEnter(string _quest)
 	LAi_SetGuardianType(sld);
 	sld.protector = true; // Начать диалог.
 	sld.Dialog.CurrentNode = "AffairOfHonor_BeforeFight_1";
+	if(sti(pchar.rank) < 12)
+	{
+		GiveItem2Character(sld, "hat1");
+	}
+	else
+	{
+		GiveItem2Character(sld, "hat2");
+	}
 	LAi_SetImmortal(sld, false);
 	LAi_CharacterEnableDialog(sld);
 	LAi_RemoveLoginTime(sld);

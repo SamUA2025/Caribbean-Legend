@@ -1,0 +1,69 @@
+characterUtilite_1
+{
+Otrzymano @<_Money> Pesos
+}
+
+characterUtilite_2
+{
+Wydano @<abs(_Money)> Pesos
+}
+
+characterUtilite_3
+{
+Nowy Przedmiot: ~
+}
+
+characterUtilite_4
+{
+Otrzymano @<n> Dublony
+}
+
+characterUtilite_5
+{
+Oddano Przedmiot: ~
+}
+
+characterUtilite_6
+{
+ zauważył, że @<LanguageConvertString(idLngFile, arItem.name)> stracił swą moc
+}
+
+characterUtilite_7
+{
+Zyskano Honor
+}
+
+characterUtilite_8
+{
+Utracono Honor
+}
+
+characterUtilite_9
+{
+Wydano @<_Dublons> Dublony
+}
+
+characterUtilite_10
+{
+A landing party of @<officer.Ship.Name> has @<compCrew> soldiers in it
+}
+
+characterUtilite_11
+{
+Terms of your loan are expired
+}
+
+characterUtilite_12
+{
+Atlas Update: @<LanguageConvertString(idLngFile, arItem.name)>
+}
+
+characterUtilite_13
+{
+Wkurzyles Tubylcow (
+}
+
+characterUtilite_14
+{
+Doceniles Tubylcow (
+}

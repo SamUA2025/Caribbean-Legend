@@ -505,12 +505,13 @@ int LocationInitPanama(int n)
 	locations[n].reload.l2.autoreload = "0";
 	locations[n].reload.l2.label = "Street";
 
-	//ключи для сундуков и предметы внутри
+    // TO_DO: DEL
+	// ключи для сундуков и предметы внутри
 	locations[n].private1.key = "keyPanama";
 	//locations[n].private1.key.delItem = true;
 	locations[n].private1.items.gold = 50000000;
 	locations[n].private2.items.map_terks = 1;
-	locations[n].private2.items.map_Pearl = 1;
+	locations[n].private2.items.map_panama = 1;
 	locations[n].private2.items.potion2 = 5;
 	locations[n].private2.items.potionwine = 2;
 	locations[n].private2.items.potion5 = 1;

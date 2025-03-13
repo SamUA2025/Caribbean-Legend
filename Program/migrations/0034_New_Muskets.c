@@ -38,7 +38,7 @@ void ApplyMigration(ref migrationState) {
 			{
 				/* log_info("CharID "+Characters[n].id);
 				log_info("gun "+Characters[n].equip.gun); */
-				if(HasSubStr(Characters[n].equip.qun, "mushket"))
+				if(HasSubStr(Characters[n].equip.gun, "mushket"))
 				{
 					Characters[n].equip.musket = Characters[n].equip.gun;
 					trace("У персонажа "+Characters[n].id+" Musket "+Characters[n].equip.musket);

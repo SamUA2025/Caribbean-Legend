@@ -21,7 +21,7 @@ void Slavetrader_GetRandomShore()//выбор бухты
 	pchar.questTemp.Slavetrader.Island.Shore = GetIslandRandomShoreId(pchar.questTemp.Slavetrader.Island);
 	while(pchar.questTemp.Slavetrader.Island.Shore == "")
 	{
-		pchar.questTemp.Slavetrader.Island = GetRandomIslandId();
+		pchar.questTemp.Slavetrader.Island = GetRandIslandId();
 		pchar.questTemp.Slavetrader.Island.Shore = GetIslandRandomShoreId(pchar.questTemp.Slavetrader.Island);
 		if (!isLocationFreeForQuests(pchar.questTemp.Slavetrader.Island)) pchar.questTemp.Slavetrader.Island.Shore = "";
 	} 

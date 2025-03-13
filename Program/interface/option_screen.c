@@ -1187,6 +1187,7 @@ bool AddToControlsList(int row, string sControl, string sKey, bool bRemapable)
 			GameInterface.controls_list.(rowname).td4.str = "+";
 		}
 	}
+	else GameInterface.controls_list.(rowname).td1.color = argb(255,255,128,128); // красим пустые кнопки
 	return true;
 }
 
@@ -1242,6 +1243,7 @@ void RefreshControlInList(string rowname, string sControl, string sKey, bool bRe
 			GameInterface.controls_list.(rowname).td4.str = "+";
 		}
 	}
+	else GameInterface.controls_list.(rowname).td1.color = argb(255,255,128,128); // красим пустые кнопки
 	//AddToControlsList(row, sControl, sKey, bRemapable);
 }
 
@@ -1736,12 +1738,23 @@ bool DoMapToOtherKey(int keyIdx,int stickUp)
 		DeleteAttribute(&objControlsState, "keygroups.AltPressedGroup" + "." + sControl);
 	}
 
-	if (controlReplacement != "") {
-		SwapControls(groupName, sControl, sKey, controlReplacementGroup, controlReplacement, GetAttributeName(arKey));
-	} else {
-		SetControlForLinkGroup(groupName, sControl, keyCode, state);
+	if (controlReplacement != "")
+    {
+		//SwapControls(groupName, sControl, sKey, controlReplacementGroup, controlReplacement, GetAttributeName(arKey));
+        CI_CreateAndSetControls(groupName, sControl, CI_GetKeyCode(GetAttributeName(arKey)), 0, true);
+        CI_CreateAndSetControls(controlReplacementGroup, controlReplacement, -1, 0, true);
 	}
-	
+    else
+    {
+        //SetControlForLinkGroup(groupName, sControl, keyCode, state);
+        CI_CreateAndSetControls(groupName, sControl, keyCode, state, true);
+    }
+    if(CheckAttribute(&objControlsState, "keygroups." + groupName + "." + sControl + ".sync")) // TO_DO: DEL
+    {
+        controlReplacement = objControlsState.keygroups.(groupName).(sControl).sync;
+        CI_CreateAndSetControls(groupName, controlReplacement, keyCode, state, true);
+    }
+
 	RefreshControlsList();
 	
 	return true;
@@ -2032,14 +2045,22 @@ bool KeyAlreadyUsed(string sGrpName, string sControl, string sKey, bool bAltPres
 	// проверка на совпадение в той же группе
 	makearef(arGrp,objControlsState.keygroups.(sGrpName));
 	q = GetAttributesNum(arGrp);
+
+    string SyncKey = ""; // TO_DO: DEL
+    if(CheckAttribute(&objControlsState, "keygroups." + sGrpName + "." + sControl + ".sync"))
+       SyncKey = objControlsState.keygroups.(sGrpName).(sControl).sync;
+
 	for(n=0; n<q; n++)
 	{
 		arCntrl = GetAttributeN(arGrp,n);
-		if(GetAttributeValue(arCntrl) == sKey) {
+		if(GetAttributeValue(arCntrl) == sKey)
+        {
 			if(!bAltPress)
 			{
 				//belamour legendary edition проверяем, есть ли контролка с таким же ключом в sGrpName и AltPressedGroup
 				if(CheckAttribute(&objControlsState,"keygroups.AltPressedGroup"+"."+GetAttributeName(arCntrl))) continue;
+                if(SyncKey == GetAttributeName(arCntrl)) continue; // TO_DO: DEL
+
 				if (sti(arCntrl.remapping)) {
 					controlReplacement = GetAttributeName(arCntrl);
 					controlReplacementGroup = sGrpName;
@@ -2047,10 +2068,12 @@ bool KeyAlreadyUsed(string sGrpName, string sControl, string sKey, bool bAltPres
 				bAlreadyUsed = true;
 				break;
 			}
-			if(bAltPress)
+			else
 			{
 				//belamour legendary edition проверяем, есть ли контролка с таким же ключом за исключением AltPressedGroup
 				if(!CheckAttribute(&objControlsState,"keygroups.AltPressedGroup"+"."+GetAttributeName(arCntrl))) continue;
+                if(SyncKey == GetAttributeName(arCntrl)) continue; // TO_DO: DEL
+
 				if (sti(arCntrl.remapping)) {
 					controlReplacement = GetAttributeName(arCntrl);
 					controlReplacementGroup = sGrpName;
@@ -2058,16 +2081,16 @@ bool KeyAlreadyUsed(string sGrpName, string sControl, string sKey, bool bAltPres
 				bAlreadyUsed = true;
 				break;
 			}
-			if (sti(arCntrl.remapping)) {
+			/*if (sti(arCntrl.remapping)) {
 				controlReplacement = GetAttributeName(arCntrl);
 				controlReplacementGroup = sGrpName;
 			}
 			bAlreadyUsed = true;
-			break;
+			break;*/
 		}
 	}
 
-	if(bAlreadyUsed) {return bAlreadyUsed;}
+	/*if(bAlreadyUsed) {return bAlreadyUsed;}
 
 	// найдем группу в которой эта контролка также отображается
 	makearef(arGrpList, objControlsState.keygroups);
@@ -2111,7 +2134,7 @@ bool KeyAlreadyUsed(string sGrpName, string sControl, string sKey, bool bAltPres
 			}
 		}
 		if(bAlreadyUsed) {break;}
-	}
+	}*/
 	return bAlreadyUsed;
 }
 

@@ -2471,6 +2471,11 @@ void SetEquipedItemToCharacter(ref chref, string groupID, string itemID)
 					{
 						chref.model.animation = chref.model;
 					}
+					string hat = GetCharacterEquipByGroup(chref, HAT_ITEM_TYPE);
+					if(hat != "")
+					{
+						SetEquipedItemToCharacter(chref, HAT_ITEM_TYPE, hat);
+					}
 	            }
 	            else
 	            {
@@ -2544,6 +2549,16 @@ void SetEquipedItemToCharacter(ref chref, string groupID, string itemID)
 			}		
 			// boal <--
 		break;
+
+		case HAT_ITEM_TYPE:
+			if(CheckAttribute(arItm,"model"))	{modelName = arItm.model;}
+			SendMessage(chref, "lsl", MSG_CHARACTER_EX_MSG, "UntieItem", 10);
+			if(HasHatLocator(chref))
+			{
+				SendMessage(chref, "lslssl", MSG_CHARACTER_EX_MSG, "TieItem", 10, modelName, "hat", 1);
+			}
+		break;
+
 		// --> ugeen 18.06.09   - увеличиваем счетчик карт в атласе	
 		case MAPS_ITEM_TYPE:	
 			if(CheckAttribute(chref, "MapsAtlasCount"))
@@ -2591,6 +2606,10 @@ void SetGunParameters(ref chref, string sType, string itemID, bool bEquip)
 		if(CheckAttribute(chref,"chr_ai." + sType + ".bullet"))		DeleteAttribute(chref,"chr_ai." + sType + ".bullet");
 		if(CheckAttribute(chref,"chr_ai." + sType + ".charge_max")) DeleteAttribute(chref,"chr_ai." + sType + ".charge_max");
 		if(CheckAttribute(chref,"chr_ai." + sType + ".chargeprc")) 	DeleteAttribute(chref,"chr_ai." + sType + ".chargeprc");
+		if(CheckAttribute(chref,"chr_ai." + sType + ".basedmg")) 	DeleteAttribute(chref,"chr_ai." + sType + ".basedmg");
+		if(CheckAttribute(chref,"chr_ai." + sType + ".shards")) 	DeleteAttribute(chref,"chr_ai." + sType + ".shards");
+		if(CheckAttribute(chref,"chr_ai." + sType + ".width")) 		DeleteAttribute(chref,"chr_ai." + sType + ".width");
+		if(CheckAttribute(chref,"chr_ai." + sType + ".height")) 	DeleteAttribute(chref,"chr_ai." + sType + ".height");
 		if(sType == "musket" && CheckAttribute(chref,"PriorityMode")) chref.PriorityMode = 1; //Сброс на сабельный
 		if(sType == "musket" && CheckAttribute(chref,"IsMushketer")) DeleteAttribute(chref,"IsMushketer");
 	}	
@@ -2610,6 +2629,10 @@ void MusketEquipOldLogic(ref chref, string modelName, bool bEquip)
 	{
 		//if(!IsMainCharacter(chref))
 		//{
+			if(chref.model.animation != chref.model)
+			{
+				chref.model.animation = chref.model;
+			}
 			if(CheckAttribute(chref,"PriorityMode"))
 			{
 				SendMessage(chref, "lsl", MSG_CHARACTER_EX_MSG, "SetMusketer", sti(chref.PriorityMode) == 2);
@@ -2829,6 +2852,8 @@ void ExecuteCharacterEquip(ref chref)
 	if(stmp!="")	{SetEquipedItemToCharacter(chref, GUN_ITEM_TYPE, stmp);}
 	stmp = GetCharacterEquipByGroup(chref,MUSKET_ITEM_TYPE); // evganat - мушкеты
 	if(stmp!="")	{SetEquipedItemToCharacter(chref, MUSKET_ITEM_TYPE, stmp);}
+	stmp = GetCharacterEquipByGroup(chref,HAT_ITEM_TYPE);
+	if(stmp!="")	{SetEquipedItemToCharacter(chref, HAT_ITEM_TYPE, stmp);}
 }
 
 bool IsCanEquiping(ref chref, string equiping_group)

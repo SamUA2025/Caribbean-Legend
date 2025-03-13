@@ -1,38 +1,38 @@
-Ship_got_good 		{%1 centners of %2 are taken on board}
-Ship_cant_got_good 	{No place for %1}
+Ship_got_good 		{%1 Zentner von %2 werden an Bord genommen}
+Ship_cant_got_good 	{Kein Platz für %1}
 
-seg_Balls 		{round shot}
-seg_Grapes 		{grapeshot}
-seg_Knippels 		{chain shot}
-seg_Bombs 		{bombs}
-seg_Sailcloth 		{sailcloth}
-seg_Planks 		{planks}
-seg_Slaves 		{slaves}
-seg_Wheat 		{wheat}
-seg_Ebony 		{ebony}
-seg_Chocolate 		{cocoa}
-seg_Suga 		{sugar}
-seg_Wine 		{wine}
-seg_ShipSilk 		{shipsilk}
-seg_Rum 		{rum}
-seg_Tobacco 		{tobacco}
-seg_Coffee 		{coffee}
-seg_Mahogany 		{mahogany}
-seg_Cinnamon 		{vanilla}
-seg_Copra 		{copra}
-seg_Paprika 		{paprika}
-seg_Fruits 		{fruits}
-seg_Ale 		{ale}
-seg_Ropes 		{ropes}
-seg_Clothes 		{clothes}
-seg_Cotton 		{cotton}
-seg_Sandal 		{ironwood}
-seg_Leather 		{leather}
-seg_Oil 		{tar}
-seg_Food 		{food}
-seg_Weapon 		{weapons}
-seg_Gold 		{gold}
-seg_Silver 		{silver}
-seg_Powder 		{gunpowder}
-seg_Brick 		{bricks}
-seg_Medicament 		{medicine}
+seg_Balls 		{Kanonenkugeln}
+seg_Grapes 		{Kartätsche}
+seg_Knippels 		{Kettengeschosse}
+seg_Bombs 		{Bomben}
+seg_Sailcloth 		{Segeltücher}
+seg_Planks 		{Planken}
+seg_Slaves 		{Sklaven}
+seg_Wheat 		{Weizen}
+seg_Ebony 		{Ebenholz}
+seg_Chocolate 		{Kakao}
+seg_Suga 		{Zucker}
+seg_Wine 		{Wein}
+seg_ShipSilk 		{Schiffsseide}
+seg_Rum 		{Rum}
+seg_Tobacco 		{Tabak}
+seg_Coffee 		{Kaffee}
+seg_Mahogany 		{Mahagoni}
+seg_Cinnamon 		{Vanille}
+seg_Copra 		{Kopra}
+seg_Paprika 		{Paprika}
+seg_Fruits 		{Früchte}
+seg_Ale 		{Bier}
+seg_Ropes 		{Seile}
+seg_Clothes 		{Kleidung}
+seg_Cotton 		{Baumwolle}
+seg_Sandal 		{Eisenholz}
+seg_Leather 		{Leder}
+seg_Oil 		{Teer}
+seg_Food 		{Nahrungsmittel}
+seg_Weapon 		{Waffen}
+seg_Gold 		{Gold}
+seg_Silver 		{Silber}
+seg_Powder 		{Schießpulver}
+seg_Brick 		{Ziegelsteine}
+seg_Medicament 		{Medizin}

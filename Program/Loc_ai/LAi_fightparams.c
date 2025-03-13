@@ -653,7 +653,15 @@ float LAi_GunCalcDamage(aref attack, aref enemy, string sType)
 	float aSkill = LAi_GetCharacterGunLevel(attack);
 	float eSkill = LAi_GetCharacterLuckLevel(enemy); // good luck
 	
-	float dmg = min + (max - min)*frandSmall(aSkill);
+	float dmg;
+	// evganat - урон картечью
+	if(IsBulletGrape(sBullet))
+	{
+		dmg = stf(attack.chr_ai.(sType).basedmg);
+		dmg *= Bring2Range(0.75, 1.5, 0.0, 1.0, dmg);
+	}
+	else
+		dmg = min + (max - min)*frandSmall(aSkill);
 
 	if (MOD_SKILL_ENEMY_RATE < 5 && sti(enemy.index) == GetMainCharacterIndex())	
 	{
@@ -1020,6 +1028,12 @@ void LAi_ApplyCharacterAttackDamage(aref attack, aref enemy, string attackType, 
 	float exp = LAi_CalcExperienceForBlade(attack, enemy, attackType, isBlocked, dmg);
 	if(LAi_IsDead(enemy))
 	{
+		if(GetCharacterEquipByGroup(attack, HAT_ITEM_TYPE) == "hat2")
+		{
+			attack.chr_ai.energy = stf(attack.chr_ai.energy) + stf(attack.chr_ai.energy)*1.25;
+			//Log_Chr(enemy, XI_ConvertString("Hat2 Hit"));
+			notification(XI_ConvertString("Hat2 Hit"), "none");
+		}
 		// boal  check skill -->
 		float ra = 1.0;
 	    float re = 1.0;
@@ -1243,13 +1257,17 @@ void LAi_ApplyCharacterFireDamage(aref attack, aref enemy, float kDist, float fA
 	if(isHeadShot)
 	{
 		damage *= 2;
-		if(ShowCharString()) 
+		if(!CheckAttribute(enemy, "chr_ai.getheadshot"))
 		{
-			Log_Chr(enemy, "В голову!");
-		}
-		else
-		{
-			if(attack.id == "Blaze") log_info("В голову!");
+			enemy.chr_ai.getheadshot = 0.1;
+			if(ShowCharString()) 
+			{
+				Log_Chr(enemy, XI_ConvertString("HeadShot"));
+			}
+			else
+			{
+				if(attack.id == "Blaze") log_info(XI_ConvertString("HeadShot"));
+			}
 		}
 	}
 	
@@ -1717,15 +1735,18 @@ void AimingUpdate()
 #event_handler("GetShardsQuantity","GetShardsQuantity");
 int GetShardsQuantity()
 {
-	string sType = "gun";
-	if(CharUseMusket(pchar))
+	aref chr = GetEventData();
+	string sType;
+	if(CharUseMusket(chr))
 		sType = "musket";
+	else
+		sType = "gun";
 	
-	if(CheckAttribute(pchar, "chr_ai." + sType + ".multidmg") && sti(pchar.chr_ai.(sType).multidmg) > 0)
+	string sBullet = LAi_GetCharacterBulletType(chr, sType);
+	if(IsBulletGrape(sBullet))
 	{
-		if(!CheckAttribute(pchar, "testshards.quantity"))
-			pchar.testshards.quantity = 15;
-		return sti(pchar.testshards.quantity);
+		if(CheckAttribute(chr, "chr_ai."+sType+".shards"))
+			return sti(chr.chr_ai.(sType).shards);
 	}
 	return 1;
 }
@@ -1733,12 +1754,13 @@ int GetShardsQuantity()
 #event_handler("GetShotParams","GetShotParams");
 aref GetShotParams()
 {
-	if(!CheckAttribute(pchar, "testshards.width") || !CheckAttribute(pchar, "testshards.height"))
-	{
-		pchar.testshards.width = 5.0;
-		pchar.testshards.height = 3.0;
-	}
-	aref ares;
-	makearef(ares, pchar.testshards);
-	return ares;
+	aref chr = GetEventData();
+	string sType;
+	if(CharUseMusket(chr))
+		sType = "musket";
+	else
+		sType = "gun";
+	aref arShards;
+	makearef(arShards, chr.chr_ai.(stype));
+	return arShards;
 }

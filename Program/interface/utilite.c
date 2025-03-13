@@ -906,13 +906,26 @@ string GetItemDescribe(int iGoodIndex)
 
 	if (CheckAttribute(arItm, "groupID"))
 	{
+		aref arGrape;
 		if(arItm.groupID == GUN_ITEM_TYPE)
 		{
-			describeStr += GetAssembledString( LanguageConvertString(lngFileID,"weapon gun parameters"), arItm) + newStr();
+			if(IsBulletGrape(arItm.type.t1.bullet))
+			{
+				makearef(arGrape, arItm.type.t1);
+				describeStr += GetAssembledString( LanguageConvertString(lngFileID,"weapon grape parameters"), arGrape) + newStr();
+			}
+			else
+				describeStr += GetAssembledString( LanguageConvertString(lngFileID,"weapon gun parameters"), arItm) + newStr();
 		}
 		if(arItm.groupID == MUSKET_ITEM_TYPE)
 		{
-			describeStr += GetAssembledString( LanguageConvertString(lngFileID,"mushket parameters"), arItm) + newStr();
+			if(IsBulletGrape(arItm.type.t1.bullet))
+			{
+				makearef(arGrape, arItm.type.t1);
+				describeStr += GetAssembledString( LanguageConvertString(lngFileID,"weapon grape parameters"), arGrape) + newStr();
+			}
+			else
+				describeStr += GetAssembledString( LanguageConvertString(lngFileID,"mushket parameters"), arItm) + newStr();
 		}
 		if(arItm.groupID==BLADE_ITEM_TYPE)
 		{
@@ -975,6 +988,15 @@ string GetItemDescribe(int iGoodIndex)
 	return describeStr;
 }
 // boal <--
+
+string GetItemName(string sItemID)
+{
+	ref refItem = ItemsFromID(sItemID);
+	if (CheckAttribute(refItem, "name"))
+		return GetConvertStr(refItem.name, "ItemsDescribe.txt");
+	else
+		return sItemID;
+}
 
 #event_handler("Tips_GetTipsDirectory","Tips_GetTipsDirectory");
 string Tips_GetTipsDirectory() {

@@ -1685,6 +1685,14 @@ int GetSummonSkillFromNameSimple(ref _refCharacter, string skillName)
 			}
 		}
 	}
+	if(GetCharacterEquipByGroup(pchar, HAT_ITEM_TYPE) == "hat5" && IsCompanion(_refCharacter) && isShipTypeSkill(skillName))
+	{
+		int mcSkill = GetCharacterSkillSimple(pchar, skillName);
+		if (mcSkill > sumSkill)
+		{
+			sumSkill = mcSkill;
+		}
+	}
 	return sumSkill;
 }
 
@@ -1756,6 +1764,21 @@ void AddCharacterExpToSkill(ref _chref, string _skill, float _addValue)
         return;
     }
     // boal 300804 падение экспы <--
+	if(GetCharacterEquipByGroup(_chref, HAT_ITEM_TYPE) == "hat1")
+	{
+		if(_skill == SKILL_F_LIGHT || _skill == SKILL_FENCING || _skill == SKILL_F_HEAVY)
+			_addValue *= 1.1;
+	}
+	if(GetCharacterEquipByGroup(_chref, HAT_ITEM_TYPE) == "hat3")
+	{
+		if(_skill == SKILL_SAILING || _skill == SKILL_ACCURACY || _skill == SKILL_REPAIR)
+			_addValue *= 1.1;
+	}
+	if(GetCharacterEquipByGroup(_chref, HAT_ITEM_TYPE) == "hat4")
+	{
+		if(_skill == SKILL_SAILING || _skill == SKILL_ACCURACY || _skill == SKILL_CANNONS || _skill == SKILL_REPAIR || _skill == SKILL_GRAPPLING || _skill == SKILL_DEFENCE || _skill == SKILL_COMMERCE)
+			_addValue *= 1.15;
+	}
     if (CheckAttribute(_chref, "skill." + _skill) && sti(_chref.skill.(_skill)) < SKILL_MAX)// && sti(_chref.skill.(_skill)) > 0)
     { // if skill = 0 then it is great loser
         _chref.skill.(_skill_exp) = stf(_chref.skill.(_skill_exp)) + _addValue;
@@ -2124,22 +2147,22 @@ string GetHealthName(ref ch)
     switch (GetHealthNum(ch))
     {
         case 1:
-            name = "УЖАСНОЕ";
+            name = ToUpper(StringFromKey("RPGUtilite_2"));
         break;
         case 2:
-            name = "ПЛОХОЕ";
+            name = ToUpper(StringFromKey("RPGUtilite_3"));
         break;
         case 3:
-            name = "НЕВАЖНОЕ";
+            name = ToUpper(StringFromKey("RPGUtilite_4"));
         break;
         case 4:
-            name = "СРЕДНЕЕ";
+            name = ToUpper(StringFromKey("RPGUtilite_5"));
         break;
         case 5:
-            name = "ХОРОШЕЕ";
+            name = ToUpper(StringFromKey("RPGUtilite_6"));
         break;
         case 6:
-            name = "ОТЛИЧНОЕ";
+            name = ToUpper(StringFromKey("RPGUtilite_7"));
         break;
     }
     return name;
@@ -2890,6 +2913,11 @@ void initNewMainCharacter()//инициализация главного гер�
     InitMigrations();
     // контроль версий <--
 
+	// Установим начальный дневной рандом
+	ch.DayRandom = Random();
+    // ROSARAK WEIGHT RANDON (ВАЖНО ТУТ)
+    InitWeightParameters();
+
     MOD_EXP_RATE =  makeint(MOD_EXP_RATE + MOD_SKILL_ENEMY_RATE * MOD_EXP_RATE / 1.666666666); // разные уровни для всех
     if (MOD_EXP_RATE < 10) MOD_EXP_RATE = 10; // иначе будет развал целостности данных, порог релиховой версии бля всех сложностей.
     
@@ -3003,6 +3031,7 @@ void initNewMainCharacter()//инициализация главного гер�
     //InitStartParam(ch); // Jason - fix
 	LAi_SetHP(ch, GetCharacterBaseHPValue(ch), GetCharacterBaseHPValue(ch));
     SetEnergyToCharacter(ch);
+    TreasureTiersInit(SandBoxMode); // Инитим сокровища ДО выдачи карты
     if (!SandBoxMode) initMainCharacterItem(); // Сюжет
     else initMainFreePlayCharacterItem();
 	
@@ -3108,13 +3137,11 @@ void initNewMainCharacter()//инициализация главного гер�
 	OtherQuestCharactersInit(); // Инициализация прочих квестов
 	MaryCelesteInit(); // Warship 07.07.09 Пасхалка "Мэри Селест"
 	ChickenGod_PreInit();
-	// Установим начальный дневной рандом
-	ch.DayRandom = Random();
-	
+
 	SetCurrentTime(11,30); // вытавим время и отменим дождь
 	WeatherParams.Rain 			= false;
 	WeatherParams.Rain.ThisDay 	= false;
-    
+
     TestHead = false;
     TestLogs = false;
 }

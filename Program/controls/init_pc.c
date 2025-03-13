@@ -72,7 +72,7 @@ void ExternControlsInit(bool bFirst, bool bClassic)
 
     //CI_CreateAndSetControls("PrimaryLand", "ChrRun", CI_GetKeyCode("VK_SHIFT"), USE_AXIS_AS_BUTTON, true);
 	//AddControlToGroups("ChrRun", "FightModeControls", "BattleInterfaceControls", "", "");
-	CI_CreateAndSetControls("PrimaryLand", "ChrSwitchWalk", CI_GetKeyCode("VK_CAPSLOCK"), 0, true); // evganat - переключатель бега
+	CI_CreateAndSetControls("PrimaryLand", "ChrSwitchWalk", CI_GetKeyCode("VK_CONTROL"), 0, true); // evganat - переключатель бега
 	MapControlToGroup("ChrSwitchWalk","FightModeControls");
 	MapControlToGroup("ChrSwitchWalk","BattleInterfaceControls");
 	CI_CreateAndSetControls("PrimaryLand", "ChrSprint", CI_GetKeyCode("VK_SHIFT"), 0, true);
@@ -87,7 +87,10 @@ void ExternControlsInit(bool bFirst, bool bClassic)
 	// evganat - ПРИЦЕЛИВАНИЕ
 	CI_CreateAndSetControls("FightModeControls", "ChrAiming", CI_GetKeyCode("KEY_Q"), 0, true);
 	CI_CreateAndSetControls("FightModeControls", "ChrAimingShot", CI_GetKeyCode("VK_LBUTTON"), 0, true);
-	
+	CI_CreateAndSetControls("FightModeControls", "ChrFire", CI_GetKeyCode("KEY_Q"), 0, true);
+	MapControlToGroup("ChrFire","BattleInterfaceControls");	
+    SyncControls("FightModeControls", "ChrAiming", "ChrFire"); // TO_DO: DEL
+
 	// evganat - камера
 	CI_CreateAndSetControls("PrimaryLand", "SwitchCameraOffset", CI_GetKeyCode("VK_TAB"), 0, true);
 	MapControlToGroup("SwitchCameraOffset", "FightModeControls");
@@ -110,8 +113,7 @@ void ExternControlsInit(bool bFirst, bool bClassic)
     //<--- belamour
 	CI_CreateAndSetControls("FightModeControls", "ChrFightMode", CI_GetKeyCode("KEY_E"), 0, true);
 	MapControlToGroup("ChrFightMode","BattleInterfaceControls");
-	CI_CreateAndSetControls("FightModeControls", "ChrFire", CI_GetKeyCode("KEY_Q"), 0, true);
-	MapControlToGroup("ChrFire","BattleInterfaceControls");	
+
     // boal -->
 	CI_CreateAndSetControls("PrimaryLand", "BOAL_UsePotion", CI_GetKeyCode("KEY_X"), 0, true); // Warship 13.06.09 Дефолтом перевесил на "C" // belamour всё же на X
 	MapControlToGroup("BOAL_UsePotion","FightModeControls");
@@ -432,7 +434,7 @@ void ExternControlsInit(bool bFirst, bool bClassic)
 	CI_CreateAndSetControls("", "Turn V", 257, INVERSE_CONTROL, false);
 	SetControlForInverting("Turn V",true);
 	CI_CreateAndSetControls("", "Turn H", 256, 0, false);
-//	CI_CreateAndSetControls("PrimaryLand", "ChrCamCameraSwitch", CI_GetKeyCode("VK_TAB"), 0, true);
+	if (MOD_BETTATESTMODE == "On") CI_CreateAndSetControls("PrimaryLand", "ChrCamCameraSwitch", CI_GetKeyCode("VK_A_TILDA"), 0, false);
 	//CI_CreateAndSetControls("PrimaryLand", "ChrCamCameraRadius", CI_GetKeyCode("VK_MWHEEL_UP"), 0, false);
 //    MapControlToGroup("ChrCamCameraSwitch","FightModeControls"); // evganat - добавляем таб в бой
 		// ship follow camera

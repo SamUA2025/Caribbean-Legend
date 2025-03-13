@@ -2593,11 +2593,6 @@ void GuardOT_ReloadToRoof(string qName) // выходим на крышу
 {
 	// подменяем патч и локаторы
 	int n = Findlocation("PortRoyal_town");
-	locations[n].models.always.locators = "PortRoyal_Qlocators";
-	locations[n].models.day.charactersPatch = "PortRoyal_Qpatch_day"; 
-	locations[n].models.night.charactersPatch = "PortRoyal_Qpatch_night";
-	Locations[n].models.day.jumpPatch = "PortRoyal_Qjump_patch"; 	
-	Locations[n].models.night.jumpPatch = "PortRoyal_Qjump_patch";
 	locations[n].locators_radius.reload.reload_quest2 = 0.2;
 	DoQuestReloadToLocation("PortRoyal_town", "reload", "reload_quest1", "");
 	pchar.GenQuest.CantRun = true;
@@ -2626,9 +2621,6 @@ void GuardOT_ReadArchyBook() // прочли дневник
 	chrDisableReloadToLocation = false;
 	// подменяем патч и локаторы
 	int n = Findlocation("PortRoyal_town");
-	locations[n].models.always.locators = "PortRoyal_locators";
-	locations[n].models.day.charactersPatch = "PortRoyal_patch_day"; 
-	locations[n].models.night.charactersPatch = "PortRoyal_patch_night";
 	AddQuestRecordInfo("ArchyBook", "1");
 	AddQuestRecord("Guardoftruth", "66");
 	bQuestDisableMapEnter = false;//открыть карту

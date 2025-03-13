@@ -156,33 +156,38 @@ void LAi_AlcoholSetDrunk(aref chr, float alcoholDegree, float time)
 	//float energyMax;
 	if(sti(chr.index) == GetMainCharacterIndex()) notification(XI_ConvertString("Drunk note"),"Drunk");
 	chr.chr_ai.drunk = time;
+	bool bHat8 = GetCharacterEquipByGroup(chr, HAT_ITEM_TYPE) == "hat8";
+	int n = 0;
 	//много рома в таверне
 	if (alcoholDegree > 70)
 	{
-		chr.chr_ai.drunk.skill.FencingL     = -20;
-		chr.chr_ai.drunk.skill.FencingS     = -20;
-		chr.chr_ai.drunk.skill.FencingH     = -20;
-		chr.chr_ai.drunk.skill.Pistol       = -20;
-		chr.chr_ai.drunk.skill.Fortune      = -20;
-		chr.chr_ai.drunk.skill.Sneak        = -20;
-		chr.chr_ai.drunk.skill.Leadership   = -20;
+		if(bHat8) n = 10;
+		else n = -20;
+		chr.chr_ai.drunk.skill.FencingL     = n;
+		chr.chr_ai.drunk.skill.FencingS     = n;
+		chr.chr_ai.drunk.skill.FencingH     = n;
+		chr.chr_ai.drunk.skill.Pistol       = n;
+		chr.chr_ai.drunk.skill.Fortune      = n;
+		chr.chr_ai.drunk.skill.Sneak        = n;
+		chr.chr_ai.drunk.skill.Leadership   = n;
 	}
 	else
 	{
+		if(bHat8) n = 5;
 		//Ром
 		if (alcoholDegree > 50)
 		{
-			chr.chr_ai.drunk.skill.FencingL = -10;
-			chr.chr_ai.drunk.skill.FencingH = 10;
+			chr.chr_ai.drunk.skill.FencingL = -10 + n;
+			chr.chr_ai.drunk.skill.FencingH = 10 + n;
 		}
 		//вино
 		else
 		{
-			chr.chr_ai.drunk.skill.FencingL = 10;
-			chr.chr_ai.drunk.skill.FencingH = -10;
+			chr.chr_ai.drunk.skill.FencingL = 10 + n;
+			chr.chr_ai.drunk.skill.FencingH = -10 + n;
 		}
-		chr.chr_ai.drunk.skill.Fortune = 5;
-		chr.chr_ai.drunk.skill.Pistol = -20;
+		chr.chr_ai.drunk.skill.Fortune = 5 + n;
+		chr.chr_ai.drunk.skill.Pistol = -20 + n;
 	}
 
 	//думал бонус к макс энергии сделать, но оно по другому работает :) пока так.. а там видно будет.
@@ -666,6 +671,13 @@ string LAi_GetCharacterBulletType(ref rChar, string sType)
 	return sBulletType;
 }
 
+bool IsBulletGrape(string sBullet)
+{
+	if(sBullet == "grapeshot" || sBullet == "GunEchin" || sBullet == "grapeshot_double")
+		return true;
+	return false;
+}
+
 // ugeen --> получим тип пороха на одетом огнестрельном оружии и известном типе пуль
 string LAi_GetCharacterGunpowderType(ref rChar, string sType)
 {
@@ -837,6 +849,14 @@ bool LAi_SetCharacterUseBullet(ref rChar, string sType, string sBullet)
 				rChar.chr_ai.(sType).MisFire		= rItm.type.(sAttr).misfire;
 				rChar.chr_ai.(sType).SelfDamage		= rItm.type.(sAttr).SelfDamage;
 				rChar.chr_ai.(sType).Explosion		= rItm.type.(sAttr).Explosion;
+				
+				if(IsBulletGrape(sBullet))
+				{
+					rChar.chr_ai.(sType).basedmg	= rItm.type.(sAttr).basedmg;
+					rChar.chr_ai.(sType).shards		= rItm.type.(sAttr).shards;
+					rChar.chr_ai.(sType).width		= rItm.type.(sAttr).width;
+					rChar.chr_ai.(sType).height		= rItm.type.(sAttr).height;
+				}
 				
 				rItm.ChargeSpeed			= rItm.type.(sAttr).ChargeSpeed;
 				rItm.Accuracy				= rItm.type.(sAttr).Accuracy;
@@ -1208,6 +1228,16 @@ void LAi_AllCharactersUpdate(float dltTime)
 				SendMessage(pchar, "lse", MSG_CHARACTER_EX_MSG, "GetAimingStep", &sAimingStep);
 				if(sAimingStep != "none")
 					bAiming = true;
+			}
+			
+			if(CheckAttribute(chr_ai, "getheadshot"))
+			{
+				float headshotCD = stf(chr_ai.getheadshot);
+				headshotCD -= dltTime;
+				if(headshotCD <= 0.0)
+					DeleteAttribute(chr_ai, "getheadshot");
+				else
+					chr_ai.getheadshot = headshotCD;
 			}
 			
 			//Для пистолета

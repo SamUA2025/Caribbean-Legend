@@ -1,84 +1,84 @@
 food_1
 {
-Rats on the ~
+Ratten auf dem ~
 }
 
 food_2
 {
-~ spoiled ~
+~ verdorben ~
 }
 
 food_3
 {
-~ damaged ~
+~ beschädigt ~
 }
 
 food_4
 {
-~ destroyed ~
+~ zerstört ~
 }
 
 food_5
 {
-~ pcs. ~
+~ Stk. ~
 }
 
 food_6
 {
-On ship @<rChar.Ship.Name> died of diseases @<FindRussianSailorString(cn, "No")>
+Auf dem Schiff @<rChar.Ship.Name> sind @<FindRussianSailorString(cn, "No")> Seeleute an einer Krankheit gestorben.
 }
 
 food_7
 {
-On ship @<rChar.Ship.Name> is low on medicines
+Auf dem Schiff @<rChar.Ship.Name> sind kaum noch Medikamente vorhanden.
 }
 
 food_8
 {
-On ship @<rChar.Ship.Name> died of diseases @<FindRussianSlavesString(cn, "No")>
+Auf dem Schiff @<rChar.Ship.Name> sind @<FindRussianSlavesString(cn, "No")> Sklaven an einer Krankheit gestorben.
 }
 
 food_9
 {
-On the @<rChar.Ship.Name> people are craving for rum.
+Auf der @<rChar.Ship.Name> sehnen sich die Leute nach Rum.
 }
 
 food_10
 {
-On ship @<rChar.Ship.Name> food left on @<FindRussianDaysString(cn)>
+Auf Schiff @<rChar.Ship.Name> befinden sich noch Lebensmittel für @<FindRussianDaysString(cn)> Tage.
 }
 
 food_11
 {
-We urgently need to restock!
+Wir müssen dringend unsere Vorräte auffüllen!
 }
 
 food_12
 {
-Slaves rebelled!
+Sklaven rebellieren!
 }
 
 food_13
 {
-Sailors are starving on the ship @<rChar.Ship.Name>. Morale of the crew is going down!
+Die Besatzung des Schiffes @<rChar.Ship.Name> ist am Verhungern. Die Moral der Besatzung sinkt!
 }
 
 food_14
 {
-Sailors are starving
+Die Seeleute verhungern
 }
 
 food_15
 {
-Slaves are starving
+Die Sklaven verhungern
 }
 
 food_16
 {
-Riot on ship @<rChar.Ship.Name>!!!! ~
+Unruhen auf dem Schiff @<rChar.Ship.Name>!!!! ~
 }
 
 food_17
 {
-Ship leaves the squadron
+Schiff verlässt das Geschwader
 }

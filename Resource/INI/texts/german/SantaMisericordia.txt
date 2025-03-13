@@ -10,25 +10,25 @@ Cap_Name {Fernando}
 
 Cap_lastname {de Alamida}
 
-City_Rum1 {The whole city is on edge - don Fernando de Alamida, the royal inspector, has arrived. You know, I've seen a lot here, but this... It's not grief that changes people, but how they deal with it. They say he became a different man after his father's death. Now you won't find a more incorruptible and... merciless servant of the Crown in the entire Archipelago.}
+City_Rum1 {Die ganze Stadt ist in Aufruhr - Don Fernando de Alamida, der königliche Inspektor, ist da. Wissen Sie, ich habe hier schon viel gesehen, aber das... Nicht die Trauer verändert den Menschen, sondern wie er damit umgeht. Es heißt, er sei nach dem Tod seines Vaters ein anderer Mensch geworden. Ihr werdet im ganzen Archipel keinen unbestechlicheren und gnadenloseren Diener der Krone finden.}
 
-City_Rum2 {Just look at the "Holy Mercy"! They say the king himself ordered it built according to special designs. And notice - not a single scratch. As if the Virgin Mary herself protects it. Though I've heard rumors... maybe it's not the Virgin at all.}
+City_Rum2 {Sehen Sie sich nur die 'Holy Mercy' an! Es heißt, der König selbst habe sie nach speziellen Entwürfen bauen lassen. Und siehe da - nicht ein einziger Kratzer. Als ob die Jungfrau Maria selbst sie beschützen würde. Aber ich habe Gerüchte gehört... vielleicht ist es gar nicht die Jungfrau.}
 
-City_Rum3 {You know how many times they've tried to kill don Fernando? Twelve attacks in open waters - and that's just in the last year! Well, with such a loyal and trained crew, and under the Lord's protection - he'll survive the thirteenth too!}
+City_Rum3 {Wissen Sie, wie oft sie schon versucht haben, Don Fernando zu töten? Zwölf Angriffe in offenen Gewässern - und das allein im letzten Jahr! Nun, mit einer so loyalen und gut ausgebildeten Mannschaft und unter dem Schutz des Herrn wird er auch den dreizehnten überleben!}
 
-City_Rum4 {Have you heard? Don Fernando de Alamida has arrived in our city, and they say he's somewhere in the streets right now. Would love to see him with my own eyes...}
+City_Rum4 {Haben Sie es schon gehört? Don Fernando de Alamida ist in unserer Stadt angekommen, und es heißt, er sei gerade irgendwo auf der Straße. Ich würde ihn gerne mit meinen eigenen Augen sehen...}
 
-City_Rum5 {A complicated man, this don Fernando. Some say he's a savior, cleansing the Motherland of filth. Others whisper that something broke in him after his father's death and soon we'll all be weeping. But I'll tell you this: don't fear him. Fear those who made him what he is.}
+City_Rum5 {Ein komplizierter Mann, dieser Don Fernando. Manche sagen, er sei ein Retter, der das Mutterland vom Dreck befreit. Andere flüstern, dass nach dem Tod seines Vaters etwas in ihm zerbrochen ist und wir bald alle weinen werden. Aber ich sage euch eines: Fürchtet euch nicht vor ihm. Fürchtet diejenigen, die ihn zu dem gemacht haben, was er ist.}
 
-City_Rum6 {Such a handsome man, this don Fernando! But you know what's strange? It's like he doesn't notice anyone. All duty and service. I heard there was a girl... but after meeting with some priest, he completely rejected worldly pleasures. As if he took a vow.}
+City_Rum6 {So ein schöner Mann, dieser Don Fernando! Aber wissen Sie, was seltsam ist? Es ist, als ob er niemanden beachtet. Nur Pflicht und Dienst. Ich hörte von einem Mädchen... aber nach einem Treffen mit einem Priester lehnte er alle weltlichen Freuden ab. Als hätte er ein Gelübde abgelegt.}
 
-City_Rum7 {Damn inspector! While he's here - the city's like dead. No trade, no fun. Even breathing, it seems, must be quieter. And you know what's most frightening? It's the same in every port. Like clockwork. His Royal Majesty couldn't have deliberately invented this torture for all of us!}
+City_Rum7 {Verdammter Inspektor! Solange er hier ist, ist die Stadt wie tot. Kein Handel, kein Spaß. Sogar das Atmen, so scheint es, muss leiser sein. Und wissen Sie, was am erschreckendsten ist? Es ist in jedem Hafen das Gleiche. Wie ein Uhrwerk. Seine königliche Majestät kann diese Folter nicht absichtlich für uns alle erfunden haben!}
 
-City_Rum8 {Don Fernando visited the orphanage again. Donates generously, prays for hours. Such a worthy man should be held up as an example to those cursed embezzlers!}
+City_Rum8 {Don Fernando hat das Waisenhaus wieder besucht. Er spendet großzügig, betet stundenlang. Ein solch würdiger Mann sollte diesen verfluchten Veruntreuern als Beispiel dienen!}
 
-City_Rum9 {Ha! "Saint" Fernando closed all the brothels again. Well, never mind, he'll sail away soon and they'll open right back up.}
+City_Rum9 {Ha! Der 'Heilige' Fernando hat wieder alle Bordelle geschlossen. Macht nichts, er wird bald wegsegeln und sie werden wieder aufmachen.}
 
-City_Rum10 {The insp... inspector has arrived, that's what! Don Fernando de Almeyda, or, what's his name, Alamida! So important that the governor himself tiptoes around him. They say he looks into your eyes and sees all your sins right away. Terrifying!}
+City_Rum10 {Der Insp... Inspektor ist da, das ist es! Don Fernando de Almeyda, oder, wie heißt er, Alamida! So wichtig, dass selbst der Gouverneur auf Zehenspitzen um ihn herumschleicht. Es heißt, er sieht dir in die Augen und erkennt sofort alle deine Sünden. Schrecklich!}
 
 Cap_Name {Diego}
 
@@ -36,33 +36,33 @@ Cap_lastname {de Landa}
 
 SM_WorldMap 
 {
-All hands to the deck! The Holy Mercy is approaching! 
-A fierce adversary, are we truly ready to confront it? 
-Perhaps we should intercept it on the open sea, far from the colonies?
+Alle Mann an Deck! Die Holy Mercy ist im Anmarsch! 
+Sind wir wirklich bereit, uns diesem erbitterten Gegner zu stellen? 
+Vielleicht sollten wir sie auf offener See abfangen, weit weg von den Kolonien?
 }
 
-City_Rum11 {Word has reached mine ears that the target of the Holy Mercy this time is the  ~}
+City_Rum11 {Mir ist zu Ohren gekommen, dass das Ziel der Holy Mercy dieses Mal die  ~}
 
-City_Rum12 {. Once more, we shall all bow our heads under the yoke of Escorial. Have we truly earned this fate?}
+City_Rum12 {. Einmal mehr werden wir alle unser Haupt unter das Joch von Escorial beugen. Haben wir dieses Schicksal wirklich verdient?}
 
-City_Rum13 {A new inspector has arrived at ~}
+City_Rum13 {Ein neuer Inspektor ist eingetroffen bei ~}
 
-City_Rum14 {~  - the Holy Mercy lies at anchor. Once again, Alamida is making life a misery for ordinary folk - no mirthful drinks, no brothels! What devil brought this upon us?}
+City_Rum14 {~  - die Holy Mercy liegt vor Anker. Wieder einmal macht Alamida dem einfachen Volk das Leben schwer - keine fröhlichen Getränke, keine Bordelle! Welcher Teufel hat uns das eingebrockt?}
 
-City_Rum15 {One cannot envy the governor of ~}
+City_Rum15 {Man kann den Gouverneur nicht beneiden um ~}
 
-City_Rum16 {~ - Señor Alamida has docked in port and commenced his inspection. Last time, they say, ~}
+City_Rum16 {~ - Señor Alamida hat im Hafen angelegt und mit seiner Inspektion begonnen. Das letzte Mal, sagen sie, ~}
 
-City_Rum17 {~ nearly lost his title. Oh... I pray the Holy Mercy does not venture here again soon...}
+City_Rum17 {~ fast seinen Titel verloren. Oh... Ich bete, dass die Holy Mercy sich nicht bald wieder hierher wagt...}
 
-City_Rum18 {Have you heard that the crown's envoy is now personally roaming the archipelago? What foul deeds have the colonists committed before the Escorial? A mate of mine told me that the Holy Mercy is currently anchored in ~}
+City_Rum18 {Haben Sie gehört, dass der Abgesandte der Krone jetzt persönlich auf dem Archipel unterwegs ist? Welche üblen Taten haben die Kolonisten vor dem Escorial begangen? Ein Kumpel von mir hat mir erzählt, dass die Holy Mercy derzeit vor Anker liegt in ~}
 
-City_Rum19 {. I wonder if there's truth to this?}
+City_Rum19 {. Ich frage mich, ob da etwas Wahres dran ist?}
 
-City_Rum20 {It appears that a supervisor has fallen upon Spanish heads, sent from Europe to oversee! I had thought that the power of their king reigned supreme even in the Caribbean. I must inquire whether the governance in  ~}
+City_Rum20 {Es hat den Anschein, als sei ein Aufseher über die Köpfe der Spanier gefallen, der von Europa geschickt wurde, um sie zu überwachen! Ich hatte gedacht, dass die Macht ihres Königs auch in der Karibik die Oberhand hat. Ich muss mich erkundigen, ob die Regierung in  ~}
 
-City_Rum21 {~  might change in the coming months, for the Holy Mercy is currently docked there.}
+City_Rum21 {~  Dies könnte sich in den kommenden Monaten ändern, da die Holy Mercy derzeit dort angedockt ist.}
 
-City_Rum22 {Curious tidings drift from the Spanish colonies. They say when Señor Alamide arrives in town, fear grips everyone, and they walk on tiptoes. I would be keen to hear from someone in ~}
+City_Rum22 {Aus den spanischen Kolonien dringen seltsame Nachrichten. Es heißt, wenn Señor Alamide in die Stadt kommt, ergreift alle die Angst, und sie gehen auf Zehenspitzen. Ich würde gerne von jemandem aus den Kolonien hören. ~}
 
-City_Rum23 {, for word has it that the Holy Mercy is currently there.}
+City_Rum23 {, denn es heißt, dass sich die Holy Mercy derzeit dort aufhält.}

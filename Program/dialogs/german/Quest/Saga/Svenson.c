@@ -4,7 +4,7 @@ void ProcessDialogEvent()
 	ref NPChar, sld;
 	aref Link, NextDiag;
 	int i, iTemp;
-	string sTemp;
+	string sTemp, sStr;
 
 	DeleteAttribute(&Dialog,"Links");
 
@@ -1617,16 +1617,43 @@ void ProcessDialogEvent()
 		
 	//-----------------------------------генератор торговли бакаутом--------------------------------------------
 		case "trade_bakaut":
-			dialog.text = "In Ordnung, es macht mir nichts aus. Ich habe fünfundzwanzig Einheiten in meinem Lagerhaus. Der Preis, wie Sie sich erinnern, beträgt dreißig Dublonen pro Stück.";
-			if (PCharDublonsTotal() >= 750)
+			if (CheckAttribute(pchar, "questTemp.UpgradeBakaut"))
 			{
-				link.l1 = "In Ordnung, abgemacht. Hier hast du. Hier sind siebenhundertfünfzig Dublonen.";
-				link.l1.go = "trade_bakaut_1";
+				dialog.text = "In Ordnung, es macht mir nichts aus. Ich habe 125 Einheiten in meinem Lagerhaus. Der Preis, wie Sie sich erinnern, beträgt 3150 Dublonen.";
+				if (PCharDublonsTotal() >= 3150)
+				{
+					link.l1 = "In Ordnung, abgemacht. Hier hast du. Hier sind 3150 Dublonen.";
+					link.l1.go = "trade_bakaut_1";
+				}
+				else
+				{
+					link.l1 = "Ist das nicht verdammt Pech. Ich habe mein Geld auf meinem Schiff vergessen. Ich komme gleich damit zurück.";
+					link.l1.go = "exit";
+				}
 			}
 			else
 			{
-				link.l1 = "Ist das nicht verdammt Pech. Ich habe mein Geld auf meinem Schiff vergessen. Ich komme gleich damit zurück.";
-				link.l1.go = "exit";
+				dialog.text = "In Ordnung, es macht mir nichts aus. Ich habe fünfundzwanzig Einheiten in meinem Lagerhaus. Der Preis, wie Sie sich erinnern, beträgt dreißig Dublonen pro Stück.";
+				if (PCharDublonsTotal() >= 750)
+				{
+					link.l1 = "In Ordnung, abgemacht. Hier hast du. Hier sind siebenhundertfünfzig Dublonen.";
+					link.l1.go = "trade_bakaut_1";
+				}
+				else
+				{
+					link.l1 = "Ist das nicht verdammt Pech. Ich habe mein Geld auf meinem Schiff vergessen. Ich komme gleich damit zurück.";
+					link.l1.go = "exit";
+				}
+			}
+			if(sti(pchar.questTemp.SvensonBakaut) >= 1 && !CheckAttribute(pchar, "questTemp.SvensonBakautBlock")) // увеличить объём поставок бакаута
+			{
+				link.l4 = "Jan, wäre es möglich, die Größe der Pockholz-Lieferungen zu erhöhen?";
+				link.l4.go = "UpgradeBakaut";
+			}
+			if(sti(pchar.questTemp.SvensonBakaut) >= 1 && CheckAttribute(pchar, "questTemp.SvensonBakautPotom") && PCharDublonsTotal() >= 3000) // увеличить объём поставок бакаута, если в первый раз не принесли
+			{
+				link.l4 = "Jan, ich habe dreitausend Goldstücke gesammelt. Hier, du kannst dieses Geschenk unseren Schmarotzern überreichen. Ich vermute, sie werden heute einen glücklichen Tag haben.";
+				link.l4.go = "UpgradeBakaut_Agreed";
 			}
 		break;
 		
@@ -1647,6 +1674,86 @@ void ProcessDialogEvent()
 			DeleteAttribute(npchar, "quest.trade_bakaut");
 			SetFunctionTimerCondition("Bakaut_SvensonAttrReturn", 0, 0, 1, false); // таймер
 			AddCharacterExpToSkill(pchar, "Commerce", 100);
+		break;
+		
+		case "UpgradeBakaut": //
+			if (startHeroType == 1) sStr = "mein Freund";
+			if (startHeroType == 2) sStr = "mein Freund";
+			if (startHeroType == 3) sStr = "mein Freund";
+			if (startHeroType == 4) sStr = "Helen";
+			if (GetSummonSkillFromName(pchar, SKILL_COMMERCE) >= 80)
+			{
+				dialog.text = "Freut mich, dass dir das Pockholz gefällt, " + sStr + ". Die Lieferungen zu vergrößern ist kein Problem, aber es gibt da ein "Aber", verstehst du. Mit steigenden Mengen entsteht auch eine Spur, die unerwünschte Aufmerksamkeit auf sich ziehen kann, besonders von den englischen Behörden. Aber wenn wir zuverlässige Hände, treue Ohren und Leute in der Residenz hinzufügen, die uns helfen, im Schatten zu bleiben, kann alles arrangiert werden. Allerdings wird das nicht billig - dreitausend Dublonen, um die Stadtkasse und die Bedürfnisse Englands zu umgehen. Dann kann ich dir auch fünfmal mehr liefern. Was sagst du dazu?";
+				link.l1 = "Dreitausend Dublonen? Jan, das ist ja Raubüberfall am helllichten Tag! Könnten wir nicht irgendwie mit geringeren Kosten auskommen? Vielleicht gibt es einen Weg, die Sache ohne solch märchenhafte Summen zu regeln?";
+				link.l1.go = "UpgradeBakaut_1";
+				notification("Skill Check Passed", SKILL_COMMERCE);
+			}
+			else
+			{
+				dialog.text = "Gute Idee, aber ich muss sagen, für solche Mengen im Handelsgeschäft braucht man etwas mehr Erfahrung und Geschick. Eile birgt mehr Risiko als Nutzen. Machen wir es so: Sammle noch etwas mehr Erfahrung, und wenn du für größere Partien bereit bist, komm wieder. Dann besprechen wir alles ordentlich.";
+				link.l1 = "Hmm... In Ordnung. Kommen wir später auf dieses Gespräch zurück.";
+				link.l1.go = "exit";
+				notification("Skill Check Failed (80)", SKILL_COMMERCE);
+			}
+		break;
+		
+		case "UpgradeBakaut_1":
+			dialog.text = "Leider, "+pchar.name+", das ist heutzutage der Preis für Ruhe - die Appetite dieser Herren in Perücken und Uniformen wachsen mit jedem Tag. Nichts lockt sie mehr als Dublonen, die in ihren Truhen klimpern. Ich garantiere dir einen Rabatt von fünfzehn Prozent auf alle nachfolgenden Lieferungen, wenn dich das tröstet.";
+			link.l1 = "Verdammt seien sie! Solche Summen zu verlangen! Mit solcher Gier sollten sie Königsschätze kaufen, nicht um Schweigen feilschen! Jan, vielleicht sollten wir... ihnen zeigen, wer die wahre Macht im Archipel ist, was meinst du?";
+			link.l1.go = "UpgradeBakaut_2";
+		break;
+		
+		case "UpgradeBakaut_2":
+			if (startHeroType == 1) sStr = "mein Freund";
+			if (startHeroType == 2) sStr = "mein Freund";
+			if (startHeroType == 3) sStr = "mein Freund";
+			if (startHeroType == 4) sStr = "Helen";
+			dialog.text = "Ha! Was für ein Eifer du hast, " + sStr + "! Aber gegen ganz England zu gehen liegt mir jetzt nicht, und die Jahre sind auch nicht mehr dieselben. Lass uns einfach diese Blutsauger bezahlen, und sie sollen ruhig sitzen bleiben - wir müssen unser Geschäft machen. Sammle die nötige Summe, und unser Weg wird frei sein, ohne unnötige Fragen!";
+			if (PCharDublonsTotal() >= 3000)
+			{
+				link.l1 = "Na gut, Jan, du hast mich überzeugt. So sei es, da es keinen anderen Weg gibt. Hier sind deine dreitausend Dublonen. Nur denk daran: Ich habe nicht vor, diese Geizhälse für immer zu füttern.";
+				link.l1.go = "UpgradeBakaut_Agreed";
+			}
+			link.l2 = "Zum Teufel mit ihnen, Jan! Glaubst du wirklich, dass es keinen anderen Ausweg gibt? Na gut. Ich werde diese Dublonen auftreiben. Aber im Moment habe ich solches Geld nicht.";
+			link.l2.go = "UpgradeBakaut_4";
+			link.l3 = "Verdammt, Jan, willst du wirklich, dass ich diese Beamten mit ihren gepflegten Damen füttere? Sie sitzen auf ihren Stühlen, tun nichts und verlangen nur Geld! Nein, das gefällt mir nicht! Ich werde ihre Taschen nicht mit meinem Schweiß und Blut füllen! Kehren wir zu den bisherigen Bedingungen zurück. Das reicht mir.";
+			link.l3.go = "UpgradeBakaut_3";
+		break;
+		
+		case "UpgradeBakaut_Agreed":
+			dialog.text = "Das ist doch mal ein anderes Gespräch! Mit deinem Beitrag werden unsere Geschäfte wie geschmiert laufen, und diese Geizhälse bekommen ihr Teil - und werden nicht einmal mehr in Richtung Pockholz schauen. Ich versichere dir, bald werden wir alle Investitionen hundertfach zurückgewinnen.";
+			link.l1 = "Ich hoffe es, Jan, ich hoffe es.";
+			link.l1.go = "UpgradeBakaut_Agreed_1";
+			RemoveDublonsFromPCharTotal(3000);
+			AddQuestRecord("Unique_Goods", "1_1");
+			pchar.questTemp.UpgradeBakaut = true;
+			pchar.questTemp.SvensonBakautBlock = true;
+			DeleteAttribute(pchar, "questTemp.SvensonBakautPotom");
+		break;
+		
+		case "UpgradeBakaut_Agreed_1":
+			dialog.text = "Die Geschäfte werden laufen, wie sie sollten, du brauchst dir keine Sorgen zu machen. Und nun zu unseren zukünftigen Geschäften: Ich werde für dich 125 Stämme Pockholz bereithalten, wie bisher, zum 14. und 28. jeden Monats. Du kannst die gesamte Partie für 3150 Dublonen abholen.";
+			link.l1 = "Solche Gespräche gefallen mir viel besser! Also hundertfünfundzwanzig Stämme? Ausgezeichnet, Jan. Nun denn, bis bald, ich werde auf die Lieferung warten!";
+			link.l1.go = "exit";
+		break;
+		
+		case "UpgradeBakaut_3":
+			if (startHeroType == 1) sStr = "mein Freund";
+			if (startHeroType == 2) sStr = "mein Freund";
+			if (startHeroType == 3) sStr = "mein Freund";
+			if (startHeroType == 4) sStr = "Helen";
+			dialog.text = "Wie du willst, " + sStr + ". Und reg dich nicht so auf. So ist diese Welt nun mal eingerichtet.";
+			link.l1 = "Ja, Jan, ich weiß, wie diese Welt eingerichtet ist. Aber das heißt nicht, dass ich es ertragen muss. Nun gut, ich muss gehen.";
+			link.l1.go = "exit";
+			pchar.questTemp.SvensonBakautBlock = true;
+		break;
+		
+		case "UpgradeBakaut_4":
+			dialog.text = "Ich warte, bis du das Geld zusammenhast. Ich weiß, dass du einen Weg finden wirst. Sobald du bereit bist - erwarte ich dich mit dem Geld, und wir machen weiter.";
+			link.l1 = "In Ordnung.";
+			link.l1.go = "exit";
+			pchar.questTemp.SvensonBakautBlock = true;
+			pchar.questTemp.SvensonBakautPotom = true;
 		break;
 		// <-- генератор бакаута
 		

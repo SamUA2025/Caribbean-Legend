@@ -1321,17 +1321,21 @@ The amulet was delivered. Now I can make another order.
 Event: Goods of Strategic Value
 #TEXT 1
 Jan Svenson has 25 pieces of ironwood to sell every 14th and 28th day of the month. 750 doubloons for a single batch.
+#TEXT 1_1
+Es ist mir gelungen, mit Jan Svenson eine Erhöhung der Lieferungen von Eisenholz (Bakaut) zu vereinbaren. Nun kann ich an jedem 14. und 28. Tag des Monats 125 Eisenholzstämme für 3150 Dublonen bei ihm kaufen.
 #TEXT 2
 Fadey the Muscovite will sell me 50 coils of ropes every 20th day of the month. 500 doubloons for a single batch.
-#TEXT   2_1
-I managed to negotiate with Fadey Muscovite about increasing hemp rope supplies. Now, every 20th of the month, I can purchase 250 coils of rope from Fadey for 2125 doubloons.
+#TEXT 2_1
+Es ist mir gelungen, mit Fadey Moskovit eine Erhöhung der Lieferungen von Hanfseilen zu vereinbaren. Nun kann ich an jedem 20. Tag des Monats von ihm 250 Seilrollen für 2125 Dublonen erwerben.
 #TEXT 3
 From now on, I am authorized to buy 30 pieces of ship silk every first and fifteenth day of the month from a new vice-director of the Dutch West Indian Company. A price for a single batch is 600 doubloons.
+#TEXT 3_1
+Es ist mir gelungen, mit dem Vizedirektor der Holländischen Handelskompanie in Willemstad eine Erhöhung der Seidenlieferungen zu vereinbaren. Nun kann ich an jedem 1. und 15. Tag des Monats 150 Rollen Seide zu je 17 Dublonen kaufen, insgesamt also 2550 Dublonen für die gesamte Partie.
 #TEXT 4
 Sergio Saldo offered me to buy 60 barrels of resin every fifth day of the month. A price for a single batch is 600 doubloons.
-#TEXT   4_1
-I managed to negotiate with Sergio Saldo to increase the supply of resin. Now, every 5th day of the month, I can purchase 300 barrels of resin at the Trinidad Lighthouse for 2550 doubloons.
-#TEXT   5
+#TEXT 4_1
+Es ist mir gelungen, mit Sergio Saldo eine Erhöhung der Harzlieferungen zu vereinbaren. Nun kann ich an jedem 5. Tag des Monats am Leuchtturm von Trinidad 300 Fässer Harz für 2550 Dublonen erwerben.
+#TEXT 5
 A batch of 40 logs of ironwood every 15th of the month from Rodrigo Jimenez, the manager of my factory. The factory can store up to 6 batches in total before stopping all the work. Payment is made immediately for all batches in stock. The cost of each: 200 doubloons, 5 bottles of rum, 5 bottles of wine. Total: 5 doubloons per log. Not bad...
 
 #QUEST FMQ_Guadeloupe

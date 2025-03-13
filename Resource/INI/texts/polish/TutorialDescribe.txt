@@ -1,0 +1,341 @@
+﻿newline  {
+
+}
+
+Key Layout {Układ klawiszy}
+Key Layout_descr
+{
+Alternatywny układ klawiszy zawiera szereg zmian w sterowaniu, dodaje nowe komendy i otwiera nowe możliwości:
+~
+
+zmienione komendy szybkich akcji i przeszukiwania ciał
+zmienione używanie wzmacniających eliksirów
+zakładki menu postaci dostępne pod osobnymi klawiszami
+}
+OptKurs {Punkt ustawienia żagli}
+OptKurs_descr
+{
+Czarne strzałki na mini-mapie pokazują, w jakim kierunku twój statek będzie się poruszał z maksymalną prędkością.
+~
+Niektóre typy statków są w stanie pływać prawie pod wiatr, co samo w sobie jest użyteczne, gdy musisz dogonić kupca bądź uciec przed okrętem wojennym.
+~
+Wiatr ciągle zmienia swoją prędkość oraz kierunek. Staraj się utrzymywać żagle w poprawnej pozycji, znajdując kompromis pomiędzy optymalnym kątem kursu a kierunkiem do celu.
+}
+
+SeaTimeScaleUp {Kontrola czasu}
+SeaTimeScaleUp_descr
+{
+Wykorzystaj funkcję przyspieszenia czasu – zwłaszcza na morzu, pozwala to zaoszczędzić czas.
+~
+Do kontroli używaj: + i -
+}
+
+SeaFastTravelEnglish {Szybka podróż}
+SeaFastTravelEnglish_descr
+{
+Menu akcji, które skrywa się pod klawiszem 'Enter', oferuje wiele przydatnych funkcji zarówno na lądzie, jak i morzu.
+~
+Funkcja „Płyń do” pozwala na szybką podróż do przyjaznego statku lub punktu geograficznego. Odległość szybkiej podróży można zwiększyć, używając rzadszych i droższych okularów lunetowych.
+~
+Użyj menu akcji, aby natychmiast dotrzeć do 'Ghost', a następnie wysłać szalupę.
+}
+
+SeaFastTravelEnglish_controlsimg1 {BICommandsActivate}
+
+LandTimeScaleDown {Kontrola czasu w walce}
+LandTimeScaleDown_descr
+{
+Czasami lepiej jest zwolnić tempo i czas – zwłaszcza podczas trudnej walki. Caribbean Legend to gra trudna do opanowania, dlatego należy używać wszystkich dostępnych technik, aby wyrównać szanse.
+~
+Kontroluj czas za pomocą: + i -
+}
+
+GuideFight {Walka na lądzie}
+GuideFight_descr
+{
+Opanowanie walki lądowej w grze zajmie trochę czasu. Jeśli masz włączone podpowiedzi dotyczące sterowania, w prawym dolnym rogu ekranu zobaczysz skróty klawiszowe.
+~
+Spróbuj najpierw opanować kombinację "Parowanie – Uderzenie". Skuteczne sparowanie ataku przeciwnika ogłuszy go i sprawi, że straci energię, dając ci możliwość bezpiecznego kontrataku.
+~
+Używaj różnych rodzajów ataków, aby dowiedzieć się, który zadaje największe obrażenia. Każda broń w grze ma swój preferowany rodzaj ataku – eksperymentuj!
+}
+
+GuideFight_controlsimg1 {ChrAttackChoseBase}
+GuideFight_controlsimg2 {ChrAttackBase}
+
+
+OneToOneCave {Wykorzystanie terenu}
+OneToOneCave_descr
+{
+Jeśli wróg ma przewagę liczebną, spróbuj wykorzystać otoczenie, aby zyskać przewagę w bitwie.
+~
+Prawie zawsze możesz znaleźć miejsce, w którym zmusisz wroga do walki jeden na jednego lub maksymalnie dwóch na raz.
+}
+
+OneToOneBoarding {Wykorzystanie terenu}
+OneToOneBoarding_descr
+{
+Jeśli wróg ma przewagę liczebną, spróbuj wykorzystać otoczenie, aby zyskać przewagę w bitwie.
+~
+Prawie zawsze możesz znaleźć miejsce, w którym zmusisz wroga do walki jeden na jednego lub maksymalnie dwóch na raz.
+}
+
+Collision {Zmiana pozycji}
+Collision_descr
+{
+Czasami podczas bitwy konieczna jest zmiana pozycji, czy to poprzez przebicie się przez linię wroga, czy ominięcie sojuszników.
+~
+Wyjdź z trybu walki, aby bohater mógł odepchnąć inne postacie z drogi. Po zmianie pozycji ponownie wejdź w tryb walki, aby kontynuować starcie.
+}
+
+Collision_controlsimg1 {ChrFightMode}
+
+WorldMapEnglish {Mapa globalna}
+WorldMapEnglish_descr
+{
+Mapa globalna pozwala na odbywanie morskich podróży po Karaibach. Nie musisz płynąć dokładnie do każdego miasta czy zatoki – wystarczy opuścić mapę globalną w pobliżu celu i użyć funkcji „Płyń do”.
+~
+Umiejętne korzystanie z tej funkcji może znacząco zaoszczędzić czas. Na przykład możesz opuścić mapę globalną po jednej stronie wyspy, skorzystać z szybkiej podróży, aby dotrzeć do punktu po drugiej stronie, a następnie wrócić na mapę globalną.
+~
+Używaj skrótów klawiszowych, aby oddalić mapę oraz wyświetlić Atlas z mapami.
+}
+
+WorldMapEnglish_controlsimg1 {WMapCameraSwitch}
+WorldMapEnglish_controlsimg2 {MapView}
+
+LandMapEnglish {Podróżowanie po lądzie}
+LandMapEnglish_descr
+{
+Mapy można kupować lub znajdować. Zbieraj każdą mapę wyspy, na jaką natrafisz, aby łatwiej poruszać się po lądzie. Jest to szczególnie przydatne w zadaniach, infiltracjach kolonii i poszukiwaniach skarbów.
+~
+Wszystkie zebrane mapy można znaleźć w Atlasie.
+}
+
+LandMapEnglish_controlsimg1 {MapView}
+
+NavigatorEnglish {Umiejętność nawigacji}
+NavigatorEnglish_descr
+{
+Przydziel Nawigatora z odpowiednią umiejętnością Nawigacji!
+~
+Nawigacja określa przede wszystkim wielkość statków, jakimi postać może dowodzić.
+~
+Na przykład, do prowadzenia statków piątej rangi wymagane jest 25 punktów, a do czwartej – 45. Przekroczenie tego limitu skutkuje karami do wszystkich statystyk i umiejętności postaci.
+~
+Wymagania dla każdej rangi statku można sprawdzić, klikając prawym przyciskiem myszy na ikonę Nawigacji w oknie postaci.
+~
+Umiejętność Nawigacji rośnie powoli, więc przy pierwszej okazji zatrudnij doświadczonego nawigatora w tawernie. Pamiętaj jednak, że nie znajdziesz specjalisty z poziomem umiejętności powyżej 75.
+
+NavigatorEnglish_controlsimg1 {Umiejętności}
+
+AlchemyEnglish {Rzemiosło}
+AlchemyEnglish_descr
+{
+Wytwarzanie przedmiotów, głównie talizmanów, mikstur i amunicji, może znacząco ułatwić życie. Jest to szczególnie przydatne w starciach z bossami.
+~
+Aby wytworzyć przedmiot, musisz znaleźć lub kupić przepis. Składniki nie muszą znajdować się w twoim ekwipunku – możesz śmiało kupować różne drobiazgi od ulicznych handlarzy i przechowywać je w jednej ze skrzyń w kajucie.
+~
+Na początku gry masz wybór: rozwijać umiejętność Alchemii i od razu zacząć kupować przepisy lub odłożyć to na późniejszy etap, gdy zdobędziesz zestawy narzędzi zastępujące wydawanie cennego punktu umiejętności na Alchemię.
+}
+
+AlchemyEnglish_controlsimg1 {Alchemy}
+
+LandMapAtSeaEnglish {Podróżowanie po wodzie}
+LandMapAtSeaEnglish_descr
+{
+Kieruj się na przeciwną stronę wyspy, aby ukończyć zadanie. Opuść zatokę po prawej stronie i trzymaj się linii brzegowej!
+}
+
+SalaryEnglish {Utrzymanie statku}
+SalaryEnglish_descr
+{
+Miesięczne wypłaty dla oficerów i załogi mogą znacząco skomplikować życie kapitana. Całkowita suma zależy od twoich umiejętności Handlu i Dowodzenia, wielkości statku oraz poziomu trudności gry.
+~
+Nawet na małych statkach warto mieć kwatermistrza, a duży okręt wojenny może doprowadzić nawet do bankructwa państwa. Jeśli opcja podziału łupów jest aktywna, koszty utrzymania mogą być jeszcze wyższe.
+}
+
+SalaryEnglish_controlsimg1 {ShipState}
+
+DubloonsEnglish {Dublony}
+DubloonsEnglish_descr
+{
+Złote dublony są prawdziwą miarą twojego bogactwa i zdolności do rozwiązywania problemów za pomocą pieniędzy. Zawsze staraj się zdobywać te monety, ponieważ najpotężniejsze osoby na Karaibach oferują swoje usługi tylko za dublony.
+~
+Dobre źródła dublonów to poszukiwanie skarbów, lokaty bankowe, handel towarami strategicznymi i wymiana waluty u lichwiarzy. Nie musisz nosić złota przy sobie – możesz je przechowywać w jednej ze skrzyń w swojej kajucie.
+}
+
+BoxEnglish {Przechowywanie przedmiotów}
+BoxEnglish_descr
+{
+Skrzynie w twojej kajucie mogą pomieścić nieograniczoną liczbę przedmiotów osobistych. Oprócz obowiązkowego wyposażenia w slotach ekwipunku, warto mieć przy sobie jedynie mikstury, amulety i amunicję.
+~
+Sprzedawaj nadmiarowe przedmioty, ale zawsze zachowuj rozsądny zapas biżuterii, broni, amunicji i składników alchemicznych.
+~
+Inni kapitanowie stosują podobną praktykę, dlatego zawsze warto przeszukać skrzynie w kajucie przejętego statku.
+}
+
+HealthEnglish {Witalność}
+HealthEnglish_descr
+{
+Twoja Witalność spadła! Ten parametr opisuje ogólny stan twojej postaci i wpływa na wszystkie jej zdolności.
+~
+Witalność zmniejsza się w wyniku stosowania prymitywnych metod leczenia, dramatycznych wydarzeń fabularnych, upojenia alkoholowego oraz przeciążenia ekwipunku.
+~
+Można ją przywrócić za pomocą specjalnych mikstur, odpoczynku w tawernie, romantycznych aktywności oraz po prostu z upływem czasu. W ciężkich przypadkach mogą pomóc kapłani. Unikalni oficerowie również tracą Witalność, gdy zostaną ranni w walce, ale regenerują ją z czasem.
+}
+
+AmuletEnglish {Amulety}
+AmuletEnglish_descr
+{
+Amulety to potężne wzmocnienia postaci podzielone na ofensywne, defensywne i wspomagające. Nie można jednocześnie wyposażyć amuletów ofensywnych i defensywnych, więc wybieraj mądrze.
+~
+Oprócz amuletów istnieją także talizmany i symbole ochronne. Talizmany działają dłużej i mają szersze efekty, natomiast symbole ochronne są niezwykle potężne, działają bezterminowo i zajmują osobne miejsce w ekwipunku.
+~
+Zawsze miej w zapasie kilka zestawów wzmocnień na trudne testy umiejętności oraz wymagające bitwy na morzu i lądzie.
+}
+
+AmuletEnglish_controlsimg1 {Inventory}
+
+PerkEnglish {Punkty talentów}
+PerkEnglish_descr
+{
+Zdobyłeś właśnie pierwszy punkt talentu (PP)! PP są kluczowe dla rozwoju postaci i dzielą się na Morskie oraz Osobiste.
+~
+Morskie talenty czynią cię groźniejszym na morzu, a Osobiste sprawiają, że jesteś skuteczniejszy na lądzie i w interakcjach z ludźmi.
+~
+Oba typy punktów rozwijają się niezależnie wraz ze wzrostem twoich umiejętności. Średnio co 30 punktów umiejętności w danej grupie otrzymujesz 1 PP.
+~
+Aby szybko zdobywać Morskie PP, wykonuj morskie zadania poboczne i kontrakty. Osobiste punkty rosną szybciej, jeśli walczysz różnymi rodzajami broni i spędzasz czas w tawernach. Pamiętaj, że Osobiste PP są cenniejsze, ponieważ większość Morskich talentów mogą zastąpić twoi oficerowie.
+}
+
+PerkEnglish_controlsimg1 {Abilities}
+
+FighterEnglish {Straż Przednia}
+FighterEnglish_descr
+{
+Do twojej załogi dołączył pierwszy członek Straży Przedniej! Przydziel go za pomocą Menu Postaci.
+~
+Strażnicy Przedni to twoi najbardziej zaufani oficerowie, ochroniarze i abordażowi. Podążą za tobą w sam środek walki i spędzisz z nimi najwięcej czasu.
+~
+Możesz dowodzić maksymalnie trzema wojownikami jednocześnie. Oprócz ochrony na lądzie zwiększają oni skuteczność abordażu i pomagają w przenoszeniu ciężkich skarbów.
+~
+Unikalni oficerowie fabularni różnią się od zwykłych marynarzy, których można wynająć w tawernach. Nie wszyscy są skutecznymi strażnikami przednimi, ale mają duży wpływ na fabułę gry i nie mogą zginąć w zwykłej walce.
+~
+Zawsze wyposażaj swoich strażników w amulety, przedmioty lecznicze, broń i amunicję. Możesz wymieniać się przedmiotami za pomocą menu akcji lub dowolnej skrzyni.
+~
+Możesz wydawać strażnikom polecenia, aby utrzymywali pozycję, podążali za tobą lub atakowali, korzystając ze skrótów klawiszowych lub dialogów.
+}
+
+FighterEnglish_controlsimg1 {Abilities}
+FighterEnglish_controlsimg2 {OfficersFollow}
+FighterEnglish_controlsimg3 {OfficersCharge}
+FighterEnglish_controlsimg4 {OfficersHold}
+
+RestEnglish {Opcja Odpoczynku}
+RestEnglish_descr
+{
+Opcja odpoczynku jest teraz dostępna w Menu Akcji!
+~
+Wszystko w grze podąża za cyklem dobowym: strażników nie ma na nabrzeżu i przy bramach miejskich nocą, załogę można wynająć w tawernach tylko za dnia, a niektóre postacie są szczególnie wrażliwe na porę dnia.
+~
+Możesz używać tej funkcji na morzu i na dzikim lądzie. Jeśli jesteś w mieście, wynajmij pokój w tawernie.
+}
+
+RestEnglish_controlsimg1 {BICommandsActivate}
+
+Navigation {Sterowanie Statkiem}
+Navigation_descr
+{
+Używaj klawiszy sterowania żaglami, aby zmieniać tryb żagli, oraz klawiszy steru, aby zmieniać kurs.
+~
+Istnieją trzy tryby żagli: Pełne Żagle, Żagle Bitewne i Zwinięte Żagle.
+~
+Tryb Pełnych Żagli pozwala osiągnąć maksymalną prędkość, ale statek skręca wolniej, a jego żagle są najbardziej narażone na uszkodzenia w bitwach i sztormach.
+~
+Tryb Żagli Bitewnych ogranicza prędkość, ale poprawia zwrotność, celność artylerii i zapewnia lepszą ochronę żagli przed ostrzałem wroga.
+~
+Tryb Zwiniętych Żagli stopniowo spowalnia statek do całkowitego zatrzymania. Bardzo przydatny podczas abordażu lub zbierania wartościowych przedmiotów z morza.
+~
+Złota zasada: w bitwie – tryb Żagli Bitewnych, poza bitwą – tryb Pełnych Żagli.
+}
+
+
+}
+
+Navigation_controlsimg1 {Ship_SailUp}
+Navigation_controlsimg2 {Ship_SailDown}
+Navigation_controlsimg3 {MiniMapZoomIn}
+Navigation_controlsimg4 {MiniMapZoomOut}
+StealthEnglish {Skradanie się}
+StealthEnglish_descr
+{
+Większość karaibskich osad nie przywita cię z otwartymi ramionami. Istnieją dwa sposoby na przedostanie się do miasta: przez port lub przez bramy.
+~
+Bezpieczne dokowanie w nieprzyjaznym porcie wymaga przygotowania. Podnieś flagę kraju, który nie jest wrogo nastawiony, i upewnij się, że masz wysoki poziom umiejętności Skradania się, zanim zaryzykujesz pojawienie się przed działami fortu.
+~
+Wejście przez bramy miasta najlepiej wykonywać nocą, gdy nie są pilnowane. Unikaj żołnierzy i przenocuj w tawernie. Jeśli wzbudzisz alarm, znajdź opuszczony dom i ukryj się w nim na kilka godzin, zanim spróbujesz ponownie.
+~
+Zakup licencji handlowej w Curaçao to bezpieczna opcja podróżowania po regionie, jeśli twoja umiejętność Skradania się jest niska.
+}
+
+SeaBattle {Walka morska}
+SeaBattle_descr
+{
+Klucz do każdej walki morskiej to utrzymanie optymalnego kąta kursu, ochrona własnych żagli i uszkadzanie żagli przeciwnika.
+~
+Do tego celu używaj kul armatnich i łańcuchowych. Kule armatnie mają największy zasięg i zadają umiarkowane obrażenia kadłubowi oraz żaglom. Jedna celna salwa kul łańcuchowych ze średniego dystansu może całkowicie zniszczyć żagle wroga.
+~
+Aby zwiększyć celność, używaj trybu pierwszoosobowego, upewniając się wcześniej, że twój statek nie jest nadmiernie kołysany przez fale lub manewry. Jeśli uszkodzisz żagle przeciwnika i zachowasz swoje w dobrym stanie, masz trzy opcje: abordaż, zatopienie lub ucieczka.
+~
+Przekroczenie dystansu tysiąca jardów od najbliższego wrogiego statku pozwala wejść na mapę globalną i uciec.
+~
+Najłatwiej zatopić wrogi okręt za pomocą bomb z bliskiej odległości. Skuteczny ostrzał dalekiego zasięgu kulami armatnimi wymaga doświadczenia kapitana i artylerzystów. W większości przypadków zatapianie statków jest jednak rzadko konieczne – walki skupiają się głównie na abordażu lub ucieczce.
+}
+
+SeaBattle_controlsimg1 {hk_charge1}
+SeaBattle_controlsimg2 {hk_charge2}
+SeaBattle_controlsimg3 {hk_charge3}
+SeaBattle_controlsimg4 {hk_charge4}
+SeaBattle_controlsimg5 {Sea_CameraSwitch}
+SeaBattle_controlsimg6 {Ship_Fire}
+
+BoardingTactics {Abordaż}
+BoardingTactics_descr
+{
+Zanim przystąpisz do abordażu, oddaj kilka salw kartaczy, aby osłabić załogę przeciwnika i uniknąć podobnego ostrzału ze strony wroga. Gdy uzyskasz przewagę, zbliż się do wrogiego statku, dopasuj prędkość i przystąp do abordażu!
+~
+Im wyższa twoja umiejętność Abordażu, tym łatwiej będzie ci skutecznie zahaczyć wrogi statek. Skuteczność abordażu zależy także od liczebności, umiejętności i morale twojej załogi.
+~
+Doświadczeni bosmani, oddziały szturmowe, amulety oraz rozwinięte umiejętności walki wręcz mogą zniwelować przewagę liczebną przeciwnika.
+}
+
+MushketEnglish {Muszkiety}
+MushketEnglish_descr
+{
+Długolufowa broń palna jest niezwykle groźna w walce. Mogą jej używać jedynie główny bohater posiadający umiejętność Muszkieter oraz niektórzy unikalni oficerowie.
+Najbardziej znanym przykładem jest Tichingitu – to właśnie on powinien otrzymać pierwszy znaleziony muszkiet.
+~
+W przeciwieństwie do broni białej, broń palna oferuje większą elastyczność. Rozwijając swoją postać jako strzelca, nosząc odpowiednie amulety i wyposażenie oraz używając różnych typów amunicji, możesz odwrócić losy każdej bitwy.
+}
+
+MushketEnglish_controlsimg1 {Inventory}
+
+CameraControl {Ahoy!}
+CameraControl_descr
+{
+Witaj w trybie fabularnym! Zanim wyruszysz w morze, musisz upewnić się, że ląd cię nie pokona.
+~
+Caribbean Legend to wymagająca gra, ale nie jest trudna do opanowania. Aby pomóc ci odnaleźć się w Nowym Świecie, przygotowaliśmy rozszerzony samouczek na wyspie Martynika. Ukończenie go pozwoli ci opanować wszystkie niezbędne umiejętności i zrozumieć mechaniki gry.
+~
+Sterowanie odbywa się za pomocą klawiszy ruchu oraz aktywnego użycia myszy. W większości przypadków wystarczy nacisnąć klawisz ruchu do przodu i sterować kamerą. Prędkość kamery można dostosować w ustawieniach.
+~
+Niektórzy gracze uważają, że sterowanie nie jest wystarczająco responsywne – zgadzamy się. Dlatego aktywnie pracujemy nad jego ulepszeniem i mamy nadzieję, że w następnej dużej aktualizacji ten komunikat będzie już wyglądał inaczej.
+~
+Dziękujemy za grę i do zobaczenia na morzu!
+}
+
+CameraControlFP_controlsimg1 {ChrForward}
+CameraControlFP_controlsimg2 {ChrStrafeLeft}
+CameraControlFP_controlsimg3 {ChrBackward}
+CameraControlFP_controlsimg4 {ChrStrafeRight}
+CameraControlFP_controlsimg5 {ShipCamera_Turn_H}

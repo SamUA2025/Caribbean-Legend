@@ -1862,11 +1862,20 @@ void ControlsLandDesc()
 			{
 				if(LAi_IsFightMode(pchar))
 				{
-					FTC[0] = "ChrAltAttackBase";
-					FTC[1] = "ChrAttackBase";
-					FTC[2] = "ChrAttackBreakBase";
-					FTC[3] = "ChrAttackChoseBase";
-					FTC[4] = "ChrBlock";
+					if(SendMessage(pchar, "ls", MSG_CHARACTER_EX_MSG, "IsAimingMode"))
+					{
+						FTC[0] = "ChrAimingShot";
+						FTC[1] = "ChrAiming";
+					}
+					else 
+					{
+						FTC[0] = "ChrAltAttackBase";
+						FTC[1] = "ChrAttackBase";
+						FTC[2] = "ChrAttackBreakBase";
+						FTC[3] = "ChrAttackChoseBase";
+						if(LAi_CharacterCanFrie(pchar)) FTC[4] = "ChrAiming";
+						FTC[5] = "ChrBlock";
+					}
 				}
 				else
 				{

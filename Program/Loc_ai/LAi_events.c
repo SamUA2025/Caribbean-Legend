@@ -250,28 +250,35 @@ void LAi_CharacterFire()
 		sType = "musket";
 		weaponID = GetCharacterEquipByGroup(attack, MUSKET_ITEM_TYPE);
 	}
-	
-	//Заряд персонажа
-	if(!CheckAttribute(attack, "chr_ai." + sType + ".charge")) attack.chr_ai.(sType).charge = "0";
-	float charge = stf(attack.chr_ai.(sType).charge) - 1.0;
-	// boal gun bullet убираем пулю после выстрела -->
 	sBullet = LAi_GetCharacterBulletType(attack, sType);
-	TakeItemFromCharacter(attack, sBullet);
-	// boal gun bullet убираем пулю после выстрела <--
-	sGunPowder = LAi_GetCharacterGunpowderType(attack, sType);
-	if(sGunPowder != "")
+	if(rand(9) == 7 && GetCharacterEquipByGroup(attack, HAT_ITEM_TYPE) == "hat7")
 	{
-		RemoveItems(attack, sGunPowder, 1); // Warship. Забираем порох
+		notification(XI_ConvertString("hat7"), "Fortune");
+		PlayStereoSound("interface\new_level.wav");
 	}
-	if(charge <= 0.0)
+	else
 	{
-		charge = 0.0;
+		//Заряд персонажа
+		if(!CheckAttribute(attack, "chr_ai." + sType + ".charge")) attack.chr_ai.(sType).charge = "0";
+		float charge = stf(attack.chr_ai.(sType).charge) - 1.0;
+		// boal gun bullet убираем пулю после выстрела -->
+		TakeItemFromCharacter(attack, sBullet);
+		// boal gun bullet убираем пулю после выстрела <--
+		sGunPowder = LAi_GetCharacterGunpowderType(attack, sType);
+		if(sGunPowder != "")
+		{
+			RemoveItems(attack, sGunPowder, 1); // Warship. Забираем порох
+		}
+		if(charge <= 0.0)
+		{
+			charge = 0.0;
+			attack.chr_ai.(sType).chargeprc = "1";
+		}
+		// boal fix любой выстрел врубает дозарядку! -->
 		attack.chr_ai.(sType).chargeprc = "1";
+		// boal <--
+		attack.chr_ai.(sType).charge = charge;
 	}
-	// boal fix любой выстрел врубает дозарядку! -->
-	attack.chr_ai.(sType).chargeprc = "1";
-	// boal <--
-	attack.chr_ai.(sType).charge = charge;
 	// ugeen -> мультиурон и прочее(27.07.10)
 		
 	//weaponID = GetCharacterEquipByGroup(attack, sType);
@@ -743,6 +750,7 @@ void Location_CharacterFireShard()
 {
 	aref attack = GetEventData();
 	aref enemy = GetEventData();
+	float kDist = GetEventData();
 	float fAimingTime = GetEventData();
 	int isHeadShot = GetEventData();
 

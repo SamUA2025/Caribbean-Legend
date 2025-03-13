@@ -1,75 +1,76 @@
 RPGUtilite_1
 {
-Experience Gained ~
+Erfahrung erhalten ~
 }
 
 RPGUtilite_2
 {
-awful
+furchtbar
 }
 RPGUtilite_3
 {
-bad
+schlecht
 }
 
 RPGUtilite_4
 {
-poor
+arm
 }
 
 RPGUtilite_5
 {
-moderate
+mäßig
 }
 
 RPGUtilite_6
 {
-good
+gut
 }
 
 RPGUtilite_7
 {
-exellent
+hervorragend
 }
 
 RPGUtilite_8
 {
-Vitality Increased
+Vitalität erhöht
 }
 
 RPGUtilite_9
 {
-Vitality Decreased
+Vitalität gesunken
 }
 
 RPGUtilite_10
 {
-Bounty Increased!
+Kopfgeld erhöht!
 }
 
 RPGUtilite_11
 {
-National Rep Increased!
+Nationale Reputation gestiegen!
 }
 
 RPGUtilite_12
 {
-National Rep Increased!
+Nationale Reputation gesunken!
+
 }
 
 RPGUtilite_13
 {
-National Rep Decreased!
+Nationale Reputation gesunken!
 }
 
 RPGUtilite_14
 {
-Bounty ~
+Kopfgeld ~
 }
 
 RPGUtilite_15
 {
-Hostile
+Feindlich
 }
 
 RPGUtilite_16
@@ -79,25 +80,25 @@ Neutral
 
 RPGUtilite_17
 {
-Good
+Gut
 }
 
 RPGUtilite_18
 {
-Exellent
+Hervorragend
 }
 
 RPGUtilite_19
 {
-Admiration
+Bewunderung
 }
 
 RPGUtilite_20
 {
-Rainbow
+Regenbogen
 }
 
 RPGUtilite_21
 {
-Quicksilver
+Quecksilber
 }

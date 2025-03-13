@@ -1279,6 +1279,18 @@ void VsD_DiegoInTaverna_2(string qName)
 	FreeSitLocator("PortPax_tavern", "sit5");
 }
 
+void VsD_GoToCity(string qName)
+{
+	sld = CharacterFromID("GiumDyubua");
+	sld.location = "None";
+	LAi_SetActorType(sld);
+	LAi_ActorRunToLocation(sld, "reload", "reload1_back", "", "", "", "", -1);
+			
+	PChar.quest.VsD_Vzriv.win_condition.l1 = "location";
+	PChar.quest.VsD_Vzriv.win_condition.l1.location = "PortPax_ExitTown";
+	PChar.quest.VsD_Vzriv.function = "VsD_Vzriv";
+}
+
 void VsD_Vzriv(string qName)
 {
 	SetLocationCapturedState("PortPax_town", true);
@@ -1577,15 +1589,10 @@ void VsD_Vzriv_8(string qName)
 	LAi_SetActorType(sld);
 	LAi_ActorRunToLocator(sld, "goto", "goto10", "", -1);
 	DoQuestFunctionDelay("VsD_Vzriv_9", 2.0);
-	DoQuestFunctionDelay("VsD_Vzriv_9_1", 2.8);
 }
 void VsD_Vzriv_9(string qName)
 {
-	locCameraFromToPos(-15.48, 5.74, -42.69, false, 50.00, 1.60, -16.00);
-	DoQuestFunctionDelay("VsD_Vzriv_10", 6.5);
-}
-void VsD_Vzriv_9_1(string qName)
-{
+	locCameraFromToPos(-15.48, 5.74, -42.69, true, 50.00, 1.60, -16.00);
 	if (GetCharacterIndex("Folke") != -1 && CheckPassengerInCharacter(pchar, "Folke"))
 	{
 		sld = CharacterFromID("Folke");
@@ -1602,6 +1609,7 @@ void VsD_Vzriv_9_1(string qName)
 		LAi_SetActorType(sld);
 	}
 	LAi_SetActorType(pchar);
+	DoQuestFunctionDelay("VsD_Vzriv_10", 6.5);
 }
 void VsD_Vzriv_10(string qName)
 {

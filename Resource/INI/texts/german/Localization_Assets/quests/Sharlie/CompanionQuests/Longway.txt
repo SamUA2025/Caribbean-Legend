@@ -104,7 +104,7 @@ Gravel
 
 Longway_24
 {
-The meeting is set behind@<NewStr()>the city gates
+Das Treffen findet hinter@<NewStr()>den Stadttoren statt
 }
 
 Longway_25
@@ -118,7 +118,7 @@ Longway_26
 
 Longway_27
 {
-A day later...@<NewStr()>Evening, Outside the City Gates.
+Einen Tag später...@<NewStr()>Abends, vor den Toren der Stadt.
 }
 
 Longway_28
@@ -132,7 +132,7 @@ Terugny
 
 Longway_30
 {
-Three hours later...@<NewStr()>Capsterville Pier
+Drei Stunden später...@<NewStr()>Capsterville Pier
 }
 
 Longway_31
@@ -178,22 +178,22 @@ Morning Star
 
 Longway_40
 {
-The Quarterdeck of Morning Star
+Quartierdeck der Morning Star
 }
 
 Longway_41
 {
-Seal the hatches! Time to have a word with Fermentelos...
+Schließt die Luken! Zeit, mit Fermentelos zu sprechen...
 }
 
 Longway_42
 {
-The whole team is coming here now!
+Das ganze Team kommt jetzt hierher!
 }
 
 Longway_43
 {
-Longway is dead!!! Let's go! We don't have any reason to be here anymore!
+Longway ist tot!!! Lasst uns gehen! Wir haben keinen Grund mehr, hier zu sein!
 }
 
 Longway_44
@@ -207,7 +207,7 @@ Latter
 
 Longway_46
 {
-Certain goods from the Star were swiftly transferred into our hold
+Bestimmte Waren von der Star wurden schnell in unseren Laderaum gebracht.
 }
 
 Longway_47
@@ -259,7 +259,7 @@ Prevoyant
 
 Longway_57
 {
-By the way, I found the ship's log in the captain's locker, but all the pages were ripped out, so another dead lead.
+Übrigens habe ich das Logbuch des Schiffes im Spind des Kapitäns gefunden, aber alle Seiten waren herausgerissen, also eine weitere falsche Spur.
 }
 
 Longway_58
@@ -291,7 +291,7 @@ Levasseur
 
 Longway_64
 {
-Marceline could've helped me right now - she hates her cursed husband with all her heart, if she even has one. And of course, I just had to  rob her jewelry box on my way out of her bed. She must've noticed the theft almost immediately. All I can do now is hope that Chang Xing will cooperate with us. Things could've turned out differently...
+Marceline hätte mir in diesem Moment helfen können - sie hasst ihren verfluchten Ehemann von ganzem Herzen, wenn sie überhaupt einen hat. Und natürlich musste ich auf dem Weg aus ihrem Bett einfach ihre Schmuckschatulle stehlen. Sie muss den Diebstahl fast sofort bemerkt haben. Jetzt kann ich nur noch hoffen, dass Chang Xing mit uns kooperieren wird. Es hätte auch anders ausgehen können...
 }
 
 Longway_65
@@ -305,5 +305,5 @@ Xing
 
 Longway_67
 {
-My beloved needs rest. I'll try not to disturb her anytime soon.
+Meine Geliebte braucht Ruhe. Ich werde versuchen, sie in nächster Zeit nicht zu stören.
 }

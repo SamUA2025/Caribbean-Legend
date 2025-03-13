@@ -90,7 +90,6 @@ void InitInterface_RS(string iniName, ref itemsRef, string faceID)
 		if(sInterfaceType == INTERFACETYPE_DEADMAN) // Если обыск трупа
 		{
 			makearef(arDeadChar, itemsRef);
-			// OtherTableCaption = XI_ConvertString("OtherTableItemsDead");
 		}
 		
 		iSetCharIDToCharactersArroy(itemsRef); // Не нужно это, но и не помешает
@@ -194,23 +193,9 @@ void InitInterface_RS(string iniName, ref itemsRef, string faceID)
 
 	SetFormatedText("STORECAPTION", XI_ConvertString(sGetInterfaceTypeStr("titleExchangeItems", "titleItemsBox", "titleDeadItems","titleBarrel")));
 	SetFormatedText("OTHER_TABLE_CAPTION", OtherTableCaption);
-	if(sInterfaceType == INTERFACETYPE_DEADMAN)	
+	if(sInterfaceType == INTERFACETYPE_DEADMAN && CheckAttribute(GameInterface, "TABLE_LIST2.tr1.index"))	
 	{
-		if(CheckAttribute(GameInterface, "TABLE_LIST2.tr1.index")) iCurGoodsIdx = sti(GameInterface.TABLE_LIST2.tr1.index);
-		// Log_TestInfo("iCurGoodsIdx" + iCurGoodsIdx);
-		if(iCurGoodsIdx <1)
-		{
-			SetNodeUsing("GET_BUTTON", false);
-			SetNodeUsing("GETALL_BUTTON", false);
-			SetNodeUsing("DELBODY_BUTTON", false);
-			SetNodeUsing("MAIN_CHARACTER_WEIGHT", false);
-			SetNodeUsing("WEIGHT_ICON", false);
-			SetNodeUsing("CLOSE_BUTTON", false);
-			SetNodeUsing("CLOSE_BUTTONE", true);
-			GameInterface.TABLE_LIST2.hr.td1.str = "";
-			GameInterface.TABLE_LIST2.hr.td2.str = "";
-			GameInterface.TABLE_LIST2.hr.td3.str = "";
-		}
+		iCurGoodsIdx = sti(GameInterface.TABLE_LIST2.tr1.index);
 	}
 }
 
@@ -235,10 +220,9 @@ void InterfaceInitButtons(ref _refCharacter)
 	SetNodeUsing("GET_BUTTON", false);
 	SetNodeUsing("GETALL_BUTTON", false);
 	SetNodeUsing("CLOSE_BUTTON", false);
-	SetNodeUsing("CLOSE_BUTTONE", false);
 	SetNodeUsing("DELBODY_BUTTON", false);
 	SetNodeUsing("SKULL_BUTTON", false);
-	
+
 	switch(sInterfaceType)
 	{
 		case INTERFACETYPE_EXCHANGE_ITEMS:
@@ -250,22 +234,29 @@ void InterfaceInitButtons(ref _refCharacter)
 			SetNodeUsing("GETALL_BUTTON", true);
 			SetNodeUsing("CLOSE_BUTTON", true);
 			SetNodeUsing("DELBODY_BUTTON", true);
-			if (CheckAttribute(pchar, "GenQuest.NoDelBody"))
-			{
-				SetNodeUsing("CLOSE_BUTTON", false);
-				// SendMessage(&GameInterface, "lslllll", MSG_INTERFACE_MSG_TO_NODE, "GETALL_BUTTON", 1, 845, 945, 1075, 990); // Jason, 030712
-				break;
-			}
 		break;
 		
 		case INTERFACETYPE_CHEST:
-			// if (bSeaActive && bAbordageStarted) SetNodeUsing("GETALL_BUTTON", true);
 			SetNodeUsing("GETALL_BUTTON", true); // всем сундукам
 		break;
 		
 		case INTERFACETYPE_BARREL:
 			SetNodeUsing("GETALL_BUTTON", true);
 		break;
+	}
+	if(bShowChangeWin)
+	{
+		SetSelectable("GET_BUTTON", false);
+		SetSelectable("GETALL_BUTTON", false);
+		SetSelectable("CLOSE_BUTTON", false);
+		SetSelectable("DELBODY_BUTTON", false);
+	}
+	else
+	{
+		SetSelectable("GET_BUTTON", true);
+		SetSelectable("GETALL_BUTTON", true);
+		SetSelectable("CLOSE_BUTTON", true);
+		SetSelectable("DELBODY_BUTTON", true);
 	}
 }
 
@@ -460,6 +451,9 @@ void ProcessCancelExit()
 	}
 	else
 	{
+        // Корректное удаление трупа
+        if(sGetInterfaceType() == INTERFACETYPE_DEADMAN && !CheckLastItemOnDead())
+			Dead_DelLoginedCharacter(refToChar);
 		IDoExit(RC_INTERFACE_FOOD_INFO_EXIT);
 	}
 }
@@ -723,14 +717,10 @@ void ProcCommand()
 			if(comName == "activate" || comName == "click")
 			{
 				onGetAllBtnClick();
-				if(sInterfaceType == INTERFACETYPE_DEADMAN)
+				if(sInterfaceType == INTERFACETYPE_DEADMAN && !CheckLastItemOnDead())
 				{
-					if(CheckAttribute(GameInterface, "TABLE_LIST2.tr1.index")) iCurGoodsIdx = sti(GameInterface.TABLE_LIST2.tr1.index);
-					if(iCurGoodsIdx <1)
-					{
-						Dead_DelLoginedCharacter(refToChar);
-						ProcessCancelExit();
-					}
+					Dead_DelLoginedCharacter(refToChar);
+					IDoExit(RC_INTERFACE_FOOD_INFO_EXIT);
 				}
 			}
 		break;
@@ -747,21 +737,6 @@ void ProcCommand()
 		case "CLOSE_BUTTON":
 			if(comName=="activate" || comName=="click")
 			{
-				if(CheckAttribute(GameInterface, "TABLE_LIST2.tr1.index")) iCurGoodsIdx = sti(GameInterface.TABLE_LIST2.tr1.index);
-				if(iCurGoodsIdx <1)
-				{
-					Dead_DelLoginedCharacter(refToChar);
-					ProcessCancelExit();
-				} else { // не убираем тело если не обыскали
-					ProcessCancelExit();
-				}
-			}
-		break;
-
-		case "CLOSE_BUTTONE":
-			if(comName=="activate" || comName=="click")
-			{
-				Dead_DelLoginedCharacter(refToChar);
 				ProcessCancelExit();
 			}
 		break;
@@ -1023,6 +998,7 @@ bool FilterItems(ref Item)
 			 (groupID == CIRASS_ITEM_TYPE) ||   // костюмы и доспехи
 			 (groupID == TOOL_ITEM_TYPE) ||     // навигационные приборы котороые можно экипировать в спецслот
 			 (groupID == LANTERN_ITEM_TYPE) ||  // фонарь
+			 (groupID == HAT_ITEM_TYPE) ||  	// шляпы
 			 (groupID == AMMO_ITEM_TYPE);		// расходники для огнестрела
 
 	items4 = (groupID == ITEM_SLOT_TYPE) 	|| 	// амулеты
@@ -1334,11 +1310,12 @@ void EndTooltip()
 	GameInterface.qty_edit.str = 0;
 	SetCharWeight();
 	SetVariable();
- 	XI_WindowDisable("QTY_WINDOW", true);
+	XI_WindowDisable("QTY_WINDOW", true);
 	XI_WindowShow("QTY_WINDOW", false);
 	HideItemInfo();
 	bShowChangeWin = false;
 	SetCurrentNode(CurTable);
+	InterfaceInitButtons(refCharacter);
 }
 
 void HideItemInfo()
@@ -1406,6 +1383,7 @@ void ShowBoxMove()
 		XI_WindowShow("QTY_WINDOW", true);
 		bShowChangeWin = true;
 	}
+	InterfaceInitButtons(refCharacter);
 }
 
 void CS_TableSelectChange()
@@ -1707,7 +1685,6 @@ void onTableAddAllBtnClick()
 		iStoreQty = GetCharacterFreeItem(refToChar, item);	
 	}
 }
-
 
 // Нажали на табличной стрелочке "отдать все предметы одного типа"
 void onTableRemoveAllBtnClick()
@@ -2071,4 +2048,19 @@ void OfficerReincarnation(ref rPassanger);
 	DeleteAttribute(pchar, "items.mushket2x2");
 	AddPassenger(pchar, rOff, false);
 	Log_Info(XI_ConvertString("fighter") + " " + GetFullName(rOff) + " " + XI_ConvertString("Resuscitated") + ".");
+}
+
+// проверка на наличие последнего предмета
+bool CheckLastItemOnDead()
+{
+	if(CheckAttribute(GameInterface, "TABLE_LIST2.tr1.index"))
+		iCurGoodsIdx = sti(GameInterface.TABLE_LIST2.tr1.index);
+    if(iCurGoodsIdx < 1)
+        return false;
+
+    string itemID = Items[iCurGoodsIdx].id;
+    if(!CheckAttribute(refToChar, "Items." + itemID) || sti(refToChar.Items.(itemID)) < 1)
+        return false;
+
+    return true;
 }

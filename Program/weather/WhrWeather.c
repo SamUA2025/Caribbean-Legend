@@ -1,6 +1,6 @@
 #define WEATHER_DEBUG			0
 
-int		wRain					= 0; 
+int	wRain = 0; 
 
 #include "weather\WhrUtils.c"
 #include "weather\WhrLightning.c"
@@ -720,7 +720,10 @@ void Whr_SetRainSound(bool _set, bool _isNight)
 string Whr_GetRainyLightningPath()
 {
 	//fix кривого освещения в пещерах и тюрьмах
-	if(loadedLocation.type == "dungeon" || loadedLocation.type == "jail" || loadedLocation.type == "cave") 
+	if(loadedLocation.type == "dungeon" 
+		|| loadedLocation.type == "jail" 
+		|| loadedLocation.type == "cave" 
+		|| loadedLocation.type == "Alcove") 
 	{
 		return "evening23";
 	}
@@ -1400,16 +1403,22 @@ void CreateWeatherEnvironment()
 		{
 			if (CheckAttribute(rLoc, "type"))
 			{
-				if(rLoc.type == "residence"
-					|| rLoc.type == "tavern"
+				if(rLoc.type == "tavern"
 					|| rLoc.type == "house"
+					|| rLoc.type == "residence"
 					|| rLoc.type == "shop"
 					|| rLoc.type == "shipyard"
 					|| rLoc.type == "church" 
+					|| rLoc.type == "jail" 
+					|| rLoc.type == "dungeon"
 					|| rLoc.type == "cave"
 					|| rLoc.type == "grotto"
-					|| rLoc.type == "jail" 
-					|| rLoc.type == "dungeon" )
+					|| rLoc.type == "LSC_inside"
+					|| rLoc.type == "ammo"
+					|| rLoc.type == "europe"
+					|| rLoc.type == "teno_inside"
+					|| rLoc.type == "Alcove"
+					|| rLoc.type == "underwater")
 				{
 					bRain = false;
 				}
@@ -1518,9 +1527,8 @@ bool Whr_CheckInsideLoc() // фильтр внутренних локаций б
                 || loc.type == "boarding_cabine"
 				|| loc.type == "ammo"
 				|| loc.type == "europe"
-				// || loc.type == "teno"
 				|| loc.type == "teno_inside"
-				|| loc.type == "alcove")
+				|| loc.type == "Alcove")
 			{
 				if(loc.id == "Deck_Near_Ship") return false;
 				else return true;

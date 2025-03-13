@@ -9,464 +9,464 @@ newline {
 
 Strength
 {
-Strong pirates are usually great Vanguards and Cannoneers.
-Affects skills, which require physical strength, especially 'Medium Arms', 'Heavy Arms' and 'Cannons'.
+Starke Piraten sind in der Regel gute Kämpfer der Vorhut und Kanoniere.
+Beeinflusst Fertigkeiten, die körperliche Stärke erfordern, insbesondere 'Mittlere Waffen', 'Schwere Waffen' und 'Kanonen'.
 ~
-Determines the amount of HP per level and the max inventory capacity.
+Bestimmt die Menge an HP pro Stufe und die maximale Inventarkapazität.
 }
 
 Perception
 {
-Perceptive pirates can be marksmen, secret agents and Cannoneers.
+Aufmerksame Piraten können Scharfschützen, Geheimagenten und Kanoniere sein.
 ~
-Affects 'Accuracy' and 'Stealth' skills.
+Beeinflusst die Fertigkeiten 'Genauigkeit' und 'Tarnung'.
 }
 
 Agility
 {
-Agile pirates often make for the finest candidates for the Vanguard or Boatswain roles, with boarding being their forte.
-Affects 'Light Arms', 'Medium Arms', 'Boarding', 'Firearms'.
+Flinke Piraten sind oft die besten Kandidaten für die Rolle der Vorhut oder des Bootsmannes, denn ihre Stärke ist das Entern.
+Beeinflusst 'Leichte Waffen', 'Mittlere Waffen', 'Entern' und 'Schusswaffen'.
 ~
-Determines the maximum amount of Energy.
+Bestimmt die maximale Menge an Ausdauer.
 }
 
 Charisma
 {
-Charismatic pirates are natural leaders, negotiators and Pursers. 
-A natural leader has no need for violence in order to take goods from a merchant, they will give him everything without putting up a fight. The best sailors will follow him and the most beautiful women will wait for his arrival in every port.
+Charismatische Piraten sind natürliche Anführer, Verhandlungsführer und Zahlmeister. 
+Ein geborener Anführer braucht keine Gewalt, um den Händlern ihre Waren abzunehmen, sie werden ihm alles geben, ohne sich zu wehren. Die besten Seeleute werden ihm folgen und die schönsten Frauen werden in jedem Hafen auf seine Ankunft warten.
 ~
-Affects 'Leadership' and 'Trading'.
-Determines how many officers you can hire (A*2).
+Wirkt sich auf 'Führung' und 'Handel' aus.
+Bestimmt, wie viele Offiziere Sie einstellen können (A*2).
 }
 
 Intellect
 {
-Smart pirates learn fast and have a wide choice of career options: Surgeons, Cannoneers and Navigators.
+Kluge Piraten lernen schnell und haben eine große Auswahl an Karrieremöglichkeiten: Chirurgen, Kanoniere und Navigatoren.
 ~
-Affects 'Trading', 'Cannons', and 'Navigation"
-Determines how fast you gain levels and perks.
+Wirkt sich auf 'Handel', 'Kanonen' und 'Navigation' aus.
+Bestimmt, wie schnell ihr Stufen und Vorteile erhaltet.
 }
 
 Endurance
 {
-Resilient pirates shine as Carpenters and Surgeons.
+Unverwüstliche Piraten glänzen als Zimmerleute und Chirurgen.
 ~
-Affects 'Repairs' and 'Defence'.
-Same as (P), determines max HP and max inventory capacity.
+Wirkt sich auf 'Reparaturen' und 'Verteidigung' aus.
+Wie (P), bestimmt die maximalen HP und die maximale Inventarkapazität.
 }
 
 Luck
 {
-Lucky pirates are perfect shooters, gamblers and adventurers.
+Glückspiraten sind perfekte Schützen, Glücksspieler und Abenteurer.
 ~
-'Firearms', 'Opportunism' and 'Stealth' require this stat.
-Determines the outcome of some game events and have a massive effect on the critical hit chance.
+'Feuerwaffen', 'Opportunismus' und 'Tarnung' erfordern diesen Wert.
+Bestimmt den Ausgang einiger Spielereignisse und hat einen massiven Einfluss auf die kritische Trefferchance.
 }
 
 Crit
 {
-The base probability of landing a critical hit depends on the combination of equipped items, perks, and stats.
+Die Wahrscheinlichkeit, einen kritischen Treffer zu landen, hängt von der Kombination aus ausgerüsteten Gegenständen, Vorteilen und Attributen ab.
 ~
-(S) stat determines a chance of critical melee atack.
-(S) and (I) stats determine a chance of critical shot - but only for firearms of high quality.
+(S) bestimmt die Chance auf einen kritischen Nahkampfangriff.
+Die (S)- und (I)-Werte bestimmen die Chance auf einen kritischen Schuss.
 ~
 
-Enemy's equipment and perks can alter your crit chance.
+Die Ausrüstung des Gegners und seine Perks können deine kritische Trefferchance verändern.
 }
 
 CharDefence
 {
-Base indicators of protection from cold weapons / firearms / enemy critical hit
+Basisindikatoren für den Schutz vor Nahkampfwaffen / Schusswaffen / kritischen Treffern des Gegners
 ~
-Performance is affected by personal abilities and equipment
+Die Leistung hängt von den persönlichen Fähigkeiten und der Ausrüstung ab
 ~
-They do not adjust to the enemy's abilities and equipment.
+Sie passen sich nicht an die Fähigkeiten und die Ausrüstung des Gegners an.
 }
 
 FencingL
 {
-Skill of wielding light blades, foils and the like. 
+Fähigkeit im Umgang mit leichten Klingen, Floretts und dergleichen. 
 (R*0.9+I*0.1)
 }
 
 FencingS
 {
-Skill of wielding medium, all-round balanced blades, such as sabers, which require both strength and agility. 
+Fähigkeit im Umgang mit mittelgroßen, vielseitig ausbalancierten Klingen, wie z. B. Säbeln, die sowohl Kraft als auch Beweglichkeit erfordern. 
 (P*0.6+R*0.4)
 }
 
 FencingH
 {
-Skill of wielding heavy weapons such as broadswords and axes. Requires a lot of physical strength. 
+Fähigkeit, mit schweren Waffen wie Breitschwertern und Äxten umzugehen. Erfordert viel körperliche Kraft. 
 (P*0.9+E*0.1)
 }
 
 Pistol
 {
-Skill of using all kinds of firearms.
+Beherrschung aller Arten von Feuerwaffen.
 (R*0.5+S*0.5)
 }
 
 Fortune
 {
-A little bit of proactive luck will come in handy in gambling and looting.
+Ein bisschen proaktives Glück ist beim Glücksspiel und beim Plündern sehr nützlich.
 Based on(S).
 }
 
 Leadership
 {
-Affects the results of certain events and dialogues. Also the main skill when it comes to hiring new crew members.
+Beeinflusst die Ergebnisse bestimmter Ereignisse und Dialoge. Auch die wichtigste Fähigkeit, wenn es darum geht, neue Besatzungsmitglieder anzuheuern.
 (A*0.9+T*0.1)
 }
 
 Commerce
 {
-Plays a crucial role in specific trading dialogues, influencing both selling and buying prices, and impacting the overall cost of ship management.
+Spielt eine entscheidende Rolle in spezifischen Handelsdialogen, beeinflusst sowohl die Verkaufs- als auch die Kaufpreise und wirkt sich auf die Gesamtkosten des Schiffsmanagements aus.
 (T*0.8+A*0.2)
 }
 
 Accuracy
 {
-One of the most important skills for those sailing the high seas. A decent captain will not waste gunpowder and cannonballs just to scatter the fish: every salvo will hit the mark! And once the salty wind disperses smoke over the captain's bridge, there shall be no enemy ships left on the horizon! 
+Dies ist eine der wichtigsten Fähigkeiten auf hoher See. Ein anständiger Kapitän verschwendet kein Schießpulver und keine Kanonenkugeln, nur um die Fische zu zerstreuen: Jede Salve wird ihr Ziel treffen! Und wenn der salzige Wind den Rauch über der Brücke des Kapitäns vertreibt, werden keine feindlichen Schiffe mehr am Horizont zu sehen sein! 
 (I*0.8+S*0.2)
 }
 
 Cannons
 {
-Load the cannon quickly, roll it up and while the echo of the salvo is still roaring between the bulkheads, clear, load, aim, pour water on the cannon so it doesn't overheat... In the heat of battle there should be nothing excessive: load, roll up, fire! 
+Ladet die Kanone schnell, rollt sie auf und während das Echo der Salve noch zwischen den Schotten dröhnt, räumt, ladet, zielt, gießt Wasser auf die Kanone, damit sie nicht überhitzt... In der Hitze des Gefechts sollte man es nicht übertreiben: laden, einrollen, feuern! 
 (T*0.6+P*0.4)
 }
 
 Sailing
 {
-The ability to bring the ship safely to the port through storm and fog; the skill of using navigation equipment and controlling the fleet. The largest and most terrifying ship will fly like a bird, obeying the steady hand of an experienced Navigator. 
+Die Fähigkeit, das Schiff durch Sturm und Nebel sicher in den Hafen zu bringen; die Fertigkeit, Navigationsgeräte zu benutzen und die Flotte zu steuern. Das größte und furchterregendste Schiff wird wie ein Vogel fliegen und der ruhigen Hand eines erfahrenen Navigators gehorchen. 
 (I*0.2+T*0.8)
 ~
-Lack of navigation will impose penalties to every skill and stat.
-1-rate ships require 95
-2-rate require 80
-3-rate require 65
-4-rate require 45
-5-rate require 25
-6-rate require 1
+Fehlende Navigation führt zu Abzügen bei allen Fähigkeiten und Werten.
+Klasse 1 Schiffe erfordern 95
+Klasse 2 Schiffe erfordern 80
+Klasse 3 Schiffe erfordern 65
+Klasse 4 Schiffe erfordern 45
+Klasse 5 Schiffe erfordern 25
+Klasse 6 Schiffe erfordern 1
 }
 
 Repair
 {
-When the enemy storms your ship with a volley of projectiles, splintering the sides and turning sails into sives; when the hull is cracking in the storm, and wind tears the rigging apart thread by thread, the repair becomes one of the most important naval skills. 
+Wenn der Feind Ihr Schiff mit einer Salve von Kanonenkugeln stürmt, die Seitenwände zersplittern und die Segel in Scherben verwandeln; wenn der Rumpf im Sturm zerbricht und der Wind die Takelage Faden für Faden zerreißt, wird die Reparatur zu einer der wichtigsten seemännischen Fähigkeiten. 
 (E*0.8+I*0.2)
 }
 
 Grappling
 {
-Aligning a ship with the enemy vessel, flinging the hooks to board the trembling enemy, sweeping the decks and taking the ship as well-deserved price - this requires great agility and experience, but the loot will surely make up for all the effort. 
+Ein Schiff auf das feindliche Schiff auszurichten, die Haken zu schleudern, um den zitternden Feind zu entern, die Decks zu säubern und das Schiff als wohlverdiente Beute an sich zu nehmen - das erfordert viel Geschick und Erfahrung, aber die Beute entschädigt sicher für alle Mühen. 
 (R*0.7+T*0.3)
 }
 
 Defence
 {
-Day after day, the crew slowly becomes one with the ship. A seasoned sailor is worth a dozen sprouts from a local tavern. Every good captain must protect his men and not allow them to perish foolishly. 
+Tag für Tag wird die Besatzung langsam eins mit dem Schiff. Ein erfahrener Seemann ist mehr wert als ein Dutzend Sprossen aus einer örtlichen Taverne. Jeder gute Kapitän muss seine Männer schützen und darf nicht zulassen, dass sie leichtsinnig untergehen. 
 (E*0.5+A*0.5)
 }
 
 Sneak
 {
-To pass undetected past the enemy, to escape when being chased in the open ocean, or instantly appear out of thin air to attack an unsuspecting enemy - every captain must possess the proper skill of stealth. 
+Um unbemerkt am Feind vorbeizukommen, bei einer Verfolgungsjagd auf offener See zu entkommen oder aus dem Nichts aufzutauchen, um einen ahnungslosen Feind anzugreifen - jeder Kapitän muss die Fähigkeit der Tarnung beherrschen. 
 (S*0.5+I*0.5)
 }
 
 Loyality
 {
-Your actions affect the officers' loyalty. White knights will refuse to be employed by a scoundrel, and natural bandits won't remain honest for too long.
+Ihr Handeln beeinflusst die Loyalität der Offiziere. Weiße Ritter werden sich weigern, von einem Schurken angestellt zu werden, und natürliche Banditen werden nicht lange ehrlich bleiben.
 ~
-A high level of Authority can significally reduce the impact that decisions have on the drop of your officers' loyalty, in case those actions disagree with their worldview.
+Ein hohes Maß an Autorität kann die Auswirkungen von Entscheidungen auf die Loyalität Ihrer Offiziere erheblich verringern, wenn diese Handlungen nicht mit deren Weltanschauung übereinstimmen.
 }
 
 Authority
 {
-Authority, Fame and Honor distinguish the protagonist
-from all other game characters.
+Autorität, Ruhm und Ehre unterscheiden
+den Protagonisten von allen anderen Spielfiguren.
 ~
-Authority is an assessment of the hero by his surroundings (first of all, the crew of the ships in the squadron of the protagonist). If authority of the captain fell critically, he is presented with a black mark and offered to resign voluntarily or forcibly. If Authority is high, the crew shall rally around the commander amd withstand any trials with good faith in their leader!
+Die Autorität ist eine Bewertung des Helden durch seine Umgebung (vor allem durch die Besatzung der Schiffe in der Flotte des Protagonisten). Wenn die Autorität des Kapitäns kritisch ist, wird er mit einer schwarzen Karte bedacht und ihm wird angeboten, freiwillig oder gezwungenermaßen zurückzutreten. Ist die Autorität hoch, schart sich die Besatzung um den Kommandanten und widersteht allen Prüfungen mit gutem Vertrauen in ihren Anführer!
 ~
-Honor grows when the hero saves the world and its inhabitants. Or falls to the most ugly depths, from broken promises, perpetrated violence and villainy. Honor depends on the character's actions and, in turn, influences how other people in the game perceive him.
+Die Ehre wächst, wenn der Held die Welt und ihre Bewohner rettet. Oder er fällt in die hässlichsten Abgründe, durch gebrochene Versprechen, verübte Gewalt und Schurkerei. Die Ehre hängt von den Handlungen des Charakters ab und beeinflusst wiederum, wie andere Menschen im Spiel ihn wahrnehmen.
 ~
-However, if the hero lives a monotonous and measured way of life, chooses the least risky solutions, travels alone in the empty seas, his Honor and Fame fall like sand through an open palm, sinking to a neutral and uncomplicated medium. In the game, the memory of the community is short and does not exceed for a half of the in-game year.
+Lebt der Held jedoch eintönig und bedächtig, wählt er die am wenigsten riskanten Lösungen, reist er allein durch die leeren Meere, fallen seine Ehre und sein Ruhm wie Sand durch eine offene Handfläche und sinken auf ein neutrales und unkompliziertes Medium. Im Spiel ist das Gedächtnis der Gemeinschaft kurz und geht nicht über die Hälfte des Spieljahres hinaus.
 }
 
 Attention_abilities
 {
-Attention!
-Some abilities may not be available for
-certain types of protagonists or officers.
+Achtung!
+Einige Fähigkeiten sind möglicherweise nicht verfügbar 
+für bestimmte Arten von Protagonisten oder Offizieren.
 }
 
 Personal_abilities
 {
-Perks that are focused on the character.
+Vorteile, die auf den Charakter ausgerichtet sind.
 }
 
 Ship_abilities
 {
-Perks that are focused on the ship.
-Hired officers can take care of the most of them, letting the Captain to prioritize.
+Vorteile, die sich auf das Schiff konzentrieren.
+Die angeheuerten Offiziere können sich um die meisten von ihnen kümmern, so dass der Kapitän Prioritäten setzen kann.
 }
 
 Abilities_available
 {
-The number indicates the amount of unallocated perk points.
+Die Zahl gibt die Anzahl der nicht zugewiesenen Vorteilspunkte an.
 }
 
 Abilities_active
 {
-The number indicates perks a character has activated.
+Die Zahl gibt an, welche Vorteile ein Charakter aktiviert hat.
 }
 
 Rank
 {
-The rank indicates the level of progress of the character in the game. It increases with the hero's experience. As the rank of the hero increases, his Life also increases by a number based on the Endurance value.
+Der Rang gibt an, wie weit die Spielfigur im Spiel fortgeschritten ist. Er steigt mit der Erfahrung des Helden. Wenn der Rang des Helden steigt, erhöht sich auch sein Leben um eine Zahl, die auf dem Ausdauerwert basiert.
 ~
-As the rank of the hero increases, he will meet stronger adversaries and find better items more often.
+Je höher der Rang des Helden ist, desto öfter trifft er auf stärkere Gegner und findet bessere Gegenstände.
 }
 
 Life
 {
-Zero HP means death. One HP means the world of opportunities.
+Null HP bedeutet den Tod. Ein HP bedeutet die Welt der Möglichkeiten.
 ~
-(E) determines how many bonus HP are granted with each new level.
+(E) bestimmt, wie viele Bonus-HP mit jeder neuen Stufe gewährt werden.
 }
 
 Health
 {
-Vitality is the indicator of the physical state of the character. It drops each time you get severely wounded in a short period of time. It recovers, if you avoid combat for some time to let the wounds heal properly. Can severely debuff stats and skills if left unattended.
+Die Vitalität ist der Indikator für den körperlichen Zustand des Charakters. Sie sinkt jedes Mal, wenn du in kurzer Zeit schwer verwundet wirst. Sie erholt sich wieder, wenn du den Kampf für einige Zeit meidest, damit die Wunden richtig heilen können. Sie kann die Werte und Fertigkeiten stark beeinträchtigen, wenn sie nicht beachtet wird.
 }
 
 Energy
 {
-Energy is a vital parameter that dictates the hero's stamina during melee combat, as every attack draws upon it. Simply put, engaging in battle fatigues the character, necessitating rest to restore their stamina.
+Energie ist ein wichtiger Parameter, der die Ausdauer des Helden während des Nahkampfes bestimmt, da jeder Angriff auf sie zurückgreift. Einfach ausgedrückt: Der Kampf ermüdet den Charakter, so dass er sich ausruhen muss, um seine Ausdauer wiederherzustellen.
 ~
-(R) determines your max amount of Energy.
+(R) bestimmt deine maximale Energiemenge.
 }
 
 Money
 {
-Money is the king of all men. Piastres, talers, guineas... What's the difference, if it's all liquid cash!
+Geld ist der König aller Menschen. Piaster, Taler, Guineen... Wo ist der Unterschied, wenn es sich um flüssiges Geld handelt!
 }
 
-Honor
+Reputation
 {
-Honor is the measure of other characters' attitude towards you. Honor can be high (positive), neutral and low (negative). Honor changes according to the your deeds and determines how other characters in the game perceive you.
+Der Ruf ist das Maß für die Einstellung der anderen Charaktere zu Ihnen. Der Ruf kann hoch (positiv), neutral und niedrig (negativ) sein. Der Ruf ändert sich je nach den Taten des Helden und bestimmt, wie andere Charaktere im Spiel Ihren Helden wahrnehmen.
 ~
-The fame of the hero fades with time, his achievements or failures being erased from people's memories. Evil deeds are not as easily forgotten as good ones. If a hero doesn't take any sides or perform any significant actions, his reputation will eventually become 'unknown adventurer'.
+Der Ruhm des Helden verblasst mit der Zeit, seine Leistungen oder Misserfolge werden aus dem Gedächtnis der Menschen gelöscht. Böse Taten werden nicht so leicht vergessen wie gute. Wenn ein Held keine Partei ergreift oder keine bedeutenden Taten vollbringt, wird sein Ruf schließlich zum 'unbekannten Abenteurer'.
 }
 
 Weight
 {
-The maximum weight a character can carry without losing movement speed and getting other penalties to his skills.
-Depends on (P) and (E).
+Das maximale Gewicht, das ein Charakter tragen kann, ohne an Bewegungsgeschwindigkeit zu verlieren oder andere Abzüge bei seinen Fertigkeiten zu erhalten.
+Hängt von (P) und (E) ab.
 }
 
 Title
 {
-The title indicates how useful the character is for the state he is serving.
+Der Titel gibt an, wie nützlich die Figur für den Staat ist, dem sie dient.
 }
 
 NextExp
 {
-Experience threshold indicates how many points are assigned to the current skill, rank and ability, and how much experience is needed to gain another point.
+Die Erfahrungspunkte zeigen an, wie viele Punkte der aktuellen Fertigkeit, dem Rang und der Fähigkeit zugewiesen sind und wie viel Erfahrung benötigt wird, um einen weiteren Punkt zu erhalten.
 ~
-Skills are developing when you're performing the corresponding actions. For example, for each accurate pistol shot you will gain experience points for the 'Firearms' skill. These skill points are counted towards rank experience and personal/ship abilities (depends on skill type).
+Fertigkeiten entwickeln sich, wenn du die entsprechenden Aktionen ausführst. Zum Beispiel erhältst du für jeden präzisen Pistolenschuss Erfahrungspunkte für die Fertigkeit "Feuerwaffen". Diese Fertigkeitspunkte werden auf die Rangerfahrung und die persönlichen/Schiffsfähigkeiten angerechnet (je nach Fertigkeitstyp).
 ~
-By crossing the rank experience threshold the hero will gain a new rank, and with it - more life and ability points, which the player may assign as he or she chooses.
+Durch das Überschreiten der Erfahrungsgrenze erhält der Held einen neuen Rang und damit mehr Lebens- und Fähigkeitspunkte, die der Spieler nach Belieben vergeben kann.
 }
 
-TABLE_PERKS {Hero abilities}
+TABLE_PERKS {Heldenfähigkeiten}
 
 TABLE_PERKS_desc
 {
-Abilities are additional character parameters that allow you to get new advantages or open up previously inaccessible gaming features. Abilities can allow a character to become an expert in a particular specialization or become a generalist who knows a little about a lot.
+Fähigkeiten sind zusätzliche Charakterparameter, die es ermöglichen, neue Vorteile zu erhalten oder bisher unzugängliche Spielfunktionen zu erschließen. Fähigkeiten können einen Charakter zu einem Experten in einer bestimmten Spezialisierung oder zu einem Generalisten machen, der ein wenig über vieles weiß.
 ~
-Double-click on the selected ability to read its description and learn about the pre-requisites (if there are any)
+Doppelklicken Sie auf die ausgewählte Fähigkeit, um ihre Beschreibung zu lesen und sich über die Voraussetzungen zu informieren (falls vorhanden).
 ~
-Certain abilities cannot be selected right away due to pre-requisite abilities. Learn the starting abilities in the tree first, to make new ones available.
+Bestimmte Fähigkeiten können nicht sofort ausgewählt werden, da sie Voraussetzungen erfüllen müssen. Lernen Sie zuerst die Anfangsfähigkeiten im Baum, um neue Fähigkeiten verfügbar zu machen.
 }
 
-PERK_TABLE_NEED {Required abilities}
+PERK_TABLE_NEED {Erforderliche Fähigkeiten}
 
 PERK_TABLE_NEED_desc
 {
-To pick this ability, a hero must first activate all other abilities in this tree.
+Um diese Fähigkeit zu wählen, muss ein Held zuerst alle anderen Fähigkeiten in diesem Baum aktivieren.
 }
 
 Nation_hint
 {
-Hero's nation is a nation, chosen by the hero at the beginning of the game, or the nation of the patent issued at the moment (hero in service). The nation can be seen in the "Character" window. In "Nation" window you can see the current flag of your ship - you can change it only at sea, to hide your true identity. Note that ships in the open sea and guards at the port might see through your disguise. Stealth of the hero affects the chance that the disguise is successful. If a hero has a bounty placed on his head by his nation, he is considered an enemy of his own nation as well.
+Die Nation des Helden ist eine Nation, die der Held zu Beginn des Spiels wählt, oder die Nation des Patents, das im Moment ausgestellt wird (Held im Dienst). Die Nation kann im "Charakter"-Fenster eingesehen werden. Im Fenster "Nation" kannst du die aktuelle Flagge deines Schiffes sehen - du kannst sie nur auf See ändern, um deine wahre Identität zu verbergen. Beachte, dass Schiffe auf offener See und Wachen im Hafen deine Tarnung durchschauen könnten. Die Tarnfähigkeit des Helden beeinflusst die Wahrscheinlichkeit, dass die Tarnung erfolgreich ist. Wenn auf einen Helden von seiner Nation ein Kopfgeld ausgesetzt wurde, gilt er auch als Feind seiner eigenen Nation.
 ~
-Enemy recognition is performed with consideration of the official relations between states, as well as the bounties they place on your head.
+Das Erkennen von Feinden erfolgt unter Berücksichtigung der offiziellen Beziehungen zwischen den Staaten sowie der Kopfgelder, die sie auf Sie aussetzen.
 ~
-Quick Travel doesn't work in enemy cities.
+Schnellreise funktioniert nicht in feindlichen Städten.
 }
 
 Drunk_hint
 {
-Alcohol affects your skills. If you're drunk, you will not feel much pain, but won't be able to perform delicate tasks, either.
+Alkohol beeinträchtigt Ihre Fähigkeiten. Wenn Sie betrunken sind, spüren Sie zwar keine Schmerzen, können aber auch keine heiklen Aufgaben erledigen.
 }
 
 England_descr
 {
-England. Britannia still has another century to truly 'rule the waves', but if there is a rising naval power to contend with the might of Spain - it's England. While France attacks Spanish power in Europe, English privateers and naval patrols feast on unprotected Spanish shipping on their way to ultimately dominating the Caribbean.
+England. Britannien hat noch ein weiteres Jahrhundert Zeit, um wirklich "die Wellen zu beherrschen", aber wenn es eine aufstrebende Seemacht gibt, die es mit der Macht Spaniens aufnehmen kann, dann ist es England. Während Frankreich die spanische Macht in Europa angreift, ergötzen sich englische Freibeuter und Seepatrouillen an der ungeschützten spanischen Schifffahrt auf ihrem Weg zur endgültigen Vorherrschaft in der Karibik.
 }
 
 France_descr
 {
-The disastrous wars of religion between Catholic and Huguenot that have plagued France since the beginning of the Reformation over a hundred years ago have largely passed with the ascension of the fifteen-year-old Louis XIV de Bourbon to the throne. Still a far cry from the future 'Sun King' that will lead France to a Golden Age, King Louis wishes to continue in the traditions of the great Cardinal Richelieu to strengthen the apparatus of state through vigorous reform. There is much conflict still in Europe, but looming largest in the eyes of King Louis are the bitter rivals of the Bourbons, the Habsburgs - currently ruling as king of Spain and Holy Roman Emperor. To compete with the Spanish both near and abroad, King Louis has ordered Jean-Baptiste Colbert to revitalize the French Navy. A new and efficient tax regime allows France not only to pay off its debts from nearly fifty years of war, but also to allocate funds for naval and army reforms. While the French Army is still not quite as modern or battle hardened as Oliver Cromwell's English New Model Army, they are rapidly becoming one of the best equipped and trained on the continent in the new linear style of war. New ships of the latest designs are being built at Toulon and Saint-Nazaire, and modern cannons being cast at factories in the interior.
+Die verheerenden Religionskriege zwischen Katholiken und Hugenotten, die Frankreich seit dem Beginn der Reformation vor über hundert Jahren geplagt haben, sind mit der Thronbesteigung des fünfzehnjährigen Ludwig XIV. von Bourbon weitgehend vorbei. Noch weit entfernt vom zukünftigen "Sonnenkönig", der Frankreich zu einem goldenen Zeitalter führen wird, möchte König Ludwig an die Traditionen des großen Kardinals Richelieu anknüpfen und den Staatsapparat durch energische Reformen stärken. Es gibt noch viele Konflikte in Europa, aber am größten sind in den Augen von König Ludwig die erbitterten Rivalen der Bourbonen, die Habsburger, die derzeit als König von Spanien und Kaiser des Heiligen Römischen Reiches herrschen. Um mit den Spaniern sowohl im In- als auch im Ausland konkurrieren zu können, hat König Ludwig Jean-Baptiste Colbert beauftragt, die französische Marine zu modernisieren. Ein neues und effizientes Steuersystem ermöglicht es Frankreich nicht nur, seine Schulden aus fast fünfzig Jahren Krieg zu begleichen, sondern auch Mittel für Reformen der Marine und der Armee bereitzustellen. Die französische Armee ist zwar immer noch nicht so modern und kampferprobt wie Oliver Cromwells englische New Model Army, aber sie entwickelt sich rasch zu einer der bestausgerüsteten und -ausgebildeten Armeen des Kontinents im neuen linearen Kriegsstil. In Toulon und Saint-Nazaire werden neue Schiffe nach den neuesten Entwürfen gebaut, und in den Fabriken im Landesinneren werden moderne Kanonen gegossen.
 ~
-Unlike the English, France's main concerns lie on the European continent, and colonial concerns often fall secondary to the more pressing need for defending the French border against the Habsburgs in Austria, Italy, and Spain.
+Im Gegensatz zu den Engländern liegen die Hauptinteressen Frankreichs auf dem europäischen Kontinent, und koloniale Belange sind oft zweitrangig gegenüber der dringenden Notwendigkeit, die französische Grenze gegen die Habsburger in Österreich, Italien und Spanien zu verteidigen.
 ~
-Due to this neglect, the French Company of the Americas made the decision to sell part of their colonial holdings on the Caribbean Antilles to the Knights of Malta, through a deal orchestrated by French chevalier and Governor-General Philippe de Poincy. De Poincy and the Order Grandmaster Jean de Lascaris-Castellar hope through this purchase to make up  for the revenue of the Order lost chasing Barbary corsairs around the Mediterranean through more...creative methods frowned upon by the Holy See. A promising young knight of the Order named Michel de Monper even proposes to privateer against Spanish shipping!
+Aufgrund dieser Vernachlässigung beschloss die Französische Amerikakompanie, einen Teil ihrer kolonialen Besitztümer auf den karibischen Antillen an die Malteserritter zu verkaufen, und zwar im Rahmen eines vom französischen Ritter und Generalgouverneur Philippe de Poincy eingefädelten Deals. De Poincy und der Großmeister des Ordens, Jean de Lascaris-Castellar, hoffen, durch diesen Kauf die Einnahmeverluste des Ordens bei der Jagd auf die barbarischen Korsaren im Mittelmeer durch kreativere, vom Heiligen Stuhl verpönte Methoden ausgleichen zu können. Ein vielversprechender junger Ordensritter namens Michel de Monper schlägt sogar vor, als Freibeuter gegen die spanische Schifffahrt vorzugehen!
 ~
-And so it falls to the cream of French nobility to hitch a ride on the next boat to the Caribbean colonies, hoping to find fame, fortune, adventure, and perhaps expand the French Empire while at it.
+Und so kommt es, dass die Crème de la Crème des französischen Adels das nächste Schiff in die karibischen Kolonien besteigt, in der Hoffnung, dort Ruhm, Reichtum und Abenteuer zu finden und vielleicht sogar das französische Reich zu vergrößern.
 ~
 }
 
 Holland_descr
 {
-Holland. The United Provinces of the Netherlands is a young nation, recently free of an eighty year independence war against Spain. The Dutch are a thrifty and hardworking people with a craving for trade superiority. Currently the Dutch quietly aids France in their struggle against their common enemy - Spain; but in all, seeks to be a neutral power that can trade with (or cheat) any customer!
+Holland. Die Vereinigten Provinzen der Niederlande sind eine junge Nation, die erst kürzlich einen achtzigjährigen Unabhängigkeitskrieg gegen Spanien hinter sich gebracht hat. Die Niederländer sind ein sparsames und fleißiges Volk, das nach wirtschaftlicher Überlegenheit strebt. Gegenwärtig unterstützen die Niederländer Frankreich im Kampf gegen den gemeinsamen Feind Spanien, streben aber danach, eine neutrale Macht zu sein, die mit jedem Kunden Handel treiben (oder ihn betrügen) kann!
 }
 
 Spain_descr
 {
-Spain. A great but waning colonial power. Currently holding the greater part of the Caribbean islands and the Spanish Main, Spain finds itself under constant pressure from England and France, who are seeking to claim the endless riches of the New World for themselves.
+Spanien. Eine große, aber schwindende Kolonialmacht. Spanien, das derzeit den größten Teil der karibischen Inseln und des spanischen Festlands hält, steht unter ständigem Druck von England und Frankreich, die die endlosen Reichtümer der Neuen Welt für sich beanspruchen wollen.
 }
 
 Pirate_descr
 {
-Pirates. These men sail against all flags and live by the Pirate Code (although they're more like guidelines) of the Brethren of the Coast. This doesn't hinder them while selling their loot in English or French colonies such as Port Royal and Tortuga where the governor turns a blind eye. Depending on the situation, pirates might fight 'legitimately' for any of the powers who can give them a letter of marque, but ultimately their prize is the same as English and French privateers - a nice fat Spanish treasure ship.
+Piraten. Diese Männer segeln gegen alle Flaggen und leben nach dem Piratenkodex (obwohl es sich eher um Richtlinien handelt) der Brüder der Küste. Das hindert sie nicht daran, ihre Beute in englischen oder französischen Kolonien wie Port Royal und Tortuga zu verkaufen, wo der Gouverneur ein Auge zudrückt. Je nach Situation kämpfen die Piraten "rechtmäßig" für eine der Mächte, die ihnen einen Kaperbrief ausstellen können, aber letztlich ist ihre Beute dieselbe wie die der englischen und französischen Freibeuter - ein schönes, fettes spanisches Schatzschiff.
 ~
-For any naval patrol, the sight of a pirate flag on the horizon is like throwing bacon to a starving wolf. For the vast majority of pirates, there are only two ends - the gibbet or the hangman's noose.
+Für jede Seepatrouille ist der Anblick einer Piratenflagge am Horizont so, als würde man einem hungrigen Wolf Speck vorwerfen. Für die große Mehrheit der Piraten gibt es nur zwei Enden - den Galgen oder die Schlinge des Henkers.
 }
 
 Hunter_hint
 {
-The attitude of a nation, its citizens and soldiers to you. Good deeds for the country increase your reputation; bad ones may even lead to a bounty placed on the hero's head. That means continuous pursuit both on land and at sea.
+Die Einstellung einer Nation, ihrer Bürger und Soldaten zu Ihnen. Gute Taten für das Land erhöhen Ihr Ansehen, schlechte können sogar dazu führen, dass ein Kopfgeld auf den Helden ausgesetzt wird. Das bedeutet ständige Verfolgung an Land und auf See.
 ~
-The price on your head can be reduced by good deeds in favor of the specific country, or even bribery. With enough effort, a neutral relationship can be restored.
+Das Kopfgeld kann durch gute Taten zu Gunsten des jeweiligen Landes oder sogar durch Bestechung gesenkt werden. Mit genügend Aufwand kann ein neutrales Verhältnis wiederhergestellt werden.
 }
 
-LevelComplexity {Difficulty}
+LevelComplexity {Schwierigkeitsgrad}
 
 LevelComplexity_desc
 {
-This parameter affects the rate of hero's experience gain, progression rate, enemy strength, income, and many other factors.
+Ein grundlegender Einstellungssatz für das Spiel, der die Geschwindigkeit der Charakterentwicklung, die Stärke der Gegner, die Häufigkeit von Ereignissen, das Einkommen und die Ausgaben, die Verfügbarkeit von Fähigkeiten und vieles mehr beeinflusst.
 ~
-Difficulty level varies from 'Easy' to 'Impossible'.
+Der Schwierigkeitsgrad variiert von "Leicht" bis "Unmöglich".
 }
 
-RechargePistolOnLine {Pistol recharging}
+RechargePistolOnLine {Pistole nachladen}
 
 RechargePistolOnLine_desc
 {
-In this mode, pistols can't be reloaded in combat; only when the sword is sheathed.
+In diesem Modus können Pistolen im Kampf nicht nachgeladen werden, sondern nur, wenn das Schwert in die Scheide gesteckt wird.
 ~
-This mode affects all characters in the game.
+Dieser Modus betrifft alle Charaktere im Spiel.
 }
 
-HardcoreGame {HardcoreGame}
+HardcoreGame {Hardcore-Modus}
 
 HardcoreGame_desc
 {
-Not enough adrenaline? You wanna feel like a true corsair and realize the full effect of all your deeds on the world around you? In this mode, saving the game is only possible on sacred ground - in church. You will have to do everything right the first time, without the chance to reload a saved game over and over again. There is no room for error.
+Nicht genug Adrenalin? Du willst dich wie ein echter Korsar fühlen und die volle Wirkung all deiner Taten auf die Welt um dich herum spüren? In diesem Modus ist das Speichern des Spiels nur auf heiligem Boden möglich - in der Kirche. Du musst alles beim ersten Mal richtig machen, ohne die Möglichkeit, ein gespeichertes Spiel immer wieder neu zu laden. Es gibt keinen Raum für Fehler.
 }
 
 ArcadeSailMode_desc
 {
-Speed and dynamics of naval combat. Quick maneuvering, high speeds, and quick cannon reloading - requires a great deal of consideration for your next tactical move.
+Geschwindigkeit und Dynamik des Seekampfes. Schnelles Manövrieren, hohe Geschwindigkeiten und schnelles Nachladen der Kanonen - das erfordert ein hohes Maß an Überlegung für Ihren nächsten taktischen Zug.
 }
 
 EncountersRate_desc
 {
-Frequency of game events, especially the number of ships on the world map.
+Häufigkeit der Spielereignisse, insbesondere die Anzahl der Schiffe auf der Weltkarte.
 }
 
-WorldAlivePause {Nation quests}
+WorldAlivePause {Aufträge von Nationen}
 
 WorldAlivePause_desc
 {
-This mode allows you to go through one of the scenario quest lines for the Nations, but before it ends, the game's "living world" stops the governor-general moves from town to town, cities seizing by other nations, and blocks the opportunity to capture the city to the hero.
+In diesem Modus können Sie eine der Szenario-Questlinien für die Nationen durchspielen, aber bevor sie endet, hält die "lebendige Welt" des Spiels den Generalgouverneur davon ab, von Stadt zu Stadt zu ziehen, Städte von anderen Nationen einzunehmen und dem Helden die Möglichkeit zu versperren, die Stadt einzunehmen.
 ~
-The living world will work only after the completion of the scenario history.
+Die lebendige Welt funktioniert erst nach Abschluss der Szenariohistorie.
 }
 
-Prisoner {Prisoner}
+Prisoner {Gefangener}
 
 Prisoner_desc
 {
-A prisoner is a character who is captured and held on your ship against his will. Any prisoner can be interrogated in the hold of your ship. Most of the time, you can get a ransom for him, and if it's a pirate, recruit him into the crew of the hero. You can imprison the passenger whom you have taken to deliver, when he begins to resent because of the long trip while delivering to his destination. Captains are those who surrender to you during boarding or raised by you while their being on boat at the open sea. The largest amount of the ransom is given by the governor of the same nation as the prisoner, but it fluctuates, as does the opinion of the governors themselves about the value of the prisoner.
-Captive captains can appeal to your hero with various requests. Do not avoid communicating with prisoners: it may bring an unexpected benefit.
+Ein Gefangener ist eine Figur, die sich gegen ihren Willen auf deinem Schiff befindet. Jeder Gefangene kann im Frachtraum des Schiffes verhört werden, und seine Identität kann in Erfahrung gebracht werden. Meistens können Sie ein Lösegeld für ihn erlangen oder ihn, wenn er ein Pirat ist, in die Gesellschaft des Helden aufnehmen. Gefangene sind auch die Kapitäne, die sich Ihnen beim Entern ergeben oder von Ihnen auf den Rettungsbooten auf See aufgegriffen werden. Das höchste Lösegeld wird vom Gouverneur der gleichen Nation wie der Gefangene gezahlt, aber es variiert ebenso wie die Einschätzung des Gouverneurs über den Wert des Gefangenen.
+Gefangene Kapitäne können sich mit verschiedenen Bitten an Ihren Helden wenden. Vermeiden Sie es nicht, mit Gefangenen zu reden: Es könnte einen unerwarteten Vorteil bringen.
 }
 
 shipChoose_hint
 {
-Double-click with the mouse (or press the 'Enter' key) on the image of the companion's ship to begin an exchange when out of battle.
+Doppelklicke (oder drücke die 'Enter'-Taste) auf das Schiffsbild eines Begleiters, um einen Austausch mit seinem Schiff zu starten, wenn sich die Schiffe nicht im Kampf befinden.
 ~
-You can start an exchange by sailing close to a companion ship and pressing the quick command 'Exchange'.
-Can be done in or out of combat.
+Sie können einen Austausch starten, indem Sie in die Nähe eines Begleitschiffes segeln und den Schnellbefehl "Austausch" drücken.
+Kann im oder außerhalb des Kampfes durchgeführt werden.
 }
 
 GoodsCargo_hint
 {
-Cargo on board of the ship: ammunition, goods and implements in the hold.
+Ladung an Bord des Schiffes: Munition, Waren und Ausrüstung im Laderaum.
 ~
-To see the items that do not fit in the allotted window, use the slider on the right side of the list.
+Um die Elemente zu sehen, die nicht in das zugewiesene Fenster passen, verwenden Sie den Schieberegler auf der rechten Seite der Liste.
 ~
-Press the 'Enter' key or double-click on the item in the list to view the description of the product, toss an unwanted amount overboard, or drop a mine.
+Drücken Sie die Eingabetaste oder doppelklicken Sie auf das Element in der Liste, um die Beschreibung des Produkts anzuzeigen, eine unerwünschte Menge über Bord zu werfen oder eine Mine zu legen.
 }
 
-EXP_SLIDE {Experience gain rate}
+EXP_SLIDE {Rate des Erfahrungsgewinns}
 
 EXP_SLIDE_desc
 {
-This setting adjusts the rate, at which the main character and his officers gain experience. The greater the rate, the faster will they acquire new skill points, new levels and abilities.
+Diese Einstellung regelt die Geschwindigkeit, mit der der Hauptcharakter und seine Offiziere Erfahrung sammeln. Je höher die Rate, desto schneller erhalten sie neue Fertigkeitspunkte, neue Stufen und Fähigkeiten.
 }
 
 Partition_hint
 {
-Shares of the crew must be paid no later than on the 1st of every month. The following payments are made:
+Die Anteile der Besatzung müssen spätestens am 1. eines jeden Monats bezahlt werden. Die folgenden Zahlungen werden geleistet:
 ~
-Monthly upkeep - combined wages of the sailors and officers, compensation for the injured, and upkeep for the ship and equipment.
+Monatlicher Unterhalt - Heuer der Matrosen und Offiziere, Entschädigung für Verletzte und Unterhalt für Schiff und Ausrüstung.
 ~
-Loot share - splitting the looted valuables and distributing shares of them between the members of a crew.
+Beuteanteil - Aufteilung der erbeuteten Wertsachen und Verteilung der Anteile unter den Mitgliedern einer Mannschaft.
 ~
-All captured ships and goods are subject to sharing. According to the laws of the Brethren of the Coast, the share of a deceased sailor or officer goes to their relatives and friends.
+Alle erbeuteten Schiffe und Güter werden geteilt. Nach den Gesetzen der Küstenbrüder geht der Anteil eines verstorbenen Seemanns oder Offiziers an dessen Verwandte und Freunde.
 ~
-The shares for the crew members are as follows:
-- sailor - 1 share
-- officer - 10 shares
-- companion - 30 shares
-- captain - 200-650 shares
-In addition, the captain, as the owner of the ships of his squadron, additionally receives 20-120 shares from each ship (depending on class of the vessel), and he also bears all costs associated with the maintenance and possible loss of ships.
-If a captain has a patent, 10% of the loot is paid to the Nation's treasury.
+Die Anteile für die Besatzungsmitglieder sind wie folgt:
+- Matrose - 1 Anteil
+- Offizier - 10 Anteile
+- Begleiter - 30 Anteile
+- Kapitän - 200-650 Anteile
+Darüber hinaus erhält der Kapitän als Eigentümer der Schiffe seiner Flotte von jedem Schiff 20-120 Anteile (je nach Schiffsklasse), und er trägt auch alle Kosten, die mit dem Unterhalt und dem eventuellen Verlust von Schiffen verbunden sind.
+Wenn ein Kapitän ein Patent hat, werden 10 % der Beute an die Staatskasse abgeführt.
 ~
-Delaying the payment for the current month will cause unrest in the crew until the end of the month, whereas payment in advance will increase their morale.
+Ein Aufschub der Zahlung für den laufenden Monat führt zu Unruhe in der Mannschaft bis zum Ende des Monats, während eine Vorauszahlung die Arbeitsmoral erhöht.
 ~
-Delaying a payment for the past month will significantly reduce the morale of the crew and the loyalty of your officers and companions.
+Eine verspätete Zahlung für den vergangenen Monat wird die Moral der Besatzung und die Loyalität Ihrer Offiziere und Kameraden erheblich beeinträchtigen.
 ~
 }
 
 SeaBattleSave_desc
 {
-Saving in sea combat.
-Disabling this option removes the ability to save the game during battles at sea!
+Speichern im Seekampf.
+Wenn Sie diese Option deaktivieren, können Sie das Spiel während der Seeschlacht nicht mehr speichern!
 }
 
 Rains_desc
 {
-Toggle rain and storms on/off. This option affects the stability of the game.
+Schaltet Regen und Sturm ein/aus. Diese Option wirkt sich auf die Stabilität des Spiels aus.
 }
 
 CasualMode_desc
 {
-Classic mode is suitable for players who want to focus on the main character's story. It is a little more difficult than exploration mode and requires more attention and effort, but allows you to fully immerse yourself in the atmosphere created by the authors of the game.
+Der klassische Modus ist für Spieler geeignet, die sich auf die Geschichte der Hauptfigur konzentrieren wollen. Er ist etwas schwieriger als der Erkundungsmodus und erfordert mehr Aufmerksamkeit und Anstrengung, ermöglicht es Ihnen aber, vollständig in die von den Autoren des Spiels geschaffene Atmosphäre einzutauchen.
 ~
-Exploration mode is suitable for beginners, as well as players who want to have more free time to complete various side quests and freeplay. In this mode, ranking restrictions to start the main questlines have been removed, timers are disabled in cases without many options, and time on the global map slows down, depending on the selected difficulty level. Enemies in the main quests become less powerful, and the speed of the main character's ship on the global map increases by 5%.
+Der Erkundungsmodus eignet sich sowohl für Anfänger als auch für Spieler, die mehr Zeit haben möchten, um verschiedene Nebenquests und freies Spiel zu erleben. In diesem Modus wurden die Ranglistenbeschränkungen für den Start der Hauptquests entfernt, die Timer sind in Fällen ohne viele Optionen deaktiviert, und die Zeit auf der globalen Karte verlangsamt sich je nach ausgewähltem Schwierigkeitsgrad. Die Gegner in den Hauptquests werden schwächer und die Geschwindigkeit des Schiffes des Hauptcharakters auf der Weltkarte erhöht sich um 5%.
 }

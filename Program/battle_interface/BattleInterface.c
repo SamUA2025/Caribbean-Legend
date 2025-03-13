@@ -3917,7 +3917,7 @@ void ControlsDesc()
 			}
 			else
 			{
-				BattleInterface.textinfo.(sAttr).text = GetKeyCodeImg("ChrCamCameraRadius");
+				BattleInterface.textinfo.(sAttr).text = GetKeyCodeImg("ShipCamera_Forward");
 				BattleInterface.textinfo.(sAttrDes).text = " - " + GetConvertStr("ChrCamCameraRadius","ControlsNames.txt");
 			}
 			BattleInterface.textinfo.(sAttrB).text = "1" ;

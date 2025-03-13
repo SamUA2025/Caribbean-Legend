@@ -1656,6 +1656,7 @@ void Caleuche_KhaelRoaAfterBattle(string qName) // победили калеуч
 	ChangeCharacterComplexReputation(pchar, "fame", 10);
 	ChangeCharacterComplexReputation(pchar, "authority", 20);
 	pchar.questTemp.KhaelRoa = "true"; // атрибут для Натаниэля на LSC
+	if(rand(9) == 5) GiveItem2Character(pchar, "hat7");
 }
 
 void Caleuche_KhaelroaAbordage(string qName) // 

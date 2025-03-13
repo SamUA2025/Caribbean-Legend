@@ -1,56 +1,56 @@
 characterUtilite_1
 {
-@<_Money> Pesos Earned
+@<_Money> Pesos erhalten
 }
 
 characterUtilite_2
 {
-@<abs(_Money)> Pesos Spent
+@<abs(_Money)> Pesos ausgegeben
 }
 
 characterUtilite_3
 {
-New Item: ~
+Neues Item: ~
 }
 
 characterUtilite_4
 {
-@<n> Doubloons Earned
+@<n> Dublonen erhalten
 }
 
 characterUtilite_5
 {
-Item Lost: ~
+Item verloren: ~
 }
 
 characterUtilite_6
 {
-~ noticed that @<LanguageConvertString(idLngFile, arItem.name)> has lost its powers
+~ bemerkt, dass @<LanguageConvertString(idLngFile, arItem.name)> seine Kraft verloren hat
 }
 
 characterUtilite_7
 {
-Honor Increased
+Ehre erhöht
 }
 
 characterUtilite_8
 {
-Honor Decreased
+Ehre gesunken
 }
 
 characterUtilite_9
 {
-@<_Dublons> Doubloons Spent
+@<_Dublons> Dublonen ausgegeben
 }
 
 characterUtilite_10
 {
-A landing party of @<officer.Ship.Name> has @<compCrew> soldiers in it
+Ein Landungstrupp von @<Offizier.Schiff.Name> hat @<compCrew> Soldaten in sich
 }
 
 characterUtilite_11
 {
-Terms of your loan are expired
+Die Laufzeit Ihres Kredits ist abgelaufen
 }
 
 characterUtilite_12
@@ -60,10 +60,10 @@ Atlas Update: @<LanguageConvertString(idLngFile, arItem.name)>
 
 characterUtilite_13
 {
-Indians disapprove (
+Inder missbilligen das (
 }
 
 characterUtilite_14
 {
-Indians approve (
+Indianer akzeptieren (
 }

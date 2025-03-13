@@ -1,0 +1,3987 @@
+info
+{
+	Файл описания предметов в ККС
+	Версия 0.0.1 от 21.11.2010 (ред. Metazot), belamour ред. кирас и амулетов 29.09.2020
+	belamour обновлено 20.09.2021 для legendary edition
+	Порядок размещения записей для лучшего ориентирования по тексту:
+	1. Амуниция
+		1.1 Холодное оружие
+		1.2 Огнестрельное оружие
+		1.3 Доспехи, одежда
+		1.4 Оптические приборы
+		1.5 Навигационные приборы
+		1.6 Обереги
+		1.7 Талисманы
+		1.8 Амулеты
+	2. МОНЕТЫ, ДРАГОЦЕННОСТИ
+		2.1 Валюта, сундуки
+		2.2 Камни, металлы
+		2.3 Ювелирные изделия
+	3. БУМАГИ
+		3.1 Патенты
+		3.2 Лицензии
+		3.3 Карты
+		3.4 Письма
+		3.5 Рецепты
+	4. ИНВЕНТАРЬ
+		4.1 Инструменты
+		4.2 Снадобья, зелья, травы
+		4.3 Боекомплект
+		4.4 Обычные предметы
+		4.5 Квестовые предметы
+	5. УТИЛЬ
+}
+
+
+new_string	{
+
+}
+
+Potion parameters{Efecto}
+health value{PV}
+weapon blade parameters{Daño: #f.1Attack# Balance: #f.1Balance#}
+weapon blade type {Tipo: #sFencingTypeName#}
+weapon gun parameters{Daño: #ddmg_min# - #ddmg_max#}
+weapon gun parameters equipped{Daño: #ddmg_min# - #ddmg_max#    Tiempo de recarga #dchargespeed# seg.    Precisión #daccuracy#%}
+mushket parameters{Daño: #ddmg_min# - #ddmg_max#}
+mushket parameters equipped{Daño: #ddmgmin# - #ddmgmax#    Tiempo de recarga #dchargespeed# seg.    Precisión #daccuracy#%}
+
+youve_got {Has encontrado: }
+used_item {Has usado: }
+used_itemNotif {Has perdido un: }
+
+
+;====================================================================================================================================
+;=========================================================================================================================== АМУНИЦИЯ
+;====================================================================================================================================	
+
+; ==================================================================================================================== ХОЛОДНОЕ ОРУЖИЕ
+
+itmname_unarmed	{Desarmado}
+itmdescr_unarmed
+{
+Si no tienes armas, al menos podrás golpear a tu oponente en la cara, aunque solo sea una vez...
+}
+
+itmname_rabble	{Atizador}
+itmdescr_rabble
+{
+Es un atizador de hierro forjado de alguna chimenea. Puede considerarse un arma, si el enemigo se deja golpear por detrás en la cabeza.
+}
+
+itmname_slave_01	{Arpón}
+itmdescr_slave_01
+{
+A pesar de ser un simple arpón de ballenero, solo se necesita un golpe para acabar con una persona si lo haces con precisión. Si el arpón se atasca, puedes sacarlo del cadáver extirpándolo. 
+}
+
+itmname_slave_02	{Machete}
+itmdescr_slave_02
+{
+Es un cuchillo largo de las colonias hecho de un acero de muy baja calidad. Se utiliza para cortar caña de azúcar, vides y como arma al uso.
+}
+
+itmname_blade_01	{Naab'Te}
+itmdescr_blade_01
+{
+Es una lanza corta de una mano usada por los indios de la tribu Itza, cuenta con una cruz y una punta de acero hecha con los restos de una alabarda ganada como trofeo.
+}
+
+itmname_blade_02	{Maza de guerra}
+itmdescr_blade_02
+{
+Es una maza Itza. Su forma permite concentrar la fuerza en un solo punto consiguiendo perforar cualquier coraza de acero con su punta.
+}
+
+itmname_blade_03	{Stocco}
+itmdescr_blade_03
+{
+Es un estoque de estilo italiano. La cuchilla Stocco de tres filos sin doblar es ideal para ataques de perforación y su guarda en forma de garras de cangrejo permite atrapar el arma del oponente. 
+}
+
+itmname_blade_04	{Grossmesser}
+itmdescr_blade_04
+{
+Es una hoja larga y fiable muy fácil de usar, popular en Europa Central entre las milicias urbanas y los mercenarios de modestos recursos.
+}
+
+itmname_blade_05	{Sable}
+itmdescr_blade_05
+{
+El mejor amigo de un marinero cuando aborda o repele malandrines. Su hoja curvada y su ancho guardamano permiten realizar ataques con arma blanca y cortante, pero su corto alcance y su filo único limitan su utilidad fuera de los abarrotados confines del combate a bordo.
+}
+
+itmname_blade_06	{Schiavona}
+itmdescr_blade_06
+{
+Es una espada legendaria, manejada por los guardias de Malta y Venecia. Su hoja de doble filo es perfecta para perforar y cortar. A su guarda se le llama 'cuna' por la seguridad que proporciona a la mano del dueño.
+}
+
+itmname_blade_07	{Ritterschwert}
+itmdescr_blade_07
+{
+Una espada arcaica de la caballería con armadura. Su pesada hoja puede cortar casi cualquier armadura. Sin embargo, su peso y equilibrio la hacen inadecuada para el combate a pie.
+}
+
+itmname_blade_08	{Bilbo}
+itmdescr_blade_08
+{
+Es un sable español con una hoja bastante ancha y una guarda en forma de copa. Este sable es muy utilizado por los marineros españoles de 'La Armada'.
+}
+
+itmname_blade_09	{Cazoleta}
+itmdescr_blade_09
+{
+Es una espada ligera con una cómoda guarda en forma de copa, que se ha convertido en parte del atuendo de los caballeros españoles. Sin ella, no se permite testificar o interponer denuncias ante los tribunales.
+}
+
+itmname_blade_10	{El Ahorcado}
+itmdescr_blade_10
+{
+Es un sable naval llamado 'El Ahorcado' por su gancho, que tiene como función asegurar el arma al cinturón del portador mientras escala los mástiles. Tener un 'Ahorcado' y convertirse en uno es la suerte de la mayoría de los piratas.
+}
+
+itmname_blade_11	{Cuchilla de abordaje}
+itmdescr_blade_11
+{
+Un tipo de espada corta similar a un alfanje hecha para 'colgar' del cinturón de soldados, exploradores, artilleros y otras tropas de tierra que necesitan un arma secundaria.
+}
+
+itmname_blade_12	{Sable corto}
+itmdescr_blade_12
+{
+Este sable corto es un arma cómoda y compacta para equipos de infantería y artilleros. Es un poco más largo que un cuchillo pero más corto que un sable. Eso le permite realizar estocadas y golpes en la conmoción del abordaje y en espacios abiertos.
+}
+
+itmname_blade_13	{Espada de oficial}
+itmdescr_blade_13
+{
+Esta arma es bastante popular entre los oficiales de la marina, no solo por su aspecto, sino también por ser una espada de combate eficaz. Puede ser muy útil en manos fuertes y experimentadas. Sin embargo, es un poco pesada para los duelos.
+}
+
+itmname_blade_14	{Espada valona}
+itmdescr_blade_14
+{
+Una espada de combate, popular entre los guardias del Viejo Mundo. Requiere más agilidad y fuerza que habilidad manual. Sin embargo, puede cortar fácilmente el antebrazo de cualquier individuo en los duelos.
+}
+
+itmname_blade_15	{Marinera}
+itmdescr_blade_15
+{
+Un estoque naval con una hoja flexible, adecuada tanto para estocadas como para golpes cortantes. Pese a su guarda simplificada, es lo suficientemente sólida como para resistir golpes cortantes poderosos.
+}
+
+itmname_blade_16	{Espada corta}
+itmdescr_blade_16
+{
+Una espada acortada con una guarda plana elegante para usar con traje. Apareció recientemente bajo la influencia de la escuela francesa de esgrima. Demasiado ligera para cortar, pero permite atacar con una rapidez fulminante.
+}
+
+itmname_blade_17	{Bretta}
+itmdescr_blade_17
+{
+El mango acortado de este famoso estoque español genera una preferencia por las estocadas, pero también es adecuada para los golpes cortantes. Su guarda en forma de campana con los bordes curvos protege la mano con seguridad de los ataques enemigos.
+}
+
+itmname_blade_18	{Pappenheimer}
+itmdescr_blade_18
+{
+Una espada de caballería con una guarda característica bien desarrollada. La famosa arma del coracero Gottfried-Henrich, conde de Pappenheim. Esta fama la hizo popular entre los jóvenes nobles que aspiraban a una carrera en la caballería.
+}
+
+itmname_blade_19	{Sable Naval}
+itmdescr_blade_19
+{
+Es el sable que portan los oficiales navales. Es igualmente bueno para desfiles, para cortar aparejos enredados y para asestar golpes desde la posición más inesperada.
+}
+
+itmname_blade_20	{Madonna}
+itmdescr_blade_20
+{
+Es un amenazador sable de los húsares húngaros. Esta hoja ha aparecido recientemente en el campo de batalla de Europa occidental, pero ya se ha ganado un alto respeto. Está claro que tiene un futuro brillante.
+}
+
+itmname_blade_21	{Espada escocesa}
+itmdescr_blade_21
+{
+Esta espada tradicional escocesa es el arma preferida por la élite del clan escocés Baskethilted. Puedes permitirte el lujo de ser un montañés feroz y violento cuando la mano está protegida con seguridad y la espada corta de verdad.
+}
+
+itmname_blade_22	{La ira del profeta}
+itmdescr_blade_22
+{
+Es un viejo sable casi recto y ligero con un mango curvo, adecuado tanto para cortar como para perforar cotas de malla. Su hoja afilada se desliza fácilmente entre las placas de la armadura como entre las costillas.
+}
+
+itmname_blade_23	{Cimitarra}
+itmdescr_blade_23
+{
+Es una hoja con doble curvatura exquisitamente decorada, destinada a las escaramuzas rápidas. Su forma posibilita realizar golpes cortantes increíblemente potentes. Hay grabados arcaicos escondidos en el pomo de este sable que repelen las fuerzas impías.
+}
+
+itmname_blade_24	{Khanda}
+itmdescr_blade_24
+{
+El arma sagrada de los indomables indios Sikhs. El acero de excelente calidad permite cortar las espadas enemigas. La empuñadura es algo inusual para los europeos, aunque permite golpear con el pomo.
+}
+
+itmname_blade_25	{Estoque de Flamberge}
+itmdescr_blade_25
+{
+Este estoque con empuñadura de copa de estilo español y hoja ondulada es un arma muy peligrosa, tanto para el adversario como para su portador. Se dice que incluso las heridas leves causadas con esta hoja se curan muy lentamente. Los dueños de este tipo de armas suelen tener una reputación... desagradable.
+}
+
+itmname_blade_26	{Asoleda}
+itmdescr_blade_26
+{
+Un largo florete de duelo con una hoja ligera y muy estrecha, fabricado en Verdún. La hoja imposibilita los golpes cortantes, pero su longitud mantiene a los enemigos a distancia.
+}
+
+itmname_blade_27	{Estoque con empuñadura de pluma}
+itmdescr_blade_27
+{
+Este estoque recibe el nombre de 'Pluma sajona' por su legendario equilibrio, que permite al portador asestar golpes cortantes y penetrantes con facilidad. La hoja obedece al menor movimiento de la mano. La intrincada guarda proporciona una protección decente para la mano.
+}
+
+itmname_blade_28	{Catana}
+itmdescr_blade_28
+{
+Es una espada japonesa con una hoja de acero de alta calidad y un largo mango que permite su manejo con una o ambas manos.
+Es una reliquia familiar samurái.
+¿Cómo habrá aparecido por el Caribe?
+}
+
+itmname_blade_29	{Storta}
+itmdescr_blade_29
+{
+Está basado en el sable de abordaje de Agostino Barbarigo, el legendario comandante naval veneciano del siglo pasado que nunca fue derrotado.
+}
+
+itmname_blade_30	{Klewang Naval}
+itmdescr_blade_30
+{
+Un klewang encargado por el capitán de la Compañía de las Indias Orientales. El creador de esta hoja logró combinar las ventajas de varias armas, evitando la mayoría de sus defectos.
+}
+
+itmname_blade_31	{Narval}
+itmdescr_blade_31
+{
+Una hermosa espada de abordaje con empuñadura de cuerno de narval y una guarda en forma de concha. La hoja está hecha de acero de excelente calidad y está perfectamente equilibrada.
+}
+
+itmname_blade_32	{Thanatos}
+itmdescr_blade_32
+{
+Es la espada de un viejo caballero de la Santa Iglesia. No tengas prisa en colgarla en la pared como una antigüedad: Su flamante hoja de acero ha conservado su filo y ansía aplastar enemigos en una sangrienta batalla.
+}
+
+itmname_blade_33	{Espada de la Guardia}
+itmdescr_blade_33
+{
+Una antigua espada de caballero de dos manos.
+}
+
+itmname_topor_01	{Macuahuitl}
+itmdescr_topor_01
+{
+Es una pesada y terrorífica maza azteca, hecha de madera de sándalo con cristales de obsidiana incrustados a ambos lados. Los conquistadores fueron testigos de lo que eran capaces estas armas, como cortar las cabezas de los caballos españoles de un solo golpe.
+}
+
+itmname_topor_02	{Hacha de guerra}
+itmdescr_topor_02
+{
+Esta hacha 'barbuda' ha demostrado su fiabilidad y comodidad durante siglos tanto en la batalla como en la carpintería. El saliente protege firmemente la mano del dueño con un agarre corto.
+}
+
+itmname_topor_03	{Goedendag}
+itmdescr_topor_03
+{
+Es un arma simple pero amenazante del holandés Geuzen. Solo verla es suficiente para hacer huir al enemigo.
+}
+
+itmname_topor_04	{Hacha}
+itmdescr_topor_04
+{
+Manejar esta arma requiere de una gran fuerza, pero vale la pena. Su hoja afilada asesta terribles golpes cortantes y su punta puede perforar cualquier armadura. El mango de acero es irrompible para las armas enemigas.
+}
+
+itmname_topor_05	{Tomahawk}
+itmdescr_topor_05
+{
+Un hacha estrecha con un pico en la cabeza, mortal en combate cuerpo a cuerpo e indispensable en las expediciones. Tiene una gran demanda entre los colonos, aunque originalmente fue creada específicamente para el comercio con los nativos.
+}
+
+itmname_topor_06	{Buitre}
+itmdescr_topor_06
+{
+Es un hacha de abordaje de diseño sólido y lujoso. Es la mejor opción para un duro y contundente combate. 
+(+5 a la destreza con 'Armas pesadas')
+}
+itmname_blade_36	{Espada de la Orden de Malta}
+itmdescr_blade_36
+{
+Es una espada ceremonial de la Orden de Malta teñida con la sangre de los enemigos. La hoja es maniobrable y ligera a pesar de su ancho y aparente peso. La empuñadura permite varios agarres, adecuados para ambas manos, derecha e izquierda.
+}
+
+itmname_knife_01	{Daga 'La Garra del jefe'}
+itmdescr_knife_01
+{
+Parece una daga ordinaria, aunque Fadey el moscovita afirma que está encantada por los chamanes indios y posee cualidades ocultas. 
+¿Pero cuáles?
+}
+
+itmname_knife_02 {María}
+itmdescr_knife_02
+{
+Una bella daga que perteneció a Diego de Montoya. Es evidente que el arma fue cuidadosamente mantenida, como si tuviera algún valor sentimental para su antiguo dueño. 
+(+15 a la destreza con 'Armas ligeras', bonificación al daño de 'Finta y contrataque')
+}
+
+itmname_knife_03 {Daga ancestral}
+itmdescr_knife_03
+{
+El arma ancestral de la familia de Monper, también conocida como 'palillo de dientes'. Una pieza rica que podría venderse muy bien en tiempos de necesidad. ¿Para qué más servirían los emblemas familiares?
+}
+
+itmname_khopesh1 {Khopesh}
+itmdescr_khopesh1
+{
+Un arma sagrada imbuida de un poder ancestral, que exige sacrificio.
+(+5 habilidad Armas Medianas)
+}
+
+itmname_khopesh2 {Khopesh de Aruba}
+itmdescr_khopesh2
+{
+Se supone que no debes ver esto.
+(+15 habilidad Armas Medianas)
+}
+
+itmname_khopesh3 {Khopesh}
+itmdescr_khopesh3
+{
+Un arma ritual de tiempos en que los dioses aún vivían. Esta arma exige sangre y no sería adecuada para un ilustre capitán.
+(+10 habilidad Armas Medianas)
+}
+
+itmname_machete2 {Machete del conquistador}
+itmdescr_machete2
+{
+Un machete de calidad hecho de una aleación desconocida, que no avergonzaría a su portador en la sociedad civilizada ni en una antigua pirámide.
+(+5 Habilidad con armas medias)
+}
+
+itmname_topor_07 {Hacha persa}
+itmdescr_topor_07
+{
+Un hacha que incluso un miliciano urbano no entrenado podría usar. Con solo un golpe de esta cosa es suficiente, no se puede bloquear el golpe de este hierro.
+}
+
+itmname_pirate_cutlass {Sable de Blaze}
+itmdescr_pirate_cutlass
+{
+Una verdadera leyenda, una de las insignias más respetadas entre los piratas del Nuevo Mundo. Simplemente un arma magnífica para un capitán.
+(+5 Habilidad con armas medias)
+}
+
+itmname_blade_38 {Espada de duelo}
+itmdescr_blade_38
+{
+Exquisitamente elaborado para duelistas experimentados, aunque quizá fuera de lugar en ciertos entornos.
+(+5 to Light Weapons skill)
+}
+
+itmname_blade_39 {Estoque bretón}
+itmdescr_blade_39
+{
+Un excelente estoque, claramente hecho a medida para un experimentado bretón. En otras palabras, el arma perfecta para el asesinato legal. 
+(+10 Habilidad Armas ligeras)
+}
+
+itmname_blade_40 {Estoque italiano}
+itmdescr_blade_40
+{
+Muy adornado y pesado, este estoque sirve más como símbolo de estatus que como arma de guerra.
+(+10 a la habilidad Liderazgo)
+}
+
+itmname_blade_41 {Jian}
+itmdescr_blade_41
+{
+Una reliquia de una civilización lejana, trágicamente perdida en mares extranjeros. Su diseño único permite dominar todos los estilos de espadachín, obteniendo daño adicional de tu habilidad más avanzada con armas blancas.
+}
+
+itmname_blade_42 {Espada del Ejército}
+itmdescr_blade_42
+{
+El arma estándar de un soldado. Requiere un entrenamiento mínimo para manejarla con destreza. 
+(+5 a la habilidad Armas pesadas)
+}
+
+itmname_saber {Sable de caballería}
+itmdescr_saber
+{
+Un símbolo de valor y patriotismo, forjado a través de innumerables batallas.
+(+5 a la habilidad Armas Medianas)
+}
+
+itmname_q_blade_10	{El Ahorcado de Jurgen Schmidt}
+itmdescr_q_blade_10
+{
+Alfanje naval forjado por el maestro Jurgen Schmidt.
+La hoja es de un excelente acero y está perfectamente equilibrada.
+(+10 a la destreza con 'Armas medias')
+}
+
+itmname_q_blade_13	{Espada de oficial de Jürgen Schmidt}
+itmdescr_q_blade_13
+{
+Arma hecha para oficiales creada por el Maestro Jürgen Schmidt.
+La hoja está forjada de un acero excelente y está perfectamente equilibrada.
+(+10 a la destreza con 'Armas pesadas')
+}
+
+itmname_q_blade_16	{Espada corta de Jürgen Schmidt}
+itmdescr_q_blade_16
+{
+Es una pequeña espada hecha por el Maestro Jürgen Schmidt.
+La hoja está forjada de un acero excelente y está perfectamente equilibrada.
+(+10 a la destreza con 'Armas ligeras')
+}
+
+itmname_q_blade_18	{Pappenheimer de Jürgen Schmidt}
+itmdescr_q_blade_18
+{
+Arma creada por el Maestro Jürgen Schmidt.
+La hoja está forjada de un acero excelente y está perfectamente equilibrada.
+(+12 a la destreza con 'Armas ligeras')
+}
+
+itmname_q_blade_19	{Sable de Jürgen Schmidt}
+itmdescr_q_blade_19
+{
+Sable naval hecho por el Maestro Jürgen Schmidt.
+La hoja está forjada de un acero excelente y está perfectamente equilibrada.
+(+12 a la destreza con 'Armas medias')
+}
+
+itmname_q_blade_21	{Espada escocesa de Jürgen Schmidt}
+itmdescr_q_blade_21
+{
+Espada de las tierras altas hecha por el maestro Jürgen Schmidt.
+La hoja está forjada con un acero excelente y está perfectamente equilibrada.
+(+12 a la destreza con 'Armas pesadas')
+}
+
+itmname_shamshir	{Shamshir}
+itmdescr_shamshir
+{
+Un shamshir persa destinado a la batalla a caballo, verdadera encarnación de las duras guerras en el desierto. Combina la eficacia del corte y la sencillez del tajo. La mejor elección para quienes gustan de los tajos circulares.
+}
+
+itmname_lacrima_patris {Lacrima Patris}
+itmdescr_lacrima_patris
+{
+Una espada ricamente adornada, a pesar de su aspecto ceremonial, posee excelentes cualidades para el combate. En manos de un capitán piadoso, blandiendo la justicia contra malhechores y paganos, se vuelve cada vez más afilada, obligando a los cañones de la "Santa Misericordia" a disparar aún más lejos.
+}
+
+lacrima_patris_parameters{Aumento del alcance del cañón: #f.1RangeBonus#%}
+
+; ==================================================================================================================== ОГНЕСТРЕЛЬНОЕ ОРУЖИЕ
+
+
+itmname_pistol1 {Pistola común}
+itmdescr_pistol1
+{
+Es una pistola militar con un pedernal ordinario y un alambre para llevarla en el cinturón. Es fácil de manejar y por eso es ampliamente utilizada, usa balas de plomo como munición.
+}
+
+itmname_pistol2 {Revólver}
+itmdescr_pistol2
+{
+Este primer revólver es un arma de fuego con tres cilindros. Un arma muy difícil de producir, rara y costosa. Utiliza saquillos de metralla para disparar y requiere la habilidad 'Pistolero'.
+}
+
+itmname_pistol3 {Trabuco de mano}
+itmdescr_pistol3
+{
+Es un arma de abordaje. No muy eficaz contra enemigos ágiles o con buena armadura. Una descarga contra una muchedumbre de rufianes puede ser devastadora. Utiliza saquillos de metralla como munición.
+}
+
+itmname_pistol4 {Pistola de cuatro cañones}
+itmdescr_pistol4
+{
+Es una construcción única: cuatro pistolas en una. El tiempo de recarga es largo, pero vale la pena. Necesita balas de plomo para disparar y requiere la habilidad 'Pistolero'.
+}
+
+itmname_pistol5 {Pistola de duelo}
+itmdescr_pistol5
+{
+Es un raro ejemplar de pistola realizada por un gran maestro. Deja pocas posibilidades al enemigo, pero la impresión disminuye por el largo tiempo de recarga. Requiere balas de plomo como munición.
+}
+
+itmname_pistol6 {Pistola de dos cañones}
+itmdescr_pistol6
+{
+Es una pistola de dos cañones, el sueño de aquellos que prefieren estar seguros ante cualquier situación con un segundo disparo siempre a mano y listo. Necesita balas de plomo como munición y requiere de la habilidad 'Pistolero'.
+}
+
+itmname_pistol7 {Revólver Colt}
+itmdescr_pistol7
+{
+Una extraña pistola con seis cilindros giratorios que pueden cargarse y dispararse en secuencia. El cañón lleva la inscripción "Patent Colt Arms Co. Paterson, N.J., 1841'.
+Imagina la cara de tu enemigo cuando saques a *este* chico malo. Requiere la ventaja Escaramuzador.
+}
+
+itmname_pistol8 {Trabuco}
+itmdescr_pistol8
+{
+Es un trabuco naval único que se puede disparar con un brazo. Utiliza flechas de pernos que penetran fácilmente cualquier armadura. Necesita saquillos o proyectiles de metralla.
+}
+
+itmname_pistol9 {Pistola de cargas superpuestas}
+itmdescr_pistol9
+{
+Es una pistola con un cañón sajón superpuesto, capaz de disparar dos balas sucesivamente. Es un arma muy rara que tarda mucho tiempo en recargar, pero que no requiere habilidades especiales.
+}
+
+itmname_pistol10 {Águila dorada}
+itmdescr_pistol10
+{
+Dios ama la trinidad, y esta pistola de excelente calidad es la mejor prueba de ello. Una elección confiable para un soldado profesional o simplemente un buen tirador. Requiere la habilidad 'Pistolero'.
+}
+
+itmname_pistol11 {La Bestia}
+itmdescr_pistol11
+{
+En algún momento, un hacha y un mosquete cometieron un pecado y nació esta inútil bestia. Sin embargo, es mejor no acercarse a una persona armada con ella. 
+(+20 a la destreza con 'Armas pesadas', 2% de probabilidad de matar al instante)
+}
+
+itmname_pistol12 {Pistola recortada}
+itmdescr_pistol12
+{
+Una pistola de cuatro cañones recortada. Puede que no dispare con tanta precisión, pero es adecuada para combate cuerpo a cuerpo y se recarga rápidamente. Excelente sustituto para una pistola de cuatro cañones normal. Requiere la habilidad 'Pistolero'.
+}
+
+itmname_pistol13 {Revólver de chispa}
+itmdescr_pistol13
+{
+Una obra maestra fabricada hace más de 30 años para un importante comandante militar, con excepcionales capacidades multidisparo. Requiere la habilidad Escaramuzador.
+(+1 Autoridad)
+}
+
+itmname_pistol14 {Pistola de duelo de dos cañones}
+itmdescr_pistol14
+{
+Una obra maestra del diseño letal: cara, mortal y totalmente impracticable. Se recomienda el uso de un probador de pólvora. 9% de probabilidad básica de Tiro Crítico.
+Requiere la pericia Escaramuza.
+}
+
+itmname_mortairgun {Mortero portátil}
+itmdescr_mortairgun
+{
+Un lanzagranadas portátil, el favorito de los granaderos y las tropas de abordaje. Requiere cierta valentía para manejarlo. Es un excelente ayudante para atacar grupos pequeños de enemigos. Es más práctico para emboscadas. Se utilizan petardos o granadas al disparar.
+}
+
+itmname_mushket1 {Mosquete de mecha}
+itmdescr_mushket1
+{
+Este poderoso y pesado mosquete es típico de los mosqueteros de infantería. Necesita balas de plomo para disparar y requiere de la habilidad 'Mosquetero'.
+}
+
+itmname_mushket2 {Carabina naval}
+itmdescr_mushket2
+{
+Es una versión abreviada del mosquete inglés moderno, equipado con una bayoneta. Lo utiliza la infantería colonial y los infantes de marina. Necesita balas de plomo para disparar y requiere de la habilidad 'Mosquetero'.
+}
+
+itmname_mushket3 {Arcabuz}
+itmdescr_mushket3
+{
+Es un arma que se usa en los abordajes y actualmente se considera obsoleta. Sin embargo, los enemigos aún pueden resultar gravemente heridos. Necesita saquillos de metralla para disparar y requiere de la habilidad 'Mosquetero'.
+}
+
+itmname_mushket5 {Fusil de tiro al blanco}
+itmdescr_mushket5
+{
+Es un mosquete con cañón de rifle y una mirilla dióptrica. Es el arma ideal para cazar fieras o a tus enemigos. Necesita balas de plomo para disparar y requiere de la habilidad 'Mosquetero'.
+}
+
+itmname_mushket6 {Mosquete de torre}
+itmdescr_mushket6
+{
+Una extraña arma portuguesa. Tiene un tambor giratorio con cinco cámaras y un cañón para disparar. Utiliza saquillos o proyectiles de metralla y requiere de la habilidad 'Pistolero'.
+}
+
+itmname_mushket7 {Mosquete de calidad}
+itmdescr_mushket7
+{
+Un mosquete de infantería. Un artículo caro y de alta calidad, claramente hecho para oficiales. Requiere la habilidad 'Mosquetero'.
+}
+
+itmname_mushket8 {Rifle de cuatro cañones}
+itmdescr_mushket8
+{
+Fabricada a mano con un innovador sistema de desmontaje que permite convertirla rápidamente en pistola. Requiere la cualificación Escaramuzador para usar su mecanismo de recarga rápida.
+}
+
+itmname_m8_barrel {Culata y cañón}
+itmdescr_m8_barrel
+{
+La culata y el cañón de un rifle de cuatro cañones desmontado.
+}
+
+itmname_grape_mushket {Mortero de mano}
+itmdescr_grape_mushket
+{
+Un mortero de mano. Es un excelente ayudante para atacar grupos pequeños de enemigos. Es más práctico para emboscadas. Se utilizan petardos o granadas al disparar. Requiere la habilidad 'Mosquetero'.
+}
+
+itmname_Mushket2x2 {Rifle de carga lateral}
+itmdescr_Mushket2x2
+{
+Esta hermosa versión de la carabina de carga lateral es el arma que se usa tradicionalmente para la caza mayor. Las balas disparadas por sus cañones estriados darán con seguridad a cualquier blanco. Usa balas de plomo como munición y requiere de la habilidad 'Pistolero'.
+} 
+
+itmname_howdah {Howdah}
+itmdescr_howdah
+{
+Es una pistola de doble cañón y gran calibre, la mejor compañera del cazador en la selva y la jungla. Dispara con fiabilidad a jabalíes, tigres y nativos agresivos. Utiliza pólvora y bolas de plomo para disparar y requiere de la habilidad 'Pistolero'.
+} 
+
+; ==================================================================================================================== ДОСПЕХИ
+
+itmname_nocirass {Sin coraza}
+itmdescr_nocirass
+{
+Cuando se usa una armadura durante mucho tiempo, la energía disminuye rápidamente. Cuando no sea necesaria es mejor quitársela y beber una taza de café caliente con canela o algo más fuerte.
+}
+
+itmname_cirass1 {Coraza de asedio}
+itmdescr_cirass1
+{
+Armadura de asedio de infantería. Es una excelente protección, pero muy pesada. 
+~
+Reduce el daño recibido un 35%.
+80% de probabilidad de evitar un golpe crítico.
+(-2 Reacción, -1 Aguante, -5 Sigilo)
+}
+
+itmname_cirass2 {Coraza de Ritter}
+itmdescr_cirass2
+{
+Coraza de la caballería pesada. Cuenta con una protección decente, pero viene con un coste de velocidad y agilidad.
+~
+Reduce el daño recibido un 25%.
+70% de probabilidad de evitar un golpe crítico.
+(-1 Reacción, -1 Aguante, -10 Sigilo)
+}
+
+itmname_cirass3 {Coraza de desfile}
+itmdescr_cirass3
+{
+Coraza ligera de buen acero. Obstaculiza los movimientos y solo puede repeler algunos palazos y golpes fáciles.
+~
+Reduce el daño recibido un 20%.
+50% de probabilidad de evitar un golpe crítico.
+(-15 Sigilo, +15 Carisma)
+}
+
+itmname_cirass4 {Coraza Milanesa}
+itmdescr_cirass4
+{
+Es una rara armadura de la más alta calidad. Es increíblemente ligera y ofrece una excelente defensa contra balas y hojas.
+~
+Reduce el daño recibido un 30%.
+100% de probabilidad de evitar un golpe crítico.
+(-1 Aguante, -20 Sigilo, +10 Carisma)
+}
+
+itmname_cirass5 {Faja de cuero}
+itmdescr_cirass5
+{
+Es una faja hecha de cuero grueso que protege los órganos vitales. Posee una pobre defensa contra balas o espadas, pero es mejor que nada.
+~
+Reduce el daño recibido por espadas un 5%.
+}
+
+itmname_cirass6 {Brigantina}
+itmdescr_cirass6
+{
+Es el chaleco de los duelistas profesionales que lo llevaban debajo de la ropa. Proporciona cierta defensa contra golpes y metralla.
+~
+Reduce el daño recibido por espadas un 10% y por proyectiles un 5%.
+50% de probabilidad de evitar un golpe crítico.
+(-1 Intuición, -5 Sigilo, -5 Carisma)
+}
+
+itmname_cirass7 {Brigante}
+itmdescr_cirass7
+{ 
+Es un traje de cuero con placas de metal que protege con finura, pero el peso no puede ser ignorado.
+~
+Reduce el daño recibido por espadas un 20% y por proyectiles un 10%.
+60% de probabilidad de evitar un golpe crítico.
+(-1 Intuición, -10 Carisma)
+}
+
+itmname_cirass8 {Armadura de mimbre}
+itmdescr_cirass8
+{
+Es una coraza única de cuero y metal, que protege el torso, incluyendo los lados y la parte superior. Sirve para el sigilo, gracias al montón de hebillas.
+~
+Reduce todo el daño recibido un 20%.
+70% de probabilidad de evitar un golpe crítico.
+(+15 Sigilo, -15 Liderazgo)
+}
+
+itmname_cirass9 {Brigandine reforzado}
+itmdescr_cirass9
+{
+La armadura de un mercenario profesional y la mejor elección de un duelista. Excepcionalmente bien fabricada y ajustada, permite un movimiento sin restricciones y una esgrima audaz.
+Reduce todo el daño recibido en un 25%.
+70% de probabilidad de evitar un golpe crítico.
+Salva de ser aturdido en combate.
+(+5 a todas las habilidades con armas, +5% de probabilidad de golpe crítico)
+}
+
+itmname_cirass10 {Peto Ironside}
+itmdescr_cirass10
+{
+Un conjunto maltrecho e incompleto de equipo de caballería parlamentaria. Ofrece una protección mínima, pero los numerosos bolsillos y cartucheras facilitan enormemente el disparo y la recarga.
+~
+Reduce todo el daño recibido un 15%.
+50% de probabilidad de evitar un golpe crítico.
+Protege las pistolas de los estallidos. Recarga un 15% más rápida. 5% de probabilidad base de Tiro Crítico.
+(- 1 Reacción)
+}
+
+itmname_suit1 {Uniforme francés}
+itmdescr_suit1
+{
+Es el uniforme de oficial de la marina real.
+~
+Reduce el daño recibido por espadas un 10%.
+30% de probabilidad de evitar un golpe crítico.
+(+1 Autoridad, -25 Sigilo, +25 Carisma)
+}
+
+itmname_suit2 {Uniforme inglés}
+itmdescr_suit2
+{
+Un uniforme de oficial de la Guardia Negra, un regimiento de élite de los Highlanders escoceses al servicio de la Corona inglesa.
+(-1 Reacción, -15 Sigilo, +15 Liderazgo)
+}
+
+itmname_suit3 {Uniforme español}
+itmdescr_suit3
+{
+Es el uniforme de oficial de la guardia catalana.
+~
+Reduce el daño recibido por espadas un 10%.
+30% de probabilidad de evitar un golpe crítico.
+(+1 Autoridad, -25 Sigilo, +25 Carisma)
+}
+
+itmname_suit4 {Traje de Lamport}
+itmdescr_suit4
+{
+Un traje perteneciente a uno de los mercenarios profesionales de la Liga. Los insertos de placas protegen de disparos, tajos y estocadas. La media máscara ayuda a mantenerte de incógnito, pero también estrecha tu campo de visión.
+~
+Reduce el daño cuerpo a cuerpo recibido en un 15%.
+Reduce el daño de proyectil entrante en un 10%.
+Evita el daño crítico un 50% de las veces.
+(-1 Percepción, +1 Reacción, +30 Sigilo, -25 Liderazgo)
+}
+
+itmname_suit5 {Uniforme de almirante}
+itmdescr_suit5
+{
+Este es el uniforme del más alto oficial naval de Francia. Es una obra de arte, sin lugar a dudas.
+~
+Reduce un 10% el daño infligido por cualquier arma cuerpo a cuerpo.
+Evita el daño crítico un 30% de las veces.
+Bloquea la fama a nivel "Legendario", permite contratar a más tripulantes y disfrutar de burdeles gratuitos en las colonias francesas.
+(+2 Autoridad, -50 Sigilo, +40 Liderazgo, +5 Navegación)
+}
+
+itmname_underwater {Traje de buceo}
+itmdescr_underwater
+{
+Una escafandra única, la obra maestra de Henrik Vedecker. ¡Cuenta con la mejor defensa posible!
+~ 
+-60% cuchillas y -35% proyectiles
+100% de probabilidad de evitar un golpe crítico
+(-2 Percepción y Resistencia, -1 Reacción, -100 Sigilo, -15 cualquier arma cuerpo a cuerpo, -50 Armas de fuego)
+}
+
+; ==================================================================================================================== ФОНАРЬ
+
+itmname_lantern {Farol}
+itmdescr_lantern
+{
+Una pequeña linterna es un compañero indispensable en la oscuridad. Engánchala a tu cinturón para iluminar tu camino por la noche, así como en cuevas, grutas y mazmorras. Se activa y desactiva fácilmente pulsando "L" en el teclado.
+}
+; ==================================================================================================================== ШЛЯПЫ
+
+itmname_hat1 {Sombrero del condotiero}
+itmdescr_hat1
+{
+Siendo el tocado favorito de duelistas y esgrimistas, este sombrero motiva a perfeccionar constantemente las habilidades con armas blancas para lucir apropiado.
+~
+Aumenta la velocidad de obtención de experiencia con armas ligeras, medias y pesadas cuerpo a cuerpo en un 10%.
+}
+
+itmname_hat2 {Sombrero de caballero}
+itmdescr_hat2
+{
+Un sombrero ricamente decorado y colorido, que normalmente llevaban los nobles, ha adquirido una notoria reputación en el Caribe. Sus portadores aquí no son aristocratas europeos mimados, sino duelistas experimentados y aventureros capaces de luchar incansablemente con cualquier arma en mano.
+~
+Matar a un enemigo con un arma cuerpo a cuerpo restaura el 25% de la energía.
+}
+
+itmname_hat3 {Tricornio de marinero}
+itmdescr_hat3
+{
+Un tricornio bastante ordinario, muy extendido entre los marineros. Según una vieja tradición marítima, este tricornio se regala a un miembro de la tripulación que ha pasado tres duras pruebas: navegar en una tormenta, su primera batalla naval y remendar agujeros después.
+~
+Aumenta la velocidad de obtención de experiencia en Navegación, Puntería y Reparación en un 10%.
+}
+
+itmname_hat4 {Tricornio de oficial naval}
+itmdescr_hat4
+{
+Un tricornio popular entre los oficiales de barco. Al ver uno así, los marineros comunes comienzan a cumplir con sus deberes particularmente rápido. Si es por respeto o por miedo al castigo es una pregunta retórica.
+~
+Aumenta la velocidad de obtención de experiencia en todas las Habilidades Navales en un 15%.
+}
+
+itmname_hat5 {Sombrero de almirante}
+itmdescr_hat5
+{
+Tal sombrero rara vez lo ve un marinero común incluso una vez en la vida; inspira y motiva a todos los que lo rodean. Estar en el mismo escuadrón que el dueño de este sombrero es un gran honor, y todos, desde el marinero hasta el oficial, están dispuestos a seguirlo hasta el infierno y de vuelta.
+~
+Transfiere tus Habilidades Navales a todos los capitanes de tu flota. Reduce en un 15% el salario de la tripulación y de los oficiales en todos los barcos, excepto el buque insignia.
+Acaba con la hostilidad de las naciones hacia los buques de guerra correspondientes y permite que los buques de guerra nacionales capturados entren en los puertos de sus antiguos propietarios.
+}
+
+itmname_hat6 {Sombrero holandés}
+itmdescr_hat6
+{
+Un sombrero caro y exquisito, muy querido por los comerciantes de nivel medio. Gracias a su forma inusual, permite avistar a un negociante desde lejos y prepararse para feroces negociaciones comerciales.
+~
+Una vez cada tres días, realizas automáticamente una pequeña transacción comercial al llegar a un puerto.
+}
+
+itmname_hat7 {Sombrero de la suerte}
+itmdescr_hat7
+{
+Dicen que este audaz sombrero trae suerte. Desgastado y maltratado por el tiempo, sin embargo, luce noble. Si tienes la suerte de conseguir uno, puedes estar seguro de que en el momento más difícil podrás escabullirte de un guardia, sacar la carta correcta de la baraja y encontrar una bala perdida en el fondo de tu bolsillo.
+~
+Hay un 10% de probabilidad de no gastar munición al disparar, desenterrar un tesoro más valioso y evitar problemas con guardias hostiles.
+}
+
+itmname_hat8 {Charlie Prince’s Tricorn}
+itmdescr_hat8
+{
+Este sombrero asusta a los comerciantes, especialmente a los españoles, más que el Jolly Roger. La fama que rodea a su portador haría palidecer y temblar incluso al lobo de mar más duro. Maldito sea el día en que Charlie Prince vino a este mundo.
+~
+El ron y el vino restauran un 50% más de salud. Estar ebrio tiene un efecto más positivo.
+}
+
+; ==================================================================================================================== ОПТИКА
+
+itmname_spyglass1	{Catalejo cutre}
+itmdescr_spyglass1
+{
+Este viejo catalejo está casi fuera de servicio. Un capitán que se respete no debería rebajarse a usar este pedazo de basura. 
+Te permite ver el tipo, nombre, velocidad y número de cañones de la nave. Aumenta el alcance del comando 'Navegar a' en 250 yardas.
+}
+
+itmname_spyglass2	{Catalejo común}
+itmdescr_spyglass2
+{
+Es el catalejo habitual. Las lentes son decentes, aunque las hay mejores. 
+Permite ver el tipo, nombre, velocidad, número de cañones y daños a las velas del barco. Aumenta el alcance del comando 'Navegar a' en 500 yardas.
+}
+
+itmname_spyglass3	{Catalejo bueno}
+itmdescr_spyglass3
+{
+Es un catalejo con las lentes pulidas.
+Esta decente pieza de óptica, permite ver el tipo, nombre, velocidad, número y calibre de los cañones, el daño a las velas de la nave y si hay mosqueteros en cubierta. Aumenta el alcance del comando 'Navegar a' en 750 yardas.
+}
+
+itmname_spyglass4	{Catalejo excelente}
+itmdescr_spyglass4
+{
+Es un catalejo con unas lentes de gran calidad, solo podría mejorarse con una pieza exclusiva de óptica. 
+Permite ver el tipo, nombre y velocidad, número, calibre y tipo de munición de los cañones, daño de la nave, número de tripulantes y de mosquetes enemigos. Aumenta el alcance del comando 'Navegar a' en 1000 yardas.
+}
+
+itmname_spyglass5	{Telescopio náutico}
+itmdescr_spyglass5
+{
+Es un dispositivo óptico único. Tiene lentes perfectamente ajustadas hechas con el cristal de cuarzo más puro que junto con el uso de un trípode permiten ver absolutamente todo, incluyendo el tipo de cañones del barco o del fuerte. Aumenta el alcance del comando 'Navegar a' en 1500 yardas.
+}
+
+; ==================================================================================================================== НАВИГАЦИЯ
+
+
+itmname_sand_clock {Reloj de arena}
+itmdescr_sand_clock
+{
+Te permite 'trasladar' el tiempo de forma precisa desde la cubierta de mando a la nave para ajustar el cronómetro, si lo hay.
+}
+
+itmname_astrolab {Astrolabio}
+itmdescr_astrolab
+{
+Este dispositivo permite determinar la posición de los cuerpos celestes.
+}
+
+itmname_compass1 {Compás para barcos}
+itmdescr_compass1
+{
+Este instrumento permite determinar los ángulos de la Tierra.
+}
+
+itmname_clock1 {Cronómetro}
+itmdescr_clock1
+{
+Este instrumento se utiliza para determinar la longitud, pero requiere que se fije a la hora exacta en la cubierta de mando.
+}
+
+itmname_clock2 {Cronómetro de trabajo}
+itmdescr_clock2
+{
+Este cronómetro de barco fija la hora exacta en la cubierta de mando. Permite determinar la longitud del buque durante un período de 30 días con un error mínimo.
+}
+
+itmname_sextant1 {Sextante}
+itmdescr_sextant1
+{
+Es un dispositivo único que sirve para determinar las coordenadas geográficas. El autor se ha adelantado a su tiempo al crear este artilugio, porque el tipo de reloj necesario para que funcione no ha sido inventado. Por eso este sextante no se puede utilizar de momento.
+}
+
+itmname_sextant2 {Sextante de trabajo}
+itmdescr_sextant2
+{
+Es un dispositivo único que sirve para determinar las coordenadas geográficas. Ahora que has obtenido un cronómetro del futuro, puedes determinar la latitud y la longitud en todo momento.
+Gracias a su alta precisión, se puede lograr un aumento del 5% en la velocidad del barco.
+}
+
+itmname_bussol {Brújula náutica}
+itmdescr_bussol
+{
+Es un instrumento de navegación que combina un astrolabio y un compás para barco. Además de otras cosas, te permite determinar la latitud en todo momento.
+}
+
+itmname_clock3 {Cronómetro de Alexus}
+itmdescr_clock3
+{
+Un cronómetro naval preciso de mediados del siglo XX, con un mecanismo de bobinado automático de la colección del Maestro Alexus.
+}
+
+; ==================================================================================================================== ОБЕРЕГИ
+
+itmname_talisman1	{Figura de 'Dios rata'}
+itmdescr_talisman1
+{
+¡Ratas, perros y niños impresionables le temen a esta máscara! 
+~
+Protege las mercancías de los daños causados por ratas.
+Usado por: Protagonista, Tesorero.
+}
+
+itmname_talisman2	{Figura de 'Jonás'}
+itmdescr_talisman2
+{
+Es una cruz celta también llamada cruz redonda o cruz de Jonás en honor al profeta que fue sacrificado a los mares agitados, pero que logró sobrevivir. 
+~
+Reduce el daño que producen las tormentas al casco y velas.
+Usado por: Protagonista, Navegante.
+}
+
+itmname_talisman3	{Figura del 'Martillo de Thor'}
+itmdescr_talisman3
+{
+Un colgante de oro que representa a Mjolnir, el gran martillo de Thor, el dios escandinavo del trueno y del relámpago. 
+~
+Impide la explosión de los cañones debido al desgaste.
+Usado por: Protagonista, Artillero.
+}
+
+itmname_talisman4	{Figura de 'Jenízaro'}
+itmdescr_talisman4
+{
+Un brazalete otomano de un comandante Jenízaro.
+~
+Mejora la disciplina de la tripulación, reduce la caída de moral debido a la sobrecarga y disminuye el consumo diario de ron de la tripulación.
+Usado por: Protagonista, Contramaestre.
+}
+
+itmname_talisman6	{Figura de 'Tlazolteotl'}
+itmdescr_talisman6
+{
+Una figura de oro de la diosa Tlazolteotl, devoradora de la suciedad.
+~
+Facilita la conservación de los alimentos en el barco a la vez que reduce su consumo en un 25%.
+Usado por: Protagonista, Médico.
+}
+
+itmname_talisman7	{Figura de 'Escarabajo'}
+itmdescr_talisman7
+{
+Es un enorme anillo con la figura de un escarabajo egipcio. 
+~
+Duplica la velocidad de reparación del barco y ahorra un 30% de recursos.
+Reduce el daño recibido por las velas y el casco un 5%.
+Usado por: Protagonista, Carpintero.
+}
+
+itmname_talisman8	{Figura de 'Escorpión'}
+itmdescr_talisman8
+{
+Un broche de la familia Medici en forma de escorpión.
+~
+Tiene un compartimento secreto con un poderoso antídoto que previene el envenenamiento por armas ajenas.
+Usado por: Protagonista, Vanguardia.
+}
+
+itmname_talisman9	{Orden de San Luis}
+itmdescr_talisman9
+{
+Consolida la fama en el nivel 'Legendario', aumenta el reclutamiento en colonias francesas un 15%.
+Permite el acceso gratuito a burdeles en las colonias francesas y otorga +1 a la característica 'Autoridad'.
+Usado por: Protagonista.
+}
+
+itmname_talisman10	{Figura del 'Buceador'}
+itmdescr_talisman10
+{
+Un amuleto usado por los buscadores de perlas. 
+~
+Permite contener la respiración bajo el agua durante mucho tiempo y protege del agua hirviendo.
+Usado por: Protagonista.
+}
+
+itmname_talisman11	{Figura de 'Dios pollo'}
+itmdescr_talisman11
+{
+Un sencillo talismán que se cree que trae buena fortuna.
+Aumenta en 2 todas las habilidades personales y navales.
+~
+Sin penalizaciones ni límites de activación.
+}
+
+itmname_talisman12	{Figura de 'Resistencia'}
+itmdescr_talisman12
+{
+Figurilla de un dios del pueblo taíno. 
+~
+Fija el nivel actual de salud.
+Usado por: Protagonista.
+}
+
+itmname_talisman13	{Figura 'Estatuilla taína'}
+itmdescr_talisman13
+{
+Aumenta la fuerza, sobre todo al transportar cargas pesadas.
+~
+Sin penalizaciones, sin límites de activación.
+}
+
+itmname_talisman14	{Ward 'Ranyi'}
+itmdescr_talisman14
+{
+Elaborado por monjes taoístas, este broche acelera tu viaje por tierra y mar. 
+~
+Aumenta la habilidad Navegación en 15. 
+~
+Puede ser utilizado por el navegante.
+Sin penalizaciones, sin límites de activación.
+}
+
+itmname_talisman15	{Ward 'Black Spot'}
+itmdescr_talisman15
+{
+El 'Black Spot' duplica misteriosamente cualquier cambio de honor. Está hecho con el pañuelo de los Ironsides, la caballería de Cromwell.
+~
+Sin penalizaciones, sin límites de activación.
+}
+
+itmname_talisman16	{Ward 'Cuchillo ritual de oro'}
+itmdescr_talisman16
+{
+Un cuchillo ritual azteca dorado que se salvó por casualidad de ser fundido por los españoles. Quizá el conquistador que lo encontró quedó tan fascinado como tú por la admirable obra de este antiguo maestro.
++10% al daño infligido por cualquier arma cuerpo a cuerpo.
+~
+Sin penalizaciones, sin límites de activación.
+}
+
+itmname_talisman17	{Ward 'Liber Misericordiae'}
+itmdescr_talisman17
+{
+Un volumen de las Sagradas Escrituras, una vez profundamente personal para su propietario, similar a un preciado diario. Mientras que muchos llevan la Biblia como faro y guía, este tomo sirve como código literal de honor. Salvaguarda las vidas de los marineros y del capitán en sus lejanos viajes, ofreciendo una protección especialmente potente a bordo del "Holy Mercy".
+~
+Sin penalizaciones, sin límites de activación.
+}
+
+talisman17_quests{Church Quests: #dQBonus# / 5}
+
+talisman17_questsNoBonus{Church Quests: 0 / 5}
+
+; ==================================================================================================================== ТАЛИСМАНЫ
+
+itmname_totem_01 {Talisman 'Garganta de hierro fundido'}
+itmdescr_totem_01
+{
+Una copa encantada que evita el desmayo al beberla. Las pociones curativas no dañan la Vitalidad.
+~
+Sin penalizaciones, sólo se puede activar una vez.
+Sólo funciona para el jugador.
+Desaparece tras 30 días de uso o por eliminación.
+}
+
+itmname_totem_02 {Talismán 'Mordedor de espinas'}
+itmdescr_totem_02
+{
+Un látigo de aspecto intimidante para castigos. 
+~
+Disminuye la probabilidad de motines.
+Usado por: Protagonista, Contramaestre.
+Desaparece en 90 días o al desequipar.
+}
+
+itmname_totem_03 {Talismán 'Bálsamo de Cupido'}
+itmdescr_totem_03
+{
+Una pomada especial en un costoso estuche de bolsillo. 
+~
+Duplica el efecto curativo de los placeres amorosos.
+Desaparece en 90 días o al desequipar.
+}
+
+itmname_totem_04 {Talismán 'Mirmidón'}
+itmdescr_totem_04
+{
+Una pulsera de plata con turquesas.
+~
+Fija la lealtad del oficial mientras la duración está activa.
+Usado por: Protagonista.
+Desaparece en 90 días o al desequipar.
+}
+
+itmname_totem_05 {Talismán 'Ombligo de hierro'}
+itmdescr_totem_05
+{
+Un cinturón de cuero adornado con placas protectoras que previene contusiones que se pueden sufrir en combate.
+Desaparece en 360 días o al desequipar.
+} 
+
+itmname_totem_06 {Talismán 'Estibador'}
+itmdescr_totem_06
+{
+Botas que alivian la fatiga, permitiendo llevar un 10% más de carga sin consecuencias negativas para la salud.
+Desaparece en 120 días o al desequipar.
+}
+
+itmname_totem_07 {Talisman 'Juglar'}
+itmdescr_totem_07
+{
+Un laúd de dulce melodía ameniza la romántica historia de las aventuras en el mar y enciende corazones. 
+~
+Los voluntarios se unen a tu equipo por un precio menor, a pesar de las deudas que tengas pendientes con la tripulación.
+Usado por: Protagonista.
+Desaparece en  días o al desequipar.
+}
+
+itmname_totem_08 {Talismán 'Señor del Fuego'}
+itmdescr_totem_08
+{
+Una pipa de fumar de comandante que nunca se apaga. 
+~
+Duplica la velocidad de entrenamiento de los artilleros de la tripulación.
+Usado por: Protagonista, Artillero.
+Desaparece en 90 días o al desequipar.
+}
+
+itmname_totem_09 {Talismán 'Arguzin'}
+itmdescr_totem_09
+{
+Un cuerno cuyo sonido es claramente audible incluso durante la descarga de cañones. 
+~
+Duplica la velocidad de entrenamiento de los marineros de la tripulación.
+Usado por: Protagonista, Contramaestre.
+Desaparece en 90 días o al desequipar.
+}
+
+itmname_totem_10 {Talismán 'Hacedor de viudas'}
+itmdescr_totem_10
+{
+Una navaja catalana implacable y certera. 
+~
+Duplica la velocidad de entrenamiento de los soldados de la tripulación.
+Usado por: Protagonista, Vanguardia.
+Desaparece en 45 días o al desequipar.
+}
+
+itmname_totem_11 {Talismán 'Ghoul'}
+itmdescr_totem_11
+{
+Un anillo de cobre encantado que, usado en la mano derecha, absorbe la energía del oponente durante un duelo.
+Desaparece en 45 días o al desequipar.
+}
+
+itmname_totem_12 {Talismán 'Hijo del Jaguar'}
+itmdescr_totem_12
+{
+Duplica la precisión de tus armas y las de tu nave durante la noche.
+Aumenta la probabilidad de disparo crítico en un 3%.
+~
+Sin penalizaciones, sólo puede activarse una vez.
+Desaparece tras 90 días de uso o por eliminación.
+}
+
+itmname_totem_13 {Talisman 'Joker'}
+itmdescr_totem_13
+{
+La carta adecuada, siempre a la mano. 
+~
+Aumenta la probabilidad de ganar en los juegos de azar.
+Usado por: Protagonista.
+Desaparece en 45 días o al desequipar.
+}
+
+; ==================================================================================================================== АМУЛЕТЫ
+
+itmname_indian_1 {Amuleto 'Muñeca vudú'}
+itmdescr_indian_1
+{
+Esta muñeca ritual sirve para derrotar a un enemigo a distancia. 
+~
+Aumenta el daño que infliges con 'Armas de fuego' un 15%.
+Aumenta la probabilidad de crítico un 3%.
+Penalización: Los enemigos consiguen 10% más de precisión.
+Usado por: Todos.
+Desaparece en 70 días o al desequipar.
+}
+
+itmname_indian_2 {Amuleto 'Probador de pólvora'}
+itmdescr_indian_2
+{
+Un dispositivo para probar la calidad de la pólvora. 
+~
+Aumenta en un 15% la precisión con 'Armas de fuego' y reduce a la mitad la posibilidad de que se rompan.
+Aumenta la probabilidad de crítico un 3%.
+Penalización: El daño de los disparos enemigos aumenta en un 10%.
+Usado por: Todos.
+Desaparece en 70 días o al desequipar.
+}
+
+itmname_indian_3 {Amuleto 'Cuchillo ritual'}
+itmdescr_indian_3
+{
+Un cuchillo de obsidiana para sacrificios. 
+~
+Aumenta un 15% la probabilidad de golpe crítico.
+Penalización: El daño de los 'Ataques pesados' enemigos aumenta un 10%.
+Usado por: Todos.
+Desaparece en 70 días o al desequipar.
+}
+
+itmname_indian_4 {Amuleto 'Cabeza de Hacha'}
+itmdescr_indian_4
+{
+Un colgante cubierto de runas. 
+~
+Aumenta un 25% el daño de los 'Ataques pesados'.
+Penalización: La probabilidad de golpe crítico del enemigo aumenta en un 10%.
+Usado por: Todos.
+Desaparece en 70 días o al desequipar.
+}
+
+itmname_indian_5 {Amuleto 'Tsantsa'}
+itmdescr_indian_5
+{
+Una cabeza secada de manera especial. 
+~
+Reduce el riesgo de abordaje en un 10%.
+Penalización: Aumenta el tiempo de reparación del barco en un 10%.
+Usado por: Protagonista, Escoltas, Contramaestre.
+Desaparece en 70 días o al desequipar.
+}
+
+itmname_indian_6 {Amuleto 'Máscara de Coral'}
+itmdescr_indian_6
+{
+Aumenta en un 10% el daño infligido al enemigo por la descarga de mosquetes antes del abordaje.
+Penalización: Aumenta el tiempo de reparación del barco en un 10%.
+Usado por: Protagonista, Escoltas, Contramaestre.
+Desaparece en 70 días o al desequipar.
+}
+
+itmname_indian_7 {Amuleto 'Jorobado'}
+itmdescr_indian_7
+{
+Una estatuilla de terracota de un jorobado.
+~
+Aumenta significativamente la energía del personaje.
+Penalización: El peso máximo disminuye en un 10%.
+Usado por: Todos.
+Desaparece en 70 días o al desequipar.
+}
+
+itmname_indian_8 {Amuleto 'Xiuhtecuhtli'}
+itmdescr_indian_8
+{
+Un tótem del dios azteca, señor del fuego y gobernante de los volcanes. 
+~
+Aumenta el daño de los cañones del barco un 5%.
+Usado por: Protagonista, Escoltas, Artillero.
+Desaparece en 50 días o al desequipar.
+}
+
+itmname_indian_9 {Amuleto 'Baldo'}
+itmdescr_indian_9
+{
+Un broche celta en forma de cuervo. 
+~
+Aumenta la precisión de los cañones del barco un 10%.
+Usado por: Protagonista, Escoltas, Artillero.
+Desaparece en 50 días o al desequipar.
+}
+
+itmname_indian_10 {Amuleto 'Cascabel'}
+itmdescr_indian_10
+{
+El cráneo encantado de una serpiente de cascabel. 
+~
+Puedes envenenar al enemigo durante el combate.
+Usado por: Todos.
+Desaparece en 50 días o al desequipar.
+}
+
+itmname_indian_11 {Amuleto 'Máscara Ngombo'}
+itmdescr_indian_11
+{
+Una máscara ritual desvía la mirada de los centinelas en fortalezas y barcos. 
+~
+Aumenta las posibilidades de engaño en el mar en un 15%.
+Usado por: Todos.
+Desaparece en 50 días o al desequipar.
+}
+
+itmname_amulet_1 {Amuleto 'Escudo Ngombo'}
+itmdescr_amulet_1
+{
+Un collar hecho de huesos y coral, fortalecido por el hechizo Ngombo. 
+~
+Reduce en un 15% el daño recibido por armas de fuego.
+Penalización: La precisión con armas de fuego disminuye en un 10%.
+Usado por: Todos.
+Desaparece en 70 días o al desequipar.
+}
+
+itmname_amulet_2 {Amuleto 'Libro de Oraciones'}
+itmdescr_amulet_2
+{
+Un libro de oraciones con una cubierta plateada. 
+~
+Aumenta en un 15% la probabilidad de que el enemigo falle sus disparos con armas de fuego.
+Penalización: El daño de las armas de fuego disminuye en un 10%.
+Usado por: Todos.
+Desaparece en 70 días o al desequipar.
+}
+
+itmname_amulet_3 {Amuleto 'Crucifijo'}
+itmdescr_amulet_3
+{
+Una cruz católica bendecida.
+~
+Reduce en un 15% la probabilidad de recibir un golpe crítico.
+Penalización: El daño de los 'Ataques pesados' disminuye un 10%.
+Usado por: Todos.
+Desaparece en 70 días o al desequipar.
+}
+
+itmname_amulet_4 {Amuleto 'El trozo'}
+itmdescr_amulet_4
+{
+Un fragmento de espada rota, extraída de un cadáver. 
+~
+Reduce en un 15% el daño de los 'Ataques pesados' recibidos.
+Penalización: La probabilidad de infligir un golpe crítico se reduce en un 10%.
+Usado por: Todos.
+Desaparece en 70 días o al desequipar.
+}
+
+itmname_amulet_5 {Amuleto 'Sogbo'}
+itmdescr_amulet_5
+{
+Espíritu del relámpago del panteón vudú. 
+~
+Reduce el tiempo de recarga de los cañones del barco en un 15%.
+Penalización: La maniobrabilidad del barco disminuye un 10%.
+Usado por: Protagonista, Escoltas, Artillero.
+Desaparece en 70 días o al desequipar.
+}
+
+itmname_amulet_6 {Amuleto 'Madonna'}
+itmdescr_amulet_6
+{
+Un amuleto consagrado con el rostro de la Virgen María. 
+~
+Acelera la recuperación de 'Salud' en un 15% y reduce significativamente su deterioro al recibir golpes.
+Penalización: El sigilo del personaje se reduce a la mitad.
+Usado por: Todos.
+Desaparece en 70 días o al desequipar.
+}
+
+itmname_amulet_7 {Amuleto 'Agua bendita'}
+itmdescr_amulet_7
+{
+Una botella de plata colgante llena de agua bendita. 
+~
+Aumenta notablemente la 'Salud' del personaje.
+Penalización: La 'Fortuna' del personaje se reduce a la mitad.
+Usado por: Todos.
+Desaparece en 70 días o al desequipar.
+}
+
+itmname_amulet_8 {Amuleto 'Ancla'}
+itmdescr_amulet_8
+{
+Un pequeño colgante de plata hechizado.
+~
+Reduce el daño al casco del barco en un 5%.
+Usado por: Protagonista, Escoltas, Carpintero.
+Desaparece en 50 días o al desequipar.
+}
+
+itmname_amulet_9 {Amuleto 'Encolpión'}
+itmdescr_amulet_9
+{
+Una cruz de plata maciza con las 'relíquias de San Cristóbal'. 
+~
+Reduce el daño a las velas un 5%.
+Usado por: Protagonista, Escoltas, Carpintero.
+Desaparece en 50 días o al desequipar.
+}
+
+itmname_amulet_10 {Amuleto 'Obrador de Milagros'}
+itmdescr_amulet_10
+{
+Una imagen del patrón de los marineros, San Nicolás. 
+~
+Reduce en un 5% el daño recibido por la tripulación debido a los cañones enemigos.
+Usado por: Protagonista, Escoltas, Médico.
+Desaparece en 50 días o al desequipar.
+}
+
+itmname_amulet_11 {Amuleto 'Cimaruta'}
+itmdescr_amulet_11
+{
+Un amuleto impregnado con magia antigua. 
+~
+Reduce en un 5% el daño recibido por la tripulación debido a las descargas de mosquete enemigas.
+Usado por: Protagonista, Escoltas, Contramaestre.
+Desaparece en 50 días o al desequipar.
+}
+
+itmname_obereg_1 {Amuleto 'Teredo'}
+itmdescr_obereg_1
+{
+Una máscara hecha de ciprés, que los gusanos de barco evitan. 
+~
+Reduce en un 15% el consumo de tablones durante la reparación del casco del barco.
++10 a la destreza de Reparación.
+Usado por: Protagonista, Escoltas, Carpintero.
+Desaparece en 45 días o al desequipar.
+}
+
+itmname_obereg_2 {Amuleto 'Xochipilli'}
+itmdescr_obereg_2
+{
+Una vasija ritual de barro de Xochipilli, patrón de los tejedores. 
+~
+Reduce en un 15% el consumo de lona durante la reparación de las velas.
++10 a la destreza de Reparación.
+Usado por: Protagonista, Escoltas, Carpintero.
+Desaparece en 45 días o al desequipar.
+}
+
+itmname_obereg_3 {Amuleto 'Mono'}
+itmdescr_obereg_3
+{
+Según la creencia local, esta vasija de alabastro aumenta un 15% la capacidad de carga.
+Usado por: Todos.
+Desaparece en 45 días o al desequipar.
+}
+
+itmname_obereg_4 {Amulet 'Gypsy's fan'}
+itmdescr_obereg_4
+{
+Un hechizo especial andaluz desviará la atención de los interlocutores, permitiendo engañar a guardias y patrullas en tierra.
+Aumenta el 'Sigilo' del personaje en 10.																				
+Usado por: Todos.
+Desaparece en 45 días o al desequipar.
+}
+
+itmname_obereg_5 {Amuleto 'Tortuga de Jade'}
+itmdescr_obereg_5
+{
+Un antiguo amuleto de los primeros conquistadores.
+~
+Aumenta la 'Fortuna' del personaje en un 15%.
+Usado por: Todos.
+Desaparece en 45 días o al desequipar.
+}
+
+itmname_obereg_6 {Amuleto 'El puño del mono'}
+itmdescr_obereg_6
+{
+Un nudo intrincado hecho de cuerda resistente con un lazo para la mano. 
+~
+Aumenta el 'Liderazgo' del personaje en 10.																		
+Usado por: Todos.
+Desaparece en 30 días o al desequipar.
+}
+
+itmname_obereg_7 {Amuleto 'Pescador'}
+itmdescr_obereg_7
+{
+Un anzuelo de pesca encantado. 
+~
+Aumenta la 'Navegación' del personaje en 10.
+Usado por: Protagonista, Escoltas, Navegante.
+Desaparece en 30 días o al desequipar.
+}
+
+itmname_obereg_8 {Amuleto 'Rosario del Mercader'}
+itmdescr_obereg_8
+{
+Un rosario monástico de coral noble, útil para el cálculo. 
+~
+Aumenta el 'Comercio' del personaje en 15.
+Usado por: Protagonista, Escoltas, Tesorero.
+Desaparece en 30 días o al desequipar.
+}
+
+itmname_obereg_9 {Amuleto 'Ehecatl'}
+itmdescr_obereg_9
+{
+Un antiguo cuenco con la forma de la cabeza del dios azteca del viento.
+~
+Aumenta la velocidad del barco en un 15%.															
+Usado por: Protagonista, Escoltas, Navegante.
+Desaparece en 30 días o al desequipar.
+}
+
+itmname_obereg_10 {Amuleto 'Pendiente de marinero'}
+itmdescr_obereg_10
+{
+El pendiente de un timonel que ha rodeado el Cabo de Hornos.
+~
+La maniobrabilidad del barco aumenta un 15%.																  
+Usado por: Protagonista, Escoltas, Navegante.
+Desaparece en 45 días o al desequipar.
+}
+
+itmname_obereg_11 {Amuleto 'Peregrino'}
+itmdescr_obereg_11
+{
+Cruz del navegante Brendan. 
+~
+Aumenta el ángulo de rumbo del barco en un 15%, permitiendo ignorar aún más la dirección del viento.
+Usado por: Protagonista, Escoltas, Navegante.
+Desaparece en 30 días o al desequipar.
+}
+
+itmname_rat_poison {Arsénico}
+itmdescr_rat_poison
+{
+Arsénico, un polvo que huele a azufre y es similar al talco. 
+~
+Sirve para matar las ratas del barco.
+Usado por: Protagonista, Escoltas, Tesorero.
+Desaparece en 60 días o al desequipar.
+}
+
+; ====================================================================================================================================
+; ============================================================================================================== МОНЕТЫ, ДРАГОЦЕННОСТИ
+; ====================================================================================================================================
+
+
+; ==================================================================================================================== ВАЛЮТА, СУНДУКИ
+
+itmname_gold	{Pesos}
+itmdescr_gold
+{
+Pieza de plata española acuñada en el Caribe, es la moneda principal de todo el Nuevo Mundo.
+}
+
+itmname_gold_dublon	{Doblón de oro}
+itmdescr_gold_dublon
+{
+Moneda de oro española. Un doblón en el viejo mundo representa un intercambio monetario importante y equivale a 100 pesos, pero no necesariamente en esta parte del mundo. Aquí, en el Caribe, se considera una moneda rara y preciosa. Un cofre con doblones, es el sueño de todo pirata.
+}
+
+itmname_chest	{Cofre}
+itmdescr_chest
+{
+Un cofre cerrado con 150 doblones españoles de oro dentro.
+}
+
+itmname_chest_open	{Cofre vacío}
+itmdescr_chest_open
+{
+Un cofre típico destinado al transporte y custodia de monedas. Por desgracia, está totalmente vacío.
+}
+
+itmname_incas_collection	{Tesoros}
+itmdescr_incas_collection
+{
+Un conjunto de diversos artículos caros de oro y gemas, deseados por cualquier hombre.
+}
+
+itmname_purse1	{Monedero}
+itmdescr_purse1
+{
+Un monedero ordinario con varias monedas de oro.
+}
+
+itmname_purse2	{Bolsa pesada}
+itmdescr_purse2
+{
+Monedero de tela con un montón decente de doblones.
+}
+
+itmname_purse3	{Bolsa bien llena}
+itmdescr_purse3
+{
+Un buen bolso de cuero, lleno de doblones de oro.
+}
+
+; ==================================================================================================================== КАМНИ, МЕТАЛЛЫ
+
+
+itmname_jewelry1	{Amatista}
+itmdescr_jewelry1
+{
+Una joya de las minas de Recife. Dicen que protege a los hombres de las fuertes bebidas. Pero si ya has empinado el codo, lo hará de la intoxicación.
+}
+
+itmname_jewelry2	{Diamante}
+itmdescr_jewelry2
+{
+Un diamante de las minas de las costas portuguesas de América del Sur ayudará a un hombre decente en los negocios. Pero a los ladrones, asesinos y pícaros solo les traerá desgracias.
+}
+
+itmname_jewelry3	{Rubí}
+itmdescr_jewelry3
+{
+Los rubís son elementos raros en el Caribe. Es la única joya que puede competir con el diamante en dureza. Los rubís son consideradas joyas de poder que despiertan valentía, aspiración de liderazgo y subyugación de los demás.
+}
+
+itmname_jewelry4	{Esmeralda}
+itmdescr_jewelry4
+{
+Es una famosa esmeralda colombiana. Ninguna gema europea o africana pueden competir con ella en pureza. Conocida sobre todo como la compañera del marinero, esta gema también se cree que concede inspiración y aumenta la creatividad de la gente.
+}
+
+itmname_jewelry5	{Pepita de oro}
+itmdescr_jewelry5
+{
+Una verdadera pepita de oro. ¿Qué estaban mirando los guardias de la mina?
+}
+
+itmname_jewelry6	{Pepita de plata}
+itmdescr_jewelry6
+{
+Una pepita de plata, robada de alguna mina española.
+}
+
+itmname_jewelry7	{Ámbar azul}
+itmdescr_jewelry7
+{
+El tipo más raro de ámbar, solo se encuentra en el Caribe. Los joyeros europeos están dispuestos a pagar precios exorbitantes por esto.
+}
+
+itmname_jewelry8	{Ámbar}
+itmdescr_jewelry8
+{
+Es útil para personas que estudian el pasado y ayuda a ciertas personas a establecer la conexión entre los tiempos.
+}
+
+itmname_jewelry9	{Morion}
+itmdescr_jewelry9
+{
+Es un compañero reconocido de los alquimistas, que lo utilizan en su búsqueda de la piedra filosofal. Esta piedra de luto establece un vínculo con el otro mundo y enfatiza de manera significativa los rasgos de carácter, tanto los buenos como los malos.
+}
+
+itmname_jewelry10	{Lingote de platino}
+itmdescr_jewelry10
+{
+Un lingote de platino peruano. Los españoles subestimaron este noble metal debido a su alto punto de fusión, de ahí le viene el nombre de: 'Plata mala'.
+}
+
+itmname_jewelry11	{Meteorito}
+itmdescr_jewelry11
+{
+¡Es un raro golpe de suerte! Es un invitado del espacio, que logró sobrevivir a la densa atmósfera de la Tierra.
+}
+
+itmname_jewelry12	{Lingote de cobre}
+itmdescr_jewelry12
+{
+Un lingote de cobre, que se encuentra en las minas al oeste de Tierra Firme.
+}
+
+itmname_jewelry13	{Lingote de hierro}
+itmdescr_jewelry13
+{
+Un lingote de hierro, es la materia prima común para hacer un cuchillo o una herradura.
+}
+
+itmname_jewelry14	{Ópalo de fuego}
+itmdescr_jewelry14
+{
+Es el famoso ópalo de fuego que se extrae en Nueva España. Solo se encuentra en ese lugar, por eso es tan caro en el Viejo Mundo.
+}
+	
+itmname_jewelry15	{Aguamarina}
+itmdescr_jewelry15
+{
+Los marineros creen que esta joya de color marino puede calmar las tormentas y traer la victoria en las batallas navales.
+}
+	
+itmname_jewelry16	{Ópalo}
+itmdescr_jewelry16
+{
+Los preciosos ópalos son extremadamente raros, por lo que pueden ser más caros que otras gemas. Los que estudian las propiedades mágicas de las piedras afirman que el ópalo es una de las piedras más potentes, capaz de obrar verdaderas maravillas.
+}
+	
+itmname_jewelry17	{Jacinto}
+itmdescr_jewelry17
+{
+Es un zirconio de color rojo sangre. Es la piedra de la infelicidad que rompe el corazón. Esta piedra también ayuda a desarrollar los talentos de actor.
+}
+	
+itmname_jewelry18	{Crisoprasa}
+itmdescr_jewelry18
+{
+Los médicos afirman que esta piedra puede aumentar la resistencia de las personas.
+}
+	
+itmname_jewelry19	{Coral}
+itmdescr_jewelry19
+{
+Se cree que el coral rojo protege a su dueño de posibles violencias. Este mineral es muy popular entre los que provienen de la costa mediterránea.
+}
+
+itmname_jewelry20	{Turquesa}
+itmdescr_jewelry20
+{
+La turquesa es una piedra de fidelidad y nobleza. Los antiguos guerreros adornaban las empuñaduras de sus espadas con ella. Los mayas y aztecas la valoraban tanto como el jade. Esta piedra tiene altos estándares morales y puede castigar severamente a un hombre malvado.
+}
+
+itmname_jewelry21	{Azurita}
+itmdescr_jewelry21
+{
+Azurita de las minas de Nueva España. También se llama piedra 'celestial' al recordar el brillo de las estrellas en el cielo nocturno. Muchas civilizaciones consideraron sagrada a esta piedra.
+}
+
+itmname_jewelry22	{Jade}
+itmdescr_jewelry22
+{
+El jade es la piedra de los guerreros y es considerado como un símbolo de la perseverancia y el valor desde la antigüedad. Antes de que los europeos llegaran, los lugareños consideraban el jade como un símbolo de riqueza, en lugar de la plata y el oro.
+}
+
+itmname_jewelry23	{Crisoberilo}
+itmdescr_jewelry23
+{
+Una preciosa piedra amarillenta de las minas portuguesas. Se considera la piedra de los jugadores porque les trae suerte.
+}
+
+; ==================================================================================================================== ЮВЕЛИРНЫЕ ИЗДЕЛИЯ
+
+itmname_jewelry24	{Colgante con camafeo}
+itmdescr_jewelry24
+{
+Es un colgante extremadamente hermoso con un camafeo, perla y diamantes. La complejidad del trabajo nos lleva a suponer que fue hecho por un conocido joyero europeo. Todavía no hay maestros de tan alta clase en el Caribe.
+}
+
+itmname_jewelry25	{Pendientes con camafeo}
+itmdescr_jewelry25
+{
+Son unos pendientes extremadamente hermosos con un camafeo, perla y diamantes. La complejidad del trabajo lleva a suponer que fue hecho por un conocido joyero europeo. Todavía no hay maestros de tan alta clase en el Caribe.
+}
+
+itmname_jewelry26	{Brazalete con camafeo}
+itmdescr_jewelry26
+{
+Es un brazalete muy hermoso con un camafeo, perla y diamantes. La complejidad del trabajo lleva a suponer que fue hecho por un conocido joyero europeo. Todavía no hay maestros de tan alta clase en esta parte del mundo.
+}
+
+itmname_jewelry27	{Anillo con rubí}
+itmdescr_jewelry27
+{
+Un anillo de plata macizo adornado con un gran rubí. Parece el trabajo de los maestros de antaño, tal vez sea la herencia familiar de alguien.
+}
+
+itmname_jewelry28   	{Anillo con zafiro}
+itmdescr_jewelry28
+{
+Un anillo de plata macizo adornado con un zafiro grande. Parece el trabajo de los maestros de antaño, tal vez sea la herencia familiar de alguien.
+}
+
+itmname_jewelry29	{Anillo con turquesa}
+itmdescr_jewelry29
+{
+Un anillo de plata macizo adornado con una gran turquesa. Parece el trabajo de los maestros de antaño, tal vez sea la herencia familiar de alguien.
+}
+
+itmname_jewelry30	{Cuchillo ritual de oro}
+itmdescr_jewelry30
+{
+Un cuchillo ritual de oro de los aztecas, que afortunadamente no ha sido fundido. Quizás el que se lo encontró quedó fascinado por la admirable obra de un antiguo maestro.
+}
+
+itmname_jewelry31	{Máscara de entierro de oro}
+itmdescr_jewelry31
+{
+Una máscara ritual de oro de los mayas, que afortunadamente no ha sido fundida. Quizás el que se la encontró quedó fascinado por la admirable obra de un antiguo maestro.
+}
+
+itmname_jewelry32	{Brazalete de oro}
+itmdescr_jewelry32
+{
+Un brazalete de oro de los aztecas con la forma de la 'Serpiente Emplumada', que afortunadamente no ha sido fundido. Quizás el que se lo encontró quedó fascinado por la admirable obra de un antiguo maestro.
+}
+
+itmname_jewelry33	{Cáliz de oro}
+itmdescr_jewelry33
+{
+Un cáliz católico de oro de una admirable artesanía. Cualquier templo de la capital será feliz de tener uno.
+}
+
+itmname_jewelry34	{Crucifijo de Azurita}
+itmdescr_jewelry34
+{
+Un enorme crucifijo de oro con una gran azurita. Este objeto solo puede pertenecer a las jerarquías de más alto nivel.
+}
+
+itmname_jewelry35	{Incensario de oro}
+itmdescr_jewelry35
+{
+Un incensario pesado hecho de oro puro. En una parroquia provincial, seguramente estaría fuera de lugar.
+}
+
+itmname_jewelry36	{Anillo precioso}
+itmdescr_jewelry36
+{
+Un anillo de oro con una gran Aguamarina, adornado con un complejo ornamento de flores representadas por gemas. Esta pieza única de joyería debe costar una fortuna. Sería un gran regalo, incluso para la realeza.
+}
+
+itmname_jewelry37	{Broche precioso}
+itmdescr_jewelry37
+{
+Un broche de oro adornado con gemas. Esta pieza única de la joyería debe de costar una fortuna y sería un gran regalo incluso para la realeza.
+}
+
+itmname_jewelry38	{Anillo precioso}
+itmdescr_jewelry38
+{
+Un anillo de oro adornado con un gran diamante y esmeraldas. Esta pieza única de la joyería debe de costar una fortuna y sería un gran regalo incluso para la realeza.
+}
+
+itmname_jewelry39	{Colgante precioso}
+itmdescr_jewelry39
+{
+Un colgante de oro adornado con diamantes y una pintura de temática antigua sobre el esmalte. Esta pieza única de la joyería debe de costar una fortuna y sería un gran regalo incluso para la realeza.
+}
+
+itmname_jewelry40	{Anillo con esmeralda}
+itmdescr_jewelry40
+{
+Un anillo de oro macizo adornado con una gran esmeralda sin procesar. Un producto algo caro de los joyeros locales, que podría servir como fuerte pago para un favor importante.
+}
+
+itmname_jewelry41	{Anillo con rubí}
+itmdescr_jewelry41
+{
+Un anillo de oro hermoso con un rubí. Ruede hacer que una muchacha con gusto y sin pretensiones sea muy feliz.
+}
+
+itmname_jewelry42	{Collar de esmeraldas}
+itmdescr_jewelry42
+{
+Las perlas hechas de esmeralda que no pasaron el chequeo de calidad para ser enviadas a España, pueden adornar el pecho de incluso una dama de honor.
+}
+
+itmname_jewelry43	{Pendiente de piedras preciosas}
+itmdescr_jewelry43
+{
+Un colgante de oro adornado con grandes gemas sin procesar. Puede parecer una obra maestra para un hombre sin experiencia ni conocimiento de la joyería.
+}
+
+itmname_jewelry44	{Brazalete conquistador}
+itmdescr_jewelry44
+{
+Es una pulsera hecha con pepitas de oro y una cadena hecha de crin. Dicen que la costumbre de usar oro fue inventada por los conquistadores.
+}
+
+itmname_jewelry45	{Crucifijo de oro}
+itmdescr_jewelry45
+{
+Es un crucifijo de oro con turquesas que es aceptable para una rubia de ojos azules, joven, hermosa y de una familia decente.
+}
+
+itmname_jewelry46	{Anillo de oro}
+itmdescr_jewelry46
+{
+Un anillo de oro con una pequeña sodalita. Modesto, pero con clase.
+}
+
+itmname_jewelry47	{Brazalete de coral}
+itmdescr_jewelry47
+{
+Una pulsera hecha de corales rojos con inserciones de plata, puede adornar la fina muñeca de alguna morena.
+}
+
+itmname_jewelry48	{Anillo de plata}
+itmdescr_jewelry48
+{
+Un anillo de plata simple con un ornamento en forma de flor, es mejor que nada.
+}
+
+itmname_jewelry49	{Collar de jade}
+itmdescr_jewelry49
+{
+Los collares de jade son el verdadero sueño de los pieles rojas, que rara vez reciben la atención que esperan.
+}
+
+itmname_jewelry50	{Anillo de jade}
+itmdescr_jewelry50
+{
+Un anillo de jade cortado de una pieza sólida de la propia piedra. De hecho, la paciencia del maestro que lo hizo, bien vale nuestro respeto.
+}
+
+itmname_jewelry51	{Pendiente de moneda}
+itmdescr_jewelry51
+{
+Un pendiente improvisado hecho de una moneda de plata. Este adorno primitivo se puede utilizar como pago en la taberna.
+}
+
+itmname_jewelry52	{Perla grande}
+itmdescr_jewelry52
+{
+Una gran perla con forma ideal, es un obsequio verdaderamente raro del mar. Este milagro de la naturaleza puede tener más de cien años.
+}
+
+itmname_jewelry53	{Perla pequeña}
+itmdescr_jewelry53
+{
+Es tan solo una hermosa perla.
+}
+	
+itmname_meteorite	{Fragmento grande de meteorito}
+itmdescr_meteorite
+{
+¡Es un raro golpe de suerte! Es un visitante del espacio, que logró sobrevivir a la densa atmósfera de la Tierra. Y que es bastante grande.
+}
+
+; ====================================================================================================================================
+; ============================================================================================================================= БУМАГИ
+; ====================================================================================================================================
+
+
+; ========================================================================================================================== ПАТЕНТЫ
+
+itmname_patent_england	{Patente inglesa}
+itmdescr_patent_england
+{
+La patente, expedida por la oficina del Lord protector, confirma que estás al servicio de Inglaterra. Esto te impone ciertas responsabilidades relacionadas con la protección de los intereses de su país y el mantenimiento del barco, de acuerdo con esas regulaciones.
+}
+
+itmname_patent_holland	{Patente holandesa}
+itmdescr_patent_holland
+{
+La patente, emitida por el Consejo de Directores de la Compañía Holandesa de las Indias Occidentales, confirma que estás al servicio de Holanda. Esto le impone ciertas responsabilidades relacionadas con la protección de los intereses de su país y el mantenimiento del barco de acuerdo con las regulaciones.
+}
+
+itmname_patent_france	{Patente francesa}
+itmdescr_patent_france
+{
+La patente, expedida por la oficina de Su Majestad Luis XIV, confirma que estás al servicio de Francia. Esto te impone ciertas responsabilidades relacionadas con la protección de los intereses de su país y el mantenimiento del barco de acuerdo con las regulaciones.
+}
+itmname_patent_spain	{Patente española}
+itmdescr_patent_spain
+{
+La patente, expedida por la oficina de Su Majestad Felipe IV, confirma que estás al servicio de España. Esto te impone ciertas responsabilidades relacionadas con la protección de los intereses de su país y el mantenimiento del barco de acuerdo con las regulaciones.
+}
+
+itmname_map_bad	{Mapa cutre}
+itmdescr_map_bad
+{
+Es un mapa hecho por los descubridores del Nuevo Mundo. Los vagos contornos de las islas dibujadas en un pergamino, amarillento por el tiempo, no permiten determinar la ubicación de manera precisa.
+}
+
+; ========================================================================================================================== ЛИЦЕНЗИИ
+
+itmname_EngTradeLicence	{Licencia comercial inglesa}
+itmdescr_EngTradeLicence
+{
+Permite visitar ciudades y puertos con fines comerciales. Emitida con fecha: #sAction_date#, válida para #sValidity#.
+}
+
+itmname_FraTradeLicence	{Licencia comercial francesa}
+itmdescr_FraTradeLicence
+{
+Permite visitar ciudades y puertos con fines comerciales. Emitida con fecha: #sAction_date#, válida para #sValidity#.
+}
+
+itmname_SpaTradeLicence	{Licencia comercial española}
+itmdescr_SpaTradeLicence
+{
+Permite visitar ciudades y puertos con fines comerciales. Emitida con fecha: #sAction_date#, válida para #sValidity#.
+}
+
+itmname_HolTradeLicence	{Licencia comercial holandesa}
+itmdescr_HolTradeLicence
+{
+Permite visitar ciudades y puertos con fines comerciales. Emitida con fecha: #sAction_date#, válida para #sValidity#.
+}
+
+; ========================================================================================================================== КАРТЫ
+
+itmname_MapsAtlas	{Atlas cartográfico}
+itmdescr_MapsAtlas
+{
+Conjunto de mapas de varios territorios del Caribe. Sin estas piezas de pergamino, el viaje a través del archipiélago podría resultar bastante difícil.
+}
+
+itmname_Map_Best	{Excelente mapa}
+itmdescr_Map_Best
+{
+Una copia del mapa que le perteneció al legendario pirata Francis Drake. Tiene casi todo lo que un lobo de mar podría necesitar.
+}
+
+itmname_map_normal	{Mapa común}
+itmdescr_map_normal
+{
+Este mapa fue dibujado por los comerciantes. Los nombres de las principales ciudades y las precisas coordenadas de las islas, es todo lo que se necesita para el comercio en estas aguas.
+}
+
+itmname_map_beliz	{Mapa de Belice}
+itmdescr_map_beliz
+{
+Es un mapa que representa los alrededores de la ciudad de Belice.
+}
+
+itmname_map_santa	{Mapa de Blueweld}
+itmdescr_map_santa
+{
+Es un mapa que representa los alrededores de la ciudad de Blueweld.
+}
+
+itmname_map_bermudas	{Mapa de Isla del Tesoro}
+itmdescr_map_bermudas
+{
+Es un mapa en el que se indican todas las rutas y asentamientos de la isla.
+}
+
+itmname_map_jam	{Mapa de Jamaica}
+itmdescr_map_jam
+{
+Es un mapa en el que se indican todas las rutas y asentamientos de la isla.
+}
+
+itmname_map_cuba	{Mapa de Cuba}
+itmdescr_map_cuba
+{
+Es un mapa en el que se indican todas las rutas y asentamientos de la isla.
+}
+
+itmname_map_hisp	{Mapa de La Española}
+itmdescr_map_hisp
+{
+Este mapa te ayudará a llegar a las ciudades y a cualquier lugar aislado en la isla.
+}
+
+itmname_map_antigua	{Mapa de Antigua}
+itmdescr_map_antigua
+{
+Es un mapa en bruto de la isla que todavía sirve para viajar.
+}
+
+itmname_map_barbados	{Mapa de Barbados}
+itmdescr_map_barbados
+{
+Es un mapa poco preciso de la isla.
+}
+
+itmname_map_cayman	{Mapa de Caimán}
+itmdescr_map_cayman
+{
+El mapa de esta isla deshabitada.
+}
+
+itmname_map_Curacao	{Mapa de Curaçao}
+itmdescr_map_Curacao
+{
+Un mapa en bruto de la isla, supongo que puede servir para viajar.
+}
+
+itmname_map_guad	{Mapa de Guadalupe}
+itmdescr_map_guad
+{
+En este mapa se muestran todos los lugares de interés de esta isla.
+}
+
+itmname_map_TORTUGA	{Mapa de Tortuga}
+itmdescr_map_TORTUGA
+{
+En este mapa se muestran todos los lugares de interés de esta isla.
+}
+
+itmname_map_dominica	{Mapa de Dominica}
+itmdescr_map_dominica
+{
+Un mapa de esa isla deshabitada.
+}
+
+itmname_map_martiniqua	{Mapa de Martinica}
+itmdescr_map_martiniqua
+{
+Con este mapa no te perderás.
+}
+
+itmname_map_trinidad	{Mapa de Trinidad y Tobago}
+itmdescr_map_trinidad
+{
+Con este mapa no te perderás.
+}
+
+itmname_map_nevis	{Mapa de St. Christopher}
+itmdescr_map_nevis
+{
+Un mapa de la isla para viajeros inexpertos.
+}
+
+itmname_map_sm	{Mapa de St. Martín}
+itmdescr_map_sm
+{
+Con este mapa podrás llegar fácilmente a cualquier lugar que necesites.
+}
+
+itmname_map_terks	{Mapa de las islas Turcas}
+itmdescr_map_terks
+{
+Un mapa de una isla salvaje, dibujada por una persona desconocida.
+}
+
+itmname_map_maine_1	{Mapa del centro de Nueva Granada}
+itmdescr_map_maine_1
+{
+Mapa con las principales ciudades de Cartagena y Maracaibo.
+}
+
+itmname_map_maine_2	{Mapa de Caracas}
+itmdescr_map_maine_2
+{
+Un mapa único que representa una gran parte de esa zona.
+}
+
+itmname_map_panama	{Mapa del oeste de Nueva Granada}
+itmdescr_map_panama
+{
+Un mapa del Istmo de Panamá.
+}
+
+itmname_map_cumana	{Mapa de Cumaná}
+itmdescr_map_cumana
+{
+Un mapa con la parte principal de la ciudad de Cumaná.
+}
+
+itmname_map_puerto	{Mapa de Puerto Rico}
+itmdescr_map_puerto
+{
+Un mapa que representa los lugares más importantes de la isla.
+}
+
+itmname_mapQuest	{Mapa del tesoro}
+itmdescr_mapQuest
+{
+En este mapa se indica un lugar donde supuestamente está escondido un tesoro. Pero no se sabrá a ciencia cierta si no lo compruebo.
+}
+
+itmname_map_full	{Mapa del tesoro}
+itmdescr_map_full
+{
+En este mapa se indica un lugar donde supuestamente está escondido un tesoro. Pero no se sabrá a ciencia cierta si no lo compruebo.
+}
+
+itmname_map_part1	{Una parte del mapa del tesoro}
+itmdescr_map_part1
+{
+Esta solo es una parte del mapa de un tesoro. Para averiguar dónde está, primero tengo que encontrar la otra parte.
+}
+
+itmname_map_part2	{Una parte del mapa del tesoro}
+itmdescr_map_part2
+{
+Esta solo es una parte del mapa de un tesoro. Para averiguar dónde está, primero tengo que encontrar la otra parte.
+}
+
+itmname_map_LSC	{Mapa de la isla de la justicia}
+itmdescr_map_LSC
+{
+El mapa de la isla de los barcos abandonados, podría serme de ayuda bajo ciertas condiciones.
+}
+
+;============================================ адмиральские карты ============================================
+
+itmname_A_map_beliz	{Excelente mapa de Belice}
+itmdescr_A_map_beliz
+{
+Un mapa extremadamente preciso de los alrededores de Belice. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_santa	{Excelente mapa de Blueweld}
+itmdescr_A_map_santa
+{
+Un mapa extremadamente preciso de los alrededores de Blueweld. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_bermudas	{Excelente mapa de Isla del Tesoro}
+itmdescr_A_map_bermudas
+{
+Un mapa extremadamente preciso de Isla del Tesoro. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_jam	{Excelente mapa de Jamaica}
+itmdescr_A_map_jam
+{
+Un mapa extremadamente preciso de la isla de Jamaica. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_cuba	{Excelente mapa de Cuba}
+itmdescr_A_map_cuba
+{
+Un mapa extremadamente preciso de la isla de Cuba. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_hisp	{Excelente mapa de La Española}
+itmdescr_A_map_hisp
+{
+Un mapa extremadamente preciso de la isla de La Española. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_antigua	{Excelente mapa de Antigua}
+itmdescr_A_map_antigua
+{
+Un mapa extremadamente preciso de la isla de Antigua. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_barbados	{Excelente mapa de Barbados}
+itmdescr_A_map_barbados
+{
+Un mapa extremadamente preciso de la isla de Barbados. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_cayman	{Excelente mapa de Caíman}
+itmdescr_A_map_cayman
+{
+Un mapa extremadamente preciso de la isla de Caíman. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_Curacao	{Excelente mapa de Curacao}
+itmdescr_A_map_Curacao
+{
+Un mapa extremadamente preciso de la isla de Curacao. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_guad	{Excelente mapa de Guadalupe}
+itmdescr_A_map_guad
+{
+Un mapa extremadamente preciso de la isla de Guadalupe. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_TORTUGA	{Excelente mapa de Tortuga}
+itmdescr_A_map_TORTUGA
+{
+Un mapa extremadamente preciso de la isla de Tortuga. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_dominica	{Excelente mapa de Dominica}
+itmdescr_A_map_dominica
+{
+Un mapa extremadamente preciso de la isla de Dominica. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_martiniqua	{Excelente mapa de Martinica}
+itmdescr_A_map_martiniqua
+{
+Un mapa extremadamente preciso de la isla de Martinica. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_trinidad	{Excelente mapa de Trinidad y Tobago}
+itmdescr_A_map_trinidad
+{
+Un mapa extremadamente preciso de la isla de Martinica. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_nevis	{Excelente mapa de St. Christopher}
+itmdescr_A_map_nevis
+{
+Un mapa extremadamente preciso de la isla de St. Christopher. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_sm	{Excelente mapa de St. Martín}
+itmdescr_A_map_sm
+{
+Un mapa extremadamente preciso de la isla de St. Martín. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_terks	{Excelente mapa de las islas Turcas}
+itmdescr_A_map_terks
+{
+Un mapa extremadamente preciso de las islas Turcas. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_maine_1	{Excelente mapa del centro de Nueva Granada}
+itmdescr_A_map_maine_1
+{
+Un mapa extremadamente preciso del centro de Nueva Granada. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_maine_2	{Excelente mapa de Caracas}
+itmdescr_A_map_maine_2
+{
+Un mapa extremadamente preciso de los alrededores de Caracas. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_panama	{Excelente mapa del oeste de Nueva Granada}
+itmdescr_A_map_panama
+{
+Un mapa extremadamente preciso del Istmo de Panamá. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_cumana	{Excelente mapa de Cumaná}
+itmdescr_A_map_cumana
+{
+Un mapa extremadamente preciso de los alrededores de Cumaná. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_puerto	{Excelente mapa de Puerto Rico}
+itmdescr_A_map_puerto
+{
+Un mapa extremadamente preciso de la isla de Puerto Rico. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+itmname_A_map_perl	{Excelente mapa de Providence}
+itmdescr_A_map_perl
+{
+Un mapa extremadamente preciso de la isla de Providence. En el reverso, se puede ver el nombre del cartógrafo: José Dios.
+}
+
+;=============================================квестовые карты================================================
+
+itmname_map_half_beatriss	{La mitad del mapa de Sharp}
+itmdescr_map_half_beatriss
+{
+La mitad del mapa que solía pertenecer a Beatrice, madre de Helen McArthur.
+}
+
+itmname_map_half_blaze	{La mitad del mapa de Sharp}
+itmdescr_map_half_blaze
+{
+La mitad del mapa que solía pertenecer a Blaze Sharp.
+}
+
+itmname_map_sharp_full	{Mapa de Nicholas Sharp}
+itmdescr_map_sharp_full
+{
+Un mapa completo de la Isla del Tesoro, que se compone de dos mitades. Es la principal prueba de los derechos de propiedad sobre esa isla.
+}
+
+itmname_LSC_navigation_map	{Coordenadas de navegación para la Isla de la Justicia}
+itmdescr_LSC_navigation_map
+{
+Sin este documento es imposible llegar a la Isla de la Justicia por mar.
+Primero debes llegar a las coordenadas 24 grados 21 minutos Norte y 84 grados 50 minutos Oeste.
+Posteriormente tendrás que seguir las direcciones indicadas.
+}
+
+itmname_RingCapBook	{Registro del barco 'Santa Lucia'}
+itmdescr_RingCapBook
+{
+Registro de la pinaza 'Santa Lucia'.
+Vale la pena leerlo, seguramente las anotaciones continuaron hasta que el barco naufragó.
+}
+
+itmname_leather_bag	{Bolso de colgar}
+itmdescr_leather_bag
+{
+Un bolso de mano de una chica que huyó del burdel. Contiene un poco de dinero, documentos, un vestido decente y otras pobres pertenencias. En realidad, el bolso en sí es más pesado que su contenido.
+}
+
+; ========================================================================================================================== ПИСЬМА
+
+itmname_sicretLetter	{Envío secreto}
+itmdescr_sicretLetter
+{
+Un paquete de documentos para el gobernador de #sCity#. #sMayor# lo espera tan pronto como sea posible.
+}
+
+itmname_letter_1	{Carta sellada}
+itmdescr_letter_1
+{
+La carta está sellada, para poder leer su contenido hay que romper el lacre.
+}
+
+itmdescr_letter_1_Fadey
+{
+Petición de indulto de Fadey el Moscovita para el indio Tichingitu.
+}
+
+itmdescr_letter_SharkGoldFleet_1
+{
+Correspondencia sellada del responsable de la Autoridad Portuaria de Caracas. Entregar personalmente al responsable de la Autoridad Portuaria de Portobello.
+}
+
+itmname_letter_2	{Carta sellada}
+itmdescr_letter_2
+{
+La carta está sellada, para poder leer su contenido hay que romper el lacre.
+}
+
+itmdescr_letter_SharkGoldFleet_2
+{
+Respuesta de confirmación sellada del jefe de la Autoridad Portuaria de Portobello. Entregar personalmente al jefe de la Autoridad Portuaria de Caracas.
+}
+
+itmdescr_letter_2_PortmanLevelUp1
+{
+Un despacho importante del gobierno.
+}
+
+itmdescr_letter_2_PortmanLevelUp2
+{
+Lista de precios de todas las tiendas del archipiélago.
+}
+
+itmdescr_letter_2_PortmanLevelUp3
+{
+Documentación de negocios, que contiene información sobre las tasas de divisas y acciones.
+}
+
+itmname_letter_open	{Carta abierta}
+itmdescr_letter_open
+{
+La carta parece que ha sido leída, tal vez no se dé cuenta el destinatario.
+}
+
+itmdescr_letter_open_usurer
+{
+Documentos con el derecho sobre la deuda de Folke Delluc.
+}
+
+itmname_Malyava	{Carta de la prisión}
+itmdescr_Malyava
+{
+Nota del ladrón.
+}
+
+itmname_PostLetters	{Correo para entregar}
+itmdescr_PostLetters
+{
+Letras selladas y otros documentos.
+}
+
+itmname_letter_consumption	{Carta para el comandante de San José}
+itmdescr_letter_consumption
+{
+Los cultivos ya han sido cosechados en su mayoría, esta es la segunda parte de nuestro acuerdo. La tercera parte se entregará al final, como de costumbre. Un placer hacer negocios contigo, espero que no sea la última vez.
+J.
+}
+
+itmname_letter_church	{Misiva sellada}
+itmdescr_letter_church
+{
+Un despacho de la iglesia que debe ser entregado al destinatario tan pronto como sea posible.
+}
+
+itmname_prayer_book	{Libros de oraciones}
+itmdescr_prayer_book
+{
+Una pila de libros de oraciones que deben entregarse al destinatario lo antes posible.
+}
+
+itmname_ContraPostLetters	{Correspondencia}
+itmdescr_ContraPostLetters
+{
+Letras selladas y otros documentos que necesitan ser entregados a Su Gracia tan pronto como sea posible.
+}
+
+itmname_letter_svenson	{Carta de Jan Svensson}
+itmdescr_letter_svenson
+{
+Una carta sellada de Jan Svensson para Steve Dodson-Shark.
+}
+
+itmname_letter_chad	{Carta abierta}
+itmdescr_letter_chad
+{
+Hemos encontrado un francotirador de confianza. Ahora estamos esperando lo prometido y el permiso para eliminar al almirante.
+}
+itmdescr_letter_adolf
+{
+'Después de que haya terminado con lo que acordamos, regrese a su nueva cabina y espere. Pasaremos a por la llave a medianoche.
+M.'
+}
+itmdescr_letter_adolf_1
+{
+'Marcello, habíamos acordado una suma dos veces mayor que la que me has entregado. La carabina vale mucho más y lo sabes. Si no me pagas el resto, el almirante conocerá inmediatamente tus tratos con Kapper en el 'Eva'.
+Adolf.'
+}
+itmdescr_letter_aeva
+{
+No hay mejor lugar que el 'Eva'. Últimamente, Cecille está constantemente dando vueltas con el otro vejestorio, Orelie, o en la taberna, por lo que la bodega está vacía. Y en caso de que aparezca de repente, no hay nada malo en beber un poco. 
+Marcello.
+}
+itmdescr_letter_valet
+{
+Es una carta entretenida, dirigida a David Fackman, también conocido como 'Valet'
+}
+
+itmname_letter_chad_1	{Carta abierta}
+itmdescr_letter_chad_1
+{
+Carta de Chad Kapper a Mary Casper.
+}
+itmdescr_letter_facio
+{
+Carta explicativa de Giuseppe Fazio.
+}
+itmdescr_letter_axel
+{
+Chad, he buscado en mis existencias como me pediste y solo he encontrado un barril de whisky irlandés. Es una vieja malta llamada 'Bushmills', si 100 doblones está bien para ti puedes venir y llevártelo.
+Axel.
+}
+itmdescr_letter_vargant
+{
+Si la trampa no funciona, os espero a ti y a David en la ensenada de Sabu-Matila a bordo del 'Centurion'. Responderás por mi hermano con tu cabeza, haz lo que dice como si fuera yo. Ni se te ocurra desafiar al propio Tirex, podría cargarse a ambos.
+Jackman
+}
+
+itmname_letter_parol	{Nota}
+itmdescr_letter_parol
+{
+Tenga en cuenta que el propietario cambió la contraseña para llegar a la mina. La nueva es 'Neptuno'.
+}
+itmdescr_letter_ouster
+{
+El antiguo lugar no es seguro, los ingleses han olfateado algo. Te estaré esperando con la carga dentro de una semana en: 12 grados 1 minuto Norte y 60 grados 11 minutos Oeste. ¡No me falles esta vez! 
+M.R.
+}
+itmdescr_letter_parol_FMQP
+{
+Letra inconclusa de Ugo a don Domingo Albalate.
+}
+
+itmname_letter_mine	{Documentos para la mina}
+itmdescr_letter_mine
+{
+Documentos que indican que cierto señor llamado Lawrence Beltrop de Port Royal posee oficialmente esta mina desierta.
+}
+
+itmname_letter_jess	{Página rota}
+itmdescr_letter_jess
+{
+Página del diario de Jessica Rose.
+}
+
+itmname_letter_beatriss	{Carta antigua}
+itmdescr_letter_beatriss
+{
+Carta de Beatrice Sharp a su hermano Blaze.
+}
+
+itmname_letter_baker	{Testimonio escrito}
+itmdescr_letter_baker
+{
+Testimonio documentado de Raymond Baker, ex verdugo de St. John´s.
+}
+itmdescr_letter_pinett
+{
+Los testamentos de Bertrand Pinette sobre las operaciones ilegales del banquero de Basse-Terre.
+}
+
+itmname_Cromvel_depeshe	{El despacho de Cromwell}
+itmdescr_Cromvel_depeshe
+{
+... para reunirse con el escuadrón, fortalecerlo y acompañarlo a las costas de los Países Bajos.
+Los holandeses podrán comprobar la superioridad de la marina inglesa.
+El escuadrón llegará el #sDay#.#sMonth#.#sYear# a las coordenadas: 18 grados 40 minutos Norte y 72 grados 10 minutos Oeste.
+}
+
+itmname_specialletter	{Carta}
+itmdescr_specialletter
+{
+Una carta sellada. Para leerla, deberás romper el lacre.
+
+}
+itmdescr_specialletter_mishelle
+{
+Una carta de Michel de Monper a Charles de Maure.
+}
+itmdescr_specialletter_vinsento
+{
+Una carta del inquisidor de Santiago, el Padre Vincento, a Charles de Maure.
+}
+itmdescr_specialletter_dichoso
+{
+Una carta de Miguel Dichoso a Arturo López.
+}
+
+
+; ============================================ РЕЦЕПТЫ =================================================
+
+itmname_recipe_powder_pellet	{Instrucciones}
+itmdescr_recipe_powder_pellet
+{
+Instrucciones para hacer un saco centelleante de petardos.
+}
+
+itmname_recipe_grenade	{Instrucciones}
+itmdescr_recipe_grenade
+{
+Instrucciones para hacer granadas.
+}
+
+itmname_recipe_harpoon	{Instrucciones}
+itmdescr_recipe_harpoon
+{
+Instrucciones para hacer puntas de arpón.
+}
+
+itmname_recipe_GunEchin	{Instrucciones}
+itmdescr_recipe_GunEchin
+{
+Instrucciones para hacer un proyectil de metralla con clavos y cabecillas de clavos.
+}
+
+itmname_recipe_potion2	{Receta del elixir}
+itmdescr_recipe_potion2
+{
+Es la receta para poder elaborar un elixir curativo.
+}
+
+itmname_recipe_potion3	{Receta de antídoto}
+itmdescr_recipe_potion3
+{
+Una receta que contiene toda la información necesaria para preparar un antídoto.
+}
+
+itmname_recipe_potion4 {Receta de la mezcla}
+itmdescr_recipe_potion4
+{
+Una receta que contiene toda la información necesaria para preparar una mezcla.
+}
+
+itmname_recipe_berserker_potion	{Receta de tintura Ometochtli}
+itmdescr_recipe_berserker_potion
+{
+Es la receta para poder elaborar la tintura Ometochtli.
+}
+
+itmname_recipe_totem_01	{Receta de talismán}
+itmdescr_recipe_totem_01
+{
+Es la receta para poder elaborar el talismán 'Garganta de hierro fundido'.
+}
+
+itmname_recipe_totem_02	{Receta de talismán}
+itmdescr_recipe_totem_02
+{
+Es la receta para poder elaborar el talismán 'Mordedor de Espinas'.
+}
+
+itmname_recipe_totem_03	{Receta de talismán}
+itmdescr_recipe_totem_03
+{
+Es la receta para poder elaborar el talismán 'Bálsamo de Cupido'.
+}
+
+itmname_recipe_totem_04	{Receta de talismán}
+itmdescr_recipe_totem_04
+{
+Es la receta para poder elaborar el talismán 'Mirmidón'.
+}
+
+itmname_recipe_totem_05	{Receta de talismán}
+itmdescr_recipe_totem_05
+{
+Es la receta para poder elaborar el talismán 'Ombligo de hierro'.
+}
+
+itmname_recipe_totem_06	{Receta de talismán}
+itmdescr_recipe_totem_06
+{
+Es la receta para poder elaborar el talismán 'Estibador'.
+}
+
+itmname_recipe_totem_07	{Receta de talismán}
+itmdescr_recipe_totem_07
+{
+Es la receta para poder elaborar el talismán 'Juglar'.
+}
+
+itmname_recipe_totem_08	{Receta de talismán}
+itmdescr_recipe_totem_08
+{
+Es la receta para poder elaborar el talismán 'Señor del Fuego'.
+}
+
+itmname_recipe_totem_09	{Receta de talismán}
+itmdescr_recipe_totem_09
+{
+Es la receta para poder elaborar el talismán 'Arguzin'.
+}
+
+itmname_recipe_totem_10	{Receta de talismán}
+itmdescr_recipe_totem_10
+{
+Es la receta para poder elaborar el talismán 'Hacedor de viudas'.
+}
+
+itmname_recipe_totem_11	{Receta de talismán}
+itmdescr_recipe_totem_11
+{
+Es la receta para poder elaborar el talismán 'Ghoul'.
+}
+
+itmname_recipe_totem_12	{Receta de talismán}
+itmdescr_recipe_totem_12
+{
+Es la receta para poder elaborar el talismán 'Hijo del Jaguar'.
+}
+
+itmname_recipe_totem_13	{Receta de talismán}
+itmdescr_recipe_totem_13
+{
+Es la receta para poder elaborar el talismán 'Joker'.
+}
+
+; ====================================================================================================================================
+; ========================================================================================================================== ИНВЕНТАРЬ
+; ====================================================================================================================================
+
+
+; ======================================================================================================================== ИНСТРУМЕНТЫ
+
+itmname_alchemy_tool	{Cofre de alquimista}
+itmdescr_alchemy_tool
+{
+Un cofre lleno de extraños aparatos y reactivos. Una adquisición inestimable para un alquimista principiante.
+}
+
+itmname_Tool	{Caja de herramientas de carpintero}
+itmdescr_Tool
+{
+Las herramientas del carpintero de un barco, robadas del astillero.
+}
+
+itmname_Tailor_Tool	{Herramientas de sastre}
+itmdescr_Tailor_Tool
+{
+Kit de viaje de un experimentado sastre que utiliza para superar todas las dificultades por su cuenta.
+¡De todos modos, en manos expertas, las tijeras, agujas, ganchos y dedales pueden hacer maravillas!
+}
+
+itmname_Mechanic_Tool	{Banco y caja de herramientas}
+itmdescr_Mechanic_Tool
+{
+El conjunto de cosas necesarias para las reparaciones a pequeña escala contenidas en una caja. Una gran ayuda para cualquier persona que le guste retocar algo en su tiempo libre.
+}
+
+itmname_Tigel	{Crisol}
+itmdescr_Tigel
+{
+Un recipiente que puede soportar temperaturas muy altas.
+}
+
+; ============================================================================================================== СНАДОБЬЯ, ЗЕЛЬЯ, ТРАВЫ
+
+itmname_potion1	{Poción curativa}
+itmdescr_potion1
+{
+Una infusión de hierbas medicinales capaces de cicatrizar heridas leves.
+}
+
+itmname_potion2	{Elixir}
+itmdescr_potion2
+{
+Este elixir, hecho de más de un centenar de hierbas raras, puede curar incluso las heridas más espantosas.
+}
+
+itmname_potion3	{Antídoto}
+itmdescr_potion3
+{
+Este líquido es una infusión de ingredientes raros y sirve como antídoto. Tiene un gusto de mil demonios, pero si quieres vivir, beberás cualquier cosa.
+}
+
+itmname_potion4	{Mezcla}
+itmdescr_potion4
+{
+Esta mezcla no solo cura el veneno, sino que también restaura la salud.
+}
+
+itmname_potionrum	{Botella de ron}
+itmdescr_potionrum
+{
+Ningún ron puede tumbarte, así que bébetelo rápido. Además, si estás herido, el alcohol que contiene te ayudará a cicatrizar las heridas.
+}
+
+itmname_potionwine	{Excelente vino}
+itmdescr_potionwine
+{
+Excelente vino francés. Su efecto relajante te ayudará a recuperar fuerzas y matará las bacterias dañinas.
+}
+
+itmname_potion5	{Raíz de jengibre}
+itmdescr_potion5
+{
+Es un remedio fortalecedor de la salud sin efectos secundarios.
+}
+
+itmname_potion6	{Poción inca}
+itmdescr_potion6
+{
+Este remedio fue utilizado por los guerreros de los templos incas para no perder la orientación en combate. Previene el aturdimiento en combate y es perjudicial para la salud.
+}
+
+itmname_potion7	{Lágrimas de Ixchel}
+itmdescr_potion7
+{
+Un dudoso tónico que no posee olor ni sabor, preparado por el sacerdote maya para el ritual de adoración de la Diosa de la Luna. Según los rumores (y los lugareños mantienen su secreto), puede restaurar la salud perdida.
+}
+
+itmname_Ultimate_potion	{Poción Comanche}
+itmdescr_Ultimate_potion
+{
+Un frasco con una poción milagrosa, capaz de curar hasta las más horribles enfermedades y venenos mortales.
+}
+
+itmname_berserker_potion	{Tintura Ometochtli}
+itmdescr_berserker_potion
+{
+Tintura embriagadora, que contribuye a la manifestación instantánea de una fuerza y resistencia tremendas, un aumento significativo de la destreza y de la rapidez de reacción, insensibilidad al dolor y aumento de la agresividad.
+~
+Durante 12 segundos los ataques del personaje se vuelven mucho más poderosos y el daño recibido se reduce.
+Es perjudicial para la salud. Tiempo de recarga: 1 minuto.
+}
+
+itmname_mangarosapower	{Poción de Golpe de Marea}
+itmdescr_mangarosapower
+{
+Una poción de Mangarosa preparada según la receta de Amelie. 
+Aumenta temporalmente el poder y el aguante, así como las destrezas con las armas medias y pesadas.
+}
+
+itmname_mangarosafast	{Poción de Squall}
+itmdescr_mangarosafast
+{
+Una poción de Mangarosa preparada según la receta de Amelie. 
+Aumenta temporalmente la reacción y la intuición, así como las destrezas con armas ligeras y de fuego.
+}
+
+itmname_mangarosatotal	{Poción de Abrazo del Mar}
+itmdescr_mangarosatotal
+{
+Una poción de Mangarosa preparada de acuerdo a la receta de Amelie. 
+Aumenta temporalmente el poder, aguante, reacción, intuición, autoridad y suerte, así como las destrezas con todas las armas blancas y de fuego.
+}
+
+itmname_cannabis1	{Trompetas de Ángel o Datura}
+itmdescr_cannabis1
+{
+Se usa en pociones curativas.
+}
+
+itmname_cannabis2	{Sabadilla}
+itmdescr_cannabis2
+{
+Se usa en pociones curativas.
+}
+
+itmname_cannabis3	{Verbena}
+itmdescr_cannabis3
+{
+Es una hierba mística a la que muchas diferentes creencias están conectadas. Se usa en pociones.
+}
+
+itmname_cannabis4	{Ipecacuanha}
+itmdescr_cannabis4
+{
+Esta hierba sabe y huele terrible, pero es muy utilizada en la preparación de pociones.
+}
+
+itmname_cannabis5	{Guaraná}
+itmdescr_cannabis5
+{
+Las semillas se usan en las pociones.
+}
+
+itmname_cannabis6	{Pimienta de Jamaica}
+itmdescr_cannabis6
+{
+Utilizado en pociones.
+}
+
+itmname_cannabis7	{Mangarosa}
+itmdescr_cannabis7
+{
+Contiene unas pequeñas flores en las hojas, que son muy valoradas por los nativos.
+Según dicen, esta planta posee propiedades místicas que solo conocen unos pocos iluminados.
+}
+
+; ======================================================================================================================== БОЕКОМПЛЕКТ
+
+itmname_GunPowder	{Pólvora}
+itmdescr_GunPowder
+{
+Necesaria para que las armas de fuego funcionen. El consumo de pólvora puede variar dependiendo del tipo de arma.
+}
+
+itmname_bullet	{Bala de plomo}
+itmdescr_bullet
+{
+Munición necesaria para disparar mosquetes, pistolas y demás. El daño infligido por las balas de plomo dependerá del tipo de arma.
+}
+
+itmname_grapeshot	{Saquito de metralla}
+itmdescr_grapeshot
+{
+Cartuchos de plomo o perdigones grandes. Se usan únicamente al disparar con armas de metralla. Causan daño a varios objetivos a la vez.
+La cantidad de metralla que se puede cargar en el cañón depende del arma utilizada.
+
+}
+
+itmname_cartridge	{Cartucho de papel}
+itmdescr_cartridge
+{
+Un cartucho de papel, combina una dosis de pólvora, una bala de plomo y un taco. Su uso acelerará la recarga de forma significativa.
+}
+
+itmname_powder_pellet	{Petardo}
+itmdescr_powder_pellet
+{
+Los petardos pueden ser disparados por una escopeta. Tras la explosión, creará un destello brillante que puede cegar a varios objetivos a la vez y no diferencia entre amigos y enemigos.
+}
+
+itmname_grenade	{Granada}
+itmdescr_grenade
+{
+Las granadas pueden ser disparadas desde una escopeta. La explosión puede hacer mucho daño a varios objetivos con los fragmentos. No diferencia entre amigos y enemigos.
+}
+
+itmname_harpoon	{Flechas de perno}
+itmdescr_harpoon
+{
+Flecha corta y pesada para ser disparada en una emboscada que está hecha de puntas de arpones. Su peso y puntas afiladas permiten infligir daños terribles incluso a los enemigos bien protegidos.
+}
+
+itmname_GunPowder_colt	{Pólvora negra}
+itmdescr_GunPowder_colt
+{
+Pólvora mejorada del siglo XIX con una alta intensidad explosiva. Se requiere para la fabricación de los cartuchos para el revólver.
+}
+
+itmname_shotgun_bullet	{Bala de revólver}
+itmdescr_shotgun_bullet
+{
+Balas para cargar las cámaras del revólver. Se hacen con moldes.
+}
+
+itmname_shotgun_cartridge	{Cartucho de Revólver}
+itmdescr_shotgun_cartridge
+{
+Se utiliza para almacenar una carga de pólvora y colocar la bala necesaria para hacer un disparo. Acelera la recarga y simplifica el manejo de revólveres con tambores no extraíbles.
+}
+
+itmname_OxyHydSilver	{Fulminato de plata}
+itmdescr_OxyHydSilver
+{
+Es fulminato de plata.
+}
+
+itmname_GunCap_colt	{Tapón de percusión}
+itmdescr_GunCap_colt
+{
+Se requieren tapones de percusión de cobre para que el revólver Colt dispare.
+}
+
+itmname_bullet_double 	{Doble carga de balas}
+itmdescr_bullet_double
+{
+Una carga doble de pólvora y una bala, acompañada de un doblón picado para la suerte. Probador de pólvora necesario para evitar subidas por rotura del cañón.
+}
+
+itmname_grapeshot_double 	{Doble carga de metralla}
+itmdescr_grapeshot_double
+{
+Carga aumentada de pólvora y metralla con un doblón picado para la suerte. Su efectividad depende del arma con la que se use.
+Sin un probador de pólvora, aumenta el riesgo de reventar el cañón.
+}
+
+itmname_GunEchin	{Metralla de clavos}
+itmdescr_GunEchin
+{
+Clavos toscamente picados para armas de metralla de gran calibre. Tienen un efecto destructivo en cuerpos humanos y cañones de armas.
+Debido a su forma, reducen la dispersión del arma.
+}
+
+;--------------------------------------------- добавил
+itmname_argbullet{Bala de plata}
+itmdescr_argbullet
+{
+Según las supersticiones locales, las balas de plata son efectivas contra los muertos revividos por la hechicería vudú.
+}
+
+; =============================================================================================================================================== ОБЫЧНЫЕ ПРЕДМЕТЫ
+
+itmname_Mineral1	{Jarra de cobre}
+itmdescr_Mineral1
+{
+Un recipiente muy conveniente para almacenar agua o vino.
+}
+
+itmname_Mineral2	{Peine de concha de tortuga}
+itmdescr_Mineral2
+{
+Una cosa costosa e irreemplazable para los dueños de una cabellera exuberante.
+}
+
+itmname_Mineral3	{Vela}
+itmdescr_Mineral3
+{
+Una vela de cera que puedes encender.
+}
+
+itmname_Mineral4	{Escarabajo Hércules}
+itmdescr_Mineral4
+{
+Según los rumores, es el escarabajo más grande conocido por la ciencia (hasta 20 pulgadas). También es la criatura más fuerte, capaz de levantar 850 veces su peso.
+}
+
+itmname_Mineral5	{Lámpara de mesilla}
+itmdescr_Mineral5
+{
+La lámpara de mesilla de bronce permite pasar la noche con un libro favorito o preparar el café por la mañana.
+}
+
+itmname_Mineral6	{Espejo}
+itmdescr_Mineral6
+{
+Un espejo de bolsillo. La barbilla de un pirata promedio no encajaría en él.
+}
+
+itmname_Mineral7	{Pipa de porcelana}
+itmdescr_Mineral7
+{
+De manufactura holandesa, popular entre los fumadores de tabaco locales.
+}
+
+itmname_Mineral8	{Zapato}
+itmdescr_Mineral8
+{
+Un zapato sin par es un mal presagio.
+(-10 Fortuna)
+}
+
+itmname_Mineral9	{Taza vieja}
+itmdescr_Mineral9
+{
+Una taza manchada del patrón de la taberna.
+}
+
+itmname_Mineral10	{Pedernal}
+itmdescr_Mineral10
+{
+Pedernal para prender fuego. El encendedor del siglo XVII.
+}
+
+itmname_Mineral11	{Recipiente de plata}
+itmdescr_Mineral11
+{
+Hermoso recipiente de plata.
+}
+
+itmname_Mineral12	{Pata de Jaguar}
+itmdescr_Mineral12
+{
+Se cuelga del cuello para enfatizar la superioridad del portador.
+}
+
+itmname_Mineral13	{Látigo}
+itmdescr_Mineral13
+{
+Látigo de cuero para infligir castigos. También se puede utilizar para expulsar perros callejeros o golpear a un tipo insolente. 
+}
+
+itmname_Mineral14	{Ala de murciélago}
+itmdescr_Mineral14
+{
+Ala seca del murciélago sanguíneo local, (Desmodus rotundus). Los brujos las usan en sus ritos.
+(-10 Fortuna)
+}
+
+itmname_Mineral15	{Cuchillo plegable}
+itmdescr_Mineral15
+{
+El compañero insustituible de cualquier verdadero marinero.
+}
+
+itmname_Mineral16	{Piedra de afilar}
+itmdescr_Mineral16
+{
+Un trozo de piedra para afilar hojas.
+}
+
+itmname_Mineral17	{Vial}
+itmdescr_Mineral17
+{
+Un vial de vidrio vacío.
+}
+
+itmname_Mineral18	{Tabaco}
+itmdescr_Mineral18
+{
+Una caja con tabaco para fumar, de moda entre los colonos del Nuevo Mundo que han copiado de los indios.
+}
+
+itmname_Mineral19	{Cuchara de plata}
+itmdescr_Mineral19
+{
+Una hermosa cuchara de plata, robada de una casa decente.
+}
+
+itmname_Mineral20	{Cuchara de madera}
+itmdescr_Mineral20
+{
+Cada marinero debe tener una para no comer con las manos.
+}
+
+itmname_Mineral21	{Instrumentos de escritura}
+itmdescr_Mineral21
+{
+Una pluma de ganso y un tintero son indicaciones distintivas de un hombre bien educado. 
+}
+
+itmname_Mineral22	{Cordones}
+itmdescr_Mineral22
+{
+Un manojo de cuerdas finas para las necesidades diarias.
+}
+
+itmname_Mineral23	{Clavo}
+itmdescr_Mineral23
+{
+Clavos para martillo comunes. Se pueden usar para reparar calzado, techos o barcos.
+}
+
+itmname_Mineral24	{Cinturón}
+itmdescr_Mineral24
+{
+Un cinturón de cuero común para mantener los pantalones en su lugar y llevar objetos útiles.
+}
+
+itmname_Mineral25	{Sílbato de Contramaestre}
+itmdescr_Mineral25
+{
+Todo contramaestre que se precie debe tener uno. Este silbato se utiliza para dar órdenes a la tripulación.
+}
+
+itmname_Mineral26	{Mazo de cartas}
+itmdescr_Mineral26
+{
+Una cantidad destartalada de naipes.
+}
+
+itmname_Mineral27	{Mortero y maja}
+itmdescr_Mineral27
+{
+Permite moler hierbas medicinales y otros ingredientes para la preparación de varias pociones. No intentes aplastar gemas o metales con este mortero.
+}
+
+itmname_Mineral28	{Alcohol etílico}
+itmdescr_Mineral28
+{
+Los alquimistas locos utilizan el alcohol etílico en la preparación del fulminato de plata. Seguramente no tienen idea de su verdadera predestinación.
+}
+
+itmname_Mineral29	{Ácido nítrico}
+itmdescr_Mineral29
+{
+El ácido nítrico se conoce desde el siglo VIII. Asumiendo que tienes un crisol no-metálico resistente al fuego, podrás utilizarlo para hacer fulminato de plata. Evita el contacto con la piel y por el amor de Dios, no lo confundas con ron.
+}
+
+itmname_Mineral30	{Grilletes de esclavo}
+itmdescr_Mineral30
+{
+Grilletes usados por los esclavistas.
+(-10 Liderazgo)
+}
+
+itmname_Mineral31	{Hueso encantado}
+itmdescr_Mineral31
+{
+La falange de un dedo humano con un anillo de cobre. Lo usan los hechiceros vudú para encantar tesoros.
+(-10 Liderazgo, -10 Fortuna).
+}
+
+itmname_Mineral32	{Molde de bala}
+itmdescr_Mineral32
+{
+Este molde permite hacer balas de una cierta forma y tamaño, para poder usarlas con el revólver Colt.
+}
+
+itmname_Mineral33	{Tinte de tatuaje}
+itmdescr_Mineral33
+{
+Tinte para tatuajes.
+}
+
+itmname_Mineral34	{Vial Vacío}
+itmdescr_Mineral34
+{
+No es exactamente el vial más limpio del mundo, pero está definitivamente vacío y por lo tanto ligero.
+}
+
+itmname_Mineral35	{Laúd}
+itmdescr_Mineral35
+{
+Un instrumento musical.
+}
+
+itmname_crab_pincers	{Pinza de cangrejo}
+itmdescr_crab_pincers
+{
+Una pinza gigantesca de cangrejo. Contiene muchos nutrientes y por eso es valorado por los habitantes de la Isla de la Justicia.
+}
+
+itmname_crab_jaw	{Mandíbula de cangrejo}
+itmdescr_crab_jaw
+{
+Una mandíbula de un cangrejo gigante que contiene una glándula venenosa.
+}
+
+; ================================================================================================================================== КВЕСТОВЫЕ ПРЕДМЕТЫ
+
+itmname_ShipyardsMap	{Plano}
+itmdescr_ShipyardsMap
+{
+Plano de construcción de #sShipName#.
+}
+
+itmdescr_ShipyardsMap_PortmanLevelUp4
+{
+Un plano de una nave que contiene innovaciones técnicas.
+}
+
+itmname_MayorsRing	{Anillo de bodas}
+itmdescr_MayorsRing
+{
+El anillo de bodas del gobernador de #sCityName#.
+}
+
+itmname_UsurersJew	{Piedra preciosa}
+itmdescr_UsurersJew
+{
+Increíble #sJevelType# del usurero de #sCityName#.
+}
+
+itmname_Key1	{Llave simple}
+itmdescr_Key1
+{
+Una llave para una cerradura simple.
+}
+
+itmname_Key2	{Llave común}
+itmdescr_Key2
+{
+Una llave para las cerraduras más comunes de complejidad media.
+}
+
+itmname_Key3	{Llave compleja}
+itmdescr_Key3
+{
+Una llave para cerraduras complejas.
+}
+
+itmname_key_capper	{Llave del 'Tartarus'}
+itmdescr_key_capper
+{
+La llave para las puertas y cofres del 'Tartarus'.
+}
+
+itmname_key_gun	{Llave de bronce}
+itmdescr_key_gun
+{
+Llave encontrada en el cuerpo de Adolf Barbier. ¿Qué abrirá?
+}
+
+itmname_keys_skel	{Conjunto de ganzúas}
+itmdescr_keys_skel
+{
+Con estos trozos de alambre, puedes abrir cerraduras.
+}
+
+itmname_sant_anna_key	{Llave exquisita}
+itmdescr_sant_anna_key
+{
+Una llave exquisita con los cifrados más complejos. ¡Solo lo pudo hacer un maestro europeo! Debo encontrar la cerradura que abre.
+}
+
+itmname_key_betancur	{Llave antigua}
+itmdescr_key_betancur
+{
+Una llave de latón empañada de un cofre de oro. No está claro lo que abre, pero a juzgar por el lugar donde se encontró, estoy seguro que el cofre guardará algo realmente valioso.
+}
+
+itmname_key_mary	{La llave de Mary Casper}
+itmdescr_key_mary
+{
+La llave del camarote de Mary, en el barco 'Ceres Smithy'.
+}
+
+itmname_key_facio	{Llave de latón}
+itmdescr_key_facio
+{
+Llave de Giuseppe Fazio.
+}
+itmdescr_key_facioQ
+{
+Una llave que abre la puerta del 'Carolina' y uno de los cofres en el camarote de Giuseppe Fazio.
+}
+
+itmname_key_levasser	{La llave de Levasseur}
+itmdescr_key_levasser
+{
+Una llave extraída del cuerpo de Francois Levasseur. Solo queda encontrar la cerradura que abre.
+}
+
+itmname_PortmansBook	{Diario de navegación}
+itmdescr_PortmansBook
+{
+Diario de navegación de un barco, olvidado por un capitán distraído. Se lo tengo que devolver.
+}
+
+itmname_CaptainBook	{Documentos de un barco}
+itmdescr_CaptainBook
+{
+Documentos de un barco, olvidados por un capitán distraído. Los tengo que devolver.
+}
+
+itmname_bible	{Biblia}
+itmdescr_bible
+{
+Un misterioso libro bíblico escrito en un idioma desconocido.
+}
+
+itmname_ChurchGenQuest1Bible	{Manuscrito de la iglesia}
+itmdescr_ChurchGenQuest1Bible
+{
+Un manuscrito de la iglesia que tengo que entregar al sacerdote de #sCity#.
+}
+
+itmname_ChurchGenQuest2Cup	{Cáliz de la Comunión}
+itmdescr_ChurchGenQuest2Cup
+{
+Un cáliz de la Comunión que tengo que entregar al sacerdote de #sCity#. Es bastante pesado.
+}
+
+itmname_MerdokArchive	{Archivo de John Murdock}
+itmdescr_MerdokArchive
+{
+El diario de Van Merden. Contiene una mezcla incomprensible de letras, fechas y números. Requeriré de un código para poder descifrarlo.
+}
+
+itmname_MineArchive	{Registros cifrados}
+itmdescr_MineArchive
+{
+El texto está cifrado y el documento no tuvo uso durante mucho tiempo. Obviamente, es el seguro personal de un alto oficial de la Liga.
+}
+
+itmname_Cipher	{Cifrado para el archivo}
+itmdescr_Cipher
+{
+Utilizando este cifrado podré leer el archivo de John Murdock.
+}
+
+itmname_JacobJournal	{Diario de navegación de Jacob van Berg}
+itmdescr_JacobJournal
+{
+Diario de navegación de Jacob van Berg, capitán del 'Mirage'.
+}
+
+itmname_FleetwoodJournal{Diario de navegación de Richard Fleetwood}
+itmdescr_FleetwoodJournal
+{
+Diario de a bordo de Richard Fleetwood, capitán del 'Valkyrie'.
+}
+
+itmname_ClementLebrunJournal	{Diario de a bordo de Clement Lebran}
+itmdescr_ClementLebrunJournal
+{
+El diario de a bordo de ese atrevido tipo del Tortuga. Absolutamente todas las páginas han sido arrancadas.
+}
+
+itmname_FernandoDeAlavidaJournal	{Diario de a bordo de Fernando de Alavida}
+itmdescr_FernandoDeAlavidaJournal
+{
+Diario de a bordo de Fernando de Alavida.
+}
+
+itmname_FernandoDeAlavidaPismo	{Carta arrugada}
+itmdescr_FernandoDeAlavidaPismo
+{
+Un trozo de papel arrugado, claramente tirado con rabia y descuidadamente arrojado a un rincón lejano del camarote. La tinta se ha emborronado y sólo quedan legibles las últimas líneas:
+'... y, sin embargo, desaconsejo encarecidamente guardar tesoros en la cripta. Últimamente han aumentado los rumores en la isla sobre ladrones de tumbas paganos, y temo que el lugar de descanso del señor pueda verse comprometido'.
+}
+
+itmname_MC_Letter	{Carta sellada}
+itmdescr_MC_Letter
+{
+Una carta a Richard Fleetwood con los términos y condiciones del rescate de Abigail.
+}
+
+itmdescr_MC_Letter1
+{
+La respuesta de Richard Fleetwood.
+}
+
+itmdescr_MC_Letter2
+{
+Una carta para Lucas Rodenburg de Fleetwood.
+}
+
+itmdescr_MC_Letter3
+{
+Una carta de Lucas Rodenburg a Van Merden.
+}
+
+itmname_NPC_Letter	{Carta sellada}
+itmdescr_NPC_Letter
+{
+Una carta de Richard Fleetwood a Abigail.
+}
+
+itmdescr_NPC_Letter1
+{
+Una misiva de Richard Fleetwood.
+}
+
+itmdescr_NPC_Letter2
+{
+Una carta de despedida de Hércules Tonzag.
+}
+
+itmdescr_NPC_Letter3
+{
+Un sobre con un mapa esquemático de alguna isla que indica una gruta.
+}
+
+itmdescr_NPC_Letter4
+{
+Una carta de Lucas Rodenburg al banquero de Santiago.
+}
+
+itmname_DTSG_letter1	{Restos de una carta a medio quemar}
+itmdescr_DTSG_letter1
+{
+A juzgar por las marcas de quemaduras, la carta fue incendiada recientemente.
+}
+
+itmdescr_DTSG_letter2
+{
+Una carta detallando el aspecto físico de Charlie Knippel.
+}
+
+itmname_Drugstore_keys	{Llaves de la farmacia}
+itmdescr_Drugstore_keys
+{
+Estas llaves abren todas las puertas de la casa de John Murdock.
+}
+
+itmname_MaltieBase_keys	{Llaves a las mazmorras}
+itmdescr_MaltieBase_keys
+{
+Estas llaves abren las celdas de la base subterránea de los Caballeros Malteses en St. Pierre.
+}
+
+itmname_Finger	{Dedo cortado}
+itmdescr_Finger
+{
+Un dedo con un anillo que prueba la muerte de Fernando.
+}
+itmdescr_finger_rober
+{
+Un dedo con un anillo que prueba la muerte de Robert Martene.
+}
+
+itmname_GastonHead	{Cabeza humana}
+itmdescr_GastonHead
+{
+Una cabeza humana cortada, un objeto espantoso.
+}
+
+itmname_SkullAztec	{Calavera de jade}
+itmdescr_SkullAztec
+{
+Es un hermoso y misterioso artefacto antiguo.
+}
+
+itmname_suit_1	{Ropa cara}
+itmdescr_suit_1
+{
+Esta ropa es lo suficientemente elegante para poder llevarla en una fiesta organizada por el mismo gobernador general.
+}
+
+itmname_crowbar	{Palanca de metal}
+itmdescr_crowbar
+{
+Una pequeña palanca que se puede utilizar para abrir algo que no está muy bloqueado.
+}
+
+itmname_bucher_ring	{Anillo macizo}
+itmdescr_bucher_ring
+{
+El anillo del capitán Butcher.
+}
+
+itmname_cask_whisky	{Ataúd con whisky}
+itmdescr_cask_whisky
+{
+Un ataúd de madera que contiene el whisky añejo 'Bushmills'.
+}
+
+itmname_buben	{Pandereta del Chamán}
+itmdescr_buben
+{
+Una pandereta india utilizada por los chamanes para contactar con los espíritus. Al menos, eso es lo que dicen...
+}
+
+itmname_smoking_tube	{Pipa para fumar}
+itmdescr_smoking_tube
+{
+Una exquisita pipa de los indios norteamericanos. ¿Cómo terminó aquí?
+}
+
+itmname_chemistry	{Introducción a la química de Lavoisier}
+itmdescr_chemistry
+{
+Libro titulado 'Traite Elementaire de Chimie', contiene notas y definiciones completamente incomprensibles para un laico. Este libro fue escrito por un tal Lavoisier, pero eso no es lo más extraño. La fecha de publicación del libro indica el año 1789. ¿Cómo es posible?
+}
+
+itmname_shark_teeth	{Diente de tiburón}
+itmdescr_shark_teeth
+{
+El diente de un gran tiburón blanco, con las iniciales grabadas S.D.
+}
+
+itmname_witches_hammer	{'El Malleus Maleficarum'}
+itmdescr_witches_hammer
+{
+Tratado teosófico 'Hammer of Witches' en inglés, escrito por G. Kramer y J. Sprenger.
+}
+
+itmname_calendar_maya	{Calendario maya}
+itmdescr_calendar_maya
+{
+Calendario maya, compuesto de cinco fragmentos.
+}
+
+itmname_splinter_js	{Fragmento Ornamental}
+itmdescr_splinter_js
+{
+Un fragmento de piedra con un hermoso adorno indio, perteneciente a Jan Svensson.
+}
+
+itmname_splinter_nh	{Fragmento Ornamental}
+itmdescr_splinter_nh
+{
+Un fragmento de piedra con un hermoso ornamento indio, perteneciente a Nathaniel Hawk.
+}
+
+itmname_splinter_mt	{Fragmento Ornamental}
+itmdescr_splinter_mt
+{
+Un fragmento de piedra con un hermoso adorno indio, perteneciente a Marcus Tyrax.
+}
+
+itmname_splinter_zm	{Fragmento Ornamental}
+itmdescr_splinter_zm
+{
+Un fragmento de piedra con un hermoso ornamento indio, perteneciente a Zachary Marlow.
+}
+
+itmname_splinter_jb	{Fragmento Ornamental}
+itmdescr_splinter_jb
+{
+Un fragmento de piedra con un hermoso adorno indio, perteneciente a Jaques Barbazon.
+}
+
+itmname_Almanac	{Diario}
+itmdescr_Almanac
+{
+Parece bastante grueso.
+}
+itmdescr_jinobook
+{
+Diario de Gino Guineily.
+}
+itmdescr_Almanac_FMQP
+{
+Libro de cuentas de Luis Ortiz.
+}
+
+itmname_VerifyPaper
+itmdescr_VerifyPaper	{Carta de credibilidad}
+{
+Carta de credibilidad.
+}
+itmdescr_VincentoPaper
+{
+Permite al portador visitar la colonia española de Santiago sin restricciones. Firmado por el inquisidor Padre Vincento.
+}
+itmdescr_VincentoPaper_A
+{
+Permite al portador visitar sin restricciones las colonias españolas de Santiago y San José. Firmado por el inquisidor Padre Vincento.
+}
+
+itmname_skinmap	{Mapa de 'Dos Manifestaciones'}
+itmdescr_skinmap
+{
+Un pedazo de piel curtida con los vagos contornos del archipiélago caribeño.
+}
+
+itmname_arrowway	{Brújula 'Flecha del Camino'}
+itmdescr_arrowway
+{
+Una brújula de barco cuya aguja gira apuntando a cualquier parte, excepto al Norte.
+}
+
+itmname_ArchyBook	{Diario}
+itmdescr_ArchyBook
+{
+Diario de Archibald Colhoun, estoy seguro que habrá algo interesante que leer.
+}
+
+itmname_key_archy	{Llave de hierro}
+itmdescr_key_archy
+{
+Llave de Archibald Colhoun. Al parecer, parece que abre un cofre.
+}
+itmdescr_key_mask
+{
+Llave encontrada en el esqueleto del capitán del 'Santa Quiteria'. Parece que abre algún cofre.
+}
+
+itmname_SQCapBook	{Diario de navegación}
+itmdescr_SQCapBook
+{
+Diario de navegación del capitán del 'Santa Quiteria'. Seguramente habrá algo interesante para leer.
+}
+
+itmname_mark_map	{Mapa con notas}
+itmdescr_mark_map
+{
+Un mapa utilizado en la búsqueda de la isla de Ksocheatem.
+}
+
+itmname_mask_false	{Máscara india antigua}
+itmdescr_mask_false
+{
+Una máscara india antigua y siniestra, encontrada en la isla de Ksocheatem.
+}
+
+itmname_mask_true	{Máscara de Kukulcan}
+itmdescr_mask_true
+{
+Un poderoso artefacto de la 'Serpiente Alada', el dios indio Kukulcan.
+}
+
+itmname_stonekey	{Llave de piedra}
+itmdescr_stonekey
+{
+Llave del sacerdote Itza Kanek.
+}
+
+itmname_Tablet_1	{Tablilla antigua}
+itmdescr_Tablet_1
+{
+Una tablilla de piedra de Itzamna, dios del cielo.
+}
+
+itmname_Tablet_2	{Tablilla antigua}
+itmdescr_Tablet_2
+{
+Una tablilla de piedra de Kinich Ahaw, dios del sol.
+}
+
+itmname_Tablet_3	{Tablilla antigua}
+itmdescr_Tablet_3
+{
+Una tablilla de piedra de Chak, dios del agua y la lluvia.
+}
+
+itmname_Tablet_4	{Tablilla antigua}
+itmdescr_Tablet_4
+{
+Una tablilla de piedra de Tohil, dios del fuego y la tormenta.
+}
+
+itmname_Tablet_5	{Tablilla antigua}
+itmdescr_Tablet_5
+{
+Una tablilla de piedra de Kauil, dios de la guerra.
+}
+
+itmname_Tablet_6	{Tablilla antigua}
+itmdescr_Tablet_6
+{
+Una tablilla de piedra de Ek Chuah, dios del comercio.
+}
+
+itmname_alexs_chest	{Caja de acero}
+itmdescr_alexs_chest
+{
+Caja de metal del maestro Alexus, cerrada con seguridad.
+}
+
+itmname_treasure_note_1	{Nota del tesoro}
+itmdescr_treasure_note_1
+{
+Esta nota fue encontrada dentro de un tesoro. Lo más probable es que su autor haya abandonado este mundo hace mucho tiempo. Su contenido debe copiarse con cuidado en una sección especial del cuaderno de bitácora.
+}
+
+itmname_PR_Letter	{Nota dejada por alguien}
+itmdescr_PR_Letter
+{
+Una nota escrita en papel viejo y gastado. Su contenido claramente no está destinado a ojos ajenos.
+}
+
+;====================================== предметы для DLC ===============================
+
+itmname_kaleuche_amulet1 {Extraño amuleto}
+itmdescr_kaleuche_amulet1
+{
+Un original amuleto indio hecho en un río pedregoso y preciosamente pintado.
+}
+
+itmname_kaleuche_amulet1_potion	{Poción de Tuttuathapak}
+itmdescr_kaleuche_amulet1_potion
+{
+Una poción elaborada con Mangarosa por Tuttuathapak, chamán del Caribe. Proporciona un aumento permanente de la Reacción y mejora la destreza con Armas ligeras.
+}
+
+itmname_kaleuche_amulet2 {Amuleto indio}
+itmdescr_kaleuche_amulet2
+{
+Un original amuleto indio hecho en un río pedregoso y precipitosamente pintado.
+}
+itmdescr_kaleuche_amulet2_sword
+{
+Amuleto encantado por Tuttuathapak, chamán del Caribe. Permite que los entes del templo Chavinavi sean vulnerables a tus armas. Aumenta todas las destrezas con armas en un 25%.
+}
+
+itmname_kaleuche_amulet2_potion	{Poción de Tuttuathapak}
+itmdescr_kaleuche_amulet2_potion
+{
+Una poción elaborada con Mangarosa por Tuttuathapak, chamán del Caribe. Da un aumento permanente del Aguante y mejora la destreza con Armas medias.
+}
+
+itmname_kaleuche_amulet3 {Amuleto indio}
+itmdescr_kaleuche_amulet3
+{
+Un original amuleto indio hecho en un río pedregoso y preciosamente pintado.
+}
+itmdescr_kaleuche_amulet3_shield
+{
+Amuleto encantado por Tuttuathapak, chamán del Caribe. Permite que los entes del templo Chavinavi sean vulnerables y te otorga protección contra sus ataques. Reduce todos los daños recibidos en un 25% y evita el envenenamiento.
+}
+
+itmname_kaleuche_amulet3_potion	{Poción de Tuttuathapak}
+itmdescr_kaleuche_amulet31_potion
+{
+Una poción elaborada con Mangarosa por Tuttuathapak, chamán del Caribe. Otorga un aumento permanente del Poder y mejora la destreza con Armas pesadas.
+}
+itmdescr_kaleuche_amulet32_potion
+{
+Una poción elaborada con Mangarosa por Tuttuathapak, chamán del Caribe. Da un aumento permanente de la Intuición y mejora la destreza con Armas de fuego.
+}
+itmdescr_kaleuche_amulet33_potion
+{
+Una poción elaborada con Mangarosa por Tuttuathapak, chamán del Caribe. Da un aumento permanente del Talento y mejora la destreza Sigilo.
+}
+itmdescr_kaleuche_amulet34_potion
+{
+Una poción elaborada con Mangarosa por Tuttuathapak, chamán del Caribe. Da un aumento permanente de la Autoridad y mejora el Liderazgo.
+}
+itmdescr_kaleuche_amulet35_potion
+{
+Una poción elaborada con Mangarosa por Tuttuathapak, chamán del Caribe. Da un aumento permanente de la Suerte y mejora la Fortuna.
+}
+
+itmname_kaleuche_letter	{Nota enrollada}
+itmdescr_kaleuche_letter
+{
+Encuentre al destinatario a medianoche siguiendo el camino que sale de las puertas de la ciudad hacia la selva.
+... en tres días el barco llegará a la costa de Chetumal. La carga será transportada por la noche en dos botes. El segundo barco llegará un día después de la descarga...
+}
+
+itmname_kaleuche_key	{Llave de acero}
+itmdescr_kaleuche_key
+{
+La llave de Reginald Jackson del cofre en el faro de Barbados.
+}
+itmdescr_kaleuche_key_crypt
+{
+Llave de la puerta de la cripta del cementerio.
+}
+itmdescr_kaleuche_key_FMQT
+{
+Llave duplicada del cofre de Levasseur.
+}
+
+itmname_MerrimanBook	{Caja de metal}
+itmdescr_MerrimanBook
+{
+Caja de metal de la guarida de Joachim Merryman.
+}
+
+itmname_KhaelRoa_item	{Piel de jaguar}
+itmdescr_KhaelRoa_item
+{
+Un magnífico regalo del jefe Chavinavi. Es una bella piel de jaguar, encantada por el propio Yum Cimil.
+Aumenta el daño causado con las armas de fuego 10 veces. El efecto dura hasta 2 días.
+
+itmname_key_candlestick_PortRoyal	{Llave}
+itmdescr_key_candlestick_PortRoyal
+{
+Una llave vieja y desgastada. Aún no está claro qué abre.
+}
+
+itmname_key_candlestick_FortFrance	{Llave}
+itmdescr_key_candlestick_FortFrance
+{
+Una llave vieja y desgastada. Aún no está claro qué abre.
+}
+
+itmname_key_candlestick_Villemstad	{Anillo de la Orden Secreta}
+itmdescr_key_candlestick_Villemstad
+{
+Un anillo antiguo y macizo con un rubí. Al parecer, me servirá como llave.
+}
+
+;====================================== предметы для пиратской линейки ===============================
+
+itmname_wolfreeks_book	{Registro de embarque}
+itmdescr_wolfreeks_book
+{
+Registro de embarque de Wulfric Iogansen.
+}
+itmdescr_ignasio_book
+{
+Registro de embarque de Ignacio Marco.
+}
+
+itmname_Bunch	{Un paquete de armas blancas}
+itmdescr_Bunch
+{
+Un paquete de 30 hachas y espadas.
+}
+
+itmname_Dove	{Paloma mensajera}
+itmdescr_Dove
+{
+Una paloma mensajera llamada Espía. Encontrará el camino a La Vega desde cualquier punto del Caribe.
+}
+
+itmname_key_scotland	{Llave oxidada}
+itmdescr_key_scotland
+{
+Una llave vieja encontrada en el esqueleto marchito de un escocés.
+}
+
+itmname_key_ruins	{Llave de plata}
+itmdescr_key_ruins
+{
+Una oscura llave encontrada en unas ruinas.
+}
+
+itmname_indian_poison	{Veneno del pueblo Taíno}
+itmdescr_indian_poison
+{
+Es un veneno letal y peligroso hecho de las frutas de unas lianas muy específicas y del limo de unas ranas venenosas. Incluso la herida más leve siempre causa una intoxicación letal que no se puede curar con antídotos. Este veneno se puede usar para impregnar hojas y balas.
+El efecto se mantiene durante dos días.
+}
+
+itmname_mapEnrico	{Mapa de Camilla}
+itmdescr_mapEnrico
+{
+Lleva al tesoro que hay en un pueblo minero español, perdido y abandonado hace 20 años.  
+}
+
+;====================================== предметы для НСО ===============================
+
+itmname_Reserve_item_01	{Carta sellada}
+itmdescr_Reserve_item_01
+{
+Es una carta de autorización dirigida al capitán del Eleclant.
+}
+itmdescr_Reserve_item_01_1
+{
+Una carta para el director de la Compañía Holandesa de las Indias Occidentales Peter Stuyvesant del chevalier Philippe de Poincy.
+}
+itmdescr_Reserve_item_01_2
+{
+Una carta del director de la Compañía Holandesa de las Indias Occidentales Peter Stuyvesant a Chevalier Philippe de Poincy.
+}
+itmdescr_Reserve_item_01_2
+{
+Una carta para el director de la Compañía Holandesa de las Indias Occidentales Peter Stuyvesant del chevalier Philippe de Poincy.
+}
+itmdescr_Reserve_item_01_3
+{
+Una carta para el gobernador de Jamaica, el coronel Edward Doily, del Chevalier Philippe de Poincy.
+}
+itmname_Reserve_item_01_1	{Libro de contabilidad grueso}
+itmdescr_Reserve_item_01_4
+{
+Libro de cuentas.
+}
+
+;====================================== предметы для Golden girl ===============================
+
+itmname_blackpearl	{Perla negra}
+itmdescr_blackpearl
+{
+Una perla negra legendaria. Sería genial ponerle su nombre a un barco.
+}
+
+;====================================== предметы для Исла Мона ===============================
+
+itmname_islamona_toolbox	{Caja de herramientas}
+itmdescr_islamona_toolbox
+{
+Herramientas de alta calidad para la construcción de barcos y casas. Fabricado en Europa.
+}

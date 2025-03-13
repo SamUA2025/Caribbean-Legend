@@ -533,6 +533,8 @@ void initStartState2Character(ref ch)
 	pchar.RomanticQuest.HorseCheck = -1;
 	// ==> Количество карт в навигационном атласе
 	ch.MapsAtlasCount = 0;
+    // ==> Найдено историй в кладах
+    ch.questTemp.Treasure_Stories = 0;
 	// ==> Номер пиратского флага (берется из текстуры персональных флагов ГГ)
 	ch.Flags.Pirate = 3;
 	// ==> работорговец

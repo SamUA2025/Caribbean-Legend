@@ -2477,20 +2477,8 @@ case "Europe":
 		case "VsD_GiumDyubua_5":
 			dialog.text = "Thank you, Captain. I'll inform our loading crew right away. Thankfully, they haven't finished with the '" + PChar.Ship.Name + "' yet. Good luck on your mission!";
 			link.l1 = "Thanks, although it's been quite chaotic so far. Farewell, Lieutenant.";
-			link.l1.go = "VsD_GiumDyubua_6";
-		break;
-		
-		case "VsD_GiumDyubua_6":
-			DialogExit();
-			
-			sld = CharacterFromID("GiumDyubua");
-			sld.location = "None";
-			LAi_SetActorType(sld);
-			LAi_ActorRunToLocation(sld, "reload", "reload1_back", "none", "", "", "", -1);
-			
-			PChar.quest.VsD_Vzriv.win_condition.l1 = "location";
-			PChar.quest.VsD_Vzriv.win_condition.l1.location = "PortPax_ExitTown";
-			PChar.quest.VsD_Vzriv.function = "VsD_Vzriv";
+			link.l1.go = "exit";
+			AddDialogExitQuestFunction("VsD_GoToCity");
 		break;
 		
 		//Фульк или Алонсо по квесту "Встреча с Диего"
@@ -2516,7 +2504,8 @@ case "Europe":
 			dialog.text = "Is she?! My apologies, Captain. It's hard to say for sure, but it seems the explosion happened on the upper deck, not below. I don't see any active fires, and it looks like we've escaped major damage.";
 			link.l1 = "...";
 			link.l1.go = "VsD_FolkeAlonso_5";
-			sld = CharacterFromID("PortPaxAmmoOff");
+			sld = GetCharacter(CreateCharacterClone(CharacterFromID("PortPaxAmmoOff"), 0));
+			sld.id = "PortPaxAmmoOff_clone";
 			LAi_LoginInCaptureTown(sld, true);
 			ChangeCharacterAddressGroup(sld, "PortPax_town", "quest", "quest1");
 			LAi_SetActorType(sld);
@@ -2524,7 +2513,13 @@ case "Europe":
 		break;
 		
 		case "VsD_FolkeAlonso_5":
-			StartInstantDialog("PortPaxAmmoOff", "VsD_Komendant", "Quest\Sharlie\OtherNPC.c");
+			DialogExit();
+			LAi_SetStayType(pchar);
+			sld = CharacterFromID("PortPaxAmmoOff_clone");
+			sld.dialog.filename = "Quest\Sharlie\OtherNPC.c";
+			sld.dialog.currentnode = "VsD_Komendant";
+			LAi_SetActorType(sld);
+			LAi_ActorDialog(sld, pchar, "", 3, 0);
 		break;
 		
 		case "VsD_Komendant":
@@ -2594,7 +2589,7 @@ case "Europe":
 			link.l1 = "Are you serious? That's the best you can offer?";
 			link.l1.go = "VsD_Komendant_7";
 			sld = CharacterFromID("VsD_Tsyganka");
-			ChangeCharacterAddressGroup(sld, "PortPax_town", "patrol", "patrol14");
+			ChangeCharacterAddressGroup(sld, "PortPax_town", "reload", "reload5_back");
 			LAi_CharacterEnableDialog(sld);
 			LAi_SetActorType(sld);
 			LAi_ActorFollow(sld, pchar, "", -1);
@@ -2621,7 +2616,19 @@ case "Europe":
 		break;
 		
 		case "VsD_Komendant_9":
-			StartInstantDialog("VsD_Tsyganka", "VsD_Tsyganka", "Quest\Sharlie\OtherNPC.c");
+			DialogExit();
+			LAi_SetStayType(pchar);
+			
+			sld = CharacterFromID("VsD_Tsyganka");
+			sld.dialog.filename = "Quest\Sharlie\OtherNPC.c";
+			sld.dialog.currentnode = "VsD_Tsyganka";
+			LAi_SetActorType(sld);
+			LAi_ActorDialog(sld, pchar, "", 3, 0);
+			
+			sld = CharacterFromID("PortPaxAmmoOff_clone");
+			sld.lifeday = 0;
+			LAi_SetActorType(sld);
+			LAi_ActorGoToLocation(sld, "reload", "gate_back", "none", "", "", "", -1);
 		break;
 		
 		case "VsD_Tsyganka":
@@ -2668,18 +2675,6 @@ case "Europe":
 			LAi_LocationFightDisable(&Locations[FindLocation("PortPax_town")], false);
 			LAi_LocationFightDisable(&Locations[FindLocation("PortPax_Fort")], false);
 			
-			sld = CharacterFromID("PortPaxAmmoOff");
-			LAi_LoginInCaptureTown(sld, false);
-			sld.City = "PortPax";
-			sld.CityType = "soldier";
-			sld.standUp = true;
-			sld.Dialog.Filename = "Common_Ammo.c";
-			sld.dialog.currentnode = "First time";
-			LAi_SetLoginTime(sld, 0.0, 24.0);
-			LAi_SetHuberType(sld);
-			LAi_group_MoveCharacter(sld, "FRANCE_CITIZENS");
-			ChangeCharacterAddressGroup(sld, "PortPax_ammo", "sit", "sit1");
-			
 			for (i=1; i<=5; i++)
 			{
 				sld = CharacterFromID("VsD_Guard_"+i);
@@ -2719,6 +2714,7 @@ case "Europe":
 		
 		case "VsD_Tsyganka_Net":
 			DialogExit();
+			LAi_SetPlayerType(pchar);
 			AddQuestRecord("Trial", "7_1");
 			LAi_SetCitizenType(npchar);
 			LAi_CharacterDisableDialog(npchar);
@@ -2726,6 +2722,7 @@ case "Europe":
 		
 		case "VsD_Tsyganka_Da":
 			DialogExit();
+			LAi_SetPlayerType(pchar);
 			AddQuestRecord("Trial", "7_1");
 			AddCharacterExpToSkill(pchar, "Repair", 20);
 			AddMoneyToCharacter(pchar, -1000);

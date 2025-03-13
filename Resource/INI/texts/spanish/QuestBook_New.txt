@@ -1,0 +1,697 @@
+#QUEST JusticeOnSale
+Contrabandista cautivo
+#TEXT 1
+Acepté ayudar a una banda de contrabandistas a rescatar a su capitán encerrado en la prisión de @<cityName>. Seguramente sería mejor no ensuciarme las manos con este asunto, pero me han ofrecido una recompensa decente. Debería decírselo al comandante... ¿O tal vez sería mejor denunciar a toda la banda a las autoridades?
+#TEXT 2
+Estaba ocupado con asuntos más importantes y me olvidé de liberar al capitán de la prisión y del trato con sus muchachos. Ese bribón debería haber utilizado la oportunidad para escaparse, en fin. 
+#TEXT 3
+Liberé al capitán de los contrabandistas y recibí mi recompensa. Qué bien huele el dinero. 
+#TEXT 4
+¡Liberé al capitán de los contrabandistas de la prisión, pero esos sinvergüenzas decidieron no cumplir con el trato! ¡Muy bien, pueden hacer tratos con el mismo diablo! 
+#TEXT 5
+He informado a las autoridades de la ciudad sobre los planes de los contrabandistas, que se las arreglen por sí mismos a partir de ahora. 
+#TEXT 6
+Una parte de los contrabandistas logró escapar. Estoy seguro que el gobernador estará disgustado por mi lentitud. 
+#TEXT 7
+Todos los traficantes obtuvieron lo que merecían, informaré al gobernador sobre el cumplimiento de la misión. 
+
+
+#QUEST AffairOfHonor
+Cuestión de honor
+#TEXT 1
+Por casualidad, me encontré con un oficial muy maleducado. Voy a tener que enseñarle algunos modales para mantener el honor de una dama. Dentro de dos horas nos veremos en el faro. 
+#TEXT 2
+Castigué al villano y resarcí el ultraje cometido. Debo contarle la agradable noticia a la dama. ¡Volveré rápidamente a la ciudad! 
+#TEXT 2_1
+¡Oh, diablos! Me perdí el duelo, qué idiota soy. 
+#TEXT 3
+Un padre desgraciado, un hijo que no sirve para nada y el honor de una dama... Muy bien, veremos cómo termina esto. Visitaré la taberna y el burdel para empezar. 
+#TEXT 3_1
+¡Excelente! Ahora solo me queda una pequeña tarea pendiente... Matar a ese bribón.
+#TEXT 4
+He cumplido con la tarea, padre e hijo pueden dormir bien... hasta la próxima. ¡Me merezco la recompensa, vamos a por ella! 
+#TEXT 4_1
+Bueno, me lo perdí. ¿Y qué? No era tan crucial.
+#TEXT 5
+¿Realmente las cosas están tan mal como para que las autoridades entreguen patentes de corso a borrachos y sinvergüenzas? Iré a la taberna, a ver quién está causando estragos en la población local.
+#TEXT 6
+Un malvado menos en este mundo, qué agradable es hacer buenas acciones. 
+#TEXT 6_1
+Cambié de opinión sobre pelear. No estoy de humor. Además, ¡a la dama hay que darle la oportunidad de sentirse como una concubina de un valiente corsario en lugar de desempeñar el papel de sirvienta en la taberna!
+#TEXT 7
+¡Un duelo! Y la razón no puede ser más justificable. 
+#TEXT 8
+Ese insolente tuvo su merecido. 
+#TEXT 8_1
+Tal vez me acobardé... No lo sé. 
+#TEXT 9
+Un ciudadano me habló de una forma interesante de hacer dinero: Robar a los contrincantes jugando a las cartas. A continuación, acusarlos de hacer trampa y matarlos en un duelo para evitar la difusión de rumores no deseados. Debería comprobar si es cierto. 
+#TEXT 10
+Sí, ese ciudadano tenía razón. El pobre Tom, como todos los demás, también fue víctima de ese canalla. Pero ahora esto llega a su fin. 
+#TEXT 10_1
+¡Pufs! Cartas, tramposos, duelos... ¡No tengo tiempo para tanta blasfemia! 
+#TEXT 11
+¡Un maestro de esgrima que tiene miedo a luchar, no me lo puedo creer! El sobrino del gobernador tendrá dificultades con un maestro así. De todas formas, no es de mi incumbencia. Prefiero ver al comerciante.
+#TEXT 12
+El mercenario está muerto, le diré a la maestra la buena noticia.
+#TEXT 12_1
+Ese mercenario parecía un tipo muy duro, decidí no luchar contra él. 
+#TEXT 13
+Sí, los oficiales no son como solían ser. Pero algunos se esfuerzan en morir en un duelo de taberna en lugar de perecer en glorioso combate. Bueno, lo único que necesito es asegurarme de que el más digno siga vivo. Tengo dos días como máximo, debería comenzar la búsqueda de la amante. 
+#TEXT 14
+Parece que el oficial que yo conocía tuvo suerte, a diferencia del desconocido que ahora está muerto. Es hora de seguir los consejos que recibí y salir de la ciudad por un tiempo.
+#TEXT 14_1
+Decidí no intervenir en los asuntos de otra persona. Permitiré que resuelvan sus problemas por sí mismos. 
+#TEXT 15
+¡'Justicia divina' suena muy bien! Voy a tener que intervenir y defender al agricultor en un duelo.
+#TEXT 16
+¡Una emboscada! Debí haberlo sabido, ahora el agricultor tendrá argumentos sólidos contra su vecino. Vamos a recoger mi merecida recompensa.
+#TEXT 16_1
+Interesante, ¿puedo esperar descuentos en los precios de los contrabandistas locales? 
+
+#QUEST BurntShipQuest
+Nave incendiada en @<cityName>
+#TEXT 1
+La autoridad portuaria de @<cityName>, @<portmanName>, me ha pedido que encuentre un barco peculiar con una característica específica: @<text>.  Me ofreció una recompensa muy decente. Tengo seis meses para hacerlo.
+#TEXT 2
+Pues bien, parece que el jefe de puerto @<portmanName> resolvió todos los problemas por su cuenta. No creo que esté en apuros.
+#TEXT 3
+La autoridad portuaria no lo ha puesto fácil y le dio el dinero del seguro al usurero. Bueno, aún tengo la nave. Vamos a ver cómo lo solucionamos. 
+#TEXT 4
+He recibido una recompensa por el barco especial: @<money> pesos. Con ese dinero, podría comprar dos buques similares. Debo admitir que la autoridad portuaria conoce su negocio y sabe convencer a los chicos del seguro.
+#TEXT 5
+He decidido quedarme con el barco. Me parecía que @<money> pesos era demasiado poco para un barco tan precioso.
+
+
+#QUEST GiveShipLetters
+Documentos extraviados 
+#TEXT   1
+¡Qué curioso hallazgo! Alguien tenía mucha prisa o estaba demasiado distraído y ha perdido el juego completo de los documentos de un barco. Estoy seguro de que su dueño pronto denunciará la pérdida. 
+#TEXT   2
+Bueno, hice un favor a esa buena gente y no me costó ningún esfuerzo. 
+#TEXT   3
+El mundo no está desprovisto de buena gente. ¡Qué bien que el dueño pronto recuperará su pérdida! 
+#TEXT   4
+El mundo no está desprovisto de buena gente. Fue una suerte que lo encontrara en el astillero. 
+#TEXT   5
+La recompensa era pequeña, pero la conseguí casi sin esfuerzo. 
+#TEXT   6
+Tal vez sea lo mejor. He ganado poco, pero al menos ya no tengo que molestarme por esos documentos. 
+#TEXT   7
+Es genial que el comerciante y la mercancía se encontrasen mutuamente. 
+#TEXT   8
+¡Es genial cuando el favor es recompensado consecuentemente! 
+#TEXT   9
+¡Lo que se siembra se cosecha! El documento volverá pronto a su dueño y el dinero está en mi bolsillo. 
+#TEXT  10
+Debería haberle entregado los documentos antes, así su dueño no tendría que haber conseguido unos nuevos. 
+
+
+#QUEST ReasonToFast
+Una buena razón para darse prisa 
+#TEXT   1
+Una encantadora chica contó que un oficial de la guarnición estaba tan apurado por llegar a una bahía que eso obstaculizó sus momentos íntimos.
+¿Quizás debería investigar lo que está pasando?
+#TEXT   2
+Hay muchos charlatanes cerca o, ¿tal vez me estoy imaginando cosas? 
+#TEXT   3
+Quizás he ofendido a la chica, debería haberlo pensado antes...
+#TEXT   4
+¡Qué mala suerte! Ese tipo se presentó en el peor momento y ahora es demasiado tarde para adivinar lo que estaban haciendo... 
+#TEXT   5
+Resulta que fui localizado por un mensajero de los piratas que estaba esperando al oficial. Pero parece que me las arreglé para fingir que soy el mensajero, @<sName>.
+#TEXT   6
+Localicé al oficial de la guarnición corrupto, estoy convencido de que tenía tratos con los piratas. Por desgracia, no he podido arrestarlo. 
+Aun así, fue debidamente castigado. 															   
+#TEXT   7
+No pude hablar con el oficial de la guarnición. Ah, ¡al diablo con él, de todos modos! 
+#TEXT   8
+¡Qué mala suerte! El oficial de la guarnición murió y el misterio con él... 
+#TEXT   9
+Hay un Judas en el ejercito que busca sus 30 monedas de plata. Es interesante, ¿qué clase de favor puede costar un montón de @<sText>?
+#TEXT   10
+¡Una ganga cuestionable! ¡Aun así, @<sName> no buscaría ese mapa sin una razón!
+#TEXT   11
+Un barco de clase @<sShipType>, con el nombre '@<sShipName>' y un cargamento de @<sGoodsName>, está dando vueltas sin escolta. Es una información útil...
+#TEXT   12
+¿El gobernador guarda sus objetos de valor en su propio tocador? Qué descuidado es...
+#TEXT   13
+¡Gracias a Dios, esto ha terminado! 
+#TEXT   14
+¡Una buena espada como recompensa me servirá! ¡También merece la pena comprobar si este mapa vale un puñado de gemas!
+#TEXT   15
+¡Obtuve un mapa pirata y necesito comprobar si vale la pena el dinero gastado tan pronto como pueda!
+#TEXT   16
+Huy... Así es como la confianza en la justicia puede volverse en tu contra... Soy sospechoso del ataque en la fiesta de la guarnición...
+#TEXT   17
+¡Este asunto finalmente ha terminado y, al parecer, no salí perdiendo!
+#TEXT   18
+¡El líder de la patrulla estaba en lo correcto! La recompensa compensa con creces mis gastos.
+#TEXT   19
+Qué desafortunado, no pude sacar nada en claro con la información que compré por un montón de dinero.
+#TEXT   20
+Tuve que dar @<sText> simplemente para no escuchar el aliento caliente de @<sName> a mis espaldas. La próxima vez seré más cauteloso al llevar a cabo este tipo de aventuras.
+#TEXT   21
+@<sName> no se separará de @<sText> fácilmente. Tengo que salir de aquí, rápido.
+#TEXT   22
+Resulta que los piratas se enteraron del error del oficial de la guarnición. Bueno, eso será su funeral, lo más probable es que ya haya muerto. Es hora de que salga de aquí... 
+Parece que no hay nadie que pueda contarle lo de @<sName> y mis actos...
+#TEXT   23
+Los piratas sabían que tenía el mapa de @<sName>. Además, también tenían conocimiento de la isla donde había escondido sus tesoros. Afortunadamente, son más codiciosos que astutos. No pudieron encontrar el tesoro antes que yo.
+#TEXT   24
+Teniendo en cuenta que las fuerzas eran desiguales, me vi obligado a entregar el botín a los cazadores de tesoros de @<sName>. La próxima vez seré más cauteloso al emprender tales aventuras.
+#TEXT   25
+Logré hundir el barco pirata en el cual se orquestó la operación que involucraba al oficial de la guarnición. Seguramente ya debe estar muerto, los piratas nunca perdonan errores como ese... Bueno, parece que no hay nadie para contar los actos de @<sName>...
+#TEXT   26
+Logré salir limpio de la historia con el oficial. No creo que los piratas me persigan para siempre, estoy seguro que tienen otras cosas que hacer.
+
+
+#QUEST PiratesOnUninhabited
+En la costa de @<shoreName>
+#TEXT 1
+En @<shoreName> encontré a @<count> marineros que iban a bordo del barco pirata naufragado: @<shipTypeName>. Me pidieron que los desembarcara en cualquier costa habitada. Bueno, puedo entenderlos, después de todo son prófugos de la ley...
+#TEXT 2
+Dejé a los piratas naufragados en @<toShore> e incluso recibí una pequeña recompensa. Sin duda no es mucho, pero servirá...
+#TEXT 3
+Dejé a los piratas de esa isla deshabitada en @<toShore>. Pero esos sinvergüenzas me exigieron que les diera dinero y me vi obligado a explicarles que no presto dinero a ninguno de los de su clase.
+#TEXT 4
+Dejé a los piratas de esa isla deshabitada en @<toShore> y les presté algo de dinero... Es difícil imaginar cómo me las arreglaría yo mismo si me encontrara en esa situación...
+#TEXT 5
+En @<shoreName> subí a bordo a @<count> marineros de la tripulación del barco pirata naufragado: @<shipTypeName>. Me han pedido que los deje en cualquier costa habitada a cambio de un mapa del tesoro. Bueno, quizá acepte ese mapa... ¿O debería simplemente entregarlos a las autoridades? En ese caso, estoy seguro de que recibiría una recompensa...
+#TEXT 6
+Un bribón eligió retarme y al final pagó por ello.
+#TEXT 7
+El bribón no tenía el mapa encima, pero reveló dónde está el botín del capitán @<capName>. Tendré que buscar en @<toShore>.
+#TEXT 8
+No sé si el tesoro estaba en @<shore>, no pude encontrarlo. Al menos no gasté demasiado tiempo en ello.
+#TEXT 9
+El pirata tenía razón, he encontrado un buen tesoro en @<shore>...
+#TEXT 10
+Ese pirata seguramente no era un tipo sencillo. Resulta que había prometido ese tesoro a más personas. Bueno, al final fui yo quien lo reclamó.
+#TEXT 11
+En @<shoreName> subí a bordo a @<count> marineros que fueron abandonados por el capitán @<pirateName>. ¿Debería dejarlos en cualquier costa habitada? ¿O simplemente entregarlos a las autoridades?
+#TEXT 12
+Decidí que 'más vale pájaro en mano que cien volando' y llevé a los piratas ante el gobernador @<mayorName>. Creo que fue lo correcto. Al menos el dinero ya está tintineando en mi bolsa.
+#TEXT 13
+En @<shoreName> subí a bordo a @<count> marineros que fueron abandonados por el capitán @<badCapName>. Afirman que navega en el @<ship> y comercia con esclavos. Hemos acordado buscarlo. Si todo sale según lo planeado, me quedaré con el cargamento de la bodega y ellos con el barco.
+#TEXT 14
+Abordé la embarcación: @<ship> y pude encontrar en su bodega a los esclavos. Bueno, resulta que tener amigos entre los piratas a veces vale la pena...
+#TEXT 15
+Tuve que hundir el barco: @<ship> y acabar con los piratas. Supongo que nadie se molestará por eso...
+#TEXT 16
+En el fragor de la batalla, hundí la embarcación: @<ship>. Tuve que pagar el valor del barco a los piratas. No era justo dejarlos sin medios para sobrevivir...
+
+#QUEST ShipWrecked
+El náufrago
+#TEXT 1
+En @<ShoreName> subí @<count> marineros a bordo, del destrozado @<ShipType> '@<ShipName>'. Debería dejarlos en algún asentamiento de @<sNation>.
+#TEXT 2
+En @<ShoreName> subí @<count> marineros a bordo, abandonados por el capitán @<sBadName>. Debería dejarlos en algún asentamiento de @<sNation>.
+#TEXT 3
+En @<ShoreName> subí @<count> marineros a bordo, del destrozado @<ShipType> '@<ShipName>'. Debería dejarlos en el asentamiento más cercano.
+#TEXT 4
+En @<ShoreName> subí @<count> marineros a bordo, abandonados por el capitán @<sBadName>. Debería dejarlos en el asentamiento más cercano.
+#TEXT 5
+En @<ShoreName> me he encontrado @<count> marineros del destrozado @<ShipType> '@<ShipName>'. Su capitán debe de haber recibido demasiados golpes en la cabeza, me exige que lo lleve a Dunkerque. No sé qué hacer con ellos. De momento los he subido a bordo. No podía dejarlos en ese lugar desierto.
+#TEXT 6
+Desembarqué al capitán @<sName> y a sus marineros en @<sCity>. He recibido una pequeña recompensa. No es demasiado, pero tampoco viene mal.
+#TEXT 7
+¡Este malhumorado capitán me exige que lo deje en Dunkerque y se niega a abandonar mi barco! ¡Su comportamiento se ha vuelto absolutamente intolerable! ¡No tengo ni idea de qué hacer en esta situación!
+#TEXT 8
+Ese chiflado finalmente obtuvo lo que quería, acabé con él. No tuve otra opción. Estaba delirando sobre tesoros incalculables, pero ni siquiera tenía una cuchara. ¡Vaya bribón!...
+#TEXT 8_1
+¿Qué clase de persona era? Las circunstancias han cambiado, pero eso no justifica sacar armas frente a la gente. Tuve que enseñarles a estos brutos una lección sobre buenos modales.
+#TEXT 9
+Finalmente logré deshacerme del sobreviviente del naufragio, e inclusó me entregó una parte de un mapa. Necesito irme de aquí lo más rápido posible, antes de que se dé cuenta de que lo engañé. Jeje... Dunkerque, Dunkerque...
+#TEXT 10
+En @<ShoreName> me encontré con unos marineros que naufragaron. Debería contárselo al gobernador del asentamiento más cercano de @<sNation>. Supongo que las provisiones que tienen durarán lo suficiente hasta que llegue el barco de rescate.
+#TEXT 11
+En @<ShoreName> me encontré a varios marineros que fueron abandonados por un pirata llamado @<sBadName>. Debería contárselo al gobernador del asentamiento más cercano de @<sNation>. Supongo que las provisiones que tienen durarán lo suficiente hasta que llegue el barco de rescate.
+#TEXT 12
+Las circunstancias no me permitieron regresar a esa desafortunada bahía. Solo puedo esperar que algún capitán haya recogido a los desafortunados marineros...
+#TEXT 13
+Informé demasiado tarde al gobernador de @<sCity> sobre los marineros que dejé en los alrededores de @<ShoreName>. Solo queda rezar para que la ayuda llegue a tiempo...
+#TEXT 14
+Informé al gobernador de @<sCity> sobre los marineros que dejé en los alrededores de @<ShoreName>. Incluso recibí una pequeña recompensa por ello. El gobernador estaba muy contento de que el capitán del barco naufragado hubiera logrado sobrevivir. Organizará rápidamente una expedición de rescate.
+#TEXT 15
+Dejé al capitán @<sName> y a sus marineros en el asentamiento más cercano y fui muy bien recompensado, aunque no pedí ninguna recompensa...
+#TEXT 16
+En @<shoreName> subí a bordo al capitán @<sName> y a @<count> de sus marineros. Afirma que el pirata @<sBadName> inició un motín, le quitó el control de su barco y lo abandonó con sus pobres muchachos en tierra. Le prometí buscar y devolverle su barco '@<ShipName>' a cambio del cargamento de su bodega.
+#TEXT 17
+Como acordamos, dejé al capitán y a sus marineros en el asentamiento. Mi única recompensa fue su agradecimiento, pero tampoco me costó nada.
+#TEXT 18
+Abordé la embarcación: @<ShipType> '@<ShipName>' y, según acordamos, le devolví el barco a @<sName>, habiendo tomado el cargamento. Se hizo justicia.
+#TEXT 19
+En el fragor de la batalla, el barco '@<ShipName>' se hundió con sus mercancías. Me siento mal por el capitán @<sName>, pero lo hecho, hecho está.
+
+
+#QUEST JungleGirl
+Damisela en la jungla
+#TEXT 1
+Le prometí a @<sName>, según acordamos en @<sCity>, que le llevaría @<sText1> perlas grandes y @<sText2> pequeñas para el collar de su amante. Solo tengo 10 días, de lo contrario, todos mis esfuerzos serán en vano.
+#TEXT 2
+A cambio de las perlas, @<sName> me dio un amuleto muy bonito. Nunca se sabe dónde encontrarás algo valioso.
+#TEXT 3
+No he conseguido recolectar las suficientes perlas para @<sName>. Lo siento por ella, pero es culpa suya, no debería haberse involucrado con un amante tan voluble...
+#TEXT 4
+@<sName> afirma que conoce el lugar donde su padre, el famoso pirata @<sPirateName>, escondió su tesoro. Está en @<sTreasureLoc>, deberíamos desembarcar en @<sShore>. Después de encontrar el tesoro, tendré que llevarlo al asentamiento de @<sCity>.
+#TEXT 5
+@<sName> ha muerto y desconozco el lugar donde están ocultos los cofres. Es una lástima, esta vez no tuve suerte.
+#TEXT 5_1
+Decidí no molestarme con la búsqueda del tesoro del padre de @<sName>. Si lo quiere, puede buscarlo por su cuenta.
+#TEXT 6
+El tesoro de @<sPirateName> era realmente vasto. Recibí la mitad. Ahora tengo que llevar a @<sName> de vuelta a su casa en @<sCity> según acordamos.
+#TEXT 7
+@<sName> murió. Lo siento por la chica, acababa de hacerse rica... Qué muerte tan estúpida...
+#TEXT 8
+Dejé a @<sName> en su casa con su parte del tesoro. Como muestra de gratitud, me hizo un regalo muy agradable. Es muy beneficioso hacer feliz a la gente...
+#TEXT 9
+Me he encontrado a @<sText> cerca de la ciudad de @<sCity>, parece que se ha escapado de casa. Afirma que no quiere casarse con el hijo del usurero y me ha rogado que la lleve con su amante, @<sLover>. ¿Qué tengo que hacer con ella? Odiaría arruinar su vida por el resto de sus días, pero también puedo entender a sus padres...
+#TEXT 10
+@<sName> murió... Eso es lo que sucede cuando los jóvenes no prestan atención a sus padres...
+#TEXT 11
+Entregué a la fugitiva a los guardias. Que ellos decidan qué hacer con ella...
+#TEXT 12
+En el asentamiento de @<sCity> la chica se me escapó. Bueno, solo puedo esperar que encuentre la felicidad por la que está dispuesta a sacrificarlo todo. Oh, la juventud...
+#TEXT 13
+Llevé a la fugitiva con su padre, estoy seguro de que era lo correcto. ¿Qué puede ser peor que el dolor de unos padres que han perdido a su única hija? Su padre me recompensó generosamente.
+#TEXT 14
+Llevé a la chica con su amante. A partir de ahora pueden continuar por su cuenta, no soy su niñera.
+#TEXT 15
+Me he comprometido a llevar a la pareja de amantes a la ciudad de @<sCity>, con los padres de su nuevo prometido. Creo que es lo correcto.
+#TEXT 16
+He dejado a la pareja de amantes donde prometí. Ahora iré a @<sText> y reclamaré mi recompensa del padre del novio. ¿Me pregunto si estará feliz de verme?
+#TEXT 17
+Decidí no molestar a los padres del novio, seguramente deben tener otras preocupaciones. Además, después de todo no he gastado demasiado en este asunto.
+#TEXT 18
+El padre del novio me dio las gracias y me hizo un regalo muy decente... Estoy casi celoso por esos dos jóvenes amantes...
+#TEXT 19
+Ver a ese avaro fue una pérdida de tiempo. Casi siento pena por la joven pareja, ninguno de los dos tuvo suerte con sus padres... La gente tiene un duro corazón en este lugar, parece que no hay nada más importante que el oro. Aun así, estoy contento de haber logrado ayudar a los jóvenes. Merecen una vida diferente.
+#TEXT 20
+Me he comprometido en llevar a la chica @<sName>, que ha huido del burdel de @<sBrothelCity>, junto a sus padres en @<sCity>.
+#TEXT 21
+Me he comprometido en llevar a @<sName>, que ha huido del burdel. Tendré que buscar su equipaje en la sala privada, debería haber algo de dinero, documentos, un vestido decente y otras pertenencias de la pobre chica.
+#TEXT 22
+Estaba demasiado ocupado y tuve que dejar a la chica en la taberna. Creo que ella será lo suficientemente astuta como para salir sola de esta situación.
+#TEXT 23
+Hice todo lo que pude. Solo puedo esperar que @<sName> consiga llegar de forma segura a su hogar.
+#TEXT 24
+Dejé a @<sName> según lo acordado en @<sCity>. No la pude ver con sus padres, seguramente tendrán otras preocupaciones...
+#TEXT 25
+Dejé a @<sName> en su casa. Fui recompensado con una espada decente y con una profunda satisfacción moral.
+#TEXT 26
+Dejé a @<sName> en su casa. Fui recompensado con un gran mosquete y con una profunda satisfacción moral.
+#TEXT 27
+Entregué a @<sName> en su casa. Su hermano me ofreció participar en una incursión conjunta contra los piratas, pero tuve que rechazar la oferta.
+
+
+#QUEST ShipEpidemy
+Epidemias
+#TEXT 1
+Parece que he contraído una infección. Probablemente el capitán del '@<sShipName>' no bromeaba sobre la epidemia. Tendré que minimizar mis interacciones con la tripulación y tener más cuidado en el futuro.
+#TEXT 2
+La peor parte de la epidemia ya ha pasado y vuelvo a tener apetito, lo que significa que me estoy recuperando, gracias a Dios.
+#TEXT 3
+Tenemos una epidemia en el barco y los marineros están muriendo por la enfermedad. ¡Que se pudra en el infierno el capitán del '@<sShipName>'! No estaba bromeando... ¿Qué hacemos ahora? Que la Santísima Virgen nos salve a todos.
+#TEXT 4
+La enfermedad está cediendo. ¡Alabada sea la Santísima Madre de Dios! En el futuro necesito ser más cuidadoso...
+
+#QUEST ChurchGenQuest1
+Devolver los manuscritos al sacerdote de @<sCity>.
+#TEXT	1
+El Padre @<sName> me encargó recuperar unos valiosos manuscritos teológicos, cedidos para el bien de la iluminación y por orden de sus superiores al sacerdote de @<sOwnerCity>. Por lo visto no los han regresado a tiempo. Me he comprometido a ayudarlo para resolver este delicado asunto.
+#TEXT 2
+¡Hombres adultos, siervos de Dios, actuando como niños pequeños! ¡Bueno, tendrá que ser así, lo más importante es que tengo los manuscritos! Los llevaré a @<sColony>.
+#TEXT 3_1
+Bueno, es sorprendente ver cómo las personas intentan reivindicar su pereza e irresponsabilidad con algún gran y noble propósito. ¿Cómo se pueden entregar cosas tan valiosas a personas al azar sin ninguna garantía? Qué sacerdote más descuidado... Ahora debo perseguir a @<sCapName>, capitán del '@<sShipName>', por todo el archipiélago.
+#TEXT 3_2
+No será una tarea fácil buscar un barco cuyo nombre desconozco. Y debo actuar rápidamente, antes de que ese capitán temeroso de Dios se deshaga de esos preciosos libros... Lo primero que debo averiguar es a qué se refería el Padre con un nombre 'exaltado'. Quizá deba preguntar en la Autoridad portuaria.
+#TEXT 4
+¿Por qué rayos debería pagar por los impulsos religiosos de otro? ¡Maldita sea! Espero que cerca de la colonia de @<sColony> finalmente alcance al '@<sShipName>' y a su capitán temeroso de Dios al timón. Si consigo esos papeles, quizás el Señor me absuelva de un par de pecados.
+#TEXT 5
+No tengo suerte, estoy seguro que ese @<sName> es un tipo astuto. El sacerdote le encomendó una carga extremadamente valiosa, pero los funcionarios del puerto tiemblan al escuchar su nombre. Bueno, ya veremos qué sucede cuando finalmente nos encontremos en @<sColony>...
+#TEXT 6
+Seguramente ese capitán es una persona muy astuta. Bueno, es hora de encontrarnos cara a cara, tomar esos anhelados libros y entregárselos a su legítimo propietario en @<sColony>.
+#TEXT 7
+Hoy le entregué al sacerdote de @<sColony> sus preciosos manuscritos y recibí una recompensa junto con una advertencia contra el pecado mortal de la avaricia.
+#TEXT 7_2
+Ese viejo tonto de @<sCapName> contrajo una deuda en la taberna y dejó como garantía los valiosos libros y manuscritos. Gastos y más gastos otra vez... Compraré los manuscritos y los entregaré en @<sColony>.
+#TEXT 8
+Otro gasto en mi libro de contabilidad. ¡He pagado la deuda de ese viejo cachalote de @<sName> en la taberna y recuperado los manuscritos del sacerdote de la colonia de @<sColony>! ¡Ahora es el momento de devolverle los manuscritos y mostrarle mi libro de gastos!
+#TEXT 9
+Resulta que aún hay taberneros altruistas. Me apresuraré a zarpar hacia @<sColony> para devolver los manuscritos teológicos y contar la historia de cómo, en cumplimiento de un voto, un hombre entregó estos libros invaluables sin cobrarme un centavo.
+#TEXT 10
+Oh... Nunca me hubiera imaginado que una tarea tan simple consumiera tanto tiempo y esfuerzo. Bueno, al menos el capitán @<sCapName> no me causó mayores problemas. Me dio esos valiosos manuscritos y me dijo que me perdiera, lo cual hice con gusto. Ahora volvamos a @<sColony>.
+
+#QUEST ChurchGenQuest2
+Robo en la iglesia de @<sCity>.
+#TEXT	1
+¡Han robado el dinero de la iglesia! ¿Qué pasa en este mundo? Bueno, mientras el Padre @<sName> sigue arrojando maldiciones sobre las cabezas de esos rufianes, yo debería emprender acciones más efectivas. Y si el Señor no me recompensa por ellas, estoy seguro que el Padre lo hará. No pueden haber ido muy lejos...
+#TEXT	2
+La gente de la ciudad dice que el dinero fue robado por unos bandidos de la zona, que fueron lo suficientemente inteligentes como para esconderse. Quizás debería visitar sus terrenos de caza.
+#TEXT	3
+Es cierto que Dios le da a cada uno lo que amerita, los bandidos obtuvieron lo que se merecían y yo recuperé el dinero de la iglesia. Ahora volveré con el Padre.
+#TEXT	4
+¿No es precioso? Le hice un favor a Dios y tampoco me olvidé de mí mismo. ¡Qué bendición!
+#TEXT	5
+¡Es más de lo que podía esperar! ¡Resulta que trabajar para la iglesia no está tan mal!
+#TEXT	6
+Bueno, soy rico y estoy maldito. Que así sea, con tanto dinero, no importa ni Dios ni el diablo.
+#TEXT	7
+La jungla está llena de sinvergüenzas de todo tipo, pero aún no he encontrado a los que estoy buscando. Tendré que volver a la ciudad para obtener información más precisa sobre su paradero.
+#TEXT	8
+Los ladrones de los bienes de la iglesia eran más inteligentes de lo que pensaba y huyeron del asentamiento. ¡Debo darme prisa e ir a @<sCity> en @<sIsland> antes de que desperdicien todo el dinero en alcohol y prostitutas!
+#TEXT	9
+Bueno, mis contrabandistas resultaron ser fáciles de convencer. Ayudaron a los sinvergüenzas a ganar dinero y los traicionaron por lo mismo. Está bien, iré a @<sShore>.
+#TEXT	10_1
+Esto es otra historia... ¿Podría ser tan traicionero el Padre @<sName>? Bueno, de todos modos, debería hablar con él primero, podría ser completamente inocente...
+#TEXT	10_2
+Esto es otra historia... ¿Podría ser tan traicionero el Padre @<sName>? Bueno, como he matado a todos esos sinvergüenzas, solo el propio Padre puede confirmar o refutar sus palabras...
+#TEXT	11_1
+Finalmente encontré a esos malvados. Por supuesto, no ha sido como buscar el Santo Grial, pero aún así... Bueno, es hora de regresar.
+#TEXT	11_2
+Espero haber hecho algo bueno para que, cuando venga el Día del Juicio Final, el Todopoderoso lo tenga en cuenta. Compartí mis pertenencias con esos desafortunados para indicarles el camino de la rectitud. Por cierto, tendré que decirle al Padre que los bienes de su iglesia también se usaron para el mismo propósito...
+#TEXT	11_3
+Quién podría haber pensado que las propiedades de la iglesia serían tan caras... Bueno, al menos obtuve algo a cambio del dinero. Llevaré el cáliz al Padre, tal vez calme su dolor por el dinero robado...
+#TEXT	11_4
+¡Ser pobre no es pecado... pero ser un mentiroso sí! Y Dios recompensará esa nobleza, los sinvergüenzas que lo desafiaron serán derrotados, salvaré la propiedad de la iglesia y yo recibiré mi recompensa.
+#TEXT	12_1
+Me gustaría creer que el arrepentimiento del sacerdote de @<sCity> fue sincero. Por supuesto que he perdido algo desde el punto de vista material, ¡pero la satisfacción moral lo compensa con creces!
+#TEXT	12_2
+¡Qué giro de eventos! Resulta que incluso los sacerdotes pueden ser víctimas de la codicia. Pero, como dicen, todo lo que empieza bien, termina bien. El Padre @<sName> logró hacer frente a su tentación e incluso compensó mis gastos.
+#TEXT	12_3
+¡Qué giro de eventos! Resulta que incluso los sacerdotes pueden ser víctimas de la codicia. Pero, como dicen, todo lo que empieza bien, termina bien. El Padre @<sName> logró hacer frente a su tentación, pero se olvidó de compensar mis gastos, tal vez estaba demasiado emocionado. Tuve que recordárselo...
+#TEXT	12_4
+En estos tiempos impulsados por la codicia, el Diablo puede seducir incluso al clero, por no mencionar a los laicos. Bueno, puede parecer estúpido, pero no tomé el sucio dinero de ese ladrón con 'Sotana'.
+#TEXT	12_5
+Realmente nuestro Señor es misericordioso si permite que pecadores como el Padre @<sName> dirijan a su crédula congregación. No soy tan bondadoso y estaría feliz de denunciar este robo a las autoridades, pero no tengo pruebas sólidas de su confabulación... Bueno, ya he tenido suficiente con las hazañas en nombre de Dios. Al menos tuve la suerte de conseguir que ese ladrón compensara mis gastos.
+#TEXT	12_6
+Realmente nuestro Señor es misericordioso si permite que pecadores como el Padre @<sName> dirijan a su crédula congregación. No soy tan bondadoso y estaría feliz de denunciar este robo a las autoridades, pero no tengo pruebas sólidas de su confabulación... Bueno, ya he tenido suficiente con las hazañas en nombre de Dios, todo lo que obtuve fueron gastos y desilusiones.
+#TEXT	12_7
+Todavía no pude descartar mis sospechas con respecto al sacerdote de @<sCity>. Por supuesto, la palabra de un sacerdote pesa más que la de un bandido, pero toda esta historia apesta. Bueno, ya he tenido suficiente con las hazañas en nombre de Dios, todo lo que obtuve fueron gastos y desilusiones.
+#TEXT	12_8
+El Padre aceptó la noticia de que todo el dinero de la iglesia será derrochado en alcohol por los bandidos. Bueno, mis gastos tampoco han sido compensados si eso le sirve de consuelo.
+#TEXT	12_9
+Eso no es algo que un buen cristiano hubiera hecho, pero la parroquia no será más pobre y al menos he cubierto parcialmente mis gastos. Lo importante es que los ladrones no pudieron quedarse con las arcas de la iglesia.
+#TEXT	12_10
+Apropiarse del dinero de la iglesia y recibir una recompensa por ello seguramente no sea la acción más virtuosa, pero... Si no cambio las jarcias, cualquiera de los marineros podría caer muerto y ese pecado caería sobre mi alma... En cuanto al Padre, prometo donar a su iglesia tres veces más de lo que me he quedado.
+#TEXT	12_11
+¿Me perdonará el Señor? Solo Él sabe por qué engañé a ese sacerdote de corazón abierto. Eso ya es un pecado, pero hubiera sido incluso peor aceptar el dinero que estaba a punto de darme, en su infinita bondad, para consolarme.
+#TEXT	12_12
+¡Sin dinero! ¡Sin gloria! ¡¡¡Todo lo que me queda son sus sucias insinuaciones!!! ¡Nunca más trataré con estos hipócritas!
+#TEXT	13
+La Biblia dice que Dios no nos enfrenta a pruebas que no podamos superar... Bueno, parece que he perdido mis fuerzas y esta carga se volvió demasiado pesada. Espero que el Padre @<sName> me comprenda cuando le diga que he fracasado en la misión.
+
+
+#QUEST CaptainComission1
+Negocios delicados
+#TEXT	1
+El capitán del @<sShipName>, @<sCapName>, antes de morir me pidió que le dijera a @<sCharName> de @<sCity> que no tuvo tiempo para hacer su trabajo. Tendré que encontrar a esa persona, la última voluntad de un moribundo debe ser respetada...
+#TEXT	2
+Decidí no perder el tiempo en minucias. Seguramente esa persona debe de haber olvidado hace mucho tiempo la tarea que encomendó.
+#TEXT	3
+@<sCharName> me propuso ocuparme del rescate del cautivo @<sCharType>. No acepté hacerlo alegando estar ocupado.
+#TEXT	4
+@<sCharName> de @<sCity> me pidió que entregara 150.000 pesos a @<sPirateName> en @<sPirateCity>, para liberar a su @<sFamilyType> @<sSlaveName>, retenido por los piratas a la espera del rescate. Cuando regrese, recibiré 40.000 pesos por el trabajo.
+#TEXT	5
+Estoy atrapado en una situación desesperada. Resulta que @<sCapName> iba a entregar un rescate de tres cofres con oro a @<sPirateCity> por un prisionero llamado @<sSlaveName>. @<sCharName> me dijo que la entrega aún está en pie. Si no llevo al prisionero a la taberna de @<sCity> en 30 días, prometió enviar cazarrecompensas tras de mí. ¡Cómo se han podido perder esos cofres en el camarote del difunto capitán!
+#TEXT	6
+Fallé al completar la tarea de @<sCharName>, pero debería perdonarme. Después de todo, podía haber muerto como el capitán @<sCapName>.
+#TEXT	7
+Bueno, el tiempo asignado para entregar al cautivo se ha agotado, ahora veremos lo que hará el amenazante señor @<sCharName>.
+#TEXT	8
+Decidí rechazar la misión de @<sCharName>. Puede que se sienta ofendido, pero después de todo le devolví el dinero.
+#TEXT	9
+He liberado al cautivo y debo entregarlo a @<sCharName> en @<sCity>.
+#TEXT	10
+@<sName> no esperó a que llegara el rescate y vendió al cautivo a una plantación en Barbados. Bueno, será lo mejor, estoy seguro que un esclavo no costará más que un rehén. Debo darme prisa en ir a Barbados para visitar al coronel Bishop.
+#TEXT	11
+Tuve que pagar a @<sName>, @<sSum> pesos. Ahora debo apresurarme en ir a @<sCity> en busca de @<sCharName>. Debe de estar preocupado y la recompensa me vendrá bien. 
+#TEXT	12
+El error con los cofres me ha costado mucho. Tuve que pagar a @<sName> la considerable suma de @<sSum> pesos. Pero el cautivo no era una persona corriente y me pidió que lo llevara a @<sCity> a cambio de una información muy valiosa. Estuve de acuerdo teniendo en cuenta que el cliente no parecía dispuesto a pagarme nada.
+#TEXT	13
+El error con los cofres me ha costado mucho. Tuve que pagar a @<sName> la considerable suma de @<sSum> pesos. Parece que el tipo liberado no quiere encontrarse con mi cliente, pero eso no es asunto mío. No necesito más problemas con ese granuja.
+#TEXT	14
+He entregado al ex rehén @<sName> a su pariente. Ahora soy un hombre libre y recibí la recompensa prometida de 40.000 pesos en unos cofres.
+#TEXT	15
+He entregado al ex rehén @<sName> a su pariente, pero se negó a compensar mis gastos adicionales... Las personas se vuelven realmente intratables cuando no necesitan nada de ti.
+#TEXT	16
+Entregué el cautivo al cliente y resultó que era un especialista en @<sSpeciality>, secuestrado por @<sNation>. Me dieron un valioso regalo como recompensa en nombre del gobierno.
+#TEXT	17
+Durante el intento de fuga, @<sName> fue asesinado. Tal vez no debería haberlo sometido a esa prueba. ¿Qué le voy a decir al cliente ahora?
+#TEXT 	17_1
+@<sName> falleció en la jungla. Tal vez no debería haberlo sometido a esa prueba. ¿Qué le voy a decir al cliente ahora?
+#TEXT	18
+Logré organizar la fuga de @<sName> de la plantación. Ahora solo necesito encontrarlo y entregarlo al cliente.
+#TEXT	19
+EL cautivo no es una persona corriente y me ofreció una información muy valiosa a cambio de llevarlo a @<sCity>. Estuve de acuerdo porque el cliente no estaba dispuesto a pagarme nada.
+#TEXT	20
+Parece que el chico liberado no quiere encontrarse con mi cliente, pero eso no es asunto mío. No necesito más problemas con ese granuja.
+#TEXT	21
+Ese ingeniero cautivo me fue bastante útil. Obtuve una información que no tiene precio, ni para un guerrero experimentado.
+#TEXT	22
+Notifiqué a @<sCharName> que su pariente, @<sName>, había muerto y me guardé el dinero del rescate como compensación de mis gastos.
+#TEXT	23
+Notifiqué a @<sCharName> que su pariente, @<sName>, había muerto y le devolví los 150.000 pesos del dinero del rescate. Por supuesto que podría haberle exigido que compensara mis gastos, pero me fue difícil en este caso.
+#TEXT	24
+@<sName> me ha encargado la tarea de hundir dos buques piratas. El '@<sShipName1>' y el '@<sShipName2>', que están en @<sShoreName> y @<sShoreType>. Debo hacerlo en 15 días, antes de que leven anclas.
+#TEXT	25
+He realizado la tarea que me encomendó @<sName>, destruí al '@<sShipName1>' y al '@<sShipName2>'. Y ahora debo apresurarme en ir a @<sCity>, antes de que vendan al cautivo a los esclavistas.
+#TEXT	26
+No logré alcanzar a los piratas, seguramente habrán levado anclas. Tendré que regresar a @<sPirateCity> con las manos vacías.
+#TEXT	27
+No pude llegar a un acuerdo con @<sName>. Ahora no sé si debería volver a @<sCity> para reunirme con @<sCharName>. ¿Qué le diré?
+#TEXT	28
+Después del fracaso de la misión, @<sName> aumentó el rescate a 200.000 pesos. No quise pagarlo con mi propio dinero. Ahora no sé si debería volver a @<sCity> para reunirme con @<sCharName>. ¿Qué le diré?
+#TEXT	29
+Después del fracaso de la misión, @<sName> aumentó el rescate a 200.000 pesos y tuve que pagarlo con mi propio dinero. Ahora debería apresurarme en ir a @<sCity> para encontrarme con @<sCharName>. Quizás el cliente me compense los gastos adicionales.
+#TEXT	30
+No pagaré una suma tan escandalosa. Rescatar a un rehén es una cosa, pero comprar un esclavo de una plantación es una historia diferente... ¿Me pregunto si Bishop reforzó la guardia después del incidente o seguirá ahorrando?
+#TEXT	31
+@<sName> no quiere deshacerse de su rehén sin el rescate. Bueno, tendré que encontrar el dinero o simplemente abandonarlo a su suerte.
+#TEXT	32
+Informé a @<sName> sobre la muerte del rehén. Parece que ahora está en la misma posición desesperada en la que me encontraba antes.
+#TEXT	33
+No pude destruir los barcos piratas: @<sShipName1> y @<sShipName2>. Ahora tendré que regresar a @<sCity> con las manos vacías.
+#TEXT 	34
+Finalmente tengo a @<sName> a bordo. Ahora debo darme prisa en ir a @<sCity> para encontrarme con @<sCharName>, antes de que tenga un ataque al corazón.
+#TEXT 	35
+Eh... No debería haber elegido esta opción. No había necesidad de discutir con @<sName>. Ahora sí que hay que resolver problemas...
+#TEXT 	36
+Eh... No debería haber elegido esta opción. No había necesidad de abandonar la búsqueda de @<sName>. Ahora tuve que canjear al prisionero por 250.000 pesos.
+
+#QUEST CaptainComission2
+Rescate del capitán
+#TEXT	1
+El capitán @<sName> antes de morir me dijo que informara al capitán del @<sShipType> '@<sShipName>', que lo iban a arrestar en @<sCity1> porque las autoridades han olfateado algo... El @<sShipTypeNom> navega desde @<sCity2> y llegará al puerto de @<sCity11> en unos 10 o 15 días. Debo solucionar esto, la última voluntad de un moribundo debe ser respetada.
+#TEXT	2
+Estaba demasiado ocupado para dar el aviso a @<sCapName> sobre el peligro inminente. Supongo que saldrá adelante, si es lo suficientemente inteligente.
+#TEXT	3
+He completado la tarea de @<sName>, pero no pude ayudar a su amigo por estar demasiado ocupado. Es un tipo inteligente y solucionará sus problemas él mismo.
+#TEXT	4
+El capitán @<sName> me pidió que lo ayudara a sacar en secreto una carga de @<sGoods> de @<sShoreName>. Cuando me negué, se quedó con mi barco y me dejó en una costa desierta. Ahora tengo que empezar desde cero. Esto es lo que pasa cuando ayudas a los demás.
+#TEXT	5
+El capitán @<sName> me pidió que lo ayudara a sacar en secreto una carga de @<sGoods> de @<sShoreName>. Cuando me negué, intentó quedarse con mi barco. Debió haberlo pensado mejor, ahora es alimento para los tiburones. Desafortunadamente, no sé dónde está el alijo.
+#TEXT	6
+El capitán @<sName> me pidió que lo ayudara a sacar en secreto una carga de @<sGoods> de @<sShoreName>. Cuando me negué, intentó tomar mi barco y tuve que huir a toda vela.
+#TEXT	7
+El capitán @<sName> me pidió que lo ayudara a sacar en secreto una carga de @<sGoods> de @<sShoreName>. A cambio me quedaré con todo lo que no entre en su bodega... Tendré que amarrar en @<sShoreNameDat> poco después de la medianoche.
+#TEXT	8
+He cambiado de opinión y no contactaré con @<sName>. Dejaré que enfrente las consecuencias por su cuenta.
+#TEXT	9
+Parece que hubo una escaramuza en @<sShoreName>, la patrulla apareció demasiado pronto y el capitán @<sName> murió en ella. Los marineros han recorrido toda la ensenada, pero no han encontrado el alijo. Quizás las autoridades lo han encontrado antes...
+#TEXT	10
+La carga está en la bodega y mi parte es de @<sGoodsQuantity> unidades de @<sGoods>. Es hora de separarnos, deberíamos darnos prisa antes de que la corona envíe una patrulla a por nuestras cabezas.
+#TEXT	11
+La carga está en la bodega y mi parte es de @<sGoodsQuantity> unidades de @<sGoods>. El capitán @<sName> teme una persecución y me ha pedido que le escoltemos a @<sShoreName>, en @<sShoreType>. Decidí ayudarlo por la recompensa de @<sSum> pesos que me ha prometido...
+#TEXT	12
+Una escuadra de patrulla nos estaba esperando al salir de la cala y tuvimos que entablar batalla. El @<sShipType> '@sShipName>' con las bodegas llenas de @<sGoods> y su capitán @<sName> se hundieron en el fondo del mar.
+#TEXT	13
+Entablamos batalla y el @<sShipType> '@<sShipName>' con la bodega llena de @<sGoods> se hundió... Bueno, tal vez fuera la voluntad de Dios... El valiente capitán @<sName> no tuvo tiempo de disfrutar de las nuevas riquezas encontradas.
+#TEXT	14
+El capitán @<sName> y yo decidimos que lo mejor para los dos sería separarnos para no incurrir en obligaciones mutuas. Él se fue a @<sShoreName> y yo fui por mi propio camino.
+#TEXT	15
+No conseguí escoltar al @<sShipType> '@<sShipName>' a tiempo y el capitán @<sName> se negó a pagarme la recompensa. Aun así, no salí perdiendo...
+#TEXT	16
+El capitán @<sName> me atrajo a una trampa y me exigió que le devolviera la carga o que le pagara un rescate en oro. En @<sShoreName>, parte de su heroica tripulación nos estaba esperando y tuve que entablar batalla.
+#TEXT	17
+El capitán @<sName> me atrajo a una trampa y me exigió que le devolviera la carga o que le pagara un rescate en oro. En @<sShoreName>, parte de su heroica tripulación nos estaba esperando y tuve que pagar @<sSum> pesos.
+#TEXT	18
+Resulta que el capitán del barco patrulla @<sShipType>, que se llama @<sName>, tiene buenas conexiones con los contrabandistas. Quizás lo visite en las mazmorras del fuerte.
+#TEXT	19
+Resulta que el capitán del barco patrulla @<sShipType>, que se llama @<sName>, está involucrado en una turbia historia por unas mercancías perdidas. Quizás lo visite en las mazmorras del fuerte. Tendré que pensar en cómo llegar allí...
+#TEXT	20
+No pude encontrar el alijo del capitán @<sName>. Creo que no debería molestar al gobernador de @<sCity> con esto.
+#TEXT	21
+El capitán @<sName> acordó mostrarme su alijo a cambio de la mitad de lo que contiene. Primero tendré que esconder al fugitivo en mi barco y luego me ocuparé del resto.
+#TEXT	22
+Fuimos emboscados por una banda de matones. Probablemente también estaban buscando el escondite. En el enfrentamiento con los bandidos, el capitán @<sName> murió. Ahora podemos olvidarnos del escondite.
+#TEXT	23
+Fracasé estrepitosamente en la misión del gobernador... Qué lástima...
+#TEXT	24
+El alijo del capitán está en @<sShoreName>. Necesito preparar la bodega para almacenar @<sGoodsQuantity> unidades de @<sGoods>. Necesitamos darnos prisa antes de que encuentren el escondite.
+#TEXT	25
+¡Fui un tonto al dejar que el capitán @<sName> se escapara! Pude haber ganado una buena cantidad de dinero.
+#TEXT	26
+Encontramos el alijo y @<sGoodsQuantity> unidades de @<sGoods> fueron cargadas en la bodega. @<sSum1> le pertenecen a mi acompañante. En @<sDays> días, tendré que entregarlo en @<sShoreName> de @<sShoreType>.
+#TEXT	27
+Finalmente el capitán @<sName> me reveló dónde estaba el alijo, pero no estuve dispuesto a compartirlo con él. Intentó discutir mi decisión y pagó por ello. Ahora @<sGoodsQuantity> unidades de @<sGoods> me pertenecen.
+#TEXT	28
+Finalmente, el capitán @<sName> me reveló dónde estaba el alijo, pero no pudo soportar la noticia de que se lo iba a entregar a las autoridades. Tuve que hacer una intervención quirúrgica y el capitán murió a consecuencia. Ahora necesito decirle al gobernador de @<sCity> dónde está el alijo.
+#TEXT	29
+No le dije nada a las autoridades sobre la ubicación del alijo. Creo que lo encontrarán sin mí.
+#TEXT	30
+He cumplido con la tarea del gobernador de @<sCity>. En lugar de una compensación monetaria, recibí un regalo muy decente.
+#TEXT	31
+Llegamos tarde y no había compradores en @<sShoreName>. El capitán @<sName> me dijo que le comprara su parte, pero no vi ninguna razón para tirar dinero por una carga que ya estaba en mi bodega y nuestra disputa se decidió en un duelo.
+#TEXT	32
+Llegamos tarde y no había compradores en @<sShoreName>. El capitán @<sName> me dijo que le comprara su parte por @<sSum> pesos. Cerramos el trato y el capitán me dio un buen regalo. Después nos separamos como amigos.
+#TEXT	33
+Parece que el capitán @<sName> no iba a compartir el botín con su tripulación y tuve que reducir el número de aquellos dispuestos a obtener su parte. El propio capitán tampoco duró mucho más y nuestro acuerdo se anuló por la muerte de uno de los socios. Todo el botín queda en mi poder.
+#TEXT	34
+Parece que el capitán @<sName> no iba a compartir el botín con su tripulación y tuve que reducir el número de aquellos dispuestos a obtener su parte. Además, el capitán me ofreció su parte por @<sSum> pesos. Cerramos el trato y el capitán me dio un buen regalo. Nos separamos como amigos.
+#TEXT	35
+Parece que el capitán @<sName> no iba a compartir el botín con su tripulación y tuve que reducir el número de aquellos dispuestos a obtener su parte. Además, el capitán me ofreció su parte por @<sSum> pesos. También me pidió que lo aceptara en mi tripulación, pero me negué porque es demasiado independiente.
+#TEXT	36
+Parece que el capitán @<sName> no iba a compartir el botín con su tripulación. Tuve que reducir la cantidad de aquellos que querían su parte. Además, el capitán ofreció su parte del botín por @<sSum> pesos. Lo hice y también lo contraté como oficial bajo mi mando, necesito buenos vanguardias.
+#TEXT	37
+Llegué tarde y el capitán de la patrulla @<sShipType>, @<sName>, fue ejecutado con toda su tripulación. Debería averiguar más sobre este asunto.
+#TEXT	38
+Llegué tarde y el capitán de la patrulla @<sShipType>, @<sName>, fue ejecutado con toda su tripulación. Pero es posible que haya logrado desembarcar el contenido de la bodega de su @<sShipTypeQuest>.
+#TEXT	39
+Resulta que las cosas no son tan simples como parecen. El capitán de la patrulla @<sShipType>, @<sName>, fue ejecutado con parte de su tripulación, pero no había pruebas de su crimen. Debería reunirme con @<sCharName>, uno de los confundidos artilleros del @<sShipType> '@<sShipName>'.
+#TEXT	40
+El anterior artillero del @<sShipType> '@<sShipName>', @<sName>, estaba dispuesto a contarme toda la historia del @<sShipTypeQuest> '@<sShipNameQuest>'. Pero ese confundido hombre me pidió un precio escandaloso por la información sobre el alijo y me negué a pagar.
+#TEXT	41
+La conversación con el anterior artillero del @<sShipType> '@<sShipName>' fue muy fructífera. Necesito encontrar @<sSum> pesos, eso es lo que me ha pedido @<sName> por la información sobre el alijo.
+#TEXT	42
+Abandone todo el asunto sobre el alijo del capitán @<sName>. Que me perdone el antiguo artillero @<sCharName>, pero pidió una suma demasiado grande, y tengo asuntos más importantes que atender.
+#TEXT	43
+El anterior artillero del @<sShipType> '@<sShipName>', @<sName>, me contó la historia del final del @<sShipTypeQuest> '@<sShipNameQuest>'. Resulta que el alijo existe y toda la carga del @<sShipTypeQuest> de @<sSum> piezas de @<sGoods> está allí. Necesito preparar la bodega y llegar a @<sShoreName> después de medianoche, @<sName> me estará esperando.
+#TEXT	44
+¡Por mi torpeza perdí la oportunidad de encontrar el alijo del capitán del @<sShipType>! Tal vez @<sCharName> no me esperaba, o tal vez decidió estafarme. De cualquier manera, es una lástima por el dinero y el tiempo perdido...
+#TEXT	45
+Los contrabandistas limpiaron el alijo del capitán. O quizás, @<sCharName> decidió traicionarme y trabajó a dos bandas. De cualquier manera, perdí tiempo y dinero...
+#TEXT	46
+Los contrabandistas llegaron al escondite antes que nosotros. Tuvimos que pelear por la carga. Es una lástima que el artillero @<sCharName> haya muerto. Irónicamente, todos los miembros de la tripulación del desafortunado @<sShipType> '@<sShipName>' están muertos, y ninguno de ellos pudo beneficiarse de su heroica empresa... Tomé todo el cargamento que cabía en la bodega, @<sSum> unidades de @<sGoods>.
+#TEXT	47
+Los contrabandistas encontraron el alijo antes y tuve que recuperar la carga por la fuerza. Tomé todos los bienes que cabían en mi bodega, @<sSum> unidades de @<sGoods>. Ahora solo queda llevar al artillero @<sCharName> al asentamiento @<sCity>.
+#TEXT	48
+Me separé del antiguo artillero del @<sShipType> '@<sShipName>', @<sCharName>, en el puerto de @<sCity>. Como muestra de gratitud, me regaló algo valioso. Al menos alguien de la tripulación del @<sShipType> se benefició de su arriesgada empresa.
+#TEXT	49
+Resulta que el capitán de la patrulla @<sShipType>, @<sName>, fue arrestado por piratería. Quizás lo visite en las mazmorras del fuerte.
+#TEXT	50
+Resulta que el capitán de la patrulla @<sShipType>, @<sName>, fue arrestado por piratería y el gobernador de @<sCity> está buscando su alijo. Me comprometí a ayudarlo en este asunto y obtuve el permiso para visitar al prisionero.
+#TEXT	51
+Me olvidé por completo del contrato del capitán con su carga ... Al diablo con él ... Me las arreglaré de alguna manera. Dejaré al capitán en la primera ciudad.
+#TEXT	52
+Creo que el gobernador no se volverá más pobre por haberle engañado. Y el capitán... Como dicen: si talan el bosque, las astillas vuelan.
+#TEXT	53
+Encontramos el escondite, cargamos @<sGoodsQuantity> unidades de @<sGoods> en la bodega. De ellas, @<sSum1> le pertenece a mi compañero. Tenemos @<sDays> días para llevarlo a @<sShoreName>, que está cerca de @<sShoreType>. ¡Decidí no entregar al capitán a las autoridades y huir con él! ¡Que me busquen los sabuesos del gobernador... que tengan suerte!
+#TEXT	54
+Parece que el capitán @<sName> no pudo compartir el botín con su tripulación. Tuve que reducir el número de personas que querían conseguir su parte. Entonces me ofreció comprarle su parte. Me negué a pagarle y un duelo decidió nuestra disputa a mi favor.
+#TEXT	55
+El capitán @<sName> murió accidentalmente de camino a mi barco desde la prisión... Qué lástima. Ahora podemos olvidarnos del escondite.
+
+#QUEST Convict
+Convictos del estado
+#TEXT	1
+En la jungla de @<sIslandType> me encontré a @<sConvictNum> convictos fugitivos y decidí unirlos a mi tripulación. Alrededor de la medianoche tendré que atracar en @<sShoreName>.
+#TEXT	2
+Unos convictos fugitivos que me encontré en la selva de @<sIslandType> me pidieron que les compre una Tartana o un bote largo, prometieron pagarme el doble de su valor. Tendré que llevarles el barco a @<sShoreName> y tengo como límite hasta mañana por la mañana.
+#TEXT	3
+Cambie de opinión, no ayudaré a los convictos. Tendrán que arreglárselas por su cuenta.
+#TEXT	4
+Llevé el barco a @<sShoreName> y los convictos fugitivos me lo pagaron al completo.
+#TEXT	5
+Llevé el barco a @<sShoreName>. Pero en lugar de pagarme, los convictos me hicieron un regalo decente del que quedé conforme.
+#TEXT	6
+Llevé el barco a @<sShoreName>. Pero esos malditos convictos eligieron ponerme a prueba y tuve que explicarles que es mejor mantenerse fiel a la palabra dada. Es una pena que esa lección ya no les sirva para nada.
+#TEXT	7
+Los convictos han visto que ayer por la noche estaban cargando el barco @<sShipName> con @<sGoodName>. Quien quiera que sean, no pueden haber ido muy lejos.
+#TEXT	8
+En la jungla de @<sIslandType> me encontré con @<sConvictNum> convictos fugitivos. Me pidieron que los llevara al faro de @<sCity> y acepté hacerlo por @<sSum> pesos. Cerca de la medianoche enviaré un bote salvavidas a @<sShoreName>.
+#TEXT	9
+Me negué a llevar a los convictos a bordo y eso desencadenó una agresión poco saludable por su parte. Tuve que pacificarlos a mi manera.
+#TEXT	10
+Los convictos están a bordo. Ahora tengo que darme prisa en zarpar, antes de que aparezca una patrulla.
+#TEXT	11
+Llevé a los convictos fugados al faro. Recibí mi recompensa de @<sSum> pesos en lingotes de oro. Como dicen, el dinero no huele...
+#TEXT	12
+Llevé a los convictos fugados al faro. Pero en lugar de pagarme, me hicieron un decente regalo y quedé conforme con ello.
+#TEXT	13
+Llevé a los convictos fugados al faro. Pero los malditos eligieron ponerme a prueba. Tuve que explicarles que es mejor mantenerse fiel a la palabra dada. Es una pena que esa lección ya no les sirva de nada.
+
+#QUEST HoldQuest
+Capitán cautivo
+#TEXT	1
+El capitán que capturé, @<sName>, me dijo que un rico comerciante está transportando @<sGoods> de @<sCityFrom> a @<sCityTo>. A veces alquila una escolta y es posible interceptar su barco, el '@<sShipName>', al acercarse a cualquiera de esos puertos. Si el capitán dice la verdad, el botín promete ser espectacular. Tuve que liberar al cautivo.
+#TEXT	2
+Antes de que pudiera preparar el asalto, el '@<sShipName>' levó anclas y se alejó. No tengo esperanzas de seguir su rastro.
+#TEXT	3
+No pude capturar el barco '@<sShipName>' cargado con @<sGoods>. No hay esperanzas de seguir su rastro.
+#TEXT	4
+Logré capturar el barco '@<sShipName>' cargado con @<sGoods>.
+#TEXT 	5
+¡En el fragor de la batalla, el barco '@<sShipName>' naufragó y ahora la carga de @<sGoods> descansa en el lecho marino!
+#TEXT	6
+El capitán que capturé, @<sName>, me dijo que en la ciudad de @<sCity> tiene un amigo que se llama @<sNameChar>. Parece que puede pagar un gran rescate por liberar a su antiguo compañero. Tendré que visitar a ese 'amigo' suyo.
+#TEXT	7
+¡El capitán que capturé, @<sName>, intentó engañarme! ¡Bueno, no lo ha conseguido! ¡Lo ahorcaré ahora mismo!
+#TEXT	8
+El dueño de la taberna en @<sCity> me aconsejó visitar a @<sFoundChar>. Si tengo suerte, @<sName> estará con él.
+#TEXT	9
+¡He dejado neciamente que @<sName> se escapara! Podría haber obtenido un buen rescate por ese cautivo.
+#TEXT	10
+¡El capitán que capturé, @<sName>, intentó engañarme! ¡Bueno, no lo ha conseguido! ¡Lo haré ahorcar ahora mismo!
+#TEXT	11
+El capitán que tenía cautivo, @<sName>, no me ha engañado. Su amigo @<sNameChar> pagó sin hacer preguntas la suma de @<sSum> pesos. Tendré que ordenar al contramaestre que envíe a nuestro sufrido cautivo a la orilla.
+#TEXT	12
+El capitán que tenía cautivo, @<sName>, me dijo que en la ciudad de @<sCity> vive un tal @<sNameChar>, que está dispuesto a vender el mapa del tesoro de @<sPirateName>. No sé si es cierto o no, pero tuve que liberarlo. Tendré que hacer una visita a ese @<sNameChar>, antes de que alguien reclame el tesoro por su cuenta.
+#TEXT	13
+No sé si el capitán que tenía cautivo, @<sName>, me ha engañado o simplemente sucedió. Nunca encontré a ese @<sNameChar>, que tenía el mapa... Y no creo que lo haga...
+#TEXT	14
+¡He dejado neciamente que @<sName> se me escapara!
+#TEXT	15
+Compré el mapa de @<sPirateName> por @<sSum> pesos. Espero que el tesoro aún siga allí.
+#TEXT	16
+Decidí no comprar el mapa de @<sPirateName>. @<sSum> pesos era demasiado caro, considerando que el tesoro podría no estar allí...
+#TEXT	17
+No había nada digno en el cofre. Bueno, parece que el propietario del tesoro estuvo aquí antes... O tal vez el astuto @<sName> encontró una manera original de ganar dinero con los incautos.
+#TEXT	18
+¡Bravo por el capitán @<sCapName>, aquí están todos los tesoros! ¡Ha sido un golpe de suerte!
+
+#QUEST zpq
+Carga peligrosa
+#TEXT 0
+Los contrabandistas murmuraban que en una de las colonias españolas de Tierra Firme había un gran problema con el suministro de pólvora del fuerte. Si tengo la oportunidad, debería hablar con los comandantes. Tal vez alguien quiera comprarme este peligroso cargamento. Solo hay dos problemas: primero, dicen que el comandante no se relaciona con delincuentes. Y segundo, la tripulación es muy grande, habrá que tener cuidado con la capacidad del barco y su seguridad. Pero eso será más tarde, primero tengo que encontrar a este potencial comprador.
+#TEXT 1
+El comandante del fuerte de Cumaná me ha pedido que le entregue un lote de barriles de pólvora de 15.000 piezas. La recompensa de 100.000 pesos es muy lucrativa. Decidí emprender esta misión, aunque estoy seguro que tener tanta pólvora en la bodega puede traer grandes problemas.
+#TEXT 2
+Entregué la carga y, a pesar de la mala memoria del comandante del fuerte, conseguí mi recompensa.
+#TEXT 3
+¿Quién podría pensar que el comandante del fuerte fuese un simple ladrón? ¡Usó su posición y me pagó la mitad de la suma acordada! Decidí que la mitad era mejor que nada, especialmente con tanta seguridad presente...
+#TEXT 4
+¡Ese zorro con uniforme de oficial intentó engañarme y apropiarse de la mitad de mi recompensa! ¡No pude ignorar esa traición y tomé lo que me correspondía de su frío cadáver!
+#TEXT 5
+Ese estafador aficionado intentó pagarme la mitad de la suma prometida. Tuve que explicarle quién tenía razón y mis argumentos resultaron ser muy persuasivos. Al final el comandante me pagó una cuarta parte más de lo acordado. Aun así, estoy seguro de que no salió perdiendo.
+#TEXT 6
+Decidí rechazar la misión, 100.000 pesos es una gran cantidad, pero valoro mi propia vida por encima de eso.
+#TEXT 7
+A la salida del fuerte me interceptaron unos bandidos que estaban al acecho y me solicitaron amablemente que les diera todo el dinero. Seguramente fueron contratados por esa rata apestosa. Bueno, tuve que decepcionarlo una vez más...
+#TEXT 8
+A la salida del fuerte me interceptaron unos bandidos que estaban al acecho y me solicitaron amablemente que les diera todo el dinero. Seguramente fueron contratados por esa rata apestosa. Decidí no enfrentarme a ellos porque estaban muy bien armados, así que tuve que entregar todo el dinero...
+
+#QUEST NoiseCemetery
+Ruido en el cementerio
+#TEXT	1
+El guardia del cementerio de la isla de @<sCity> está muerto de miedo. Según él, desde hace varias noches se oyen ruidos extraños y gemidos espeluznantes, como los de un fantasma. Por supuesto, no creo mucho en estos cuentos, pero decidí ayudar al pobre viejo y ver qué pasa allí. En el peor de los casos, tendré que luchar contra algunos merodeadores, o correr por mi vida si se trata realmente de un fantasma.
+Solo tengo que esperar a que anochezca.
+#TEXT	2
+Es divertido y triste a la vez. Todos esos ruidos y gemidos no son para nada los lamentos de un fantasma, sino simples encuentros secretos de una pareja de tortolitos. Sus padres se oponen a que se vean, así que pensaron en buscar un lugar apartado. Ahora puedo tranquilizar al guardia. Pensaré qué decirle en el camino.
+#TEXT	3
+Decidí no arruinar la vida de la desafortunada pareja y no contarle al guardia sobre ellos. El amor juvenil... Esperemos que todo salga bien.
+#TEXT	4
+Le dije la verdad al guardia. Al principio se puso furioso, claro, pero al final se calmó. Todos hemos pecado. Esta pareja simplemente no tenía otro lugar para verse. Amor juvenil... Esperemos que todo les vaya bien.
+#TEXT	5
+Decidí no involucrarme en los ruidos y los terribles gemidos que imaginaba el vigilante. Mi tiempo es más valioso.

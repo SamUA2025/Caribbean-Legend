@@ -909,6 +909,42 @@ void SetPriorityMode(ref chr, int iPMode)
     SendMessage(chr, "lsl", MSG_CHARACTER_EX_MSG, "SetMusketer", iPMode == 2);
 }
 
+// Проверка на наличие локатора шляпы в модели
+bool HasHatLocator(ref chr)
+{
+  object mdl, locs;
+  CreateEntity(&mdl, "MODELR");
+  SendMessage(&mdl, "ls", MSG_MODEL_LOAD_GEO, "Characters\" + chr.model);
+  SendMessage(&mdl, "la", MSG_MODEL_GET_LOCATORS, &locs);
+  DeleteClass(&mdl);
+  
+  int nGroup = GetAttributesNum(&locs);
+  for (int i = 0; i < nGroup; i++) {
+    aref grp = GetAttributeN(&locs, i);
+    int nLoc = GetAttributesNum(grp);
+    for (int j = 0; j < nLoc; j++) {
+      aref loc = GetAttributeN(grp, j);
+      if (GetAttributeName(loc) == "hat") {
+        return true;
+      }
+    }
+  }
+  
+  return false;
+}
+
+// belamour исключения для моделей без локатора шляпы
+bool CanEquipHatDirectly(ref chr)
+{
+	if(!CheckAttribute(chr, "model")) return false;
+	if(chr.model == "Sharle_6") return true;
+	if(chr.model == "Sharle_7") return true;
+	if(chr.model == "Sharle_8") return true;
+	if(chr.model == "Diego_6") return true;
+	
+	return false;
+}
+
 /* Для тестов (TODO: удалить)
 #event_handler("CameraInfo", "CameraInfo");
 void CameraInfo()

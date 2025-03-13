@@ -1,0 +1,180 @@
+info
+{
+    Генератор кладов
+    Скрипт создан ALexusB 05.11.04
+}
+type_full_0
+{
+To #sMapIslName#. Miejsce, gdzie zakopany został skarb, jest oznaczone - to w #sMaplocName#. Słynny pirat ukrył tam swój skarb.
+Sądząc po brązowych plamach wysuszonej krwi, mapa jest autentyczna, co również wskazuje na to, ze dość często zmieniała właścicieli.
+}
+type_full_0_isl {wyspa}
+type_full_0_mein {kontynent}
+
+type_full_1
+{
+Na mapie, która opisuje #sMapIslName#. Skarby muszą się znajdować w #sMaplocName#. Ale tylko sprawdzając, upewnisz się czy ten skarb nadal tam jest.
+Mapa jest dość stara i nie ma wątpliwości co do jej autentyczności.
+}
+type_full_1_isl {wyspa}
+type_full_1_mein {kontynent}
+
+type_full_2
+{
+Mapa wygląda na świeżą, gdyż papier jeszcze nie pożółkł. Jeśli legenda jest prawdziwa, to skarb jest ukryty w #sMaplocName# tam gdzie jest #sMapIslName#. Czy ten skarb naprawde się tam znajduje? Trzeba to sprawdzić.
+}
+type_full_2_isl {wyspie}
+type_full_2_mein {kontynencie}
+
+type_quest_0
+{
+To jest #sMapIslName#. Miejsce, gdzie zakopany został skarb, zostało oznaczone - to w #sMaplocName#. #sMapOwner# ukrył tutaj swój skarb.
+Sądząc po brązowych plamach wysuszonej krwi, mapa jest autentyczna, co również wskazuje na to, że dość często zmieniała właścicieli.
+}
+type_quest_0_isl {wyspa}
+type_quest_0_mein {kontynent}
+
+type_part
+{
+To jedna z części mapy, która najwyraźniej prowadzi do skarbu. Obecnie nie ma wystarczających informacji i nie można określić lokalizacji skarbu na podstawie samego fragmentu. Możesz mieć tylko nadzieje, że w końcu zdobędziesz druga część tej mapy, która powinna gdzieś się znajdować.
+I wtedy wszystko bedzie jasne jak słońce.
+}
+
+type_fake
+{
+Ta mapa wskazuje lokalizacje pewnego skarbu. Oczywiście możesz sprawdzić, czy skarb ten jest, czy nie, ale z całą pewnością jest to fałszywka.
+Powinieneś rzucić tym papierkiem w człowieka, który ci to sprzedał i odbyć z nim poważną rozmowę.
+}
+
+
+Antigua_Grot 			{w jaskini na prawo od Zatoczki Falmouth}
+Antigua_Grot_box1 		{w skrzyni nad wielką skałą}
+
+SentJons_TownCave 		{w lochach miasta St. John}
+SentJons_TownCave_box1 	{pod deskami w ślepym zauku}
+SentJons_TownCave_box2 	{w jednym z tych ślepych zaułków }
+SentJons_TownCave_box3 	{przy zablokowanym przejściu}
+ 
+Barbados_Cave			{w jaskini niedaleko Bridgetown}		
+Barbados_Cave_box1		{pod deskami w ślepym zauku}
+
+Beliz_Cave 				{w jaskini na prawo od wyjścia z Belize}
+Beliz_Cave_box1			{w skrzyni zaraz obok kamiennego mostu}
+Beliz_Cave_box2			{w skrzyni nad wielką skałą}
+Beliz_Cave_box3			{w skrzyni przy linie, zwisającej z sufitu}
+
+Beliz_Cave_2 			{w jaskini naprzeciwko wyjścia z Belize}		
+Beliz_Cave_2_box1		{pod deskami w ślepym zauku}
+
+Bermudes_Dungeon 		{w piwnicy pod stocznią w Sharptown}	
+Bermudes_Dungeon_box1	{w skrzyni za zamkniętymi drzwiami}
+Bermudes_Dungeon_box2	{w skrzyni za otwartymi drzwiami}
+Bermudes_Dungeon_box3	{w skrzyni w ślepym zauku}
+Bermudes_Dungeon_box4	{w skrzyni za beczkami}
+
+Caracas_Grot 			{w jaskini na prawo od wyjścia z Caracas}	
+Caracas_Grot_box1		{w skrzyni nad wielką skałą}
+
+Cartahena_Cave			{w jaskini naprzeciwko wyjścia z Cartagena}	
+Cartahena_Cave_box1		{w skrzyni pod pochodnią}
+Cartahena_Cave_box2		{w skrzyni w ślepym zauku}
+Cartahena_Cave_box3		{w skrzyni zaraz obok pochodni}
+
+Caiman_Grot				{w jaskini na prawo od Pustynnego Wybrzeża}
+Caiman_Grot_box1		{w skrzyni nad wielką skałą}
+
+Charles_Grot			{w jaskini na prawo od Zatoki Półksiężyca}	
+Charles_Grot_box1		{w skrzyni na wybrzeżu}
+
+Cuba_Grot				{w jaskini na prawo od Przylądka Camaguey}
+Cuba_Grot_box1			{w skrzyni na wybrzeżu}
+
+Cumana_Cave				{w jaskini na prawo od Zatoczki Carupano}
+Cumana_Cave_box1		{w skrzyni zaraz obok kamiennego mostu}
+Cumana_Cave_box2		{w skrzyni nad wielką skałą}
+Cumana_Cave_box3		{w skrzyni przy linie, zwisającej z sufitu}
+
+Curacao_Cave			{w jaskini na prawo od Białej Laguny}	
+Curacao_Cave_box1		{w skrzyni pod pochodnią}
+Curacao_Cave_box2		{w skrzyni w ślepym zauku}
+Curacao_Cave_box3		{w skrzyni zaraz obok pochodni}
+
+Dominica_Grot			{w jaskini na lewo od Zatoki Scott's Head}	
+Dominica_Grot_box1		{w skrzyni na wybrzeżu}
+
+Guadeloupe_Cave			{w jaskini na lewo od latarni morskiej Guadeloupe}
+Guadeloupe_Cave_box1	{w skrzyni w niszy za pochodnią}
+Guadeloupe_Cave_box2	{w skrzyni w niszy za filarem}
+Guadeloupe_Cave_box3	{w skrzyni za kamieniami przy ścianie}
+
+Hispaniola_Cave			{w jaskini niedaleko Port-au-Prince}		
+Hispaniola_Cave_box1	{w skrzyni zaraz obok kamiennego mostu}
+Hispaniola_Cave_box2	{w skrzyni na wielkiej skale}
+Hispaniola_Cave_box3	{w skrzyni przy linie, zwisającej z sufitu}
+
+Jamaica_Grot			{w jaskini na prawo od latarni morskiej Port-Royal}
+Jamaica_Grot_box1		{w skrzyni nad wielką skałą}
+
+Maracaibo_Cave			{w jaskini naprzeciwko wyjścia z Maracaibo}
+Maracaibo_Cave_box1		{w skrzyni pod pochodnią}
+Maracaibo_Cave_box2		{w skrzyni w ślepym zauku}
+Maracaibo_Cave_box3		{w skrzyni zaraz obok pochodni}
+
+Marigo_Cave				{w jaskini naprzeciwko wyjścia z Philipsburg}
+Marigo_Cave_box1		{w skrzyni pod pochodnią}
+Marigo_Cave_box2		{w skrzyni w ślepym zauku}
+Marigo_Cave_box3		{w skrzyni zaraz obok pochodni}
+			
+Panama_Cave				{w jaskini na lewo od wyjścia z Portobello}
+Panama_Cave_box1		{pod deskami w ślepym zauku}
+
+Pearl_Grot				{w jaskini przy zachodnim wybrzeżu między Belize a Blueweld}	
+Pearl_Grot_box1			{w skrzyni nad wielką skałą}
+
+PortoBello_Cave			{w jaskini na prawo od Zatoki Komarów}		
+PortoBello_Cave_box1	{pod deskami w ślepym zauku}
+
+SanJuan_Cave			{w jaskini niedaleko San Juan}		
+SanJuan_Cave_box1		{w skrzyni zaraz obok kamiennego mostu}
+SanJuan_Cave_box2		{w skrzyni na wielkiej skale}
+SanJuan_Cave_box3		{w skrzyni przy linie, zwisającej z sufitu}
+
+SantaCatalina_Cave		{w jaskini na prawo od Zatoczki Pereł}
+SantaCatalina_Cave_box1	{w skrzyni pod pochodnią}
+SantaCatalina_Cave_box2	{w skrzyni w ślepym zauku}
+SantaCatalina_Cave_box3	{w skrzyni zaraz obok pochodni}
+
+SantaCatalina_Grot		{w jaskini na prawo od Zatoki San Juan del Norte}
+SantaCatalina_Grot_box1	{w skrzyni na wybrzeżu}
+
+SantaCatalina_PearlCave	{w jaskini na lewo od Zatoki San Juan del Norte}
+SantaCatalina_PearlCave_box1	{w skrzyni zaraz obok kamiennego mostu}
+SantaCatalina_PearlCave_box2	{w skrzyni na wielkiej skale}
+SantaCatalina_PearlCave_box3	{w skrzyni przy linie, zwisającej z sufitu}
+
+Tenotchitlan_Cave		{w jaskini na północ od Starożytnej Swiątyni}
+Tenotchitlan_Cave_box1	{w skrzyni zaraz obok kamiennego mostu}
+Tenotchitlan_Cave_box2	{w skrzyni na wielkiej skale}
+Tenotchitlan_Cave_box3	{w skrzyni przy linie, zwisającej z sufitu}
+
+Terks_Grot				{w jaskini na prawo od Zatoki Północnej}
+Terks_Grot_box1			{w skrzyni nad wielką skałą}
+
+Tortuga_Grot			{w jaskini naprzeciwko Plaży Rybiego Oka}
+Tortuga_Grot_box1		{w skrzyni na wybrzeżu}
+
+Tortuga_Cave			{w lochach Tortugi}
+Tortuga_Cave_box1		{w skrzyni za zamkniętymi drzwiami}
+
+Trinidad_Grot			{w jaskini naprzeciwko latarni morskiej Trynidad i Tobago}
+Trinidad_Grot_box1		{w skrzyni na wybrzeżu}
+
+Martinique_Grot 		{w jaskini niedaleko Plaży Lamentin}
+Martinique_Grot_box1 	{w skrzyni na wybrzeżu}
+
+FortFrance_Dungeon		{w lochach St. Pierre}
+FortFrance_Dungeon_box1	{w skrzyni na wzniesieniu}
+FortFrance_Dungeon_box2	{w skrzyni za otwartymi drzwiami na górnym piętrze}
+FortFrance_Dungeon_box3	{w skrzyni niedaleko windy}
+FortFrance_Dungeon_box4	{w skrzyni za otwartymi drzwiami na dolnym piętrze}
+FortFrance_Dungeon_box5	{pod skrzyniami}

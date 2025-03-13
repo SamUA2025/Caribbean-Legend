@@ -374,6 +374,7 @@ UnderWater		{Underwater}
 Grotto			{Grotto}
 Dunes house		{Dune House}
 Torture room	{Torture room}
+Wine Cellar 	{Wine Cellar}
 
 cabine			{Cabin}
 My_Campus		{Wardroom}

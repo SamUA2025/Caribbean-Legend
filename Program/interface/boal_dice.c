@@ -179,6 +179,18 @@ void Exit()
 		AddMoneyToCharacter(pchar, iMoneyP - sti(pchar.Money)); // mitrokosta раздача денег теперь в конце
 		AddMoneyToCharacter(npchar, iMoneyN - sti(npchar.Money));
     	Statistic_AddValue(Pchar, "GameDice_Win", iHeroWin);
+    	Statistic_AddValue(Pchar, "GameDice_WinMoney", iMoneyP);
+		if(!CheckAttribute(Pchar,"questTemp.hat7"))
+		{
+			if(Statistic_AddValue(Pchar, "GameDice_WinMoney", 0) + Statistic_AddValue(Pchar, "GameCards_WinMoney", 0) > 7776)
+			{
+				if(sti(Pchar.Ship.Type) != SHIP_NOTUSED)
+				{
+					locations[FindLocation("My_Deck")].box1.items.hat7 = 1;
+					Pchar.questTemp.hat7 = true;
+				}
+			}
+		}
 		Achievment_SetStat(25, iHeroWin);
 		pchar.systeminfo.InGameNotifications = true;
     	AddCharacterExpToSkill(Pchar, SKILL_FORTUNE, iExpRate*4*iHeroWin);

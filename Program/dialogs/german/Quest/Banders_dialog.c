@@ -239,11 +239,11 @@ void ProcessDialogEvent()
 
 void GetBandersTradeShore()//выберем остров для торгашей и курьера
 {
-	pchar.questTemp.jailCanMove.Deliver.Island = GetRandomIslandId();
+	pchar.questTemp.jailCanMove.Deliver.Island = GetRandIslandId();
 	pchar.questTemp.jailCanMove.Deliver.Island.Shore = GetIslandRandomShoreId(pchar.questTemp.jailCanMove.Deliver.Island);
 	while (pchar.questTemp.jailCanMove.Deliver.Island.Shore == "")
 	{
-		pchar.questTemp.jailCanMove.Deliver.Island = GetRandomIslandId();
+		pchar.questTemp.jailCanMove.Deliver.Island = GetRandIslandId();
 		pchar.questTemp.jailCanMove.Deliver.Island.Shore = GetIslandRandomShoreId(pchar.questTemp.jailCanMove.Deliver.Island);
 		if (!isLocationFreeForQuests(pchar.questTemp.jailCanMove.Deliver.Island)) pchar.questTemp.jailCanMove.Deliver.Island.Shore = "";
 	} 

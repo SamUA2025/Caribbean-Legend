@@ -1,6 +1,6 @@
 Tonzag_1
 {
-bounty hunters
+Kopfgeldjäger
 }
 
 Tonzag_2
@@ -14,17 +14,17 @@ Tonzag_3
 
 Tonzag_4
 {
-6 hours have passed...
+6 Stunden sind vergangen...
 }
 
 Tonzag_5
 {
-Exploration mode: timer is disabled.
+Erkundungsmodus: Der Timer ist deaktiviert.
 }
 
 Tonzag_6
 {
-Bronze Horseman Unlocked
+Bronzereiter freigeschaltet
 }
 
 Tonzag_7

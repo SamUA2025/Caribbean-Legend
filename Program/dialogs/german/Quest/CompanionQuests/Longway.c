@@ -1858,6 +1858,7 @@ void ProcessDialogEvent()
 		case "PZ_Batavia_BitvaResidensia_AntoniOneDimen_final":
 			DialogExit();
 			RemoveCharacterEquip(PChar, GUN_ITEM_TYPE);
+			RemoveCharacterEquip(PChar, MUSKET_ITEM_TYPE);
 			if (CheckAttribute(pchar, "questTemp.PZ_Batavia_resedinsia_Go"))
 			{
 				TakeItemFromCharacter(pchar, "blade_30");
@@ -1875,7 +1876,7 @@ void ProcessDialogEvent()
 			}
 			EquipCharacterByItem(Pchar, "blade_11");
 			pchar.model = "Longway";
-			pchar.model.animation = "man";
+			pchar.model.animation = "Longway";
 			Characters_RefreshModel(pchar);
 			
 			

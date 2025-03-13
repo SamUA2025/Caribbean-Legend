@@ -1,0 +1,24 @@
+reaction_functions_1
+{
+Mangarosa potion overdose!
+}
+
+reaction_functions_2
+{
+You got poisoned
+}
+
+reaction_functions_3
+{
+Special Mangarosa Potion Used!
+}
+
+reaction_functions_4
+{
+The effect of the mangarosa potion has ended
+}
+
+reaction_functions_5
+{
+Une journée chanceuse pour un accord, les cales sont pleines de marchandises ! +
+}

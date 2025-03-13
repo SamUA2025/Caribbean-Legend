@@ -1,0 +1,84 @@
+GoldenGirl_1
+{
+¿Has oído hablar de esa costosa cortesana de las Colonias del Norte que ahora dirige la Casa del Placer en St. Pierre? Dicen que organiza fiestas privadas de vez en cuando, y solo lo más alto de la sociedad tiene acceso. El mejor vino, mujeres deslumbrantes y apuestas sin límite, todo lo que un verdadero noble aprecia. Conseguir una invitación vale su peso en oro.
+}
+
+GoldenGirl_2
+{
+Dicen que la propia marquesa Botot es ahora huésped de St. Pierre. La mujer más cara de la Nueva Francia. A veces organiza fiestas solo para la crème de la crème. Un verdadero nido de los vicios más refinados. Se rumorea que un banquero llegó a perder hasta su propio banco en una apuesta allí, imagínate eso. Pero, sin invitación, ni siquiera el más rico es bienvenido.
+}
+
+GoldenGirl_3
+{
+El burdel de St. Pierre ahora está bajo el mando de una cortesana de élite. El lugar en sí no ha cambiado mucho, pero las fiestas privadas que organiza… la gente cuenta historias. Dicen que es como en el buen viejo París: el mejor vino, las mejores mujeres y la mejor compañía. Y los invitados más peculiares, como almirantes españoles y barones piratas. ¡Increíble, eh?
+}
+
+GoldenGirl_4
+{
+Julianne
+}
+GoldenGirl_5
+{
+Botot
+}
+
+GoldenGirl_6
+{
+Angerran
+}
+GoldenGirl_7
+{
+de Chievous
+}
+
+GoldenGirl_8
+{
+William
+}
+GoldenGirl_9
+{
+Cortney
+}
+
+GoldenGirl_10
+{
+Bart
+}
+GoldenGirl_11
+{
+Portugal
+}
+
+GoldenGirl_12
+{
+Hernando
+}
+GoldenGirl_13
+{
+Vasces
+}
+
+GoldenGirl_14
+{
+Exploration mode: timer is not disabled. Meet the deadline!
+}
+
+GoldenGirl_15
+{
+Nayade
+}
+
+GoldenGirl_16
+{
+They say madam Botot disappeared and left her luxury house to her trusted manager. Imagine all the sorrow fallen upon noble youngsters!
+}
+
+GoldenGirl_17
+{
+Next morning...
+}
+
+GoldenGirl_18
+{
+Han pasado algunos días...@<NewStr()>Usted y el baronet Courtney llegaron a Guadalupe.
+}

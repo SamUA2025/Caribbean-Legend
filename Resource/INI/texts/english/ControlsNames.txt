@@ -47,12 +47,12 @@ Camera zoom out
 
 ChrAiming
 {
-Aiming (hold)
+Marksman mode (hold)
 }
 
 ChrAimingShot
 {
-Shoot while aiming
+Shoot
 }
 
 ChrCamCameraRadius

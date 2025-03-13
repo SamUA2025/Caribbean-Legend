@@ -1241,8 +1241,8 @@ int Dead_FindCloseBody()
 	{
 	    x1 = Dead_Characters[i].px;
 		z1 = Dead_Characters[i].pz;
-		rd = sqrt(sqr(x1 - x) + sqr(z1 - z))
-		if ( rd < 1.8)
+		rd = sqrt(sqr(x1 - x) + sqr(z1 - z));
+		if (rd < 1.8)
 		{
 		    if (min_rd > rd)
 		    {
@@ -1253,19 +1253,75 @@ int Dead_FindCloseBody()
 	}
 	return dchr_index;
 }
+
+// Приоритет у непустых трупов
+int Dead_FindCloseBodyExt(ref isEmpty)
+{
+    isEmpty = true;
+    aref arItems;
+    bool bLoot, bOk;
+
+	int dchr_index = -1;
+	float x, y, z;
+	float x1, y1, z1, rd, min_rd = 100;
+	GetCharacterPos(pchar, &x, &y, &z);
+    for(int i = 0; i < Dead_Char_num; i++)
+	{
+	    x1 = Dead_Characters[i].px;
+		z1 = Dead_Characters[i].pz;
+		rd = sqrt(sqr(x1 - x) + sqr(z1 - z));
+		if (rd < 1.8)
+		{
+            makearef(arItems, Dead_Characters[i].items);
+            bOk = CheckAttribute(&Dead_Characters[i], "money") && sti(Dead_Characters[i].money) > 0;
+            bLoot = GetAttributesNum(arItems) > 0 || bOk;
+			if(bLoot)
+			{
+				if(rd < min_rd || isEmpty)
+				{
+					min_rd = rd;
+					dchr_index = i;
+					isEmpty = false;
+				}
+			}
+			else if(isEmpty && rd < min_rd)
+			{
+				min_rd = rd;
+				dchr_index = i;
+			}
+		}
+	}
+	return dchr_index;
+}
+
 void Dead_OpenBoxProcedure()
 {
+    if (CheckAttribute(pchar, "GenQuest.Notsearchbody"))
+        return; //Jason
+
 	ref chr = GetMainCharacter();
 	int dchr_index;
     ref deadCh;
-    dchr_index = Dead_FindCloseBody();
-    if (dchr_index == -1) return;
-	if (CheckAttribute(pchar, "GenQuest.Notsearchbody")) return;//Jason
-    
-	deadCh = &Dead_Characters[dchr_index];
-	
+
+    bool isEmpty;
+    dchr_index = Dead_FindCloseBodyExt(&isEmpty);
+    if (dchr_index == -1)
+        return; // Лог на этот случай в другом месте
+    deadCh = &Dead_Characters[dchr_index];
+    if (isEmpty)
+    {
+        // Дубль квестовых триггеров из интерфейса:
+        ShipSituation_SetQuestSituation(ShipSituation_0);
+        // Вывести лог, убрать труп
+		notification(GetConvertStr("NoLootCorpse" + rand(20), "ReactionsTexts.txt"),"x");
+        Dead_DelLoginedCharacter(deadCh);
+        return;
+    }
+
+    // Лут есть, открываем интерфейс
 	Dead_LaunchCharacterItemChange(deadCh);
 }
+
 void Dead_LaunchCharacterItemChange(ref chref)
 {
 	if(procInterfacePrepare(INTERFACE_ITEMSBOX))
@@ -1276,7 +1332,6 @@ void Dead_LaunchCharacterItemChange(ref chref)
 		InitInterface_RS(Interfaces[CurrentInterface].IniFile,&charef, "666");
 	}
 }
-
 // boal dead can be searched 14.12.2003 <--
 
 void MakePoisonAttack(aref attack, aref enemy)

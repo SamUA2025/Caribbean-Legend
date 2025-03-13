@@ -3,776 +3,776 @@ newLine {
 
 }
 
-HelpChooser {Select help topic}
-MainInterface {Interface controls}
+HelpChooser {Hilfethema auswählen}
+MainInterface {Bedienung der Oberfläche}
 DialogControls {Dialog}
-WorldMapControls {World map}
-BattleInterfaceControls {Interface controls}
-Sailing1Pers {1st person sea}
-Sailing3Pers {3rd person sea}
-FightModeControls {Combat mode}
-PrimaryLand {Controls on land}
+WorldMapControls {Weltkarte}
+BattleInterfaceControls {Bedienung der Oberfläche}
+Sailing1Pers {1st Person Meer}
+Sailing3Pers {3rd Person Meer}
+FightModeControls {Kampfmodus}
+PrimaryLand {Steuerung an Land}
 
 
 
 ChrCamTurnV
 {
-Vertical movement of the camera following character
+Vertikale Bewegung der Kamera bei der Verfolgung des Spielers
 }
 
 ChrCamTurnH
 {
-Horizontal movement of the camera following character
+Horizontale Bewegung der Kamera bei der Verfolgung des Spielers
 }
 
 ChrCamCameraSwitch
 {
-Camera mode
+Kameramodus
 }
 
 SwitchCameraOffset
 {
-Camera view
+Kameraansicht
 }
 
 CharacterCamera_Forward
 {
-Camera zoom in
+Kamera hereinzoomen
 }
 
 CharacterCamera_Backward
 {
-Camera zoom out
+Kamera herauszoomen
 }
 
 ChrAiming
 {
-Aiming (hold)
+Zielen (Halten)
 }
 
 ChrAimingShot
 {
-Shoot while aiming
+Schießen
 }
 
 ChrCamCameraRadius
 {
-Camera zoom
+Kamera zoomen
 }
 
 ChrCamNormalize
 {
-Center camera
+Kamera zentrieren
 }
 
 ShipCamera_Turn_V
 {
-Vertical movement of the camera following ship
+Vertikale Bewegung der Kamera bei der Verfolgung des Schiffes
 }
 
 ShipCamera_Turn_H
 {
-Horizontal movement of the camera following ship
+Horizontale Bewegung der Kamera bei der Verfolgung des Schiffes
 }
 
 ShipCamera_Forward
 {
-Zoom in
+Hereinzoomen
 }
 
 ShipCamera_Backward
 {
-Zoom out
+Herauszoomen
 }
 
 DeckCamera_Turn_V
 {
-Vertical camera rotation (deck view)
+Vertikale Kameradrehung (Deckansicht)
 }
 
 DeckCamera_Turn_H
 {
-Horizontal camera rotation (deck view)
+Horizontale Kameradrehung (Deckansicht)
 }
 
 DeckCamera_Forward
 {
-Forward (deck view)
+Vorne (Deckansicht)
 }
 
 DeckCamera_Backward
 {
-Back (deck view)
+Rückseite (Deckansicht)
 }
 
 DeckCamera_Left
 {
-Strafe left (deck view)
+Linke Seite (Deckansicht)
 }
 
 DeckCamera_Right
 {
-Strafe right (deck view)
+Rechte Seite (Deckansicht)
 }
 
 ChrTurnH
 {
-Character rotation
+Charakterdrehung
 }
 
 ChrTurnV
 {
-Character movement
+Charakterbewegung
 }
 
 ChrTurnHL
 {
-Rotate character left
+Charakter nach links drehen
 }
 
 ChrTurnHR
 {
-Rotate character right
+Charakter nach rechts drehen
 }
 
 ChrAction
 {
-Perform action
+Aktion ausführen
 }
 
 ChrForward
 {
-Move forward
+Vorwärts bewegen
 }
 
 ChrForward1
 {
-Move forward
+Vorwärts bewegen
 }
 
 ChrForward2
 {
-Move forward (alt.)
+Vorwärts bewegen (alt.)
 }
 
 ChrBackward
 {
-Move backwards
+Rückwärts bewegen
 }
 
 ChrBackward1
 {
-Move backwards
+Rückwärts bewegen
 }
 
 ChrSwitchWalk
 {
-Walk/Run
+Laufen/Rennen
 }
 
 ChrSprint
 {
-Sprint
+Sprinten
 }
 
 ChrRunStick
 {
-Walk/Run
+Laufen/Rennen
 }
 
 ChrBlock
 {
-Block
+Blocken
 }
 
 ChrRecoil
 {
-Snap back
+Rückstoß
 }
 
 ChrParry
 {
-Parry (alt.)
+Parieren (alt.)
 }
 
 ChrAttackForce
 {
-Fast attack
+Schneller Angriff
 }
 
 ChrAttackFast
 {
-Slash attack
+Hieb-Angriff
 }
 
 ChrAttackRound
 {
-Group attack
+Rundumschlag
 }
 
 ChrAttackBreak
 {
-Heavy attack
+Schwerer Angriff
 }
 
 ChrAttackFient
 {
-Feint (alt.)
+Finte (alt.)
 }
 
 ChrAttackBreakBase
 {
-Heavy attack / Feint
+Schwerer Angriff / Finte
 }
 
 ChrAttackRoundBase
 {
-Group attack
+Rundumschlag
 }
 
 ChrAttackChoseBase
 {
-Combo control
+Combo-Kontrolle
 }
 
 ChrBlockBase
 {
-Block
+Blocken
 }
 
 ChrAttackBase
 {
-Fast attack / Parry
+Schneller Angriff / Parieren
 }
 
 ChrAltAttackBase
 {
-Slash attack / Group attack
+Hieb-Angriff / Rundumschlag
 }
 
 ChrFire
 {
-Fire
+Schießen
 }
 
 ChrFightMode
 {
-Combat mode
+Kampfmodus
 }
 
 ChrSwitchFightMode
 {
-Change Combat mode
+Kampfmodus wechseln
 }
 
 BulletChanger
 {
-Switch ammo
+Munition wechseln
 }
 
 PotionChanger
 {
-Switch health potion
+Heiltrank wechseln
 }
 
 BOAL_UsePotion
 {
-Use a health potion
+Heiltrank benutzen
 }
 
 BOAL_ActivateRush
 {
-Use Ometochtli tincture 
+Ometochtli Tinktur benutzen
 }
 
 BOAL_DeadSearch
 {
-Loot
+Plündern
 }
 
 UseAntidote
 {
-Use an antidote
+Gegengift benutzen
 }
 
 Alchemy
 {
-Alchemy
+Alchemie
 }
 
 Inventory
 {
-Inventory
+Inventar
 }
 
 ShipState
 {
-Fleet
+Flotte
 }
 
 QuestBook
 {
-Logbook
+Logbuch
 }
 
 MapView
 {
-Maps
+Karten
 }
 
 Abilities
 {
-Character
+Charakter
 }
 
 Nations
 {
-Nations
+Nationen
 }
 
 Dolly
 {
-Activate Mayan idol
+Maya-Götze aktivieren
 }
 
 Ultimate_potion
 {
-Drink Indian potion
+Indianischen Trank benutzen
 }
 
 Ship_TurnLeft
 {
-Turn ship left
+Schiff nach links drehen
 }
 
 Ship_TurnRight
 {
-Turn ship right
+Schiff nach rechts drehen
 }
 
 Ship_SailUp
 {
-Raise sails
+Segel hochziehen
 }
 
 Ship_SailDown
 {
-Lower sails
+Segel senken
 }
 
 Ship_Fire
 {
-Fire!
+Kanonensalve
 }
 
 Sea_CameraSwitch
 {
-Naval camer mode
+Seekameramodus
 }
 
-TelescopeMode
+Telescope
 {
-Toggle spyglass
+Fernrohr aktivieren
 }
 
 TelescopeZoomIn
 {
-Spyglass (zoom in)
+Fernrohr (Hereinzoomen)
 }
 
 TelescopeZoomOut
 {
-Spyglass (zoom out)
+Fernrohr (Herauszoomen)
 }
 
 BI_MapEnter
 {
-Global map
+Weltkarte
 }
 
 WMapTurnH
 {
-Rotate camera around ship (in map mode)
+Kamera um das Schiff drehen (im Kartenmodus)
 }
 
 WMapTurnV
 {
-Camera height (in map mode)
+Kamerahöhe (im Kartenmodus)
 }
 
 WMapCameraRotate
 {
-Camera gliding/rotation mode on
+Kamera-Gleit-/Rotationsmodus ein
 }
 
 WMapForward
 {
-Zoom camera in
+Kamera Hereinzoomen
 }
 
 WMapBackward
 {
-Zoom camera out
+Kamera Herauszoomen
 }
 
 WMapCameraSwitch
 {
-Toggle view mode
+Ansicht wechseln
 }
 
 WMapShipSailUp
 {
-Sail forward
+Vorwärtssegeln
 }
 
 WMapShipSailDown
 {
-Sail back
+Zurücksegeln
 }
 
 WMapShipTurnLeft
 {
-Turn left
+Links drehen
 }
 
 WMapShipTurnRight
 {
-Turn right
+Rechts drehen
 }
 
 WMapCancel
 {
-Exit map to the sea
+Von Kartenmodus in Seemodus wechseln
 }
 
 Interface
 {
-Character menu
+Charaktermenü
 }
 
 MainMenu
 {
-Main menu
+Hauptmenü
 }
 
 MainMenuDouble
 {
-Main menu
+Hauptmenü
 }
 
 Help
 {
-Game help
+Hilfe
 }
 
 BICommandsActivate
 {
-Action menu
+Aktionsmenü
 }
 
 LICommandsActivate
 {
-Action menu 
+Aktionsmenü
 }
 
 BICommandsConfirm
 {
-Select command 
+Kommando auswählen 
 }
 
 BICommandsCancel
 {
-Cancel command 
+Kommando abbrechen
 }
 
 BICommandsUp
 {
-Action menu - navigate up
-}
-
-BICommandsDown
-{
-Action menu - navigate down
+Aktionsmenü - nach oben navigieren
 }
 
 BICommandsLeft
 {
-Action menu - navigate left
+Aktionsmenü - links navigieren
+}
+
+BICommandsDown
+{
+Aktionsmenü - nach unten navigieren
 }
 
 BICommandsRight
 {
-Action menu - navigate right
+Aktionsmenü - rechts navigieren
 }
 
 MiniMapZoomIn
 {
-Zoom in on mini-map
+Minikarte hereinzoomen
 }
 
 MiniMapZoomOut
 {
-Zoom out on mini-map
+Minikarte herauszoomen
 }
 
 BIFastCommand
 {
-Quick action
+Schnellbefehl
 }
 
 HelpChooser_Cancel
 {
-Exit help
+Hilfe verlassen
 }
 
 HelpChooser_Action
 {
-Show help for the current element
+Hilfe für das aktuelle Element anzeigen
 }
 
 HelpChooser_Next
 {
-Next help element
+Nächstes Hilfselement
 }
 
 HelpChooser_Prev
 {
-Previous help element
+Vorheriges Hilfselement
 }
 
 HelpChooser_Left
 {
-Left (in help mode)
+Links (im Hilfemodus)
 }
 
 HelpChooser_Right
 {
-Right (in help mode)
+Rechts (im Hilfemodus)
 }
 
 HelpChooser_Up
 {
-Up (in help mode)
+Hoch (im Hilfemodus)
 }
 
 HelpChooser_Down
 {
-Down (in help mode)
+Runter (im Hilfemodus)
 }
 
 DlgAction
 {
-Reply selection in a dialog
+Antwortauswahl in einem Dialogfenster
 }
 
 DlgAction1
 {
-Reply selection in a dialog
+Antwortauswahl in einem Dialogfenster
 }
 
 DlgUp
 {
-Previous reply in a dialog
+Vorherige Antwort in einem Dialog
 }
 
 DlgDown
 {
-Next reply in a dialog
+Nächste Antwort in einem Dialog
 }
 
 DlgScrollUp
 {
-Scroll dialog down
+Dialog nach unten blättern
 }
 
 DlgScrollDown
 {
-Scroll dialog up
+Dialog nach oben blättern
 }
 
 hk_charge1
 {
-Load round shot
+Kanonen mit Kanonenkugeln laden
 }
 
 hk_charge2
 {
-Load grapeshot
+Kanonen mit Kartätschen laden
 }
 
 hk_charge3
 {
-Load chain shot
+Kanonen mit Kettengeschossen laden
 }
 
 hk_charge4
 {
-Load bombs
+Kanonen mit Bomben laden
 }
 
 hk_Cure
 {
-Use healing mixture
+Heilmischung verwenden
 }
 
 hk_Rush
 {
-Use 'Fury' ability
+Fähigkeit 'Wut' verwenden
 }
 
 hk_ImmediateReload
 {
-Immediate Reloading
+Sofortiges Nachladen
 }
 
 hk_LightRepair
 {
-Emergency repair
+Notreparatur
 }
 
 hk_InstantRepair
 {
-Repair
+Reparieren
 }
 
 hk_Turn180
 {
-Turn about
+Umdrehen
 }
 
 hk_SandbankManeuver
 {
-Activate sandbank maneuvers
+Sandbankmanöver aktivieren
 }
 
 ChrStrafeLeft
 {
-Step left
+Schritt nach links
 }
 
 ChrStrafeRight
 {
-Step right
+Schritt nach rechts
 }
 
 OfficersCharge
 {
-Order for officers : Fight at will
+Befehl für Offiziere: Kämpfen nach Belieben
 }
 
 OfficersHold
 {
-Order for officers : Hold position
+Befehl für Offiziere: Position halten
 }
 
 OfficersFollow
 {
-Order for officers : Follow
+Befehl für Offiziere : Folgen
 }
 
 FLT_LoadBalls
 {
-Fleet command: load cannons with round shot
+Flottenkommando: Kanonen mit Kanonenkugeln laden
 }
 
 FLT_LoadGrapes
 {
-Fleet command: load cannons with grapeshot
+Flottenkommando: Kanonen mit Kartätschen laden
 }
 
 FLT_LoadChain
 {
-Fleet command: load cannons with chainshots
+Flottenkommando: Kanonen mit Kettengeschossen laden
 }
 
 FLT_LoadBombs
 {
-Fleet command: load cannons with bombs
+Flottenkommando: Kanonen mit Bomben laden
 }
 
 FLT_SailAway
 {
-Fleet command: sail away
+Flottenkommando: Wegsegeln
 }
 
 FLT_LowerSails
 {
-Fleet command: lower sails
+Flottenkommando: Segel senken
 }
 
 FLT_ProtFlagship
 {
-Fleet command: protect flagship
+Flottenkommando: Flaggschiff schützen
 }
 
 Fast_store
 {
-Fast Travel: Store
+Schnellreise: Laden
 }
 
 Fast_shipyard
 {
-Fast Travel: Shipyard
+Schnellreise: Schiffswerft
 }
 
 Fast_tavern
 {
-Fast Travel: Tavern
+Schnellreise: Taverne
 }
 
 Fast_townhall
 {
-Fast Travel: Townhall
+Schnellreise: Rathaus
 }
 
 Fast_bank
 {
-Fast Travel: Usurer
+Schnellreise: Geldleiher
 }
 
 Fast_church
 {
-Fast Travel: Church
+Schnellreise: Kirche
 }
 
 Fast_brothel
 {
-Fast Travel: Brothel
+Schnellreise: Bordell
 }
 
 Fast_portoffice
 {
-Fast Travel: Port Authority
+Schnellreise: Hafenbehörde
 }
 
 Fast_prison
 {
-Fast Travel: Prison
+Schnellreise: Gefängnis
 }
 
 Fast_port
 {
-Fast Travel: Port
+Schnellreise: Hafen
 }
 
 LI_Fast_store
 {
-Store
+Laden
 }
 
 LI_Fast_shipyard
 {
-Shipyard
+Schiffswerft
 }
 
 LI_Fast_tavern
 {
-Tavern
+Taverne
 }
 
 LI_Fast_townhall
 {
-Townhall
+Rathaus
 }
 
 LI_Fast_bank
@@ -782,95 +782,95 @@ Bank
 
 LI_Fast_church
 {
-Church
+Kirche
 }
 
 LI_Fast_brothel
 {
-Brothel
+Bordell
 }
 
 LI_Fast_portoffice
 {
-Port Office
+Hafenbehörde
 }
 
 LI_Fast_prison
 {
-Prison
+Gefängnis
 }
 
 LI_Fast_port
 {
-Port
+Hafen
 }
 
 HK_Musket
 {
-Equip long gun
+Muskete ausrüsten
 }
 
 HK_FencingL
 {
-Equip light weapon
+Leichte Waffe ausrüsten
 }
 
 HK_FencingS
 {
-Equip medium weapon
+Mittlere Waffe ausrüsten
 }
 
 HK_FencingH
 {
-Equip heavy weapon
+Schwere Waffe ausrüsten
 }
 
 HK_bullet
 {
-Load a bullet (modifier)
+Kugel laden (Modifikator)
 }
 
 HK_cartridge
 {
-Load a paper cartridge (modifier)
+Papierkassette einlegen (Modifikator)
 }
 
 HK_grapeshot
 {
-Load a buckshot (modifier)
+Schrotkugel laden (Modifikator)
 }
 
 HK_harpoon
 {
-Load an arrow (modifier)
+Pfeil laden (Modifikator)
 }
 
 HK_GunEchin
 {
-Load a hedgehog charge (modifier)
+Igel-Ladung laden (Modifikator)
 }
 
 HK_grenade
 {
-Load a grenade (modifier)
+Granate laden (Modifikator)
 }
 
 hk_Cabin
 {
-Captain's Cabin
+Kapitänskabine
 }
 
 CannonsRange
 {
-Show firing range
+Kanonenreichweite
 }
 
 ChangeShowInterface
 {
-Hide/show UI
+UI aus-/einblenden
 }
 
 FreeCam
 {
-Free Camera
+Freie Kamera
 }

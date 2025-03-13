@@ -98,12 +98,13 @@ void Item_OnLoadLocation(string currentLocation)
 			continue;
 		if (Items[itemN].shown == "1")
 		{
-		if (Items[itemN].startLocation == currentLocation)
-		{
-			if (!CheckAttribute(activeLocation, "itemShow." + Items[itemN].startLocator)) {
-				Items_ShowItem(itemN);
+			if (Items[itemN].startLocation == currentLocation)
+			{
+				if (!CheckAttribute(activeLocation, "itemShow." + Items[itemN].startLocator)) {
+					Items_ShowItem(itemN);
+				}
 			}
-		}}
+		}
 	}
 }
 
@@ -153,16 +154,17 @@ void Item_OnEnterLocator(aref _location, string _locator)
 				continue;
 			if (Items[itemN].shown == "0")
 			{
-			if (Items[itemN].useLocation == _location.id)
-			{
-			if (Items[itemN].useLocator == _locator)
-			{
-				Log_SetActiveAction("Action");
-				chr.activeItem = itemN;
-				chr.activeLocator = _locator;
-				chr.activeRandItem = false;
-				chr.activeItem.pick = false;
-			}}
+				if (Items[itemN].useLocation == _location.id)
+				{
+					if (Items[itemN].useLocator == _locator)
+					{
+						Log_SetActiveAction("Action");
+						chr.activeItem = itemN;
+						chr.activeLocator = _locator;
+						chr.activeRandItem = false;
+						chr.activeItem.pick = false;
+					}
+				}
 			}
 		}
 	}
@@ -185,16 +187,18 @@ void Item_OnEnterLocator(aref _location, string _locator)
 					continue;
 				if (Items[itemN].startLocator == _locator)
 				{
-				if (Items[itemN].shown == "1")
-				{
-				if (Items[itemN].startLocation == _location.id)
-				{
-					Log_SetActiveAction("Pick");
-					chr.activeItem = itemN;
-					chr.activeLocator = _locator;
-					chr.activeRandItem = false;
-					chr.activeItem.pick = true;
-				}}}
+					if (Items[itemN].shown == "1")
+					{
+						if (Items[itemN].startLocation == _location.id)
+						{
+							Log_SetActiveAction("Pick");
+							chr.activeItem = itemN;
+							chr.activeLocator = _locator;
+							chr.activeRandItem = false;
+							chr.activeItem.pick = true;
+						}
+					}
+				}
 			}
 		}
 	}

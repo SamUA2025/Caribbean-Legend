@@ -2,559 +2,557 @@ newline  {
 
 }
 
-BasicDefense	{Basic Defense}
+BasicDefense	{Grundlegende Verteidigung}
 perkBasicDefense
 {
-Incoming damage to the character is reduced by 10%.
+Erlittener Schaden am Charakter reduziert sich um 10%.
 }
 
-AdvancedDefense	{Advanced Defense}
+AdvancedDefense	{Fortgeschrittene Verteidigung}
 perkAdvancedDefense
 {
-Incoming damage to the character is reduced by 20%.
+Erlittener Schaden am Charakter reduziert sich um 20%.
 }
 
-CriticalHit	{Critical Hit}
+CriticalHit	{Kritischer Treffer}
 perkCriticalHit
 {
-Character receives a 5% chance to land a critical hit on the opponent.
+Der Charakter erhält eine 5% Chance, einen kritischen Treffer beim Gegner zu landen.
 }
 
-Ciras	{Cuirass}
+Ciras	{Kürass}
 perkCiras
 {
-This skill allows the usage of cuirasses.
+Diese Fähigkeit erlaubt das Tragen eines Kürass.
 }
 
-SwordplayProfessional	{Professional Fighter}
+SwordplayProfessional	{Professioneller Fechter}
 perkSwordplayProfessional
 {
-15% chance to land a critical hit on an enemy. Incoming damage to the character is reduced by 30%.
+15% Chance einen kritischen Treffer beim Gegner zu landen. Erlittener SChaden am Charakter reduzirt sich um 30%.
 }
 
-Grus	{Pack Mule}
+Grus	{Packesel}
 perkGrus
 {
-This ability allows you to carry an additional 30 pounds.
+Mit dieser Fähigkeit das Tragegewicht um 30 Pfund.
 }
 
-Rush	{The Ometochtli tincture}
+Rush	{Die Ometochtli Tinktur}
 perkRush
 {
-Intoxicating tincture, contributing to the instantaneous manifestation of tremendous strength and endurance, a significant increase in dexterity and quickness of reaction with intense aggression and insensitivity to pain.
-For 12 seconds, the character's attacks become much more powerful and the incoming damage is reduced.
+Berauschende Tinktur, die zur sofortigen Manifestation von enormer Kraft und Ausdauer, einer deutlichen Steigerung der Geschicklichkeit und Reaktionsschnelligkeit mit intensiver Aggression und Unempfindlichkeit gegenüber Schmerzen beiträgt.
+Für 12 Sekunden werden die Angriffe des Charakters viel mächtiger und der eingehende Schaden wird reduziert.
 ~
-This ability has a 1 minute cooldown.
+Diese Fähigkeit hat eine Abklingzeit von 1 Minute.
 }
 
-Tireless	{Tireless}
+Tireless	{Unermüdlich}
 perkTireless
 {
-You get your second wind in combat, which helps you reduce fighting fatigue. +15% energy recovery.
+You get your second wind in combat, which helps you reduce fighting fatigue. (+15% energy recovery).
 }
 
-HardHitter {Hard Hitter}
+HardHitter {Harter Schläger}
 perkHardHitter
 {
-A successful Heavy Attack gets a 30% damage bonus.
+Ein erfolgreicher schwerer Angriff bringt einen Schadensbonus von 30%.
 }
 
-BladeDancer	{Blade Dance}
+BladeDancer	{Klingentanz}
 perkBladeDancer
 {
-A successful Group Attack gets a 30% damage bonus.
+Ein erfolgreicher Gruppenangriff erhält einen Schadensbonus von 30%.
 }
 
-Sliding	{Irresistible Strike}
+Sliding	{Unaufhaltsamer Schlag}
 perkSliding
 {
-You have an additional 20% chance to strike through the enemy's blocking. 
-1% extra per each (S).
+Du hast eine zusätzliche Chance von 20%, die gegnerische Blockade zu durchbrechen. 
+1% extra für jeden (S).
 }
 
-Gunman {Musketeer}
+Gunman {Musketier}
 perkGunman
 {
-The character uses handguns more effectively: reload is 10% faster and accuracy is increased by 10%.
-~ 
-You can use arquebuses, muskets, mortars and other heavy one-barrel weaponry. 
-~
-Only the main character and very specific Vanguards can equip guns like this.
+Der Charakter nutzt Handfeuerwaffen effektiver: Nachladen ist 10% schneller und die Genauigkeit erhöht sich um 10%. 
+Sie können Arkebusen, Musketen, Mörser und andere schwere einläufige Waffen verwenden.
+Nur der Charakter und ganz bestimmte Vorhutgruppen können solche Waffen ausrüsten.
 }
 
-GunProfessional {Skirmisher}
+GunProfessional {Schütze}
 perkGunProfessional
 {
-25% faster reloading of firearms. 25% increase in accuracy.
-~
-You can use multibarreled and repeating firearms.
-~
-The character can fire a musket through allies without hitting them. Bullseye!
+25% schnelleres Nachladen von Feuerwaffen. 25 % höhere Genauigkeit.
+Sie können mehrläufige und Repetierwaffen verwenden.
+Sie können mit einer Muskete durch Verbündete schießen, ohne sie zu treffen. Volltreffer!
 }
 
-IronWill	{Iron Will}
+IronWill	{Eiserner Wille}
 perkIronWill
 {
-Character can survive a mortal blow once in three minutes.
-~
-Reduced a mutiny chance.
-~
-Works for the main character, his Bosun and Vanguards.
+Sie können einmal in drei Minuten einen tödlichen Schlag überleben.
+Verringert eine Meuterei-Chance.
+Gilt für den Hauptcharakter, seinen Bootsmann und die Vorhut.
 }
 
-SharedExperience	{Quick Learning}
+SharedExperience	{Schnelles Lernen}
 perkSharedExperience
 {
-Faster levelling and gaining skill points, equivalent to gaining an additional point of Talent (T).
-~
-The experience gained on the hero's skills is shared with passengers, officers and companions with twice the amount and is 10%, 50% and 33%, respectively.
+Schnellerer Stufenaufstieg und schnellerer Erwerb von Fertigkeitspunkten, gleichbedeutend mit dem Erwerb eines zusätzlichen Talentpunktes (T).
+Die durch die Fähigkeiten des Helden gewonnene Erfahrung wird mit Passagieren, Offizieren und Begleitern in doppelter Höhe geteilt und beträgt 10%, 50% bzw. 33%.
 }
 
-Medic	{Excellent Health}
+Medic	{Ausgezeichnete Gesundheit}
 perkMedic
 {
-You to restore health faster, if no serious wounds had to be endured during the day. Reduces the decrease of health if the character is wounded. Works while sailing, but slower.
+Diese Fähigkeit erlaubt es, die Gesundheit schneller wiederherzustellen, wenn man tagsüber keine schweren Wunden ertragen musste. Verringert die Abnahme der Gesundheit, wenn der Charakter verwundet ist. Funktioniert beim Segeln, aber langsamer.
 ~
-~
-Available only for player
+Fähigkeit nur für Spieler verfügbar
 }
 
-HPPlus	{Growing Life}
+HPPlus	{Erhöhtes Leben}
 perkHPPlus
 {
-This ability increases the maximum hitpoints of the hero by one additional point per each new level. Retroactive.
+Diese Fähigkeit erhöht die maximalen Trefferpunkte des Helden mit jeder neuen Stufe um einen zusätzlichen Punkt. Rückwirkend.
 }
 
-EnergyPlus	{Growing Energy}
+EnergyPlus	{Erhöhte Ausdauer}
 perkEnergyPlus
 {
-Increases the maximum energy points of the hero by one point per each new level. Retroactive.
+Erhöht die maximalen Energiepunkte des Helden um einen Punkt für jede neue Stufe. Rückwirkend.
 }
 
-ByWorker	{Moonlighting}
+ByWorker	{Schwarzarbeit}
 perkByWorker
 {
-This character can occupy two officer positions at once.
+Dieser Charakter kann zwei Offiziersposten gleichzeitig belegen.
 ~
 ~
 ~
 ~
 ~
-Officers only.		 
+Fähigkeit nur für Offiziere verfügbar	 
 }
 
-ByWorker2	{Jack of All Trades}
+ByWorker2	{Tausendsassa}
 perkByWorker2
 {
-This character can occupy three officer positions at once.
+Dieser Charakter kann drei Offiziersposten gleichzeitig belegen.
 ~
 ~
 ~
 ~
 ~
-Officers only.		
+Fähigkeit nur für Offiziere verfügbar	
 }
 
-Trustworthy	{Trustworthy}
+Trustworthy	{Vertrauenswürdig}
 perkTrustworthy
 {
-Negative honor no longer hinders quest opportunities.
+Der negative Ruf des Helden beeinflusst nicht mehr die Entscheidung der meisten Auftragsgeber, ihn einzustellen, da sie von seinem Charisma begeistert sind.
 ~
-Enhanced ability to deceive guards.
+Verbesserte Fähigkeit, Wachen zu täuschen.
 ~
-Access to additional crew members and officers for hire in taverns.
+Zugang zu zusätzlichen Besatzungsmitgliedern und Offizieren, die in Tavernen angeheuert werden können.
 ~
-Unlocks unique options in select quests.
+Schaltet einzigartige Optionen in ausgewählten Quests frei.
 ~
-Main character only.
+Fähigkeit nur für Spieler verfügbar
 }
 
-ShipEscape	{Emergency Rescue}
+ShipEscape	{Notfallrettung}
 perkShipEscape
 {
-You can use a life boat to save yourself from a sinking ship.
+Sie können ein Rettungsboot benutzen, um sich von einem sinkenden Schiff zu retten.
 ~
-If a companion has this ability, he or her will escape a sinking ship or a brander, returning to you on a life boat.
+Wenn ein Begleiter diese Fähigkeit besitzt, entkommt er oder sie einem sinkenden Schiff oder einem Brander und kehrt mit einem Rettungsboot zu Ihnen zurück.
 }
 
-Alchemy	{Alchemy}
+Alchemy	{Alchemie}
 perkAlchemy
 {
-Allows to craft items without the use of special tools such as an alchemist's chest.
+Diese Fähigkeit ermöglicht die Herstellung von Gegenständen, Instrumenten und Komponenten durch chemische oder mechanische Umwandlung.
 ~
 ~
 ~
 ~
-Available only for player	
+Fähigkeit nur für Spieler verfügbar
 }
 
-FastReload {Fast Reloading}
+FastReload {Schnelles Nachladen}
 perkFastReload
 {
-Reloading of cannons is accelerated by 10%.
+Das Nachladen von Kanonen wird um 10% beschleunigt.
 }
 
-ImmediateReload	{Prepared Reloading}
+ImmediateReload	{Vorbereitetes Nachladen}
 perkImmediateReload
 {
-After using this ability the next reload will proceed 30% faster. This ability has a 5 min cooldown.
+Nach dem Einsatz dieser Fähigkeit wird der nächste Nachladevorgang um 30% beschleunigt. Diese Fähigkeit hat eine Abklingzeit von 5 Minuten.
 }
 
-HullDamageUp	{Increased Hull Damage}
+HullDamageUp	{Erhöhter Schaden am Rumpf}
 perkHullDamageUp
 {
-Damage to an enemy ship's hull is increased by 15%.
+Der Schaden am Rumpf eines gegnerischen Schiffes wird um 15% erhöht.
 }
 
-SailsDamageUp	{Increased Sails Damage}
+SailsDamageUp	{Erhöhter Schaden an Segeln}
 perkSailsDamageUp
 {
-Damage to an enemy ship's sails is increased by 15%.
+Der Schaden an Segeln eines gegnerischen Schiffes wird um 15% erhöht.
 }
 
-CrewDamageUp {Increased Crew Damage}
+CrewDamageUp {Erhöhter Schaden für die Crew}
 perkCrewDamageUp
 {
-Damage to an enemy ship's crew is increased by 15%.
+Der Schaden an der Crew eines gegnerischen Schiffes wird um 15% erhöht.
 }
 
-CriticalShoot	{Critical Shot}
+CriticalShoot	{Kritischer Schuss}
 perkCriticalShoot
 {
-The character gets a 5% chance to score a critical hit with a volley fired at the enemy.
+Der Charakter erhält eine 5% Chance, mit einer auf den Feind abgefeuerten Salve einen kritischen Treffer zu erzielen.
 }
 
-LongRangeShoot	{Increased Firing Range}
+LongRangeShoot	{Erhöhte Schussreichweite}
 perkLongRangeShoot
 {
-Firing range of cannons is increased by 15%.
+Schussreichweite von Kanonen wird um 15% erhöht.
 }
 
-CannonProfessional	{Professional Gunner}
+CannonProfessional	{Professioneller Kanonier}
 perkCannonProfessional
 {
-Damage to any part of the enemy ship is increased by 30%. Chance to score a critical hit is increased by 15%.
+Der Schaden an einem beliebigen Teil des gegnerischen Schiffes wird um 30% erhöht. Die Chance, einen kritischen Treffer zu erzielen, wird um 15% erhöht.
 }
 
-LongRangeGrappling	{Effective Boarding}
+LongRangeGrappling	{Effektives Entern}
 perkLongRangeGrappling
 {
-The boarding range is increased by 15%.
+Die Reichweite zum Entern wird um 15% erhöht.
 }
 
-MusketsShoot {Musket Salvo}
+MusketsShoot {Gewehrsalve}
 perkMusketsShoot
 {
-A musket salvo is shot right before boarding.
+Unmittelbar vor dem Entern wird eine Gewehrsalve abgefeuert.
 ~
-The enemy's casualties depend on the ship's size and on the amount of active Vanguards.
+Die Verluste des Gegners hängen von der Größe des Schiffes und der Anzahl der Enter-Offiziere ab, die sich in Position befinden.
 }
 
-GrapplingProfessional	{Professional Boarding}
+GrapplingProfessional	{Professionelles Entern}
 perkGrapplingProfessional
 {
-The boarding range is increased by 25%. A ship can now be boarded at any angle and ship speed.
+Die Reichweite des Enterns wurde um 25% erhöht. Ein Schiff kann jetzt in jedem Winkel und bei jeder Schiffsgeschwindigkeit geentert werden.
 }
 
-BasicBattleState	{Basic Ship Defense}
+BasicBattleState	{Grundlegende Schiffsverteidigung}
 perkBasicBattleState
 {
-Generic damage dealt to the ship is reduced by 15%.
+Der allgemeine Schaden, der dem Schiff zugefügt wird, wird um 15% reduziert.
 }
 
-AdvancedBattleState	{Improved Ship Defense}
+AdvancedBattleState	{Verbesserte Schiffsverteifigung}
 perkAdvancedBattleState
 {
-Generic damage dealt to the ship is reduced by 25%.
+Der allgemeine Schaden, der dem Schiff zugefügt wird, wird um 25% reduziert.
 }
 
-ShipDefenseProfessional	{Professional Ship Defense}
+ShipDefenseProfessional	{Professionelle Schiffsverteidigung}
 perkShipDefenseProfessional
 {
-Generic damage dealt to the ship is reduced by 25%. The chance to receive a critical hit is reduced by 70%.
+Der allgemeine Schaden, der dem Schiff zugefügt wird, wird um 25% reduziert. Die Chance, einen kritischen Treffer zu erhalten, wird um 70% verringert.
 }
 
 
-ShipSpeedUp	{Increased Speed}
+ShipSpeedUp	{Erhöhte Schiffsgeschwindigkeit}
 perkShipSpeedUp
 {
-The maximum speed of the ship is increased by 15%.
+Die Höchstgeschwindigkeit des Schiffes wird um 15% erhöht.
 }
 
-ShipTurnRateUp	{Increased Maneuverability}
+ShipTurnRateUp	{Verbesserte Manövrierfähigkeit der Schiffe.}
 perkShipTurnRateUp
 {
-Maneuverability of the ship is increased by 15%.
+Die Manövrierfähigkeit des Schiffes wird um 15% erhöht.
 }
 
-StormProfessional	{Survival in Storms}
+StormProfessional	{Überleben in Stürmen}
 perkStormProfessional
 {
-Damage dealt by storms is reduced by 30%.
+Der durch Stürme verursachte Schaden wird um 30% reduziert.
 }
 
-Turn180	{Quick Turnaround}
+Turn180	{Schnelles Wenden}
 perkTurn180
 {
-For 1 minute, the speed of the turnaround is 4 times faster. This ability has a 3 min cooldown.
+1 Minute lang ist die Geschwindigkeit des Wendens 4-mal schneller. Diese Fähigkeit hat eine Abklingzeit von 3 Minuten.
 }
 
-SailingProfessional	{Skilled Seafarer}
+SailingProfessional	{Erfahrener Seemann}
 perkSailingProfessional
 {
-The speed and maneuverability of the ship is increased by 20%. 3/4 of the ordinary ships on the world map can be bypassed.
+Die Geschwindigkeit und Manövrierfähigkeit des Schiffes wird um 20% erhöht. 3/4 der normalen Schiffe auf der Weltkarte können umgangen werden.
 }
 
-SeaDogProfessional	{Scourge of the Seas}
+SeaDogProfessional	{Geißel der Meere}
 perkSeaDogProfessional
 {
-Even the inveterate adventurers and brigands will not dare to try their luck when they see the flag of the Scourge of the Seas. Protects from attacks by enemy squadrons. Doesn't work on small ships.
+Selbst eingefleischte Abenteurer und Räuber werden es nicht wagen, ihr Glück zu versuchen, wenn sie die Flagge der Geißel der Meere sehen. Schützt vor Angriffen durch feindliche Geschwader. Funktioniert nicht auf Schiffen niedriger Klasse.
 ~
 ~
 ~
-Ability available only for player
+Fähigkeit nur für Spieler verfügbar
 }
 
-FlagPir	{Pirate Flag}
+FlagPir	{Piratenflagge}
 perkFlagPir
 {
-Gives the opportunity to change your flag to the Jolly Roger.
+Gibt Ihnen die Möglichkeit, Ihre Flagge in die Jolly Roger zu ändern.
 ~
 ~
 ~
-Available only for player	
+~
+~
+Fähigkeit nur für Spieler verfügbar
 }
 
-FlagEng	{English Flag}
+FlagEng	{Englische Flagge}
 perkFlagEng
 {
-Gives the opportunity to change your flag to the flag of England. The chance that your disguise will not work depends on stealth, number and classes of ships in the squadron and on the number of enemy ships and bounties.
+Gibt Ihnen die Möglichkeit, Ihre Flagge in die Flagge von England zu ändern. Die Wahrscheinlichkeit, dass deine Tarnung nicht funktioniert, hängt von der Tarnung, der Anzahl und den Klassen der Schiffe im Geschwader sowie von der Anzahl der feindlichen Schiffe und Kopfgelder ab.
 ~
 ~
 ~
-Available only for player	
+Fähigkeit nur für Spieler verfügbar
 }
 
-FlagFra	{French Flag}
+FlagFra	{Französische Flagge}
 perkFlagFra
 {
-Gives the opportunity to change your flag to the flag of France. The chance that your disguise will not work depends on stealth, number and classes of ships in the squadron and on the number of enemy ships and bounties.
+Gibt Ihnen die Möglichkeit, Ihre Flagge in die Flagge von Frankreich zu ändern. Die Wahrscheinlichkeit, dass deine Tarnung nicht funktioniert, hängt von der Tarnung, der Anzahl und den Klassen der Schiffe im Geschwader sowie von der Anzahl der feindlichen Schiffe und Kopfgelder ab.
 ~
 ~
 ~
-Available only for player
+Fähigkeit nur für Spieler verfügbar
 }
 
-FlagSpa	{Spanish Flag}
+FlagSpa	{Spanische Flagge}
 perkFlagSpa
 {
-Gives the opportunity to change your flag to the flag of Spain. The chance that your disguise will not work depends on stealth, number and classes of ships in the squadron and on the number of enemy ships and bounties.
+Gibt Ihnen die Möglichkeit, Ihre Flagge in die Flagge von Spanien zu ändern. Die Wahrscheinlichkeit, dass deine Tarnung nicht funktioniert, hängt von der Tarnung, der Anzahl und den Klassen der Schiffe im Geschwader sowie von der Anzahl der feindlichen Schiffe und Kopfgelder ab.
 ~
 ~
 ~
-Available only for player
+Fähigkeit nur für Spieler verfügbar
 }
 
-FlagHol	{Dutch Flag}
+FlagHol	{Holländische Flagge}
 perkFlagHol
 {
-Gives the opportunity to change your flag to the flag of Holland. The chance that your disguise will not work depends on stealth, number and classes of ships in the squadron and on the number of enemy ships and bounties.
+Gibt Ihnen die Möglichkeit, Ihre Flagge in die Flagge von Holland zu ändern. Die Wahrscheinlichkeit, dass deine Tarnung nicht funktioniert, hängt von der Tarnung, der Anzahl und den Klassen der Schiffe im Geschwader sowie von der Anzahl der feindlichen Schiffe und Kopfgelder ab.
 ~
 ~
 ~
-Available only for player
+Fähigkeit nur für Spieler verfügbar
 }
 
 Brander	{Brander}
 perkBrander
 {
-Unlocks a tactic to send an allied ship to detonate near a enemy ship, dealing huge damage.
+Bietet die Möglichkeit, ein verbündetes Schiff in der Nähe eines feindlichen Schiffes detonieren zu lassen, wodurch dem feindlichen Schiff großer Schaden zugefügt wird.
 }
 
-Troopers	{Siege Tactics}
+Troopers	{Belagerungstaktik}
 perkTroopers
 {
-Gives the opportunity to use the crews from all ships in your fleet to assault a fort, sending them as a united force.
-Reduces the squad size needed for a land assault on the settlement.
+Bietet die Möglichkeit, die Besatzungen aller Schiffe der Flotte für den Angriff auf eine Festung zu verwenden und sie als vereinte Streitkräfte zu entsenden.
+Verringert die Truppengröße, die für einen Landangriff auf die Siedlung benötigt wird.
 }
 
-BasicCommerce	{Basic Commerce}
+BasicCommerce	{Grundlegender Handel}
 perkBasicCommerce
 {
-Extra 10% discount on all trading operations.
+10% Rabatt in den Geschäften.
 }
 
-AdvancedCommerce	{Advanced Commerce}
+AdvancedCommerce	{Verbesserter Handel}
 perkAdvancedCommerce
 {
-Extra 10% selling bonus on all trading operations.
++10% Verkaufsbonus in Geschäften.
 }
 
-ProfessionalCommerce	{Professional Commerce}
+ProfessionalCommerce	{Professionelles Handeln}
 perkProfessionalCommerce
 {
-Extra 15% discount and 15% selling bonus on all trading operations.
+Diese Fähigkeit gibt - 15% Rabatt und +15% Verkaufsbonus auf alle Handelsgeschäfte.
 }
 
-Carpenter	{Autonomous Repair}
+Carpenter	{Automatische Reparatur}
 perkCarpenter
 {
-This skill works during adventures on land or on the global map. On the ship, if the captain possesses this ability, a damaged hull or rigging on existing masts is slowly restored. Requires planks to repair the hull and sailcloth to fix sails.
+Diese Fähigkeit funktioniert bei Abenteuern an Land oder auf der Weltkarte. Auf dem Schiff, wenn der Kapitän diese Fähigkeit besitzt, wird ein beschädigter Rumpf oder die Takelage an vorhandenen Masten langsam wiederhergestellt. Benötigt werden Planken zur Reparatur des Rumpfes und Segeltuch zur Reparatur von Segeln.
 }
 
-InstantRepair	{Combat Repair}
+InstantRepair	{Reparatur im Kampf}
 perkInstantRepair
 {
-A quick repair, which can be done even in the heat of a battle in exchange of a massive amount of planks and sailcloth. Fallen masts cannot be restored.
-Maximum restoration of the ship's hull 80%, depending on Repair skills, equipped items and Repair skill.
-90 seconds cooldown.
+Eine schnelle Reparatur, die auch in der Hitze des Gefechts durchgeführt werden kann. Sie brauchen Planken, um den Rumpf zu reparieren, und Segeltuch, um die Segel zu befestigen. Gefallene Masten können nicht wiederhergestellt werden.
+Maximale Wiederherstellung des Schiffsrumpfes - bis zu 65 % der verfügbaren Mittel.
+90 Sekunden Abklingzeit.
 }
 
-LightRepair	{Emergency Repair}
+LightRepair	{Notfall-Reparatur}
 perkLightRepair
 {
-This skill allows to quickly patch the ship's hull in combat - maximum 10% of the available hull HP. Also prevents a ship from starting to sink after if its HP is less than 10%.
-Works for 60 seconds once every 3 minutes.
-The autonomous repair is accelerated by 50%.
+Diese Fähigkeit erlaubt es, die Schiffshülle ohne Ressourcen zu reparieren, aber die Reparatur überschreitet nicht 10% der verfügbaren HP. Ohne diese Fähigkeit bricht das Schiff auseinander, wenn die HP des Rumpfes weniger als 10% betragen.
+Funktioniert alle 3 Minuten für 60 Sekunden.
+Die automatische Reparatur wird um 50 % beschleunigt.
 }
 
-Builder	{Professional Repair}
+Builder	{Professionelle Reparatur}
 perkBuilder
 {
-Any repair requires 25% less of planks and sailcloth. The autonomous repair is accelerated by 100%.
+Der Verbrauch von Planken und Segeltuch während einer Reparatur wird um 25% reduziert. Die automatische Reparatur wird um 100% beschleunigt.
 }
 
-SelfRepair {Full Repair}
+SelfRepair {Vollständige Reparatur}
 perkSelfRepair
 {
-Allows to fully repair the ship with the efforts of your crew on any convenient shore. Planks and sailcloth are required. Allows to completely restore the hull, sails and masts.
-Repair can only be performed on land in a coastal location.
+Mit dieser Fähigkeit können Sie Ihr Schiff mit Hilfe Ihrer Mannschaft an einem beliebigen Ufer vollständig reparieren. Ihr solltet Planken zum Reparieren des Rumpfes und Segeltuch zum Befestigen der Segel in eurem Laderaum haben. Ermöglicht die vollständige Wiederherstellung von Rumpf, Segeln und Masten.
+Die Reparatur kann nur an Land in Küstennähe durchgeführt werden.
 }
 
-WindCatcher	{Increased Dynamics}
+WindCatcher	{Erhöhte Dynamik}
 perkWindCatcher
 {
-You can feel the slightest change in wind direction and can use it to your advantage. Ship accelerates 10% faster.
+Du spürst die kleinste Änderung der Windrichtung und kannst sie zu deinem Vorteil nutzen. (+10% auf die Beschleunigung des Schiffes).
 }
 
-SailsMan	{Fast Sails}
+SailsMan	{Schnelles Segeln}
 perkSailsMan
 {
-You managed to speed all operation of sails by 10%.
+Sie haben es geschafft, alle Vorgänge im Zusammenhang mit den Segeln um 10% zu beschleunigen.
 }
 
-Doctor1	{Physician}
+Doctor1	{Doktor}
 perkDoctor1
 {
-Decreases the casualties from wounds and grapeshot by 10% in naval combat.
+Im Seekampf verringert diese Fähigkeit die Verluste durch Verwundungen und Kartätsche um 10%.
 }
 
-Doctor2	{Surgeon}
+Doctor2	{Lebensretter}
 perkDoctor2
 {
-Decreases the casualties from wounds and grapeshot by 20% in naval combat.
+Im Seekampf verringert diese Fähigkeit die Verluste durch Verwundungen und Kartätsche um 20%.
 }
 
-InstantBoarding {Instant Boarding}
-FencingMaster {Duelist}
+InstantBoarding {Sofortiges Entern}
+FencingMaster {Fechtmeister}
 perkFencingMaster
 {
-Getting hit in combat doesn't deplete energy.
+Wenn man im Kampf getroffen wird, verbraucht man keine Energie.
 ~
-10% chance of landing a critical hit.
+10% Chance, einen kritischen Treffer zu landen.
 ~
-A successful Fast Attack gets a 30% damage bonus.
+Ein erfolgreicher Schnellangriff erhält einen Schadensbonus von 30%.
 ~
-Duelist background only.
+Nur mit Duellanten-Hintergrund.
 }
 
-TannedLeather {Thick Skin}
+TannedLeather {Gegerbtes Leder}
 perkTannedLeather
 {
-Light armor and clothes protect 20% more effectively.
+Leichte Rüstung und Kleidung schützen 20% effektiver.
 ~
 ~
 ~
-Duelist background only.
+Nur mit Duellanten-Hintergrund.
 }
 
-RatsWolf {Rat Wolf}
+RatsWolf {Rattenfänger}
 perkRatsWolf
 {
-Your ship is unlikely to be harmed by rats or other pests.
+Es ist unwahrscheinlich, dass Ihr Schiff durch Ratten oder andere Schädlinge beschädigt wird.
 ~
 ~
 ~
-Accountant background only.
+Nur mit Buchhalter-Hintergrund.
 }
 
-Mimicry {Natural Pretender}
+Mimicry {Nachahmen}
 perkMimicry
 {
-The probability of being detected by warships and forts is reduced by 50%.
+Die Wahrscheinlichkeit, von Kriegsschiffen und Festungen entdeckt zu werden, wird um 50% reduziert
 ~
 ~
 ~
-Accountant background only.
+~
+~
+Nur mit Buchhalter-Hintergrund.
 }
 
-TreasureHunter {Treasure Hunter}
+TreasureHunter {Schatzjäger}
 perkTreasureHunter
 {
-Excellent flair allows you to find treasures with better content.
+Hervorragendes Gespür ermöglicht es Ihnen, Schätze mit besserem Inhalt zu finden
 ~
 ~
 ~
-Accountant background only.
+~
+~
+Nur mit Buchhalter-Hintergrund.
 }
 
-Dragoon {Bronze Horseman}
+Dragoon {Bronzereiter}
 perkDragoon
 {
-Cuirasses protect 15% more effectively.
+Kürasse schützen 15% effektiver.
 ~
-Successful Slash and Heavy Attacks get a 15% and 30% damage bonus, respectively.
+Erfolgreiche Hieb- und schwere Angriffe erhalten einen Schadensbonus von 15% bzw. 30%.
 ~
 ~
-Athlete background only.
+Nur mit Athleten-Hintergrund.
 }
 
-SecondWind {Living Breath}
+SecondWind {Lebendiger Hauch}
 perkSecondWind
 {
-Energy recovery is 15% faster.
+Die Energierückgewinnung ist 15 % schneller.
 ~
 ~
 ~
-Athlete background only.
+Nur Athleten-Hintergrund.
 }
 
-Jager {Jager}
+Jager {Jäger}
 perkJager
 {
-Firearms reloading is 40% faster.
+Das Nachladen von Schusswaffen ist 40 % schneller.
 ~
 ~
 ~
-Sharpshooter background only.
+Nur Scharfschützen-Hintergrund.
 }
 
 Bombardier {Bombardier}
 perkBombardier
 {
-Cannons survive longer in a fight.
+Kanonen überleben länger in einem Kampf.
 ~
 ~
 ~
-Sharpshooter background only.
+Nur Scharfschützen-Hintergrund.
 }
 
-Sniper {Sniper}
+Sniper {Scharfschütze}
 perkSniper
 {
-Shooting personal firearms shocks the target and forces it to lose energy.
+Das Schießen mit persönlichen Schusswaffen schockiert das Ziel und zwingt es, Energie zu verlieren.
 ~
 ~
 ~
-Sharpshooter background only.
+Nur Scharfschützen-Hintergrund.
 }

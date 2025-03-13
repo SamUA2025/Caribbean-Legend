@@ -1,16 +1,16 @@
 colony_1
 {
-Due to lack of medicines from wounds,  @<iTemp>  sailors died
+Wegen des Mangels an Medikamenten für Wunden starben  @<iTemp>  Seeleute.
 }
 
 colony_2
 {
-On the ship  @<Pchar.Ship.Name>  there are few medical supplies left
+Auf dem Schiff  @<Pchar.Ship.Name>  gibt es nur noch wenige medizinische Vorräte.
 }
 
 colony_3
 {
-Prepare Town Battle
+Kampf um die Stadt vorbereiten
 }
 
 colony_4
@@ -20,32 +20,32 @@ ERROR: Не задан обход города при захвате!!!
 
 colony_5
 {
-The enemy forces are suppressed! The path is clear.
+Die feindlichen Kräfte sind zurückgedrängt! Der Weg ist frei.
 }
 
 colony_6
 {
-You've received ~
+Sie haben erhalten ~
 }
 
 colony_7
 {
-You've received ~
+Sie haben erhalten ~
 }
 
 colony_8
 {
-You've received - Axe
+Sie haben erhalten - Axt
 }
 
 colony_9
 {
-You've received - Saxon Feather
+Sie haben erhalten - Sächsische Feder
 }
 
 colony_10
 {
-You've received - Madonna
+Sie haben erhalten - Madonna
 }
 
 colony_11
@@ -90,20 +90,20 @@ Jonathan Fox
 
 colony_19
 {
-Our city @<GetCityName(city)> is under siege!
+Unsere Stadt @<GetCityName(city)> wird belagert!
 }
 
 colony_20
 {
-Siege is down!
+Die Belagerung ist beendet!
 }
 
 colony_21
 {
-Our city @<GetCityName(city)> is under siege!
+Unsere Stadt @<GetCityName(city)> wird belagert!
 }
 
 colony_22
 {
-Our city @<GetCityName(city)> captured!
+Unsere Stadt @<GetCityName(city)> wurde eingenommen!
 }

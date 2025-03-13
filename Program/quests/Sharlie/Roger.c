@@ -3633,7 +3633,7 @@ void Mtraxx_MeridaGorit_1(string qName)
 
 void Mtraxx_MeridaGorit_2(string qName)
 {
-	locCameraFlyToPosition(-4.09, 2.37, 39.60, 7.29, 2.47, 28.49, -1, 1000);
+	locCameraFlyToPosition(-4.09, 2.37, 39.60, 7.29, 2.47, 28.49, 0.001300*GetDeltaTime(), -1);
 	DoQuestFunctionDelay("Mtraxx_MeridaGorit_3", 10.0);
 }
 
@@ -3647,7 +3647,7 @@ void Mtraxx_MeridaGorit_4(string qName)
 {
 	//LAi_SetPlayerType(pchar);
 	//EndQuestMovie();
-	//locCameraResetState();
+	locCameraResetState();
 	LAi_SetStayType(pchar);
 	sld = CharacterFromID("Lepricon");
 	ChangeCharacterAddressGroup(sld, "Merida_town", "goto", "goto28");
@@ -6514,8 +6514,7 @@ void Mtraxx_RetributionRunAway_1(string qName)
 
 void Mtraxx_RetributionRunAway_2(string qName) // бежим!
 {
-	//locCameraFlyToPosition(-29.50, -1.5, -63.42, -29.26, -0.8, -87.83, 0.0168, -1);
-	locCameraFlyToPosition(-26.42, -1.43, -62.00, -30.26, -2.5, -87.83, 0.0185, -1);
+	locCameraFlyToPosition(-26.42, -1.43, -62.00, -30.26, -2.5, -87.83, 0.001850*GetDeltaTime(), -1);
 	LAi_SetActorType(pchar);
 	LAi_ActorGoToLocator(pchar, "rld", "aloc21", "", -1);
 	DoQuestFunctionDelay("Mtraxx_RetributionRunAway_3", 1.5);
@@ -8143,7 +8142,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		LAi_SetActorType(sld);
 		LAi_ActorGoToLocator(sld, "goto", "goto13", "Mtraxx_CorridaControlMarko2", -1);
 		SetCameraDialogMode(sld);
-		locCameraFlyToPosition(53.88, 3.68, 61.22, 43.42, 7.21, 23.34, -1, 1500.0);
+		locCameraFlyToPosition(53.88, 3.68, 61.22, 43.42, 7.21, 23.34, -1, 15000/GetDeltaTime());
 		DoQuestCheckDelay("Mtraxx_CorridaControlMarko2", 8.0);
 		DoQuestCheckDelay("Mtraxx_CorridaControlMarko3", 3.0);
 		DoQuestCheckDelay("Mtraxx_CorridaControlMarko5", 14.0);
@@ -8166,7 +8165,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 	else if (sQuestName == "Mtraxx_CorridaControlMarko5_1")
 	{
 		locCameraResetState();
-		locCameraFlyToPosition(31.71, 3.89, 17.41, 20.28, 6.27, 17.44, -1, 1500.0);
+		locCameraFlyToPosition(31.71, 3.89, 17.41, 20.28, 6.27, 17.44, -1, 15000.0/GetDeltaTime());
 		DoQuestCheckDelay("Mtraxx_CorridaControlMarko6", 13.0);
 	}
 	else if (sQuestName == "Mtraxx_CorridaControlMarko6")
@@ -8176,7 +8175,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 	else if (sQuestName == "Mtraxx_CorridaControlMarko6_1")
 	{
 		locCameraResetState();
-		locCameraFlyToPosition(8.72, 3.33, 32.14, 5.25, 6.12, 30.81, -1, 1500.0);
+		locCameraFlyToPosition(8.72, 3.33, 32.14, 5.25, 6.12, 30.81, -1, 15000/GetDeltaTime());
 	}
 	else if (sQuestName == "Mtraxx_CorridaWaitMarko") // 
 	{
@@ -8234,7 +8233,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		locCameraResetState();
 		sld = CharacterFromID("IgnasioClone");
 		SetCameraDialogMode(sld);
-		locCameraFlyToPosition(0.06, 4.17, 28.91, 20.28, 6.27, 17.44, -1, 1500.0);
+		locCameraFlyToPosition(0.06, 4.17, 28.91, 20.28, 6.27, 17.44, -1, 15000/GetDeltaTime());
 	}
 	else if (sQuestName == "Mtraxx_CorridaMarkoExit3")
 	{
@@ -8243,7 +8242,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 	else if (sQuestName == "Mtraxx_CorridaMarkoExit3_1")
 	{
 		locCameraResetState();
-		locCameraFlyToPosition(27.20, 3.89, 22.67, 43.42, 7.21, 23.34, -1, 1500.0);
+		locCameraFlyToPosition(27.20, 3.89, 22.67, 43.42, 7.21, 23.34, -1, 15000/GetDeltaTime());
 		DoQuestCheckDelay("Mtraxx_CorridaMarkoExit4", 9.0);
 	}
 	else if (sQuestName == "Mtraxx_CorridaMarkoExit4")
@@ -8253,7 +8252,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 	else if (sQuestName == "Mtraxx_CorridaMarkoExit4_1")
 	{
 		locCameraResetState();
-		locCameraFlyToPosition(49.09, 3.55, 35.11, 53.88, 3.68, 61.22, -1, 1500.0);
+		locCameraFlyToPosition(49.09, 3.55, 35.11, 53.88, 3.68, 61.22, -1, 15000/GetDeltaTime());
 	}
 	else if (sQuestName == "Mtraxx_CorridaMarkoGone")
 	{
@@ -10136,6 +10135,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		LAi_ActorDialog(sld, pchar, "", 0, 0);
 		
 		sld = CharacterFromID("Zorro");
+		GiveItem2Character(sld, "hat8");
 		ChangeCharacterAddressGroup(sld, PChar.location, "quest", "door");
 		TeleportCharacterToPosAy(sld, 22.52, 0.00, -0.75, -1.50);
 		LAi_SetActorType(sld);

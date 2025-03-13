@@ -258,7 +258,7 @@ int LocationInitCuracao(int n)
 	locations[n].reload.l22.label = "House";
 
 	locations[n].reload.l23.name = "houseS2";
-	locations[n].reload.l23.go = "CommonFlamHouse";
+	locations[n].reload.l23.go = "Villemstad_houseS2";
 	locations[n].reload.l23.emerge = "reload1";
 	locations[n].reload.l23.autoreload = "0";
 	locations[n].reload.l23.label = "House";
@@ -420,6 +420,15 @@ int LocationInitCuracao(int n)
 	locations[n].reload.l48.autoreload = "0";
 	locations[n].reload.l48.label = "House";
 	locations[n].reload.l48.disable = 1; // Вход будет только со двора
+	
+	SetItemInLocation("PR_Letter", "Villemstad_town", "letter1");
+	locations[n].locators_radius.item.letter1 = 1.0;
+	QuestPointerToLoc("Villemstad_town", "item", "letter1");
+	
+	locations[n].locators_radius.item.letter2 = 1.3;
+	locations[n].locators_radius.item.letter3 = 1.0;
+	locations[n].locators_radius.item.letter4 = 1.0;
+	locations[n].locators_radius.item.key1 = 1.0;
 
 	n = n + 1;
 
@@ -1892,6 +1901,104 @@ int LocationInitCuracao(int n)
 	locations[n].private1.items.potion4 = 8;
 	locations[n].private1.items.potion3 = 1;
 	locations[n].private1.items.book2_12 = 1;
+	n = n + 1;
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Дом с винным погребом
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Villemstad_houseS2";
+	locations[n].id.label = "House";
+	locations[n].image = "loading\inside\mediumhouse10.tga";
+	locations[n].MustSetReloadBack = true;
+ 	//Town sack
+	locations[n].townsack = "Villemstad";
+	locations[n].lockWeather = "Inside";
+	//Sound
+	locations[n].type = "house";
+	locations[n].fastreload = "Villemstad";
+ 	locations[n].islandId = "Curacao";
+	//Models
+	locations[n].filespath.models = "locations\inside\FlamHouse";
+	//Always
+	locations[n].models.always.tavern = "FlamHouse";
+	locations[n].models.always.tavern.level = 65538;
+	locations[n].models.always.window = "FlamHouse_window";
+	locations[n].models.always.window.tech = "LocationWindows";
+	locations[n].models.always.window.level = 65539;
+	locations[n].models.day.locators = "FlamHouse_locators";
+	locations[n].models.night.locators = "FlamHouse_Nlocators";
+
+	locations[n].models.always.back = "..\inside_back";
+	locations[n].models.always.back.level = 65529;
+	//Day
+	locations[n].models.day.charactersPatch = "FlamHouse_patch";
+	//Night
+	locations[n].models.night.charactersPatch = "FlamHouse_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	locations[n].environment.sea = "false";
+	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Villemstad_town";
+	locations[n].reload.l1.emerge = "houseBH2";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "house";
+
+	locations[n].reload.l2.name = "reload2";
+	locations[n].reload.l2.go = "Villemstad_WineCellar";
+	locations[n].reload.l2.emerge = "reload1";
+	locations[n].reload.l2.autoreload = "0";
+	locations[n].reload.l2.label = "Wine Cellar";
+
+	locations[n].reload.l3.name = "reload4";
+	locations[n].reload.l3.go = "CommonRoom_MH3";
+	locations[n].reload.l3.emerge = "reload1";
+	locations[n].reload.l3.autoreload = "0";
+	locations[n].reload.l3.label = "Room";
+	
+	locations[n].reload.l4.name = "reload3";
+	locations[n].reload.l4.go = "CommonRoom_MH4";
+	locations[n].reload.l4.emerge = "reload1";
+	locations[n].reload.l4.autoreload = "0";
+	locations[n].reload.l4.label = "Room";
+	n = n + 1;
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//  Винный погреб
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	locations[n].id = "Villemstad_WineCellar";
+	locations[n].image = "loading\inside\sklad.tga";
+	locations[n].id.label = "Wine Cellar";
+	//Sound
+	locations[n].townsack = "Villemstad";
+	locations[n].type = "house";
+	locations[n].fastreload = "Villemstad";
+	locations[n].islandId = "Curacao";
+	//Models
+	//Always
+	locations[n].filespath.models = "locations\inside\WineCellar";
+	locations[n].models.always.WineCellar = "WineCellar";
+	locations[n].models.always.WineCellar_parts = "WineCellar_parts";
+	locations[n].models.always.WineCellar_Room = "WineCellar_RoomClosed";
+	locations[n].models.always.locators = "WineCellar_locators";
+	//Day
+	//locations[n].models.day.charactersPatch = "WineCellar_RoomOpened_patch";
+	locations[n].models.day.charactersPatch = "WineCellar_RoomClosed_patch";
+	//Night
+	//locations[n].models.night.charactersPatch = "WineCellar_RoomOpened_patch";
+	locations[n].models.night.charactersPatch = "WineCellar_RoomClosed_patch";
+	//Environment
+	locations[n].environment.weather = "true";
+	Locations[n].lockWeather = "Inside";
+	Locations[n].QuestlockWeather = "23 Hour";
+	locations[n].environment.sea = "false";
+	locations[n].environment.weather.rain = false;
+ 	//Reload map
+	locations[n].reload.l1.name = "reload1";
+	locations[n].reload.l1.go = "Villemstad_houseS2";
+	locations[n].reload.l1.emerge = "reload2";
+	locations[n].reload.l1.autoreload = "0";
+	locations[n].reload.l1.label = "house";
 	n = n + 1;
 
 

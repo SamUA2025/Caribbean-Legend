@@ -32,15 +32,15 @@ void ProcessDialogEvent()
 			switch (rand(2))
 			{
 				case 0: //конвой у острова, установка параметров
-					pchar.GenQuest.MarchCap.Island = GetRandomIslandId();
+					pchar.GenQuest.MarchCap.Island = GetRandIslandId();
 					while(pchar.GenQuest.MarchCap.Island == pchar.GenQuest.MarchCap.Startisland)
 					{
-						pchar.GenQuest.MarchCap.Island = GetRandomIslandId();
+						pchar.GenQuest.MarchCap.Island = GetRandIslandId();
 					}
 					pchar.GenQuest.MarchCap.Island.Shore = GetIslandRandomShoreId(pchar.GenQuest.MarchCap.Island);
 					while(pchar.GenQuest.MarchCap.Island.Shore == "")
 					{
-						pchar.GenQuest.MarchCap.Island = GetRandomIslandId();
+						pchar.GenQuest.MarchCap.Island = GetRandIslandId();
 						pchar.GenQuest.MarchCap.Island.Shore = GetIslandRandomShoreId(pchar.GenQuest.MarchCap.Island);
 						if (!isLocationFreeForQuests(pchar.GenQuest.MarchCap.Island) || !isLocationFreeForQuests(pchar.GenQuest.MarchCap.Island.Shore)) pchar.GenQuest.MarchCap.Island.Shore = "";
 					}
@@ -67,15 +67,15 @@ void ProcessDialogEvent()
 					pchar.GenQuest.MarchCap.Goods = GOOD_GOLD + drand(makeint(GOOD_SILVER - GOOD_GOLD));
 					pchar.GenQuest.MarchCap.GoodsQty = sti(pchar.rank)*50+170+rand(30);
 					if (sti(pchar.GenQuest.MarchCap.GoodsQty) > 1600) pchar.GenQuest.MarchCap.GoodsQty = 1500+rand(100);
-					pchar.GenQuest.MarchCap.Island = GetRandomIslandId();
+					pchar.GenQuest.MarchCap.Island = GetRandIslandId();
 					while(pchar.GenQuest.MarchCap.Island == pchar.GenQuest.MarchCap.Startisland)
 					{
-						pchar.GenQuest.MarchCap.Island = GetRandomIslandId();
+						pchar.GenQuest.MarchCap.Island = GetRandIslandId();
 					}
 					pchar.GenQuest.MarchCap.Island.Shore = GetIslandRandomShoreId(pchar.GenQuest.MarchCap.Island);
 					while(pchar.GenQuest.MarchCap.Island.Shore == "")
 					{
-						pchar.GenQuest.MarchCap.Island = GetRandomIslandId();
+						pchar.GenQuest.MarchCap.Island = GetRandIslandId();
 						pchar.GenQuest.MarchCap.Island.Shore = GetIslandRandomShoreId(pchar.GenQuest.MarchCap.Island);
 						if (!isLocationFreeForQuests(pchar.GenQuest.MarchCap.Island) || !isLocationFreeForQuests(pchar.GenQuest.MarchCap.Island.Shore)) pchar.GenQuest.MarchCap.Island.Shore = "";
 					}

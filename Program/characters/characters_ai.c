@@ -13,7 +13,7 @@ bool SetCharacterTask_None(ref character)
 bool SetCharacterForcedStop(ref character)
 {
 	SendMessage(character, "ls", MSG_CHARACTER_EX_MSG, "ForcedStopMove");
-	SetCharacterTask_None(character);
+	return SetCharacterTask_None(character);
 }
 
 bool SetCharacterTask_Stay(ref character)

@@ -1165,12 +1165,12 @@ void ProcessDialogEvent()
 			}
 			if(sti(pchar.questTemp.FadeyRopes) >= 1 && !CheckAttribute(pchar, "questTemp.FadeyRopesBlock")) // увеличить объём поставок канатами
 			{
-				link.l4 = "Fadey, könnten wir das Volumen unserer Geschäfte erhöhen? Ich bin bereit, fünfmal mehr Waren von dir zu kaufen! Ich denke, das würde uns beiden zugute kommen. Was sagst du dazu?";
+				link.l4 = "Fadej, könnten wir den Umfang unserer Geschäfte erhöhen? Ich bin bereit, fünfmal mehr Waren von Ihnen zu kaufen! Ich denke, das würde uns beiden nutzen. Was sagen Sie dazu?";
 				link.l4.go = "UpgradeRopes";
 			}
 			if(sti(pchar.questTemp.FadeyRopes) >= 1 && CheckAttribute(pchar, "questTemp.FadeyRopesPotom") && PCharDublonsTotal() >= 3000) // увеличить объём поставок канатами, если в первый раз не принесли
 			{
-				link.l4 = "Fadey, ich habe das Geld mitgebracht! Drei tausend Gold-Dukaten, wie vereinbart.";
+				link.l4 = "Fadej, ich habe das Geld gebracht! Dreitausend goldene Dublonen, wie vereinbart.";
 				link.l4.go = "UpgradeRopes_Agreed";
 			}
 		break;
@@ -1313,33 +1313,33 @@ void ProcessDialogEvent()
 		break;
 		
 		case "UpgradeRopes":
-			dialog.text = "Ho-ho, ich sehe, dass Ihr Geschäft blüht und die Gelüste wachsen! Ihr habt recht, unsere Waren sind fein und die Preise nicht zu hoch. Bedenkt aber, dass Investitionen notwendig sind! Solch ein Geschäft erfordert einen ernsten Ansatz, um alles perfekt zu machen.";
-			link.l1 = "Hätte ich Ihnen ein solches Angebot gemacht, ohne ein paar hundert Dublonen in Reserve zu haben?";
+			dialog.text = "Ho-ho, ich sehe, Ihre Geschäfte laufen nicht umsonst, und der Appetit wächst! Stimmt, unsere Waren sind gut und die Preise nicht zu hoch. Bedenken Sie jedoch, hier sind Investitionen nötig! Ein solches Geschäft erfordert einen ernsthaften Ansatz, damit alles perfekt wird.";
+			link.l1 = "Würde ich mit einem solchen Angebot zu Ihnen kommen, ohne ein paar hundert Dublonen in Reserve zu haben?";
 			link.l1.go = "UpgradeRopes_1";
 		break;
 		
 		case "UpgradeRopes_1":
-			dialog.text = "Ich weiß, dass du Münzen in deiner Truhe hast, und nicht nur ein paar, sicherlich würden fünfzig passen! Aber unser Geschäft ist nicht gewöhnlich - es geht nicht nur darum, Waren zu bewegen, sondern einen Weg zu finden... sagen wir mal, diskret. Für solch ein Ausmaß musst du schwer investieren, nicht nur zahlen, um es profitabel zu machen! Und um sicherzustellen, dass dein Geld nicht in Luft aufgeht. Wenn du bereit bist, dich von dreitausend Gold-Dublonen zu trennen, dann nimm mein Wort, dass alles richtig für dich gemacht wird, als ein guter Freund, und wir werden dich beim Preis nicht über's Ohr hauen.";
+			dialog.text = "Ich weiß, dass Münzen in Ihrer Truhe sind, und nicht nur ein paar, sicherlich würden fünfzig hineinpassen! Aber unser Geschäft ist nicht alltäglich - es geht nicht nur darum, Waren zu transportieren, sondern einen Weg zu finden... sagen wir, einen verborgenen. Für solche Ausmaße müssen Sie nicht nur zahlen, sondern schwer investieren, damit es profitabel ist! Und damit Ihr Geld nicht in leere Pfade verschwindet. Wenn Sie bereit sind, dreitausend goldene Dublonen herzugeben, dann nehmen Sie mein Wort, dass alles für Sie, als guten Freund, richtig gemacht wird, und wir werden Sie beim Preis nicht benachteiligen.";
 			if (PCharDublonsTotal() >= 3000)
 			{
-				Link.l1 = "Dreitausend Dublonen! Nun, ich muss zugeben, dass man ein solch großzügiges Angebot selbst bei den wohlhabendsten Kaufleuten, selbst in den fantastischsten Geschichten, selten hört! Wenige sind bereit, so großzügig in ein solches Unternehmen zu investieren. Aber ich, glücklicherweise, gehöre zu ihrer Zahl. Hier ist dein Geld, Monsieur Fadey.";
+				Link.l1 = "Dreitausend Dublonen! Nun, ich gestehe, ein so großzügiges Angebot hört selbst ein erfolgreicher Händler selten, sogar in den fantastischsten Geschichten! Wenige sind bereit, so großzügig in ein solches Unternehmen zu investieren. Aber ich gehöre glücklicherweise genau zu dieser Zahl. Hier ist Ihr Geld, Monsieur Fadej.";
 				Link.l1.go = "UpgradeRopes_Agreed";
 			}
-			Link.l2 = "Dreitausend Gold-Dukaten! Ich bin nicht bereit für eine solche Summe, Fadey. Leider. Ich komme später zurück.";
+			Link.l2 = "Dreitausend goldene Dublonen! Für solch eine Summe bin ich nicht bereit, Fadej. Leider. Ich komme später wieder.";
 			Link.l2.go = "UpgradeRopes_Potom";
-			link.l3 = "Dreitausend, sagst du? Nun... Um die Wahrheit zu sagen, eine solche Summe gebietet Respekt vor deinem Ehrgeiz. Aber ich muss zugeben - das ist nichts für mich.";
+			link.l3 = "Dreitausend, sagen Sie? Nun gut... Um die Wahrheit zu sagen, eine solche Summe nötigt mir Respekt für Ihre Ambitionen ab. Aber ich muss gestehen - dieses Geschäft ist nichts für mich.";
 			link.l3.go = "UpgradeRopes_2";
 		break;
 		
 		case "UpgradeRopes_2":
-			dialog.text = "Welch eine Wendung! Du kommst mit einem Angebot, dann ziehst du sofort zurück! Ich gebe zu, ich bin enttäuscht, aber werde unsere Freundschaft nicht fallen lassen. Lassen wir es wie zuvor: unser früherer Vertrag besteht weiterhin - fünfzig Spulen zu je zehn Dublonen, jeden Monat, am 20.";
-			link.l1 = "Gut, dass du mich verstehst, Fadey. Ich würde meine Meinung gerne ändern, aber solche Ausgaben übersteigen meine Möglichkeiten. Ach, meine Mittel sind in dieser Angelegenheit begrenzt.";
+			dialog.text = "Was für eine Wendung! Sie kommen mit einem Angebot, und dann sofort einen Rückzieher! Ich gebe zu, ich bin enttäuscht, aber ich werde unsere Freundschaft nicht fallen lassen. Lassen wir es beim Alten: Unsere vorherige Vereinbarung gilt - fünfzig Rollen zu je zehn Dublonen, jeden Monat, am 20.";
+			link.l1 = "Gut, dass Sie mich verstehen, Fadej. Ich würde gerne meine Meinung ändern, aber solche Ausgaben kann ich nicht stemmen. Leider sind meine Möglichkeiten in dieser Angelegenheit begrenzt.";
 			link.l1.go = "UpgradeRopes_3";
 		break;
 		
 		case "UpgradeRopes_3":
-			dialog.text = "Nun, wenn das deine Entscheidung ist, gibt es nichts mehr zu besprechen. Diese Wendung wird unsere Freundschaft nicht beeinflussen. Besuche uns, "+GetSexPhrase("guter Herr","schöne Dame")+".";
-			link.l1 = "Auf Wiedersehen.";
+			dialog.text = "Nun gut, wenn Sie so entschieden haben, gibt es nichts mehr zu besprechen. Diese Wendung wird unsere Freundschaft nicht aufheben. Schauen Sie vorbei, "+GetSexPhrase("guter Mann","liebes Fräulein")+".";
+			link.l1 = "Alles Gute.";
 			link.l1.go = "exit";
 			pchar.questTemp.FadeyRopesBlock = true;
 		break;
@@ -1351,8 +1351,8 @@ void ProcessDialogEvent()
 		break;
 		
 		case "UpgradeRopes_Agreed":
-			dialog.text = "Jetzt ist das vernünftig! Du bist nicht einer für leeres Gerede, sondern weißt, wie man handelt. Für Geschäftsleute wie dich gibt es immer einen Rabatt zu finden! Fünfzehn Prozent Rabatt auf alle zukünftigen Sendungen! Hier ist unser Deal: 250 Rollen Hanfseil werde ich jeden Monat für dich bereithalten. Du kannst sie, wie zuvor, am 20. abholen, zahlst 2125 Dublonen für alles, ohne Rest.";
-			link.l1 = "Perfekt, Fadey! Du bist bemerkenswert einfach zu handeln. Ich bin sicher, der Erfolg erwartet uns. Bis zum nächsten Mal!";
+			dialog.text = "Das ist vernünftig! Sie gehören nicht zu denen, die nur reden, sondern wissen auch zu handeln. Für Geschäftsleute wie Sie gibt es immer einen Rabatt! Fünfzehn Prozent auf alle zukünftigen Lieferungen! So wird unser Vertrag sein: 250 Rollen Hanfseil werde ich jeden Monat für Sie bereithalten. Sie können sie wie zuvor am 20. abholen und 2125 Dublonen für alles bezahlen, ohne Rest.";
+			link.l1 = "Tadellos, Fadej! Mit Ihnen ist es erstaunlich einfach, Geschäfte zu machen. Ich bin mir sicher, dass uns Erfolg erwartet. Bis bald!";
 			link.l1.go = "exit";
 			RemoveDublonsFromPCharTotal(3000);
 			AddQuestRecord("Unique_Goods", "2_1");

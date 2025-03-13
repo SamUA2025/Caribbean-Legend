@@ -127,6 +127,13 @@ bool GetOfficersPerkUsing(ref chref, string perkName)
 	bool  okDelay = true;
 	int   cn;
 	if (GetCharacterPerkUsing(chref, perkName)) {return true;} // босс отдельно
+	/* if (GetCharacterEquipByGroup(pchar, HAT_ITEM_TYPE) == "hat5" && IsCompanion(chref) && chref.id != pchar.id)
+	{
+		if(CheckAttribute(&ChrPerksList, "list."+perkName+".BaseType") && ChrPerksList.list.(perkName).BaseType == "ship")
+		{
+			if(GetCharacterPerkUsing(pchar, perkName)) return true;
+		}
+	} */
 	if (!CheckAttribute(chref,"perks.list."+perkName))  // у гг нет перка вообще, тогда смотрим офов, иначе выход
 	{
 		for(int i=1; i<=6; i++)

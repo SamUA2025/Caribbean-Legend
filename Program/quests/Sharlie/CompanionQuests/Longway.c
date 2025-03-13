@@ -1559,8 +1559,8 @@ bool Longway_QuestComplete(string sQuestName, string qname)
 	else if (sQuestName == "PZ_Kapstervil_OstavlyaemZapisku_1") {
 		LAi_SetActorType(pchar);
 		LAi_ActorGoToLocator(pchar, "goto", "goto2", "PZ_Kapstervil_OstavlyaemZapisku_2", -1);
-		//locCameraFlyToPosition(0.01, 1.6, 1.30, 3.81, 1.3, -4.52, -1, 700);
-		locCameraFlyToPosition(0.01, 1.6, 1.30, 4.50, 1.5, -2.20, -1, 700);
+		locCameraFlyToPosition(0.01, 1.6, 1.30, 4.50, 1.5, -2.20, -1, 5000/GetDeltaTime());
+		Pchar.FuncCameraFly = "PZ_Kapstervil_OstavlyaemZapisku_1_1";
 	}
 	
 	else if (sQuestName == "PZ_Kapstervil_OstavlyaemZapisku_2") {
@@ -1578,6 +1578,7 @@ bool Longway_QuestComplete(string sQuestName, string qname)
 	else if (sQuestName == "PZ_Kapstervil_OstavlyaemZapisku_3_1") {
 		locCameraResetState();
 		locCameraFromToPos(0.47, 1.91, 0.37, true, 6.54, -0.50, 0.16);
+		locCameraSleep(false);
 	}
 	
 	else if (sQuestName == "PZ_Kapstervil_OstavlyaemZapisku_4") {
@@ -1936,13 +1937,8 @@ bool Longway_QuestComplete(string sQuestName, string qname)
 		pchar.questTemp.NoFast = true;
 		StartQuestMovie(true, false, true);
 		SetCameraDialogMode(CharacterFromID("PZ_BasTerJailOff_Clone"));
-		locCameraFlyToPosition(-24.56, 7.19, -5.66, 1.91, 31.11, -13.72, -1, 1200.0);
-		DoQuestCheckDelay("PZ_MayakPodslushivanie_2", 13.0);
-	}
-	
-	else if (sQuestName == "PZ_MayakPodslushivanie_2") {
-		locCameraSleep(true);
-		DoQuestCheckDelay("PZ_MayakPodslushivanie_3", 1.5);
+		locCameraFlyToPosition(-24.56, 8.19, -5.66, 1.91, 31.11, -13.72, 1, 12000/GetDeltaTime());
+		Pchar.FuncCameraFly = "PZ_MayakPodslushivanie_2";
 	}
 	
 	else if (sQuestName == "PZ_MayakPodslushivanie_3") {
@@ -1951,6 +1947,7 @@ bool Longway_QuestComplete(string sQuestName, string qname)
 		sld.dialog.currentnode = "PZ_MayakPodslushivanie_Dialog_1";
 		LAi_SetActorType(sld);
 		LAi_ActorDialogNow(sld, Pchar, "", -1);
+		locCameraSleep(true);
 	}
 	
 	else if (sQuestName == "PZ_MayakPodslushivanie_win") {
@@ -5184,4 +5181,15 @@ bool Longway_QuestComplete(string sQuestName, string qname)
 	}
 	
 	return condition;
+}
+
+void PZ_Kapstervil_OstavlyaemZapisku_1_1()
+{
+	locCameraSleep(true);
+}
+
+void PZ_MayakPodslushivanie_2()
+{
+	locCameraToPos(1.91, 31.11, -13.72, false);
+	DoQuestCheckDelay("PZ_MayakPodslushivanie_3", 1.5);
 }

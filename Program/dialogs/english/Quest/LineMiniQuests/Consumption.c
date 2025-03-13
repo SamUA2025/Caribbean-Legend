@@ -451,7 +451,7 @@ void ProcessDialogEvent()
 			}
 			if(sti(pchar.questTemp.SergioOil) >= 1 && CheckAttribute(pchar, "questTemp.SergioOilPotom") && PCharDublonsTotal() >= 3000) // увеличить объём поставок смолами, если в первый раз не принесли
 			{
-				link.l4 = "Here, as promised, Señor Sergio, three thousand doubloons, as you requested. I am sure that with your foresight and my investment, this venture will bring considerable benefits to both of us.";
+				link.l4 = "Here, as I promised, Señor Sergio, three thousand doubloons, as you requested. I'm confident that with your foresight and my investment, this venture will bring considerable profit to both of us.";
 				link.l4.go = "UpgradeOil_Agreed";
 			}
 		break;
@@ -492,8 +492,8 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.text = "Señor"+GetSexPhrase("","ita")+", I appreciate your interest, but such large transactions require experience and caution. Admittedly, your level in trading is not yet high enough to handle such a volume. I advise you to gain some more experience and come back to me when you are ready for more parities. Then maybe we'll discuss the matter thoroughly.";
-				link.l1 = "Good. We will return to this issue later.";
+				dialog.text = "Señor"+GetSexPhrase("","ita")+", I appreciate your interest, but such large deals require experience and caution. To be honest, your level in trading matters is not yet high enough to handle such a volume. I advise you to gain a bit more experience and return to me when you're ready for larger shipments. Then, perhaps, we'll discuss the matter thoroughly.";
+				link.l1 = "Very well. We'll return to this question later.";
 				link.l1.go = "oil_trade_exit";
 				notification("Skill Check Failed (80)", SKILL_COMMERCE);
 			}
@@ -519,8 +519,8 @@ void ProcessDialogEvent()
 		break;
 		
 		case "UpgradeOil_Agreed":
-			dialog.text = "Well, señor, I see that our trust is mutual. Be sure that the case will be handled properly. Now to the details: 300 barrels of oil, as usual, on the 5th of each month, will be waiting for you here at the Trinidad Lighthouse. You can redeem the entire lot for 2550 doubloons.";
-			link.l1 = "That's great, Señor Sergio. Don't let me down.";
+			dialog.text = "Well then, señor, I see our trust is mutual. Rest assured: everything will be arranged properly. Now to the details: 300 barrels of resin, as usual, will be waiting for you here at the Trinidad lighthouse on the 5th of each month. You can purchase the entire batch for 2550 doubloons.";
+			link.l1 = "Excellent, Señor Sergio. Don't let me down.";
 			link.l1.go = "UpgradeOil_Agreed_1";
 			RemoveDublonsFromPCharTotal(3000);
 			AddQuestRecord("Unique_Goods", "4_1");
@@ -530,7 +530,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "UpgradeOil_Agreed_1":
-			dialog.text = "Don't hesitate, señor"+GetSexPhrase("","ita")+". Everything will be organized at the highest level, and our joint work will bring benefits.";
+			dialog.text = "Have no doubt, señor"+GetSexPhrase("","ita")+". Everything will be organized at the highest level, and our joint effort will bear fruit.";
 			link.l1 = "See you.";
 			link.l1.go = "oil_trade_exit";
 		break;

@@ -28,6 +28,7 @@
 #define SPECIAL_ITEM_TYPE		"special" 	// Jason, спецпредметы, не отн. к прочим группам
 #define AMMO_ITEM_TYPE			"ammo" 		// Боеприпас
 #define LANTERN_ITEM_TYPE		"lantern" 	// фонарь
+#define HAT_ITEM_TYPE			"hat" 		// шляпы
 #define MUSKET_ITEM_TYPE		"musket"	// evganat - мушкеты
 
 #define ITEM_SLOT1_TYPE			"slot1"		
@@ -50,8 +51,8 @@
 
 // indexes for items` array
 //#define TOTAL_ITEMS				  1008 // Warship 08.05.09 - Новая система предметов
-int TOTAL_ITEMS = 1075;  //
-int ITEMS_QUANTITY = 547; // не забываем менять номер
+int TOTAL_ITEMS = 1105;  //
+int ITEMS_QUANTITY = 577; // не забываем менять номер
 #define MAX_BUTTONS               64
 #define RANDITEMS_QUANTITY    	  53
 #define BUTTON_ACTIVATION_TIME	  1000
@@ -60,7 +61,8 @@ int ITEMS_QUANTITY = 547; // не забываем менять номер
 #define MAX_HANDLED_BOXES 		  25
 #define ITEM_PROBABILITY		  0.5
 #define OBJECTS_IN_BOX			  9
-#define MAPS_IN_ATLAS			  23 // ugeen 21.06.09  -не забываем увеличивать при появлении новых карт 	
+#define MAPS_IN_ATLAS			  23 // ugeen 21.06.09  -не забываем увеличивать при появлении новых карт
+#define TREASURE_NOTES			  18
 
 // blade defines - некоторые константы для клинков
 // типы холодного оружия
@@ -88,5 +90,5 @@ int ITEMS_QUANTITY = 547; // не забываем менять номер
 #define FencingS_MaxAttack        80.0    // максимальная атака для средних клинков
 #define FencingH_MaxAttack        100.0   // максимальная атака для тяжёлых клинков
 
-object Items[1075];
+object Items[1105];
 object RandItems[RANDITEMS_QUANTITY];

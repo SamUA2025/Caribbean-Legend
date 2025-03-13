@@ -673,47 +673,33 @@ void CalculateInfoDataF10()
     Statistic_AddValue(PChar, "Cheats.F10", 1);
 }
 ////////////////////////////////////////////////////////////////////////
-string descF11 = "ТЕСТЫ: Смещение камеры";
+string descF11 = "Увеличить уровень +5";
 
 void CalculateInfoDataF11()
 {
-//    locCamera.offsetX = 1.0; // - ВЛЕВО, + ВПРАВО
-//    locCamera.offsetY = 0.0; // - ВНИЗ,  + ВВЕРХ
-//    locCamera.offsetZ = 0.0; // - НАЗАД, + ВПЕРЁД
-	// ПРЕСЕТ 1
-	locCamera.OffsetPreset.preset1.x = 0.5;
-	locCamera.OffsetPreset.preset1.y = 0.2;
-	locCamera.OffsetPreset.preset1.z = 0.3;
-	// ПРЕСЕТ 2
-	locCamera.OffsetPreset.preset2.x = 0.0;
-	locCamera.OffsetPreset.preset2.y = 0.2;
-	locCamera.OffsetPreset.preset2.z = -0.6;
-	// ДЕФОЛТНЫЙ ПРЕСЕТ
-	locCamera.OffsetPreset.CurPreset = 1;
+	pchar.rank = sti(pchar.rank) + 5;
 	
-	locCamera.DeltaOffset = 2.5;
+	totalInfo = totalInfo + NewStr() + NewStr() + "Команда отработала успешно!";
 	
-    ProcessCancelExit();
+	SetFormatedText("INFO_TEXT", totalInfo);
+
+    // Статистика по читам
+    Statistic_AddValue(PChar, "Cheats.F11", 1);
 }
 ////////////////////////////////////////////////////////////////////////
 //string descF12 = "НЗГ у всех наций +50";
-string descF12 = "ТЕСТЫ: Настройка камеры для прицеливания";
+string descF12 = "Увеличить макс. здоровье +50";
 
 void CalculateInfoDataF12()
 {
-	locCamera.AimingPistol.perspective = 1.285;
-	locCamera.AimingPistol.kRadius = 0.55;
-	locCamera.AimingPistol.offsetX = 0.64;
-	locCamera.AimingPistol.offsetY = 0.25;
-	locCamera.AimingPistol.offsetZ = 0.0;
+	LAi_SetHP(pchar,LAi_GetCharacterMaxHP(pchar)+50,LAi_GetCharacterMaxHP(pchar)+50);
 	
-	locCamera.AimingMusket.perspective = 1.285;
-	locCamera.AimingMusket.kRadius = 0.35;
-	locCamera.AimingMusket.offsetX = 0.64;
-	locCamera.AimingMusket.offsetY = 0.15;
-	locCamera.AimingMusket.offsetZ = 0.45;
-
-    ProcessCancelExit();
+	totalInfo = totalInfo + NewStr() + NewStr() + "Команда отработала успешно!";
+	
+	SetFormatedText("INFO_TEXT", totalInfo);
+	 
+	// Статистика по читам
+    Statistic_AddValue(PChar, "Cheats.F12", 1);
 }
 
 /*string descF13 = "Worldmap encounters ON/OFF";
@@ -778,8 +764,8 @@ void CalculateInfoDataF14()
 string descF15 = "ТЕСТЫ: Настройка камеры для плавания";
 void CalculateInfoDataF15()
 {
-    locCamera.Swimming.offsetY = 0.4;
-	locCamera.Swimming.offsetZ = 0.8;
+    locCamera.Swimming.offsetY = 18.4;
+	locCamera.Swimming.offsetZ = 10.8;
 	
     ProcessCancelExit();
 }
@@ -788,14 +774,49 @@ string descF16 = "ТЕСТЫ: Изменить параметры картечн
 
 void CalculateInfoDataF16()
 {
-	pchar.testshards.quantity = 25;
-	pchar.testshards.width = 5.0;
-	pchar.testshards.height = 3.0;
+	int idx;
+	ref item;
+	// Трёхствольный дробовик
+	idx = Items_FindItemIdx("pistol2");
+	item = &Items[idx];
+	item.shards.quantity 	= 	20;
+	item.shards.width 		= 	5.0;
+	item.shards.height 		= 	3.0;
+	// Тромбон
+	idx = Items_FindItemIdx("pistol3");
+	item = &Items[idx];
+	item.shards.quantity 	= 	20;
+	item.shards.width 		= 	5.0;
+	item.shards.height 		= 	3.0;
+	// Бландербуз
+	idx = Items_FindItemIdx("pistol8");
+	item = &Items[idx];
+	item.shards.quantity 	= 	20;
+	item.shards.width 		= 	5.0;
+	item.shards.height 		= 	3.0;
+	// Гауда
+	idx = Items_FindItemIdx("howdah");
+	item = &Items[idx];
+	item.shards.quantity 	= 	20;
+	item.shards.width 		= 	5.0;
+	item.shards.height 		= 	3.0;
+	// Аркебуза
+	idx = Items_FindItemIdx("mushket3");
+	item = &Items[idx];
+	item.shards.quantity 	= 	20;
+	item.shards.width 		= 	5.0;
+	item.shards.height 		= 	3.0;
+	// Башенный мушкетон
+	idx = Items_FindItemIdx("mushket6");
+	item = &Items[idx];
+	item.shards.quantity 	= 	20;
+	item.shards.width 		= 	5.0;
+	item.shards.height 		= 	3.0;
 	
     ProcessCancelExit();
 }
 
-string descF17 = "ТЕСТЫ: Сменить угол доворота";
+string descF17 = "ТЕСТЫ: Сменить угол доворота - не работает";
 void CalculateInfoDataF17()
 {
     // Вместо 60.0 подставить нужное число в градусах

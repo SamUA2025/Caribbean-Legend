@@ -79,7 +79,7 @@ void locCameraSleep(bool isSleep)
 
 void locCameraSwitch()
 {
-/*	if(locCameraEnableFree == false) return;
+	if(locCameraEnableFree == false) return;
 	string controlName = GetEventData();
 	if(controlName != "ChrCamCameraSwitch") return;
 	if(locCameraCurMode != LOCCAMERA_FREE)
@@ -87,7 +87,7 @@ void locCameraSwitch()
 		locCameraFree();
 	}else{
 		locCameraFollow();
-	}	*/
+	}
 }
 
 void locCameraSetSpecialMode(bool isEnable)
@@ -271,6 +271,13 @@ int locCameraGetFirstEmptyState()
 // В результате получаем последовательные полеты камеры
 void locCameraNextState()
 {
+	if (CheckAttribute(PChar, "FuncCameraFly"))
+	{
+		locCameraResetState();
+		string func = Pchar.FuncCameraFly;
+		call func();
+		return;
+	}
 	ref prevCamera, curCamera, nextCamera;
 	float distance;
 	int time;
@@ -305,7 +312,7 @@ void locCameraResetState()
 		DeleteAttribute(&objLocCameraStates[i], "");
 	}
 	
-	Log_TestInfo("locCameraResetState()");
+	//Log_TestInfo("locCameraResetState()");
 }
 
 // Обновление позиции камеры при входе в кадр

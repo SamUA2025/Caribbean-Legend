@@ -331,4 +331,9 @@ void Map_TraderSucces_quest(string sChar)
 	{
 		SantaMisericordia_ToCity(sChar);
 	}
+	
+	if (sChar == "LadyBeth_cap" && characters[GetCharacterIndex(sChar)].quest == "InMap")
+	{
+		//LadyBeth_ToCity(sChar);
+	}
 }

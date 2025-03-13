@@ -1,0 +1,572 @@
+newline  {
+
+}
+
+BasicDefense	{Técnicas básicas de defensa}
+perkBasicDefense
+{
+El daño recibido disminuye en un 10%.
+}
+
+AdvancedDefense	{Técnicas avanzadas de defensa}
+perkAdvancedDefense
+{
+El daño recibido disminuye en un 20%.
+}
+
+CriticalHit	{Golpe crítico}
+perkCriticalHit
+{
+Incrementa en un 5% la posibilidad de realizar un golpe crítico.
+}
+
+Ciras	{Coraza}
+perkCiras
+{
+Permite equipar corazas.
+}
+
+SwordplayProfessional	{Esgrima de élite}
+perkSwordplayProfessional
+{
+15% de posibilidades de realizar un golpe crítico. El daño recibido disminuye en un 30%.
+}
+
+Grus	{Espalda musculosa}
+perkGrus
+{
+Permite levantar 30 libras más.
+}
+
+Rush	{Tintura Ometochtli}
+perkRush
+{
+Tintura embriagadora, que contribuye a la manifestación instantánea de una fuerza y resistencia tremendas, un aumento significativo de la destreza y de la rapidez de reacción, insensibilidad al dolor y aumento de la agresividad.
+~
+Durante 12 segundos los ataques del personaje se vuelven mucho más poderosos y el daño recibido se reduce.
+Es perjudicial para la salud. Tiempo de recarga: 1 minuto.
+}
+
+Tireless	{Incremento de la adrenalina}
+perkTireless
+{
+Consigues otro soplo de energía durante el combate y te cansas menos. La energía se recupera un 15% más rápido.
+}
+
+HardHitter {Mano dura}
+perkHardHitter
+{
+Los "Ataques pesados" exitosos provocan un 30% más de daño.
+}
+
+BladeDancer	{Bailarín de espadas}
+perkBladeDancer
+{
+Bonificación del 30% al daño con "Golpe circular".
+}
+
+Sliding	{Ariete}
+perkSliding
+{
+Tus golpes tienen un 20% de probabilidad de penetrar el bloqueo enemigo. Aumenta un 1% por cada punto de 'Suerte'.
+}
+
+Gunman {Mosquetero}
+perkGunman
+{
+Mejoras las habilidades con las armas de fuego: la precisión y la velocidad de recarga aumentan en un 10%. 
+Puedes usar arcabuces, mosquetes, morteros y otras armas largas de un solo cañón.
+}
+
+GunProfessional {Pistolero}
+perkGunProfessional
+{
+La precisión y la velocidad de recarga de las armas de fuego aumentan en un 25%.
+~
+Puedes utilizar armas de fuego de múltiples cañones y de repetición.
+~
+El personaje puede disparar un mosquete a través de los aliados sin golpearlos. ¡Diana!
+}
+
+IronWill	{Voluntad de hierro}
+perkIronWill
+{
+Permite al personaje sobrevivir a una herida mortal una vez cada tres minutos e intimidar a los oficiales con baja lealtad para evitar que te abandonen.
+~
+Disminuye la probabilidad de que se produzca un motín por hambre y falta de pago.
+~
+La habilidad funciona para el protagonista, el "Contramaestre" y los oficiales de "Vanguardia".
+}
+
+SharedExperience	{Aprendizaje rápido}
+perkSharedExperience
+{
+El protagonista adquiere rango y puntos de habilidad más rápido. Equivale a un punto extra en Talento (T).
+~
+Se duplica la experiencia compartida con los pasajeros (10%), oficiales (50%) y escoltas (33%).
+}
+
+Medic	{Salud excelente}
+perkMedic
+{
+Aumenta la cantidad máxima de puntos de "Vida" en 40.
+La 'Salud' se recupera el doble de rápido, siempre y cuando evites las heridas graves durante 24 horas.
+El impacto de las heridas sobre la "Salud" se reduce. 
+Su efecto disminuye cuando estás en el mar.
+~
+~
+Habilidad disponible solo para el jugador
+}
+
+HPPlus	{Aumento de la vitalidad}
+perkHPPlus
+{
+La cantidad máxima de salud aumenta un punto cada vez que asciendes de rango (es retroactiva).
+}
+
+EnergyPlus	{Aumento de la energía}
+perkEnergyPlus
+{
+La cantidad máxima de energía aumenta un punto cada vez que asciendes de rango (es retroactiva).
+}
+
+ByWorker	{Multitareas}
+perkByWorker
+{
+El oficial puede ocupar dos puestos a la vez.
+~
+~
+~
+~
+~
+Habilidad disponible solo para los oficiales
+}
+
+ByWorker2	{Mañoso}
+perkByWorker2
+{
+El oficial puede ocupar tres puestos a la vez.
+~
+~
+~
+~
+~
+Habilidad disponible solo para los oficiales
+}
+
+Trustworthy	{Cara de bueno}
+perkTrustworthy
+{
+La reputación negativa ya no interfiere en las decisiones de contratación de la mayoría de empleadores.
+~
+Aumenta la probabilidad de engañar a los guardias.
+~
+Las tabernas tendrán más tripulación y oficiales disponibles para contratar.
+~
+Desbloquea opciones nuevas para algunas misiones.
+~
+Habilidad disponible solo para el jugador.
+}
+
+ShipEscape	{Huida en salvavidas}
+perkShipEscape
+{
+Si el casco de tu barco tiene menos de 15% de integridad, puedes huir en bote a otro barco de la escuadra. 
+Cuando la integridad del casco sea menor al 15%, durante el combate, podrás acceder a la transferencia de mercancías en el menú de "Barcos" con otro barco de tu escuadra.
+Si un escolta tiene esta habilidad y su barco se hunde o es usado como "Brulote", regresará al barco del héroe en un bote salvavidas.
+}
+
+Alchemy	{Alquimia}
+perkAlchemy
+{
+Esta habilidad permite crear nuevos objetos usando instrumentos y componentes, a través de transformaciones químicas o mecánicas.
+~
+~
+~
+~
+Habilidad disponible solo para el jugador
+}
+
+FastReload {Recarga rápida}
+perkFastReload
+{
+Los cañones se recargan un 10% más rápido.
+}
+
+ImmediateReload	{Recarga preliminar}
+perkImmediateReload
+{
+La siguiente recarga es un 30% más rápida. Tendrás que esperar 5 minutos para volver a activar esta habilidad.
+}
+
+HullDamageUp	{Daño incrementado al casco}
+perkHullDamageUp
+{
+Aumenta el daño al casco de los barcos enemigos en un 15%.
+}
+
+SailsDamageUp	{Daño incrementado a las velas}
+perkSailsDamageUp
+{
+Aumenta el daño a las velas enemigas en un 15%.
+}
+
+CrewDamageUp {Daño incrementado a la tripulación}
+perkCrewDamageUp
+{
+Aumenta el daño a la tripulación enemiga en un 15%.
+}
+
+CriticalShoot	{Disparo crítico}
+perkCriticalShoot
+{
+Tienes un 5% de probabilidad de realizar un disparo crítico al enemigo.
+}
+
+LongRangeShoot	{Fuego a distancia}
+perkLongRangeShoot
+{
+El alcance de los cañones aumenta en un 15%.
+}
+
+CannonProfessional	{Artillero profesional}
+perkCannonProfessional
+{
+Aumenta el daño a cualquier parte del barco enemigo en un 30%. La probabilidad de realizar un golpe crítico aumenta un 15%.
+}
+
+LongRangeGrappling	{Pasarela más larga}
+perkLongRangeGrappling
+{
+El alcance para realizar un abordaje aumenta en un 15%. 
+}
+
+MusketsShoot {Disparo de mosquetes}
+perkMusketsShoot
+{
+Disparas una andanada de mosquetes antes de iniciar el abordaje.
+~
+Las bajas enemigas dependerán de la clase de los barcos y de la cantidad de oficiales de 'Vanguardia' asignados.
+}
+
+GrapplingProfessional	{Maestro del abordaje}
+perkGrapplingProfessional
+{
+El alcance para realizar el abordaje aumenta en un 25% y se puede abordar a cualquier velocidad y desde cualquier ángulo.
+}
+
+BasicBattleState	{Defensa naval básica}
+perkBasicBattleState
+{
+El daño general recibido por el barco disminuye en un 15%.
+}
+
+AdvancedBattleState	{Defensa naval avanzada}
+perkAdvancedBattleState
+{
+El daño general recibido por el barco disminuye en un 25%.
+}
+
+ShipDefenseProfessional	{Defensa naval de élite}
+perkShipDefenseProfessional
+{
+El daño general recibido por el barco disminuye en un 35% y la probabilidad de recibir un golpe crítico disminuye en un 70%. 
+}
+
+
+ShipSpeedUp	{Mayor velocidad de navegación}
+perkShipSpeedUp
+{
+Aumenta la velocidad máxima del barco en un 15%.
+}
+
+ShipTurnRateUp	{Mayor capacidad de maniobra}
+perkShipTurnRateUp
+{
+Aumenta la capacidad de maniobra del barco en un 15%.
+}
+
+StormProfessional	{Navegación con tormentas}
+perkStormProfessional
+{
+Disminuye en un 30% el daño sufrido por las tormentas. 
+}
+
+Turn180	{Giro rápido}
+perkTurn180
+{
+El barco gira 4 veces más rápido durante 1 minuto. Tiene un tiempo de recarga de 3 minutos.
+}
+
+SailingProfessional	{Viejo lobo de mar}
+perkSailingProfessional
+{
+La velocidad y maniobrabilidad del barco aumentan en un 20%.
+Es posible evitar los encuentros con barcos normales en el mapamundi un 75% de las veces.
+}
+
+SeaDogProfessional	{Azote de los mares}
+perkSeaDogProfessional
+{
+Incluso los más intrépidos aventureros y bandidos no se atreverán a probar su suerte cuando vean la bandera del 'Azote de los mares'. Protege al barco de los ataques de escuadrones enemigos. Esta habilidad no funciona en barcos de clase baja.
+~
+~
+~
+Habilidad disponible solo para el jugador
+}
+
+FlagPir	{Bandera pirata}
+perkFlagPir
+{
+Permite ondear la bandera pirata, la 'Jolly Roger'.
+
+~
+~
+~
+Habilidad disponible solo para el jugador
+}
+
+FlagEng	{Bandera británica}
+perkFlagEng
+{
+Permite ondear la bandera británica. Las posibilidades de engañar al enemigo dependen de tu "Sigilo", el número de barcos en tu escuadra, su clase, el número de barcos enemigos y el precio que hayan puesto a tu cabeza.
+~
+~
+~
+Habilidad disponible solo para el jugador
+}
+
+FlagFra	{Bandera francesa}
+perkFlagFra
+{
+Permite ondear la bandera francesa. Las posibilidades de engañar al enemigo dependen de tu 'Sigilo', el número de barcos en tu escuadra, su clase, el número de barcos enemigos y el precio que hayan puesto a tu cabeza.
+~
+~
+~
+Habilidad disponible solo para el jugador
+}
+
+FlagSpa	{Bandera española}
+perkFlagSpa
+{
+Permite ondear la bandera española. Las posibilidades de engañar al enemigo dependen de tu 'Sigilo', el número de barcos en tu escuadra, su clase, el número de barcos enemigos y el precio que hayan puesto a tu cabeza.
+~
+~
+~
+Habilidad disponible solo para el jugador
+}
+
+FlagHol	{Bandera holandesa}
+perkFlagHol
+{
+Permite ondear la bandera holandesa. Las posibilidades de engañar al enemigo dependen de tu 'Sigilo', el número de barcos en tu escuadra, su clase, el número de barcos enemigos y el precio que hayan puesto a tu cabeza.
+~
+~
+~
+Habilidad disponible solo para el jugador
+}
+
+Brander	{Brulote}
+perkBrander
+{
+Envía un barco aliado para que explote cerca de un enemigo y le cause graves daños. 
+}
+
+Troopers	{Tácticas de asedio}
+perkTroopers
+{
+Antes de invadir un fuerte, agrupa a las tropas de los barcos de tu escuadra para que ataquen juntas.
+}
+
+BasicCommerce	{Comercio básico}
+perkBasicCommerce
+{
+Consigues un 10% de descuento en los precios para comprar en la tienda. 
+}
+
+AdvancedCommerce	{Comercio avanzado}
+perkAdvancedCommerce
+{
+Consigues un 10% de recargo en los precios para vender en la tienda.
+}
+
+ProfessionalCommerce	{Comercio profesional}
+perkProfessionalCommerce
+{
+Consigues un 15% de descuento para la compra y un 15% de recargo para la venta en todos los acuerdos comerciales.
+}
+
+Carpenter	{Reparación autónoma}
+perkCarpenter
+{
+Esta habilidad funciona en tierra o en la navegación en el mapamundi. El capitán que posea esta habilidad podrá restaurar lentamente el casco dañado usando Tablones y los aparejos de los mástiles usando Lona.
+}
+
+InstantRepair	{Reparación rápida}
+perkInstantRepair
+{
+Repara el barco rápidamente, incluso en batalla, utilizando Tablones para el casco y Lona para las velas, no sirve para reparar los mástiles caídos o restablecer la tripulación. 
+Dependiendo del nivel de 'Reparación', los amuletos y los talismanes equipados, podrás alcanzar hasta un 25% de ahorro de recursos y un 80% de reparación de la integridad del barco. 
+Solo se puede usar una vez cada 90 segundos.
+}
+
+LightRepair	{Reparación ligera}
+perkLightRepair
+{
+Repara el barco despacio sin utilizar recursos. Sirve para reparar hasta el 10% de los puntos de integridad del barco. Sin esta habilidad, cualquier barco con menos del 10% de la integridad del casco comenzará a hundirse.
+Dura 60 segundos y solo se puede usar una vez cada 3 minutos.
+La 'Reparación autónoma' se acelera en un 50%.
+}
+
+Builder	{Reparación profesional}
+perkBuilder
+{
+El uso de lona y tableros durante la reparación se reduce en un 25%, la 'Reparación autónoma' se acelera un 100%.
+}
+
+SelfRepair {Reparación completa}
+perkSelfRepair
+{
+Permite la reparación completa del barco con el esfuerzo de la tripulación en cualquier bahía o playa. Se necesitan suficientes Tablones y Lona. Permite restaurar el casco, las velas y los mástiles.
+Las reparaciones solo se pueden realizar en tierra, cerca de la costa.
+}
+
+WindCatcher	{Vigilante del viento}
+perkWindCatcher
+{
+Percibes cualquier cambio en el viento y sabes cómo utilizarlo. La aceleración aumenta en un 10%.
+}
+
+SailsMan	{Velas optimizadas}
+perkSailsMan
+{
+Gracias a las últimas técnicas de navegación has conseguido que el manejo de las velas sea 10% más rápido.
+}
+
+Doctor1	{Doctor}
+perkDoctor1
+{
+Disminuye en un 10% el número de muertes causadas por heridas o metralla en los combates navales.
+}
+
+Doctor2	{Cirujano}
+perkDoctor2
+{
+Disminuye en un 20% el número de muertes causadas por heridas o metralla en los combates navales. 
+}
+
+InstantBoarding {Abordaje instantáneo}
+FencingMaster {Maestro de esgrima}
+perkFencingMaster
+{
+No pierdes energía cuando te hieren.
+10% de probabilidad de infligir un golpe crítico.
+30% de daño extra a la 'Estocada'.
+~
+10% chance of landing a critical hit.
+~
+A successful Fast Attack gets a 30% damage bonus.
+~
+Habilidad disponible para el jugador con el arquetipo
+'Duelista'
+}
+
+TannedLeather {Piel curtida}
+perkTannedLeather
+{
+La protección de la armadura ligera aumenta un 20%.
+~
+~
+~
+Habilidad disponible para el jugador con el arquetipo
+'Duelista'
+}
+
+RatsWolf {Rata lobo}
+perkRatsWolf
+{
+Es poco probable que el barco de este personaje sufra daños por ratas u otras plagas.
+~
+~
+~
+Habilidad disponible para el jugador con el arquetipo
+'Contable'
+}
+
+Mimicry {Mimetismo}
+perkMimicry
+{
+La probabilidad de detección de buques de guerra y fuertes se reduce un 50%.
+~
+~
+~
+Habilidad disponible para el jugador con el arquetipo
+'Contable'
+}
+
+TreasureHunter {Cazador de tesoros}
+perkTreasureHunter
+{
+Su excelente instinto le permite encontrar tesoros con mejor contenido que los demás.
+~
+~
+~
+Habilidad disponible para el jugador con el arquetipo
+'Contable'.
+}
+
+Dragoon {Jinete de bronce}
+perkDragoon
+{
+La protección de las armaduras pesadas y corazas aumenta un 15%.
+~
+Las cuchilladas y los ataques pesados con éxito obtienen una bonificación de daño del 15% y el 30%, respectivamente.
+~
+~
+Habilidad disponible para el jugador con el arquetipo
+'Atleta'.
+}
+
+SecondWind {Respiración vital}
+perkSecondWind
+{
+La recuperación de energía es un 15% más rápida.
+~
+~
+~
+Habilidad disponible para el jugador con el arquetipo
+'Atleta'.
+}
+
+Jager {Jager}
+perkJager
+{
+Las armas de fuego se recargan un 40% más rápido.
+~
+~
+~
+Habilidad disponible para el jugador con el arquetipo
+'Tirador'.
+}
+
+Bombardier {Bombardero}
+perkBombardier
+{
+Más protección contra el desgaste de los cañones navales.
+~
+~
+~
+Habilidad disponible para el jugador con el arquetipo
+'Tirador'.
+}
+
+Sniper {Francotirador}
+perkSniper
+{
+El disparo de tu arma conmociona a la víctima, provocándole pérdida de energía.
+~
+~
+~
+Habilidad disponible para el jugador con el arquetipo
+'Tirador'.
+}

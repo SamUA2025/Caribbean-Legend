@@ -494,15 +494,15 @@ void ProcessDialogEvent()
 		}
 		PChar.GenQuest.PGG_Quest.Parts = GetCompanionQuantity(PChar)+1;
 		PChar.GenQuest.PGG_Quest.Nation = iRnd;
-		PChar.GenQuest.PGG_Quest.Island = GetRandomIslandId();
+		PChar.GenQuest.PGG_Quest.Island = GetRandIslandId();
 		while(PChar.GenQuest.PGG_Quest.Island == Islands[GetCharacterCurrentIsland(pchar)].id)
 		{
-			PChar.GenQuest.PGG_Quest.Island = GetRandomIslandId();
+			PChar.GenQuest.PGG_Quest.Island = GetRandIslandId();
 		}
 		PChar.GenQuest.PGG_Quest.Island.Shore = GetIslandRandomShoreId(PChar.GenQuest.PGG_Quest.Island);
 		while(PChar.GenQuest.PGG_Quest.Island.Shore == "")
 		{
-			PChar.GenQuest.PGG_Quest.Island = GetRandomIslandId();
+			PChar.GenQuest.PGG_Quest.Island = GetRandIslandId();
 			PChar.GenQuest.PGG_Quest.Island.Shore = GetIslandRandomShoreId(PChar.GenQuest.PGG_Quest.Island);
 			if (sti(PChar.GenQuest.PGG_Quest.Template)) 
 			{

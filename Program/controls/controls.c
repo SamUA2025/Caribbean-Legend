@@ -108,6 +108,14 @@ void DoControlInvisible(string groupName, string controlName)
 	}
 }
 
+void SyncControls(string groupName, string controlName1, string controlName2)
+{
+	if(CheckAttribute(&objControlsState,"keygroups."+groupName+"."+controlName1))
+        objControlsState.keygroups.(groupName).(controlName1).sync = controlName2;
+    if(CheckAttribute(&objControlsState,"keygroups."+groupName+"."+controlName2))
+		objControlsState.keygroups.(groupName).(controlName2).sync = controlName1;
+}
+
 string CI_CreateAndSetControls( string groupName, string controlName, int keyCode, int controlState, bool bRemappingEnable )
 {
 	if(controlName=="") return "";
@@ -268,6 +276,7 @@ string GetKeyCodeImg(string _cval) // belamour определить картин
 	string cname = ControlNameToName(_cval);
 	if(CheckAttribute(&objControlsState,"keygroups.AltPressedGroup."+_cval))
 		return objControlsState.key_codes.vk_menu.img + objControlsState.key_codes.(cname).img;
+	if(cname == "") return "";
 	return objControlsState.key_codes.(cname).img;
 }
 

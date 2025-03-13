@@ -2854,6 +2854,7 @@ void Set_TreasureBarrel()
 		if(irand == 18) 	trBarrel.items.indian_5 = 1;		
 		irand = drand(25);		
 		if(irand == 21) trBarrel.items.icollection = 1; // 250912
+		if(irand == 2)  trBarrel.items.hat3 = 1;
 
 		irand = drand(25);
 		if(irand == 24 && GetCharacterItem(pchar, "map_full") == 0)
@@ -3059,15 +3060,15 @@ void CaptainComission_PirateShipsOver(string qName)
 
 void CaptainComission_GetRandomShore()
 {
-	pchar.GenQuest.CaptainComission.Island = GetRandomIslandId();
+	pchar.GenQuest.CaptainComission.Island = GetRandIslandId();
 	while(pchar.GenQuest.CaptainComission.Island == Islands[GetCharacterCurrentIsland(pchar)].id)
 	{
-		pchar.GenQuest.CaptainComission.Island = GetRandomIslandId();
+		pchar.GenQuest.CaptainComission.Island = GetRandIslandId();
 	}
 	pchar.GenQuest.CaptainComission.Island.Shore = GetIslandRandomShoreId(pchar.GenQuest.CaptainComission.Island);
 	while(pchar.GenQuest.CaptainComission.Island.Shore == "")
 	{
-		pchar.GenQuest.CaptainComission.Island = GetRandomIslandId();
+		pchar.GenQuest.CaptainComission.Island = GetRandIslandId();
 		pchar.GenQuest.CaptainComission.Island.Shore = GetIslandRandomShoreId(pchar.GenQuest.CaptainComission.Island);
 		if (!isLocationFreeForQuests(pchar.GenQuest.CaptainComission.Island)) pchar.GenQuest.CaptainComission.Island.Shore = "";
 	} 

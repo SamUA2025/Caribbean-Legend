@@ -2,138 +2,138 @@
 
 }
 
-Key Layout {Раскладка}
+Key Layout {Layout}
 Key Layout_descr
 {
-Альтернативная раскладка содержит ряд изменений в управлении, добавляет новые команды и открывает новые возможности:
+Das alternative Layout enthält eine Reihe von Steuerungsänderungen, fügt neue Befehle hinzu und eröffnet neue Möglichkeiten:
 ~
-- изменены команды быстрых действий и обыск трупов
-- изменено использование усиляющих зелий
-- вкладки меню персонажа доступны на отдельные клавиши
+- Die Befehle für Schnellmaßnahmen und Körpersuche wurden geändert.
+- die Verwendung von Verstärkungstränken geändert
+- Die Registerkarten des Zeichenmenüs können über einzelne Tasten aufgerufen werden.
 }
 
 OptKurs {Point of Sail}
 OptKurs_descr
 {
-Black arrows on the mini-map show the course at which your ship will move at maximum speed.
+Schwarze Pfeile auf der Minikarte zeigen den Kurs an, auf dem sich Ihr Schiff mit maximaler Geschwindigkeit bewegt.
 ~
-Some types of ships are capable of sailing almost against the wind, which is useful when you need to catch up with a merchant or escape from a warship.
+Einige Schiffstypen sind in der Lage, fast gegen den Wind zu segeln, was nützlich ist, wenn man einen Händler einholen oder vor einem Kriegsschiff fliehen muss.
 ~
-The wind constantly changes its strength and direction. Try to adapt and adjust your course, finding a compromise between the optimal course angle and the direction to your target.
+Der Wind ändert ständig seine Stärke und Richtung. Versuchen Sie, Ihren Kurs anzupassen und einen Kompromiss zwischen dem optimalen Kurswinkel und der Richtung zu Ihrem Ziel zu finden.
 }
 
-SeaTimeScaleUp {Time Control}
+SeaTimeScaleUp {Steuerung der Zeit}
 SeaTimeScaleUp_descr
 {
-Make the use of acceleration - it saves time, especially at sea.
+Nutzen Sie die Beschleunigung - sie spart Zeit, besonders auf See.
 ~
-Controls: + and -
+Steuerelemente: + und -
 }
 
-SeaFastTravelGerman {Fast Travel}
+SeaFastTravelGerman {Schnellreise}
 SeaFastTravelGerman_descr
 {
-The action menu opens up many useful functions both on land and at sea.
+Über das Aktionsmenü lassen sich viele nützliche Funktionen sowohl an Land als auch auf See aufrufen.
 ~
-The 'Sail To' function allows you to fast travel instantly next to a friendly ship or geographical point. The fast travel distance can be increased by using rarer and more expensive spyglasses.
+Mit der Funktion 'Segeln nach' können Sie sofort in die Nähe eines befreundeten Schiffes oder eines geografischen Punktes reisen. Die Schnellreiseentfernung kann durch die Verwendung seltener und teurerer Ferngläser erhöht werden.
 ~
-Use the action menu to instantly reach the "Ghost" and then send a longboat to her.
+Benutzen Sie das Aktionsmenü, um den 'Geist' sofort zu erreichen und schicken Sie dann ein Langboot zu ihm.
 }
 
 SeaFastTravelGerman_controlsimg1 {BICommandsActivate}
 
-LandTimeScaleDown {Combat Time Control}
+LandTimeScaleDown {Steuerung der Z im Kampfeit}
 LandTimeScaleDown_descr
 {
-Sometimes it makes sense to slow down time - especially during tough fights. Caribbean Legend is a hard game to master, so use everything you can to gain an edge.
+Manchmal ist es sinnvoll, die Zeit zu verlangsamen - vor allem bei schwierigen Kämpfen. Caribbean Legend ist ein schwer zu meisterndes Spiel, also nutzen Sie alles, was Sie können, um sich einen Vorteil zu verschaffen.
 ~
-Controls: + and -
+Steuerelemente: + und -
 }
 
-GuideFight {Land Combat}
+GuideFight {Kampf an Land}
 GuideFight_descr
 {
-It will take time to master the land combat in the game. If you have control hints enabled, you will see the hotkeys in the lower right corner of the screen.
+Es wird einige Zeit dauern, bis Sie den Kampf zu Lande im Spiel beherrschen. Wenn Sie die Steuerungshinweise aktiviert haben, sehen Sie die Hotkeys in der unteren rechten Ecke des Bildschirms.
 ~
-Try to master the 'Parry - Strike' combination first. Successfully parrying an opponent's attack will stun them and make them lose energy, giving you the opportunity to safely attack.
+Versuchen Sie zuerst, die Kombination 'Parieren - Schlagen' zu meistern. Wenn Sie den Angriff eines Gegners erfolgreich parieren, wird er betäubt und verliert Energie, was Ihnen die Möglichkeit gibt, sicher anzugreifen.
 ~
-Use different types of attacks to understand which deals the most damage. Each weapon in the game has its preferred type of attack. Experiment!
+Verwenden Sie verschiedene Arten von Angriffen, um herauszufinden, welche den größten Schaden verursachen. Jede Waffe im Spiel hat ihre bevorzugte Angriffsart. Experimentieren Sie!
 }
 
 GuideFight_controlsimg1 {ChrAttackChoseBase}
 GuideFight_controlsimg2 {ChrAttackBase}		
 
-OneToOneCave {Use of Terrain}
+OneToOneCave {Nutzung des Geländes}
 OneToOneCave_descr
 {
-If you are outnumbered, try to use the environment to gain an advantage in battle.
+Wenn Sie in der Unterzahl sind, versuchen Sie, die Umgebung zu nutzen, um sich einen Vorteil im Kampf zu verschaffen.
 ~
-You can almost always find a place where you can force the enemy to fight you one-on-one or two at a time.
+Sie können fast immer einen Ort finden, an dem Sie den Feind zwingen können, gegen Sie allein oder zu zweit zu kämpfen.
 }
 
-OneToOneBoarding {Use of Terrain}
+OneToOneBoarding {Nutzung des Geländes}
 OneToOneBoarding_descr
 {
-If you are outnumbered, try to use the environment to gain an advantage in battle.
+Wenn Sie in der Unterzahl sind, versuchen Sie, die Umgebung zu nutzen, um sich einen Vorteil im Kampf zu verschaffen.
 ~
-You can almost always find a place where you can force the enemy to fight you one-on-one or two at a time.
+Sie können fast immer einen Ort finden, an dem Sie den Feind zwingen können, gegen Sie allein oder zu zweit zu kämpfen.
 }
 
 Collision {Changing Position}
 Collision_descr
 {
-Sometimes during a battle, it becomes necessary to change position, either by breaking through the enemy line or circumventing allies.
+Manchmal ist es während einer Schlacht notwendig, die Position zu wechseln, indem man entweder die feindliche Linie durchbricht oder die Verbündeten umgeht.
 ~
-Exit combat mode so the hero can push other characters from your way. After changing positions, re-enter combat mode to continue fighting.
+Verlassen Sie den Kampfmodus, damit der Held andere Figuren aus dem Weg schieben kann. Wechseln Sie nach dem Positionswechsel wieder in den Kampfmodus, um weiterzukämpfen.
 }
 Collision_controlsimg1 {ChrFightMode}
 
-WorldMapGerman {Global Map}
+WorldMapGerman {Weltkarte}
 WorldMapGerman_descr
 {
-The global map allows you to make sea voyages across the Caribbean. It is not necessary to sail exactly to each city or bay; just exit the global map in the vicinity of your target and use the 'Sail To' function.
+Die Weltkarte ermöglicht es Ihnen, Seereisen durch die Karibik zu unternehmen. Es ist nicht notwendig, jede Stadt oder Bucht genau anzusteuern. Verlassen Sie einfach die Weltkarte in der Nähe Ihres Ziels und verwenden Sie die Funktion 'Segeln nach'.
 ~
-Skillful use of the 'Sail to' function can significantly save time. For example, you can exit the global map on one side of the island, fast travel to reach a point on the other side, and then return to the global map.
+Der geschickte Einsatz der Funktion 'Segeln nach' kann viel Zeit sparen. Sie können zum Beispiel die Weltkarte auf einer Seite der Insel verlassen, schnell zu einem Punkt auf der anderen Seite reisen und dann zur Weltkarte zurückkehren.
 ~
-Use hotkeys to zoom out on the map and to display the Atlas with maps.
+Verwenden Sie Hotkeys, um die Karte zu verkleinern und um den Atlas mit Karten anzuzeigen.
 }
 
 WorldMapGerman_controlsimg1 {WMapCameraSwitch}
 WorldMapGerman_controlsimg2 {MapView}
 
-LandMapGerman {Traveling on Land}
+LandMapGerman {Reisen an Land}
 LandMapGerman_descr
 {
-Maps can be bought or found. Collect every island map you encounter to navigate around the landmass. This is especially useful in quests, colony infiltrations, and treasure hunting.
-All collected maps can be found in the Atlas. 
+Karten können gekauft oder gefunden werden. Sammeln Sie jede Inselkarte, die Sie finden, um sich auf der Inselmasse zurechtzufinden. Dies ist besonders nützlich bei Quests, Kolonie-Infiltrationen und der Schatzsuche.
+Alle gesammelten Karten sind im Atlas zu finden. 
 }
 
 LandMapGerman_controlsimg1 {MapView}
 
-NavigatorGerman {Navigation Skill}
+NavigatorGerman {Navigationsfähigkeit}
 NavigatorGerman_descr
 {
-Assign a Navigator with a sufficient Navigation skill!
+Weisen Sie einen Navigator mit ausreichenden Navigationskenntnissen zu!
 ~
-Navigation primarily determines the size of ships that the character can manage.
+Die Navigation bestimmt in erster Linie die Größe der Schiffe, die der Charakter steuern kann.
 ~
-For example, the fifth rank requires 25 points, while the fourth requires 45. Exceeding this limit will result in penalties to all character stats and skills.
+Für den fünften Rang sind zum Beispiel 25 Punkte erforderlich, für den vierten 45. Eine Überschreitung dieser Grenze führt zu Abzügen bei allen Charakterwerten und Fertigkeiten.
 ~
-Requirements for each ship rank can be seen by right-clicking on the Navigation skill icon in the character window.
+Die Anforderungen für jeden Schiffsrang können durch einen Rechtsklick auf das Navigationssymbol im Charakterfenster angezeigt werden.
 ~
-The Navigation skill grows slowly, so hire experienced navigators in taverns at your first opportunity. However, keep in mind that you won't be able to find a specialist with a skill level above 75.
+Die Fertigkeit 'Navigation' wächst nur langsam, daher sollten Sie bei der ersten Gelegenheit erfahrene Navigatoren in Tavernen anheuern. Denken Sie jedoch daran, dass Sie keinen Spezialisten mit einer Fertigkeitsstufe über 75 finden werden.
 }
 
 NavigatorGerman_controlsimg1 {Abilities}
 
-AlchemyGerman {Crafting}
+AlchemyGerman {Herstellung}
 AlchemyGerman_descr
 {
-Manufacturing items, primarily talismans, potions, and ammunition, can significantly ease your life. This is especially useful in boss fights.
+Die Herstellung von Gegenständen, vor allem Talismanen, Tränken und Munition, kann Ihr Leben erheblich erleichtern. Dies ist besonders bei Bosskämpfen nützlich.
 ~
-To manufacture an item, you need to find or buy a recipe. Ingredients do not necessarily have to be carried with you; you can confidently buy various junk from street merchants and store it in one of the chests in the cabin.
+Um einen Gegenstand herzustellen, müssen Sie ein Rezept finden oder kaufen. Die Zutaten müssen nicht unbedingt mitgeführt werden, man kann auch getrost bei Straßenhändlern diversen Plunder kaufen und in einer der Truhen in der Hütte lagern.
 ~
-At the beginning of the game, you have a choice: take the Alchemy skill and start buying recipes right away, or postpone this possibility until the mid-game, when you will have toolkits which will substitute for spending a valuable skill point on Alchemy.
+Zu Beginn des Spiels haben Sie die Wahl: Nehmen Sie die Fertigkeit Alchemie und beginnen Sie sofort mit dem Kauf von Rezepten, oder verschieben Sie diese Möglichkeit auf die Mitte des Spiels, wenn Sie Werkzeugkits haben, die einen wertvollen Fertigkeitspunkt für Alchemie ersetzen werden.
 }
 
 AlchemyGerman_controlsimg1 {Alchemy}
@@ -141,93 +141,93 @@ AlchemyGerman_controlsimg1 {Alchemy}
 LandMapAtSeaGerman {}
 LandMapAtSeaGerman_descr
 {
-Head to the opposite side of the island to complete your quest. Exit the bay to the right and stick to the shoreline!
+Begeben Sie sich auf die gegenüberliegende Seite der Insel, um Ihre Aufgabe zu erfüllen. Verlassen Sie die Bucht nach rechts und halten Sie sich an der Küstenlinie!
 }
 
-SalaryGerman {Ship Upkeep}
+SalaryGerman {Unterhalt des Schiffes}
 SalaryGerman_descr
 {
-Monthly payments to officers and crew can significantly complicate the captain's life. The total amount depends on your Trading and Leadership skills, the ship's size, and the difficulty level.
+Monatliche Zahlungen an Offiziere und Mannschaft können das Leben des Kapitäns erheblich erschweren. Der Gesamtbetrag hängt von Ihren Handels- und Führungsfähigkeiten, der Größe des Schiffes und dem Schwierigkeitsgrad ab.
 ~
-Even on small ships, it's highly recommended to have a purser on board, while a large warship can bankrupt even a country. If the loot-sharing option is enabled, the payment amount can be even higher.
+Selbst auf kleinen Schiffen ist es sehr empfehlenswert, einen Zahlmeister an Bord zu haben, während ein großes Kriegsschiff sogar ein Land in den Bankrott treiben kann. Wenn die Option der Beuteteilung aktiviert ist, kann der Zahlungsbetrag sogar noch höher sein.
 
 }
 
 SalaryGerman_controlsimg1 {ShipState}
 
-DubloonsGerman {Doubloons}
+DubloonsGerman {Dublonen}
 DubloonsGerman_descr
 {
-Golden doubloons are the true measure of your character's wealth and ability to solve problems with money. Always strive to earn these coins, as the most powerful people in the Caribbean only offer their services for doubloons.
+Goldene Dublonen sind das wahre Maß für den Reichtum Ihres Charakters und seine Fähigkeit, Probleme mit Geld zu lösen. Streben Sie immer danach, diese Münzen zu verdienen, da die mächtigsten Leute in der Karibik ihre Dienste nur für Dublonen anbieten.
 ~
-Good sources of doubloons include treasure hunting, bank deposits, trading strategic goods, and exchanging currency at moneylenders. You don't need to carry gold with you; you can store it in one of the chests in your cabin.
+Gute Quellen für Dublonen sind die Schatzsuche, Bankeinlagen, der Handel mit strategischen Gütern und der Umtausch von Geld bei Geldverleihern. Sie brauchen kein Gold mit sich zu führen, Sie können es in einer der Truhen in Ihrer Hütte aufbewahren.
 
 }
 
-BoxGerman {Item Storage}
+BoxGerman {Gegenstände lagern}
 BoxGerman_descr
 {
-The chests in your cabin can store an unlimited number of personal items. Besides mandatory equipment in your outfit slots, it's wise to carry only potions, amulets, and ammo with you.
+In den Truhen in Ihrer Hütte können Sie eine unbegrenzte Anzahl persönlicher Gegenstände aufbewahren. Neben den obligatorischen Ausrüstungsgegenständen in den Ausrüstungsfächern ist es ratsam, nur Tränke, Amulette und Munition mit sich zu führen.
 ~
-Sell excess items, but always stash a reasonable reserve of jewelry, weapons, ammunition, and alchemy ingredients.
+Verkaufen Sie überschüssige Gegenstände, aber legen Sie immer einen angemessenen Vorrat an Schmuck, Waffen, Munition und Alchemiezutaten an.
 ~
-Other captains also follow this practice, so it's always worth searching the chests in the cabin of a captured ship.
+Auch andere Kapitäne folgen dieser Praxis, so dass es sich immer lohnt, die Truhen in der Kabine eines gekaperten Schiffes zu durchsuchen.
 
 }
 
-HealthGerman {Vitality}
+HealthGerman {Lebensenergie}
 HealthGerman_descr
 {
-Your Vitality has decreased! This stat describes your character's general condition and affects all their abilities.
+Ihre Lebensenergie hat abgenommen! Dieser Wert beschreibt den allgemeinen Zustand Ihres Charakters und beeinflusst alle seine Fähigkeiten.
 ~
-Vitality decreases from using primitive healing methods, dramatic story events, drunkenness, and overloading. 
+Die Lebensenergie nimmt durch primitive Heilmethoden, dramatische Ereignisse, Trunkenheit und Überlastung ab. 
 ~
-It is restored by special potions, romantic activities, resting in a tavern, and simply over time. In severe cases, priests can help. Unique officers also lose Vitality if they are injured in combat, but they recover it over time.
+Sie wird durch spezielle Tränke, romantische Aktivitäten, das Ausruhen in einer Taverne oder einfach mit der Zeit wiederhergestellt. In schweren Fällen können Priester helfen. Einzigartige Offiziere verlieren auch Lebensenergie, wenn sie im Kampf verletzt werden, aber sie erholen sich mit der Zeit.
 
 }
 
-AmuletGerman {Amulets}
+AmuletGerman {Amulette}
 AmuletGerman_descr
 {
-Amulets are powerful character boosters divided into offensive, defensive, and auxiliary. You cannot equip offensive and defensive amulets simultaneously, so choose wisely.
+Amulette sind mächtige Charakterverstärker, die in Offensiv-, Defensiv- und Hilfsamulette unterteilt sind. Sie können nicht gleichzeitig offensive und defensive Amulette ausrüsten, also wählen Sie mit Bedacht.
 ~
-In addition to amulets, there are talismans and wards. Talismans last longer and have more extensive effects, while wards are immensely powerful, act indefinitely, and have a separate inventory slot.
+Neben Amuletten gibt es auch Talismane und Schutzzauber. Talismane halten länger und haben umfangreichere Wirkungen, während Schutzzauber sehr mächtig sind, unbegrenzt wirken und einen eigenen Inventarplatz haben.
 ~
-Always keep several sets of boosters in your inventory for difficult skill checks and tough battles at sea and on land.
+Für schwierige Fertigkeitsprüfungen und harte Kämpfe auf See und an Land sollten Sie immer mehrere Sets von Verstärkern im Inventar haben.
 
 }
 
 AmuletGerman_controlsimg1 {Inventory}
 
-PerkGerman {Perk Points}
+PerkGerman {Perk-Punkte}
 PerkGerman_descr
 {
-You've just received your first perk point (PP)! PPs are crucial for character development and are divided into Naval and Personal.
+Sie haben gerade Ihren ersten Perk-Punkt (PP) erhalten! PPs sind entscheidend für die Charakterentwicklung und werden in Marine und Persönlich unterteilt.
 ~
-Naval Perks make you more dangerous at sea, while Personal Perks make you more effective on land and in interactions with people.
+Marine Perks machen Sie auf See gefährlicher, während Persönliche Perks Sie an Land und in der Interaktion mit Menschen effektiver machen.
 ~
-Both types of PP develop independently as your skills grow. On average, every 30 skill points in one group give you one PP.
+Beide Arten von PP entwickeln sich unabhängig voneinander, wenn Ihre Fähigkeiten wachsen. Im Durchschnitt erhalten Sie pro 30 Fertigkeitspunkte in einer Gruppe einen PP.
 ~
-To quickly gain Naval PP, complete sea side quests and contracts. Personal points grow faster if you fight with different weapons and spend quality time in taverns. Remember, personal PP is more valuable since most Naval Perks can be covered by your officers.
+Um schnell PP für die Marine zu erhalten, erledigen Sie Nebenquests und Aufträge auf See. Persönliche Punkte wachsen schneller, wenn Sie mit verschiedenen Waffen kämpfen und viel Zeit in Tavernen verbringen. Denken Sie daran, dass persönliche PP wertvoller sind, da die meisten Marine-Perks von Ihren Offizieren übernommen werden können.
 
 }
 
 PerkGerman_controlsimg1 {Abilities}
 
-FighterGerman {Vanguards}
+FighterGerman {Vorhut}
 FighterGerman_descr
 {
-Your first Vanguard has joined the crew! Assign him via the Character Menu.
+Ihr erster Kämpfer der Vorhut hat sich der Mannschaft angeschlossen! Weisen Sie ihn über das Charaktermenü zu.
 ~
-Vanguards are your most trusted officers, bodyguards, and boarders. They will follow you into the thick of the fight, and you'll spend most of your time with them.
+Die Vorhut ist Ihr vertrautester Offizier, Leibwächter und Kostgänger. Sie werden Ihnen ins Kampfgetümmel folgen, und Sie werden die meiste Zeit mit ihnen verbringen.
 ~
-You can lead up to three fighters at a time. Besides protecting you on land, Vanguards increase boarding efficiency and help carry heavy treasures.
+Sie können bis zu drei Kämpfer auf einmal anführen. Die Vorhut schützt Sie nicht nur an Land, sondern erhöht auch die Effizienz beim Entern und hilft beim Transport schwerer Schätze.
 ~
-Unique quest officers are different from regular sailors you can hire in taverns. Though not all are effective Vanguards, they significantly impact the game's storyline and cannot die in regular combat.
+Einzigartige Quest-Offiziere unterscheiden sich von normalen Matrosen, die man in Tavernen anheuern kann. Obwohl nicht alle von ihnen effektive Kämpfer sind, haben sie einen großen Einfluss auf die Handlung des Spiels und können in normalen Kämpfen nicht sterben.
 ~
-Always equip your Vanguards with amulets, healing items, weapons, and ammunition. You can exchange items through the action menu or any chest.
+Rüsten Sie Ihre Vorhut immer mit Amuletten, Heilgegenständen, Waffen und Munition aus. Sie können Gegenstände über das Aktionsmenü oder eine Truhe austauschen.
 ~
-You can order the Vanguards to hold their position, follow the captain, or attack using hotkeys or through dialogue.
+Sie können der Vorhut befehlen, ihre Position zu halten, dem Kapitän zu folgen oder über Hotkeys oder Dialoge anzugreifen.
 
 }
 
@@ -236,32 +236,32 @@ FighterGerman_controlsimg2 {OfficersFollow}
 FighterGerman_controlsimg3 {OfficersCharge}
 FighterGerman_controlsimg4 {OfficersHold}
 
-RestGerman {Rest Option}
+RestGerman {Rasten}
 RestGerman_descr
 {
-The Rest option is now available in the Action Menu!
+Die Option Rasten ist jetzt im Aktionsmenü verfügbar!
 ~
-Everything in the game follows a time cycle: guards are absent at the pier and city gates at night, you can only hire a crew in taverns during the day, and some characters are very particular about the time of day.
+Alles im Spiel folgt einem Zeitzyklus: Nachts gibt es keine Wachen am Pier und an den Stadttoren, in den Tavernen kann man nur tagsüber eine Mannschaft anheuern, und einige Charaktere sind sehr wählerisch, was die Tageszeit angeht.
 ~
-Use this function at sea and in the wild. Rent a room in a tavern if you are in a city.
+Verwenden Sie diese Funktion auf See und in der Wildnis. Mieten Sie ein Zimmer in einer Taverne, wenn Sie sich in einer Stadt befinden.
 
 }
 RestGerman_controlsimg1{BICommandsActivate}
 
-Navigation{Ship Control}
+Navigation{Schiffssteuerung}
 Navigation_descr
 {
-Use the sail control keys to change the sail mode and the turn keys to change the course.
+Verwenden Sie die Segelsteuerungstasten, um den Segelmodus zu ändern, und die Wendetasten, um den Kurs zu ändern.
 ~
-There are three sail modes: Full Sails, Battle Sails, and Furled Sails.
+Es gibt drei Segelmodi: Volle Segel, Kampfsegel und Eingeholte Segel.
 ~
-Full Sails mode allows maximum speed but you will turn slower and your ship's sail will be most vulnerable in battles and storms.
+Der Modus 'Volle Segel' ermöglicht maximale Geschwindigkeit, aber Sie drehen langsamer und die Segel Ihres Schiffes sind in Schlachten und Stürmen am anfälligsten.
 ~
-Battle Sails mode limits speed but improves turning, artillery accuracy, and gives your sails better protection from enemy fire.
+Der Modus 'Kampfsegel' begrenzt die Geschwindigkeit, verbessert aber die Wendigkeit und die Treffsicherheit der Kanonen und schützt Ihre Segel besser vor feindlichem Feuer.
 ~
-Furled Sails mode gradually slows the ship to a complete stop. Very useful for boarding or collecting valuables from the sea.
+Im Modus 'Eingeholte Segel' wird das Schiff schrittweise bis zum völligen Stillstand abgebremst. Sehr nützlich, um zu entern oder Wertsachen aus dem Meer zu holen.
 ~
-The golden rule: in battle - Battle Sails mode is preferred; outside of battle - Full Sails Mode.
+Die goldene Regel: Im Kampf ist der Kampfsegel-Modus zu bevorzugen, außerhalb des Kampfes der Volle Segel-Modus.
 
 }
 
@@ -270,30 +270,30 @@ Navigation_controlsimg2 {Ship_SailDown}
 Navigation_controlsimg3 {MiniMapZoomIn}
 Navigation_controlsimg4 {MiniMapZoomOut}
 
-StealthGerman{Stealth}
+StealthGerman{Tarnung}
 StealthGerman_descr
 {
-You are not welcome in most of the Caribbean settlements. There are two ways to infiltrate a city: through the port or the gates.
+In den meisten karibischen Siedlungen sind Sie nicht willkommen. Es gibt zwei Möglichkeiten, eine Stadt zu infiltrieren: durch den Hafen oder durch die Tore.
 ~
-Safe docking in an enemy port requires preparation. Raise the flag of a non-hostile country and have a high Stealth skill level before you risk appearing before fort guns.
+Das sichere Andocken in einem feindlichen Hafen erfordert Vorbereitung. Hissen Sie die Flagge eines nicht feindlichen Landes und verfügen Sie über eine hohe Tarnfähigkeitsstufe, bevor Sie es riskieren, vor den Geschützen der Festung zu erscheinen.
 ~
-Entering through the city gates is best done at night when they aren't guarded. Avoid soldiers and spend the night in a tavern. If you raise an alarm, find an empty house and wait there for a couple of hours before trying again.
+Die Stadttore sollten Sie am besten nachts durchqueren, wenn sie nicht bewacht werden. Meiden Sie Soldaten und verbringen Sie die Nacht in einer Taverne. Wenn Sie einen Alarm auslösen, suchen Sie ein leeres Haus und warten Sie dort ein paar Stunden, bevor Sie es erneut versuchen.
 ~
-Buying a trading license in Curacao is a safe option to travel around the region if your Stealth skill is low.
+Der Kauf einer Handelslizenz in Curacao ist eine sichere Option, um in der Region zu reisen, wenn Ihre Tarnfähigkeiten gering sind.
 }
 
-SeaBattle{Naval Combat}
+SeaBattle{Seekampf}
 SeaBattle_descr
 {
-The gist of any naval combat is to maintain your optimal course angle, preserve your sails, and damage the enemy's.
+In jedem Seekampf geht es darum, den optimalen Kurs zu halten, die eigenen Segel zu schützen und die des Gegners zu beschädigen.
 ~
-Use round shot and chain shot for the latter. Round shots have the longest range and deal moderate damage to hull and sails. One successful volley of chain shots at medium range can destroy the enemy's sails.
+Verwenden Sie für letzteres Kugeln und Kettengeschosse. Kugeln haben die größte Reichweite und verursachen mäßigen Schaden an Rumpf und Segeln. Eine erfolgreiche Salve von Kettengeschossen auf mittlere Entfernung kann die Segel des Gegners zerstören.
 ~
-For higher accuracy, use First Person Mode after ensuring your ship isn't too rocked by waves or recent maneuvers. If you damage the enemy's sails and preserve yours, you have three options: boarding, sinking, or fleeing.
+Für eine höhere Genauigkeit sollten Sie den First-Person-Modus verwenden, nachdem Sie sichergestellt haben, dass Ihr Schiff nicht zu sehr durch Wellen oder kürzliche Manöver durchgeschüttelt wird. Wenn Sie die Segel des Gegners beschädigen und Ihre eigenen bewahren, haben Sie drei Möglichkeiten: Entern, Versenken oder Fliehen.~
 ~
-Exceeding a distance of a thousand yards from the nearest enemy ship lets you enter the global map and flee.
+Wenn Sie sich mehr als tausend Meter vom nächsten feindlichen Schiff entfernen, können Sie die Weltkarte betreten und fliehen.
 ~
-Sinking an enemy ship is easiest with bombs at close range. Effective long-range shooting with round shots is for experienced captains and cannoneers. Typically, a need to sink an enemy ship is rare, with battles mostly focused on boarding or fleeing.
+Das Versenken eines feindlichen Schiffes ist am einfachsten mit Bomben aus nächster Nähe. Effektives Schießen auf große Entfernungen mit Kanonenkugeln ist etwas für erfahrene Kapitäne und Kanoniere. Normalerweise ist es selten nötig, ein feindliches Schiff zu versenken, da sich die Kämpfe meist auf das Entern oder die Flucht konzentrieren.
 
 }
 
@@ -304,23 +304,23 @@ SeaBattle_controlsimg4 {hk_charge4}
 SeaBattle_controlsimg5 {Sea_CameraSwitch}
 SeaBattle_controlsimg6 {Ship_Fire}
 
-BoardingTactics{Boarding}
+BoardingTactics{Entern}
 BoardingTactics_descr
 {
-Before going for boarding, fire a few volleys of grapeshot to weaken the enemy crew without receiving the same response. Once you have the advantage, approach the enemy ship, match its speed, and engage!
+Bevor Sie das Schiff entern, feuern Sie ein paar Salven mit der Kartätsche ab, um die gegnerische Besatzung zu schwächen, und verhindern Sie so, dass Ihnen das selbe geschieht. Sobald Sie den Vorteil haben, nähern Sie sich dem feindlichen Schiff, passen Sie sich seiner Geschwindigkeit an und greifen Sie an!
 ~
-The higher your Boarding Skill, the easier it will be to successfully grapple with the enemy ship. Boarding efficiency depends on your crew's size, skills, and morale.
+Je höher Ihre Enterfertigkeit ist, desto einfacher ist es, das gegnerische Schiff erfolgreich zu entern. Die Effizienz des Enterns hängt von der Größe, den Fähigkeiten und der Moral der Mannschaft ab.
 ~
-Having an experienced boatswain, vanguards, amulets, and developed personal combat skills can offset the enemy's numerical advantage.
+Ein erfahrener Bootsmann, die Vorhut, Amulette und entwickelte persönliche Kampffähigkeiten können den zahlenmäßigen Vorteil des Feindes ausgleichen.
 }
 
-MushketGerman{Muskets}
+MushketGerman{Musketen}
 MushketGerman_descr
 {
-Long-barreled firearms are extremely dangerous in battle. Only the main character with the Musketeer Skill and some unique officers can use them. 
-The most notable example is Tichingitu, and he should be the one who gets the first musket you find.
+Langlaufwaffen sind im Kampf extrem gefährlich. Nur der Hauptcharakter mit der Musketier-Fähigkeit und einige einzigartige Offiziere können sie benutzen. 
+Das beste Beispiel ist Tichingitu, und er sollte derjenige sein, der die erste Muskete bekommt, die Sie finden.
 ~
-Unlike melee weapons, firearms offer greater flexibility. By developing your character as a marksman, wearing certain amulets and equipment, and using different types of ammunition, you can turn the tide of any battle.
+Im Gegensatz zu Nahkampfwaffen bieten Feuerwaffen mehr Flexibilität. Durch die Entwicklung Ihres Charakters zum Scharfschützen, das Tragen bestimmter Amulette und Ausrüstungsgegenstände und die Verwendung verschiedener Munitionstypen können Sie das Blatt in jeder Schlacht wenden.
 
 }
 
@@ -329,15 +329,15 @@ MushketGerman_controlsimg1 {Inventory}
 CameraControl{Ahoy!}
 CameraControl_descr
 {
-Welcome to Story Mode! Before you set sail, you'll need to make sure that the land won't defeat you.
+Willkommen im Story-Modus! Bevor Sie in See stechen, müssen Sie sicherstellen, dass das Land Sie nicht besiegen wird.
 ~
-Caribbean Legend is challenging, but it's not difficult to play. To help you get settled in the New World, we've prepared an extended tutorial adventure on the island of Martinique. By completing it, you'll master all the necessary skills and understand the game mechanics.
+Caribbean Legend ist anspruchsvoll, aber nicht schwer zu spielen. Um Ihnen zu helfen, sich in der Neuen Welt einzuleben, haben wir ein erweitertes Tutorial-Abenteuer auf der Insel Martinique vorbereitet. Wenn Sie es abschließen, werden Sie alle notwendigen Fähigkeiten beherrschen und die Spielmechanik verstehen.
 ~
-The game is controlled using movement keys and active mouse usage. In most cases, it's enough to press the forward movement key and steer using the camera. You can always adjust the camera speed in the settings.
+Das Spiel wird mit Bewegungstasten und aktiver Mausnutzung gesteuert. In den meisten Fällen reicht es aus, die Vorwärtsbewegungstaste zu drücken und mit der Kamera zu steuern. Sie können die Kamerageschwindigkeit jederzeit in den Einstellungen anpassen.
 ~
-Some players find the controls not responsive enough, and we agree. That's why we're actively working on improving them, and we hope that in the next major update, this tutorial message will be different.
+Einige Spieler finden die Steuerung nicht reaktionsschnell genug, und wir stimmen dem zu. Deshalb arbeiten wir aktiv daran, sie zu verbessern, und wir hoffen, dass mit dem nächsten großen Update diese Tutorial-Meldung anders ausfallen wird.
 ~
-Thank you for playing, and see you at sea!
+Vielen Dank fürs Spielen, wir sehen uns auf See!
 }
 
 CameraControl_controlsimg1 {ChrForward}
@@ -349,13 +349,13 @@ CameraControl_controlsimg5 {ShipCamera_Turn_H}
 CameraControlFP{Ahoy!}
 CameraControlFP_descr
 {
-Welcome to the New World, Captain!
+Willkommen in der neuen Welt, Kapitän!
 ~
-Caribbean Legend is a challenging game, but it's not difficult to play. If you haven't played the story mode yet, we recommend spending a couple of hours on it to get comfortable and learn the game's basic mechanics.
+Caribbean Legend ist ein anspruchsvolles Spiel, aber es ist nicht schwer zu spielen. Wenn Sie den Story-Modus noch nicht gespielt haben, empfehlen wir Ihnen, ein paar Stunden damit zu verbringen, um sich einzugewöhnen und die grundlegenden Mechanismen des Spiels zu erlernen.
 ~
-The game is controlled using movement keys and active mouse usage. In most cases, it's enough to press the forward movement key and steer using the camera. You can always adjust the camera speed in the settings.
+Das Spiel wird mit Bewegungstasten und aktiver Mausnutzung gesteuert. In den meisten Fällen reicht es aus, die Vorwärtsbewegungstaste zu drücken und mit der Kamera zu steuern. Sie können die Kamerageschwindigkeit jederzeit in den Einstellungen anpassen.
 ~
-Some players find the controls not responsive enough, and we agree. That's why we're actively working on improving them, and we hope that in the next major update, this tutorial message will be different.
+Einige Spieler finden die Steuerung nicht reaktionsschnell genug, und wir stimmen dem zu. Deshalb arbeiten wir aktiv daran, sie zu verbessern, und wir hoffen, dass mit dem nächsten großen Update diese Tutorial-Meldung anders ausfallen wird.
 ~
 Thank you for playing, and see you at sea!
 }

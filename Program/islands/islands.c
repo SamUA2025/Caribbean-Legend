@@ -203,6 +203,36 @@ string Island_GetLocationReloadLocator(string _island, string _location)
 	return "";
 }
 
+// belamour новый метод поиска рандомного острова
+string GetRandIslandId()
+{
+	int n;
+    int islandsArray[2];
+	SetArraySize(&islandsArray, MAX_ISLANDS);
+	int iNum = 0;
+	
+	for (n=0;n<MAX_ISLANDS;n++)
+	{
+		if(Islands[n].id == "LostShipsCity") continue;
+		if(Islands[n].id == "KhaelRoa") continue;
+		if(Islands[n].id == "Ksochitam") continue;
+		if(Islands[n].id == "RockIsland") continue;
+		if(Islands[n].id == "Providence") continue;
+		if(Islands[n].id == "SantaQuiteria") continue;
+		if(Islands[n].id == "IslaDeVieques") continue;
+		if(Islands[n].id == "IslaMona") continue;
+		if(Islands[n].id == "IslaDeCoche") continue;
+		if(Islands[n].id == "") continue;
+		
+		islandsArray[iNum] = n;
+		iNum++;
+	}
+	if (iNum == 0) return "none";
+	n = islandsArray[rand(iNum-1)];
+	trace("Остров с индексом " + n + " имеет айди " + Islands[n].id);
+	return Islands[n].id;
+}
+
 // Warship, 25.05.11
 // Метод возвращает идентификатор локации маяка, которая расположена на острове с указанной колонией.
 /*string Island_GetLighthouseId(string _islandId)

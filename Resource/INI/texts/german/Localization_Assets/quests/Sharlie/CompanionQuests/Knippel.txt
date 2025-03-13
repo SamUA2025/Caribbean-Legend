@@ -1,6 +1,6 @@
 Knippel_1
 {
-You used the key
+Sie haben den Schlüssel benutzt
 }
 
 Knippel_2
@@ -23,7 +23,7 @@ Adams
 
 Knippel_6
 {
-Charlie came to the rescue!
+Charlie kam zur Rettung!
 }
 
 Knippel_7
@@ -60,7 +60,7 @@ Lynch
 
 Knippel_14
 {
-The Sussex is on the horizon!
+Die Sussex ist am Horizont zu sehen!
 }
 
 Knippel_15
@@ -83,10 +83,10 @@ Whitney
 
 Knippel_19
 {
-Bombardier Unlocked
+Bombardier entsperrt
 }
 
 Knippel_20
 {
-Einige Zeit später...@<NewStr()>Im Fleetwood House
+Einige Zeit später...@<NewStr()>Im Fleetwood Haus
 }

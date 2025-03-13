@@ -1,19 +1,24 @@
 reaction_functions_1
 {
-Mangarosa potion overdose!
+Mangarosa Trank Überdosis!
 }
 
 reaction_functions_2
 {
-You got poisoned
+Sie wurden vergiftet
 }
 
 reaction_functions_3
 {
-Special Mangarosa Potion Used!
+Spezieller Mangarosa Trank verwendet!
 }
 
 reaction_functions_4
 {
-The effect of the mangarosa potion has ended
+Die Wirkung des Mangarosa Tranks ist vorbei
+}
+
+reaction_functions_5
+{
+Ein glücklicher Tag für einen Deal, die Laderäume sind mit Waren gefüllt! +
 }

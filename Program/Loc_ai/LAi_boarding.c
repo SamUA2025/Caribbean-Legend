@@ -53,47 +53,14 @@ string LAi_GetBoardingImage(ref echr, bool isMCAttack)
 	isMCAttack   = true;// boal 110804 fix всегда герой
 	int mclass = GetCharacterShipClass(mchr); // класс корабля ГГ
 	int eclass = GetCharacterShipClass(echr); // класс корабля НПС
-	if(mclass == 5 && eclass == 5)
+	
+	if(isMCAttack)
 	{
-		if(IsMerchantShipType(mchr) || IsMerchantShipType(echr))
-		{
-			deckID = "BOARDING_5_TRADE";
-		}
-		else
-		{
-			deckID = "BOARDING_5_WAR";
-		}
+		deckID = GetShipLocationID(echr);
+	}else{
+		deckID = GetShipLocationID(mchr);
 	}
-	else
-	{
-		if(mclass == 4 && eclass == 4)
-		{
-			if(IsMerchantShipType(mchr) || IsMerchantShipType(echr))
-			{
-				deckID = "BOARDING_4_TRADE";
-			}
-			else
-			{
-				deckID = "BOARDING_4_WAR";
-			}
-		}
-		else 
-		{
-			if(mclass == 3 || eclass == 3)
-			{
-				deckID = "BOARDING_3_WAR";
-			}
-			else
-			{
-				if(isMCAttack)
-				{
-					deckID = GetShipLocationID(echr);
-				}else{
-					deckID = GetShipLocationID(mchr);
-				}
-			}
-		}
-	}
+	
 	int locID = -1;
 	if(deckID != "")
 	{
@@ -313,58 +280,19 @@ void LAi_StartBoarding(int locType, ref echr, bool isMCAttack)
 
 	string deckID = "";
 	isMCAttack   = true;// boal 110804 fix всегда герой
-	if(mclass == 5 && eclass == 5)
+	if(locType != BRDLT_FORT)
 	{
-		if(IsMerchantShipType(mchr) || IsMerchantShipType(echr))
-		{
-			deckID = "BOARDING_5_TRADE";
-		}
-		else
-		{
-			deckID = "BOARDING_5_WAR";
-		}
+		deckID = chooseDeck(mchr, echr);
 	}
 	else
 	{
-		if(mclass == 4 && eclass == 4)
+		if(isMCAttack)
 		{
-			if(IsMerchantShipType(mchr) || IsMerchantShipType(echr))
-			{
-				deckID = "BOARDING_4_TRADE";
-			}
-			else
-			{
-				deckID = "BOARDING_4_WAR";
-			}
-		}
-		else
-		{
-			if(and(locType != BRDLT_FORT, mclass == 3 || eclass == 3))
-			{
-				deckID = "BOARDING_3_WAR";
-			}
-			else
-			{
-				if(isMCAttack)
-				{
-					deckID = GetShipLocationID(echr);
-				}else{
-					deckID = GetShipLocationID(mchr);
-				}
-			}
+			deckID = GetShipLocationID(echr);
+		}else{
+			deckID = GetShipLocationID(mchr);
 		}
 	}
-	// костыль нормально проинитить и мигрировать -->
-	if(GetShipTypeName(echr) == "Galeon_sm")
-	{
-		deckID = "BOARDING_3_WAR";
-		Locations[FindLocation(deckID)].filespath.models = "locations\decks\boarding_3_war_sm";
-	}
-	else
-	{
-		Locations[FindLocation("BOARDING_3_WAR")].filespath.models = "locations\decks\boarding_3_war";
-	}
-	// <---
 	int locID = -1;
 	if(deckID != "")
 	{
@@ -639,7 +567,7 @@ void LAi_LoadLocation(string locationID, int locType)
 		int    mclass = GetCharacterShipClass(GetMainCharacter());
 		int    eclass = GetCharacterShipClass(boarding_enemy);
 		// определение стороны на палубе
-		if (CheckAttribute(&Locations[locIndex], "UpDeckType"))
+		/* if (CheckAttribute(&Locations[locIndex], "UpDeckType"))
 		{
 			if(mclass == 5 && eclass == 5)
 			{
@@ -694,11 +622,11 @@ void LAi_LoadLocation(string locationID, int locType)
 					}
 				}
 				else
-				{
+				{ */
 					sLocType = ChooseShipUpDeck(mchr, boarding_enemy);
-				}
-			}
-		}
+				//}
+			//}
+		//}
 
 		mchr.location.locator = sLocType + locNum[locI];
 		// для каюты перекрыть
@@ -1140,7 +1068,7 @@ void LAi_SetBoardingActors(string locID)
 
     string sLocType = "loc";
 	// определение стороны на палубе
-	if (CheckAttribute(&Locations[locIndex], "UpDeckType"))
+	/* if (CheckAttribute(&Locations[locIndex], "UpDeckType"))
 	{
 		if(mclass == 5 && eclass == 5)
 		{
@@ -1193,13 +1121,13 @@ void LAi_SetBoardingActors(string locID)
 						sLocType = "loc"
 					}
 				}
-			}
+			} 
 			else
-			{
+			{*/
 				sLocType = ChooseShipUpDeck(mchr, boarding_enemy);
-			}
-		}
-	}
+			//}
+		//}
+	//}
 	if (!CheckAttribute(&Locations[locIndex], "CabinType"))
 	{ // не грузим матросов в каюту
 		for(i = LAi_numloginedcharacters; i < limit; i++)
@@ -1252,7 +1180,7 @@ void LAi_SetBoardingActors(string locID)
 				MusChr = GetOfficersIndex(pchar, cm);
 				if (MusChr >= 0)
 				{
-					if(!IsMusketer(&characters[MusChr])) continue;
+					if(!MusketPriority(&characters[MusChr])) continue;
 					mush_officers = mush_officers + 1;
 					string sNum = "n"+mush_officers;
 					pchar.GenQuest.boarding.(sNum) = characters[MusChr].id;
@@ -1261,24 +1189,9 @@ void LAi_SetBoardingActors(string locID)
 						characters[MusChr].boarding.mDistance = stf(characters[MusChr].MusketerDistance);
 						characters[MusChr].MusketerDistance = 0.0;
 					}
-					// to do добавить в иниты количество локаторов или переименовать мушкетерские
-					/* if(mclass == 3 || eclass == 3)
-					{
-						if(mush_officers > 2) break;
-					}
-					else if(mush_officers > 1) break; */
 					if(mush_officers > 1) break;
 				}
 			}
-			/* if(mclass == 3 || eclass == 3)
-			{
-				if (!IsFort) iQty = 3-mush_officers;
-			}
-			else 
-			{
-				if (!IsFort) iQty = 2-mush_officers;
-				else iQty = 3;
-			} */
 			if (!IsFort) iQty = 2-mush_officers;
 				else iQty = 3;
 			for(i=1; i<=iQty; i++)
@@ -1316,27 +1229,6 @@ void LAi_SetBoardingActors(string locID)
 			AddCharHP(chr, boarding_player_hp); // влияение опыта и морали в НР
 			if(!IsFort && mush_officers > 0)
 			{
-				// todo переделать после нормальных инитов
-				/* if(mclass == 3 || eclass == 3)
-				{
-					if(CheckAttribute(pchar, "GenQuest.boarding.n3"))
-					{
-						chr = characterFromId(pchar.GenQuest.boarding.n3);
-						ChangeCharacterAddressGroup(chr, locID, "rld", sLocType+"mush"+1);
-					}
-					if(CheckAttribute(pchar, "GenQuest.boarding.n2"))
-					{
-						chr = characterFromId(pchar.GenQuest.boarding.n2);
-						ChangeCharacterAddressGroup(chr, locID, "rld", sLocType+"mush"+2);
-					}
-					if(CheckAttribute(pchar, "GenQuest.boarding.n1"))
-					{
-						chr = characterFromId(pchar.GenQuest.boarding.n1);
-						ChangeCharacterAddressGroup(chr, locID, "rld", sLocType+"mush"+3);
-					}
-				}
-				else
-				{ */
 					if(CheckAttribute(pchar, "GenQuest.boarding.n2"))
 					{
 						chr = characterFromId(pchar.GenQuest.boarding.n2);
@@ -1347,21 +1239,10 @@ void LAi_SetBoardingActors(string locID)
 						chr = characterFromId(pchar.GenQuest.boarding.n1);
 						ChangeCharacterAddressGroup(chr, locID, "rld", sLocType+"mush"+2);
 					}
-				//}
 			}
 		}
 		if(!IsFort && !CheckAttribute(&Locations[locIndex], "UpDeckType"))
 		{
-			/* if(CheckAttribute(pchar, "GenQuest.boarding.n3"))
-			{
-				chr = characterFromId(pchar.GenQuest.boarding.n3);
-				if(CheckAttribute(chr,"boarding.mDistance"))
-				{
-					chr.MusketerDistance = stf(chr.boarding.mDistance);
-					DeleteAttribute(chr,"boarding.mDistance");
-				}
-				DeleteAttribute(pchar, "GenQuest.boarding.n3");
-			} */
 			if(CheckAttribute(pchar, "GenQuest.boarding.n2"))
 			{
 				chr = characterFromId(pchar.GenQuest.boarding.n2);
@@ -1852,3 +1733,34 @@ string ChooseShipUpDeck(ref _mchar, ref _enemy)
     return sLoc;
 }
 // boal 03/12/05 <--
+
+string chooseDeck(ref mchr, ref echr)
+{
+	int mclass = GetCharacterShipClass(mchr);
+	int eclass = GetCharacterShipClass(echr);
+	
+	if(GetShipTypeName(echr) == "Galeon_sm") return "BOARDING_3_WAR_SM";
+	if(mclass > 2 && eclass > 2)
+	{
+		int HighClass = func_min(mclass, eclass);
+		if(IsMerchantShipType(mchr) || IsMerchantShipType(echr))
+		{
+			if(IsMerchantShipType(mchr) && IsMerchantShipType(echr))
+			{
+				return "BOARDING_"+HighClass+"_TRADE";
+			}
+			else
+			{
+				if(IsMerchantShipType(mchr)) return "BOARDING_"+mclass+"_TRADE";
+				if(IsMerchantShipType(echr)) return "BOARDING_"+eclass+"_TRADE";
+			}
+		}
+		return "BOARDING_"+HighClass+"_WAR"
+	}
+	else
+	{
+		return GetShipLocationID(echr);
+	}
+	
+	return "";
+}

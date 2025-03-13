@@ -1067,3 +1067,175 @@ Holy Mercy cruises between colonies, starting and ending its journey in Havana, 
 In each port, Alamida spends several days, sometimes longer. They say during these times he can even be met on the street, but locals aren't particularly eager for such encounters - in Spaniards, the señor instills only fear and awe.
 Holy Mercy has an experienced and loyal crew, personally selected by Alamida. Each sailor is ready to defend their Homeland and captain with their life. They say Don Fernando has ordered that Holy Mercy must never be captured, and there are whispers that should the crew face insurmountable odds at boarding, they would sooner send the ship to the depths than see her boarded.
 
+#QUEST StoriesTreasures
+Истории, найденные в кладах
+#TEXT	1
+************************************************************
+Dieser Schatz gehört mir, dem zukünftigen Kapitän der Barkentine San Sebastián! Wenn ich derjenige bin, der das hier liest, vergiss nicht: Miguel schuldet dir Geld und hat es wahrscheinlich immer noch nicht zurückgezahlt.
+Wenn du das hier liest, hoffe ich, dass du nicht zu meiner Crew gehörst. Aber falls doch, dann wisse: Ich habe schon lange vermutet, dass du eine Ratte bist.
+#TEXT	2
+************************************************************
+Mir gefällt die Arbeit für Tyrex immer besser. Dies ist bereits mein drittes verstecktes Versteck. Damit ich nicht vergesse, wo die vorherigen sind: Eines ist dort, wo ich meine Piratenlaufbahn begann, und das andere dort, wo ich diesen verdammten Fettwanst erschossen habe.
+#TEXT	3
+************************************************************
+Wenn du dieses Versteck gefunden hast, dann wisse, dass ich es nicht vor Piraten oder Steuereintreibern versteckt habe, sondern vor meiner eigenen Frau.
+Vor drei Jahren verbot sie mir, in die Taverne zu gehen. Vor zwei Jahren machte sie einen Riesenkrach, als ich mir einen neuen Dolch kaufte. Und vor einem Jahr schlug sie mir zwei Zähne aus. 
+Doch an meinen Schatz hier wird sie niemals herankommen! Sie glaubt, ich hätte alles beim Kartenspiel verloren. 
+Trink einen für mich, während ich meiner Füchsin einrede, dass ich dieses Geld nie besessen habe.
+#TEXT	4
+************************************************************
+Martin, wenn du das hier liest, bedeutet das, dass du gefunden hast, was ich für dich hinterlassen habe. Also war es nicht umsonst. Vierzehn Gemälde in sechs Monaten, und diese aufgedunsene Kröte will immer noch mehr! Ich brauche weder Gold noch Juwelen, ebenso wenig seine pompösen Einladungen in die Residenz.
+Doch bevor ich verschwinde, habe ich ihm ein Abschiedsgeschenk hinterlassen: sein eigenes Porträt – ohne Schmeichelei und ohne Kriecherei. Alle sollen ihn so sehen, wie er wirklich ist.
+#TEXT	5
+************************************************************
+Wenn du das hier liest, bedeutet das, dass der Inhalt der Truhe dir gehört.
+Diese schicksalhafte Begegnung mit der hellhaarigen Piratin hat alles verändert. Ich weiß nicht, wie ich jetzt weitermachen soll, aber dieses Gold hat mich zu viel gekostet. Ich habe zu viel Leid verursacht, um es zu bekommen, obwohl ich früher nie in solchen Kategorien dachte. 
+Jetzt weiß ich, was ich wirklich brauche.
+Nimm es, wenn du willst, aber lass mich dich warnen – die Würfel sind gefallen.
+#TEXT	6
+************************************************************
+September 1648.
+Der Käpt’n sagt, dass unsere Staffel morgen das Fort erstürmen wird. Man sagt, die Mauern seien stark, die Kanonen tödlich, und die Soldaten keine, die sich ohne Kampf ergeben.
+Wenn ich es schaffe, lebend zurückzukehren, schwöre ich, die Hälfte dieser Beute der Kirche zu spenden.
+#TEXT	7
+************************************************************
+Ich hätte nie gedacht, dass ich solche Angst empfinden könnte. Ich habe einen verfluchten Sturm, Verrat, eine Königin, einen König und sogar die verdammte britische Flotte überlebt. Nur noch ein letzter Job bleibt, und meine Knie zittern, als wäre es das erste Mal. Ich habe nie jemandem Versprechen gegeben, aber Papier hält alles aus. Ich, Sammy, Kapitän der Striker, schwöre feierlich: Wenn ich hierher zurückkomme, um mein Gold zu holen, verlasse ich dieses elende Archipel für immer.
+#TEXT	8
+************************************************************
+Hätte ich das alles unserem Freund auf Tortuga verkauft, hätte ich ein Fest veranstaltet, über das man selbst in spanischen Häfen getratscht hätte. Aber nein – das hier ist für dich, Charlie, für dein Alter, von deinem jüngeren, wilderen Ich.
+Wage es ja nicht, alles für Rum und Hafenmädchen zu verprassen, hörst du, du Säufer? Ich kenne dich – sobald du ein paar Dublonen in die Finger bekommst, stürzt du dich in billigen Fusel und in die Arme irgendeiner Dirne. 
+Ich hoffe, du lebst lange genug, um dich dazu zu entschließen, diesem verdammten Piratenleben ein Ende zu setzen.
+#TEXT	9
+************************************************************
+James, ich hoffe, du bist als Erster bei diesem Versteck eingetroffen. Hier drin ist das, was ich aus der Kajüte dieses niederländischen Kaufmanns mitgehen lassen konnte, bevor der Rest des Gesindels ankam. Gib Isabel die Hälfte, wie wir es vereinbart haben. Den Rest kannst du für dich ausgeben.
+#TEXT	10
+************************************************************
+Wir waren zu fünft – jetzt sind nur noch zwei übrig. Nur wir wissen von diesem Ort. 
+Wer auch immer diesen Schatz nicht geholt hat, denk daran: Dieses Gold ist nicht für Gelage und Schwelgerei, sondern für Rache. Die ganze Familie Treviño muss für das büßen, was sie uns angetan hat.
+Entweder sie oder wir. Es gibt keinen anderen Weg.
+#TEXT	11
+************************************************************
+Gold in der Erde zu vergraben ist nicht die beste Methode, Reichtum zu sichern. Aber ich kann nicht anders – mir gefällt das. Es so zu verstecken, dass es niemand findet – das ist der wahre Nervenkitzel. 
+
+Wenn du diese Notiz liest, bedeutet das, dass ich verloren habe. Jetzt bist du dran.
+#TEXT	12
+************************************************************
+Egal, wie sehr ich es versuche, an wie viele Türen ich klopfe, wie sehr ich flehe – es ist alles vergebens. Der Gouverneur will nicht zuhören. Er sagt, es gäbe kein Geld für eine Expedition. Er könnte zwei Soldaten entbehren, aber nur, wenn ich alle Kosten selbst trage. Doch ich gebe nicht auf! Ich weiß, dass der legendäre Smaragd, der Geist des Korsaren, irgendwo im Dschungel dieser Insel verborgen ist. Er existiert, und die Welt braucht ihn. Ich werde ihn finden, koste es, was es wolle. Dieser Schatz ist meine erste Investition in die künftige Expedition.
+#TEXT	13
+************************************************************
+Die Inquisition beobachtet mich immer genauer. Auf diesem Archipel zu bleiben, wird zu gefährlich.
+Meine Liebste, falls du dir diesen Schatz holen und alleine davonsegeln musst, zögere keine Sekunde. Ich liebe dich und möchte, dass du in Sicherheit bist. 
+Um mich brauchst du dich nicht zu sorgen – ich werde meine Aufgabe erfüllen und in deine Arme zurückkehren.
+#TEXT	14
+************************************************************
+Schmuggler zu sein, ist der beste Job der Welt! Ich bin noch nicht lange in der Karibik und schon schwimme ich in Gold. Und kein Gouverneur kann mir vorschreiben, was ich zu tun habe! 
+Aber Gold kann man nie genug haben. Ich höre nicht auf, bis ich reicher bin als der König selbst! Dann wird sie merken, was sie verloren hat. Dieser Soldat hatte recht – wer sich hier auskennt, wird in ein paar Monaten reich.
+#TEXT	15
+************************************************************
+Remy, meine Liebe, Vater hat von uns erfahren! Ich habe ihn noch nie so wütend gesehen. Er hat mich sogar geschlagen und in meinem Zimmer eingesperrt.
+
+Mein Lieber, ich fürchte um dich! Er hat meinen Brüdern befohlen, dich zu finden und zu töten. Aber ich konnte kurz entkommen und habe all meinen Schmuck in unserem Versteck gelassen. Bitte verkaufe ihn – hoffentlich reicht es, um von dieser verfluchten Insel zu fliehen. Wohin ist egal, solange ich für den Rest meiner Tage bei dir sein kann.
+
+Mach dir um mich keine Sorgen. Ich habe ein Fläschchen Gift und wenn dir etwas zustößt, werde ich es ohne Zögern nehmen. Wenn uns in dieser Welt nicht vergönnt ist, zusammen zu sein, dann hat Gott vielleicht Erbarmen und vereint uns im Himmel. 
+
+Auf immer deine Juanita.
+#TEXT	16
+************************************************************
+Man sagt, Armut veredelt den Menschen, aber nur in Büchern. In Wirklichkeit ist ein wahrer Bürger, der Respekt verdient, ein reicher Mensch.
+
+Alle anderen sind nur seine Diener. Noch ein paar glückliche Funde und ich werde in ihren Kreis aufgenommen. Bald habe ich meine eigene Plantage, Diener, rauschende Empfänge und die Aufmerksamkeit des Gouverneurs. Keine enge, muffige Kabine mehr auf einem Handelsschiff.
+
+Ich darf nicht vergessen, mir einen eleganten Degen eines Edelmanns zu kaufen – das Symbol meines neuen Status.
+#TEXT	17
+************************************************************
+Wenn ich Gastons Anteil für den Tipp, den Sold der Mannschaft und das Schmiergeld für diesen schmierigen Bonzen in der Hauptstadt abziehe, bleibt immer noch eine beachtliche Summe. Ich weiß nicht, woher er seine Informationen bekommt, aber mit noch ein, zwei so lukrativen Kaperfahrten kann ich meine Schulden begleichen. Ich hoffe nur, dass die Kompanie mich nicht erwischt, bevor ich nach Europa zurücksegle. Ich muss vorsichtig sein.
+#TEXT	18
+************************************************************
+Henry, wir haben noch ein bisschen Beute gemacht. Du weißt, was damit zu tun ist.
+
+Leg nur nicht alles in eine Bank an. Wenn der Feind in die Stadt kommt, ist unser Geld weg, und ich bin zu alt, um noch einmal mit dem Messer zwischen den Zähnen zu entern.
+
+Regel das selbst – nach dem, was in Bluevelde passiert ist, ist Anderson nicht mehr derselbe. Es besteht eine große Gefahr, dass er durchdreht und all unsere Einkünfte in seine sinnlose Vendetta steckt. Ich habe ihm hundertmal gesagt, dass Vergangenes nicht rückgängig zu machen ist, aber er hört nicht auf mich. Ich traue ihm nicht.
+
+#QUEST PortRoyal_town_Letter
+Die Geheimnisse von Port Royal
+
+#TEXT 1
+************************************************************
+Meine liebe Lettis, wenn du diese Zeilen liest, bedeutet das, dass die Krankheit ihren Lauf genommen hat und ich nicht mehr bin. Vielleicht bist du hierher gekommen, um um mich zu trauern, aber bitte tu das nicht. Ich möchte, dass du weiterlebst, lächelst und glücklich bist.
+Unsere Begegnung hier war ein Zufall – oder vielleicht Schicksal. Du tratst in mein Leben in einem Moment, als ich es am wenigsten erwartete, und von jenem Tag an veränderte sich die Welt. Ich erinnere mich an das Leuchten in deinen Augen, die Nuancen deiner Stimme, die Wärme deiner Hände. Diese Erinnerungen werden für immer bei mir bleiben, und ich hoffe, dass du dich eines Tages ebenfalls nicht mit Tränen, sondern mit einem sanften, warmen Lächeln an mich erinnern wirst.
+Deshalb bitte ich dich: Besuche die Orte, die uns so viel bedeutet haben. Erinnere dich an unsere glücklichsten Momente, spüre sie noch einmal und lasse sie dann los. Erlaube dir, weiterzugehen – trauere nicht um mich und sei nicht traurig, denn es würde mir wehtun, dich unglücklich zu sehen.
+Beginne diese Reise an dem wichtigsten Ort – an dem Ort, wo alles begann. Wo sich unsere Wege zum ersten Mal kreuzten, wo du vor mir erschienen bist und mein Leben verändert hast. Lass diesen Schritt das Symbol eines neuen Kapitels in deinem Leben werden, eines Kapitels, in dem kein Platz für Kummer und Sehnsucht ist.
+P.S. Die Kerze wird den Weg zum Gewünschten weisen. Auch wenn sie nicht brennt.
+
+#TEXT 2
+************************************************************
+Ich erinnere mich an den Moment, als ich dich zum ersten Mal sah. Du warst wie eine Windböe – leicht, flüchtig, strahlend wie ein Lichtblitz. In deinen Augen lag so viel Aufrichtigkeit, so viel Leben, dass ich in diesem Augenblick wusste: Du bist etwas Besonderes.
+Der nächste Ort ist dort, wo wir uns vor neugierigen Blicken versteckt haben, nur um zu reden, zu lachen und ganz wir selbst zu sein. Ein Ort, an dem die Zeit stillstand und die Welt mit all ihren Problemen und Bedrohungen unwichtig erschien.
+P.S. Wein kann, genau wie ein Mensch, Geheimnisse bewahren.
+
+#TEXT 3
+************************************************************
+Weißt du, was ich am meisten an dir liebte? Deine Aufrichtigkeit. Du hast dich nie verstellt, nie versucht, jemand anderes zu sein. Du hast von innen heraus gestrahlt – in jedem Wort, jedem Blick, jeder Bewegung. Und dieses Licht hat mich immer angezogen.
+Der nächste Ort ist einer, der für immer in meinem Herzen und meiner Erinnerung geblieben ist. Dort habe ich mich endlich entschlossen, dir das Wichtigste zu sagen. Dort schlug mein Herz schneller, und die Worte fanden scheinbar von allein ihren Weg. Geh dorthin. Erinnere dich. Fühle es.
+P.S. Der beste Ort für ein Versteck ist dort, wo es immer laut und belebt ist, wo niemand vermutet, dass sich etwas Unbekanntes verbergen könnte.
+
+#TEXT 4
+************************************************************
+Bevor du dein neues Leben beginnst, möchte ich dir noch ein Geschenk machen. Doch es wird nicht einfach sein, es zu finden; ich musste es gut verstecken, an einem Ort, den nicht einmal du kanntest.
+In jeder der Notizen findest du einen Hinweis. Setze sie zusammen, und du wirst verstehen, wo du danach suchen musst. Dies war eine notwendige Maßnahme, damit niemand außer dir dort hingelangt. Um erfolgreich zu sein, brauchst du einen Schlüssel. Ich habe ihn dort gelassen, wo wir so gerne den Sonnenuntergang im Dröhnen der Mühlsteine und dem Knarren der alten Mühle betrachteten.
+P.S. Dort, wo die Wellen mit dem Ufer sprechen, findest du eine Tür, hinter der das Geheimnis liegt, das mein Geschenk beschützt.
+
+#TEXT 5
+************************************************************
+Meine Liebe, du hast also endlich mein Geschenk gefunden. Ich möchte, dass alles, was mir gehörte, dir zufällt. Möge es dir helfen, dieses Kapitel ein für alle Mal zu schließen. Und mich … lass mich einfach los. Trage meinen Schatten nicht weiter mit dir.
+Ich wollte dich zu meiner Frau machen, aber das Schicksal entschied anders. Der Tod meiner Eltern stellte alles auf den Kopf, und unsere Hochzeit blieb ein unerfüllter Traum. Ich habe dir nie gesagt, wie sehr mich das verletzt hat – mehr als alles andere wollte ich dich glücklich sehen.
+Lebe, als hätte es diesen Schmerz nie gegeben. Als würde alles erst beginnen. In Liebe,
+dein James.
+
+#QUEST Villemstad_town_Letter
+Die Geheimnisse von Willemstad
+
+#TEXT 1
+************************************************************
+Du hast es geschafft, diese Botschaft zu finden, was bedeutet, dass Herr Attano dich gut ausgebildet hat. Doch nicht jeder ist dazu fähig, einer von uns zu werden. Du musst beweisen, dass du über alle nötigen Fähigkeiten verfügst, um selbst die schwierigsten Aufgaben zu meistern.
+
+Wir beobachten dich genau. Sobald du diese Aufgabe erfüllt hast, werden wir eine neue für dich hinterlassen. Wenn es dir gelingt, alle Prüfungen zu bestehen, wirst du einer von uns werden.
+
+Deine nächste Aufgabe besteht darin, den besten Ort zu finden, von dem aus du das Büro der Niederländischen Westindien-Kompanie beobachten kannst. Nur ein scharfer Verstand und ein wachsamer Blick können den richtigen Aussichtspunkt wählen. Achte auf die Straßen, höre auf das Treiben der Stadt und nutze den Schatten, um unbemerkt zu bleiben.
+
+Denke daran: Die Wachen sind immer wachsam. Sie werden sofort auf jemanden aufmerksam, der nur herumsteht und auf den Eingang starrt. Du musst wie jemand wirken, der mit seinen eigenen, wenn auch nichtigen, Angelegenheiten beschäftigt ist.
+
+P.S. Der Weg zum Verborgenen ist nicht immer offensichtlich. Nur wer versteht, dass selbst eine nicht brennende Kerze ein Geheimnis lüften kann, kann bis zum Ende gelangen.
+
+#TEXT 2
+************************************************************
+Du setzt deinen Weg fort, was beweist, dass du nicht nur Verstand, sondern auch Gerissenheit besitzt. Doch wer allein handelt, ist zum Scheitern verurteilt. Es ist Zeit, einen Ort zu finden, an dem du dich mit deinem Verbindungsmann treffen kannst.
+Dieser Ort muss unverdächtig wirken und gleichzeitig Gespräche ohne unerwünschte Zuhörer ermöglichen. Überlege, wo solche Treffen stattfinden könnten, und wähle den sichersten Ort davon.
+
+Und denk daran: Hintergrundgeräusche – seien es Möwenschreie, das Rauschen der Brandung oder das Schlagen einer Axt auf Holz – helfen dabei, deine Worte vor neugierigen Ohren zu verbergen.
+
+P.S. Eine Laterne kann selbst das sicherste Versteck verraten. Aber in anderer Situation wird sie dir den Weg zur richtigen Tür zeigen.
+
+#TEXT 3
+************************************************************
+Du liest diese Nachricht, also hast du die vorherige Aufgabe bestanden. Ein guter Beobachter weiß nicht nur, wie man beobachtet, sondern auch, wo man sein Werkzeug versteckt, um es bei Bedarf schnell zur Hand zu haben.
+Jetzt musst du einen menschenleeren und sicheren Ort finden – einen Ort, an dem du ein Versteck einrichten kannst. Wähle eine unauffällige Ecke, die bei Passanten kein Aufsehen erregt.
+
+Vergiss nicht: Die Wachen achten auf jeden, der ziellos umherirrt. Bewege dich selbstsicher, als wüsstest du genau, wohin du gehst. Die Stadtbewohner sollen glauben, dass du nur ein weiterer Seemann bist, der hier Geschäfte erledigt.
+
+P.S. Ein Backsteinhaus steht für Standhaftigkeit und Zuverlässigkeit. Es kann sowohl Schätze als auch Geheimnisse vor ungebetenen Gästen schützen.
+
+#TEXT 4
+************************************************************
+Du hast bereits viel gelernt, doch die wichtigste Regel lautet: immer einen Alternativplan haben. Jeder, der in unserem Metier erfolgreich sein will, braucht ein zuverlässiges, geheimes Versteck. Ein Haus, in dem man sich verbergen, abwarten oder auf neue Befehle warten kann.
+Dein nächster Schritt ist, diesen Ort zu finden. Er wird für alle sichtbar sein, doch nur du wirst seine wahre Bedeutung kennen. Betreten kannst du ihn nur mit einem Ring – dem Symbol deiner Loyalität gegenüber dem Orden. Dieser Ring dient dir außerdem als Schlüssel. Suche ihn gegenüber der Residenz an einem versteckten Ort.
+
+Bedenke: In deinem Versteck muss alles Notwendige vorhanden sein: Geld, Proviant, Medikamente. Und das Wichtigste – es muss ein Geheimnis bleiben, das nur du kennst.
+
+P.S. Wenn die meisten Leute ein dreistöckiges Haus betrachten, sehen sie nur, was sich über der Erde erhebt. Doch das Geheimste verbirgt man für gewöhnlich unter ihr.
+P.P.S. Wenn du es wirklich verdienst, Teil unserer Bruderschaft zu sein, wirst du eine Verbindung erkennen, wo andere nur Sinnlosigkeit sehen.
+
+#TEXT 5
+************************************************************
+Du hast die Prüfungen bestanden, die nur wenige Auserwählte meistern können. Du hast bewiesen, dass du beobachten, dich verbergen, geheime Gespräche führen und jeden deiner Schritte planen kannst. Jetzt bist du einer von uns. Der Inhalt dieser Truhe ist dein persönlicher Vorrat für schwere Zeiten, und dieser Raum ist dein sicheres Versteck. Halte diesen Moment in Erinnerung. Von heute an bist du nicht mehr einfach ein Teil der grauen Masse – du gehörst zur Bruderschaft.

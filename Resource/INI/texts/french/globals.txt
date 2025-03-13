@@ -1,0 +1,70 @@
+QUEST_MESSAGE1 {La colonie d'El Caimano est occupée.}
+QUEST_MESSAGE2 {La colonie d'El Caimano est capturée.}
+QUEST_MESSAGE3 {Tu es trop vieux pour résister à la malédiction de l'or aztèque...}
+QUEST_MESSAGE4 {Vous avez trouvé un trésor !}
+QUEST_MESSAGE5 {Nigel Blight a attaqué la corvette du contrebandier !}
+QUEST_MESSAGE6 {Nigel Blight a disparu !}
+QUEST_MESSAGE7 {Capitaine, le 'Black Pearl' est visible à l'horizon !}
+QUEST_MESSAGE8 {Excellent travail. Vous avez tué le Maitre !}
+QUEST_MESSAGE9 {Maintenant, vous êtes face à face avec ce monde cruel !}
+QUEST_MESSAGE10 {Un pirate impitoyable}
+QUEST_MESSAGE11 {mérite une récompense spéciale !}
+QUEST_MESSAGE12 {Malheureusement, vous avez deja recruté trop d'officiers ! Vous ne pouvez en recruter un autre qu'après avoir viré l'un des officiers !}
+
+Address_Form_Spa {señor}
+Address_Form_Fra {Monsieur}
+Address_Form_Eng {Sir}
+Address_Form_Por {Senhor}
+Address_Form_Hol {Mynheer}
+
+Swear_1 {Marin d'eau douce !}
+Swear_2 {Bon sang !}
+Swear_3 {Oh merde !}
+Swear_4 {Bordel de merde !}
+Swear_5 {Mille sabords !}
+Swear_6 {Naufrageur !}
+Swear_7 {Flûte !}
+Swear_8 {Arrghhh !!!}
+Swear_9 {Mille milliards de mille sabords !}
+Swear_10 {Flibustier de carnaval !}
+
+TimeGreeting {Bon après-midi}
+
+Antigua {Antigua}
+Barbados {La Barbade}
+Curacao {Curaçao}
+Dominica {Dominique}
+Grenada {Grenade}
+Guadeloupe {Guadeloupe}
+Hispaniola {Hispaniola}
+IslaMona {Isla Mona}
+Jamaica {Jamaïque}
+MarieGalante {Marie Galante}
+Martinique {Martinique}
+Montserrat {Montserrat}
+Nevis {Niévès}
+PuertoRico {Porto Rico}
+StEustatius {Saint-Eustache}
+StKitts {Saint-Christophe-et-Niévès}
+StMartin {Saint-Martin}
+Tortuga {Tortuga}
+LaVega {La Vega}
+SantoDomingo {Saint-Domingue}
+PetitGoave {Petit-Goâve}
+Bridgetown {Bridgetown}
+SanJuan {San Juan}
+SantiagoVega {Santiago Vega}
+
+
+OFFIC_TYPE_BOATSWAIN {bosco}
+OFFIC_TYPE_CANNONEER {canonnier}
+OFFIC_TYPE_QMASTER {timonier}
+OFFIC_TYPE_NAVIGATOR {navigateur}
+OFFIC_TYPE_FIRSTMATE {premier lieutenant}
+
+Pirate {Pirate}
+Spain {Espagnol}
+France {Français}
+Smuggler {Contrebandier}
+Holland {Hollandais}
+England {Anglais}

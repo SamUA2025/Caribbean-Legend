@@ -6,6 +6,7 @@
 #include "globals.c"
 #include "animals.c"
 #include "NumberUtilities.c" // Warship 26.07.09. Работа с числами
+#include "RandomUtilities.c" // Legendary edition Работа с рандомом
 #include "sea_ai\sea.c"
 #include "ships\ships.c"
 #include "Encounters\Encounters.c"
@@ -47,7 +48,7 @@ extern void InitBaseInterfaces();
 extern void wdmInitWorldMap();
 extern void InitGoods();
 extern void InitStores();
-extern int InitItems();
+extern int  InitItems();
 extern void InitCharactersTables();
 extern void InitCharactersNames();
 extern void InitPiratesNames();
@@ -695,11 +696,8 @@ void OnSave()
 			}
 		}
 	}
-	
-	
-	
-	iCalculateSaveLoadCount("Save");
 
+	iCalculateSaveLoadCount("Save");
 }
 
 void ClearLocationsSaveData()
@@ -941,16 +939,16 @@ void NewGame_continue()
 void InitGame()
 {	
 	InitSound();
-
 	ReloadProgressUpdate();
 
 	DeleteSeaEnvironment();
-	//CharactersInit();
 	if(LoadSegment("worldmap\worldmap_init.c"))
 	{
 		wdmInitWorldMap();
 		UnloadSegment("worldmap\worldmap_init.c");
 	}
+    ReloadProgressUpdate();
+
     InitPerks();
     ReloadProgressUpdate();
     
@@ -974,14 +972,12 @@ void InitGame()
 		InitItems();
 		UnloadSegment("items\initItems.c");
 	}
-
 	ReloadProgressUpdate();
+
 	GenerateGenerableItems(); // <-- ugeen генерация предметов
-	
 	ReloadProgressUpdate();
 	
 	CharactersInit();
-
 	ReloadProgressUpdate();
 	
 	ColoniesInit();
@@ -992,10 +988,10 @@ void InitGame()
 		InitStores();
 		UnloadSegment("store\initStore.c");
 	}
-	
-	QuestsInit();
 	ReloadProgressUpdate();
 
+	QuestsInit();
+	ReloadProgressUpdate();
 	
 	SeaAIGroupsInit();
 	ReloadProgressUpdate();
@@ -1007,8 +1003,8 @@ void InitGame()
 	ReloadProgressUpdate();
 	
 	LoadGameOptions();
-
 	ReloadProgressUpdate();
+
 	InfoShowSetting();
 }
 

@@ -268,7 +268,21 @@ bool LoadLocation(ref loc)
 
         //Log_SetStringToLog("Villemstad_town  - Hour : " + Hour + " min : " + Min);
     }
- 
+
+	// ворота в резиденцию PortRoyal
+	if(loc.id == "PortRoyal_town")
+	{
+		if(chrCheckReload(loc, "reload3_back")) // локатор резиденции
+		{
+			loc.models.night.gates = "PortRoyal_gates_day";
+			loc.models.night.charactersPatch = "PortRoyal_patch_day";
+		}
+		else
+		{
+			loc.models.night.gates = "PortRoyal_gates_night";
+			loc.models.night.charactersPatch = "PortRoyal_patch_night";
+		}
+	}
 
 	// инит данных для режима скрытности
 	StealthEnable = false;

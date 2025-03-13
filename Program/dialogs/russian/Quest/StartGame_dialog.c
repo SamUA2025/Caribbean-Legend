@@ -88,7 +88,6 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Finish_3":
-            DoQuestFunctionDelay("Tut_locCamera_2", 0.1);
 			NextDiag.CurrentNode = NextDiag.TempNode;
 			DialogExit();
 			LAi_RemoveCheckMinHP(Pchar); // снимем проверки

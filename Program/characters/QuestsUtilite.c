@@ -335,6 +335,8 @@ void FillAboardCabinBox(ref _location, ref _npchar)
 				amap = SelectAdmiralMaps();
 				if (amap != "") _location.box1.items.(amap)	= 1;
 			}
+			
+			if (drand(4) == 2 && sti(RealShips[sti(_npchar.ship.type)].Class) < 2) _location.box1.items.Hat5 = 1;
 
 	        ok = false;
 		}
@@ -374,6 +376,7 @@ void FillAboardCabinBox(ref _location, ref _npchar)
 			if(rand(1) == 0) { _location.box1.items.jewelry3 = rand(515)  + 750; }
 			if(rand(1) == 0) { _location.box1.items.jewelry4 = rand(346)  + 311; }
 			if(rand(1) == 0) { _location.box1.items.jewelry5 = rand(678)  + 420; }
+			if(rand(1) == 0) { _location.box1.items.hat5 = 1; }
 		}	
 		if (CheckAttribute(pchar, "questTemp.AdmiralMap")) // адм.карты
 		{
@@ -690,6 +693,7 @@ void FillAboardCabinBox(ref _location, ref _npchar)
 		_location.box1.items.pistol8 = 1;
 		_location.box1.items.harpoon = 5;
 		_location.box1.items.GunEchin = 10;
+		_location.box1.items.Hat5 = 1;
 		DeleteAttribute(_location, "box2");
 		_location.box2.items.bussol = 1;
 		_location.box2.items.clock2 = 1;
@@ -1191,6 +1195,7 @@ void FillAboardCabinBox(ref _location, ref _npchar)
 			}
 			FillCabinBoxMap(_location, 200 - (7 - iTemp) * 5); 
 			if(rand(10) == 5) _location.box1.items.Chest_open = 1;
+			if(SandBoxMode && rand(9) == 7 && sti(pchar.rank) > 19) _location.box1.items.Hat8 = 1;
 		}
 		else
 		{
@@ -1204,7 +1209,9 @@ void FillAboardCabinBox(ref _location, ref _npchar)
 			{
 				_location.box1.items.gold_dublon = rand(10) + 4;
 				if(drand(20) == 15) _location.box1.items.rat_poison = 1;		
-			}	
+			}
+			
+			if(rand(10) == 1 && sti(RealShips[sti(_npchar.ship.type)].Class) == 3) _location.box1.items.Hat6 = 1;
 		}
 		else // все остальные
 		{
@@ -1247,6 +1254,30 @@ void FillAboardCabinBox(ref _location, ref _npchar)
 		{
 			_location.box1.items.kaleuche_amulet1 = 1;
 		}
+		if (CheckAttribute(_npchar, "Ship.Mode") && _npchar.Ship.Mode == "war")
+		{
+			if(sti(pchar.rank) < 12)
+			{
+				if(drand(10) == 3)) _location.box1.items.hat1 = 1;
+				if(drand(10) == 8)) _location.box1.items.hat3 = 1;
+			}
+			else
+			{
+				if(drand(10) == 3)) _location.box1.items.hat2 = 1;
+				if(drand(10) == 8)) _location.box1.items.hat4 = 1;
+			}
+		}
+		// Озги
+		if (findsubstr(_npchar.id, "Hunter0" , 0) != -1)
+		{
+			if(rand(10) == 3)) _location.box1.items.hat7 = 1;
+		}
+		// Джентельмен удачи
+		if (findsubstr(_npchar.id, "Follower0" , 0) != -1)
+		{
+			if(rand(10) == 4)) _location.box1.items.hat7 = 1;
+		}
+		
     } else {
 		_location.box1.items.talisman11 = 1 + rand(4);
 	}
@@ -1361,7 +1392,7 @@ void FantomMakeCoolFighter(ref _Character, int _Rank, int _Fencing, int _Pistol,
 	SetCharacterPerk(_Character, "HardHitter");
 	DeleteAttribute(_Character, "Items");
 	// belamour ДА! Я - ленивая рожа, но всего то 4 пестика :) --->
-	If(_Gun == "pistol2" || _Gun == "pistol4" || _Gun == "pistol6" || _Gun == "howdah")
+	if(_Gun == "pistol2" || _Gun == "pistol4" || _Gun == "pistol6" || _Gun == "howdah")
 	{SetCharacterPerk(_Character, "GunProfessional");}
 	// <--- belamour пистоли выдаются раньше перка, как итог - не могут одеть
 	_Character.SuperShooter  = true;
@@ -2378,6 +2409,13 @@ void SetQuestAboardCabinDialog(ref refChar)
 		    LAi_SetCheckMinHP(refChar, 10, true, "QuestAboardCabinDialog");  // сколько НР мин
 			refChar.Dialog.FileName = "Quest\SantaMisericordia_dialog.c";
 			refChar.Dialog.CurrentNode = "Alamida_abordage"; //даем абордажную ноду	
+		}
+		// Леди Бет
+		if (refChar.CaptanId == "LadyBeth_cap")
+		{
+		    LAi_SetCheckMinHP(refChar, 10, true, "QuestAboardCabinDialog");  // сколько НР мин
+			refChar.Dialog.FileName = "Quest\LadyBeth_dialog.c";
+			refChar.Dialog.CurrentNode = "LadyBeth_abordage"; //даем абордажную ноду	
 		}
 	}
 }
@@ -4441,6 +4479,37 @@ string GetStrSmallRegister(string sBase)
 			case "X": sResult += "x"; continue; break;
 			case "Y": sResult += "y"; continue; break;
 			case "Z": sResult += "z"; continue; break;
+			
+			// Немецкие символы
+			case "Ä": sResult += "ä"; continue; break;
+			case "Ö": sResult += "ö"; continue; break;
+			case "Ü": sResult += "ü"; continue; break;
+			case "ß": sResult += "ß"; continue; break;
+
+			// Испанские символы
+			case "Ñ": sResult += "ñ"; continue; break;
+			case "Á": sResult += "á"; continue; break;
+			case "É": sResult += "é"; continue; break;
+			case "Í": sResult += "í"; continue; break;
+			case "Ó": sResult += "ó"; continue; break;
+			case "Ú": sResult += "ú"; continue; break;
+
+			// Польские символы
+			case "Ą": sResult += "ą"; continue; break;
+			case "Ć": sResult += "ć"; continue; break;
+			case "Ę": sResult += "ę"; continue; break;
+			case "Ł": sResult += "ł"; continue; break;
+			case "Ń": sResult += "ń"; continue; break;
+			case "Ó": sResult += "ó"; continue; break;
+			case "Ś": sResult += "ś"; continue; break;
+			case "Ź": sResult += "ź"; continue; break;
+			case "Ż": sResult += "ż"; continue; break;
+
+			// Украинские символы
+			case "Ґ": sResult += "ґ"; continue; break;
+			case "Є": sResult += "є"; continue; break;
+			case "І": sResult += "і"; continue; break;
+			case "Ї": sResult += "ї"; continue; break;
 		}
 		sResult += Simbol;
 	}
@@ -4449,7 +4518,7 @@ string GetStrSmallRegister(string sBase)
 
 // Warship 15.08.09 -->
 // Перевод всей строки в верхний регистр
-String ToUpper(String _text)
+string ToUpper(String _text)
 {
 	String retString, symbol;
 	retString = "";
@@ -4518,6 +4587,36 @@ String ToUpper(String _text)
 			case "x": retString += "X"; continue; break;
 			case "y": retString += "Y"; continue; break;
 			case "z": retString += "Z"; continue; break;
+
+			// Немецкие символы
+			case "ä": retString += "Ä"; continue; break;
+			case "ö": retString += "Ö"; continue; break;
+			case "ü": retString += "Ü"; continue; break;
+			case "ß": retString += "ß"; continue; break;
+
+			// Испанские символы
+			case "ñ": retString += "Ñ"; continue; break;
+			case "á": retString += "Á"; continue; break;
+			case "é": retString += "É"; continue; break;
+			case "í": retString += "Í"; continue; break;
+			case "ó": retString += "Ó"; continue; break;
+			case "ú": retString += "Ú"; continue; break;
+
+			// Польские символы
+			case "ą": retString += "Ą"; continue; break;
+			case "ć": retString += "Ć"; continue; break;
+			case "ę": retString += "Ę"; continue; break;
+			case "ł": retString += "Ł"; continue; break;
+			case "ń": retString += "Ń"; continue; break;
+			case "ś": retString += "Ś"; continue; break;
+			case "ź": retString += "Ź"; continue; break;
+			case "ż": retString += "Ż"; continue; break;
+			
+			// Украинские символы
+			case "ґ": retString += "Ґ"; continue; break;
+			case "є": retString += "Є"; continue; break;
+			case "і": retString += "І"; continue; break;
+			case "ї": retString += "Ї"; continue; break;
 		}
 		
 		retString += symbol;
@@ -4527,7 +4626,7 @@ String ToUpper(String _text)
 }
 
 // Первый символ в верхний регистр
-String UpperFirst(String _text)
+string UpperFirst(String _text)
 {
 	String firstSymbol = GetSymbol(_text, 0);
 	firstSymbol = ToUpper(firstSymbol);
@@ -4536,7 +4635,7 @@ String UpperFirst(String _text)
 }
 
 // Первый символ в нижний регистр
-String LowerFirst(String _text)
+string LowerFirst(String _text)
 {
 	String firstSymbol = GetSymbol(_text, 0);
 	firstSymbol = GetStrSmallRegister(firstSymbol);
@@ -4584,7 +4683,12 @@ void QuestCheckTakeBoxes(ref itemsRef)
 	{
 		Log_Info(StringFromKey("QuestsUtilite_156"));
 		PlaySound("interface\notebook.wav");
-		DeleteAttribute(itemsRef, "Treasure");
+        // Ачивки
+        //if(sti(itemsRef.Treasure) == 15) Achievment_Set("ach_CL_98");
+		Statistic_AddValue(Pchar, "Treasure", 1);
+		Achievment_SetStat(8, 1);
+		if(SandBoxMode) Achievment_SetStat(101, 1);
+        DeleteAttribute(itemsRef, "Treasure");
 		//eddy. для безконфликтности квестов
 		locations[FindLocation(pchar.location)].DisableEncounters = false; //энкаутеры открыть
 		if(CheckAttribute(itemsRef, "PiratesOnUninhabitedTreasure"))
@@ -4873,7 +4977,7 @@ string FindFriendCityToMC(bool bRand)//Jason выбрать радномный �
 	for(n=0; n<MAX_COLONIES; n++)
 	{
 		bool notSameIsland = (curIsland < 0) || (Islands[curIsland].id != colonies[n].island);
-		if (notSameIsland && colonies[n].id != "Panama" && colonies[n].id != "Minentown" && colonies[n].id != "SanAndres" && colonies[n].nation != "none" && colonies[n].nation != PIRATE && GetNationRelation(nation, sti(colonies[n].nation)) != RELATION_ENEMY) // mitrokosta фикс зависимости от флага
+		if (notSameIsland && colonies[n].id != "Panama" && colonies[n].id != "Minentown" && colonies[n].id != "SanAndres" && colonies[n].id != "IslaMona" && colonies[n].nation != "none" && colonies[n].nation != PIRATE && GetNationRelation(nation, sti(colonies[n].nation)) != RELATION_ENEMY) // mitrokosta фикс зависимости от флага
 		{
 			storeArray[howStore] = n;
 			howStore++;
@@ -4900,7 +5004,7 @@ string FindEnemyCityToMC(bool bRand)//Jason выбрать радномный в
 	for(n=0; n<MAX_COLONIES; n++)
 	{
 		bool notSameIsland = (curIsland < 0) || (Islands[curIsland].id != colonies[n].island);
-		if (notSameIsland && colonies[n].id != "Panama" && colonies[n].id != "Minentown" && colonies[n].id != "SanAndres" && colonies[n].nation != "none" && colonies[n].nation != PIRATE && GetNationRelation(nation, sti(colonies[n].nation)) == RELATION_ENEMY) // mitrokosta фикс зависимости от флага
+		if (notSameIsland && colonies[n].id != "Panama" && colonies[n].id != "Minentown" && colonies[n].id != "SanAndres" && colonies[n].id != "IslaMona" && colonies[n].nation != "none" && colonies[n].nation != PIRATE && GetNationRelation(nation, sti(colonies[n].nation)) == RELATION_ENEMY) // mitrokosta фикс зависимости от флага
 		{
 			storeArray[howStore] = n;
 			howStore++;
@@ -4932,7 +5036,7 @@ string FindQuestCity(ref ch, string relation, int _nation, bool bpirate, bool bR
     int storeArray[2];
 	SetArraySize(&storeArray, MAX_COLONIES);
     int howStore = 0;
-	int nation = ch.nation; 
+	int nation = sti(ch.nation); 
 	bool nationSort = true;
 	if(nation < 0 || nation > 4) nation = PIRATE;
 	if(_nation < 0 || _nation > 4)  
@@ -4946,7 +5050,7 @@ string FindQuestCity(ref ch, string relation, int _nation, bool bpirate, bool bR
 	for(n=0; n<MAX_COLONIES; n++)
 	{
 		bool notSameIsland = (curIsland < 0) || (Islands[curIsland].id != colonies[n].island);
-		if(notSameIsland && colonies[n].id != "Panama" && colonies[n].id != "Minentown" && colonies[n].id != "SanAndres" && colonies[n].nation != "none")
+		if(notSameIsland && colonies[n].id != "Panama" && colonies[n].id != "Minentown" && colonies[n].id != "SanAndres" && colonies[n].id != "IslaMona" && colonies[n].nation != "none")
 		{
 			if(!bpirate && colonies[n].nation == PIRATE) continue;
 			if(relation == "enemy" && GetNationRelation(nation, sti(colonies[n].nation)) != RELATION_ENEMY) continue;
@@ -6056,8 +6160,11 @@ string SelectAdmiralMaps() // выбор случайной не повторя�
 	
 	for (int i = 0; i < 24; i++) {
 		sTemp = map[i];
-		if (!CheckAttribute(sld, "quest.map." + sTemp)) {
-			storeArray[howStore] = sTemp;
+		if (!CheckAttribute(sld, "quest.map." + sTemp))
+        {
+			if(CheckAttribute(&Render, "map_a." + sTemp))
+                continue; // Если есть такой атрибут, значит мы сейчас генерим карту в клад, и там такая уже лежит
+            storeArray[howStore] = sTemp;
 			howStore++;
 		}
 	}
@@ -6361,6 +6468,8 @@ bool FindCompanionShips(int Type)
 
 bool LineShips_CheckAndIdentify(int Nation)
 {
+	if(GetCharacterEquipByGroup(pchar, HAT_ITEM_TYPE) == "hat5") return false;
+	
 	switch (Nation)
 	{
 		case ENGLAND:

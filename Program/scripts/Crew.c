@@ -158,6 +158,23 @@ int GetSalaryForShip(ref chref)
             }
         }
     }
+	
+	if(GetCharacterEquipByGroup(mchref, HAT_ITEM_TYPE) == "hat5")
+	{
+		iMax = GetPassengersQuantity(mchref);
+		for(i=0; i < iMax; i++)
+        {
+            cn = GetPassenger(mchref,i);
+            if(cn != -1)
+            {
+                if(IsCompanion(GetCharacter(cn)))
+                {
+                    if(chref.index == cn) nPaymentQ = makeint(nPaymentQ*0.85);
+                }
+            }
+        }
+	}
+	
     return nPaymentQ;
 }
 // boal новый учёт зп <--

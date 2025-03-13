@@ -52,7 +52,7 @@ ChrAiming
 
 ChrAimingShot
 {
-Выстрелить во время прицеливания
+Выстрелить
 }
 
 ChrCamCameraRadius

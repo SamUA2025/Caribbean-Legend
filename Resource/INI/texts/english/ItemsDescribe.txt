@@ -45,6 +45,8 @@ weapon gun parameters{Damage: #ddmg_min#-#ddmg_max#}
 weapon gun parameters equipped{Damage: #ddmg_min#-#ddmg_max#, reload time: #dchargespeed# sec.}
 mushket parameters{Damage: #ddmg_min#-#ddmg_max#}
 mushket parameters equipped{Damage: #ddmgmin#-#ddmgmax#, reload time: #dchargespeed# sec.}
+weapon grape parameters{Damage: #dbasedmg#x#dshards#, Spread: #sarea#}
+weapon grape parameters equipped{Damage: #dbasedmg#x#dshards#, Spread: #sarea#, Reload time: #dchargespeed# sec.}
 
 youve_got {Item found - }
 used_item {Item used - }
@@ -825,6 +827,73 @@ itmname_lantern {Lantern}
 itmdescr_lantern
 {
 A small lantern serves as an indispensable companion in the darkness. Attach it to your belt to illuminate your path at night, as well as in caves, grottoes, and dungeons. Easily activated and deactivated by pressing 'L' on the keyboard.}
+
+; ==================================================================================================================== ШЛЯПЫ
+
+itmname_hat1 {Condottiere’s Hat}
+itmdescr_hat1
+{
+Being the favorite headgear of duelists and fencers, this hat motivates one to constantly hone their cold weapon skills in order to look appropriate.
+~
+Increases experience gain with Light, Medium, and Heavy melee weapons by 10%.
+}
+
+itmname_hat2 {Cavalier’s Hat}
+itmdescr_hat2
+{
+A richly decorated colorful hat, typically worn by nobles, has acquired a notorious reputation in the Caribbean. Its wearers here are not pampered European aristocrats, but experienced duelists and adventurers capable of fighting tirelessly with any weapon in hand.
+~
+Killing an enemy with a melee weapon restores 25% of energy.
+}
+
+itmname_hat3 {Sailor’s Tricorn}
+itmdescr_hat3
+{
+A rather ordinary tricorn hat, widespread among sailors. According to an old maritime tradition, this tricorn is given to a crew member who has passed three severe tests - sailing in a storm, their first naval battle, and patching holes afterwards.
+~
+Increases experience gain in Navigation, Accuracy, and Repair by 10%.
+}
+
+itmname_hat4 {Naval Officer’s Tricorn}
+itmdescr_hat4
+{
+A tricorn popular among ship officers. Upon seeing such a hat, ordinary sailors begin to fulfill their duties particularly quickly. Whether out of respect or fear of punishment is a rhetorical question.
+~
+Increases experience gain in all Naval Skills by 15%.
+}
+
+itmname_hat5 {Admiral’s Hat}
+itmdescr_hat5
+{
+Such headgear is rarely seen by an ordinary sailor even once in a lifetime; it inspires and motivates everyone around. Being in the same squadron as the owner of this hat is a great honor, and everyone from sailor to officer is ready to follow them to hell and back.
+~
+Gives your Naval Skills to every captain in your fleet. Reduces the salaries of all crew and officers on every ship except the flagship by 15%.
+Ends the hostility of nations toward the corresponding warships and allows captured national warships to enter the ports of their former owners.
+}
+
+itmname_hat6 {Dutch Hat}
+itmdescr_hat6
+{
+An expensive and exquisite hat, much beloved by middle-tier merchants. Thanks to its unusual shape, it allows one to spot a merchant from afar and prepare for fierce trade negotiations.
+~
+Once every three days, you automatically make a small trading deal when arriving at a port.
+}
+
+itmname_hat7 {Lucky Hat}
+itmdescr_hat7
+{
+They say this dashing hat brings luck. Worn and battered by time, it nevertheless looks noble. If you happen to acquire such a hat, be assured that in the most difficult moment you'll be able to slip past a guard, pull the right card from the deck, and find a stray bullet at the bottom of your pocket.
+~
+There is a 10% chance not to spend ammunition when firing, to dig up a more valuable treasure, and to avoid trouble with hostile guards.
+}
+
+itmname_hat8 {Charlie Prince’s Tricorn}
+itmdescr_hat8
+{
+This hat frightens merchants, especially Spanish ones, more than the Jolly Roger. The fame surrounding its wearer would make even the toughest sea wolf pale and shiver. Cursed be the day when Charlie Prince came into this world.
+~
+Rum and wine restore 50% more health. Being drunk has a more positive effect.
+}
 
 ; ==================================================================================================================== ОПТИКА
 
@@ -2888,7 +2957,8 @@ The universal musket and pistol projectile. The damage dealt by the ball depends
 itmname_grapeshot	{Grapeshot}
 itmdescr_grapeshot
 {
-Small lead balls, also known as buckshot. May be fired from smoothbore grapeshot firearms. Can hit several targets at once.
+Lead grapeshot or large buckshot. Used only when firing from grapeshot guns. Deals damage to multiple targets at once.
+The amount of grapeshot that can be packed into the barrel depends on the weapon used.
 }
 
 itmname_cartridge	{Paper Cartridge}
@@ -2954,13 +3024,15 @@ A double charge of gunpowder and a bullet, accompanied by a chopped doubloon for
 itmname_grapeshot_double 	{Double grapeshot charge}
 itmdescr_grapeshot_double
 {
-A double charge of gunpowder and a bullet, accompanied by a chopped doubloon for luck. Powder tester required to prevent barrel rupture rises.
+An increased powder charge and grapeshot with a chopped doubloon for luck. Its effectiveness depends on the weapon it’s used with.
+Without a powder tester, the risk of a barrel rupture increases.
 }
 
 itmname_GunEchin	{Nail Shrapnel}
 itmdescr_GunEchin
 {
-Chopped nails for firing grapeshot cannons of large caliber. Those have very harmful effects on both the human body that it hits and the cannon barrel that fires it.
+Coarsely chopped nails for use in large-caliber grapeshot guns. They have a devastating effect on human bodies and gun barrels.
+Due to their shape, they reduce the weapon’s spread.
 }
 
 ;--------------------------------------------- добавил
@@ -3682,6 +3754,17 @@ itmdescr_alexs_chest
 Metal box of master Alexus, securely locked.
 }
 
+itmname_treasure_note_1	{Treasure note}
+itmdescr_treasure_note_1
+{
+This note was found inside a treasure. It is most likely that its author has long since departed this mortal world. Its contents should be carefully copied into the special section of the ship’s log.
+}
+
+itmname_PR_Letter	{Someone’s Left-Behind Note}
+itmdescr_PR_Letter
+{
+Записка, написанная на старой потёртой бумаге. Её содержание явно предназначено не для посторонних глаз.
+}
 
 ;====================================== предметы для DLC ===============================
 
@@ -3777,6 +3860,24 @@ itmdescr_KhaelRoa_item
 {
 Magnificent gift of the Chavinavi chieftain - a beautiful jaguar pelt, enchanted by the god Yum Cimil himself.
 Increases damage dealt with firearms by 10 times. Effect lasts up to 2 days.
+}
+
+itmname_key_candlestick_PortRoyal	{Key}
+itmdescr_key_candlestick_PortRoyal
+{
+An old, worn key. It's not yet clear what it unlocks.
+}
+
+itmname_key_candlestick_FortFrance	{Key}
+itmdescr_key_candlestick_FortFrance
+{
+An old, worn key. It's not yet clear what it unlocks.
+}
+
+itmname_key_candlestick_Villemstad	{Ring of the Secret Order}
+itmdescr_key_candlestick_Villemstad
+{
+A massive antique ring with a ruby. It appears it should serve as a key for me.
 }
 
 ;====================================== предметы для пиратской линейки ===============================

@@ -247,15 +247,15 @@ void Badboy_friends(string qName)
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void GetSunplaceShore()//выбор бухты
 {
-	pchar.GenQuest.Sunplace.Trader.Island = GetRandomIslandId();
+	pchar.GenQuest.Sunplace.Trader.Island = GetRandIslandId();
 	while(pchar.GenQuest.Sunplace.Trader.Island == Islands[GetCharacterCurrentIsland(pchar)].id)
 	{
-		pchar.GenQuest.Sunplace.Trader.Island = GetRandomIslandId();
+		pchar.GenQuest.Sunplace.Trader.Island = GetRandIslandId();
 	}
 	pchar.GenQuest.Sunplace.Trader.Shore = GetIslandRandomShoreId(pchar.GenQuest.Sunplace.Trader.Island);
 	while(pchar.GenQuest.Sunplace.Trader.Shore == "")
 	{
-		pchar.GenQuest.Sunplace.Trader.Island = GetRandomIslandId();
+		pchar.GenQuest.Sunplace.Trader.Island = GetRandIslandId();
 		pchar.GenQuest.Sunplace.Trader.Shore = GetIslandRandomShoreId(pchar.GenQuest.Sunplace.Trader.Island);
 		if (!isLocationFreeForQuests(pchar.GenQuest.Sunplace.Trader.Island)) pchar.GenQuest.Sunplace.Trader.Shore = "";
 	}
@@ -511,15 +511,15 @@ void SunplaceLugger_DieHard(string qName)//реакция на поражени�
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void GetEscortTraderShore()//выбор бухты для эскорта торговца из таверны
 {
-	pchar.GenQuest.Escort.Trader.Island = GetRandomIslandId();
+	pchar.GenQuest.Escort.Trader.Island = GetRandIslandId();
 	while(pchar.GenQuest.Escort.Trader.Island == Islands[GetCharacterCurrentIsland(pchar)].id)
 	{
-		pchar.GenQuest.Escort.Trader.Island = GetRandomIslandId();
+		pchar.GenQuest.Escort.Trader.Island = GetRandIslandId();
 	} // patch-6
 	pchar.GenQuest.Escort.Trader.Shore = GetIslandRandomShoreId(pchar.GenQuest.Escort.Trader.Island);
 	while(pchar.GenQuest.Escort.Trader.Shore == "")
 	{
-		pchar.GenQuest.Escort.Trader.Island = GetRandomIslandId();
+		pchar.GenQuest.Escort.Trader.Island = GetRandIslandId();
 		pchar.GenQuest.Escort.Trader.Shore = GetIslandRandomShoreId(pchar.GenQuest.Escort.Trader.Island);
 		if (!isLocationFreeForQuests(pchar.GenQuest.Escort.Trader.Island)) pchar.GenQuest.Escort.Trader.Shore = "";
 	}

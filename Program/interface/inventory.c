@@ -311,7 +311,8 @@ void ProcessCommandExecute()
 	}
 	if (nodName == "BTN_ITEM_1" || nodName == "BTN_ITEM_2" || nodName == "BTN_ITEM_3" ||
 		nodName == "BTN_ITEM_4" || nodName == "BTN_ITEM_5" || nodName == "BTN_ITEM_6" ||
-		nodName == "BTN_ITEM_7" || nodName == "BTN_ITEM_8" || nodName == "BTN_ITEM_9" || nodName == "BTN_ITEM_10")
+		nodName == "BTN_ITEM_7" || nodName == "BTN_ITEM_8" || nodName == "BTN_ITEM_9" || 
+		nodName == "BTN_ITEM_10"|| nodName == "BTN_ITEM_11")
 	{
 		if(comName=="deactivate")
 		{
@@ -397,11 +398,15 @@ void RemoveItem()
 			rItem = LANTERN_ITEM_TYPE; // фонарь
 			sMode = 17;
 		break;
+		case "TABBTNSLOT_11":
+			rItem = HAT_ITEM_TYPE; // шляпы
+			sMode = 18;
+		break;
 	}
 	if (rNodName == "TABBTNSLOT_1" || rNodName == "TABBTNSLOT_2" || rNodName == "TABBTNSLOT_3" ||
 		rNodName == "TABBTNSLOT_4" || rNodName == "TABBTNSLOT_5" || rNodName == "TABBTNSLOT_6" ||
 		rNodName == "TABBTNSLOT_7" || rNodName == "TABBTNSLOT_8" || rNodName == "TABBTNSLOT_9" || 
-		rNodName == "TABBTNSLOT_10"|| rNodName == "TABBTNSLOT_4L")
+		rNodName == "TABBTNSLOT_10"|| rNodName == "TABBTNSLOT_4L"|| rNodName == "TABBTNSLOT_11")
 	{
 		if (rNodName == "TABBTNSLOT_8" || rNodName == "TABBTNSLOT_9" || rNodName == "TABBTNSLOT_10")
 		equip = GetCharacterEquipBySlot(xi_refCharacter, rItem);
@@ -501,7 +506,6 @@ void SetButtonsState()
 		xi_refCharacter = &characters[iCharacter];
 		SetControlsTabModeManual(1);
 		SetVariable();
-
 	}
 	else
 	{
@@ -534,6 +538,7 @@ void SetVariable()
 	SendMessage(&GameInterface,"lsls",MSG_INTERFACE_MSG_TO_NODE,"EQUIP_BUTTON",0, "#"+XI_ConvertString("Equip that"));
 	// <----
 	FillTableOther();
+	SetHatSlot(xi_refCharacter);
 	SetNewPicture("CHARACTER_BIG_PICTURE", "interfaces\le\portraits\512\face_" + xi_refCharacter.FaceId + ".tga");
 	SetFormatedText("HERO_NAME", GetFullName(xi_refCharacter));
 	SendMessage(&GameInterface,"lsl",MSG_INTERFACE_MSG_TO_NODE,"HERO_NAME",5);
@@ -939,6 +944,10 @@ void ShowInfoWindow()
 			sText2 = XI_ConvertString("ItemSlot_8-10!_d");
 			sText3 = XI_ConvertString("ItemSlot_Info_d1");
 		break;
+		case "TABBTNSLOT_11":
+		    sHeader = "Шляпа";
+			sText1 = "Шляпа";
+		break;
 	}
 	CreateTooltip("#" + sHeader, sText1, argb(255,255,255,255), sText2, argb(255,192,255,192), sText3, argb(255,255,192,192), "", argb(255,255,255,255), sPicture, sGroup, sGroupPicture, picW, picH);
 	LanguageCloseFile(lngFileID);
@@ -1230,6 +1239,13 @@ void procTabChange()
 		SelectItemByType(LANTERN_ITEM_TYPE);
 		return;
 	}
+	if(sNodName == "TABBTNSLOT_11")
+	{
+		SetControlsTabModeManual(18);
+		SetNodeUsing("ITEM_SELECT_11",true);
+		SelectItemByType(HAT_ITEM_TYPE);
+		return;
+	}
 }
 
 // метод на TAB переключает вкладки таблицы
@@ -1280,6 +1296,9 @@ void SetControlsTabMode(int nMode)
 	string sPic28 = sPic11;
 	string sPic29 = sPic11;
 	string sPic30 = sPic11;
+	
+	string sPic31 = sPic11;
+	string sPic32 = sPic11;
 
 	switch (nMode)
 	{
@@ -1348,6 +1367,10 @@ void SetControlsTabMode(int nMode)
 			sPic20 = "glow";
 			sPic30 = "slotframe";
 		break;
+		case 18:
+			sPic31 = "glow";
+			sPic32 = "slotframe";
+		break;
 	}
     
 	SetNewGroupPicture("TABBTN_1", "TABS", sPic1);
@@ -1377,6 +1400,7 @@ void SetControlsTabMode(int nMode)
 	SetNewGroupPicture("TABBTNSLOT_8", "ITEMS_GLOW", sPic18);
 	SetNewGroupPicture("TABBTNSLOT_9", "ITEMS_GLOW", sPic18);
 	SetNewGroupPicture("TABBTNSLOT_10", "ITEMS_GLOW", sPic18);
+	SetNewGroupPicture("TABBTNSLOT_11", "ITEMS_GLOW", sPic31);
 	
 	// Выставим таблицу в начало
 	GameInterface.TABLE_ITEMS.select = 1;
@@ -1415,6 +1439,7 @@ void FillControlsList(int nMode)
 	    case 15: FillItemsTable(15); break;  // амулеты3	
 	    case 16: FillItemsTable(16); break;  // боеприпасы
 	    case 17: FillItemsTable(17); break;  // фонарь
+	    case 18: FillItemsTable(18); break;  // шляпы
 	}
 }
 
@@ -1777,6 +1802,7 @@ void FillItemsTable(int _mode) // 1 - все 2 - снаряжение 3 - эли
 				 (groupID == CIRASS_ITEM_TYPE) ||   // костюмы и доспехи
 				 (groupID == TOOL_ITEM_TYPE) ||     // навигационные приборы котороые можно экипировать в спецслот
 				 (groupID == LANTERN_ITEM_TYPE) ||  // фонарь
+				 (groupID == HAT_ITEM_TYPE) ||  	// шляпы
 				 (groupID == AMMO_ITEM_TYPE);		// расходники для огнестрела
 			
 			ok1 = (groupID == PATENT_ITEM_TYPE)	||	// патенты
@@ -1845,6 +1871,7 @@ void FillItemsTable(int _mode) // 1 - все 2 - снаряжение 3 - эли
 			if(_mode == 15 && !slot8) continue;//слоты амулетов
 			if(_mode == 16 && groupID != AMMO_ITEM_TYPE) continue;//боеприпасы
 			if(_mode == 17 && groupID != LANTERN_ITEM_TYPE) continue;//фонарь
+			if(_mode == 18 && groupID != HAT_ITEM_TYPE) continue;//шляпы
 			if (GetCharacterItem(xi_refCharacter, sGood) > 0)
 			{		
 				GameInterface.TABLE_ITEMS.(row).index = GetItemIndex(arItem.id);
@@ -1909,6 +1936,7 @@ void FillItemsSelected()
 	SetNodeUsing("ITEM_2B", false);
 	SetNodeUsing("ITEM_5B", false);
 	SetNodeUsing("ITEM_4L", false);
+	SetNodeUsing("ITEM_11", false);
 	SetNodeUsing("TABBTNSLOT_2B", false);
 	SetNodeUsing("TABBTNSLOT_5B", false);
 	SetNodeUsing("TABBTNSLOT_4L", false);
@@ -2019,6 +2047,11 @@ void FillItemsSelected()
 						SetNewGroupPicture("ITEM_4L", Items[i].picTexture, "itm" + Items[i].picIndex);
 						SetNodeUsing("ITEM_4L", true);
 						SetNodeUsing("TABBTNSLOT_4L", true);
+					break;
+					case HAT_ITEM_TYPE:
+						SetNewGroupPicture("ITEM_11", Items[i].picTexture, "itm" + Items[i].picIndex);
+						SetNodeUsing("ITEM_11", true);
+						SetNodeUsing("TABBTNSLOT_11", true);
 					break;
 				}
 			}
@@ -2247,21 +2280,62 @@ void SetItemInfo(int iGoodIndex)
 	SetNodeUsing("ATLASADD_BUTTON", false);
 	SetNodeUsing("LOADGUN_BUTTON", false);
 	SetNodeUsing("LOADMUSKET_BUTTON", false);
-	
+		
+	aref attr, arGrape;
+	string sBullet;
+	string sAttr;
+	int i, n;
+	int lngFileID = LanguageOpenFile("ItemsDescribe.txt");
 	if(CheckAttribute(arItm,"groupID") && arItm.groupID == GUN_ITEM_TYPE && IsEquipCharacterByItem(xi_refCharacter, arItm.id))
 	{
-		int lngFileID = LanguageOpenFile("ItemsDescribe.txt");
-
-		if (HasSubStr(arItm.id, "mushket")) describeStr = GetAssembledString(LanguageConvertString(lngFileID,"mushket parameters equipped"), arItm) + newStr();		
-		else 								describeStr = GetAssembledString(LanguageConvertString(lngFileID,"weapon gun parameters equipped"), arItm) + newStr();
+		sBullet = LAi_GetCharacterBulletType(xi_refCharacter, "gun");
+		if(IsBulletGrape(sBullet))
+		{
+			makearef(attr, arItm.type);
+			n = GetAttributesNum(attr);
+			for(i = 0; i < n; i++)
+			{
+				arGrape = GetAttributeN(attr, i);
+				if(arGrape.bullet == sBullet)
+					break;
+			}
+			describeStr += GetAssembledString( LanguageConvertString(lngFileID,"weapon grape parameters equipped"), arGrape) + newStr();
+		}
+		else
+			describeStr = GetAssembledString(LanguageConvertString(lngFileID,"weapon gun parameters equipped"), arItm) + newStr();
+		
 		describeStr = describeStr + GetAssembledString(LanguageConvertString(lngFileID, Items[iGoodIndex].describe), arItm);
 		SetFormatedText("INFO_TEXT", describeStr);
 
 		LanguageCloseFile(lngFileID);
 	}
 	else
-	{	
-		SetFormatedText("INFO_TEXT", GetItemDescribe(iGoodIndex));
+	{
+		if(CheckAttribute(arItm,"groupID") && arItm.groupID == MUSKET_ITEM_TYPE && IsEquipCharacterByItem(xi_refCharacter, arItm.id))
+		{
+			sBullet = LAi_GetCharacterBulletType(xi_refCharacter, "musket");
+			if(IsBulletGrape(sBullet))
+			{
+				makearef(attr, arItm.type);
+				n = GetAttributesNum(attr);
+				for(i = 0; i < n; i++)
+				{
+					arGrape = GetAttributeN(attr, i);
+					if(arGrape.bullet == sBullet)
+						break;
+				}
+				describeStr += GetAssembledString( LanguageConvertString(lngFileID,"weapon grape parameters equipped"), arGrape) + newStr();
+			}
+			else
+				describeStr = GetAssembledString(LanguageConvertString(lngFileID,"mushket parameters equipped"), arItm) + newStr();		
+			
+			describeStr = describeStr + GetAssembledString(LanguageConvertString(lngFileID, Items[iGoodIndex].describe), arItm);
+			SetFormatedText("INFO_TEXT", describeStr);
+
+			LanguageCloseFile(lngFileID);
+		}
+		else
+			SetFormatedText("INFO_TEXT", GetItemDescribe(iGoodIndex));
 	}
 	
 	SetNewGroupPicture("INFO_PIC", Items[iGoodIndex].picTexture, "itm" + Items[iGoodIndex].picIndex);
@@ -2344,6 +2418,7 @@ void HideItemSelect()
 	SetNodeUsing("ITEM_SELECT_8", false);
 	SetNodeUsing("ITEM_SELECT_9", false);
 	SetNodeUsing("ITEM_SELECT_10", false);
+	SetNodeUsing("ITEM_SELECT_11", false);
 	SetNewPicture("TABBTNSLOT_1", "");
 	SetNewPicture("TABBTNSLOT_2", "");
 	SetNewPicture("TABBTNSLOT_3", "");
@@ -2354,6 +2429,7 @@ void HideItemSelect()
 	SetNewPicture("TABBTNSLOT_8", "");
 	SetNewPicture("TABBTNSLOT_9", "");
 	SetNewPicture("TABBTNSLOT_10", "");
+	SetNewPicture("TABBTNSLOT_11", "");
 }
 
 bool ThisItemCanBeEquip(aref arItem)
@@ -2401,7 +2477,12 @@ bool ThisItemCanBeEquip(aref arItem)
 	{
 		return false;
 	}
-	
+	// шляпы только для персонажей с локатором hat
+	if(arItem.groupID == HAT_ITEM_TYPE)
+	{
+		if (!HasHatLocator(xi_refCharacter) && !CanEquipHatDirectly(xi_refCharacter)) return false;
+	}
+
 	/* if (xi_refCharacter.id == "Mary" && arItem.groupID == BLADE_ITEM_TYPE)
 	{
 		return false; // чтобы нарвал не отбирали
@@ -2541,7 +2622,7 @@ bool ThisItemCanBeEquip(aref arItem)
 		}
 	}
 	
-	/* if (CheckAttribute(xi_refCharacter, "CanTakeMushket"))
+	/*if (CheckAttribute(xi_refCharacter, "CanTakeMushket"))
 	{
 		if(CheckAttribute(xi_refCharacter, "IsMushketer"))
 		{
@@ -2555,7 +2636,7 @@ bool ThisItemCanBeEquip(aref arItem)
 				return false;
 			}
 		}
-	} */
+	}*/
 	
 	return true;
 }
@@ -2794,6 +2875,12 @@ void EquipPress()
 					pchar.questTemp.Ksochitam.SQCapBookRead = "true";
 				}
 				if (itmRef.id == "wolfreeks_book") Mtraxx_WolfreekReadLogbook(); // // Addon 2016-1 Jason Пиратская линейка журнал Вульфрика
+				if (itmRef.name == "itmname_treasure_note_1") // Записки из кладов
+				{
+					RemoveItems(pchar, itmRef.id, 1);
+					AddQuestRecordInfo("StoriesTreasures", itmRef.number);
+					Treasure_Stories(itmRef.id);
+				}
 				SetVariable();
 				UpdateItemInfo();
 				return;
@@ -3108,11 +3195,22 @@ void SelectAmmoType(string itemType) {
 string GetAmmoPortrait(string weapon) 
 {
 	if(weapon == "pistol8") return "harpoon";
-	//if(weapon == "pistol7") return "bullet";
 	
 	string defBullet = LAi_GetCharacterDefaultBulletType(weapon);
 	
 	if(defBullet != "") return defBullet;
 	
 	return "bullet";
+}
+
+void SetHatSlot(ref xi_refCharacter)
+{
+	bool bState = false;
+	if(HasHatLocator(xi_refCharacter)) bState = true;
+	if(CanEquipHatDirectly(xi_refCharacter)) bState = true;
+	SetNodeUsing("HATS_BACK", bState);
+	SetNodeUsing("TABBTNSLOT_11", bState);
+	SetNodeUsing("EMPTY_HATS", bState);
+	SetNodeUsing("ITEM_11", bState);
+	SetNodeUsing("BTN_ITEM_11", bState);
 }

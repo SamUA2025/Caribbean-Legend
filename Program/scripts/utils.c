@@ -234,13 +234,11 @@ void GenerateMaps(aref ch, int iProbability1, int iProbability2)
 	if(rand(iProbability2) == 1 && !CheckMainHeroMap("map_terks")) AddItems(ch, "map_terks", 1);
 	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_sm")) AddItems(ch, "map_sm", 1);
 	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_bermudas")) AddItems(ch, "map_bermudas", 1);
-	if(rand(iProbability2) == 1 && !CheckMainHeroMap("map_Pearl")) AddItems(ch, "map_Pearl", 1);
 	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_beliz")) AddItems(ch, "map_beliz", 1);
 	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_santa")) AddItems(ch, "map_santa", 1);
 	if(rand(iProbability2) == 1 && !CheckMainHeroMap("map_maine_1")) AddItems(ch, "map_maine_1", 1);
 	if(rand(iProbability2) == 1 && !CheckMainHeroMap("map_maine_2")) AddItems(ch, "map_maine_2", 1);
 	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_panama")) AddItems(ch, "map_panama", 1);
-	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_maracaibo")) AddItems(ch, "map_maracaibo", 1);
 	if(rand(iProbability1) == 1 && !CheckMainHeroMap("map_cumana")) AddItems(ch, "map_cumana", 1);
 }
 
@@ -577,6 +575,7 @@ void GiveItemToTrader(aref ch)
 				}
 			}
 			
+			if(drand(10) == 2) AddItems(ch, "hat3", 1);
 			//irand = drand(10);
 			//if (irand == 1 && rank >= 4) 	AddItems(ch, "cirass1", 1);
 			//if (irand == 5 && rank >= 6) 	AddItems(ch, "cirass5", 1);
@@ -779,6 +778,8 @@ void GiveItemToTrader(aref ch)
 			irand = rand(10);			
 			if(irand == 1) AddItems(ch, "jewelry23", Rand(4) + 1);
 			if(drand(10) == 5 && rank >= 5) AddItems(ch, "cirass3", 1);
+			if(drand(10) == 9) AddItems(ch, "hat1", 1);
+			if(drand(10) == 2 && rank > 11) AddItems(ch, "hat4", 1);
 		break;
 		
 		case "lightman": //Jason - смотрители маяков
@@ -1003,6 +1004,7 @@ void GiveItemToTrader(aref ch)
 			if(irand == 6) AddItems(ch, "spyglass2", 1);
 			irand = drand(100);
 			if(irand == 50 && sti(pchar.rank) > 7) AddItems(ch, "spyglass3", 1);
+			if(irand > 90 && rank > 11) AddItems(ch, "Hat6", 1);
 			GenerateMaps(ch, 20, 50); // patch-5
 		break;
 		

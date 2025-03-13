@@ -4,54 +4,54 @@ new_string
 
 }
 
-Cheat_success {Cheat worked successfully!}
+Cheat_success {Cheat funktioniert!}
 
-Cheat_on {Cheat on}
+Cheat_on {Cheat an}
 
-Cheat_off {Cheat off}
+Cheat_off {Cheat aus}
 
-Cheat_Comming_soon {Coming soon!}
+Cheat_Comming_soon {Demnächst!}
 
-f1 {Unlock all crafting recipes}
+f1 {Alle Handwerksrezepte freischalten}
 
-f2 {Add crafting materials}
+f2 {Handwerksmaterialien hinzufügen}
 
-f3 {Add herbs}
+f3 {Kräuter hinzufügen}
 
-f4 {Add gems}
+f4 {Edelsteine hinzufügen}
 
-f5 {Adder stone +100}
+f5 {Kreuzotterstein +100}
 
-f6 {Ammo +50}
+f6 {Munition +50}
 
-f7 {Get Blades}
+f7 {Klingen erhalten}
 
-f8 {Get Guns}
+f8 {Waffen erhalten}
 
-f9 {Get Muskets}
+f9 {Musketen erhalten}
 
-f10 {God mode on/off}
+f10 {God mode an/aus}
 
-f11 {Get Cuirasses}
+f11 {Kürasse erhalten}
 
-f12 {Get Talismans}
+f12 {Talismane erhalten}
 
-f13 {Get Amulets}
+f13 {Amulette erhalten}
 
-f14 {Get Wards}
+f14 {Wächter erhalten}
 
-f15 {Get Potions}
+f15 {Tränke erhalten}
 
-f16 {Get Spyglasses}
+f16 {Ferngläser erhalten}
 
-f17 {Get Lantern}
+f17 {Laterne erhalten}
 
-f18 {Get navigation devices}
+f18 {Navigationsgeräte erhalten}
 
-f19 {Get Tools}
+f19 {Werkzeuge erhalten}
 
-f20 {Get ordinary maps}
+f20 {Gewöhnliche Karten erhalten}
 
-f21 {Get admiral maps}
+f21 {Admiralkarten erhalten}
 
-descF21No {Unavailable at this stage of the game}
+descF21No {In diesem Stadium des Spiels nicht verfügbar}

@@ -1,0 +1,374 @@
+﻿newline  {
+
+}
+
+Key Layout {Раскладка}
+Key Layout_descr
+{
+Альтернативная раскладка содержит ряд изменений в управлении, добавляет новые команды и открывает новые возможности:
+~
+- изменены команды быстрых действий и обыск трупов
+- изменено использование усиляющих зелий
+- вкладки меню персонажа доступны на отдельные клавиши
+}
+
+OptKurs {Rumbo óptimo}
+OptKurs_descr
+{
+Las flechas negras del minimapa muestran el rumbo al que se moverá tu nave a máxima velocidad.
+~
+Algunos tipos de barcos son capaces de navegar casi contra el viento, lo que resulta útil cuando necesitas alcanzar a un mercante o escapar de un buque de guerra.
+~
+El viento cambia constantemente de fuerza y dirección. Intenta adaptarte y ajustar tu rumbo, encontrando un compromiso entre el ángulo de rumbo óptimo y la dirección hacia tu objetivo.
+}
+
+SeaTimeScaleUp {Control del tiempo}
+SeaTimeScaleUp_descr
+{
+Aproveche la aceleración: ahorra tiempo, sobre todo en el mar.
+~
+Controles: + y -
+}
+
+SeaFastTravelEnglish {Viaje rápido}
+SeaFastTravelEnglish_descr
+{
+El menú de acciones abre muchas funciones útiles tanto en tierra como en el mar.
+~
+La función 'Navegar hasta' te permite viajar rápidamente junto a un barco amigo o un punto geográfico. La distancia de viaje rápido puede aumentarse utilizando catalejos más raros y caros.
+~
+Utiliza el menú de acción para llegar instantáneamente al 'Fantasma' y luego enviar un barco largo hasta él.
+}
+
+SeaFastTravelEnglish_controlsimg1 {BICommandsActivate}
+
+LandTimeScaleDown {Control del tiempo de combate}
+LandTimeScaleDown_descr
+{
+A veces tiene sentido ralentizar el tiempo, especialmente durante los combates difíciles. Caribbean Legend es un juego difícil de dominar, así que usa todo lo que puedas para ganar ventaja.
+~
+Controles: + y -
+}
+
+GuideFight {Combate terrestre}
+GuideFight_descr
+{
+Te llevará tiempo dominar el combate terrestre del juego. Si tienes activadas las pistas de control, verás las teclas de acceso rápido en la esquina inferior derecha de la pantalla.
+~
+Intenta dominar primero la combinación 'Parar - Golpear'. Si logras parar el ataque de tu oponente, quedará aturdido y perderá energía, lo que te dará la oportunidad de atacar con seguridad.
+~
+Utiliza distintos tipos de ataque para saber cuál inflige más daño. Cada arma del juego tiene su tipo de ataque preferido. Experimenta.
+
+}
+
+GuideFight_controlsimg1 {ChrAttackChoseBase}
+GuideFight_controlsimg2 {ChrAttackBase}		
+
+OneToOneCave {Uso del terreno}
+OneToOneCave_descr
+{
+Si te superan en número, intenta utilizar el entorno para obtener ventaja en la batalla.
+~
+Casi siempre puedes encontrar un lugar donde obligar al enemigo a luchar contigo uno contra uno o de dos en dos.
+}
+
+OneToOneBoarding {Uso del terreno}
+OneToOneBoarding_descr
+{
+Si te superan en número, intenta utilizar el entorno para obtener ventaja en la batalla.
+~
+Casi siempre puedes encontrar un lugar donde obligar al enemigo a luchar contigo uno contra uno o de dos en dos.
+}
+
+Collision {Cambio de posición}
+Collision_descr
+{
+A veces, durante una batalla, se hace necesario cambiar de posición, ya sea rompiendo la línea enemiga o sorteando a los aliados.
+~
+Sal del modo combate para que el héroe pueda apartar a otros personajes de tu camino. Tras cambiar de posición, vuelve a entrar en el modo combate para seguir luchando.
+}
+Collision_controlsimg1 {ChrFightMode}
+
+WorldMapEnglish {Mapa global}
+WorldMapEnglish_descr
+{
+El mapa global te permite realizar viajes por mar a través del Caribe. No es necesario navegar exactamente hasta cada ciudad o bahía; basta con salir del mapa global en las proximidades de su objetivo y utilizar la función 'Navegar hasta'.
+~
+Un uso hábil de la función 'Navegar hasta' puede ahorrar mucho tiempo. Por ejemplo, puedes salir del mapa global en un lado de la isla, viajar rápidamente para llegar a un punto en el otro lado, y luego volver al mapa global.
+~
+Utiliza las teclas de acceso rápido para alejar el mapa y mostrar el Atlas con mapas.
+
+}
+
+WorldMapEnglish_controlsimg1 {WMapCameraSwitch}
+WorldMapEnglish_controlsimg2 {MapView}
+
+LandMapEnglish {Viajar por tierra}
+LandMapEnglish_descr
+{
+Los mapas se pueden comprar o encontrar. Recoge todos los mapas de las islas que encuentres para navegar por la masa continental. Esto es especialmente útil en misiones, infiltraciones en colonias y búsqueda de tesoros.
+Todos los mapas recogidos se pueden encontrar en el Atlas. 
+}
+
+LandMapEnglish_controlsimg1 {MapView}
+
+NavigatorEnglish {Habilidad de navegación}
+NavigatorEnglish_descr
+{
+¡Asigna un Navegante con suficiente habilidad de Navegación!
+~
+La navegación determina principalmente el tamaño de los barcos que el personaje puede manejar.
+~
+Por ejemplo, el quinto rango requiere 25 puntos, mientras que el cuarto requiere 45. Exceder este límite resultará en penalizaciones a todas las estadísticas y habilidades del personaje.
+~
+Los requisitos para cada rango de nave se pueden ver haciendo clic con el botón derecho en el icono de la habilidad de Navegación en la ventana de personaje.
+~
+La habilidad Navegación crece lentamente, así que contrata a navegantes experimentados en las tabernas a la primera oportunidad. Sin embargo, ten en cuenta que no podrás encontrar un especialista con un nivel de habilidad superior a 75.
+
+}
+
+NavigatorEnglish_controlsimg1 {Abilities}
+
+AlchemyEnglish {Elaboración}
+AlchemyEnglish_descr
+{
+La fabricación de objetos, principalmente talismanes, pociones y munición, puede aliviarte la vida considerablemente. Esto es especialmente útil en los combates contra jefes.
+~
+Para fabricar un objeto, necesitas encontrar o comprar una receta. Los ingredientes no tienes que llevarlos necesariamente contigo; puedes comprar tranquilamente diversos trastos a los mercaderes callejeros y guardarlos en uno de los cofres de la cabaña.
+~
+Al principio del juego, tienes una opción: coger la habilidad Alquimia y empezar a comprar recetas enseguida, o posponer esta posibilidad hasta la mitad del juego, cuando dispondrás de kits de herramientas que sustituirán el gasto de un valioso punto de habilidad en Alquimia.
+
+}
+
+AlchemyEnglish_controlsimg1 {Alquimia}
+
+LandMapAtSeaEnglish {}
+LandMapAtSeaEnglish_descr
+{
+Dirígete al lado opuesto de la isla para completar tu misión. Sal de la bahía por la derecha y pégate a la costa.
+}
+
+SalaryEnglish {Mantenimiento del barco}
+SalaryEnglish_descr
+{
+Los pagos mensuales a oficiales y tripulación pueden complicar considerablemente la vida del capitán. La cantidad total depende de tus habilidades de Comercio y Liderazgo, el tamaño del barco y el nivel de dificultad.
+~
+Incluso en los barcos pequeños, es muy recomendable tener un contable a bordo, mientras que un gran buque de guerra puede llevar a la bancarrota incluso a un país. Si la opción de compartir botín está activada, el importe del pago puede ser aún mayor.
+
+}
+
+SalaryEnglish_controlsimg1 {ShipState}
+
+DubloonsEnglish {Doblones}
+DubloonsEnglish_descr
+{
+Los doblones de oro son la verdadera medida de la riqueza de tu personaje y de su capacidad para resolver problemas con dinero. Esfuérzate siempre por ganar estas monedas, ya que las personas más poderosas del Caribe sólo ofrecen sus servicios a cambio de doblones.
+~
+Las buenas fuentes de doblones incluyen la caza de tesoros, los depósitos bancarios, el comercio de bienes estratégicos y el cambio de moneda en los prestamistas. No necesitas llevar oro contigo; puedes guardarlo en uno de los cofres de tu camarote.
+
+}
+
+BoxEnglish {Almacenamiento de artículos}
+BoxEnglish_descr
+{
+Los cofres de tu camarote pueden almacenar un número ilimitado de objetos personales. Además del equipo obligatorio en tus ranuras de equipo, es aconsejable que sólo lleves contigo pociones, amuletos y munición.
+~
+Vende los objetos sobrantes, pero guarda siempre una reserva razonable de joyas, armas, munición e ingredientes de alquimia.
+~
+Otros capitanes también siguen esta práctica, así que siempre merece la pena registrar los cofres del camarote de un barco capturado.
+
+}
+
+HealthEnglish {Vitalidad}
+HealthEnglish_descr
+{
+¡Tu Vitalidad ha disminuido! Esta estadística describe el estado general de tu personaje y afecta a todas sus habilidades.
+~
+La Vitalidad disminuye al usar métodos primitivos de curación, eventos dramáticos de la historia, embriaguez y sobrecarga.
+~
+Se recupera con pociones especiales, actividades románticas, descansando en una taberna, y simplemente con el tiempo. En casos graves, los sacerdotes pueden ayudar. Los oficiales únicos también pierden Vitalidad si son heridos en combate, pero la recuperan con el tiempo.
+
+}
+
+AmuletEnglish {Amuletos}
+AmuletEnglish_descr
+{
+Los amuletos son potentes potenciadores del personaje divididos en ofensivos, defensivos y auxiliares. No puedes equipar amuletos ofensivos y defensivos simultáneamente, así que elige sabiamente.
+~
+Además de los amuletos, existen los talismanes y los guardianes. Los talismanes duran más y tienen efectos más amplios, mientras que los guardianes son inmensamente poderosos, actúan indefinidamente y tienen una ranura de inventario aparte.
+~
+Ten siempre varios juegos de potenciadores en tu inventario para los chequeos de habilidad difíciles y las duras batallas en el mar y en tierra.
+
+}
+
+AmuletEnglish_controlsimg1 {Inventario}
+
+PerkEnglish {Perk Points}
+PerkEnglish_descr
+{
+Acabas de recibir tu primer punto de ventaja (PP). Los PP son cruciales para el desarrollo del personaje y se dividen en Navales y Personales.
+~
+Las Pericias Navales te hacen más peligroso en el mar, mientras que las Pericias Personales te hacen más eficaz en tierra y en las interacciones con la gente.
+~
+Ambos tipos de PP se desarrollan de forma independiente a medida que crecen tus habilidades. De media, cada 30 puntos de habilidad en un grupo te dan un PP.
+~
+Para ganar PP navales rápidamente, completa misiones secundarias y contratos en el mar. Los puntos personales crecen más rápido si luchas con diferentes armas y pasas tiempo de calidad en tabernas. Recuerda, los PP personales son más valiosos ya que la mayoría de las Pericias Navales pueden ser cubiertas por tus oficiales.
+
+}
+
+PerkEnglish_controlsimg1 {Habilidades}
+
+FighterEnglish {vanguardias}
+FighterEnglish_descr
+{
+¡Tu primer combatiente se ha unido a la tripulación! Asígnalo a través del Menú de Personajes.
+~
+Los vanguardias son tus oficiales, guardaespaldas y abordadores de mayor confianza. Te seguirán en el fragor de la batalla y pasarás la mayor parte del tiempo con ellos.
+~
+Puedes liderar hasta tres vanguardias a la vez. Además de protegerte en tierra, los vanguardias aumentan la eficacia del abordaje y ayudan a transportar pesados tesoros.
+~
+Los oficiales de búsqueda únicos son diferentes de los marineros normales que puedes contratar en las tabernas. Aunque no todos son vanguardias efectivos, tienen un impacto significativo en la historia del juego y no pueden morir en combate normal.
+~
+Equipa siempre a tus vanguardias con amuletos, objetos curativos, armas y munición. Puedes intercambiar objetos a través del menú de acción o de cualquier cofre.
+~
+Puedes ordenar a los vanguardias que mantengan su posición, sigan al capitán o ataquen usando teclas de acceso rápido o a través del diálogo.
+
+}
+
+FighterEnglish_controlsimg1 {Abilities}
+FighterEnglish_controlsimg2 {OfficersFollow}
+FighterEnglish_controlsimg3 {OfficersCharge}
+FighterEnglish_controlsimg4 {OfficersHold}
+
+RestEnglish {Opción de descanso}
+RestEnglish_descr
+{
+La opción Descanso ya está disponible en el Menú de Acciones.
+~
+Todo en el juego sigue un ciclo temporal: por la noche no hay guardias en el embarcadero ni en las puertas de la ciudad, sólo se puede contratar tripulación en las tabernas durante el día, y algunos personajes son muy particulares según que hora del día.
+~
+Utiliza esta función en el mar y en la naturaleza. Alquila una habitación en una taberna si estás en una ciudad.
+
+}
+RestEnglish_controlsimg1{BICommandsActivate}
+
+Navigation{Control de buques}
+Navigation_descr
+{
+Utiliza las teclas de control de vela para cambiar el modo de navegación y las teclas de giro para cambiar el rumbo.
+~
+Hay tres modos de navegación: Velas Completas, Velas de Batalla y Velas Enrolladas.
+~
+El modo Velas Completas permite la máxima velocidad pero girarás más lento y las velas de tu barco serán más vulnerables en batallas y tormentas.
+~
+El modo Velas de Batalla limita la velocidad pero mejora los giros, la precisión de la artillería y protege mejor tus velas del fuego enemigo.
+~
+El modo Velas Enrolladas ralentiza gradualmente el barco hasta detenerlo por completo. Muy útil para abordar o recoger objetos de valor del mar.
+~
+La regla de oro: en batalla, es preferible el modo Velas de batalla; fuera de ella, el modo Velas desplegadas.
+
+}
+
+Navigation_controlsimg1 {Ship_SailUp}
+Navigation_controlsimg2 {Ship_SailDown}
+Navigation_controlsimg3 {MiniMapZoomIn}
+Navigation_controlsimg4 {MiniMapZoomOut}
+
+StealthEnglish{Sigilo}
+StealthEnglish_descr
+{
+No eres bienvenido en la mayoría de los asentamientos caribeños. Hay dos formas de infiltrarse en una ciudad: por el puerto o por las puertas.
+~
+Atracar con seguridad en un puerto enemigo requiere preparación. Iza la bandera de un país no hostil y ten un nivel alto de habilidad de Sigilo antes de arriesgarte a aparecer ante los cañones del fuerte.
+~
+Entrar por las puertas de la ciudad es mejor hacerlo de noche, cuando no están vigiladas. Evita a los soldados y pasa la noche en una taberna. Si das la alarma, busca una casa vacía y espera allí un par de horas antes de volver a intentarlo.
+~
+Comprar una licencia de comercio en Curaçao es una opción segura para viajar por la región si tu habilidad de Sigilo es baja.
+
+}
+
+SeaBattle{Combate naval}
+SeaBattle_descr
+{
+La esencia de cualquier combate naval es mantener un ángulo de rumbo óptimo, conservar las velas y dañar las del enemigo.
+~
+Para esto último, utiliza balas de cañón y balas encadenadas. Los primeros tienen el mayor alcance y causan daños moderados en el casco y las velas. Una salva de balas encadenadas a media distancia puede destruir las velas enemigas.
+~
+Para una mayor precisión, usa el modo en primera persona después de asegurarte de que tu barco no está demasiado sacudido por olas o maniobras recientes. Si dañas las velas del enemigo y conservas las tuyas, tienes tres opciones: abordar, hundir o huir.
+~
+Alejarse más de mil metros del barco enemigo más cercano te permite entrar en el mapa global y huir.
+~
+Hundir un barco enemigo es más fácil con bombas a corta distancia. Los disparos efectivos a larga distancia con cañonazos son para capitanes y cañoneros experimentados. Normalmente, la necesidad de hundir un barco enemigo es rara, y las batallas se centran sobre todo en el abordaje o la huida.
+
+}
+
+SeaBattle_controlsimg1 {hk_charge1}
+SeaBattle_controlsimg2 {hk_charge2}
+SeaBattle_controlsimg3 {hk_charge3}
+SeaBattle_controlsimg4 {hk_charge4}
+SeaBattle_controlsimg5 {Sea_CameraSwitch}
+SeaBattle_controlsimg6 {Ship_Fire}
+
+BoardingTactics{Abordaje}
+BoardingTactics_descr
+{
+Antes de ir al abordaje, dispara unas cuantas andanadas de metralla para debilitar a la tripulación enemiga sin recibir la misma respuesta. ¡Una vez que tengas ventaja, acércate al barco enemigo, iguala su velocidad, y ataca!
+~
+Cuanto mayor sea tu habilidad de abordaje, más fácil te resultará abordar con éxito el barco enemigo. La eficacia del abordaje depende del tamaño, las habilidades y la moral de tu tripulación.
+~
+Contar con un contramaestre experimentado, vanguardias, amuletos y habilidades de combate personales desarrolladas puede contrarrestar la ventaja numérica del enemigo.
+
+}
+
+MushketEnglish{Mosquetes}
+MushketEnglish_descr
+{
+Las armas de fuego de cañón largo son extremadamente peligrosas en la batalla. Sólo el personaje principal con la habilidad Mosquetero y algunos oficiales únicos pueden usarlas.
+El ejemplo más notable es Tichingitu, debe ser él quien consiga el primer mosquete que encuentres.
+~
+A diferencia de las armas cuerpo a cuerpo, las armas de fuego ofrecen una mayor flexibilidad. Desarrollando tu personaje como tirador, llevando ciertos amuletos y equipo, y usando diferentes tipos de munición, puedes cambiar las tornas de cualquier batalla.
+
+}
+
+MushketEnglish_controlsimg1 {Inventario}
+
+CameraControl{¡Ahoy!}
+CameraControl_descr
+{
+¡Bienvenido al modo Historia! Antes de zarpar, tendrás que asegurarte de que la tierra no te derrotará.
+~
+Caribbean Legend es un reto, pero no es difícil de jugar. Para ayudarte a asentarte en el Nuevo Mundo, hemos preparado una aventura tutorial ampliada en la isla de Martinica. Al completarla, dominarás todas las habilidades necesarias y comprenderás la mecánica del juego.
+~
+El juego se controla mediante las teclas de movimiento y el uso activo del ratón. En la mayoría de los casos, basta con pulsar la tecla de movimiento hacia delante y dirigirte con la cámara. Siempre puedes ajustar la velocidad de la cámara en los ajustes.
+~
+Algunos jugadores consideran que los controles no responden lo suficiente, y estamos de acuerdo. Por eso estamos trabajando activamente en mejorarlos, y esperamos que en la próxima gran actualización, este mensaje tutorial sea diferente.
+~
+¡Gracias por jugar, y nos vemos en el mar!
+}
+
+CameraControl_controlsimg1 {ChrForward}
+CameraControl_controlsimg2 {ChrStrafeLeft}
+CameraControl_controlsimg3 {ChrBackward}
+CameraControl_controlsimg4 {ChrStrafeRight}
+CameraControl_controlsimg5 {ShipCamera_Turn_H}
+
+CameraControlFP{¡Ahoy!}
+CameraControlFP_descr
+{
+¡Bienvenido al Nuevo Mundo, Capitán!
+~
+Caribbean Legend es un juego desafiante, pero no es difícil de jugar. Si aún no has jugado al modo historia, te recomendamos que le dediques un par de horas para sentirte cómodo y aprender las mecánicas básicas del juego.
+~
+El juego se controla mediante teclas de movimiento y el uso activo del ratón. En la mayoría de los casos, basta con pulsar la tecla de movimiento hacia delante y dirigir el coche con la cámara. Siempre puedes ajustar la velocidad de la cámara en los ajustes.
+~
+Algunos jugadores consideran que los controles no responden lo suficiente, y estamos de acuerdo. Por eso estamos trabajando activamente en mejorarlos, y esperamos que en la próxima gran actualización, este mensaje tutorial sea diferente.
+~
+¡Gracias por jugar y nos vemos en el mar!
+
+}
+
+CameraControlFP_controlsimg1 {ChrForward}
+CameraControlFP_controlsimg2 {ChrStrafeLeft}
+CameraControlFP_controlsimg3 {ChrBackward}
+CameraControlFP_controlsimg4 {ChrStrafeRight}
+CameraControlFP_controlsimg5 {ShipCamera_Turn_H}
