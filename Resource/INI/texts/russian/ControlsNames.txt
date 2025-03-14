@@ -252,7 +252,7 @@ ChrAltAttackBase
 
 ChrFire
 {
-Выстрел из пистолета
+Выстрел
 }
 
 ChrFightMode

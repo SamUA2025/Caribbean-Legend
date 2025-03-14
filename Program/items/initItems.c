@@ -2221,7 +2221,7 @@ int InitItems()
 	n++;
 
 	// резервные предметы для возможных дополнений - +10 шт
-	makeref(itm,Items[n]); //резервный предмет №11
+	makeref(itm,Items[n]); //резервный предмет №11 (Разбросанные записки)
 	itm.id = "Reserve_item_11"; 
 	itm.name = "itmname_Reserve_item_11";
 	itm.describe = "itmdescr_Reserve_item_11";
@@ -2234,7 +2234,7 @@ int InitItems()
 	n++;
 		
 	
-	makeref(itm,Items[n]); //резервный предмет №12
+	makeref(itm,Items[n]); //резервный предмет №12 (ключ от подсвечника Порт Рояль)
 	itm.id = "Reserve_item_12"; 
 	itm.name = "itmname_Reserve_item_12";
 	itm.describe = "itmdescr_Reserve_item_12";
@@ -2247,7 +2247,7 @@ int InitItems()
 	n++;
 	
 	
-	makeref(itm,Items[n]); //резервный предмет №13
+	makeref(itm,Items[n]); //резервный предмет №13 (ключ от подсвечника Виллемстад)
 	itm.id = "Reserve_item_13"; 
 	itm.name = "itmname_Reserve_item_13";
 	itm.describe = "itmdescr_Reserve_item_13";

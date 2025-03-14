@@ -10135,7 +10135,6 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		LAi_ActorDialog(sld, pchar, "", 0, 0);
 		
 		sld = CharacterFromID("Zorro");
-		GiveItem2Character(sld, "hat8");
 		ChangeCharacterAddressGroup(sld, PChar.location, "quest", "door");
 		TeleportCharacterToPosAy(sld, 22.52, 0.00, -0.75, -1.50);
 		LAi_SetActorType(sld);
@@ -10159,6 +10158,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 	}
 	else if (sQuestName == "Mtraxx_RetributionEnricoAndTonzag7")
 	{
+		GiveItem2Character(pchar, "hat8");
 		sld = CharacterFromID("Tonzag");
 		sld.Dialog.Filename = "Quest\Roger.c";
 		sld.dialog.currentnode = "enrico_Tonzag_29";

@@ -3,6 +3,43 @@ void ApplyMigration(ref migrationState) {
 	ref itm;
 	int n;
 	
+	makeref(itm, items[FindItem("Reserve_item_11")]); // Разбросанные записки
+	itm.id = "PR_Letter"; 
+	itm.name = "itmname_PR_letter";
+	itm.describe = "itmdescr_PR_letter";
+	itm.model = "Letter_sp2";
+	itm.picIndex = 6;
+	itm.picTexture = "ITEMS_26";
+	itm.price = 0;
+	itm.Weight = 0.5;
+	itm.ItemType = "QUESTITEMS";
+	
+	makeref(itm, items[FindItem("Reserve_item_12")]); // ключ от подсвечника Порт Рояль
+	itm.id = "key_candlestick_PortRoyal";
+	itm.name = "itmname_key_candlestick_PortRoyal";
+	itm.describe = "itmdescr_key_candlestick_PortRoyal";
+	itm.model = "keysimple";
+	itm.picIndex = 16;
+	itm.picTexture = "ITEMS_34";
+	itm.Weight = 0.3;
+	itm.useLocation = "PortRoyal_WineCellar";
+	itm.useLocator = "button01";
+	itm.price = 0;
+	itm.ItemType = "QUESTITEMS";
+	
+	makeref(itm, items[FindItem("Reserve_item_13")]); // ключ от подсвечника Виллемстад
+	itm.id = "key_candlestick_Villemstad";
+	itm.name = "itmname_key_candlestick_Villemstad";
+	itm.describe = "itmdescr_key_candlestick_Villemstad";
+	itm.model = "keysimple";
+	itm.picIndex = 4;
+	itm.picTexture = "ITEMS_24";
+	itm.Weight = 0.3;
+	itm.useLocation = "Villemstad_WineCellar";
+	itm.useLocator = "button01";
+	itm.price = 0;
+	itm.ItemType = "QUESTITEMS";
+	
 	ExpandItemsArray();
 	n = TOTAL_ITEMS - 1;
 	
@@ -130,54 +167,6 @@ void ApplyMigration(ref migrationState) {
 	itm.Weight = 0.1;
 	itm.ItemType = "SUPPORT";
 	itm.TradeType = ITEM_TRADE_AMMUNITION;
-	
-	ExpandItemsArray();
-	n = TOTAL_ITEMS - 1;
-	
-	makeref(itm,Items[n]); // ключ от подсвечника Порт Рояль
-	itm.id = "key_candlestick_PortRoyal";
-	itm.name = "itmname_key_candlestick_PortRoyal";
-	itm.describe = "itmdescr_key_candlestick_PortRoyal";
-	itm.model = "keysimple";
-	itm.picIndex = 16;
-	itm.picTexture = "ITEMS_34";
-	itm.Weight = 0.3;
-	itm.useLocation = "PortRoyal_WineCellar";
-	itm.useLocator = "button01";
-	itm.price = 0;
-	itm.ItemType = "QUESTITEMS";
-	
-	ExpandItemsArray();
-	n = TOTAL_ITEMS - 1;
-	
-	makeref(itm,Items[n]); // ключ от подсвечника Сен Пьер
-	itm.id = "key_candlestick_FortFrance";
-	itm.name = "itmname_key_candlestick_FortFrance";
-	itm.describe = "itmdescr_key_candlestick_FortFrance";
-	itm.model = "keysimple";
-	itm.picIndex = 16;
-	itm.picTexture = "ITEMS_34";
-	itm.Weight = 0.3;
-	itm.useLocation = "FortFrance_WineCellar";
-	itm.useLocator = "button01";
-	itm.price = 0;
-	itm.ItemType = "QUESTITEMS";
-	
-	ExpandItemsArray();
-	n = TOTAL_ITEMS - 1;
-	
-	makeref(itm,Items[n]); // ключ от подсвечника Виллемстад
-	itm.id = "key_candlestick_Villemstad";
-	itm.name = "itmname_key_candlestick_Villemstad";
-	itm.describe = "itmdescr_key_candlestick_Villemstad";
-	itm.model = "keysimple";
-	itm.picIndex = 4;
-	itm.picTexture = "ITEMS_24";
-	itm.Weight = 0.3;
-	itm.useLocation = "Villemstad_WineCellar";
-	itm.useLocator = "button01";
-	itm.price = 0;
-	itm.ItemType = "QUESTITEMS";
 
     // Записки в кладах
     for(int i = 1; i <= TREASURE_NOTES; i++)
@@ -198,27 +187,6 @@ void ApplyMigration(ref migrationState) {
         itm.Weight = 0.1;
         itm.ItemType = "QUESTITEMS";
     }
-	
-	ExpandItemsArray();
-	n = TOTAL_ITEMS - 1;
-	
-	makeref(itm,Items[n]); // письмо 1 Сен-Пьер, записки andre39966
-	itm.id = "PR_Letter"; 
-	itm.name = "itmname_PR_letter";
-	itm.describe = "itmdescr_PR_letter";
-	itm.model = "Letter_sp2";
-	itm.picIndex = 6;
-	itm.picTexture = "ITEMS_26";
-	itm.price = 0;
-	itm.Weight = 0.5;
-	itm.ItemType = "QUESTITEMS";
-	
-	// картечницы
-	if(LoadSegment("items\initItems.c"))
-	{
-		InitGrapeGuns();
-		UnloadSegment("items\initItems.c");
-	}
 
     // Сокровища
     InitWeightParameters();

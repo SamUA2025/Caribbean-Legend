@@ -2049,6 +2049,9 @@ bool KeyAlreadyUsed(string sGrpName, string sControl, string sKey, bool bAltPres
     string SyncKey = ""; // TO_DO: DEL
     if(CheckAttribute(&objControlsState, "keygroups." + sGrpName + "." + sControl + ".sync"))
        SyncKey = objControlsState.keygroups.(sGrpName).(sControl).sync;
+    string DesyncKey = ""; // TO_DO: DEL
+    if(CheckAttribute(&objControlsState, "keygroups." + sGrpName + "." + sControl + ".desync"))
+       DesyncKey = objControlsState.keygroups.(sGrpName).(sControl).desync;
 
 	for(n=0; n<q; n++)
 	{
@@ -2059,7 +2062,7 @@ bool KeyAlreadyUsed(string sGrpName, string sControl, string sKey, bool bAltPres
 			{
 				//belamour legendary edition проверяем, есть ли контролка с таким же ключом в sGrpName и AltPressedGroup
 				if(CheckAttribute(&objControlsState,"keygroups.AltPressedGroup"+"."+GetAttributeName(arCntrl))) continue;
-                if(SyncKey == GetAttributeName(arCntrl)) continue; // TO_DO: DEL
+                if(SyncKey == GetAttributeName(arCntrl) || DesyncKey == GetAttributeName(arCntrl)) continue; // TO_DO: DEL
 
 				if (sti(arCntrl.remapping)) {
 					controlReplacement = GetAttributeName(arCntrl);
@@ -2072,7 +2075,7 @@ bool KeyAlreadyUsed(string sGrpName, string sControl, string sKey, bool bAltPres
 			{
 				//belamour legendary edition проверяем, есть ли контролка с таким же ключом за исключением AltPressedGroup
 				if(!CheckAttribute(&objControlsState,"keygroups.AltPressedGroup"+"."+GetAttributeName(arCntrl))) continue;
-                if(SyncKey == GetAttributeName(arCntrl)) continue; // TO_DO: DEL
+                if(SyncKey == GetAttributeName(arCntrl) || DesyncKey == GetAttributeName(arCntrl)) continue; // TO_DO: DEL
 
 				if (sti(arCntrl.remapping)) {
 					controlReplacement = GetAttributeName(arCntrl);

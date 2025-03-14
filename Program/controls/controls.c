@@ -108,12 +108,20 @@ void DoControlInvisible(string groupName, string controlName)
 	}
 }
 
-void SyncControls(string groupName, string controlName1, string controlName2)
+void SyncControls(string groupName, string controlName1, string controlName2) // TO_DO: DEL
 {
 	if(CheckAttribute(&objControlsState,"keygroups."+groupName+"."+controlName1))
         objControlsState.keygroups.(groupName).(controlName1).sync = controlName2;
     if(CheckAttribute(&objControlsState,"keygroups."+groupName+"."+controlName2))
 		objControlsState.keygroups.(groupName).(controlName2).sync = controlName1;
+}
+
+void DesyncControls(string groupName, string controlName1, string controlName2) // TO_DO: DEL
+{
+	if(CheckAttribute(&objControlsState,"keygroups."+groupName+"."+controlName1))
+        objControlsState.keygroups.(groupName).(controlName1).desync = controlName2;
+    if(CheckAttribute(&objControlsState,"keygroups."+groupName+"."+controlName2))
+		objControlsState.keygroups.(groupName).(controlName2).desync = controlName1;
 }
 
 string CI_CreateAndSetControls( string groupName, string controlName, int keyCode, int controlState, bool bRemappingEnable )

@@ -2,7 +2,7 @@
 // здесь и далее ник boal - это разработческий ник ALexusB
 
 #define VERSION_NUMBER1       "Caribbean Legend "
-#define VERSION_NUMBER2       "ver. 1.4.0 BETA (13.03.25)"
+#define VERSION_NUMBER2       "ver. 1.4.0 BETA (14.03.25)"
 #define VERSION_NUMBER3       "BlackMark.bz"
 
 #define VERSION_NUM      99940  // текущий номер

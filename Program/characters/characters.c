@@ -941,6 +941,9 @@ bool CanEquipHatDirectly(ref chr)
 	if(chr.model == "Sharle_7") return true;
 	if(chr.model == "Sharle_8") return true;
 	if(chr.model == "Diego_6") return true;
+	if(chr.model == "Diego_8") return true;
+	if(chr.model == "protocusto") return true;
+	if(HasSubStr(chr.model, "Willy")) return true;
 	
 	return false;
 }

@@ -106,6 +106,7 @@ void ExternControlsInit(bool bFirst, bool bClassic)
 	CI_CreateAndSetControls("FightModeControls", "ChrAttackBreakBase", CI_GetKeyCode("VK_MBUTTON"), 0, true); 
 	CI_CreateAndSetControls("FightModeControls", "ChrAttackBase", CI_GetKeyCode("VK_RBUTTON"), 0, true);   //1
 	CI_CreateAndSetControls("FightModeControls", "ChrAttackChoseBase", CI_GetKeyCode("VK_SHIFT"), 0, true);
+    DesyncControls("FightModeControls", "ChrSprint", "ChrAttackChoseBase"); // TO_DO: DEL
 	CI_CreateAndSetControls("FightModeControls", "ChrBlock", CI_GetKeyCode("VK_SPACE"), 0, true);
 	//belamour альтернативные клавиши --->
 	CI_CreateAndSetControls("FightModeControls", "ChrAttackFient", CI_GetKeyCode("KEY_Z"), 0, true);// финт
@@ -382,7 +383,16 @@ void ExternControlsInit(bool bFirst, bool bClassic)
 	CI_CreateAndSetControls("PrimaryLand", "ChrAction", CI_GetKeyCode("VK_LBUTTON"), 0, true);
 	AddControlToGroups("BIFastCommand", "Sailing1Pers", "PrimaryLand", "FightModeControls", "WorldMapControls");
 	MapControlToGroup("BIFastCommand","BattleInterfaceControls");
-
+    // TO_DO: DEL
+    DesyncControls("FightModeControls", "BIFastCommand", "ChrBlock");
+    DesyncControls("PrimaryLand", "ChrForward", "BICommandsUp");
+    DesyncControls("FightModeControls", "ChrForward", "BICommandsUp");
+    DesyncControls("PrimaryLand", "ChrBackward", "BICommandsDown");
+    DesyncControls("FightModeControls", "ChrBackward", "BICommandsDown");
+    DesyncControls("PrimaryLand", "ChrStrafeLeft", "BICommandsLeft");
+    DesyncControls("FightModeControls", "ChrStrafeLeft", "BICommandsLeft");
+    DesyncControls("PrimaryLand", "ChrStrafeRight", "BICommandsRight");
+    DesyncControls("FightModeControls", "ChrStrafeRight", "BICommandsRight");
 	// <-- belamour
 	
 // Interface open controls for alternative layout =======================================
