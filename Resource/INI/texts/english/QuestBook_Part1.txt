@@ -1068,11 +1068,11 @@ In each port, Alamida spends several days, sometimes longer. They say during the
 Holy Mercy has an experienced and loyal crew, personally selected by Alamida. Each sailor is ready to defend their Homeland and captain with their life. They say Don Fernando has ordered that Holy Mercy must never be captured, and there are whispers that should the crew face insurmountable odds at boarding, they would sooner send the ship to the depths than see her boarded.
 
 #QUEST StoriesTreasures
-Истории, найденные в кладах
+Treasure Tales
 #TEXT	1
 ************************************************************
 This stash belongs to me, the future captain of the barkentine San Sebastián! If I’m the one reading this, don’t forget: Miguel owes you money, and he’s probably still not paid up.
-If you’re the one reading it, I hope you’re not from my crew. But if you are—know this: I’ve long suspected you were a rat.
+If you’re the one reading it, I hope you’re not from my crew. But if you are-know this: I’ve long suspected you were a rat.
 #TEXT	2
 ************************************************************
 I’m growing fonder of working for Tyrex. This is already my third hidden cache.
@@ -1086,13 +1086,13 @@ Have a drink for me while I’m busy convincing my vixen that I never had this m
 #TEXT	4
 ************************************************************
 Martin, if you’re reading this, it means you found what I left for you. So it wasn’t all in vain. Fourteen paintings in six months, and that bloated toad still wants more! I don’t need gold or jewels anymore, nor his pompous invitations to the residence.
-But before disappearing, I left him a parting gift: his own portrait—no flattery, no bootlicking. Let everyone see him the way he truly is.
+But before disappearing, I left him a parting gift: his own portrait-no flattery, no bootlicking. Let everyone see him the way he truly is.
 #TEXT	5
 ************************************************************
 If you’re reading this, that means the contents of the chest are yours.
 That fateful meeting with the fair-haired pirate changed everything. I don’t know how I’ll go on now, but this gold cost me too much. I caused too much suffering to get it, though I never used to think in those terms before.
 Now I understand what I truly need.
-Take it if you want, but let me warn you— the die has been cast.
+Take it if you want, but let me warn you- the die has been cast.
 #TEXT	6
 ************************************************************
 September, 1648.
@@ -1104,38 +1104,38 @@ Never thought I could feel such fear. I managed to survive a cursed storm, betra
 I’ve never made promises to anyone, but paper can bear anything. I, Sammy, captain of the Striker, do solemnly swear: when I come back here for my gold, I’m leaving this wretched archipelago for good.
 #TEXT	8
 ************************************************************
-If I’d sold all this to our friend on Tortuga, I’d have thrown a feast they’d gossip about even in Spanish ports. But no—this is for you, Charlie, for your old age, from your younger, wilder self.
-Don’t you dare blow it all on rum and port girls, you hear, you drunk? I know you—once you get your hands on some doubloons, you’ll dive straight into cheap liquor and some wench’s embrace.
+If I’d sold all this to our friend on Tortuga, I’d have thrown a feast they’d gossip about even in Spanish ports. But no-this is for you, Charlie, for your old age, from your younger, wilder self.
+Don’t you dare blow it all on rum and port girls, you hear, you drunk? I know you-once you get your hands on some doubloons, you’ll dive straight into cheap liquor and some wench’s embrace.
 I hope you live long enough to decide to quit this damned piracy.
 #TEXT	9
 ************************************************************
 James, I hope you got to this stash first. Inside is what I managed to swipe from that Dutch merchant’s cabin before the rest of the rabble got there. Give half to Isabel, as we agreed. The rest, you can spend on yourself.
 #TEXT	10
 ************************************************************
-There were five of us—now only two remain. Only we know about this place.
+There were five of us-now only two remain. Only we know about this place.
 Whoever didn’t take this stash, remember: this gold isn’t for carousing and revelry. It’s for revenge. The entire Treviño family must answer for what they’ve done to us.
 It’s either them or us. There’s no other way.
 #TEXT	11
 ************************************************************
-Burying gold in the ground isn’t the best way to protect wealth. But I can’t help myself—I like it. Hiding it so no one can find it—that’s the real thrill.
+Burying gold in the ground isn’t the best way to protect wealth. But I can’t help myself-I like it. Hiding it so no one can find it-that’s the real thrill.
 If you’re reading this note, it means I’ve lost. Now it’s your turn.
 #TEXT	12
 ************************************************************
-No matter how hard I try, no matter how many doors I knock on, how much I plead—it’s all in vain. The governor refuses to listen. Says there’s no money for an expedition. He can spare two soldiers, but only if I cover all expenses myself. But I won’t back down! I know the legendary emerald, the Spirit of the Corsair, is hidden somewhere in this island’s jungle. It exists, and the world needs it. I’ll find it, whatever it takes. This treasure is my first investment in that future expedition.
+No matter how hard I try, no matter how many doors I knock on, how much I plead-it’s all in vain. The governor refuses to listen. Says there’s no money for an expedition. He can spare two soldiers, but only if I cover all expenses myself. But I won’t back down! I know the legendary emerald, the Spirit of the Corsair, is hidden somewhere in this island’s jungle. It exists, and the world needs it. I’ll find it, whatever it takes. This treasure is my first investment in that future expedition.
 #TEXT	13
 ************************************************************
 The Inquisition is watching me ever more closely. Staying on this archipelago is becoming too dangerous.
 My dearest, if you must take this stash and sail off on your own, don’t hesitate for a second.
-I love you and want you to be safe. Don’t worry about me—I’ll finish what I set out to do and return to your arms
+I love you and want you to be safe. Don’t worry about me-I’ll finish what I set out to do and return to your arms
 #TEXT	14
 ************************************************************
 Being a smuggler is the best job in the world! I’ve only been in the Caribbean a short while, and I’m already swimming in gold. And no governor can tell me what to do!
 But there’s no such thing as too much gold. I won’t stop until I’m richer than the king himself!
-Then she’ll realize what she’s lost. That soldier was right—someone with knowledge here can get rich in mere months.
+Then she’ll realize what she’s lost. That soldier was right-someone with knowledge here can get rich in mere months.
 #TEXT	15
 ************************************************************
 Remy, my love, Father found out about us! I’ve never seen him so furious. He even struck me and locked me in my room.
-My darling, I’m afraid for you! He’s ordered my brothers to find and kill you. But I managed to slip away for a bit, and I left all my jewelry in our hiding place. Please sell it—may it be enough for us to flee this cursed island. Where doesn’t matter, so long as I can be with you for the rest of my days.
+My darling, I’m afraid for you! He’s ordered my brothers to find and kill you. But I managed to slip away for a bit, and I left all my jewelry in our hiding place. Please sell it-may it be enough for us to flee this cursed island. Where doesn’t matter, so long as I can be with you for the rest of my days.
 Don’t worry about me. I have a vial of poison, and if something happens to you, I’ll take it without hesitation. If we can’t be together in this world, perhaps God will have mercy and reunite us in Heaven.
 Forever yours,
 Juanita.
@@ -1143,7 +1143,7 @@ Juanita.
 ************************************************************
 They say poverty ennobles a person, but only in books. In reality, a true citizen worthy of respect is a wealthy one. Everyone else is just his servant.
 A few more lucky finds, and I’ll join their circle. Soon I’ll have my own plantation, servants, lavish receptions, and the governor’s attention. No more cramped, musty cabin on a merchant ship.
-I mustn’t forget to buy a fine nobleman’s rapier—the symbol of my new status
+I mustn’t forget to buy a fine nobleman’s rapier-the symbol of my new status
 #TEXT	17
 ************************************************************
 If I deduct Gaston’s cut for the tip-off, the crew’s pay, and the bribe for that greasy bigwig in the capital, there’s still an impressive sum left. I don’t know where he gets his information, but another couple of profitable raids like this, and I’ll be able to settle my debts. I just hope the Company’s reach won’t snare me before I sail back to Europe. I need to be careful.
@@ -1151,47 +1151,123 @@ If I deduct Gaston’s cut for the tip-off, the crew’s pay, and the bribe for 
 ************************************************************
 Henry, we’ve come into a bit more loot. You know what to do with it.
 Just don’t put it all in one bank. If the enemy shows up in town, our money’s gone, and I’m too old to board a ship with a knife in my teeth again.
-Handle it yourself—after what happened in Bluevelde, Anderson hasn’t been himself. There’s a good chance he’ll snap and sink all our earnings into his pointless vendetta. I’ve told him a hundred times you can’t change what’s done, but he refuses to listen.
+Handle it yourself-after what happened in Bluevelde, Anderson hasn’t been himself. There’s a good chance he’ll snap and sink all our earnings into his pointless vendetta. I’ve told him a hundred times you can’t change what’s done, but he refuses to listen.
 I don’t trust him.
-
+#TEXT	19
+************************************************************
+April 13.
+Got a bizarre order from some Portuguese fellow today. Portuguese in the Caribbean are rare as hen's teeth, and this one asked me for a bunch of native trinkets. The coin offered is good, so I'm taking the job.
+May 2.
+Handed over the first batch of amulets. Payment received as promised. This venture looks to be quite lucrative, so I'll keep at it.
+May 28.
+Second delivery complete, payment in full. I've no clue about Merriman's true origins, but his pockets run deep and his ambitions deeper. We're set to meet in 2 months at a hidden spot - Havana cemetery of all places. Sounds grim, but beats chasing down debtors through jungle thickets. All future earnings from this enterprise will be stashed right here.
+#TEXT	20
+************************************************************
+Ed, struck gold with this one! What you see in this cache isn't even a third of my haul from a single voyage. Sharing this treasure map with you squares us up.
+Listen carefully - north of Spanish Main, wedged between Cuba and Florida, there's an incredible settlement built on the bones of countless shipwrecks. Strange vessels, some ancient enough to have carried our grandfathers. Every last one ran aground and fused together like some mad carpenter's nightmare. And Ed, people LIVE there, actual breathing souls! The place is swimming in valuables, and they'll trade them merely for food. Check with the Havana smugglers if you doubt me.
+Already made my fortune from this. Better hurry before someone else sniffs it out.
+#TEXT	21
+************************************************************
+Ship's log of the brig "Rapid".
+June 19.
+Raided Trinidad waters, crossed paths with a Spanish merchant convoy under light escort. Resolved without bloodshed, modest plunder acquired.
+June 24. 
+Patrolled the Willemstad-Blueveld trade route. Empty waters save for a peculiar vessel flying unknown colors spotted on the horizon.
+July 18.
+Hunting near Willemstad waters, blundered into Dutch patrol. During our escape, encountered that same mysterious ship again. Thought we were trapped between hammer and anvil, but curiously, the Dutch seemed to fear it as much as we did. Slipped away in the confusion.
+August 3.
+Beginning to suspect this phantom ship harbors somewhere near Curaçao. Spotted it again, managed closer reconnaissance this time. First Mate insists on Portuguese markings, but I remain skeptical - Portuguese have no business in these waters. Have ordered coastal sweeps of the Main.
+September 12.
+Pattern emerging. This vessel appears roughly twice yearly, haunts the triangle between Trinidad, Curaçao, and the Main for several months, then vanishes like morning mist.
+October 8.
+Ghost ship no longer in sight. Seems to have abandoned Caribbean waters entirely. Crew weary of this fruitless hunt, so we've altered course northward to the Lesser Antilles. Perhaps we'll find worthier prey there with heavier purses.
+#TEXT	22
+************************************************************
+Roger, read carefully and follow these instructions to the letter.
+Some mad British treasure hunter has been sniffing around the Caribbean. If you spot red coats with shovels, run like the devil himself is at your heels - they show no mercy to rivals. Clear out all our stashes, gather everything of value, then make for Antigua where our man awaits - I've made the arrangements. We'll lose some gold in the washing, but the rest will come out clean as a whistle. Stick to British territories - this Blackwood character won't dare show his face there. You can operate without looking over your shoulder. No idea what grudge they hold against him, but his vessel only docks at French harbors.
+#TEXT	23
+************************************************************
+Jan, if you're reading this, then know - my vengeance remains unfulfilled, even here in the Caribbean. Our quarry is not here. The memory of my father's sword grows dim in my mind, and our enemy's face fades to shadow.
+We've weathered much together, old friend, yet my rage remains untamed. Had I foreseen the consequences, I would have sought peace with greater vigor. Perhaps fewer souls would have crossed the final threshold. Tell Teresa I love her still and kept my vows, though I'll never survive the journey home. This chest holds all I've earned through blood and steel, though the taste of idle comfort has long since turned to ash. Perhaps you can still savor it.
+I.
+#TEXT	24
+************************************************************
+René, the Caribbean grows more treacherous by the day. Soon our kind will find no harbor here. You and I were among the first to catch wind of Cromwell's new squadron, led by their crown jewel - the Victory. They aim to tame these wild isles and put the Dutch in their place, but my gut tells me this ends badly for everyone involved.
+There's more - the French won't be outdone by their Channel neighbors. A true monster has slipped from the Brest shipyards, christened after one of their kings. I can't vouch for all I've heard, but they speak of a floating fortress unlike anything seen before, and it sails for these waters soon.
+Time to fold our cards, I reckon. Your cut from our final venture lies within this chest. I'm bound for home shores, and strongly suggest you do the same.
+Martin.
+#TEXT	25
+************************************************************
+Reid, dug up the whole story on that Alonso character. The cold-blooded bastard served under Captain Vane aboard the "Xenon" and before that spent years as a professional executioner. That explains his deadly skills and that bone-chilling stare that freezes your very marrow. Word was he'd hung up his cutlass for good, but he's been spotted occasionally in Caribbean ports, following some young hothead captain. Keep sharp and watch your back.
+#TEXT	26
+************************************************************
+Lucas, Artois, and Mode, this chest contains your advance payment for Mr. Rodenburg's latest commission. A new player from old Europe has washed up on our shores, goes by the name Gascon. Despite his fresh arrival, he's already kicked up quite a storm and trampled on the interests of several influential gentlemen.
+Your orders are to collect every scrap of information about him and report monthly, in rotation. Same meeting point as before.
+Enclosed are three copies detailing his appearance and vessel name. He's most frequently sighted around the Lesser Antilles.
+#TEXT	27
+************************************************************
+Karl, this is pure madness. My raid on Muscovite's Basse-Terre residence has been thwarted twice now, and both times because some drunken fool decided to try his luck at the worst possible moment. But this latest fiasco defies belief - while setting up the ambush, some blundering native burst into the house. I barely escaped with my skin, the oaf raised such a racket that guards swarmed the place almost instantly. These problems are yours to solve now. Your advance payment and compensation for the botched job are in the chest.
+#TEXT	28
+************************************************************
+Dear diary, I've taken another step toward true power. Ten thousand! Ten thousand doubloons demanded by some forgotten jungle deity. For one who styles himself "Immortal," he's remarkably penny-pinching - after countless centuries, you'd think he'd have outgrown the need for mortal currency.
+Still, our bargain stands - ten thousand coins, and the world's fate becomes my plaything! A trifling price, truly.
+The only vexation is scraping together these doubloons from local money-changers, forever shuttling between my cache and town.
+#TEXT	29
+************************************************************
+Vittorio, just completed the strangest contract of my life. In Panama, I encountered a peculiar native dressed in European finery who paid me a fistful of pure doubloons to act as his personal page. Had me reciting poetry, pouring wine, and addressing him like some continental aristocrat. Prattled endlessly about lost temples and heretical gods, though seemed harmless enough otherwise.
+The payment covers my debts with enough left to hire passage to Havana, just as we planned.
+#TEXT	30
+************************************************************
+To whoever finds this - deliver to Marcus and read no further. If Marcus means nothing to you - put this back and fuck off.
+Marcus, Gaston is playing a dangerous masquerade. He's a hired killer with shady business in Bridgetown. Last raid, Jimmy and I accidentally crossed his path - now Jimmy's feeding the sharks. Your share's here with a little extra. I'm heading to Spanish territory where his reach can't follow.
+#TEXT	31
+************************************************************
+Mr. Lynch, I've uncovered what you sought. Your person of interest resides on Antigua and, together with his right-hand man, stands guilty of high crimes against our homeland. The treacherous assault on His Majesty's frigate "Sussex" was their doing, not Dutch work as reported. I'll forward all evidence to our mutual contact once the remainder of my payment arrives.
+#TEXT	32
+************************************************************
+Anna, your persistence paid off - that fugitive alchemist, Gino, indeed lurks somewhere in these islands. His trail goes cold in the Lesser Antilles, but I'm closer than ever. This sickness gnaws deeper into me each day, but he holds the cure, and I'll stop at nothing until I find him.
+Please accept the contents of this chest as both gratitude and personal offering. I know Becky's fate still kindles your anger, but grant me at least the chance to make amends.
+Jack.
 #QUEST PortRoyal_town_Letter
 The Secrets of Port Royal
 
 #TEXT 1
 ************************************************************
-My dear Lettis, if you are reading these lines, it means the illness has taken its toll, and I am gone. Perhaps you came here to mourn me, but please, don’t. I want you to go on living, to smile, and to be happy.
-Our meeting here was an accident—or perhaps it was destined. You came into my life at a moment when I least expected it, and from that day on, the world changed. I remember the light in your eyes, the shades of your voice, the warmth of your hands. These memories will stay with me forever, and I hope that one day you, too, will remember me not with tears, but with a gentle, warm smile.
-That is why I ask you: visit the places that meant so much to us. Remember our happiest moments, feel them once again, and then let them go. Allow yourself to move forward—do not grieve or be sad for me, for it would hurt me to see you unhappy.
-Begin this journey at the most important place—the place where it all began. Where our paths first crossed, where you appeared before me and changed my life. Let this step symbolize the start of a new chapter in your life, a chapter where there is no room for sorrow or longing.
-
-P.S. The candle will show the way to what you desire. Even if it isn’t lit.
+My dear, if you are reading this, it means I am no longer here. The illness has taken its toll, and now I am merely a memory from the past. 
+This is unlikely to change anything in your life. You will continue on your path, as always: easily, confidently, without looking back. 
+But before you return to your schooner and disappear beyond the horizon once more, I would like you to fulfill my request. 
+I had no one to whom I could leave everything I possessed, so it shall go to the one who conquered my heart at first glance, with the first word, with the first smile. I ask you to walk through the places where our paths once crossed. Recall the moments that undoubtedly meant more to me than to you. And at the end of this journey, you will receive all that I have managed to acquire over the past few years. I want you to feel the full strength of my feelings one last time before you forget me forever.
+P.S. A candle will show the way to the desired. Even if it is not lit.
 
 #TEXT 2
 ************************************************************
-I remember the moment I first saw you. You were like a gust of wind—light, elusive, shining like a flash of light. There was so much sincerity in your eyes, so much life, that from that second on I knew—you were special.
-The next place is where we hid from prying eyes, just to talk, laugh, and be ourselves. A place where time stood still, and the world with all its troubles and threats seemed insignificant.
-P.S. Wine, like a human, can keep secrets.
+Do you remember that evening when the rain poured down the streets, and you laughed, tilting your head back and letting the raindrops touch your face? I told you that one day I would win your heart, but you only smirked in response.
+Then, our conversation was interrupted by two sailors from a privateer ship, and I had to put them in their place. I will always remember the way you looked at me that night.
+Return to that place, recall that moment. Remember everything that happened that evening.
+P.S. Wine, like people, can keep secrets.
 
 #TEXT 3
 ************************************************************
-Do you know what I loved most about you? Your sincerity. You never pretended, never tried to be someone else. You glowed from within—in every word, every glance, every movement. And that light unfailingly drew me in.
-The next place is one that has stayed in my heart and memory forever. There, I finally decided to tell you the most important thing. There, my heart beat faster, and the words seemed to find their way by themselves. Go there. Remember. Feel.
-P.S. The best place for a hidden stash is somewhere always noisy and crowded, where no one even suspects that something unknown might be nearby.
-
+You were always brutally honest, perhaps even too much. Your bluntness hurt me more than once, but even the most beautiful roses must have thorns, don’t they?
+The next note lies in a special place – the place where we agreed to meet, but the next day, you never showed up. You set sail, leaving me alone with my new verses and the confession I had prepared.
+Later, you explained that you had to weigh anchor in a hurry because of yet another sailor’s superstition, which I never quite managed to understand.
+P.S. The best place for a hiding spot is where it’s always noisy and crowded, where no one ever thinks that something unknown might be hidden nearby.
 
 #TEXT 4
 ************************************************************
-Before you begin your new life, I want to give you one more gift. But finding it won't be easy; I had to hide it well, in a place even you didn’t know about.
-Each note contains a clue. Put them together, and you’ll understand where to look for it. This was a necessary measure so that no one but you could reach it. To succeed, you'll need a key. I left it where we loved to watch the sunset amid the rumble of millstones and the creaking of the old mill.
-P.S. Where the waves speak to the shore, you will find a door behind which lies the secret that protects my gift.
-
+You always laughed when I said that I would become the Governor of Cuba for you. There was some truth in those words – I was willing to do anything for you. But love does not tolerate coercion, and no matter how hard I tried, no matter how fast I ran to you, the distance between us remained unchanged. Now, it no longer matters. Now, it is all just the past.
+You are just one step away from claiming what I have left for you. Each note contains a clue. Piece them together, and you will know where to search.
+To succeed, you will need a key. I left it where we once watched the sunset, talking about everything in the world, amidst the hum of millstones and the creaking of an old windmill.
+This was a necessary precaution to ensure that no one but you could reach this place. You have always been smart and resourceful – perhaps even too much.
+P.S. Where the waves speak to the shore, you will find a door behind which lies the secret that guards my gift.
 
 #TEXT 5
 ************************************************************
-My love, so you have finally reached my gift. I want you to have everything I owned. Let it help you close this chapter once and for all. And me… just let me go. Don’t carry my shadow behind you.
-I was supposed to make you my wife, but fate decided otherwise. The death of my parents changed everything, and our wedding remained an unfulfilled dream. I never told you how much it hurt me—more than anything, I wanted to see you happy.
-Live as though this pain never existed. As if everything is just beginning. With love,
-Your James. 
+So, here you are.
+I don’t know why you chose to follow this path. Perhaps just for fun. Perhaps out of pity. But I want to believe that I meant at least a little more to you than your other admirers.
+The Rainbow carried you beyond the horizon, and I watched as its sails faded into the golden light of the evening, hoping for only one thing – to see you again.
+With a love you never needed, yours until my last breath,
+Francis.
 
 #QUEST Villemstad_town_Letter
 The Secrets of Willemstad
@@ -1210,28 +1286,62 @@ P.S. The path to what is hidden is not always obvious. Only someone who understa
 
 #TEXT 2
 ************************************************************
-You continue your journey, which proves you have not only intelligence but also cunning. However, anyone who acts alone is doomed to fail. It’s time to find a place where you can meet with your contact.
-It must be a location that raises no questions yet allows for a conversation without unwanted ears. Try to figure out where such meetings could take place, and choose the safest of them.
+You continue your journey, proving that you have not only intellect but also cunning. However, anyone who acts alone is doomed to fail. It’s time to find a place where you can meet your contact.  
+It should be a location that raises no questions but allows for conversation without prying ears. You need to choose it with great care, so no one can hide nearby and eavesdrop on you. In these matters, it’s more important to spot the lurking spy first than to get lost yourself.  
 
-And remember: background noise—be it the cries of seagulls, the sound of the surf, or the thud of an axe on wood—helps hide your words from curious bystanders.
+And remember: outside noise - whether it’s the cries of seagulls, the sound of waves crashing against the pier, or the clank of an anchor chain - will help mask your words from curious onlookers.  
 
-P.S. A lantern can reveal even the most secure hideout. But in another situation, it will show the way to the door you need.
+P.S. A lantern can reveal even the most reliable hiding place. But in a different situation, it will point the way to the right door.
 
 #TEXT 3
 ************************************************************
 You’re reading this message, so you’ve completed the previous task. A good observer not only knows how to watch but also how to find places to hide their tools for quick access when needed.
-Now you must find a deserted and safe spot—one where you can set up a stash. Choose a hidden corner that doesn’t draw attention or curiosity from passersby.
+Now you must find a deserted and safe spot-one where you can set up a stash. Choose a hidden corner that doesn’t draw attention or curiosity from passersby.
+
 Don’t forget: the guards notice those who wander around searching. Move confidently, as though you know where you’re going. Let the townsfolk think you’re just another sailor here on business.
+
 P.S. A brick house symbolizes sturdiness and reliability. It can protect both treasures and secrets from unwanted guests.
 
 #TEXT 4
 ************************************************************
-You’ve already learned a lot, but the main rule is always to have a backup plan. Anyone who wants to succeed in our line of work must have a reliable secret hideout. A home where you can hide, lie low, or wait for new orders.
-Your next step is to find such a place. It will be in full view of everyone, yet only you will know its true purpose. You’ll only be able to enter it with a ring—the symbol of your loyalty to the Order. That ring will also serve as your key. Look for it across from the residence, in a hidden spot.
-Remember: your hideout must have everything you need: money, provisions, medicine. Most importantly, it must remain a secret known only to you.
-P.S. When looking at a three-story house, most people see only what rises above ground. But the most secret things are usually hidden beneath it.
-P.P.S. If you truly deserve to be part of our brotherhood, you will see the connection where others see only nonsense.
+You have already learned a lot, but the main rule is to always have a backup plan. Everyone who wants to be successful in our line of work must have a reliable secret hideout. A home where one can take refuge, wait it out, or await new orders.  
+Your next step is to find that place. It is hidden from prying eyes, yet the alleys around it are busy and noisy enough to mask your movements, especially in the evenings when the tavern is full of people, and you can hardly step into the alley without encountering a fight.  
+Drunken townsfolk and weary carpenters will glance at you as they head home, suspecting nothing, for its secret nature will be known only to you. You can only reach it with the ring - a symbol of your loyalty to the Order. It will also serve as your key. Seek the ring opposite the residence, in a secluded spot.  
+Remember: your hideout must contain everything you need: money, provisions, medicines. And most importantly - it must remain a secret known only to you.
+  
+P.S. Looking at the three-story house, most see only what rises above the ground. But the most secret is usually hidden beneath it.
+  
+P.P.S. If you truly deserve to be part of our brotherhood, you will be able to see connections where others see only nonsense.
 
 #TEXT 5
 ************************************************************
-You have passed the trials that only a chosen few can overcome. You have proven you know how to observe, hide, hold secret conversations, and plan your every step. Now you are one of us. The contents of this chest are your personal reserve for a rainy day, and this room is your secure hideout. Remember this moment. From this day on, you are no longer just another face in the crowd—you are part of the brotherhood.
+You have passed the trials that only a chosen few can overcome. You have proven you know how to observe, hide, hold secret conversations, and plan your every step. Now you are one of us. The contents of this chest are your personal reserve for a rainy day, and this room is your secure hideout. Remember this moment. From this day on, you are no longer just another face in the crowd-you are part of the brotherhood.
+
+#QUEST LadyBeth_Book
+Blackwood's Diary
+#TEXT 1
+***************
+An exemplary officer, Blackwood. Such order in everything - from documentation to battle formations. You will go far," said the governor, congratulating me on the successful operation against smugglers. Elizabeth was at the reception - I saw admiration in her eyes. Everything seems to be falling into place exactly as I dreamed while climbing the naval ladder.
+***************
+Woke up from the same nightmare again. The dirty docks of Bristol, my perpetually drunk father, an empty stomach... It seemed that an officer's commission and impeccable service should have erased all of this. But no. As soon as I heard the old planter's refusal - and here it is again. 'You understand, Lieutenant... Means...' As if I'm once again that hungry boy from the docks.
+***************
+The decision has been made. "Beth" is a beautiful ship, and the crew is loyal to me. Strange - they are ready to leave service, knowing that I am going to search for treasures. 'You have never let us down, sir,' said Harris. And I won't let them down.
+***************
+Success! Not just luck, but confirmation of the method. Maps, calculations, questioning locals - everything works like clockwork. The crew is in high spirits, although I see some are unaccustomed to such thoroughness in organizing searches. I'm beginning to understand - this is not enough.
+***************
+ Second year on the "Beth." Enough gold to buy a title. The sailors have bought themselves fashionable jerkins, treat everyone in taverns, boast of expensive trinkets. I'm happy for them - who would know better than I what it's like to work for miserable pennies.
+As for me... I still see these dreams. Elizabeth writes that she is waiting. And her father still calls me "that sailor." I need something more. Something real. To distract myself, I even wrote a small charter on treasure hunting and sent it to Barbados. What can I say - military men just love writing regulations. And I'm glad to do it.
+***************
+Today everything changed. I. seems to read my thoughts. "You're looking in the wrong place, Captain. These pitiful findings are merely crumbs and a waste of your talents. Real treasures don't just enrich - they allow you to change destiny." I thought I was on the right path. How wrong I was.
+***************
+The gifted arquebus leaves no doubt! Cortez's treasures exist and are buried somewhere on the Cayman! I won't rest until I've dug up every piece of land there! Lieutenant Harris says I'm becoming different. I. says I'm on the right track.
+***************
+Dug up the entire island. Found many valuables, but not what I'm looking for. It's a shame what happened with Harris and the others, but I cannot afford discord in the crew after everything I've done for them. Excessive scrupulousness is good in the navy, but here I need people who are ready to get their hands dirty. I'll have to hire Frenchmen for the crew, which is personally quite humiliating for me. However, a few worthy men may be found among this harbor rabble. I need to change my approach.
+***************
+Studying trade routes. Each ship is a source of information... and free labor. Their captains know something about Cortez's treasures, and the crews are accustomed to labor and low pay. It's time to act more decisively. I swear by all storms, I will find this cursed gold!
+***************
+Today I overheard sailors talking in the tavern. "Blackwood is now richer than any planter," they said. But I know - it's all just tinsel. The real treasure awaits on the Cayman. And I will find it. Even if I have to send a thousand men with shovels and in chains there.
+***************
+This expedition will probably be my last. From now on, I'll work according to the new charter - no more recruitment and wasting time in taverns. This island will become my fortress, and the space around it - my feeding ground. Funny - once I was proud of how I rose from the bottom of society. Now I know - you need to fall even lower to rise truly high.
+Just wait for me.
+

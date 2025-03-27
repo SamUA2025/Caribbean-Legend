@@ -5,8 +5,8 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 	switch (Dialog.CurrentNode)
 	{
 		case "quests":
-			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("Jakie pytania, "+GetSexPhrase("młody człowieku","młoda dama")+"?","Czego potrzebujesz, "+GetSexPhrase("przystojniaku","ślicznotko")+"Proszę pytać."),"Znowu pytania?","He-he, jeśli to ci nie przeszkadza - pytania..."," "+GetSexPhrase("Hm, czemuż to nie wybierzesz sobie jakiejś piękności? Zaczynam mieć co do ciebie podejrzenia...","Hm, dlaczego nie wybierzesz sobie piękności? Obawiam się, że chłopców tu nie mamy, hi-hi...")+" ","block",1,npchar,Dialog.CurrentNode);
-			link.l1 = HeroStringReactionRepeat(RandPhraseSimple("Zmieniłem zdanie, przepraszam.","Właściwie, nieważne..."),"Przepraszam, nie mam pytań, na razie.","Masz rację, to już trzeci raz. Wybacz mi.","Może następnym razem, Madam.",npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("Jakie pytania, "+GetSexPhrase("młody człowieku","młoda damo")+"?","Czego potrzebujesz, "+GetSexPhrase("przystojniaku","ślicznotko")+"Proszę pytać."),"Znowu pytania?","He-he, jeśli to ci nie przeszkadza - jakie pytania..."," "+GetSexPhrase("Hm, czemuż to nie wybierzesz sobie jakiejś piękności? Zaczynam mieć co do ciebie podejrzenia...","Hm, dlaczego nie wybierzesz sobie piękności? Obawiam się, że chłopców tu nie mamy, hi-hi...")+" ","block",1,npchar,Dialog.CurrentNode);
+			link.l1 = HeroStringReactionRepeat(RandPhraseSimple("Zmieniłem zdanie, przepraszam.","Właściwie, nieważne..."),"Przepraszam, jednak nie mam pytań, do widzenia.","Masz rację, to już trzeci raz. Wybacz mi.","Może następnym razem, Droga Pani.",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			if (CheckAttribute(pchar, "questTemp.HWIC.Eng") && pchar.questTemp.HWIC.Eng == "GotoBridgetown" && !CheckAttribute(npchar, "quest.HWICTalked"))
             {

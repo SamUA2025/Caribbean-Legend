@@ -1414,7 +1414,7 @@ void ProcessDialogEvent()
 			LAi_SetOfficerType(sld);
 			sld.Dialog.Filename = "Quest\Sharlie\Tichingitu.c";
 			sld.Dialog.CurrentNode = "Tichingitu_officer";
-			LaunchTutorial("Fighter" + LanguageGetLanguage(), 1);
+			LaunchTutorial("Fighter", 1);
 		break;
 		
 		case "ZsI_ListKakao_Soglasen_2":
@@ -1451,7 +1451,7 @@ void ProcessDialogEvent()
 			bDisableFastReload = false;
 			chrDisableReloadToLocation = false;
 			Return_TichingituOfficer();
-			LaunchTutorial("Fighter" + LanguageGetLanguage(), 1);
+			LaunchTutorial("Fighter", 1);
 		break;
 		
 		case "ZsI_ListKakao_Soglasen_5":

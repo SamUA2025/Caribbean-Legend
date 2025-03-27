@@ -1207,7 +1207,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "PZ_Formosa_JohanVanMerden_14":
-			dialog.text = "Zwykłe „dziękuję” wystarczy. Jeśli nie możesz znaleźć Oliveiro w mieście, szukaj „Morning Star”. Zawsze możesz go namierzyć przez jego statek. Powodzenia, mój przyjacielu — tobie i twojej siostrze się przyda.";
+			dialog.text = "Zwykłe „dziękuję” wystarczy. Jeśli nie możesz znaleźć Oliveiro w mieście, szukaj „Morning Star”. Zawsze możesz go namierzyć przez jego statek. Powodzenia, mój przyjacielu - tobie i twojej siostrze się przyda.";
 			link.l1 = "Dziękuję z głębi mojego serca, Wielmożny Panie van Merden.";
 			link.l1.go = "PZ_Formosa_JohanVanMerden_15";
 		break;
@@ -1703,7 +1703,7 @@ void ProcessDialogEvent()
 		
 		case "PZ_Batavia_BitvaLubovnitsa_5":
 			dialog.text = "Hic! Nie wiem, co właśnie powiedziałeś, ale patrząc na twoje oczy i ton, zgadzasz się ze mną! Van Haan to cholerny zboczeniec. Więc, kim ty w ogóle jesteś? Pracownikiem? Vette cię zaprosił?";
-			link.l1 = "„Ja…”";
+			link.l1 = "„Ja...”";
 			link.l1.go = "PZ_Batavia_BitvaLubovnitsa_6";
 			CharacterTurnByChr(pchar, npchar);
 			CharacterTurnByChr(npchar, pchar);
@@ -1982,7 +1982,7 @@ void ProcessDialogEvent()
 		
 		case "PZ_Formosa_JohanVanMerden_24":
 			dialog.text = "Teraz możemy porozmawiać bez pośpiechu, w spokoju i ciszy. Powiedz mi, co cię do mnie sprowadza, Chang Tu?";
-			link.l1 = "„Masz rację, Panie van Merden. Właśnie wróciłem z Batawii, i…”";
+			link.l1 = "„Masz rację, Panie van Merden. Właśnie wróciłem z Batawii, i...”";
 			link.l1.go = "PZ_Formosa_JohanVanMerden_25";
 		break;
 		
@@ -3416,7 +3416,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "PZ_AnabelleLutter8":
-			dialog.text = "„Och, chyba będę musiała opowiedzieć ci o wszystkim. Usiądź, jeśli jesteś zbyt wrażliwy, panie. Rzecz w tym, że sypia z wieloma kobietami, i…”";
+			dialog.text = "„Och, chyba będę musiała opowiedzieć ci o wszystkim. Usiądź, jeśli jesteś zbyt wrażliwy, panie. Rzecz w tym, że sypia z wieloma kobietami, i...”";
 			if (pchar.questTemp.FMQT == "end")
 			{
 				link.l1 = "Jego żona nie jest daleko od niego, i sypia prawie z każdym.";

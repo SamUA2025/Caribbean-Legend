@@ -51,7 +51,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "map_treasure_1":
-            ok = (GetCharacterItem(Pchar, "map_part1")>0)  && (GetCharacterItem(Pchar, "map_part2")>0);
+            ok = GetCharacterItem(Pchar, "map_part1") > 0 && GetCharacterItem(Pchar, "map_part2") > 0;
             if (GetCharacterItem(Pchar, "map_full") > 0 || ok)
             {
                 dialog.Text = "Über ein Getränk! H-Hicks... trink mit mir!";
@@ -109,8 +109,6 @@ void ProcessDialogEvent()
             dialog.Text = "Lass uns einen trinken, oder? Hic... Sie servieren hier einen tollen Rum!";
 			Link.l1 = "Ich habe keine Zeit!";
 			Link.l1.go = "exit";
-			//ok = (GetCharacterItem(Pchar, "map_part1")>0)  || (GetCharacterItem(Pchar, "map_part2")>0);
-            //if (GetCharacterItem(Pchar, "map_full") == 0 && !ok)
             if (GetCharacterItem(Pchar, "map_full") == 0)
             {
 				Achievment_SetStat(68, 1); // ugeen 2016

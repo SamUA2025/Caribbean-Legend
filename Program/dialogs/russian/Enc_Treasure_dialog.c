@@ -51,7 +51,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "map_treasure_1":
-            ok = (GetCharacterItem(Pchar, "map_part1")>0)  && (GetCharacterItem(Pchar, "map_part2")>0);
+            ok = GetCharacterItem(Pchar, "map_part1") > 0 && GetCharacterItem(Pchar, "map_part2") > 0;
             if (GetCharacterItem(Pchar, "map_full") > 0 || ok)
             {
                 dialog.Text = "Это выпивка!! И-ик... выпей со мной!";
@@ -109,8 +109,7 @@ void ProcessDialogEvent()
             dialog.Text = "Давай выпьем? И-ик... Хороший тут ром!";
 			Link.l1 = "Некогда!";
 			Link.l1.go = "exit";
-			//ok = (GetCharacterItem(Pchar, "map_part1")>0)  || (GetCharacterItem(Pchar, "map_part2")>0);
-            //if (GetCharacterItem(Pchar, "map_full") == 0 && !ok)
+            // TO_DO: Игрок может забрать клад в течении суток вернуться и предъявить за фальшивку...
             if (GetCharacterItem(Pchar, "map_full") == 0)
             {
 				Achievment_SetStat(68, 1); // ugeen 2016

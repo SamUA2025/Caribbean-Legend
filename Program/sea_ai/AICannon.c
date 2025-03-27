@@ -87,7 +87,7 @@ void Cannon_RecalculateParameters(int iCharacterIndex)
 	{
 	    rCharacter.Ship.Cannons.SpeedV0 = stf(rCannon.SpeedV0) * stf(rBall.SpeedV0);
 	}
-	if(IsMainCharacter(rCharacter) && ShipBonus2Artefact(rCharacter) && GetCharacterEquipByGroup(rCharacter, BLADE_ITEM_TYPE) == "lacrima_patris")
+	if(IsMainCharacter(rCharacter) && ShipBonus2Artefact(rCharacter, SHIP_GALEON_SM) && GetCharacterEquipByGroup(rCharacter, BLADE_ITEM_TYPE) == "lacrima_patris")
 	{
 		ref Blade = ItemsFromID("lacrima_patris");
 		if(CheckAttribute(Blade,"KillerBonus.RangeBonus"))

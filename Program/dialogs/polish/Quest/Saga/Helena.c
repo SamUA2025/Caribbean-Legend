@@ -747,6 +747,10 @@ void ProcessDialogEvent()
 				Link.l2 = "Heleńko, droga, czy mogę zaprosić cię na chwilę relaksu w tawernie?";
 				Link.l2.go = "special_sex";
 			}
+			if (CheckAttribute(pchar, "questTemp.MysteryPortRoyal_Helena")) {
+				link.l4 = "Helen, wygląda na to, że znalazłem ostatnią wolę twojego wielbiciela – Francisa. Zostawił ci swoje dziedzictwo.";
+				link.l4.go = "MysteryPortRoyal_Helena_1";
+			}
 			if (CheckCharacterItem(pchar, "pirate_cutlass") && !CheckAttribute(pchar, "questTemp.Saga.Helena_officer")) {
 				link.l4 = "Myślę, że ten kordelas teraz należy do ciebie. Blaise to twój rzekomy wujek...";
 				link.l4.go = "give_cutlass";
@@ -2510,7 +2514,7 @@ void ProcessDialogEvent()
 		
 		case "drinking_at_fort_7":
 			dialog.text = "O, dokładnie, mundur! Czerwony mundur! Jak ten, który nosi tamten gość.";
-			link.l1 = """;
+			link.l1 = "...";
 			link.l1.go = "exit";
 			
 			pchar.GenQuest.BlockDialogCamera = true;
@@ -2527,7 +2531,7 @@ void ProcessDialogEvent()
 		
 		case "drinking_at_fort_7_2":
 			dialog.text = "Charles nie wpadnie w kłopoty, prawda, Majorze? Powiedz mi, że nie wpadnie, ślicznie proszę!";
-			link.l1 = """;
+			link.l1 = "";
 			link.l1.go = "exit";
 			
 			AddDialogExitQuestFunction("HelenDrinking_FortDialog4");
@@ -3474,7 +3478,7 @@ void ProcessDialogEvent()
 		
 		case "joan_1":
 			dialog.text = "Jawnogrzesznica! Chodźmy, Charles!";
-			link.l1 = """;
+			link.l1 = "...";
 			link.l1.go = "exit";
 			
 			ResetSound();
@@ -3506,6 +3510,20 @@ void ProcessDialogEvent()
 			dialog.text = "Wiesz, jak to jest. Najpierw daj dziewczynie ostygnąć.";
 			link.l1 = "Wzdych...";
 			link.l1.go = "exit";
+		break;
+		
+		// Тайна Порт-Рояля
+		case "MysteryPortRoyal_Helena_1":
+			dialog.text = "Francis... pamiętam go. Zawsze czekał na mój przyjazd do Port Royal i był niepoprawnym romantykiem. Miło było spędzać czas z kimś, kto nie miał nic wspólnego z morzem – te wszystkie wiersze i serenady... To było coś nowego. Przebłysk świata, którego nigdy nie znałam\nFrancis był bogaty, inteligentny i przystojny – świetna partia. Każda dziewczyna tutaj straciłaby dla niego głowę, ale wtedy miałam ważniejsze sprawy – utrzymać Tęczę na wodzie.";
+			link.l1 = "Wszystkie jego listy były o tobie. Mogę ci oddać wszystko, co ci zostawił, jeśli chcesz.";
+			link.l1.go = "MysteryPortRoyal_Helena_2";
+		break;
+		
+		case "MysteryPortRoyal_Helena_2":
+			dialog.text = "Nie wiedziałam, że był chory. To wszystko jest takie głupie. Co do jego daru... Mam już wszystko, czego mi trzeba. Zatrzymaj to.";
+			link.l1 = "Jego dziedzictwo i tak ci się przysłuży – czyli spełniłem jego ostatnią wolę. Ciekawa historia.";
+			link.l1.go = "exit";
+			DeleteAttribute(pchar, "questTemp.MysteryPortRoyal_Helena");
 		break;
 		
 		case "Exit":

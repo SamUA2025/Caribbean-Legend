@@ -396,7 +396,7 @@ void ProcessDialogEvent()
 		
 		case "mtraxx_PlantVykup_4":
             dialog.text = "Aucun problème. Nous trouverons quelqu'un de convenable pour vous.";
-			link.l1 = "Je suis intéressé par un esclave spécifique. Celui avec le visage charmant—quelqu'un dont vous n'auriez pas honte d'amener à des événements formels ou de servir du vin à vos invités. Il s'est présenté comme Jean Picard. Nous nous sommes déjà bien entendus.";
+			link.l1 = "Je suis intéressé par un esclave spécifique. Celui avec le visage charmant-quelqu'un dont vous n'auriez pas honte d'amener à des événements formels ou de servir du vin à vos invités. Il s'est présenté comme Jean Picard. Nous nous sommes déjà bien entendus.";
 			link.l1.go = "mtraxx_PlantVykup_5";
 		break;
 		

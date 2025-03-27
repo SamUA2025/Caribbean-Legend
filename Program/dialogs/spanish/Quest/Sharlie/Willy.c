@@ -80,7 +80,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "isladevieques":
-			PlaySound("Voice\English\sharlie\Willie Paterson.wav");
+			PlaySound("Voice\Spanish\sharlie\Willie Paterson.wav");
 			dialog.text = "Hombre, los chismes no mienten que tienes nueve vidas como un gato."+TimeGreeting()+", Monsieur de Maure. No parecéis estar muy bien...";
 			link.l1 = TimeGreeting()+", Sr. Paterson. Debo decir que usted y su amigo Archibald interpretaron sus papeles y me engañaron bastante bien, ¡Malditos sean todos! Ni siquiera lo vi venir...";
 			link.l1.go = "isladevieques_1";

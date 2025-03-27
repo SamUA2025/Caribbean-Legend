@@ -58,7 +58,7 @@ void ProcessDialogEvent()
             }
             else
             {
-                dialog.text = "Ich denke, du lügst!";
+                dialog.text = "Ich glaube, du lügst!";
                 Link.l1 = "Hör zu, ich werde dich bezahlen, wenn du mich in Ruhe lässt.";
 			    Link.l1.go = "Cost_Head";
 			    Link.l2 = "Gut, du kannst dein Glück versuchen, wenn du es wünschst.";
@@ -107,7 +107,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "TreasureHunter":
-			dialog.text = "Halte durch, "+GetSexPhrase("Kamerad","lass")+"... Ich denke, du hast etwas Interessantes bei dir. Freunde sollten die gefundenen Schätze miteinander teilen, meinst du nicht auch?";
+			dialog.text = "Halte an, "+GetSexPhrase("Kumpel","Fräulein")+"... Ich denke, du hast etwas Interessantes bei dir. Freunde sollten die gefundenen Schätze miteinander teilen, meinst du nicht auch?";
             Link.l1 = "Hör zu, ich werde dich bezahlen, wenn du mich in Ruhe lässt.";
 			Link.l1.go = "Cost_Head";
             // boal 08.04.04 -->
@@ -132,7 +132,7 @@ void ProcessDialogEvent()
             }
             else
             {
-                dialog.text = "Ich denke, dass du lügst!";
+                dialog.text = "Ich glaube, dass du lügst!";
 			    Link.l1 = "Dann hör auf das Lied meiner Klinge.";
 			    Link.l1.go = "battle";
 			    AddCharacterExpToSkill(pchar, SKILL_SNEAK, 50);
@@ -162,7 +162,7 @@ void ProcessDialogEvent()
 		
 		case "TreasureOfficer":
 			dialog.text = LinkRandPhrase("Also, der Oberst hatte recht, der Schatz war in dieser Höhle versteckt... Leere deine Taschen, Seemann!","Also haben wir dich endlich erwischt, nachdem wir dich durch all diese verfluchten Dschungel, Dornen und Sümpfe verfolgt haben. Jetzt, du Bastard, wirst du uns alles geben...","He, Seemann! Die Schätze dieses Piraten gehören uns, also nimm deine schmutzigen Hände davon weg!");
-			Link.l1 = LinkRandPhrase("Sicherlich, das habe ich nicht von einem Armeeoffizier erwartet! Aber gut, ich werde dir trotzdem eine Lektion erteilen...","Schau ihn an, ein Pirat in einer Offiziersuniform...","Tatsächlich sind Soldaten und Piraten heutzutage nicht mehr so unterschiedlich...");
+			Link.l1 = LinkRandPhrase("Nun, das habe ich nicht von einem Armeeoffizier erwartet! Aber gut, ich werde dir trotzdem eine Lektion erteilen...","Schau ihn an, ein Pirat in einer Offiziersuniform...","Tatsächlich sind Soldaten und Piraten heutzutage nicht mehr so unterschiedlich...");
 			Link.l1.go = "TreasureOfficer_fight"; 
 		break;
 		
@@ -212,7 +212,7 @@ void ProcessDialogEvent()
 		
 		case "ReasonToFast_THunter_4":
 			dialog.text = "Nun, das sind die Worte eines vernünftigen Menschen!";
-			link.l1 = "Verfluche dich und all diese Schätze...";
+			link.l1 = "Verflucht bist du und all diese Schätze...";
 			link.l1.go = "ReasonToFast_THunter_GoAway";
 		break;
 		
@@ -221,7 +221,7 @@ void ProcessDialogEvent()
 			if(iTemp > 0) 
 			{
 				ReasonToFast_GetTreasure("icollection", iTemp );
-				Log_Info(XI_ConvertString("You give item"));
+				Log_Info(XI_ConvertString("Du hast ein Item gegeben"));
 				PlayStereoSound("interface\important_item.wav");
 			}	
 			
@@ -229,7 +229,7 @@ void ProcessDialogEvent()
 			if(iTemp > 0) 
 			{
 				ReasonToFast_GetTreasure("Chest", iTemp);
-				Log_Info(XI_ConvertString("You give item"));
+				Log_Info(XI_ConvertString("Du hast ein Item gegeben"));
 				PlayStereoSound("interface\important_item.wav");
 			}	
 			if(pchar.questTemp.ReasonToFast == "GetTreasure")
@@ -265,7 +265,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "ReasonToFast_HunterShore1":
-			dialog.text = "Hallo,"+GetSexPhrase("Kamerad","lass")+"! "+GetName(NAMETYPE_MAIN,pchar.questTemp.ReasonToFast.p3,NAME_NOM)+" sagte, dass du etwas für uns hast.";
+			dialog.text = "Hallo,"+GetSexPhrase("Kumpel","Fräulein")+"! "+GetName(NAMETYPE_MAIN,pchar.questTemp.ReasonToFast.p3,NAME_NOM)+" sagte, dass du etwas für uns hast.";
 			link.l1 = "Was meinst du?";
 			link.l1.go = "ReasonToFast_HunterShore11";
 			pchar.quest.ReasonToFast_SetHunterPort_1.over = "yes";
@@ -313,7 +313,7 @@ void ProcessDialogEvent()
 			if(iTemp > 0) 
 			{
 				ReasonToFast_GetTreasure("icollection", iTemp );
-				Log_Info(XI_ConvertString("You give item"));
+				Log_Info(XI_ConvertString("Du hast ein Item gegeben"));
 				PlayStereoSound("interface\important_item.wav");
 			}	
 			
@@ -321,7 +321,7 @@ void ProcessDialogEvent()
 			if(iTemp > 0) 
 			{
 				ReasonToFast_GetTreasure("Chest", iTemp);
-				Log_Info(XI_ConvertString("You give item"));
+				Log_Info(XI_ConvertString("Du hast ein Item gegeben"));
 				PlayStereoSound("interface\important_item.wav");
 			}			
 			AddQuestRecord("ReasonToFast", "20");
@@ -335,14 +335,14 @@ void ProcessDialogEvent()
 		break;
 		
 		case "ReasonToFast_HunterShore2":
-			dialog.text = "Hallo,"+GetSexPhrase("Kumpel","lass")+"! "+GetName(NAMETYPE_MAIN,pchar.questTemp.ReasonToFast.p3,NAME_GEN)+" hat einige Fragen an Sie.";
+			dialog.text = "Hallo,"+GetSexPhrase("Kumpel","Fräulein")+"! "+GetName(NAMETYPE_MAIN,pchar.questTemp.ReasonToFast.p3,NAME_GEN)+" hat einige Fragen an Sie.";
 			link.l1 = "Und warum würde er sie nicht selbst fragen?";
 			link.l1.go = "ReasonToFast_HunterShore21";
 			chrDisableReloadToLocation = false;
 		break;
 		
 		case "ReasonToFast_HunterShore21":
-			dialog.text = "Nicht seinem Rang entsprechend. Sie haben unsere Operation ruiniert und wir haben verloren "+sti(pchar.questTemp.ReasonToFast.p10)+" Pesos wegen dir. Also hast du jetzt eine Schuld zu begleichen.";
+			dialog.text = "Nicht seinem Rang entsprechend. Sie haben unsere Operation ruiniert und wir haben "+sti(pchar.questTemp.ReasonToFast.p10)+" Pesos verloren wegen dir. Also hast du jetzt eine Schuld zu begleichen.";
 			link.l1 = "Nimm es und grüße "+GetName(NAMETYPE_MAIN,pchar.questTemp.ReasonToFast.p3,NAME_DAT)+". Sag ihm, dass wir uns bald treffen werden...";
 			link.l1.go = "ReasonToFast_HunterShore22";
 			link.l2 = GetName(NAMETYPE_MAIN,pchar.questTemp.ReasonToFast.p3,NAME_NOM)+" ist schwer getäuscht, wenn er denkt, dass ich für ihn Kastanien aus dem Feuer ziehen werde.";

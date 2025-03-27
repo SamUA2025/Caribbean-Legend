@@ -103,6 +103,11 @@ A symbol of Spanish might and ambition. Its decks gleam with golden ornaments, w
 Enhances the power of Christian wards and amulets.
 }
 
+LadyBeth
+{
+A magnificent example of English shipbuilding, created for independent patrol service in dangerous waters. This snow has excellent sailing qualities and impressive armament for its size, allowing it to compete with higher-class vessels. The years of her military service are far behind, and the former owner's fame now attracts antique dealers and treasure map merchants rather than sea wolves.
+}
+
 Corvette
 {
 Corvettes are built for independent operations in littoral waters as well as scouting and important courier service. Possessing good speed and maneuverability, a corvette can catch up with lighter ships and successfully avoid combat with heavier ones. After commanding a sloop, the most common next step in a navy career is taking command of a corvette.

@@ -3,28 +3,92 @@ info
     Генератор кладов
     Скрипт создан ALexusB 05.11.04
 }
-type_full_0
-{
-Dies ist #sMapIslName#. Der Ort des versteckten Schatzes wird hier angezeigt - es ist #sMaplocName#. Ein berühmter Pirat hat dort seinen Schatz versteckt.
-Den braunen Blutflecken nach zu urteilen, ist die Karte echt - dies deutet auch darauf hin, dass sie häufig den Besitzer gewechselt hat.
-}
-type_full_0_isl {Insel}
-type_full_0_mein {Festland}
-
 type_full_1
 {
-Auf der Karte von #sMapIslName#. Die Schätze befinden sich in #sMaplocName#. Aber nur, wenn du sie überprüfst, kannst du sehen, ob sie noch da sind.
-Die Karte ist ziemlich alt und es gibt keine Zweifel an ihrer Echtheit.
+Die Karte ist offensichtlich frisch und das Papier hat noch nicht vergilbt. Die Markierungen scheinen hastig gezeichnet, aber wenn wir ihnen Glauben schenken, ist der Schatz an der Stelle #sMaplocName# auf der #sMapIslName# verborgen.
 }
 type_full_1_isl {Insel}
 type_full_1_mein {Festland}
 
 type_full_2
 {
-Diese Karte ist frisch - das Papier ist noch nicht vergilbt. Wenn die Legende richtig ist, ist der Schatz in #sMaplocName# auf #sMapIslName#. Ist er wirklich dort? Es lohnt sich, das zu überprüfen!
+Die Karte ist ziemlich nachlässig gezeichnet, und #sMapIslName# ist kaum erkennbar. Wenn man die Markierungen beurteilt, ist der Schatz an #sMaplocName# versteckt, aber wir können nur sicher sein, wenn wir dorthin gehen.
 }
 type_full_2_isl {Insel}
 type_full_2_mein {Festland}
+
+type_full_3
+{
+Diese Karte war für ihren Besitzer nicht wertvoll - die Umrisse von #sMapIslName# sind durch Wasserflecken ruiniert. Der Standort des Schatzes scheint #sMaplocName# zu sein.
+}
+type_full_3_isl {Inseln}
+type_full_3_mein {Festland}
+
+type_full_4
+{
+Die Karte zeigt #sMapIslName#. Der Platz, an dem die Schätze aufbewahrt werden, ist #sMaplocName#. Der Mangel an Können des Autors wurde durch Mühe kompensiert - skurrile Tiere, als wären sie von einem Kind gezeichnet, schmücken die Ränder.
+}
+type_full_4_isl {Insel}
+type_full_4_mein {Festland}
+
+type_full_5
+{
+Die Karte spiegelt genau die Umrisse von #sMapIslName# wider. Der Standort des Schatzes ist #sMaplocName#. Es wird nicht schwer sein, ihn zu finden, da der Autor ziemlich präzise Anweisungen hinterlassen hat.
+}
+type_full_5_isl {Insel}
+type_full_5_mein {Festland}
+
+type_full_6
+{
+Diese Karte ist auf hochwertigem linierten Papier gezeichnet. Die Umrisse von #sMapIslName# sind leicht erkennbar. Laut der Notiz auf der Rückseite befindet sich der Schatz an der Stelle #sMaplocName#.
+}
+type_full_6_isl {Insel}
+type_full_6_mein {Festland}
+
+type_full_7
+{
+Das ist #sMapIslName#. Die Karte zeigt den Standort des versteckten Schatzes — es ist #sMaplocName#. Ein berüchtigter Pirat hat dort seinen Schatz versteckt.  
+Die Authentizität der Karte wird durch die braunen Blutflecken angedeutet, die auch zeigen, dass dieses Stück Papier mehrfach den Besitzer gewechselt hat.
+}
+type_full_7_isl {Insel}
+type_full_7_mein {Festland}
+
+type_full_8
+{
+Diese Karte hat offensichtlich viele Hände gesehen — das Papier ist an mehreren Stellen verbrannt, und die Umrisse von #sMapIslName# sind von zahlreichen Falten durchzogen. Der Standort des Schatzes ist #sMaplocName#. Offensichtlich liegt dort etwas wirklich Wertvolles.
+}
+type_full_8_isl {Inseln}
+type_full_8_mein {Festland}
+
+type_full_9
+{
+#sMapIslName#, ziemlich genau auf dieser Karte dargestellt, ist von Schnörkeln und Zeichnungen von Seeungeheuern umgeben. Wer auch immer der Autor der Karte war, er wusste eindeutig, was er tat, und hat etwas sehr Wertvolles im Schatz verborgen. Alles, was bleibt, ist, den Ort zu erreichen — #sMaplocName#.
+}
+type_full_9_isl {Insel}
+type_full_9_mein {Festland}
+
+type_full_10
+{
+Die Hälften dieser Karte passen nicht zusammen, obwohl die Handschrift, die Tintenfarbe und der Zustand des Papiers eindeutig auf denselben Autor hindeuten. Die Umrisse von #sMapIslName# sind verwischt und mit Tinte besudelt, und der Schatz scheint sich an #sMaplocName# zu befinden.
+}
+type_full_10_isl {Insel}
+type_full_10_mein {Festland}
+
+type_full_11
+{
+Diese Karte wurde sorgfältig diagonal zertrennt, was es unmöglich macht, #sMapIslName# mit nur einer Hälfte zu erkennen. Die Notizen sind in ordentlicher Handschrift geschrieben, was es leicht macht zu verstehen, wo der Schatz liegt — am #sMaplocName#. Angesichts des Zustands des Papiers sind die Schätze dort seit vielen Jahrzehnten.
+}
+type_full_11_isl {Insel}
+type_full_11_mein {Festland}
+
+type_full_12
+{
+Diese Karte, die aus zwei Teilen besteht, sieht unglaublich alt aus. Die Umrisse von #sMapIslName# sind seit mehreren Jahrzehnten veraltet. Die Beschreibungen und Hinweise sind in einer altmodischen Sprache verfasst und sind reich an Latein. Es ist schwierig, das Ausmaß der Schätze, die an #sMaplocName# gelagert sind, abzuschätzen.
+}
+type_full_12_isl {Inseln}
+type_full_12_mein {Festland}
+
+
 
 type_quest_0
 {

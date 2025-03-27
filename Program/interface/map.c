@@ -88,7 +88,23 @@ void ProcCommand()
 			{
 				if (sQuestSeaCharId != "")
 				{
+					if(sQuestSeaCharId == "LadyBeth_cap")
+					{
+						pchar.SkipEshipIndex = pchar.eshipIndex;
+						IDoExit(RC_INTERFACE_MAP_EXIT);
+						break;
+					}
 					wdmEnterSeaQuest(sQuestSeaCharId);
+				}
+				if(CharacterIsAlive("LadyBeth_cap"))
+				{
+					ref sld = characterFromId("LadyBeth_cap");
+					if(sld.quest == "InCity" && sld.City == "Shore16" && worldMap.island == "Caiman")
+					{
+						pchar.SkipEshipIndex = pchar.eshipIndex;
+						IDoExit(RC_INTERFACE_MAP_EXIT);
+						break;
+					}
 				}
 				// напасть
 				IDoExit(RC_INTERFACE_MAP_EXIT);
@@ -331,8 +347,8 @@ void wdmRecalcReloadToSea()
 					break;
 					
 					case "LadyBeth_cap":
-						SetNewPicture("INFO_PICTURE", "interfaces\le\sea_sm.tga"); 
-						totalInfo = "Противник занял тактически верную позицию и сумел избежать сражения.";
+						SetNewPicture("INFO_PICTURE", "interfaces\le\sea_lb.tga"); 
+						totalInfo = GetConvertStr("LadyBeth_WorldMap", "LadyBeth.txt");
 						sOkBtn = XI_ConvertString("map_ok");
 					break;
 					SetNewPicture("INFO_PICTURE", loadScr); 

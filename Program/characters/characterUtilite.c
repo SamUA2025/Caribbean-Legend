@@ -1918,12 +1918,10 @@ bool TakeNItems(ref _refCharacter, string itemName, int n)
 		return true;
 	}	
 
-	if(n > 0 && findsubstr(itemName, "map_part" , 0) != -1 && GetCharacterItem(_refCharacter,itemName) > 0)
+	if(n > 0)
 	{
-		idLngFile = LanguageOpenFile("ItemsDescribe.txt");
-		notification(StringFromKey("characterUtilite_3")+LanguageConvertString(idLngFile, arItm.name), "BoxPlus");
-		LanguageCloseFile(idLngFile);
-		return true;
+        //if (findsubstr(itemName, "map_part" , 0) != -1 && GetCharacterItem(_refCharacter,itemName) > 0) return true;
+        if (itemName == "treasure_note") TreasureNotesHandler(arItm);
 	}
 	
 	if (itemName == "talisman11" && IsMainCharacter(_refCharacter) && !CheckAttribute(pchar, "TookChickenGod")) {
@@ -3058,7 +3056,7 @@ void EquipCharacterByArtefact(ref chref, string itemID)
 			if(CheckAttribute(arItm,"time"))
 			{
 				int addTime = 0;
-				if(ShipBonus2Artefact(chref) && isMonkArtefact(itemID))
+				if(ShipBonus2Artefact(chref, SHIP_GALEON_SM) && isMonkArtefact(itemID))
 				{
 					addTime += 15;
 				}
@@ -4585,7 +4583,8 @@ float ChangeIndianRelation(float _val) // Jason: репутация у инде�
 	{
 		notification(StringFromKey("characterUtilite_14")+stf(pchar.questTemp.Indian.relation)+")", "None");
 	}
-   
+	if(!GetAchievement("ach_CL_140") && stf(pchar.questTemp.Indian.relation) >= 70.0) Achievment_Set("ach_CL_140");
+	
 	return stf(pchar.questTemp.Indian.relation);
 }
 

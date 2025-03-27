@@ -474,75 +474,75 @@ void SetDefaultNormWalk(ref character)
 {
 	string tagMus = "";
 	if(LAi_CheckFightMode(character) == 2) tagMus = "_mus";
-	
 
-    // evganat - новая система движения
-    string tagFightMode = "";
-    string tagMoveMode = "";
-    string tagDirection = "";
-    string tagStep = "";
-    string sAttr = "";
-    string sAnim = "";
-    int i, j, k;
-    for(i=0; i<6; i++)
-    {
-        sAttr = "";
-        sAnim = "";
-        if(i > 2)
-        {
-            tagFightMode = "fight";
-            sAttr = tagFightMode + "_";
-            sAnim = tagFightMode + " ";
-        }
-        if(i%3 == 0)		tagMoveMode = "walk";
-        else {if(i%3 == 1)	tagMoveMode = "run";
-        else				tagMoveMode = "sprint";	}
-        for(j=0; j<8; j++)
-        {
-            switch(j)
-            {
-                case 0:	tagDirection = "forward";		break;
-                case 1:	tagDirection = "back";			break;
-                case 2:	tagDirection = "right";			break;
-                case 3:	tagDirection = "left";			break;
-                case 4:	tagDirection = "forward-right";	break;
-                case 5:	tagDirection = "forward-left";	break;
-                case 6:	tagDirection = "back-right";	break;
-                case 7:	tagDirection = "back-left";		break;
-            }
-            if(tagMoveMode == "sprint" && !HasSubStr(tagDirection, "forward"))
-                continue;
-            if(tagDirection != "")
-            {
-                sAttr = sAttr + tagDirection + "_";
-                sAnim = sAnim + tagDirection + " ";
-            }
-            sAttr = sAttr + tagMoveMode;
-            sAnim = sAnim + tagMoveMode;
-            character.actions.(sAttr) = sAnim;
-            if(tagMoveMode == "walk")
-                continue;
-            sAttr = "start_" + sAttr;
-            sAnim = "start " + sAnim;
-            character.actions.(sAttr) = sAnim;
-            if(tagFightMode == "fight")
-                continue;
-            for(k=0; k<3; k++)
-            {
-                if(k == 0)			tagStep = "";
-                else {if(k == 1)	tagStep = "rstep";
-                else 				tagStep = "lstep"; }
-                sAttr = "stop_" + strright(sAttr, 6);
-                sAnim = "stop " + strright(sAnim, 6);
-                if(tagStep != "")
-                {
-                    sAttr = sAttr + "_" + tagStep;
-                    sAnim = sAnim + " " + tagStep;
-                }
-                character.actions.(sAttr) = sAnim;
-            }
-        }
-    }
+	int i, j, k, l;
+	string tagFightMode;	// "fight" или ""
+	string tagMoveMode;		// "walk", "run" или "sprint"
+	string tagDirection;	// "forward", "back", "right", "left", "forward-left", "forward-right", "back-left" или "back-right"
+	string tagStep;			// "rstep", "lstep" или ""
+	string sAttr, sAnim;
+	for(i=0; i<2; i++)	// боевой режим
+	{
+		switch(i)
+		{
+			case 0:		tagFightMode = "";			break;
+			case 1:		tagFightMode = "fight";		break;
+		}
+		for(j=0; j<3; j++)	// тип движения
+		{
+			switch(j)
+			{
+				case 0:		tagMoveMode = "walk";		break;
+				case 1:		tagMoveMode = "run";		break;
+				case 2:		tagMoveMode = "sprint";		break;
+			}
+			for(k=0; k<8; k++)	// направление движения
+			{
+				if(j == 2 && k > 2)	// в спринте нет других направлений
+					continue;
+				
+				switch(k)
+				{
+					case 0:		tagDirection = "forward";			break;
+					case 1:		tagDirection = "forward-right";		break;
+					case 2:		tagDirection = "forward-left";		break;
+					case 3:		tagDirection = "back";				break;
+					case 4:		tagDirection = "back-right";		break;
+					case 5:		tagDirection = "back-left";			break;
+					case 6:		tagDirection = "right";				break;
+					case 7:		tagDirection = "left";				break;	
+				}
+				
+				sAttr = StrConCheck(tagFightMode, "_") + tagDirection + "_" + tagMoveMode;
+				sAnim = StrConCheck(tagFightMode, " ") + tagDirection + " " + tagMoveMode;
+				character.actions.(sAttr) = sAnim;	// выставляем анимацию постоянного движения
+				
+				if(j == 0)	// при ходьбе нет инерции и подбора шагов
+					continue;
+				
+				sAttr = "start_" + StrConCheck(tagFightMode, "_") + tagDirection + "_" + tagMoveMode;
+				sAnim = "start " + StrConCheck(tagFightMode, " ") + tagDirection + " " + tagMoveMode;
+				character.actions.(sAttr) = sAnim;	// выставляем анимацию разгона
+				
+				if(i == 1)	// в боевом режиме нет торможения и подбора шагов
+					continue;
+				
+				for(l=0; l<3; l++)	// подбор шагов
+				{
+					switch(l)
+					{
+						case 0:		tagStep = "";		break;
+						case 1:		tagStep = "rstep";	break;
+						case 2:		tagStep = "lstep";	break;
+					}
+					
+					sAttr = "stop_" + StrConCheck(tagFightMode, "_") + tagDirection + "_" + tagMoveMode + StrConCheck("_", tagStep);
+					sAnim = "stop " + StrConCheck(tagFightMode, " ") + tagDirection + " " + tagMoveMode + StrConCheck(" ", tagStep);
+					character.actions.(sAttr) = sAnim;	// выставляем анимацию торможения
+				}
+			}
+		}
+	}
 
     string tagVert = "";
     for(i=0; i<2; i++)
@@ -570,37 +570,6 @@ void SetDefaultNormWalk(ref character)
                 {
                     sAttr = "fight_" + sAttr;
                     sAnim = "fight " + sAnim;
-                }
-                character.actions.(sAttr) = sAnim;
-            }
-        }
-    }
-
-    for(i=0; i<4; i++)
-    {
-        switch(i)
-        {
-            case 0:	sAttr = "forwardtoback";	sAnim = "forward to back";	break;
-            case 1:	sAttr = "backtoforward";	sAnim = "back to forward";	break;
-            case 2:	sAttr = "lefttoright";		sAnim = "left to right";	break;
-            case 3:	sAttr = "righttoleft";		sAnim = "right to left";	break;
-        }
-        for(j=0; j<2; j++)
-        {
-            if(j == 1)
-            {
-                sAttr = "fight_" + sAttr;
-                sAnim = "fight " + sAttr;
-            }
-            for(k=0; k<3; k++)
-            {
-                if(k == 0)			tagStep = "";
-                else {if(k == 1)	tagStep = "rstep";
-                else 				tagStep = "lstep"; }
-                if(tagStep != "")
-                {
-                    sAttr = sAttr + "_" + tagStep;
-                    sAnim = sAnim + " " + tagStep;
                 }
                 character.actions.(sAttr) = sAnim;
             }
@@ -948,11 +917,10 @@ bool CanEquipHatDirectly(ref chr)
 	return false;
 }
 
-/* Для тестов (TODO: удалить)
-#event_handler("CameraInfo", "CameraInfo");
-void CameraInfo()
+// складывает строки, если не пустые
+string StrConCheck(string str1, string str2)
 {
-	float chay = GetEventData();
-	float camay = GetEventData();
-	Log_SetStringToLog("chay "+makeint(Radian2Degree(chay))+", camay "+makeint(Radian2Degree(camay)));
-}*/
+	if(str1 != "" && str2 != "")
+		return str1 + str2;
+	return "";
+}

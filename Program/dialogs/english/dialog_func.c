@@ -974,6 +974,20 @@ string TimeGreeting()
     return "Hallo!";
 }
 
+string Greeting()
+{
+    return "Hello";
+}
+
+string Goodbye()
+{
+    if (GetHour() >= 23 || GetHour() < 6)
+    {
+       return "Good night";
+    }
+    return RandPhraseSimple("Goodbye", "Farewell");
+}
+
 // выбор фразы от репутации
 string PCharRepPhrase (string bad, string good)
 {

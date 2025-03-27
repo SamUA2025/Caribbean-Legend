@@ -33,8 +33,8 @@ void ProcessDialogEvent()
 		break;
 
 		case "":
-			dialog.text = NPCStringReactionRepeat("","Entendido. Provide the text you need translated.","","","bloqueo",1,npchar,Dialog.CurrentNode);
-			link.l1 = HeroStringReactionRepeat("Entendido, пожалуйста, предоставьте текст для перевода.","","","",npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat("","","","","block",1,npchar,Dialog.CurrentNode);
+			link.l1 = HeroStringReactionRepeat("","","","",npchar,Dialog.CurrentNode);
 			link.l1.go = DialogGoNodeRepeat("exit", "", "", "", npchar, Dialog.CurrentNode);
 		break;
 

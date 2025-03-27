@@ -107,15 +107,6 @@ void ProcessDialogEvent()
 
                 //LinkRandPhrase("I am Captain" + GetFullName(Pchar) + ".", "My name is " + GetFullName(Pchar) + ".", "You may call me Captain " + GetFullName(Pchar));
 				Link.l1.go = "Meeting";
-				
-				//==> прибыла инспекция на Святом Милосердии
-				if (pchar.location == pchar.questTemp.SantaMisericordia.ColonyZapret + "_town")
-				{
-					dialog.Text = LinkRandPhrase(LinkRandPhrase("Całe miasto jest na krawędzi - przybył don Fernando de Alamida, królewski inspektor. Wiesz, widziałem tu wiele, ale to... To nie smutek zmienia ludzi, ale sposób, w jaki sobie z nim radzą. Mówią, że po śmierci ojca stał się innym człowiekiem. Teraz nie znajdziesz bardziej nieprzekupnego i ... bezlitosnego sługi Korony na całym Archipelagu.","Spójrz tylko na 'Świętą Miłosierdzia'! Mówią, że sam król nakazał jej budowę według specjalnych planów. I zauważ - ani jednej rysy. Jakby sama Dziewica Maryja ją chroniła. Chociaż słyszałem plotki... może to wcale nie Dziewica.","Wiesz, ile razy próbowali zabić don Fernando? Dwanaście ataków na otwartych wodach - i to tylko w ostatnim roku! Cóż, z tak wierną i wyszkoloną załogą, i pod opieką Pana - przetrwa też trzynastą próbę!"),LinkRandPhrase("Słyszałeś? Don Fernando de Alamida przybył do naszego miasta, a mówią, że jest teraz gdzieś na ulicach. Chciałbym zobaczyć go na własne oczy...","Skomplikowany człowiek, ten don Fernando. Niektórzy mówią, że jest zbawcą, oczyszczającym ojczyznę z brudu. Inni szeptają, że coś w nim pękło po śmierci ojca i niedługo wszyscy będziemy płakać. Ale powiem ci to: nie bój się go. Bój się tych, którzy uczynili go tym, kim jest.","Tak przystojny mężczyzna, ten don Fernando! Ale wiecie co jest dziwne? To jakby nie zauważał nikogo. Wszystko obowiązek i służba. Słyszałem, że był tam pewna dziewczyna... ale po spotkaniu z jakimś księdzem całkowicie zrezygnował z ziemskich przyjemności. Jakby złożył ślub."),RandPhraseSimple(RandPhraseSimple("Przeklęty inspektor! Dopóki tu jest - miasto jest jak martwe. Bez handlu, bez zabawy. Nawet oddychać, zdaje się, trzeba cichszym. A wiesz co jest najstraszniejsze? W każdym porcie jest tak samo. Jak w zegarku. Jego Królewska Mość nie mógłby wymyślić tej tortury specjalnie dla nas wszystkich!","Don Fernando odwiedził ponownie sierociniec. Darowizny są hojne, modlitwy trwają godzinami. Tak godny człowiek powinien być przykładem dla tych przeklętych defraudantów!"),RandPhraseSimple("Ha! 'Święty' Fernando znowu zamknął wszystkie domy publiczne. Cóż, nieważne, wkrótce odpłynie, a one znowu się otworzą.","Inspektor... inspektor przybył, to jest to! Don Fernando de Almeyda, czy jak mu tam, Alamida! Tak ważny, że sam gubernator chodzi koło niego na palcach. Mówią, że patrzy ci w oczy i od razu widzi wszystkie twoje grzechy. Przerażające!")));
-					link.l1 = "...";
-					link.l1.go = "exit";
-				}
-				//<== прибыла инспекция на Святом Милосердии
 			}
 			else
 			{

@@ -121,6 +121,8 @@ void WorldSituationsUpdate()
 			// Чёрная Метка - без НИ
 			if (GetDLCenabled(DLC_APPID_3) && !CheckAttribute(pchar, "questTemp.BM_StartQuest") && pchar.rank >= 5) DoQuestCheckDelay("BM_StartQuest", 1.0);
 			if (GetDLCenabled(DLC_APPID_4) && !CheckAttribute(pchar, "questTemp.SantaMisericordia")) SantaMisericordia_init();
+			if (GetDLCenabled(DLC_APPID_5) && !SandBoxMode &&  sti(pchar.rank) >= 7 && !CheckAttribute(pchar, "questTemp.LadyBeth")) LadyBeth_init();
+			if (GetDLCenabled(DLC_APPID_5) && SandBoxMode && !CheckAttribute(pchar, "questTemp.LadyBeth")) LadyBeth_init();
 			CheckAchievments();
 		break;
 		

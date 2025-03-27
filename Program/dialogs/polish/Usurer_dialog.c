@@ -177,6 +177,15 @@ void ProcessDialogEvent()
 				link.l1.go = "FMQG_x";
 				break;
 			}
+			// Леди Бет -->
+			if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_Bank" && !CheckAttribute(pchar, "questTemp.LadyBeth_Usurer")) // Блеквуд в городе
+			{
+				dialog.Text = "Och, kapitanie! Proszę spojrzeć, co dziś mam. Niektóre rzeczy zdobyłem od ludzi Blackwooda. Potrzebują pieniędzy na nową wyprawę, a my - cóż, my na tym skorzystamy, prawda?";
+				link.l1 = "Czy Blackwood wie, że jego ludzie sprzedają znaleziska?";
+				link.l1.go = "LadyBeth_Usurer_1";
+				break;
+			}
+			// Леди Бет <--
 			
 			if(NPChar.quest.meeting == "0")
 			{
@@ -1507,7 +1516,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "exit_slaves_1":
-			dialog.Text = "„Cóż.. Wygląda na to, że się co do ciebie pomyliłem... Żegnaj i zapomnij o naszej rozmowie. I nie rozpowiadaj plotek o tym, co tu usłyszałeś. Jestem właścicielem tego miasta. A jeśli planujesz wejść na pokład '”"+pchar.questTemp.Slavetrader.ShipName+" dla siebie... Upewnię się, że skończysz na szubienicy. Przemyśl to.";
+			dialog.Text = "„Cóż.. Wygląda na to, że się co do ciebie pomyliłem... Żegnaj i zapomnij o naszej rozmowie. I nie rozpowiadaj plotek o tym, co tu usłyszałeś. Jestem właścicielem tego miasta. A jeśli planujesz wejść na pokład ''"+pchar.questTemp.Slavetrader.ShipName+" dla siebie... Upewnię się, że skończysz na szubienicy. Przemyśl to.";
 			Link.l1 = "Nie martw się, nie zgłoszę tego władzom i nie potrzebuję twojego galeonu. Żegnaj.";
             Link.l1.go = "exit";
 			AddQuestRecord("Slavetrader", "8");
@@ -2688,6 +2697,22 @@ void ProcessDialogEvent()
 			link.l1 = "...";
 			link.l1.go = "exit";
 		break;
+		
+		// Леди Бет -->
+		case "LadyBeth_Usurer_1":
+			dialog.text = "Oczywiście! Wielu chce po prostu odzyskać pieniądze i odejść. Zwłaszcza w świetle ostatnich plotek...";
+			link.l1 = "Jakie plotki?";
+			link.l1.go = "LadyBeth_Usurer_2";
+		break;
+		
+		case "LadyBeth_Usurer_2":
+			dialog.text = "Mówią, że warunki w załodze są coraz gorsze. Pan Blackwood zaczął nawet tolerować regularne straty - co wcześniej nigdy się nie zdarzało. Ale to nie moja sprawa. Ja tylko sprzedaję towar. Więc, czym pan się interesuje?";
+			link.l1 = "...";
+			link.l1.go = "next";
+			npchar.quest.item_date = "LadyBeth";
+			pchar.questTemp.LadyBeth_Usurer = true;
+		break;
+		// Леди Бет <--
 	}	
 }
 

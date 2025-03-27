@@ -3,28 +3,91 @@ info
     Генератор кладов
     Скрипт создан ALexusB 05.11.04
 }
-type_full_0
-{
-Es un mapa de #sMapIslName#. Se indica un lugar secreto #sMaplocName# donde un famoso pirata escondió su valioso tesoro.
-El mapa es completamente auténtico, lo garantizan las marcas de sangre que son la prueba de que ha cambiado muchas veces de manos y seguramente se ha peleado por él.
-}
-type_full_0_isl {}
-type_full_0_mein {Tierra Firme}
-
 type_full_1
 {
-En este mapa de #sMapIslName# se puede ver una X sobre la ubicación donde esta escondido el tesoro #sMaplocName#. Lamentablemente, no se puede saber si hay un tesoro escondido, tendré que ir y comprobarlo. 
-El mapa parece bastante antiguo, pero no hay razones para dudar de que es auténtico.
+El mapa está claramente fresco y el papel aún no se ha amarillado. Las marcas parecen estar dibujadas a prisa, pero si les creemos, el tesoro está oculto en la ubicación #sMaplocName# en la #sMapIslName#.
 }
-type_full_1_isl {}
-type_full_1_mein {Tierra Firme}
+type_full_1_isl {isla}
+type_full_1_mein {continente}
 
 type_full_2
 {
-Este mapa es nuevo, se ve que el papel no está amarillento. Según la X, el tesoro está escondido en algún lugar #sMaplocName# en el territorio de #sMapIslName#. Pienso que es muy extraño, ¿será verdad? ¡No pasa nada por probar!
+El mapa está dibujado de manera bastante descuidada, y #sMapIslName# apenas es discernible. Juzgando por las marcas, el tesoro está escondido en #sMaplocName#, pero solo podemos estar seguros al ir allí.
 }
-type_full_2_isl {}
-type_full_2_mein {Tierra Firme}
+type_full_2_isl {isla}
+type_full_2_mein {continente}
+
+type_full_3
+{
+Este mapa no era valioso para su propietario; el contorno de #sMapIslName# está arruinado por manchas de agua. La ubicación del tesoro parece ser #sMaplocName#.
+}
+type_full_3_isl {islas}
+type_full_3_mein {continente}
+
+type_full_4
+{
+El mapa representa #sMapIslName#. El lugar donde se almacenan los tesoros es #sMaplocName#. La falta de habilidad del autor ha sido compensada por el esfuerzo: animales caprichosos, como si fueran dibujados por la mano de un niño, adornan los márgenes.
+}
+type_full_4_isl {isla}
+type_full_4_mein {continente}
+
+type_full_5
+{
+El mapa refleja con precisión los contornos de #sMapIslName#. La ubicación del tesoro es #sMaplocName#. No será difícil encontrarlo, ya que el autor ha dejado direcciones bastante precisas.
+}
+type_full_5_isl {isla}
+type_full_5_mein {continente}
+type_full_6
+{
+Este mapa está dibujado en papel de alta calidad. El contorno de #sMapIslName# es fácilmente reconocible. Según la nota en la parte de atrás, la ubicación del tesoro es #sMaplocName#.
+}
+type_full_6_isl {isla}
+type_full_6_mein {continente}
+
+type_full_7
+{
+Esto es #sMapIslName#. El mapa indica la ubicación del tesoro escondido — está en #sMaplocName#. Un pirata notorio escondió su tesoro allí.  
+La autenticidad del mapa está sugerida por las manchas marrones de sangre, que también indican que este trozo de papel ha cambiado de manos múltiples veces.
+}
+type_full_7_isl {isla}
+type_full_7_mein {continente}
+
+type_full_8
+{
+Este mapa ha visto claramente muchas manos — el papel está quemado en varios lugares, y el contorno de #sMapIslName# está marcado por señales de múltiples pliegues. La ubicación del tesoro es #sMaplocName#. Aparentemente, allí hay algo realmente valioso.
+}
+type_full_8_isl {islas}
+type_full_8_mein {continente}
+
+type_full_9
+{
+#sMapIslName#, representado bastante exactamente en este mapa, está rodeado de ornamentaciones y dibujos de monstruos marinos. Quien quiera que sea el autor del mapa, claramente conocía su oficio, escondiendo algo muy valioso en el tesoro. Todo lo que queda es llegar a la ubicación — #sMaplocName#.
+}
+type_full_9_isl {isla}
+type_full_9_mein {continente}
+
+type_full_10
+{
+Las mitades de este mapa no encajan, aunque la caligrafía, el color de la tinta y el estado del papel indican claramente que es del mismo autor. Los contornos de #sMapIslName# están difusos y manchados de tinta, y el tesoro parece estar ubicado en #sMaplocName#.
+}
+type_full_10_isl {isla}
+type_full_10_mein {continente}
+
+type_full_11
+{
+Este mapa ha sido cuidadosamente dividido en diagonal, lo que hace imposible discernir #sMapIslName# con solo una mitad. Las notas están escritas con una caligrafía ordenada, lo que facilita entender dónde se encuentra el tesoro — en #sMaplocName#. A juzgar por el estado del papel, los tesoros han estado allí durante muchas décadas.
+}
+type_full_11_isl {isla}
+type_full_11_mein {continente}
+
+type_full_12
+{
+Este mapa, hecho de dos partes, se ve increíblemente antiguo. Los contornos de #sMapIslName# están desactualizados por varias décadas. Las descripciones y pistas están escritas en un lenguaje anticuado y abundan en latín. Es difícil evaluar la magnitud de los tesoros almacenados en #sMaplocName#.
+}
+type_full_12_isl {islas}
+type_full_12_mein {continente}
+
+
 
 type_quest_0
 {

@@ -61,13 +61,13 @@ void ProcessDialogEvent()
 			{
 				if (sti(pchar.nation) == PIRATE)
 				{
-					PlaySound("Voice\English\soldier_arest_1.wav");
+					PlaySound("Voice\Spanish\soldier_arest_1.wav");
     				dialog.text = RandPhraseSimple("¿¡Pirata?! ¡Capturadle!","¡Es un pirata! ¡Ataque!");
 					link.l1 = RandPhraseSimple("Pirata. ¿Y qué?","Je, adelante, inténtalo.");
 					link.l1.go = "fight"; 
 					break;
 				}
-				PlaySound("Voice\English\soldier_arest_2.wav");
+				PlaySound("Voice\Spanish\soldier_arest_2.wav");
 				dialog.text = RandPhraseSimple("¡Ho-ho, estás navegando bajo la bandera de "+NationNameGenitive(sti(pchar.nation))+"¡Creo que a nuestro comandante le gustará hablar contigo!","Bueno-bueno, huele a "+NationNameAblative(sti(pchar.nation))+" ¡aquí! ¿Un espía? Es hora de que hables con nuestro comandante.");
 				link.l1 = RandPhraseSimple("¡Primero, te enviaré al infierno!","¡Es hora de que hables con mi espada!");
 				link.l1.go = "fight"; 
@@ -78,13 +78,13 @@ void ProcessDialogEvent()
 				{
 					if (sti(pchar.nation) == PIRATE)
 					{
-						PlaySound("Voice\English\soldier_arest_1.wav");
+						PlaySound("Voice\Spanish\soldier_arest_4.wav");
 						dialog.text = RandPhraseSimple("¿¡Pirata?! ¡Atrapadlo!","¡Es un pirata! ¡Ataque!");
 						link.l1 = RandPhraseSimple("¿Pirata!? ¿Dónde?","Je, adelante e intenta.");
 						link.l1.go = "fight"; 
 						break;
 					}
-					PlaySound("Voice\English\soldier_arest_4.wav");
+					PlaySound("Voice\Spanish\soldier_arest_4.wav");
 					dialog.text = RandPhraseSimple("¿Quién eres y qué quieres aquí?","¡Alto! ¿Cuál es tu negocio aquí?");
 					if (CheckNationLicence(HOLLAND))
 					{
@@ -106,7 +106,7 @@ void ProcessDialogEvent()
 				}
 				else
 				{
-					PlaySound("Voice\English\soldier_arest_4.wav");
+					PlaySound("Voice\Spanish\soldier_arest_4.wav");
 					dialog.text = RandPhraseSimple("¿Quién eres y qué quieres aquí?","¡Alto! ¿Cuál es tu negocio aquí?");
 					link.l1 = "Quiero ver al jefe de este lugar para discutir negocios.";
 					link.l1.go = "NotPegYou";
@@ -118,7 +118,7 @@ void ProcessDialogEvent()
 			iTemp = GetDaysContinueNationLicence(HOLLAND);
 			if (ChangeCharacterNationReputation(pchar, sti(NPChar.nation), 0) <= -12)
 			{
-				PlaySound("Voice\English\soldier_arest_2.wav");
+				PlaySound("Voice\Spanish\soldier_arest_2.wav");
 				dialog.text = "¿Una licencia? Espera un segundo... ¡Ja-ja, esto es divertido! Sé quién eres. ¡Eres buscado, amigo! ¡Y la recompensa por tu cabeza es muy grande! ¡Atrápenlo!";
 				link.l1 = RandPhraseSimple("¡Pues en ese caso solo tienes que conocer a mi espada!","Que te jodan.");
 				link.l1.go = "fight";	
@@ -126,7 +126,7 @@ void ProcessDialogEvent()
 			}
 			if (iTemp == -1)
 			{
-				PlaySound("Voice\English\soldier_arest_1.wav");
+				PlaySound("Voice\Spanish\soldier_arest_1.wav");
 				dialog.text = "Veamos... ¡ja! Tu licencia está vencida. Así que sígueme, te llevaré al comandante...";
 				link.l1 = RandPhraseSimple("¡Mierda! Supongo que es hora de que conozcas mi espada, compañero.","No lo creo...");
 				link.l1.go = "fight";	
@@ -139,7 +139,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "PegYou":
-			PlaySound("Voice\English\soldier_arest_2.wav");
+			PlaySound("Voice\Spanish\soldier_arest_2.wav");
             dialog.text = "¿Negocios? ¡Ja-ja! ¡Vaya, esto es gracioso! Hueles a "+NationNameAblative(sti(GetBaseHeroNation()))+"¡desde mil millas! Es hora de que conozcas a nuestro comandante.";
 			link.l1 = "No, creo que es hora de que conozcas mi espada.";
 			link.l1.go = "fight";

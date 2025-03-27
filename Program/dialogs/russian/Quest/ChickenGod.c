@@ -303,7 +303,7 @@ void ProcessDialogEvent()
 		
         case "native_dice_story_13":
 			dialog.text = "Так! Давай закончим этот наш, гм, салон без драк и без алькова, пожалуйста! С моралью как-то не очень выходит, так что вместо этого предлагаю тост!";
-			link.l1 = "Что, не прав оказался, вождь? Но, твоя правда, давай лучше выпьем. Прошу!";
+			link.l1 = "Совсем ты запутался, вождь. Но в одном ты прав. Давай лучше выпьем!";
 			link.l1.go = "native_dice_story_14";
 		break;
 		
@@ -767,6 +767,10 @@ void ProcessDialogEvent()
 				break;
 				
 				case SHIP_GALEON_SM:
+					dialog.text = "А попа ты видел"+GetSexPhrase("","а")+"? Ну, ещё познакомитесь. И лучше бы тебе заготовить побольше двойных зарядов к пистолю. Если не поможет - попробуй осиновый кол.";
+				break;
+				
+				case SHIP_LADYBETH:
 					dialog.text = "А попа ты видел"+GetSexPhrase("","а")+"? Ну, ещё познакомитесь. И лучше бы тебе заготовить побольше двойных зарядов к пистолю. Если не поможет - попробуй осиновый кол.";
 				break;
 			}
@@ -1332,15 +1336,26 @@ void ChickenGod_InitAmmo() {
 		InitGunExt(		 "howdah",  "t3", "grapeshot_double",	            "",  50.0, 140.0,  30.0,  70.0,  5.0,  5.0, 1, 1, 1, 0, 0, 1, 50, 30, 0);
 		InitGunExt(		 "pistol14", "t3",   "bullet_double",               "", 130.0, 330.0,  90.0, 290.0,  0.0,  0.0, 1, 0, 0, 4, 0, 0, 70, 34, 0); // Дуэльный двухзарядный пистоль cle 1.3
 		
-		InitGrapeGunExt(	"pistol2",	"t2",		3,		50,		4.25,	5.0,	3);		// трёхствольный дробовик, двойной заряд
-		InitGrapeGunExt(	"pistol3",	"t2",		4,		40,		6.0,	5.0,	4);		// тромбон, двойной заряд
-		InitGrapeGunExt(	"pistol8",	"t4",		4,		110,	5.0,	3.0,	2);		// бландербуз, двойной заряд
-		InitGrapeGunExt(	"howdah",	"t3",		3,		85,		3.0,	5.5,	2);		// гауда, двойной заряд
-		InitGrapeGunExt(	"mushket3",	"t2",		3,		60,		6.0,	3.0,	3);		// аркебуза, картечь
-		InitGrapeGunExt(	"mushket6",	"t3",		3,		90,		4.0,	3.5,	2);		// башенный мушкетон, картечь
-		
 		UnloadSegment("items\initItems.c");
 	}
+	
+	CGInitGrapeGunExt(	"pistol2",	"t2",		3,		50,		4.25,	5.0,	3);		// трёхствольный дробовик, двойной заряд
+	CGInitGrapeGunExt(	"pistol3",	"t2",		4,		40,		6.0,	5.0,	4);		// тромбон, двойной заряд
+	CGInitGrapeGunExt(	"pistol8",	"t4",		4,		110,	5.0,	3.0,	2);		// бландербуз, двойной заряд
+	CGInitGrapeGunExt(	"howdah",	"t3",		3,		85,		3.0,	5.5,	2);		// гауда, двойной заряд
+	CGInitGrapeGunExt(	"mushket3",	"t2",		3,		60,		6.0,	3.0,	3);		// аркебуза, картечь
+	CGInitGrapeGunExt(	"mushket6",	"t3",		3,		90,		4.0,	3.5,	2);		// башенный мушкетон, картечь
+}
+
+void CGInitGrapeGunExt(string id, string sAttr, int basedmg, int shards, float width, float height, int dispersion)
+{
+	ref gun = ItemsFromID(id);
+	gun.type.(sAttr).basedmg = basedmg;
+	gun.type.(sAttr).shards = shards;
+	string sArea = "grapes_area_"+dispersion;
+	gun.type.(sAttr).area = XI_ConvertString(sArea);
+	gun.type.(sAttr).width = width;
+	gun.type.(sAttr).height = height;
 }
 
 bool ChickenGod_FindQuestShips() {

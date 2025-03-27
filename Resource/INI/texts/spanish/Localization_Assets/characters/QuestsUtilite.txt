@@ -459,7 +459,7 @@ Carpentero
 
 QuestsUtilite_100
 {
-brother
+hermano
 }
 QuestsUtilite_101
 {

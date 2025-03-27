@@ -1,6 +1,6 @@
 RedChieftain_1
 {
-chieftain
+Häuptling
 }
 RedChieftain_2
 {
@@ -9,23 +9,23 @@ Kanauri
 
 RedChieftain_3
 {
-indians
+Indianer
 }
 RedChieftain_4
 {
-of Caiman tribe
+vom Stamm der Caiman
 }
 
 RedChieftain_5
 {
-The chieftain has left your vessel!
+Der Häuptling hat Ihr Schiff verlassen!
 }
 
 RedChieftain_6
 {
-indian
+Indianer
 }
 RedChieftain_7
 {
-of Caiman tribe
+vom Stamm der Caiman
 }

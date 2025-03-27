@@ -205,7 +205,7 @@ void ProcessDialogEvent()
 			ChangeCharacterAddressGroup(sld, "BasTer_ExitTown", "item", "item3");
 			LAi_SetActorType(sld);
 			LAi_ActorDialog(sld, pchar, "", -1, 0);
-			//LaunchTutorial("Fighter" + LanguageGetLanguage(), 1);
+			//LaunchTutorial("Fighter", 1);
 		break;
 		
 	//--> ----------------------------------- офицерский блок ------------------------------------------
@@ -460,7 +460,7 @@ void ProcessDialogEvent()
 		
 		case "tonzag_aftershot":
 			dialog.text = "Disparo a quemarropa. Capitán, el viejo es fuerte, podemos salvarlo si actuamos rápidamente.";
-			link.l1 = "Entendido. Пожалуйста, предоставьте текст, который нужно перевести.";
+			link.l1 = "...";
 			link.l1.go = "exit";
 			
 			NextDiag.TempNode = "Tichingitu_officer";

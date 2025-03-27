@@ -684,3 +684,10 @@ J'ai décidé de ne pas gâcher la vie du couple malchanceux et je n'ai pas parl
 J'ai dit la vérité au gardien. Bien sûr, il a d'abord été furieux, mais il a fini par se calmer. Nous avons tous péché. Ce couple n'avait tout simplement pas d'autre endroit pour se voir. Jeune amour... Espérons que tout se passera bien pour eux.
 #TEXT 5
 J'ai décidé que je ne me souciais pas des bruits et des gémissements terribles imaginés par le gardien. Mon temps est plus précieux.
+
+#QUEST SixCaptains
+Six Capitaines
+#TEXT	1
+C'est peut-être la première fois qu'une brève rencontre avec quelqu'un qui n'avait ni travail ni affaire pour moi m'a fait écrire une entrée dans ce journal. Je ne comprends pas pourquoi ce prêtre m'a fait une telle impression. Je ne connais pas son nom, et il parlait parfois de façon incohérente, mais il s'est rendu mémorable. Nous nous sommes rencontrés deux fois maintenant, et on pourrait considérer cela comme une coïncidence. Mais si nous nous rencontrons à nouveau...
+Je dois admettre que son intérêt est quelque peu flatteur. Ce regard dans ses yeux est si... évaluateur. Comme s'il admirait mes réussites. Et qui ne le ferait pas ? Deux navires légendaires, deux capitaines dont les histoires se sont répandues à travers tout l'Archipel - tous deux tombés par ma main.
+Je me demande ce qu'il dira quand il apprendra mes futurs exploits ? L'Archipel est vaste, mais ma renommée, semble-t-il, grandit plus vite que je ne le pensais.

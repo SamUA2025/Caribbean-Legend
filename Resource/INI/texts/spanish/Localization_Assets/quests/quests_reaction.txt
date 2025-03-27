@@ -49,7 +49,7 @@ quests_reaction_10
 
 quests_reaction_11
 {
-, que en ~
+ en 
 }
 
 quests_reaction_12

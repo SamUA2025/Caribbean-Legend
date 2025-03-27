@@ -599,7 +599,7 @@ void ProcessDialogEvent()
                 else
                 {
                     Pchar.GenQuest.MoneyForCaptureShip = makeint(100 + (Group_GetCharactersNum(NPChar.EncGroupName) - Group_GetDeadCharactersNum(NPChar.EncGroupName))*(7 - sti(RealShips[sti(NPChar.Ship.Type)].Class))*(1+rand(10))*500);
-                    Dialog.text = RandSwear()+"Ja, ich habe viel von deinen Empörungen gehört. So sei es, aber erinnere dich "+XI_ConvertString(NationShortName(sti(NPChar.nation))+"Jäger")+" wird es nicht ungestraft lassen!";
+                    Dialog.text = RandSwear()+"Ja, ich habe viel von deinen Empörungen gehört. So sei es, aber erinnere dich "+XI_ConvertString(NationShortName(sti(NPChar.nation))+"hunter")+" wird es nicht ungestraft lassen!";
                     link.l1 = "Ausgezeichnet. Eine Summe von "+Pchar.GenQuest.MoneyForCaptureShip+" Pesos werden mir gut passen, "+GetAddress_FormToNPC(NPChar)+".";
                     link.l1.go = "Capture";
                     link.l2 = "Ach, vergiss es. Ich habe nur gescherzt"+GetSexPhrase("","")+"!";

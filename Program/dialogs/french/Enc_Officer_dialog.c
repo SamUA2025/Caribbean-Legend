@@ -258,7 +258,7 @@ void ProcessDialogEvent()
 			if(CheckAttribute(pchar,"systeminfo.tutorial.Fighter") && Npchar.quest.officertype == "fighter")
 			{
 				DeleteAttribute(pchar,"systeminfo.tutorial.Fighter");
-				LaunchTutorial("Fighter" + LanguageGetLanguage(), 1);
+				LaunchTutorial("Fighter", 1);
 			}
 		break;
 

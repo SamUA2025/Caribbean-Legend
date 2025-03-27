@@ -60,7 +60,7 @@ Vasces
 
 GoldenGirl_14
 {
-Exploration mode: timer is not disabled. Meet the deadline!
+Modo exploración: el temporizador no está desactivado. ¡Cumple el plazo!
 }
 
 GoldenGirl_15
@@ -70,7 +70,7 @@ Nayade
 
 GoldenGirl_16
 {
-They say madam Botot disappeared and left her luxury house to her trusted manager. Imagine all the sorrow fallen upon noble youngsters!
+Dicen que la señora Botot desapareció y dejó su lujosa casa a su administrador de confianza. ¡Imagínense toda la pena que cayó sobre los jóvenes nobles!
 }
 
 GoldenGirl_17

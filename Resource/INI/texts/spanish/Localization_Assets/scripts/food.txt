@@ -1,6 +1,6 @@
 food_1
 {
-Las ratas en el ~
+Las ratas del ~
 }
 
 food_2
@@ -20,7 +20,7 @@ food_4
 
 food_5
 {
-~ unidades ~
+~ unidades de ~
 }
 
 food_6

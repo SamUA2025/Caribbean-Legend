@@ -747,6 +747,10 @@ void ProcessDialogEvent()
 				Link.l2 = "Helen, dear, may I invite you to spend some quality time at the tavern?";
 				Link.l2.go = "special_sex";
 			}
+			if (CheckAttribute(pchar, "questTemp.MysteryPortRoyal_Helena")) {
+				link.l4 = "Helen, it looks like I found the last will of your admirer – Francis. He left you his inheritance.";
+				link.l4.go = "MysteryPortRoyal_Helena_1";
+			}
 			if (CheckCharacterItem(pchar, "pirate_cutlass") && !CheckAttribute(pchar, "questTemp.Saga.Helena_officer")) {
 				link.l4 = "I think this cutlass is now yours. Blaise is your so-called uncle...";
 				link.l4.go = "give_cutlass";
@@ -3507,6 +3511,20 @@ void ProcessDialogEvent()
 			dialog.text = "You know how it goes. Let a girl cool off first.";
 			link.l1 = "Sigh...";
 			link.l1.go = "exit";
+		break;
+		
+		// Тайна Порт-Рояля
+		case "MysteryPortRoyal_Helena_1":
+			dialog.text = "Francis... I remember him. He always waited for my arrival in Port Royal and was a hopeless romantic. I enjoyed spending time with someone far removed from the sea – all those poems and serenades... It was something new. A glimpse of a world I never knew.\nFrancis was wealthy, intelligent, and handsome – quite the catch. Any local girl would have gone mad for his attention, but back then, I was more concerned about keeping the Rainbow afloat.";
+			link.l1 = "It seems the sensitive soul of a poet couldn’t bear your rejection. In all his letters, he spoke only of you, recalling the places you met. I can give you everything he left behind if you want it.";
+			link.l1.go = "MysteryPortRoyal_Helena_2";
+		break;
+		
+		case "MysteryPortRoyal_Helena_2":
+			dialog.text = "I didn’t know he was sick. This all feels so foolish now. As for his gift... I’ve had enough of wills and inheritances. Trust me, I have everything I need – and more. You’d best keep it.";
+			link.l1 = "One way or another, his legacy will still serve you in the end – which means I’ve unwittingly carried out his final wish. Quite the story.";
+			link.l1.go = "exit";
+			DeleteAttribute(pchar, "questTemp.MysteryPortRoyal_Helena");
 		break;
 		
 		case "Exit":

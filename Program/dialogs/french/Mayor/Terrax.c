@@ -1891,7 +1891,7 @@ void ProcessDialogEvent()
 		break;
 		// <-- legendary edition
 		case "mtraxx_97":
-            dialog.text = "Prince, où diable étais-tu passé ? Assieds-toi ! Déjà ? Bien joué. Commençons !\nMes courageux corsaires, ce soir le meilleur rhum et les plus belles femmes sont à vous ! L'or de Carthagène nous attend, et je vous le jure mes amis, vous l'obtiendrez ! Alors buvons à notre succès mutuel ! Jusqu'à la lie !";
+            dialog.text = "Prince, enfin ! Regardez, les gars - nous lui avons préparé un cadeau, et il se balade je ne sais où ! Asseyez-vous, nous commençons !\nAlors, braves corsaires ! L'or de Carthagène nous attend, ha-ha ! Et nous allons l'obtenir, je le jure par le tonnerre ! Mais ceux qui travaillent bien doivent aussi bien se reposer ! C'est pourquoi aujourd'hui nous passerons un moment merveilleux dans cet établissement magnifique. Servez-vous un peu de rhum, plus il y en a, mieux c'est ! Remplissez vos mugs jusqu'au bord ! Au vent du trésor, au vent de la chance ! Nous buvons jusqu'à la dernière goutte !\nPour vous, la meilleure boisson des caves de notre taverne, et les plus belles dames de l'île, ha-ha-ha !\nEt pour toi, Charles, de notre part - un splendide chapeau. Essaie-le et ne discute pas !\nCorsaires, chantez notre chanson ! Notre préférée !..";
 			link.l1 = "";
 			link.l1.go = "mtraxx_98";
 		break;
@@ -1900,6 +1900,8 @@ void ProcessDialogEvent()
             DialogExit();
 			npchar.dialog.currentnode = "mtraxx_wait";
 			LAi_SetSitType(npchar);
+			GiveItem2Character(PChar, "hat8");
+			EquipCharacterByItem(PChar, "hat8");
 			DoQuestCheckDelay("Mtraxx_CartahenaTavernSong", 1.0);
 		break;
 		

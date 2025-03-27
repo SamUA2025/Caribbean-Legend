@@ -100,7 +100,7 @@ void ProcessDialogEvent()
                 "Hello " + GetAddress_Form(NPChar) + "! I am " + GetFullName(npchar) + ". Can I know your name?",
                 "Yes, " + GetAddress_Form(NPChar) + ". What do you want? And by the way my name is " + GetFullName(npchar) + ". And what's your name?"));
 				Link.l1 = pcharrepphrase(
-                LinkRandPhrase("Damn me! ", "Damn! ", "Damn you! ") + "Yes I am the captain "+ GetFullName(Pchar)+ RandPhraseSimple(", haven't you ever heard about me, bastard?","?"), " and "+ GetSexPhrase("the most famous pirate","the most famous girl-pirate") +" in the sea!", " and damn me if I am wrong!"),
+                LinkRandPhrase("Damn me! ", "Damn! ", "Damn you! ") + "Yes I am the captain "+ GetFullName(Pchar)+ LinkRandPhrase(", haven't you ever heard about me, bastard?", " and "+ GetSexPhrase("the most famous pirate","the most famous girl-pirate") +" in the sea!", " and damn me if I am wrong!"),
                 LinkRandPhrase("I am " + GetFullName(Pchar) + ", captain.", "My name is " + GetFullName(Pchar) + ".", "You can call me captain " + GetFullName(Pchar)+"."));
 				Link.l1.go = "Meeting";
 				
@@ -112,6 +112,14 @@ void ProcessDialogEvent()
 					link.l1.go = "exit";
 				}
 				//<== прибыла инспекция на Святом Милосердии
+				//==> Леди Бет в порту города
+				if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_town")
+				{
+					dialog.Text = findLedyBethRumour(npchar);
+					link.l1 = "...";
+					link.l1.go = "exit";
+				}
+				//<== Леди Бет в порту города
 			}
 			else
 			{

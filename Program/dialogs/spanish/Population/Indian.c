@@ -13,7 +13,7 @@ void ProcessDialogEvent()
 	switch(Dialog.CurrentNode)
 	{
 		case "First time":
-			dialog.text = NPCStringReactionRepeat(""+GetSexPhrase("Rostro pálido","Squaw blanca")+"¿quiere hablar?","Tú otra vez, "+GetSexPhrase("cara pálida","mujer blanca")+".",""+GetSexPhrase("Carablanca le gusta hablar. Como una mujer.","La mujer blanca ama hablar.")+"","El Gran Espíritu trajo al rostro pálido"+GetSexPhrase("hermano","hermana")+" a mí.","bloqueo",1,npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat(""+GetSexPhrase("Rostro pálido","Squaw blanca")+"¿quiere hablar?","Tú otra vez, "+GetSexPhrase("cara pálida","mujer blanca")+".",""+GetSexPhrase("Carablanca le gusta hablar. Como una mujer.","La mujer blanca ama hablar.")+"","El Gran Espíritu trajo al rostro pálido "+GetSexPhrase("hermano","hermana")+" a mí.","block",1,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Sí.","Sí, yo de nuevo.","Muy poético.","Me alegra verte también.",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			

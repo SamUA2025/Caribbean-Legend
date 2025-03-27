@@ -1492,11 +1492,11 @@ void ProcessDialogEvent()
 		case "Angerran":
 			if (pchar.questTemp.Sharlie == "escape")
 			{
-				dialog.text = "Ein berühmter Kapitän, sagst du? Derjenige, der den spanischen Angriff abgewehrt und diese kleine Stadt beinahe niedergebrannt hat? Verstehe. Was darf es sein?";
+				dialog.text = "Ein berühmter Kapitän, sagst du? Derjenige, der den spanischen Angriff abgewehrt hat und beinahe diese kleine Stadt verbrannt hat? Ich verstehe. Was ist dein Gift?";
 			}
 			else
 			{
-				dialog.text = "Ein berühmter Kapitän, sagst du? Ich habe noch nie von dir gehört… Was darf es sein?";
+				dialog.text = "Ein berühmter Kapitän, sagst du? Ich habe noch nie von Ihnen gehört... Was ist dein Gift?";
 			}
 			link.l1 = "...";
 			if (pchar.questTemp.GoldenGirl.Vine == "red") link.l1.go = "Angerran_1";

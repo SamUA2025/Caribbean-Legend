@@ -4,7 +4,7 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
     switch (Dialog.CurrentNode)
 	{
 		case "quests":
-			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("¿Qué quieres? Pregunta lo que quieras.","Te escucho, ¿cuál es la pregunta?"),"Esta es la segunda vez que intentas preguntar...","Esta es la tercera vez que intentas preguntar...","¿Cuándo va a terminar esto?! ¡Soy un hombre ocupado, trabajando en asuntos de la colonia y todavía me estás molestando!","bloqueo",1,npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("¿Qué quieres? Pregunta lo que quieras.","Te escucho, ¿cuál es la pregunta?"),"Esta es la segunda vez que intentas preguntar...","Esta es la tercera vez que intentas preguntar...","¿Cuándo va a terminar esto?! ¡Soy un hombre ocupado, trabajando en asuntos de la colonia y todavía me estás molestando!","block",1,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat(RandPhraseSimple("He cambiado de opinión...","Ahora no. Lugar y momento equivocados"),"Verdad... Pero más tarde, no ahora...","Preguntaré... Pero un poco más tarde...","Lo siento, "+GetAddress_FormToNPC(NPChar)+"... ",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			// Jason Дороже золота

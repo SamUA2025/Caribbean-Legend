@@ -53,7 +53,7 @@ void ProcessDialogEvent()
 		
 		case "meeting_no":
 			dialog.text = "Pensé que lo habíamos dejado claro - ¡no hablo con los enemigos de España!";
-			link.l1 = "Entendido. Пожалуйста, предоставь текст, который ты хочешь перевести, и я выполню перевод.";
+			link.l1 = "...";
 			link.l1.go = "exit";
 			NextDiag.TempNode = "meeting_no";
 		break;
@@ -93,7 +93,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "ansewer_2":
-			dialog.text = "Entendido. Por favor, proporciona текст для перевода.";
+			dialog.text = "";
 			link.l1 = "";
 			link.l1.go = "int_quests";
 			npchar.quest.answer_2 = "true";

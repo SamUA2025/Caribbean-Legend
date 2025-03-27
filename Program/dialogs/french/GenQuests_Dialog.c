@@ -1022,7 +1022,8 @@ void ProcessDialogEvent()
 		
 		case "ShipWreck_34":
 			dialog.text = RandPhraseSimple(RandPhraseSimple("Capitaine, est-ce déjà Dunkerque ?","Sommes-nous vraiment à Dunkerque, capitaine ?"),RandPhraseSimple("Capitaine, est-ce l'Europe?","Avons-nous navigué vers l'Europe si vite?"));
-			bTemp = !GetCharacterItem(pchar, "map_part1") || !GetCharacterItem(pchar, "map_part2");
+			bTemp = !GetCharacterItem(pchar, "map_full") && !GetCharacterItem(pchar, "map_part2");
+			bTemp = !GetCharacterItem(pchar, "map_part1") || bTemp;
 			if(rand(100) > 75 && !isDay() && bTemp)
 			{
 				link.l1 = "Ah-ha...";
@@ -1096,8 +1097,7 @@ void ProcessDialogEvent()
 			sld = CharacterFromID("ShipWreck_0");
 			RemovePassenger(pchar, sld);
 			AddCharacterExpToSkill(pchar, "Fortune", 200);
-			if (!GetCharacterItem(pchar, "map_part1")) 	GiveItem2Character(pchar, "map_part1");
-			else 										GiveItem2Character(pchar, "map_part2");
+			AddMapPart();
 			AddQuestRecord("ShipWrecked", "9");
 			AddQuestUserData("ShipWrecked", "sSex", GetSexPhrase("",""));
 			CloseQuestHeader("ShipWrecked");	

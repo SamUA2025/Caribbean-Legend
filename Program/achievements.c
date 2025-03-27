@@ -267,6 +267,16 @@ void CheckAchievments()
 			Achievment_Set("ach_CL_124");
 	}
 	
+	if(!GetAchievement("ach_CL_143")) 
+	{
+		int hatsQ = 0;
+		for(int n = 1; n < 9; n++)
+		{
+			if(GetCharacterItem(pchar, "hat"+n)) hatsQ++;
+		}
+		if(hatsQ > 7) Achievment_Set("ach_CL_143");
+	}
+	
 	// ачивки и статы фриплея -->
 	if(SandBoxMode)
 	{

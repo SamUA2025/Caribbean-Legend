@@ -92,7 +92,7 @@ void ProcessDialogEvent()
 			{
 				NPChar.quest.meeting = "1";
 				dialog.Text = NPCharRepPhrase(npchar,LinkRandPhrase("Jestem"," Nazywam się ","Możesz mnie nazywać ")+GetFullName(npchar)+LinkRandPhrase(" . Czego chcesz?","Nie widziałem cię wcześniej "+", kim jesteś?","Kim jesteś i czego ode mnie chcesz?"),LinkRandPhrase("Pozdrowienia, "+GetAddress_Form(NPChar)+". Nazywam się "+GetFullName(npchar)+"  A jak się nazywasz?","Cześć "+GetAddress_Form(NPChar)+"! Jestem "+GetFullName(npchar)+" Czy mogę poznać twe imię?","Tak, "+GetAddress_Form(NPChar)+". Czego chcesz? A tak przy okazji, nazywam się "+GetFullName(npchar)+" A jak się zwiesz?"));
-				Link.l1 = pcharrepphrase(LinkRandPhrase("Do diabła!","Cholera! ","Do diabła z tobą! ")+"Tak, jestem kapitanem "+GetFullName(Pchar)+RandPhraseSimple(", czyżbyś nigdy o mnie nie słyszał, bękarcie?","?")," i "+GetSexPhrase("najbardziej znany pirat","najsłynniejsza dziewczyna-piratka")+"na morzu!"," i niech mnie diabli wezmą, jeśli się mylę!"),LinkRandPhrase("Jestem "+GetFullName(Pchar)+", kapitanie.","Nazywam się "+GetFullName(Pchar)+".","Możesz mnie nazywać kapitanem "+GetFullName(Pchar)+"."));
+				Link.l1 = pcharrepphrase(LinkRandPhrase("Do diabła!","Cholera! ","Do diabła z tobą! ")+"Tak, jestem kapitanem "+GetFullName(Pchar)+LinkRandPhrase(", czyżbyś nigdy o mnie nie słyszał, bękarcie?"," i "+GetSexPhrase("najbardziej znany pirat","najsłynniejsza dziewczyna-piratka")+"na morzu!"," i niech mnie diabli wezmą, jeśli się mylę!"),LinkRandPhrase("Jestem "+GetFullName(Pchar)+", kapitanie.","Nazywam się "+GetFullName(Pchar)+".","Możesz mnie nazywać kapitanem "+GetFullName(Pchar)+"."));
 				Link.l1.go = "Meeting";
 				
 				//==> прибыла инспекция на Святом Милосердии
@@ -103,6 +103,14 @@ void ProcessDialogEvent()
 					link.l1.go = "exit";
 				}
 				//<== прибыла инспекция на Святом Милосердии
+				//==> Леди Бет в порту города
+				if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_town")
+				{
+					dialog.Text = findLedyBethRumour(npchar);
+					link.l1 = "...";
+					link.l1.go = "exit";
+				}
+				//<== Леди Бет в порту города
 			}
 			else
 			{

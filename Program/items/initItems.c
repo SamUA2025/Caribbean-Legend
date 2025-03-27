@@ -201,12 +201,13 @@ int InitItems()
 	n = InitStdMusket(n, "mushket1",   	    "mushket",  "ITEMS_6", 15, 0.0001,  1,     3500,   100.0,   220.0, 17.5,    1,       B_GOOD); // фитильный мушкет
 	n = InitStdMusket(n, "mushket2",   	 "SeaCarbine",  "ITEMS_6", 13, 0.0001,  1,    38500,   115.0,   235.0, 14.0,    1,       B_GOOD); // флотский карабин
 	n = InitStdMusket(n, "mushket3",   	  "Arguebuse",  "ITEMS_6", 14, 0.0001,  1,     2200,    40.0,   120.0, 10.5,    1,  B_EXCELLENT); // аркебуза
-	n = InitStdMusket(n, "grape_mushket",       "mortar",  "ITEMS_6", 11, 0.0001,  1,     5500,   100.0,   220.0,  9.0,    1,     B_UNIQUE); // склопетта
+	n = InitStdMusket(n, "grape_mushket",    "mortar",  "ITEMS_6", 11, 0.0001,  1,     5500,   100.0,   220.0,  9.0,    1,     B_UNIQUE); // склопетта
 	n = InitStdMusket(n, "mushket5",   	    "shtuzer",  "ITEMS_6",  9, 0.0001,  1,    17000,   200.0,   300.0, 12.0,    1,     B_UNIQUE); // винтовальный штуцер
 	n = InitStdMusket(n, "mushket6",   	  "portugize",  "ITEMS_6", 12, 0.0001,  1,    35000,    50.0,   180.0, 12.5,    5,     B_UNIQUE); // башенный мушкетон
-	n = InitStdMusket(n, "mushket2x2",        "DBmusket",  "ITEMS_6", 10, 0.0001,  1,    12000,   180.0,   280.0, 15.0,    2,     B_UNIQUE); // охотничий штуцер
-	n = InitStdMusket(n, "mushket7",    "classic_musket", "ITEMS_37", 16, 0.0001,  1,    77000,   130.0,   220.0, 16.0,    1,  B_EXCELLENT); // Качественный мушкет cle
-	n = InitStdMusket(n, "mushket8",    "modular_musket", "ITEMS_37", 15, 0.0001,  1,   230000,    80.0,   200.0, 17.0,    4,     B_UNIQUE); // Четырехзарядный штуцер cle
+	n = InitStdMusket(n, "mushket2x2",        "DBmusket",  "ITEMS_6", 10, 0.0001,  1,    12000,   180.0,   280.0, 15.0, 2,     B_UNIQUE); // охотничий штуцер
+	n = InitStdMusket(n, "mushket7",    "classic_musket", "ITEMS_37", 16, 0.0001,  1,    77000,   130.0,   220.0, 16.0, 1,  B_EXCELLENT); // Качественный мушкет cle
+	n = InitStdMusket(n, "mushket8",    "modular_musket", "ITEMS_37", 15, 0.0001,  1,   230000,    80.0,   200.0, 17.0, 4,     B_UNIQUE); // Четырехзарядный штуцер cle
+	n = InitStdMusket(n, "mushket9",    "Mushket1_SP2", "ITEMS_39",   10, 0.0001,  1,   39000,    150.0,   375.0, 22.0, 1,     B_UNIQUE); // Аркебуза конкистадора SP2
 	
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//										КИРАСЫ И КОСТЮМЫ
@@ -1455,23 +1456,37 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 	
+	// Запчасти от Аркебузы конкистадора SP2
+	for(i = 1; i <= 3; i++)
+	{
+		makeref(itm,Items[n]);
+		itm.id = "FirearmStockPart_" + i;
+		itm.name = "itmname_FirearmStockPart_" + i;
+		itm.describe = "itmdescr_FirearmStockPart_" + i;
+		itm.model = "";
+		itm.PartNumber = i;
+		itm.picIndex = 12 + i;
+		itm.picTexture = "ITEMS_39";
+		itm.price = 0;
+		itm.Weight = 0.5;
+		itm.ItemType = "QUESTITEMS";
+		itm.groupID	= SPECIAL_ITEM_TYPE;
+		n++;
+	}
+	
     // Записки в кладах
-    for(i = 1; i <= TREASURE_NOTES; i++)
-    {
-        makeref(itm,Items[n]);
-        itm.id = "treasure_note_" + i;
-        itm.number = i;
-        itm.groupID		= SPECIAL_ITEM_TYPE;
-        itm.name = "itmname_treasure_note_1";
-        itm.describe = "itmdescr_treasure_note_1";
-        itm.model = "";
-        itm.picIndex = 16;
-        itm.picTexture = "ITEMS_26";
-        itm.price = 0;
-        itm.Weight = 0.1;
-        itm.ItemType = "QUESTITEMS";
-        n++;
-    }
+    makeref(itm,Items[n]);
+    itm.id = "treasure_note";
+    itm.groupID = SPECIAL_ITEM_TYPE;
+    itm.name = "itmname_treasure_note";
+    itm.describe = "itmdescr_treasure_note";
+    itm.model = "";
+    itm.picIndex = 16;
+    itm.picTexture = "ITEMS_26";
+    itm.price = 0;
+    itm.Weight = 0.1;
+    itm.ItemType = "QUESTITEMS";
+    n++;
 	
 	// резервные предметы для возможных дополнений - 10 шт
 	makeref(itm,Items[n]); // письма и депеши по НСО
@@ -1853,6 +1868,35 @@ int InitItems()
 	itm.Weight = 0.3;
 	itm.price = 0;
 	itm.ItemType = "QUESTITEMS";
+	n++;
+	
+	makeref(itm,Items[n]); // дневник Блеквуда
+	itm.id = "LadyBeth_Book";
+	itm.name = "itmname_LadyBeth_Book";
+	itm.describe = "itmdescr_LadyBeth_Book";
+    itm.model = "OpenBook";
+	itm.picIndex = 15;
+	itm.picTexture = "ITEMS_26";
+	itm.price = 0;
+	itm.Weight = 1.0;
+	itm.ItemType = "QUESTITEMS";
+	n++;
+	
+	makeref(itm,Items[n]); // карта Блеквуда
+	itm.id = "LadyBeth_Map";
+	itm.groupID = MAPS_ITEM_TYPE;
+	itm.name = "itmname_LadyBeth_Map";
+	itm.describe = "itmdescr_LadyBeth_Map";
+	itm.model = "";
+	itm.picIndex = 5;
+	itm.picTexture = "ITEMS_27";
+	itm.price = 0;
+	itm.Weight = 0.1;
+	itm.imageTga = "none";
+	itm.imageType = "MapRead"; // текстовая форма
+	itm.ItemType = "QUESTITEMS";
+	itm.Atlas = 0;
+	itm.mapType = "Special";
 	n++;
 
 	// ключи для разных квестовых ситуаций
@@ -3248,7 +3292,8 @@ int InitItems()
 	n = InitStdTalisman(n, "talisman14", "", "ITEMS_39",  6, rand(5000), 0.5,    "navigator"); // Оберег 'Жаньи' cle 1.3
 	n = InitStdTalisman(n, "talisman15", "", "ITEMS_39",  7, rand(5000), 0.5,             ""); // Оберег 'Чёрная метка' cle 1.3 DLC
 	n = InitStdTalisman(n, "talisman16", "", "ITEMS_24",  7, rand(5000), 0.5,             ""); // Золотой нож cle 1.5
-	n = InitStdTalisman(n, "talisman17", "", "ITEMS_39",  8, rand(5000), 0.5,             ""); // Оберег Liber Misericordiae cle 1.5 DLC
+	n = InitStdTalisman(n, "talisman17", "", "ITEMS_39",  8, rand(5000), 0.5,             ""); // Оберег Liber Misericordiae cle 1.5 DLC SP1
+	n = InitStdTalisman(n, "talisman18", "", "ITEMS_39", 16, rand(5000), 0.5,             ""); // Оберег Устав Блеквуда SP2
 	
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//					ЮВЕЛИРНЫЕ ИЗДЕЛИЯ И ДРАГОЦЕННОСТИ
@@ -4853,7 +4898,8 @@ void InitMushkets()
 	InitMushketExt(		"mushket6",  10.0,  25.0,  10.0,  20.0, "FencingH", "FencingL" );
 	InitMushketExt(		"mushket7",  10.0,  25.0,  10.0,  20.0, "FencingH", "FencingL" ); // Качественный мушкет cle
 	InitMushketExt(		"mushket8",  20.0,  60.0,  10.0,  20.0, "FencingH", "FencingL" ); // Четырехзарядный штуцер cle
-	InitMushketExt(	  "mushket2x2",  10.0,  35.0,  10.0,  25.0, "FencingH", "FencingL" );	
+	InitMushketExt(	  "mushket2x2",  10.0,  35.0,  10.0,  25.0, "FencingH", "FencingL" );
+	InitMushketExt(		"mushket9",  10.0,  25.0,  10.0,  20.0, "FencingH", "FencingL" ); // Аркебуза конкистадора SP2
 }
 					
 void InitGuns()
@@ -4918,7 +4964,9 @@ void InitGuns()
 	InitGunExt(		"mushket8", "t1", 	     	"bullet",      "gunpowder", 100.0, 200.0,  80.0, 180.0,  0.0,  0.0, 1, 1, 0, 0, 0, 1, 80, 40, 1); // Четырехзарядный штуцер cle
 	InitGunExt(		"mushket8", "t2", 	     "cartridge",               "", 100.0, 200.0,  80.0, 180.0,  0.0,  0.0, 1, 1, 0, 0, 0, 1, 80, 20, 0); // Четырехзарядный штуцер cle
 	InitGunExt(	  "mushket2x2", "t1", 	     "cartridge",               "", 180.0, 280.0, 160.0, 260.0, 15.0, 15.0, 1, 1, 0, 0, 0, 0, 95, 15, 0);	
-	InitGunExt(	  "mushket2x2", "t2", 		    "bullet",      "gunpowder", 180.0, 280.0, 160.0, 260.0, 15.0, 15.0, 1, 1, 0, 0, 0, 0, 90, 30, 1);					
+	InitGunExt(	  "mushket2x2", "t2", 		    "bullet",      "gunpowder", 180.0, 280.0, 160.0, 260.0, 15.0, 15.0, 1, 1, 0, 0, 0, 0, 90, 30, 1);
+	InitGunExt(		"mushket9", "t1", 	     "grapeshot",      "gunpowder",  70.0, 120.0,  40.0,  90.0,  0.0,  0.0, 0, 1, 1, 0, 1, 1, 60, 45, 1); // Аркебуза конкистадора SP2
+	InitGunExt(		"mushket9", "t2", 	      "GunEchin",               "",  70.0, 120.0,  40.0,  90.0,  0.0,  0.0, 0, 1, 1, 0, 1, 1, 45, 35, 0); // Аркебуза конкистадора SP2
 }
 
 void InitGrapeGuns()
@@ -4933,6 +4981,8 @@ void InitGrapeGuns()
 	InitGrapeGunExt(	"mushket3",	"t1",		3,		45,		6.0,	3.0,	3);		// аркебуза, картечь
 	InitGrapeGunExt(	"mushket6",	"t1",		3,		60,		4.0,	3.5,	2);		// башенный мушкетон, картечь
 	InitGrapeGunExt(	"mushket6",	"t2",		3,		60,		3.5,	2.75,	1);		// башенный мушкетон, ежовый заряд
+	InitGrapeGunExt(	"mushket9",	"t1",		3,		75,		10.0,	9.0,	5);		// Аркебуза конкистадора SP2, картечь
+	InitGrapeGunExt(	"mushket9",	"t2",		3,		75,	    8.5,	7.85,	4);		// Аркебуза конкистадора SP2, ежовый заряд
 }
 
 void InitItemsRarity()
@@ -5234,4 +5284,3 @@ void InitItemsRarity()
 	InitStdItemRarity(		"talisman11", 	   "Pirate", 	    0.2, 	1, 		5);
 	InitStdItemRarity(		"talisman11", 	   "Citizen", 	    0.2, 	1, 		5);
 }
-

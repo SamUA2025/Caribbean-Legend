@@ -205,7 +205,7 @@ void ProcessDialogEvent()
 			ChangeCharacterAddressGroup(sld, "BasTer_ExitTown", "item", "item3");
 			LAi_SetActorType(sld);
 			LAi_ActorDialog(sld, pchar, "", -1, 0);
-			//LaunchTutorial("Fighter" + LanguageGetLanguage(), 1);
+			//LaunchTutorial("Fighter", 1);
 		break;
 		
 	//--> ----------------------------------- офицерский блок ------------------------------------------

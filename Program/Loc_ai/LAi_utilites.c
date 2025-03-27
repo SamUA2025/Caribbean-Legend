@@ -1850,8 +1850,16 @@ void CreateHabitues(aref loc)
 			}
 			// офицеры <--
 			// belamour legendary edition увеличить вероятность появления странной личности У Счетовода
-			if(CheckCharacterPerk(pchar, "HT2")) i = 4;
-			else i = 15;
+			if(ShipBonus2Artefact(pchar, SHIP_LADYBETH))
+			{
+				if(CheckCharacterPerk(pchar, "HT2")) i = 3;
+				else i = 7;
+			}
+			else
+			{
+				if(CheckCharacterPerk(pchar, "HT2")) i = 4;
+				else i = 15;
+			}
 			if (rand(i) == 3 || TestRansackCaptain) // ugeen --> уменьшил вероятность встретить странную личность с картой до 1/20
 			{ // карты кладов
                 iChar = NPC_GeneratePhantomCharacter("pirate", iNation, MAN, 1);

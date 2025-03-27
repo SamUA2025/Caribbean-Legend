@@ -30,8 +30,8 @@ Utilisez l'accélération - elle permet de gagner du temps, surtout en mer.
 Contrôles : + et -
 }
 
-SeaFastTravelEnglish {Voyage rapide}
-SeaFastTravelEnglish_descr
+SeaFastTravel {Voyage rapide}
+SeaFastTravel_descr
 {
 Le menu d'action permet d'accéder à de nombreuses fonctions utiles à terre comme en mer.
 ~
@@ -40,7 +40,7 @@ La fonction "Naviguer vers" vous permet de voyager rapidement et instantanément
 Utilisez le menu d'action pour atteindre instantanément le "Ghost" et lui envoyer une chaloupe.
 }
 
-SeaFastTravelEnglish_controlsimg1 {BICommandsActivate}
+SeaFastTravel_controlsimg1 {BICommandsActivate}
 
 LandTimeScaleDown {Contrôle du temps au combat}
 LandTimeScaleDown_descr
@@ -82,14 +82,15 @@ Vous pouvez presque toujours trouver un endroit où vous pouvez forcer l'ennemi 
 Collision {Changement de position}
 Collision_descr
 {
-Parfois, au cours d'une bataille, il est nécessaire de changer de position, soit en perçant la ligne ennemie, soit en contournant les alliés.
+Parfois, pendant un combat, il est nécessaire de changer de position en perçant la ligne de l'ennemi ou en contournant les alliés.
 ~
-Quittez le mode combat pour que le héros puisse repousser les autres personnages sur votre chemin. Après avoir changé de position, revenez en mode combat pour continuer à vous battre.
+Votre héros poussera automatiquement les alliés, et pour percer la formation de l'ennemi, vous devez utiliser le sprint ou des esquives.
+Dans le combat, le sprint consomme de l'énergie, donc utilisez-le judicieusement.
 }
 Collision_controlsimg1 {ChrFightMode}
 
-WorldMapEnglish {Carte globale}
-WorldMapEnglish_descr
+WorldMap {Carte globale}
+WorldMap_descr
 {
 La carte globale vous permet d'effectuer des voyages en mer à travers les Caraïbes. Il n'est pas nécessaire de naviguer exactement jusqu'à chaque ville ou baie ; il suffit de quitter la carte globale à proximité de votre cible et d'utiliser la fonction "Naviguer vers".
 ~
@@ -98,20 +99,20 @@ Une utilisation habile de la fonction "Naviguer vers" permet de gagner beaucoup 
 Utilisez les touches de raccourci pour effectuer un zoom arrière sur la carte et pour afficher l'Atlas avec les cartes.
 }
 
-WorldMapEnglish_controlsimg1 {WMapCameraSwitch}
-WorldMapEnglish_controlsimg2 {MapView}
+WorldMap_controlsimg1 {WMapCameraSwitch}
+WorldMap_controlsimg2 {MapView}
 
-LandMapEnglish {Voyager sur terre}
-LandMapEnglish_descr
+LandMap {Voyager sur terre}
+LandMap_descr
 {
 Les cartes peuvent être achetées ou trouvées. Collectionnez toutes les cartes des îles que vous rencontrez pour vous déplacer dans la zone terrestre. Cela est particulièrement utile pour les quêtes, les infiltrations de colonies et la chasse au trésor.
 Toutes les cartes collectées se trouvent dans l'Atlas. 
 }
 
-LandMapEnglish_controlsimg1 {MapView}
+LandMap_controlsimg1 {MapView}
 
-NavigatorEnglish {Compétence de navigation}
-NavigatorEnglish_descr
+Navigator {Compétence de navigation}
+Navigator_descr
 {
 Affectez un navigateur ayant une compétence suffisante en navigation !
 ~
@@ -124,10 +125,10 @@ Les conditions requises pour chaque rang de navire peuvent être consultées en 
 La compétence Navigation se développe lentement, alors engagez des navigateurs expérimentés dans les tavernes dès que vous en avez l'occasion. Cependant, gardez à l'esprit que vous ne pourrez pas trouver un spécialiste avec un niveau de compétence supérieur à 75.
 }
 
-NavigatorEnglish_controlsimg1 {Abilities}
+Navigator_controlsimg1 {Abilities}
 
-AlchemyEnglish {Artisanat}
-AlchemyEnglish_descr
+Alchemy {Artisanat}
+Alchemy_descr
 {
 La fabrication d'objets, principalement des talismans, des potions et des munitions, peut considérablement améliorer votre vie. C'est particulièrement utile dans les combats de boss.
 ~
@@ -136,16 +137,16 @@ Pour fabriquer un objet, il faut trouver ou acheter une recette. Il n'est pas n�
 Au début du jeu, vous avez un choix : prendre la compétence Alchimie et commencer à acheter des recettes tout de suite, ou reporter cette possibilité en milieu de jeu, lorsque vous aurez des boîtes à outils qui remplaceront la dépense d'un précieux point de compétence pour l'Alchimie.
 }
 
-AlchemyEnglish_controlsimg1 {Alchemy}
+Alchemy_controlsimg1 {Alchemy}
 
-LandMapAtSeaEnglish {}
-LandMapAtSeaEnglish_descr
+LandMapAtSea {}
+LandMapAtSea_descr
 {
 Dirigez-vous vers l'autre côté de l'île pour accomplir votre quête. Sortez de la baie par la droite et suivez le rivage !
 }
 
-SalaryEnglish {Entretien des navires}
-SalaryEnglish_descr
+Salary {Entretien des navires}
+Salary_descr
 {
 Les paiements mensuels aux officiers et à l'équipage peuvent compliquer considérablement la vie du capitaine. Le montant total dépend de vos compétences en commerce et en charisme, de la taille du navire et du niveau de difficulté.
 ~
@@ -153,10 +154,10 @@ Même sur les petits navires, il est fortement recommandé d'avoir un trésorier
 
 }
 
-SalaryEnglish_controlsimg1 {ShipState}
+Salary_controlsimg1 {ShipState}
 
-DubloonsEnglish {Doublons}
-DubloonsEnglish_descr
+Dubloons {Doublons}
+Dubloons_descr
 {
 Les doublons d'or sont la véritable mesure de la richesse de votre personnage et de sa capacité à résoudre les problèmes d'argent. Efforcez-vous toujours de gagner ces pièces, car les personnes les plus puissantes des Caraïbes n'offrent leurs services qu'en échange de doublons.
 ~
@@ -164,8 +165,8 @@ La chasse au trésor, les dépôts bancaires, le commerce de biens stratégiques
 
 }
 
-BoxEnglish {Stockage des objets}
-BoxEnglish_descr
+Box {Stockage des objets}
+Box_descr
 {
 Les coffres de votre cabine peuvent contenir un nombre illimité d'objets personnels. En plus de l'équipement obligatoire dans vos emplacements de tenue, il est judicieux de ne transporter que des potions, des amulettes et des munitions.
 ~
@@ -175,8 +176,8 @@ D'autres capitaines suivent également cette pratique, il est donc toujours util
 
 }
 
-HealthEnglish {Vitalité}
-HealthEnglish_descr
+Health {Vitalité}
+Health_descr
 {
 Votre vitalité a diminué ! Cette statistique décrit l'état général de votre personnage et affecte toutes ses capacités.
 ~
@@ -186,8 +187,8 @@ Elle est restaurée par des potions spéciales, des activités romantiques, le r
 
 }
 
-AmuletEnglish {Amulettes}
-AmuletEnglish_descr
+Amulet {Amulettes}
+Amulet_descr
 {
 Les amulettes sont de puissants boosters de personnage divisés en offensifs, défensifs et auxiliaires. Vous ne pouvez pas équiper simultanément des amulettes offensives et défensives, alors choisissez-les judicieusement.
 ~
@@ -197,10 +198,10 @@ Gardez toujours plusieurs séries de boosters dans votre inventaire pour les con
 
 }
 
-AmuletEnglish_controlsimg1 {Inventory}
+Amulet_controlsimg1 {Inventory}
 
-PerkEnglish {Points d'avantage}
-PerkEnglish_descr
+Perk {Points d'avantage}
+Perk_descr
 {
 Vous venez de recevoir votre premier point d'avantage (PA) ! Les PA sont essentiels au développement du personnage et sont divisés en Naval et Personnel.
 ~
@@ -212,10 +213,10 @@ Pour gagner rapidement des PA navals, accomplissez des quêtes et des contrats e
 
 }
 
-PerkEnglish_controlsimg1 {Abilities}
+Perk_controlsimg1 {Abilities}
 
-FighterEnglish {Combattants}
-FighterEnglish_descr
+Fighter {Combattants}
+Fighter_descr
 {
 Votre premier Combattant a rejoint l'équipage ! Attribuez-lui un rôle dans le menu des personnages.
 ~
@@ -231,13 +232,13 @@ Vous pouvez ordonner aux Combattants de maintenir leur position, de suivre le ca
 
 }
 
-FighterEnglish_controlsimg1 {Abilities}
-FighterEnglish_controlsimg2 {OfficersFollow}
-FighterEnglish_controlsimg3 {OfficersCharge}
-FighterEnglish_controlsimg4 {OfficersHold}
+Fighter_controlsimg1 {Abilities}
+Fighter_controlsimg2 {OfficersFollow}
+Fighter_controlsimg3 {OfficersCharge}
+Fighter_controlsimg4 {OfficersHold}
 
-RestEnglish {Option de repos}
-RestEnglish_descr
+Rest {Option de repos}
+Rest_descr
 {
 L'option Repos est désormais disponible dans le menu Action !
 ~
@@ -246,7 +247,7 @@ Tout dans le jeu suit un cycle jour/nuit : les gardes sont absents à l'embarcad
 Utilisez cette fonction en mer et dans la nature. Louez une chambre dans une taverne si vous êtes dans une ville.
 
 }
-RestEnglish_controlsimg1{BICommandsActivate}
+Rest_controlsimg1{BICommandsActivate}
 
 Navigation{Contrôle du navire}
 Navigation_descr
@@ -270,8 +271,8 @@ Navigation_controlsimg2 {Ship_SailDown}
 Navigation_controlsimg3 {MiniMapZoomIn}
 Navigation_controlsimg4 {MiniMapZoomOut}
 
-StealthEnglish{Furtivité}
-StealthEnglish_descr
+Stealth{Furtivité}
+Stealth_descr
 {
 Vous n'êtes pas les bienvenus dans la plupart des colonies des Caraïbes. Il y a deux façons de s'infiltrer dans une ville : par le port ou par les portes.
 ~
@@ -314,8 +315,8 @@ Plus votre compétence d'abordage est élevée, plus il vous sera facile de réu
 Un Bosco expérimenté, des Combattants, des amulettes et des compétences de combat personnelles développées peuvent compenser l'avantage numérique de l'ennemi.
 }
 
-MushketEnglish{Mousquets}
-MushketEnglish_descr
+Mushket{Mousquets}
+Mushket_descr
 {
 Les armes à feu à canon long sont extrêmement dangereuses au combat. Seuls le personnage principal doté de la compétence Mousquetaire et certains officiers uniques peuvent les utiliser. 
 L'exemple le plus notable est Tichingitu, et c'est lui qui devrait obtenir le premier mousquet que vous trouverez.
@@ -324,20 +325,20 @@ Contrairement aux armes de mêlée, les armes à feu offrent une plus grande fle
 
 }
 
-MushketEnglish_controlsimg1 {Inventory}
+Mushket_controlsimg1 {Inventory}
 
-CameraControl{Yo-Ho !}
+CameraControl{Ahoy!}
 CameraControl_descr
 {
-Bienvenue en mode histoire ! Avant de prendre la mer, vous devez vous assurer que la terre ne vous vaincra pas.
-~
-Caribbean Legend est un jeu exigeant, mais il n'est pas difficile à jouer. Pour vous aider à vous installer dans le Nouveau Monde, nous avons préparé une aventure tutoriel étendue sur l'île de la Martinique. En la complétant, vous maîtriserez toutes les compétences nécessaires et comprendrez les mécanismes du jeu.
-~
-Le jeu se contrôle à l'aide des touches de déplacement et de la souris active. Dans la plupart des cas, il suffit d'appuyer sur la touche de déplacement vers l'avant et de se diriger à l'aide de la caméra. Vous pouvez toujours ajuster la vitesse de la caméra dans les paramètres.
-~
-Certains joueurs trouvent que les commandes ne sont pas assez réactives, et nous sommes d'accord. C'est pourquoi nous travaillons activement à leur amélioration, et nous espérons que dans la prochaine mise à jour majeure, le message de ce tutoriel sera différent.
-~
-Merci de jouer, et à bientôt en mer !
+Bienvenue dans le Mode Histoire.  
+Avant de braver la mer ouverte, tu dois survivre sur la terre. Le Nouveau Monde ne tolère pas les fous - et n'offre aucune seconde chance.
+~  
+Pour t'aider à t'adapter au large, nous avons préparé une aventure tutorielle sur l'île de la Martinique. Là, tu maîtriseras les compétences que chaque capitaine doit connaître - et gagneras ton premier commandement.
+~  
+Déplace-toi avec tes touches, regarde autour de toi avec ta souris. Tu peux marcher, courir ou sprinter quand nécessaire. Le menu d'action sera également très utile - surtout pour les voyages rapides, qui se débloquent après le tutoriel.
+~  
+Ta légende commence ici.  
+À bientôt en mer.
 }
 
 CameraControl_controlsimg1 {ChrForward}
@@ -345,19 +346,21 @@ CameraControl_controlsimg2 {ChrStrafeLeft}
 CameraControl_controlsimg3 {ChrBackward}
 CameraControl_controlsimg4 {ChrStrafeRight}
 CameraControl_controlsimg5 {ShipCamera_Turn_H}
+CameraControl_controlsimg6 {LICommandsActivate}
 
-CameraControlFP{Yo-Ho !}
+CameraControlFP{Ahoy!}
 CameraControlFP_descr
 {
-Bienvenue dans le Nouveau Monde, Capitaine !
-~
-Caribbean Legend est un jeu exigeant, mais il n'est pas difficile à jouer. Si vous n'avez pas encore joué au mode histoire, nous vous recommandons d'y passer quelques heures pour vous mettre à l'aise et apprendre les mécanismes de base du jeu.
-~
-Le jeu se contrôle à l'aide des touches de déplacement et de la souris active. Dans la plupart des cas, il suffit d'appuyer sur la touche de déplacement vers l'avant et de se diriger à l'aide de la caméra. Vous pouvez toujours ajuster la vitesse de la caméra dans les paramètres.
-~
-Certains joueurs trouvent que les commandes ne sont pas assez réactives, et nous sommes d'accord. C'est pourquoi nous travaillons activement à leur amélioration, et nous espérons que dans la prochaine mise à jour majeure, le message de ce tutoriel sera différent.
-~
-Merci de jouer, et à bientôt en mer !
+Bienvenue dans le Nouveau Monde !
+~  
+Ces eaux sont impitoyables - et la fortune favorise rarement les téméraires. Commence petit : voyage entre colonies amies, fais des courses, livre des biens et des passagers, et participe au commerce local.
+~  
+Des doublons en or te permettront d'acheter des cartes vers des trésors enfouis. Des pesos en argent garderont ton navire à flot et te permettront d'engager des officiers - et sans eux, même un marchand solitaire peut être ta fin.
+~  
+Déplace-toi avec tes touches, regarde autour de toi avec ta souris. Tu peux marcher, courir ou sprinter quand nécessaire. Le menu d'action sera également utile - surtout pour les voyages rapides et d'autres caractéristiques avancées.
+~  
+Ta légende commence ici.  
+À bientôt en mer.
 }
 
 CameraControlFP_controlsimg1 {ChrForward}
@@ -365,3 +368,18 @@ CameraControlFP_controlsimg2 {ChrStrafeLeft}
 CameraControlFP_controlsimg3 {ChrBackward}
 CameraControlFP_controlsimg4 {ChrStrafeRight}
 CameraControlFP_controlsimg5 {ShipCamera_Turn_H}
+CameraControlFP_controlsimg6 {LICommandsActivate}
+
+MarksmanMode{Visée}
+MarksmanMode_descr
+{
+Vous pouvez viser avec n'importe quelle arme à feu pour tirer plus précisément. Maintenez le bouton de visée enfoncé pour entrer en mode tireur d'élite. Relâchez le bouton pour sortir sans tirer.  
+~  
+Tirer depuis le mode tireur d'élite est plus précis et mortel, mais le compromis est une visibilité et une vitesse de déplacement réduites.  
+~  
+Plus vous visez longtemps, plus votre tir infligera de dégâts. Un tir à la tête infligera encore plus de dégâts. Si vous subissez des dommages, votre visée sera réinitialisée et votre personnage vacillera.
+}
+
+MarksmanMode_controlsimg1 {ChrAiming}
+
+

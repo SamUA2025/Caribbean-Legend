@@ -14,10 +14,10 @@ void LAi_type_carrier_Init(aref chr)
 	sTemp =	strcut(sTemp, 0, strlen(sTemp)-2);
 	BeginChangeCharacterActions(chr);
 	chr.actions.idle.i1 = sTemp;
-	chr.actions.nfhit	= sTemp;
-	chr.actions.walk = sTemp;
-	chr.actions.stsUp = "Stairs_" + sTemp;
-	chr.actions.stsDown = "Stairs_" + sTemp;
+	chr.actions.nfhit	= sTemp; // TO_DO
+	chr.actions.forward_walk = sTemp;
+	chr.actions.forward_walk_stairs_up = "Stairs_" + sTemp;
+	chr.actions.forward_walk_stairs_down = "Stairs_" + sTemp;
 	chr.actions.turnLeft = sTemp;
 	chr.actions.turnRight = sTemp;
 	EndChangeCharacterActions(chr);

@@ -92,7 +92,7 @@ void ProcessDialogEvent()
 			{
 				NPChar.quest.meeting = "1";
 				dialog.Text = NPCharRepPhrase(npchar,LinkRandPhrase("Ich bin","Mein Name ist ","Du kannst mich nennen ")+GetFullName(npchar)+LinkRandPhrase(". Was willst du?",". Ich habe dich noch nie gesehen "+", wer bist du?",". Wer bist du und was willst du von mir?"),LinkRandPhrase("Grüße, "+GetAddress_Form(NPChar)+". Mein Name ist "+GetFullName(npchar)+". Und wie ist dein Name?","Hallo "+GetAddress_Form(NPChar)+"! Ich bin "+GetFullName(npchar)+". Kann ich Ihren Namen erfahren?","Ja, "+GetAddress_Form(NPChar)+". Was willst du? Und übrigens ist mein Name "+GetFullName(npchar)+". Und wie heißt du?"));
-				Link.l1 = pcharrepphrase(LinkRandPhrase("Verdammt noch mal! ","Verdammt! ","Verdammt seist du! ")+"Ja, ich bin der Kapitän "+GetFullName(Pchar)+RandPhraseSimple(", hast du noch nie von mir gehört, Bastard?","?")," und "+GetSexPhrase("der berühmteste Pirat","das berühmteste Mädchen-Pirat")+" auf See!"," und verdamme mich, wenn ich falsch liege!"),LinkRandPhrase("Ich bin "+GetFullName(Pchar)+", Kapitän.","Mein Name ist "+GetFullName(Pchar)+".","Sie können mich Kapitän nennen "+GetFullName(Pchar)+"."));
+				Link.l1 = pcharrepphrase(LinkRandPhrase("Verdammt noch mal! ","Verdammt! ","Verdammt seist du! ")+"Ja, ich bin der Kapitän "+GetFullName(Pchar)+LinkRandPhrase(", hast du noch nie von mir gehört, Bastard?"," und "+GetSexPhrase("der berühmteste Pirat","das berühmteste Mädchen-Pirat")+" auf See!"," und verdamme mich, wenn ich falsch liege!"),LinkRandPhrase("Ich bin "+GetFullName(Pchar)+", Kapitän.","Mein Name ist "+GetFullName(Pchar)+".","Sie können mich Kapitän nennen "+GetFullName(Pchar)+"."));
 				Link.l1.go = "Meeting";
 				
 				//==> прибыла инспекция на Святом Милосердии
@@ -103,6 +103,14 @@ void ProcessDialogEvent()
 					link.l1.go = "exit";
 				}
 				//<== прибыла инспекция на Святом Милосердии
+				//==> Леди Бет в порту города
+				if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_town")
+				{
+					dialog.Text = findLedyBethRumour(npchar);
+					link.l1 = "...";
+					link.l1.go = "exit";
+				}
+				//<== Леди Бет в порту города
 			}
 			else
 			{

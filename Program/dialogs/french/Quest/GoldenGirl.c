@@ -1496,7 +1496,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.text = "Un capitaine célèbre, dites-vous ? Je n’ai jamais entendu parler de vous… Qu’est-ce que vous prenez ?";
+				dialog.text = "Un capitaine célèbre, dites-vous ? Je n’ai jamais entendu parler de vous... Qu’est-ce que vous prenez ?";
 			}
 			link.l1 = "...";
 			if (pchar.questTemp.GoldenGirl.Vine == "red") link.l1.go = "Angerran_1";

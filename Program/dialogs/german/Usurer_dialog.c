@@ -177,6 +177,15 @@ void ProcessDialogEvent()
 				link.l1.go = "FMQG_x";
 				break;
 			}
+			// Леди Бет -->
+			if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_Bank" && !CheckAttribute(pchar, "questTemp.LadyBeth_Usurer")) // Блеквуд в городе
+			{
+				dialog.Text = "Oh, Kapitän! Sehen Sie nur, was ich heute habe. Einige Dinge habe ich von Blackwoods Leuten erworben. Sie brauchen Geld für eine neue Expedition - und wir profitieren davon, nicht wahr?";
+				link.l1 = "Weiß Blackwood, dass seine Leute ihre Funde verkaufen?";
+				link.l1.go = "LadyBeth_Usurer_1";
+				break;
+			}
+			// Леди Бет <--
 			
 			if(NPChar.quest.meeting == "0")
 			{
@@ -2688,6 +2697,22 @@ void ProcessDialogEvent()
 			link.l1 = "...";
 			link.l1.go = "exit";
 		break;
+		
+		// Леди Бет -->
+		case "LadyBeth_Usurer_1":
+			dialog.text = "Natürlich! Viele wollen einfach nur ihr Geld und verschwinden. Besonders bei den jüngsten Gerüchten...";
+			link.l1 = "Welche Gerüchte?";
+			link.l1.go = "LadyBeth_Usurer_2";
+		break;
+		
+		case "LadyBeth_Usurer_2":
+			dialog.text = "Man sagt, die Bedingungen in der Mannschaft verschlechtern sich. Monsieur Blackwood soll sogar regelmäßige Verluste in Kauf nehmen - was früher nie vorkam. Aber das geht mich nichts an. Ich verkaufe nur. Also, was interessiert Sie?";
+			link.l1 = "...";
+			link.l1.go = "next";
+			npchar.quest.item_date = "LadyBeth";
+			pchar.questTemp.LadyBeth_Usurer = true;
+		break;
+		// Леди Бет <--
 	}	
 }
 

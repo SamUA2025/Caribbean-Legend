@@ -207,7 +207,7 @@ float LAi_GetDamageAttackType(aref attack, aref enemy, string attackType, ref aB
 				}
 				if(IsEquipCharacterByArtefact(attack, "amulet_3")) // belamour плата за защиту от критиклов 
 				{
-					if(ShipBonus2Artefact(attack)) kAttackDmg = kAttackDmg * 0.95;
+					if(ShipBonus2Artefact(attack, SHIP_GALEON_SM)) kAttackDmg = kAttackDmg * 0.95;
 					else kAttackDmg = kAttackDmg * 0.90;
 				}
 				if(IsEquipCharacterByArtefact(enemy, "indian_3")) // belamour а хочешь критов, получай по шапке 
@@ -594,7 +594,7 @@ float LAi_GunCalcProbability(aref attack, aref enemy, float kDist, string sType)
 	if(IsEquipCharacterByArtefact(attack, "amulet_1")) p = p * 0.90;
 	if(IsEquipCharacterByArtefact(enemy,  "amulet_2"))
 	{
-		if(ShipBonus2Artefact(enemy)) p = p * 0.75;
+		if(ShipBonus2Artefact(enemy, SHIP_GALEON_SM)) p = p * 0.75;
 		else p = p * 0.85;
 	}
 	
@@ -611,42 +611,48 @@ float LAi_GunCalcDamage(aref attack, aref enemy, string sType)
 	
 	string sBullet = LAi_GetCharacterBulletType(attack, sType);
 	
-	if(sBullet == "powder_pellet") LaunchBlastPellet(enemy);
-	if(sBullet == "grenade") LaunchBlastGrenade(enemy);
-	
-	if(CheckAttribute(enemy, "cirassId"))
+	if(!IsBulletGrape(sBullet))
 	{
-		min = stf(attack.chr_ai.(sType).DmgMin_C);
-		max = stf(attack.chr_ai.(sType).DmgMax_C);
+		if(sBullet == "powder_pellet") LaunchBlastPellet(enemy);
+		if(sBullet == "grenade") LaunchBlastGrenade(enemy);
 		
-		if(stf(attack.chr_ai.(sType).EnergyP_C) > 0.0 )
+		if(CheckAttribute(enemy, "cirassId"))
 		{
-			if(sBullet != "powder_pellet")	Lai_CharacterChangeEnergy(enemy, -stf(attack.chr_ai.(sType).EnergyP_C));
-			else
+			min = stf(attack.chr_ai.(sType).DmgMin_C);
+			max = stf(attack.chr_ai.(sType).DmgMax_C);
+			
+			if(stf(attack.chr_ai.(sType).EnergyP_C) > 0.0 )
 			{
-				if(enemy.chr_ai.group != LAI_GROUP_PLAYER) Lai_CharacterChangeEnergy(enemy, -stf(attack.chr_ai.(sType).EnergyP_C));
-			}
-		}	
-	}
-	else
-	{
-		min = stf(attack.chr_ai.(sType).DmgMin_NC);
-		max = stf(attack.chr_ai.(sType).DmgMax_NC);
-		
-		if(stf(attack.chr_ai.(sType).EnergyP_NC) > 0.0)
+				if(sBullet != "powder_pellet")	Lai_CharacterChangeEnergy(enemy, -stf(attack.chr_ai.(sType).EnergyP_C));
+				else
+				{
+					if(enemy.chr_ai.group != LAI_GROUP_PLAYER) Lai_CharacterChangeEnergy(enemy, -stf(attack.chr_ai.(sType).EnergyP_C));
+				}
+			}	
+		}
+		else
 		{
-			if(sBullet != "powder_pellet") Lai_CharacterChangeEnergy(enemy, -stf(attack.chr_ai.(sType).EnergyP_NC));
-			else
+			min = stf(attack.chr_ai.(sType).DmgMin_NC);
+			max = stf(attack.chr_ai.(sType).DmgMax_NC);
+			
+			if(stf(attack.chr_ai.(sType).EnergyP_NC) > 0.0)
 			{
-				if(enemy.chr_ai.group != LAI_GROUP_PLAYER) Lai_CharacterChangeEnergy(enemy, -stf(attack.chr_ai.(sType).EnergyP_C));
-			}
-		}	
+				if(sBullet != "powder_pellet") Lai_CharacterChangeEnergy(enemy, -stf(attack.chr_ai.(sType).EnergyP_NC));
+				else
+				{
+					if(enemy.chr_ai.group != LAI_GROUP_PLAYER) Lai_CharacterChangeEnergy(enemy, -stf(attack.chr_ai.(sType).EnergyP_C));
+				}
+			}	
+		}
 	}
 
 	//if (IsCharacterPerkOn(attack, "HT4") && enemy.chr_ai.group != LAI_GROUP_PLAYER) 
 	if (IsCharacterPerkOn(attack, "Sniper") && enemy.chr_ai.group != LAI_GROUP_PLAYER) 
 	{
-		Lai_CharacterChangeEnergy(enemy, -(rand(20) + 20));
+		if(IsBulletGrape(sBullet))
+			Lai_CharacterChangeEnergy(enemy, -(rand(1) + 1));
+		else
+			Lai_CharacterChangeEnergy(enemy, -(rand(20) + 20));
 	}	
 	
 	//Учитываем скилы
@@ -659,6 +665,10 @@ float LAi_GunCalcDamage(aref attack, aref enemy, string sType)
 	{
 		dmg = stf(attack.chr_ai.(sType).basedmg);
 		dmg *= Bring2Range(0.75, 1.5, 0.0, 1.0, dmg);
+		if(IsEquipCharacterByArtefact(attack, "talisman18"))
+		{
+			dmg *= 1.0 + 2.0 * ArticlesBonus(attack); 
+		}
 	}
 	else
 		dmg = min + (max - min)*frandSmall(aSkill);
@@ -673,7 +683,7 @@ float LAi_GunCalcDamage(aref attack, aref enemy, string sType)
 	if(IsEquipCharacterByArtefact(enemy,  "amulet_1")) dmg *= 0.85;
 	if(IsEquipCharacterByArtefact(attack, "amulet_2")) 
 	{
-		if(ShipBonus2Artefact(attack)) dmg *= 0.94;
+		if(ShipBonus2Artefact(attack, SHIP_GALEON_SM)) dmg *= 0.94;
 		else dmg *= 0.9;
 	}
 	if(IsEquipCharacterByArtefact(attack, "KhaelRoa_item")) dmg = dmg*10; // калеуче
@@ -745,28 +755,40 @@ float LAi_GunCalcDamage(aref attack, aref enemy, string sType)
 	return dmg;
 }
 
-//Расчитать полученный опыт при попадании из пистолета
-float LAi_GunCalcExperience(aref attack, aref enemy, float dmg)
+//Расчитать полученный опыт при попадании из пистолета - evganat - переделал
+float LAi_GunCalcDamageExperience(aref attack, aref enemy, float dmg, bool isHeadShot)
 {
-    //Вычисляем полученый опыт
-	float ra = 1.0;
-	float re = 1.0;
-	if(CheckAttribute(attack, "rank"))
+	float hp = stf(enemy.chr_ai.hp);
+	if(dmg > hp)
+		dmg = hp;
+	float exp = dmg * 0.08;
+	if(isHeadShot)
+		exp *= 1.5;
+	return LAi_GunCalcExperience(attack, enemy, exp);
+}
+
+float LAi_GunCalcKillExperience(aref attack, aref enemy)
+{
+	return LAi_GunCalcExperience(attack, enemy, 20.0);
+}
+
+float LAi_GunCalcExperience(aref attack, aref enemy, float exp)
+{
+	int attackRank = sti(attack.rank);
+	int enemyRank = sti(enemy.rank);
+	float kRank = 1.0 + (enemyRank - attackRank) * 0.1;
+	if(kRank > 1.6)
+		kRank = 1.6;
+	else
 	{
-		ra = stf(attack.rank);
+		if(kRank < 0.4)
+			kRank = 0.4;
 	}
-	if(CheckAttribute(enemy, "rank"))
-	{
-		re = stf(enemy.rank);
-	}
-	if(ra < 1.0) ra = 1.0;
-	if(re < 1.0) re = 1.0;
-	dmg = dmg*((1.0 + re*0.5)/(1.0 + ra*0.5));
-	if (stf(enemy.chr_ai.hp) < dmg)
-	{
-       dmg = stf(enemy.chr_ai.hp);
-	}
-    return dmg;
+	exp *= kRank;
+	
+	if(CheckAttribute(enemy, "City"))
+		exp *= 0.1;
+	return exp;
 }
 
 //Расчитаем текущую скорость перезарядки пистолета
@@ -946,7 +968,7 @@ void LAi_ApplyCharacterAttackDamage(aref attack, aref enemy, string attackType, 
 	// бонус/штраф у амулетов 
 	if(IsEquipCharacterByArtefact(enemy,  "amulet_3"))
 	{
-		if(ShipBonus2Artefact(enemy)) fCritical -= 0.20;
+		if(ShipBonus2Artefact(enemy, SHIP_GALEON_SM)) fCritical -= 0.20;
 		else fCritical -= 0.15;
 	}
 	if(IsEquipCharacterByArtefact(enemy,  "indian_4")) fCritical += 0.10;
@@ -1166,7 +1188,6 @@ void LAi_ApplyCharacterFireDamage(aref attack, aref enemy, float kDist, float fA
 		rItm = ItemsFromID(GetCharacterEquipByGroup(attack, MUSKET_ITEM_TYPE));
 	}
 	
-	Lai_CharacterChangeEnergy(attack, -4); // жрем энергию за выстрел boal 20/06/06
 	//Если неубиваемый, то нетрогаем его
 	if(CheckAttribute(enemy, "chr_ai.immortal"))
 	{
@@ -1271,25 +1292,32 @@ void LAi_ApplyCharacterFireDamage(aref attack, aref enemy, float kDist, float fA
 		}
 	}
 	
-	if(damage > 0.0)
+	// belamour legendary edtion меткий выстрел (headshot) -->
+	if(InstaShot && damage > 0.0)
 	{
-		// belamour legendary edtion меткий выстрел (headshot) -->
-		if(InstaShot)
+		if(rand(99) < InstaShot) 
 		{
-			if(rand(99) < InstaShot) 
+			damage = stf(enemy.chr_ai.hp);
+			if(ShowCharString()) 
 			{
-				damage = stf(enemy.chr_ai.hp);
-				if(ShowCharString()) 
-				{
-					Log_Chr(enemy, XI_ConvertString("GoodShot"));
-				}
-				else
-				{
-					if(attack.id == "Blaze") log_info(XI_ConvertString("GoodShot"));
-				}
+				Log_Chr(enemy, XI_ConvertString("GoodShot"));
+			}
+			else
+			{
+				if(attack.id == "Blaze") log_info(XI_ConvertString("GoodShot"));
 			}
 		}
-		// <-- legendary edition
+	}
+	// <-- legendary edition
+	
+	// расчёт опыта за урон
+	float exp = LAi_GunCalcDamageExperience(attack, enemy, damage, isHeadShot);
+	bool isSetBlade = CheckAttribute(enemy, "equip.blade");
+	if(isSetBlade && !noExp)
+		AddCharacterExpToSkill(attack, SKILL_PISTOL, exp);
+	
+	if(damage > 0.0)
+	{
 		if(!CheckAttribute(pchar,"Achievment.ExtraDamage"))
 		{
 			if (attack.id == "Blaze" && MakeInt(damage + 0.5) > 999)
@@ -1309,52 +1337,27 @@ void LAi_ApplyCharacterFireDamage(aref attack, aref enemy, float kDist, float fA
 		if(IsCharacterEquippedArtefact(attack, "indian_poison")) MakeIndianPoisonAttack(enemy, attack);
 		if(CheckAttribute(attack, "cheats.indian_poison")) MakeIndianPoisonAttack(enemy, attack);
 	}
-	//Есть ли оружие у цели
-	bool isSetBalde = (CheckAttribute(enemy, "equip.blade") == true);//(SendMessage(enemy, "ls", MSG_CHARACTER_EX_MSG, "IsSetBalde") != 0);
-	//Начисляем опыт
-	float exp = LAi_GunCalcExperience(attack, enemy, damage);
 	
 	if(LAi_IsDead(enemy))
 	{
-		// boal skill -->
-		float ra = 1.0;
-	    float re = 1.0;
-	    if(CheckAttribute(attack, "rank"))
-	    {
-	       ra = stf(attack.rank);
-	    }
-	    if(CheckAttribute(enemy, "rank"))
-	    {
-	       re = stf(enemy.rank);
-	    }
-        if (CheckAttribute(enemy, "City"))
+		float expKill = LAi_GunCalcKillExperience(attack, enemy);
+		AddCharacterExpToSkill(attack, SKILL_PISTOL, expKill);
+		if(!CheckAttribute(enemy, "City"))
 		{
-			AddCharacterExpToSkill(attack, SKILL_PISTOL, makefloat((15.0 + ((1 + re) / (1+ra))*12.0)/20));
-		}
-		else
-		{
-			AddCharacterExpToSkill(attack, SKILL_PISTOL, makefloat(15.0 + ((1 + re) / (1+ra))*12.0));
 			AddCharacterExpToSkill(attack, SKILL_DEFENCE, 1);
 			AddCharacterExpToSkill(attack, SKILL_FORTUNE, 2);
 			AddCharacterExpToSkill(attack, SKILL_LEADERSHIP, 1);
 		}
-		// boal skill <--
 		// boal statistic info 17.12.2003 -->
         Statistic_KillChar(attack, enemy, "_g");
 		Achievment_SetStat(27, 1);
         // boal statistic info 17.12.2003 <--        
         //Начислим за убийство
-  		LAi_SetResultOfDeath(attack, enemy, isSetBalde);
+  		LAi_SetResultOfDeath(attack, enemy, isSetBlade);
+		
+		if(fAimingTime >= 0.0)	// после убийства на секунду меняем прицел
+			pchar.chr_ai.kill_timer = 0.5;
 	}
-	if(!isSetBalde)
-	{
-		exp = 0.0;
-	}
-	if(!noExp)
-    {
-       if (CheckAttribute(enemy, "City")) AddCharacterExpToSkill(attack, SKILL_PISTOL, Makefloat(exp*0.1));
-        else AddCharacterExpToSkill(attack, SKILL_PISTOL, Makefloat(exp*0.85));
-    }
 }
 
 float LAi_NPC_GetAttackPreferenceWeight(aref chr, string attackType, float fOff, float fOn)
@@ -1729,7 +1732,9 @@ bool LAi_ShotOnlyEnemy()
 void AimingUpdate()
 {
 	float fTime = GetEventData();
-	pchar.chr_ai.aiming_time = fTime;
+	int isFindedTarget = GetEventData();
+	aref target = GetEventData();
+	BI_CrosshairRefresh(fTime, isFindedTarget, target);
 }
 
 #event_handler("GetShardsQuantity","GetShardsQuantity");

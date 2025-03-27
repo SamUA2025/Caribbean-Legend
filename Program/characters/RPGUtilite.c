@@ -1193,8 +1193,12 @@ int SetCharacterSkillByQuestBlade(ref rChar, String sSkillName)
 	int iValue = 0;
 	String sBlade = GetCharacterEquipByGroup(rChar, BLADE_ITEM_TYPE);
 	
+	
+	//belamour генерабельные клинки имеют id BLADE_XX_YYYY
 	// Рапира бретера cle
 	if(sSkillName == SKILL_F_LIGHT && HasSubStr(sBlade, "blade_39")) return 10;
+	// Дуэльная шпага cle
+	if(sSkillName == SKILL_F_LIGHT && HasSubStr(sBlade, "blade_38")) return 5;
 	
 	switch(sBlade)
 	{	
@@ -1262,11 +1266,6 @@ int SetCharacterSkillByQuestBlade(ref rChar, String sSkillName)
 		// сабля Блейза cle
 		case "pirate_cutlass"	:
 			if(sSkillName == SKILL_FENCING)		iValue = 5;
-		break;
-		
-		// Дуэльная шпага cle
-		case "blade_38"	:
-			if(sSkillName == SKILL_F_LIGHT)		iValue = 5;
 		break;
 		
 		// Итальянская рапира cle
@@ -1472,7 +1471,7 @@ int GetCharacterSkillSimple(ref _refCharacter, string skillName)
 		skillN += SetCharacterSkillByItem(_refCharacter, skillName, SKILL_LEADERSHIP, 	 "mineral31", 	-10);
     	skillN += SetCharacterSkillByItem(_refCharacter, skillName, SKILL_FORTUNE,       "mineral31", 	-10);
 		
-		if(ShipBonus2Artefact(_refCharacter))
+		if(ShipBonus2Artefact(_refCharacter, SHIP_GALEON_SM))
 		{
 			skillN += SetCharacterSkillByEquippedItem(_refCharacter, skillName, SKILL_SAILING, "obereg_7", 15);
 			if(bHero) skillN += SetCharacterSkillByEquippedItem(_refCharacter, skillName, SKILL_DEFENCE, "talisman17", 10);
@@ -1518,7 +1517,7 @@ int GetCharacterSkillSimple(ref _refCharacter, string skillName)
 		//<--
 		// ugeen - должно быть в конце, множители к скиллам по наличию артефактов
 		skillN = makeint(skillN * AddMultiplySkillByEquippedItem(_refCharacter, skillName,   SKILL_ACCURACY, "indian_9", 1.10));
-		if(ShipBonus2Artefact(_refCharacter))
+		if(ShipBonus2Artefact(_refCharacter, SHIP_GALEON_SM))
 		{
 			skillN = makeint(skillN * AddMultiplySkillByEquippedItem(_refCharacter, skillName,    SKILL_FORTUNE, "amulet_7", 0.75));
 			skillN = makeint(skillN * AddMultiplySkillByEquippedItem(_refCharacter, skillName,      SKILL_SNEAK, "amulet_6", 0.75));
@@ -2212,7 +2211,7 @@ void SetNewDayHealth()
     }
 	if(IsEquipCharacterByArtefact(mainChr, "amulet_6"))
 	{
-		if(ShipBonus2Artefact(mainChr)) add += 1;
+		if(ShipBonus2Artefact(mainChr, SHIP_GALEON_SM)) add += 1;
 		add += 1;
 	}
     if (damg >= (maxhp / 1.5) )
@@ -2246,7 +2245,7 @@ void SetNewDayHealthMax()
 	// belamour legendary edition отменное здоровье защищает от инвалидности
 	if(CheckCharacterPerk(mainChr, "Medic")) maxhp *= 1.3;
     float fShipBonus = 1.15;
-	if(ShipBonus2Artefact(mainChr)) fShipBonus = 1.25;
+	if(ShipBonus2Artefact(mainChr, SHIP_GALEON_SM)) fShipBonus = 1.25;
     if (damg > (maxhp * 3.5 * isEquippedAmuletUse(mainChr, "amulet_6", 1.0, fShipBonus)))
     {
         AddCharacterMaxHealth(mainChr, -1);
@@ -2285,7 +2284,7 @@ void AddCharacterHealth(ref mainChr, float add)
 		notification(StringFromKey("RPGUtilite_9"),"HealthDown");
 		if(CheckAttribute(mainChr,"systeminfo.tutorial.health"))
 		{
-			LaunchTutorial("Health" + LanguageGetLanguage(), 1);
+			LaunchTutorial("Health", 1);
 			DeleteAttribute(mainChr,"systeminfo.tutorial.health");
 		}
     }
@@ -3275,6 +3274,8 @@ void initMainFreePlayCharacterItem()
 	ch.alchemy.known = 1;
 	AddQuestRecordInfo("Recipe", "cartridge");
 	SetAlchemyRecipeKnown("cartridge");
+    AddQuestRecordInfo("Recipe", "clock2");
+	SetAlchemyRecipeKnown("clock2");
 	if(GetDLCenabled(DLC_APPID_1))
 	{
 		AddItems(ch, "knife_03", 1);
@@ -3510,7 +3511,7 @@ int GetDefenceCritical(ref chr)
 	if(IsEquipCharacterByArtefact(chr, "indian_4")) chance += 10;
 	if(IsEquipCharacterByArtefact(chr,  "amulet_3"))
 	{
-		if(ShipBonus2Artefact(chr)) chance  -= 20;
+		if(ShipBonus2Artefact(chr, SHIP_GALEON_SM)) chance  -= 20;
 		else chance  -= 15;
 	}
 	if(CheckAttribute(chr, "cirassId"))

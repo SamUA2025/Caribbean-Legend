@@ -1598,7 +1598,7 @@ void QuestComplete(string sQuestName, string qname)
 		if(Santa_Misericordia_QuestComplete(sQuestName, qname)) return;
 		if(GenQuests_QuestComplete(sQuestName, qname)) return;
 		if(MiniQuests_QuestComplete(sQuestName, qname)) return;
-		//if(LadyBeth_QuestComplete(sQuestName, qname)) return;
+		if(LadyBeth_QuestComplete(sQuestName, qname)) return;
 	}	
 }
 

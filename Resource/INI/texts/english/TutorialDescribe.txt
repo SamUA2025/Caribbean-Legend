@@ -30,8 +30,8 @@ Make the use of acceleration - it saves time, especially at sea.
 Controls: + and -
 }
 
-SeaFastTravelEnglish {Fast Travel}
-SeaFastTravelEnglish_descr
+SeaFastTravel {Fast Travel}
+SeaFastTravel_descr
 {
 The action menu opens up many useful functions both on land and at sea.
 ~
@@ -40,7 +40,7 @@ The 'Sail To' function allows you to fast travel instantly next to a friendly sh
 Use the action menu to instantly reach the "Ghost" and then send a longboat to her.
 }
 
-SeaFastTravelEnglish_controlsimg1 {BICommandsActivate}
+SeaFastTravel_controlsimg1 {BICommandsActivate}
 
 LandTimeScaleDown {Combat Time Control}
 LandTimeScaleDown_descr
@@ -79,17 +79,18 @@ If you are outnumbered, try to use the environment to gain an advantage in battl
 You can almost always find a place where you can force the enemy to fight you one-on-one or two at a time.
 }
 
-Collision {Changing Position}
+Collision {Position Change}
 Collision_descr
 {
-Sometimes during a battle, it becomes necessary to change position, either by breaking through the enemy line or circumventing allies.
+Sometimes during battle, there is a need to change position by breaking through the enemy's line or by maneuvering around allies.
 ~
-Exit combat mode so the hero can push other characters from your way. After changing positions, re-enter combat mode to continue fighting.
+Your hero will automatically push aside allies, and to break through the enemy's formation, you need to use sprinting or dashes.
+In battle, sprinting consumes energy, so use it wisely.
 }
 Collision_controlsimg1 {ChrFightMode}
 
-WorldMapEnglish {Global Map}
-WorldMapEnglish_descr
+WorldMap {Global Map}
+WorldMap_descr
 {
 The global map allows you to make sea voyages across the Caribbean. It is not necessary to sail exactly to each city or bay; just exit the global map in the vicinity of your target and use the 'Sail To' function.
 ~
@@ -98,20 +99,20 @@ Skillful use of the 'Sail to' function can significantly save time. For example,
 Use hotkeys to zoom out on the map and to display the Atlas with maps.
 }
 
-WorldMapEnglish_controlsimg1 {WMapCameraSwitch}
-WorldMapEnglish_controlsimg2 {MapView}
+WorldMap_controlsimg1 {WMapCameraSwitch}
+WorldMap_controlsimg2 {MapView}
 
-LandMapEnglish {Traveling on Land}
-LandMapEnglish_descr
+LandMap {Traveling on Land}
+LandMap_descr
 {
 Maps can be bought or found. Collect every island map you encounter to navigate around the landmass. This is especially useful in quests, colony infiltrations, and treasure hunting.
 All collected maps can be found in the Atlas. 
 }
 
-LandMapEnglish_controlsimg1 {MapView}
+LandMap_controlsimg1 {MapView}
 
-NavigatorEnglish {Navigation Skill}
-NavigatorEnglish_descr
+Navigator {Navigation Skill}
+Navigator_descr
 {
 Assign a Navigator with a sufficient Navigation skill!
 ~
@@ -124,10 +125,10 @@ Requirements for each ship rank can be seen by right-clicking on the Navigation 
 The Navigation skill grows slowly, so hire experienced navigators in taverns at your first opportunity. However, keep in mind that you won't be able to find a specialist with a skill level above 75.
 }
 
-NavigatorEnglish_controlsimg1 {Abilities}
+Navigator_controlsimg1 {Abilities}
 
-AlchemyEnglish {Crafting}
-AlchemyEnglish_descr
+Alchemy {Crafting}
+Alchemy_descr
 {
 Manufacturing items, primarily talismans, potions, and ammunition, can significantly ease your life. This is especially useful in boss fights.
 ~
@@ -136,16 +137,16 @@ To manufacture an item, you need to find or buy a recipe. Ingredients do not nec
 At the beginning of the game, you have a choice: take the Alchemy skill and start buying recipes right away, or postpone this possibility until the mid-game, when you will have toolkits which will substitute for spending a valuable skill point on Alchemy.
 }
 
-AlchemyEnglish_controlsimg1 {Alchemy}
+Alchemy_controlsimg1 {Alchemy}
 
-LandMapAtSeaEnglish {}
-LandMapAtSeaEnglish_descr
+LandMapAtSea {}
+LandMapAtSea_descr
 {
 Head to the opposite side of the island to complete your quest. Exit the bay to the right and stick to the shoreline!
 }
 
-SalaryEnglish {Ship Upkeep}
-SalaryEnglish_descr
+Salary {Ship Upkeep}
+Salary_descr
 {
 Monthly payments to officers and crew can significantly complicate the captain's life. The total amount depends on your Trading and Leadership skills, the ship's size, and the difficulty level.
 ~
@@ -153,10 +154,10 @@ Even on small ships, it's highly recommended to have a purser on board, while a 
 
 }
 
-SalaryEnglish_controlsimg1 {ShipState}
+Salary_controlsimg1 {ShipState}
 
-DubloonsEnglish {Doubloons}
-DubloonsEnglish_descr
+Dubloons {Doubloons}
+Dubloons_descr
 {
 Golden doubloons are the true measure of your character's wealth and ability to solve problems with money. Always strive to earn these coins, as the most powerful people in the Caribbean only offer their services for doubloons.
 ~
@@ -164,8 +165,8 @@ Good sources of doubloons include treasure hunting, bank deposits, trading strat
 
 }
 
-BoxEnglish {Item Storage}
-BoxEnglish_descr
+Box {Item Storage}
+Box_descr
 {
 The chests in your cabin can store an unlimited number of personal items. Besides mandatory equipment in your outfit slots, it's wise to carry only potions, amulets, and ammo with you.
 ~
@@ -175,8 +176,8 @@ Other captains also follow this practice, so it's always worth searching the che
 
 }
 
-HealthEnglish {Vitality}
-HealthEnglish_descr
+Health {Vitality}
+Health_descr
 {
 Your Vitality has decreased! This stat describes your character's general condition and affects all their abilities.
 ~
@@ -186,8 +187,8 @@ It is restored by special potions, romantic activities, resting in a tavern, and
 
 }
 
-AmuletEnglish {Amulets}
-AmuletEnglish_descr
+Amulet {Amulets}
+Amulet_descr
 {
 Amulets are powerful character boosters divided into offensive, defensive, and auxiliary. You cannot equip offensive and defensive amulets simultaneously, so choose wisely.
 ~
@@ -197,10 +198,10 @@ Always keep several sets of boosters in your inventory for difficult skill check
 
 }
 
-AmuletEnglish_controlsimg1 {Inventory}
+Amulet_controlsimg1 {Inventory}
 
-PerkEnglish {Perk Points}
-PerkEnglish_descr
+Perk {Perk Points}
+Perk_descr
 {
 You've just received your first perk point (PP)! PPs are crucial for character development and are divided into Naval and Personal.
 ~
@@ -212,10 +213,10 @@ To quickly gain Naval PP, complete sea side quests and contracts. Personal point
 
 }
 
-PerkEnglish_controlsimg1 {Abilities}
+Perk_controlsimg1 {Abilities}
 
-FighterEnglish {Vanguards}
-FighterEnglish_descr
+Fighter {Vanguards}
+Fighter_descr
 {
 Your first Vanguard has joined the crew! Assign him via the Character Menu.
 ~
@@ -231,13 +232,13 @@ You can order the Vanguards to hold their position, follow the captain, or attac
 
 }
 
-FighterEnglish_controlsimg1 {Abilities}
-FighterEnglish_controlsimg2 {OfficersFollow}
-FighterEnglish_controlsimg3 {OfficersCharge}
-FighterEnglish_controlsimg4 {OfficersHold}
+Fighter_controlsimg1 {Abilities}
+Fighter_controlsimg2 {OfficersFollow}
+Fighter_controlsimg3 {OfficersCharge}
+Fighter_controlsimg4 {OfficersHold}
 
-RestEnglish {Rest Option}
-RestEnglish_descr
+Rest {Rest Option}
+Rest_descr
 {
 The Rest option is now available in the Action Menu!
 ~
@@ -246,7 +247,7 @@ Everything in the game follows a time cycle: guards are absent at the pier and c
 Use this function at sea and in the wild. Rent a room in a tavern if you are in a city.
 
 }
-RestEnglish_controlsimg1{BICommandsActivate}
+Rest_controlsimg1{BICommandsActivate}
 
 Navigation{Ship Control}
 Navigation_descr
@@ -270,8 +271,8 @@ Navigation_controlsimg2 {Ship_SailDown}
 Navigation_controlsimg3 {MiniMapZoomIn}
 Navigation_controlsimg4 {MiniMapZoomOut}
 
-StealthEnglish{Stealth}
-StealthEnglish_descr
+Stealth{Stealth}
+Stealth_descr
 {
 You are not welcome in most of the Caribbean settlements. There are two ways to infiltrate a city: through the port or the gates.
 ~
@@ -314,8 +315,8 @@ The higher your Boarding Skill, the easier it will be to successfully grapple wi
 Having an experienced boatswain, vanguards, amulets, and developed personal combat skills can offset the enemy's numerical advantage.
 }
 
-MushketEnglish{Muskets}
-MushketEnglish_descr
+Mushket{Muskets}
+Mushket_descr
 {
 Long-barreled firearms are extremely dangerous in battle. Only the main character with the Musketeer Skill and some unique officers can use them. 
 The most notable example is Tichingitu, and he should be the one who gets the first musket you find.
@@ -324,20 +325,20 @@ Unlike melee weapons, firearms offer greater flexibility. By developing your cha
 
 }
 
-MushketEnglish_controlsimg1 {Inventory}
+Mushket_controlsimg1 {Inventory}
 
 CameraControl{Ahoy!}
 CameraControl_descr
 {
-Welcome to Story Mode! Before you set sail, you'll need to make sure that the land won't defeat you.
+Welcome to Story Mode.
+Before you brave the open sea, you must survive the land. The New World suffers no fools - and offers no second chances.
 ~
-Caribbean Legend is challenging, but it's not difficult to play. To help you get settled in the New World, we've prepared an extended tutorial adventure on the island of Martinique. By completing it, you'll master all the necessary skills and understand the game mechanics.
+To help you find your sea legs, we've prepared a tutorial adventure on the island of Martinique. There, you'll master the skills every captain must know - and earn your first command.
 ~
-The game is controlled using movement keys and active mouse usage. In most cases, it's enough to press the forward movement key and steer using the camera. You can always adjust the camera speed in the settings.
+Move with your keys, look around with your mouse. You can walk, run, or sprint when needed. The action menu will also prove useful - especially for fast travel, which unlocks after the tutorial.
 ~
-Some players find the controls not responsive enough, and we agree. That's why we're actively working on improving them, and we hope that in the next major update, this tutorial message will be different.
-~
-Thank you for playing, and see you at sea!
+Your legend begins here.
+See you at sea.
 }
 
 CameraControl_controlsimg1 {ChrForward}
@@ -345,23 +346,41 @@ CameraControl_controlsimg2 {ChrStrafeLeft}
 CameraControl_controlsimg3 {ChrBackward}
 CameraControl_controlsimg4 {ChrStrafeRight}
 CameraControl_controlsimg5 {ShipCamera_Turn_H}
+CameraControl_controlsimg6 {LICommandsActivate}
 
 CameraControlFP{Ahoy!}
 CameraControlFP_descr
 {
-Welcome to the New World, Captain!
+Welcome to the New World!
 ~
-Caribbean Legend is a challenging game, but it's not difficult to play. If you haven't played the story mode yet, we recommend spending a couple of hours on it to get comfortable and learn the game's basic mechanics.
+These waters are unforgiving - and fortune rarely favors the reckless. Start small: travel between friendly colonies, run errands, deliver goods and passengers, dabble in local trade.
 ~
-The game is controlled using movement keys and active mouse usage. In most cases, it's enough to press the forward movement key and steer using the camera. You can always adjust the camera speed in the settings.
+Golden doubloons will buy you maps to buried treasures. Silver pesos will keep your ship afloat and allow you to hire officers - and without them, even a lone merchant can be the end of you.
 ~
-Some players find the controls not responsive enough, and we agree. That's why we're actively working on improving them, and we hope that in the next major update, this tutorial message will be different.
+Move with your keys, look around with your mouse. You can walk, run, or sprint when needed. The action menu will also prove useful - especially for fast travel and other advanced features.
 ~
-Thank you for playing, and see you at sea!
+Your legend begins here.
+See you at sea.
+
 }
 
-CameraControlFP_controlsimg1 {ChrForward}
-CameraControlFP_controlsimg2 {ChrStrafeLeft}
-CameraControlFP_controlsimg3 {ChrBackward}
-CameraControlFP_controlsimg4 {ChrStrafeRight}
-CameraControlFP_controlsimg5 {ShipCamera_Turn_H}
+CameraControl_controlsimg1 {ChrForward}
+CameraControl_controlsimg2 {ChrStrafeLeft}
+CameraControl_controlsimg3 {ChrBackward}
+CameraControl_controlsimg4 {ChrStrafeRight}
+CameraControl_controlsimg5 {ShipCamera_Turn_H}
+CameraControl_controlsimg6 {LICommandsActivate}
+
+MarksmanMode{Aiming}
+MarksmanMode_descr
+{
+You can aim with any firearm to shoot more accurately. Hold the aim button to enter the marksman mode. Release the button to exit without firing.  
+~  
+Shooting from the marksman mode is more precise and deadly, but the trade-off is reduced visibility and movement speed.  
+~  
+The longer you aim, the more damage your shot will inflict. A headshot will deal even greater damage. If you take damage, your aim will be reset, and your character will stagger.  
+}
+
+MarksmanMode_controlsimg1 {ChrAiming}
+
+

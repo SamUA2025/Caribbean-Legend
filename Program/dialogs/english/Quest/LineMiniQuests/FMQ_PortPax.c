@@ -379,7 +379,7 @@ void ProcessDialogEvent()
 			Log_Info("You have received the Smallsword");
 			PlaySound("interface\important_item.wav");
 			RemoveCharacterEquip(npchar, BLADE_ITEM_TYPE);
-			dialog.text = "And now, alas, I have to say my farewells. I should go to Portobello to see the governor and then to Cartagena... To sum up, my carefree existence is over, time live as a grown up man.";
+			dialog.text = "And now, alas, I have to say my farewells. I should go to Portobello to see the governor and then to Cartagena... To sum up, my carefree existence is over, time to live as a grown up man.";
 			link.l1 = "Well, you are much smarter now...";
 			link.l1.go = "noble_45";
 		break;
@@ -409,7 +409,7 @@ void ProcessDialogEvent()
 			PlaySound("interface\important_item.wav");
 			RemoveCharacterEquip(npchar, BLADE_ITEM_TYPE);
 			GiveItem2Character(pchar, GetGeneratedItem("blade_16")); // belamour legendary edition используем GetGeneratedItem иначе пачка одинаковых клинков из первой части массива
-			dialog.text = "And now, alas, I have to say my farewells. I should go to Portobello. My carefree existence is over, time live as a grown up man. Godspeed in the sea!";
+			dialog.text = "And now, alas, I have to say my farewells. I should go to Portobello. My carefree existence is over, time to live as a grown up man. Godspeed in the sea!";
 			link.l1 = "Good luck with your uncle, don Domingo! I am sure you will prevail!";
 			link.l1.go = "noble_49";
 		break;

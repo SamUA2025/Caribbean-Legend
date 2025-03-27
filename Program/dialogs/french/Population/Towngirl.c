@@ -92,7 +92,7 @@ void ProcessDialogEvent()
 			{
 				NPChar.quest.meeting = "1";
 				dialog.Text = NPCharRepPhrase(npchar,LinkRandPhrase("Je suis","Mon nom est ","Vous pouvez m'appeler ")+GetFullName(npchar)+LinkRandPhrase(" Que veux-tu ?","Je ne vous ai jamais vu auparavant "+", qui es-tu ?","Qui es-tu et que veux-tu de moi ?"),LinkRandPhrase("Salutations, "+GetAddress_Form(NPChar)+". Mon nom est "+GetFullName(npchar)+" Et comment vous appelez-vous ?","Bonjour "+GetAddress_Form(NPChar)+"! Je suis "+GetFullName(npchar)+"Puis-je connaître votre nom ?","Oui, "+GetAddress_Form(NPChar)+". Que veux-tu ? Et d'ailleurs, mon nom est "+GetFullName(npchar)+" Et comment vous appelez-vous ?"));
-				Link.l1 = pcharrepphrase(LinkRandPhrase("Que le diable m'emporte !","Sacrebleu ! ","Que le diable t'emporte ! ")+"Oui, je suis le capitaine "+GetFullName(Pchar)+RandPhraseSimple(", n'as-tu jamais entendu parler de moi, salopard ?","?")," et "+GetSexPhrase("le pirate le plus célèbre","la plus fameuse fille-pirate")+" dans la mer !"," et maudit soit-je si j'ai tort !"),LinkRandPhrase("Je suis "+GetFullName(Pchar)+", capitaine.","Mon nom est "+GetFullName(Pchar)+".","Tu peux m'appeler capitaine "+GetFullName(Pchar)+"."));
+				Link.l1 = pcharrepphrase(LinkRandPhrase("Que le diable m'emporte !","Sacrebleu ! ","Que le diable t'emporte ! ")+"Oui, je suis le capitaine "+GetFullName(Pchar)+LinkRandPhrase(", n'as-tu jamais entendu parler de moi, salopard ?"," et "+GetSexPhrase("le pirate le plus célèbre","la plus fameuse fille-pirate")+" dans la mer !"," et maudit soit-je si j'ai tort !"),LinkRandPhrase("Je suis "+GetFullName(Pchar)+", capitaine.","Mon nom est "+GetFullName(Pchar)+".","Tu peux m'appeler capitaine "+GetFullName(Pchar)+"."));
 				Link.l1.go = "Meeting";
 				
 				//==> прибыла инспекция на Святом Милосердии
@@ -103,6 +103,14 @@ void ProcessDialogEvent()
 					link.l1.go = "exit";
 				}
 				//<== прибыла инспекция на Святом Милосердии
+				//==> Леди Бет в порту города
+				if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_town")
+				{
+					dialog.Text = findLedyBethRumour(npchar);
+					link.l1 = "...";
+					link.l1.go = "exit";
+				}
+				//<== Леди Бет в порту города
 			}
 			else
 			{

@@ -70,9 +70,9 @@ void ProcessDialogEvent()
 		break;
 		
 		case "shore":
-			PlaySound("Voice\English\Sharlie\Diego De Montoya.wav");
+			PlaySound("Voice\Spanish\Sharlie\Diego De Montoya.wav");
 			dialog.text = "¡Basta! Quiero hablar con él...";
-			link.l1 = "Entonces, veo al propio Diego de Montoya justo frente a mí... Pero disculpe, señor. Nos hemos conocido antes, ¿verdad? Ah, sí, es cierto. Trinidad, en el faro local. Pero estoy seguro de que allí se llamó de otra manera...";
+			link.l1 = "Entonces, veo al propio Diego de Montoya justo frente a mí... Pero disculpe, señor. Nos hemos conocido antes, ¿verdad? Ah, sí, es cierto. Trinidad, en el faro local. Pero estoy seguro de que allí se hacía llamar de otra manera...";
 			link.l1.go = "shore_1";
 		break;
 		

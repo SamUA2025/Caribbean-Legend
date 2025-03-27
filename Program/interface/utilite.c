@@ -981,6 +981,21 @@ string GetItemDescribe(int iGoodIndex)
 			describeStr += newStr() + LanguageConvertString(lngFileID, "talisman17_questsNoBonus") + newStr();
 		}
 	}
+	if(arItm.id == "talisman18")
+	{
+		if(CheckAttribute(arItm,"QBonus"))
+		{
+			describeStr += newStr() + GetAssembledString( LanguageConvertString(lngFileID,"talisman18_Bonus"), arItm) + newStr();
+		}
+		else
+		{
+			describeStr += newStr() + LanguageConvertString(lngFileID, "talisman18_NoBonus") + newStr();
+		}
+	}
+	if(CheckAttribute(arItm, "UpgradeStage"))
+	{
+		describeStr += newStr() + LanguageConvertString(lngFileID,"UpgradeStageInfo_" + arItm.id + "_" + sti(arItm.UpgradeStage));
+	}
     describeStr += newStr() + XI_ConvertString("weight") + " " + FloatToString(stf(arItm.weight), 1);
     
 	LanguageCloseFile(lngFileID);

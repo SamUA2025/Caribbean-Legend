@@ -5,8 +5,8 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 	switch (Dialog.CurrentNode)
 	{
 		case "quests":
-			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("¿Qué tipo de preguntas, "+GetSexPhrase("joven","jovencita")+"¿?","¿Qué es lo que necesitas, "+GetSexPhrase("guapo","preciosa")+"¿ Pregunta lo que quieras."),"¿Otra vez preguntas?","Tee-hee, si te da igual - preguntas...",""+GetSexPhrase("Mm, ¿por qué no eliges una belleza para ti? Empiezo a sospechar de ti...","Hum, ¿por qué no eliges una belleza para ti mismo? Me temo que aquí no tenemos muchachos, je-je...")+"Hola, Amigo.","bloqueo",1,npchar,Dialog.CurrentNode);
-			link.l1 = HeroStringReactionRepeat(RandPhraseSimple("He cambiado de opinión, disculpa.","En realidad, olvídalo..."),"Yo... disculpas, no tengo preguntas, por ahora.","Tienes razón, ya es la tercera vez. Perdóname.","Tal vez la próxima vez, Madame.",npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("¿Qué tipo de preguntas, "+GetSexPhrase("joven","jovencita")+"?","¿Qué necesitas, "+GetSexPhrase("guapo","bonita")+"? Pregunta lo que quieras."),"¿Preguntas otra vez?","Tee-hee, otra vez lo mismo... preguntas...",""+GetSexPhrase("Mm, ¿por qué no eliges una belleza para ti? Estoy empezando a sospechar de ti...","Mm, ¿por qué no eliges una belleza para ti? No tenemos chicos aquí, me temo, jeje...")+"","block",1,npchar,Dialog.CurrentNode);
+			link.l1 = HeroStringReactionRepeat(RandPhraseSimple("He cambiado de opinión, discúlpame.","En realidad, olvídalo..."),"Yo... lo siento, no tengo preguntas, por ahora.","Tienes razón, es la tercera vez ya. Perdóname.","Tal vez la próxima vez, señora.",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			if (CheckAttribute(pchar, "questTemp.HWIC.Eng") && pchar.questTemp.HWIC.Eng == "GotoBridgetown" && !CheckAttribute(npchar, "quest.HWICTalked"))
             {
@@ -16,7 +16,7 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 		break;
 		
 		case "BrothelDone":
-			dialog.text = "Cincuenta marineros - quince mil.";
+			dialog.text = "Cincuenta marineros... quince mil.";
 			link.l1 = "Una gran suma... Necesito pensarlo.";
 			link.l1.go = "exit";	
 			npchar.quest.HWICTalked = "true";

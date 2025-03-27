@@ -39,7 +39,7 @@ void ProcessDialogEvent()
 	{
 	// ----------------------------------- Диалог первый - первая встреча---------------------------------------
 		case "First time":
-            dialog.text = NPCStringReactionRepeat("Hast du mir etwas zu sagen? Nein? Dann verschwinde von hier!","Ich glaube, ich habe mich klar ausgedrückt, hör auf, mich zu nerven.","Obwohl ich mich klar ausgedrückt habe, nervst du mich weiterhin!","Also gut, ich habe genug von dieser Unhöflichkeit.","wiederholen",3,npchar,Dialog.CurrentNode);
+            dialog.text = NPCStringReactionRepeat("Hast du mir etwas zu sagen? Nein? Dann verschwinde von hier!","Ich glaube, ich habe mich klar ausgedrückt, hör auf, mich zu nerven.","Obwohl ich mich klar ausgedrückt habe, nervst du mich weiterhin!","Also gut, ich habe genug von dieser Unhöflichkeit.","repeat",3,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Ich gehe schon.","Sicher, Jacques...","Entschuldigung, Jacques...","Autsch...",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			NextDiag.TempNode = "First time";
@@ -104,7 +104,7 @@ void ProcessDialogEvent()
 		break;
 
         case "I_know_you_good":
-            dialog.text = NPCStringReactionRepeat(GetFullName(pchar)+"! Was brauchst du diesmal?","Haben Sie vergessen, mir etwas zu erzählen? Ich höre zu.","Wie lange wird das noch dauern... Wenn du nichts zu tun hast, dann belästige nicht andere Leute!","Du hast mich gebeten, höflich zu sein. Aber ich verlange das Gleiche von dir!","wiederholen",10,npchar,Dialog.CurrentNode);
+            dialog.text = NPCStringReactionRepeat(GetFullName(pchar)+"! Was brauchst du diesmal?","Haben Sie vergessen, mir etwas zu erzählen? Ich höre zu.","Wie lange wird das noch dauern... Wenn du nichts zu tun hast, dann belästige nicht andere Leute!","Du hast mich gebeten, höflich zu sein. Aber ich verlange das Gleiche von dir!","repeat",10,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Es ist nichts. Nur ein Besuch.","Nichts...","Gut...","Du hast recht. Es tut mir leid.",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			NextDiag.TempNode = "I_know_you_good";

@@ -1,72 +1,104 @@
 #QUEST JusticeOnSale
-Side Job: Smuggler in Trouble
+Zadanie poboczne: Sprawiedliwość na Sprzedaż
+
 #TEXT 1
-I agreed to help a band of smugglers rescue their captain, who is sitting in the prison of @<cityName>. Surely, I'd be better off without soiling my hands with this affair, but they've offered me a decent reward. I should talk to the commandant... or, perhaps, it's better to turn all those gallowbirds to the authorities?
+Zgodziłem się pomóc grupie przemytników uwolnić ich kapitana, który siedzi w więzieniu w @. Z pewnością byłoby lepiej, gdybym nie brudził sobie rąk tą sprawą, ale zaoferowali mi niezłą nagrodę. Powinienem porozmawiać z komendantem... albo może lepiej wydać tych rzezimieszków władzom?
+
 #TEXT 2
-Being occupied with more important affairs, I have forgotten about the captain I liberated from the prison and the deal with his boys. The rascal must have used his opportunity to sneak away. Well, so be it.
+Zajęty ważniejszymi sprawami zapomniałem o kapitanie, którego uwolniłem z więzienia, oraz o umowie z jego ludźmi. Łotr zapewne wykorzystał okazję, by się ulotnić. No cóż, niech tak będzie.
+
 #TEXT 3
-I liberated the captain of the smugglers and received my reward. Money has no smell.
+Uwolniłem kapitana przemytników i otrzymałem swoją nagrodę. Pieniądze nie mają zapachu.
+
 #TEXT 4
-I liberated the captain of the smugglers from the prison, but these scoundrels decided to deceive me! Alright, now they can strike their deals with the devil!
+Uwolniłem kapitana przemytników z więzienia, ale ci łajdacy postanowili mnie oszukać! Dobrze, teraz mogą robić interesy z diabłem!
+
 #TEXT 5
-I informed the town authorities about the smugglers' plans - they can handle it by themselves from this point on.
+Poinformowałem władze miasta o planach przemytników – teraz mogą się tym zająć.
+
 #TEXT 6
-Part of the smugglers managed to get away. The governor will surely be displeased with my slowness.
+Część przemytników zdołała uciec. Gubernator z pewnością nie będzie zadowolony z mojej opieszałości.
+
 #TEXT 7
-All smugglers got what they deserved. Now I need to report to the governor, and the deal is done.
+Wszyscy przemytnicy dostali to, na co zasłużyli. Teraz muszę zameldować gubernatorowi i sprawa będzie zamknięta.
 
 #QUEST AffairOfHonor
-Side Job: Matter of Honour
+Zadanie poboczne: Sprawa Honorowa
+
 #TEXT 1
-By chance, I met a very bad-mannered officer. I'll have to teach him some manners and uphold the honor of the girl. So, in two hours at the lighthouse we'll meet.
+Przez przypadek spotkałem bardzo nieuprzejmego oficera. Będę musiał nauczyć go dobrych manier i obronić honor dziewczyny. Spotkamy się za dwie godziny przy latarni morskiej.
+
 #TEXT 2
-The churl is punished, and the outraged honor is upheld! I must tell this pleasant news to the girl. Quickly back to the town!
+Cham dostał nauczkę, a urażony honor został obroniony! Muszę przekazać te dobre wieści dziewczynie. Szybko z powrotem do miasta!
+
 #TEXT 2_1
-Oh hell. I missed the duel. What a fool I am.
+O cholera. Przegapiłem pojedynek. Co za głupiec ze mnie.
+
 #TEXT 3
-A miserable father, a good-for-nothing son, the lady's honor... Alright, let's see how it ends up this time. Let's visit the tavern and the brothel for starters.
+Nieszczęsny ojciec, nic niewarty syn, honor damy... No dobrze, zobaczymy, jak to się skończy tym razem. Na początek odwiedzę tawernę i burdel.
+
 #TEXT 3_1
-Excellent! Now there's only one little thing left - to slaughter the scoundrel.
+Doskonale! Teraz została tylko jedna drobnostka – zarżnąć drania.
+
 #TEXT 4
-The deed is done, and father and son can sleep well... until the next time. Oh, and I deserve a reward. Let's collect it!
+Sprawa zakończona, ojciec i syn mogą spać spokojnie... przynajmniej do następnego razu. Och, i zasługuję na nagrodę. Czas ją odebrać!
+
 #TEXT 4_1
-Well, I missed it - so what? No big deal.
+Cóż, przegapiłem to – i co z tego? Nic wielkiego.
+
 #TEXT 5
-Are things looking that black if the authorities are issuing letters of marque to random rascals and drunkards? I should visit the tavern and see who is terrorizing the local populace.
+Czy sytuacja jest aż tak zła, skoro władze wydają listy kaperskie przypadkowym rzezimieszkom i pijakom? Powinienem odwiedzić tawernę i zobaczyć, kto terroryzuje miejscową ludność.
+
 #TEXT 6
-One scoundrel less in this world. It's nice to do good deeds.
+O jednego łajdaka mniej na świecie. Miło robić dobre uczynki.
+
 #TEXT 6_1
-I have changed my mind - I won't fight. I'm just not in the mood. Besides, the girl should taste all the delights of being a concubine of a brave corsair compared to being a maid in the tavern.
+Zmieniłem zdanie – nie będę walczył. Po prostu nie mam nastroju. Poza tym dziewczyna powinna posmakować wszystkich uroków bycia konkubiną dzielnego korsarza w porównaniu z pracą pokojówki w tawernie.
+
 #TEXT 7
-A duel! And the reason can't be any weightier.
+Pojedynek! I to z naprawdę ważnego powodu.
+
 #TEXT 8
-The insolent fellow got his due.
+Bezczelny typ dostał to, na co zasłużył.
+
 #TEXT 8_1
-Perhaps I chickened out... I don't know.
+Może stchórzyłem... Nie wiem.
+
 #TEXT 9
-A citizen told me about an intriguing way of making money: robbing partners at the game of cards, then accusing them of cheating and later killing them in a duel to avoid the spreading of undesired gossip. I should check out if it is true.
+Pewien obywatel opowiedział mi o interesującym sposobie zarobku: oszukiwanie partnerów w grze w karty, oskarżanie ich o oszustwo, a potem zabijanie ich w pojedynku, aby uniknąć rozprzestrzeniania się niepożądanych plotek. Powinienem sprawdzić, czy to prawda.
+
 #TEXT 10
-Yes, the citizen was right. Poor Tom, like the others, too, fell victim to the rascal. But I have put an end to this.
+Tak, obywatel miał rację. Biedny Tom, jak i inni, padł ofiarą drania. Ale ja położyłem temu kres.
+
 #TEXT 10_1
-Pfff! Cards, sharpers, duels... I've got no time for this crap!
+Pfff! Karty, oszuści, pojedynki... Nie mam czasu na takie bzdury!
+
 #TEXT 11
-A fencing teacher is afraid of a fight - who would believe it! The governor's nephew will have a hard time with a teacher like that. But it's not my business, anyway. I'd rather see the merchant.
+Nauczyciel szermierki boi się walki – kto by w to uwierzył! Bratanek gubernatora będzie miał trudne życie z takim nauczycielem. Ale to nie moja sprawa. Lepiej zajmę się kupcem.
+
 #TEXT 12
-The mercenary is dead. Let's tell the teacher the good news.
+Najemnik nie żyje. Czas przekazać nauczycielowi dobre wieści.
+
 #TEXT 12_1
-That mercenary looked like a very tough guy. I decided not to fight him.
+Ten najemnik wyglądał na naprawdę twardego gościa. Postanowiłem z nim nie walczyć.
+
 #TEXT 13
-Yeah, these days the officers are not like they used to be. But even those strive to be killed in a duel instead of perishing in glorious combat. Well, I only need to make sure that the more worthy will live on. I have two days at most. I should start with the search for the mistress.
+Niestety, ale oficerowie w dzisiejszych czasach nie są tym, czym byli kiedyś. Ale nawet oni wolą zginąć w pojedynku niż w chwalebnej walce. Cóż, muszę się upewnić, że przeżyją ci bardziej godni. Mam na to najwyżej dwa dni. Czas zacząć szlajać się po domach uciech...
+
 #TEXT 14
-It seems that the officer I knew was lucky as opposed to the officer I haven't known, who is now dead. Now I should heed the advice of the seconds and leave the town for a while.
+Wygląda na to, że oficer, którego znałem, miał szczęście, w przeciwieństwie do oficera, którego nie znałem, a który teraz nie żyje. Powinienem teraz posłuchać rady sekundantów i opuścić miasto na jakiś czas.
+
 #TEXT 14_1
-I decided not to interfere with someone else's affairs. Let them solve their own problems by themselves.
+Postanowiłem nie ingerować w nieswoje sprawy. Niech sami rozwiązują swoje problemy.
+
 #TEXT 15
-'Divine Justice' sounds great! I will have to interfere and defend the planter in a duel.
+„Boska Sprawiedliwość” – brzmi dumnie! Muszę się wtrącić i bronić plantatora w pojedynku.
+
 #TEXT 16
-An ambush! I should have figured it out. Now the planter should have weighty arguments against his neighbor. Now to collect my reward: surely it was well deserved.
+Zasadzka! Powinienem się tego domyślić. Teraz plantator ma solidne argumenty przeciwko swojemu sąsiadowi. Czas odebrać moją nagrodę – z pewnością na nią zasłużyłem.
+
 #TEXT 16_1
-Interesting, can I now expect discounts from the local smugglers?
+Ciekawe, czy mogę teraz liczyć na zniżki u lokalnych przemytników?
 
 #QUEST BurntShipQuest
 Side Job: Ship Replacement in @<cityName>
@@ -105,257 +137,374 @@ Unicuique secundum opera eius! The documents will soon return to their owner - a
 I should have delivered these documents earlier, that way their owner wouldn't have to obtain a new set of documents.
 
 #QUEST ReasonToFast
-Side Job: A Reason to Hurry
+Zadanie poboczne: Powód do pośpiechu
+
 #TEXT 1
-A cute girl blabbed out that an officer from the garrison was hurrying to some cove so much that it had even distracted him from his fun and games. Perhaps it's worth investigating?
+Śliczna dziewczyna wygadała się, że pewien oficer z garnizonu tak bardzo spieszył się do jakiejś zatoki, że nawet odciągnęło go to od jego zabaw. Może warto to sprawdzić?
+
 #TEXT 2
-There are many windbags around. Perhaps, I was just imagining things?
+Ludzi lubiących gadać nie brakuje. Może tylko mi się wydawało?
+
 #TEXT 3
-Perhaps, I just gave way to the offended girl. I shouldn't have thought up what was missing...
+Może po prostu uległem emocjom urażonej dziewczyny? Nie powinienem był doszukiwać się czegoś, czego tam nie było...
+
 #TEXT 4
-What an ill-luck! That guy showed up at the very wrong time. Now it is too late to guess what they were up to...
+Co za pech! Ten facet pojawił się w najmniej odpowiednim momencie. Teraz już za późno, by zgadywać, co planowali...
+
 #TEXT 5
-It turned out that I was tracked by a pirate messenger, the patrolman was waiting for him here. But it seems I managed to pretend to be the messenger, @<sName>.
+Okazało się, że śledził mnie piracki posłaniec, a patrolowiec właśnie na niego czekał. Ale wygląda na to, że udało mi się udawać posłańca, @<sName>.
+
 #TEXT 6
-I tracked down the corrupt patrol officer and was convinced that he had dealings with pirates. Unfortunately, I didn't manage to arrest him. Still, he was duly punished.
+Namierzyłem skorumpowanego patrolowca i przekonałem się, że miał układy z piratami. Niestety nie udało mi się go aresztować, ale przynajmniej został należycie ukarany.
+
 #TEXT 7
-I failed to talk to the patrol officer. Ah, hell with him, anyway!..
+Nie udało mi się porozmawiać z patrolowcem. A niech go diabli, i tak mi na tym nie zależy!..
+
 #TEXT 8
-What an ill-luck! The patrol officer died, and his mystery died with him...
+Co za pech! Patrolowiec nie żyje, a razem z nim przepadła jego tajemnica...
+
 #TEXT 9
-Judas in the military seeks to get his 30 'pieces' of silver. Interesting, what kind of favor can cost such a pile of @<sText>?
+Judasz w mundurze wojskowym szuka swoich trzydziestu srebrników. Ciekawe, jaka przysługa może kosztować taką górę @<sText>?
+
 #TEXT 10
-A questionable bargain! Still, @<sName> would not hunt this map without a reason.
+Podejrzana transakcja! Ale skoro @<sName> tropi tę mapę, to musi mieć jakiś powód.
+
 #TEXT 11
-@<sShipType> '@<sShipName>' with a cargo of @<sGoodsName> is hanging around without an escort. That's some useful information...
+@<sShipType> „@<sShipName>” z ładunkiem @<sGoodsName> unosi się na wodzie bez eskorty. To bardzo cenna informacja...
+
 #TEXT 12
-The governor keeps his valuables in his own boudoir? How careless of him...
+Gubernator trzyma swoje kosztowności we własnej sypialni? Ależ beztroska...
+
 #TEXT 13
-Thank God, this is finally over!
+Dzięki Bogu, to wreszcie koniec!
+
 #TEXT 14
-A nice blade is a great reward! It's also worth seeing whether this map can cost a handful of gems!
+Porządna klinga to wspaniała nagroda! Warto też sprawdzić, czy ta mapa nie jest warta garści klejnotów!
+
 #TEXT 15
-I got a hold of a pirate map. I need to check whether it's worth the money as soon as I can!
+Zdobyłem piracką mapę. Muszę jak najszybciej sprawdzić, czy jest coś warta!
+
 #TEXT 16
-Huh... That's how your trust in justice can turn against you... I was suspected of an attack on the patrolling party...
+Ech... Tak oto wiara w sprawiedliwość może obrócić się przeciwko tobie... Podejrzewają mnie o atak na patrol!
+
 #TEXT 17
-This affair was finally over, and, it seems, I didn't come off as a loser!
+Ta sprawa wreszcie się zakończyła i, jak się wydaje, nie wyszedłem na tym źle!
+
 #TEXT 18
-The lead of the patrolman was correct! The great prize will surely more than cover all my expenses.
+Trop patrolowca okazał się trafny! Nagroda z pewnością pokryje wszystkie moje wydatki.
+
 #TEXT 19
-How unfortunate. I failed to make any good of the information purchased for a crapload of money.
+Co za niefart. Nie udało mi się zrobić żadnego użytku z informacji, na które wydałem fortunę.
+
 #TEXT 20
-I had to give @<sText> just in order to not hear the hot breath of @<sName> behind my back. Next time I shall be more cautious when undertaking such adventures.
+Musiałem oddać @<sText>, by nie czuć na karku gorącego oddechu @<sName>. Następnym razem będę bardziej ostrożny, podejmując się takich przygód.
+
 #TEXT 21
-@<sName> will not part with @<sText> easily. I need to get out of here, and quickly.
+@<sName> nie rozstanie się z @<sText> bez walki. Muszę się stąd szybko ulotnić.
+
 #TEXT 22
-It turned out that the pirates somehow learned about the blunder of the patrol officer. Well, it is his funeral, most likely, he's already dead, anyway, and it's high time for me to get out of here... It seems that there is no one left to tell @<sName> about my deeds...
+Okazało się, że piraci dowiedzieli się o błędzie patrolowca. Cóż, to jego problem – najpewniej już nie żyje, a ja powinienem jak najszybciej się stąd wynosić... Wydaje się, że nikt nie doniesie @<sName> o moich czynach...
+
 #TEXT 23
-The pirates knew that I had the map of @<sName>. Moreover, they also knew about the island where he had hidden his treasures. It's good that their wits were no match for their greed, as they failed to find the treasure before I did.
+Piraci wiedzieli, że mam mapę @<sName>. Co więcej, znali też wyspę, gdzie ukrył swoje skarby. Dobrze, że ich chciwość przerosła ich spryt i nie znaleźli skarbu przede mną.
+
 #TEXT 24
-Considering that the forces were unequal, I was forced to hand over the treasure to treasure hunters of @<sName>. Next time I shall be more cautious when undertaking such adventures.
+Siły były nierówne, więc byłem zmuszony oddać skarb łowcom skarbów @<sName>. Następnym razem będę ostrożniejszy.
+
 #TEXT 25
-I managed to sink a pirate ship, on which this operation involving the patrol officer was orchestrated. The patrolman himself must surely be dead by now, the pirates never forgive blunders like that one... Well, it seems that there is no one left to tell @<sName> about my deeds...
+Zatopiłem piracki statek, na którym koordynowano całą operację z udziałem patrolowca. Sam patrolowiec najpewniej już nie żyje – piraci nie wybaczają takich błędów... Cóż, wygląda na to, że nikt nie doniesie @<sName> o moich czynach...
+
 #TEXT 26
-I managed to come off clear out of this story with the patrolman. I don't think the pirates will chase me forever. Surely they have other things to do.
+Udało mi się wyjść z tej afery z patrolowcem bez szwanku. Wątpię, by piraci ścigali mnie w nieskończoność – pewnie mają ważniejsze sprawy.
 
 #QUEST PiratesOnUninhabited
-Side Job: Saved from @<shoreName>
+Zadanie poboczne: Ocaleni z @<shoreName>
+
 #TEXT 1
-At @<shoreName> I have taken onboard @<count> sailors from the wrecked pirate @<shipTypeName>. They asked to be delivered to any inhabited cove. Well, I can understand them - they are at odds with the law, after all...
+Na @<shoreName> zabrałem na pokład @<count> marynarzy z rozbitego pirackiego @<shipTypeName>. Poprosili mnie o dostarczenie ich do jakiejkolwiek zamieszkanej zatoczki. Cóż, rozumiem ich – w końcu są na bakier z prawem...
+
 #TEXT 2
-I delivered the shipwrecked pirates to @<toShore> and even received a small reward. Surely, it wasn't much, but still will not hurt...
+Dostarczyłem rozbitków-piratów do @<toShore> i nawet otrzymałem niewielką nagrodę. Nie była to wielka suma, ale zawsze coś...
+
 #TEXT 3
-I delivered the pirates from the uninhabited island to @<toShore>. But, these scoundrels demanded that I lend them money. I was forced to explain to them that I don't lend money to any of their kind.
+Dostarczyłem piratów z bezludnej wyspy do @<toShore>. Jednak ci dranie zażądali, żebym im pożyczył pieniądze. Musiałem im jasno wytłumaczyć, że nie udzielam pożyczek ich pokroju.
+
 #TEXT 4
-I delivered the pirates from the uninhabited island to @<toShore> and even loaned them some money... I can't imagine how I would have struggled out of these dire straits, were I in their shoes...
+Dostarczyłem piratów z bezludnej wyspy do @<toShore> i nawet pożyczyłem im trochę pieniędzy... Nie mogę sobie wyobrazić, jak sam poradziłbym sobie w takiej sytuacji...
+
 #TEXT 5
-At @<shoreName> I have taken onboard @<count> sailors from the wrecked pirate @<shipTypeName>. They asked to be delivered to any inhabited cove in exchange for a treasure map. Well, we'll see about the map... Or should I just turn them in to the authorities? In that case, I am sure to receive my reward...
+Na @<shoreName> zabrałem na pokład @<count> marynarzy z rozbitego pirackiego @<shipTypeName>. W zamian za transport do jakiejkolwiek zamieszkanej zatoki zaoferowali mi mapę skarbu. Zobaczymy, czy jest coś warta... A może po prostu powinienem oddać ich w ręce władz? Wtedy z pewnością otrzymam nagrodę...
+
 #TEXT 6
-The rascal chose to trick me, but in the end, he paid for this.
+Drań postanowił mnie oszukać, ale w końcu przyszło mu za to zapłacić.
+
 #TEXT 7
-The rascal didn't have the map on him, but he told me where captain @<capName> had hidden his loot. I'll have to check @<toShore>.
+Drań nie miał przy sobie mapy, ale powiedział mi, gdzie kapitan @<capName> ukrył swój łup. Będę musiał sprawdzić @<toShore>.
+
 #TEXT 8
-I don't know whether the treasure was in @<shore> or not. I failed to find it. Well, I can't say my expenses were too big, anyway.
+Nie wiem, czy skarb był na @<shore>, czy nie. Nie udało mi się go znaleźć. Cóż, przynajmniej nie poniosłem dużych kosztów.
+
 #TEXT 9
-The pirate was right. In @<shore> I have found a nice treasure indeed...
+Pirat miał rację. Na @<shore> faktycznie znalazłem niezły skarb...
+
 #TEXT 10
-That pirate is surely no simple guy. It turned out that he had promised that treasure not just to me. Well, either way in the end I was the one to claim it.
+Ten pirat to nie byle kto. Okazało się, że obiecał ten skarb nie tylko mnie. Cóż, koniec końców to ja go zdobyłem.
+
 #TEXT 11
-At @<shoreName> I have taken onboard @<count> sailors from the wrecked pirate @<shipTypeName>. I should deliver them to any inhabited cove. Or simply turn them in to the authorities.
+Na @<shoreName> zabrałem na pokład @<count> marynarzy z rozbitego pirackiego @<shipTypeName>. Powinienem dostarczyć ich do jakiejkolwiek zamieszkanej zatoki... albo po prostu oddać ich w ręce władz.
+
 #TEXT 12
-I decided that a bird in hand is better than two in the bush and turned the pirates in to governor @<mayorName>. I think it was the right thing to do, at least the money is already jingling in my pocket.
+Uznałem, że lepszy wróbel w garści niż gołąb na dachu i przekazałem piratów gubernatorowi @<mayorName>. Myślę, że to była słuszna decyzja, a pieniądze już brzęczą w mojej kieszeni.
+
 #TEXT 13
-At @<shoreName> I have taken onboard @<count> sailors, put ashore by captain @<badCapName>. They claim that captain is sailing on @<ship> and deals in slaves. We have agreed to find him. If everything goes as planned, I will take the contents of the hold, and they'll get the ship.
+Na @<shoreName> zabrałem na pokład @<count> marynarzy, których porzucił kapitan @<badCapName>. Twierdzą, że ten kapitan pływa na @<ship> i zajmuje się handlem niewolnikami. Uzgodniliśmy, że go znajdziemy. Jeśli wszystko pójdzie zgodnie z planem, ja wezmę ładunek, a oni przejmą statek.
+
 #TEXT 14
-I boarded @<ship>, and in her hold, I have actually found the slaves. Well, it turns out that having friends among pirates pays off sometimes...
+Dorwałem @<ship>, a w jej ładowni faktycznie znalazłem niewolników. Cóż, okazuje się, że czasem warto mieć znajomości wśród piratów...
+
 #TEXT 15
-I had to sink @<ship> and finish off the pirates as well. I guess no one will be upset about it.
+Musiałem zatopić @<ship> i pozbyć się piratów. Myślę, że nikt się tym specjalnie nie przejmie.
+
 #TEXT 16
-In the heat of battle I have sunk @<ship>. I had to compensate her cost to the pirates. I couldn't have left them without any means for existence, after all, could I?
+W ferworze walki zatopiłem @<ship>. Musiałem zrekompensować jej koszt piratom. W końcu nie mogłem zostawić ich bez żadnych środków do życia, prawda?
+
 
 #QUEST ShipWrecked
-Side Job: The Shipwrecked
+Zadanie poboczne: Rozbitkowie
+
 #TEXT 1
-At @<shoreName> I have taken onboard @<count> sailors from the wrecked @<shipTypeName> '@<ShipName>'. I should deliver them to any settlement of @<sNation>.
+Na @<shoreName> zabrałem na pokład @<count> marynarzy z rozbitego @<shipTypeName> '@<ShipName>'. Powinienem dostarczyć ich do dowolnej osady należącej do @<sNation>.
+
 #TEXT 2
-At @<shoreName> I have taken onboard @<count> sailors, put ashore by captain @<badCapName>. I should deliver them to any settlement of @<sNation>.
+Na @<shoreName> zabrałem na pokład @<count> marynarzy, których porzucił kapitan @<badCapName>. Powinienem dostarczyć ich do dowolnej osady należącej do @<sNation>.
+
 #TEXT 3
-At @<shoreName> I have taken onboard @<count> sailors from the wrecked @<shipTypeName> '@<ShipName>'. I should deliver them to the nearest settlement.
+Na @<shoreName> zabrałem na pokład @<count> marynarzy z rozbitego @<shipTypeName> '@<ShipName>'. Powinienem dostarczyć ich do najbliższej osady.
+
 #TEXT 4
-At @<shoreName> I have taken onboard @<count> sailors, put ashore by captain @<badCapName>. I should deliver them to the nearest settlement.
+Na @<shoreName> zabrałem na pokład @<count> marynarzy, których porzucił kapitan @<badCapName>. Powinienem dostarczyć ich do najbliższej osady.
+
 #TEXT 5
-At @<shoreName> I have met @<count> sailors from the wrecked @<shipTypeName> '@<ShipName>'. Their captain should have taken too many blows to the head; he demands to be delivered to Dunkirk. I have no clue what to do with them. So far, I have taken them onboard. I couldn't just leave them in this deserted place.
+Na @<shoreName> spotkałem @<count> marynarzy z rozbitego @<shipTypeName> '@<ShipName>'. Ich kapitan chyba dostał za dużo ciosów w głowę – żąda, by dostarczyć go do Dunkierki. Nie mam pojęcia, co z nimi zrobić. Na razie zabrałem ich na pokład. Nie mogłem ich zostawić w tym opuszczonym miejscu.
+
 #TEXT 6
-I delivered captain @<sName> and his sailors to @<sCity> and even received a small reward. Not too much, but won't hurt, either.
+Dostarczyłem kapitana @<sName> i jego marynarzy do @<sCity> i nawet otrzymałem niewielką nagrodę. Niezbyt dużą, ale lepsze to niż nic.
+
 #TEXT 7
-This insane captain demands to be delivered to Dunkirk and just doesn't want to leave my ship! His behavior becomes absolutely intolerable! I have no clue what to do in this situation!
+Ten szalony kapitan uparł się, żeby zabrać go do Dunkierki i nie chce opuścić mojego statku! Jego zachowanie staje się coraz bardziej nie do zniesienia! Nie mam pojęcia, co zrobić w tej sytuacji!
+
 #TEXT 8
-That nutcase finally got what he was asking for. I had to finish him off. I simply had no other choice. He was talking about unimaginable treasures, while not having even a spoon. What a crook...
+Ten wariat w końcu dostał to, na co zasłużył. Musiałem go wykończyć. Po prostu nie miałem innego wyjścia. Opowiadał o niewyobrażalnych skarbach, a nie miał nawet łyżki... Co za oszust...
+
 #TEXT 8_1
-What kind of people went!? Circumstances have changed, but that's no reason to wave in front of people. I had to teach this rude person a lesson in good manners.
+Co to za ludzie!? Okoliczności się zmieniły, ale to nie powód, by zachowywać się w ten sposób. Musiałem nauczyć tego prostaka dobrych manier.
+
 #TEXT 9
-Finally, I managed to get rid of that shipwreck survivor and he even slipped me a piece of a map. I must cut and run before he realizes that I have tricked him. He-he... Dunki-irk... Dunki-iiirk...
+W końcu udało mi się pozbyć tego rozbitka, a on nawet podsunął mi kawałek mapy. Lepiej się ulotnię, zanim się zorientuje, że go oszukałem. He-he... Dunki-irk... Dunki-iiirk...
+
 #TEXT 10
-At @<shoreName> I have met the shipwrecked sailors. I should tell the governor of the nearest settlement of @<sNation> about them. I guess, the provisions I have left for them will last long enough until the rescue ship arrives.
+Na @<shoreName> spotkałem rozbitków. Powinienem poinformować gubernatora najbliższej osady należącej do @<sNation>. Mam nadzieję, że zapasy, które im zostawiłem, wystarczą do czasu przybycia statku ratunkowego.
+
 #TEXT 11
-At @<shoreName> I met several sailors, put ashore by pirate @<sBadName>. I should tell the governor of the nearest settlement of @<sNation> about them. I guess the provisions I have left for them will last long enough until the rescue ship arrives.
+Na @<shoreName> spotkałem kilku marynarzy porzuconych przez pirata @<sBadName>. Powinienem poinformować gubernatora najbliższej osady należącej do @<sNation>. Mam nadzieję, że zapasy, które im zostawiłem, wystarczą do czasu przybycia statku ratunkowego.
+
 #TEXT 12
-I was too busy to return to that ill-fated cove. I can only hope that those poor souls were found and rescued by some other captain...
+Byłem zbyt zajęty, by wrócić do tej przeklętej zatoczki. Mogę tylko mieć nadzieję, że te biedne dusze zostały odnalezione i uratowane przez jakiegoś innego kapitana...
+
 #TEXT 13
-I told the governor of @<sCity> about the sailors abandoned at @<ShoreName>, but I have taken too long. Now we can only pray to the Lord that help will arrive in time...
+Poinformowałem gubernatora @<sCity> o marynarzach porzuconych na @<ShoreName>, ale zajęło mi to zbyt dużo czasu. Teraz możemy się jedynie modlić, aby pomoc dotarła na czas...
+
 #TEXT 14
-I told the governor of @<sCity> about the sailors abandoned at @<ShoreName> and even received a small reward. The governor was delighted to hear that the captain of the wrecked ship managed to survive. He will set up a rescue expedition at once.
+Poinformowałem gubernatora @<sCity> o marynarzach porzuconych na @<ShoreName> i nawet otrzymałem niewielką nagrodę. Gubernator był zachwycony, że kapitan rozbitego statku przeżył. Natychmiast zorganizuje ekspedycję ratunkową.
+
 #TEXT 15
-I delivered captain @<sName> and his sailors to the nearest settlement and was rewarded very handsomely, although I never asked for this...
+Dostarczyłem kapitana @<sName> i jego marynarzy do najbliższej osady i otrzymałem za to sowitą nagrodę, choć nawet o nią nie prosiłem...
+
 #TEXT 16
-At @<shoreName> I have taken onboard captain @<sName> and @<count> of his sailors. The captain claims that pirate @<sBadName> instigated his crew to mutiny, deprived him of his ship, and put the poor guys ashore. I promised him to seek out his ship '@<ShipName>' and return it to him, whereas I will receive the contents of her hold.
+Na @<shoreName> zabrałem na pokład kapitana @<sName> i @<count> jego marynarzy. Kapitan twierdzi, że pirat @<sBadName> podżegał jego załogę do buntu, odebrał mu statek i porzucił ich na brzegu. Obiecałem mu, że odnajdę jego statek '@<ShipName>' i zwrócę go, a w zamian zatrzymam zawartość ładowni.
+
 #TEXT 17
-As we had agreed, I delivered the captain and his sailors to the settlement. My only reward was their thanks, but it didn't cost me anything anyway.
+Zgodnie z umową dostarczyłem kapitana i jego marynarzy do osady. Moją jedyną nagrodą były ich podziękowania, ale przecież nic mnie to nie kosztowało.
+
 #TEXT 18
-I boarded @<ShipType> '@<ShipName>' and, according to our deal, gave it back to @<sName>. I took the contents of the hold for myself. Justice was served.
+Zająłem @<ShipType> '@<ShipName>' i zgodnie z naszą umową zwróciłem go kapitanowi @<sName>. Zatrzymałem zawartość ładowni dla siebie. Sprawiedliwości stało się zadość.
+
 #TEXT 19
-In the heat of battle @<ShipType> '@<ShipName>' was sunk and the contents of her hold, obviously, were lost as well. I feel very bad for captain @<sName>. But what was done, is done.
+W ferworze walki @<ShipType> '@<ShipName>' został zatopiony, a zawartość jego ładowni oczywiście przepadła. Bardzo mi szkoda kapitana @<sName>. Ale cóż, stało się...
 
-#QUEST JungleGirl
-Side Job: Damsel in the Jungle
-#TEXT 1
-I promised @<sName> from the settlement of @<sCity> to bring her @<sText1> large and @<sText2> small pearls for the necklace of her mistress. I have only 10 days - otherwise, all my efforts could be in vain.
-#TEXT 2
-In exchange for the pearls @<sName> gave me a very nice amulet. Indeed, you never know where you lose something and when you gain something.
-#TEXT 3
-I failed to collect enough pearls for @<sName>. I feel sorry for the girl, but it's her fault, after all, she shouldn't have applied for work with such a fickle mistress...
-#TEXT 4
-@<sName> claims that she knows the location where her father, notorious pirate @<sPirateName>, has hidden his treasure. It's @<sTreasureLoc>. We should disembark at @<sShore>. After we find the treasure, I'll need to deliver her back to the settlement of @<sCity>.
-#TEXT 5
-@<sName> is dead, and I don't know the place where the chests are hidden. Pity, but this time I was out of luck.
-#TEXT 5_1
-I decided not to bother myself with the search for @<sName>'s father's treasure. She can deal with it by herself, if she chooses to.
-#TEXT 6
-The treasure of @<sPirateName> was vast indeed. I received my half. Now I need to deliver @<sName> back home to the settlement of @<sCity>.
-#TEXT 7
-@<sName> died. I feel sorry for the girl, she's just become rich... What a stupid death...
-#TEXT 8
-I delivered @<sName> home with her treasure. As a token of her gratitude, she made me a very nice gift... Indeed, it's very nice to make people happy...
-#TEXT 9
-Daughter of @<sText> in the settlement of @<sCity> has run away from home. She claimed that she hated to marry the usurer's son, and she begged me to take her to her chosen one, @<sLover>. And what should I do with her? I would hate to spoil her life for the rest of her days, but I can understand her parents as well...
-#TEXT 10
-@<sName> died... That's what happens when the young ones pay no heed to their parents...
-#TEXT 11
-I handed the runaway to the guards. Let them decide what to do with her...
-#TEXT 12
-In the settlement of @<sCity> the girl ran away from me, as well. Well, I can only hope that she finds her happiness, for which she is willing to sacrifice everything. Oh, the youth...
-#TEXT 13
-I took the runaway to her father, and I am certain it was the right thing to do. What can be worse than the woe of the parents who lost their only child? And her father rewarded me handsomely.
-#TEXT 14
-I took the girl to her chosen one. From now on they can go on their own, I am not their nanny.
-#TEXT 15
-I have undertaken to deliver the loving couple to the town of @<sCity>, to the parents of her new groom. I think this is the right thing to do.
-#TEXT 16
-I have delivered the loving couple where I promised. Now, I should go to @<sText> and claim my reward from the groom's father. I wonder how much happy he will be to see me?
-#TEXT 17
-I decided not to bother the groom's parents, surely they must have other concerns. Besides, my expenses in this affair were very small, anyway.
-#TEXT 18
-The groom's father thanked me and made me a very decent gift... I feel almost jealous for these two young lovers...
-#TEXT 19
-Seems that it was a waste of my time. Groom's father turned out a real miser. I almost feel sorry for the young couple - neither of them had any luck with their parents... People are too hard-hearted in this back of beyond and wouldn't talk of anything beside gold. Still, I am glad that I managed to help the young ones. They deserve a different life.
-#TEXT 20
-I have undertaken to deliver the girl @<sName>, who had fled from the brothel in @<sBrothelCity>, to her parents in @<sCity>.
-#TEXT 21
-I have undertaken to bring to @<sName>, who had fled from the brothel, her grip sack. I'll need to look for it in the privacy room. Inside there should be some money, documents, a decent dress, and other belongings of the poor girl.
-#TEXT 22
-I was too busy and had to leave the girl in the tavern. Still, I hope that she is smart enough to deal with it by herself.
-#TEXT 23
-I did everything I could. I can only hope that @<sName> makes it safely to her home.
-#TEXT 24
-I delivered @<sName> to the settlement of @<sCity>. I didn't bring her to her parents, they will surely have other concerns...
-#TEXT 25
-I delivered @<sName> home. I was rewarded with a decent blade and also deep moral satisfaction.
-#TEXT 26
-I delivered @<sName> home. I was rewarded with a great musket and also deep moral satisfaction.
-#TEXT 27
-I delivered @<sName> home. Her brother offered me to partake in a joint raid against the pirates, but I had to refuse.
 
-#QUEST ShipEpidemy
-Event: The Epidemic
-#TEXT 1
-It seems I have caught an infection. Apparently, the captain of '@<sShipName>' was not kidding about the epidemic. I will need to minimize my interactions with the crew and be more careful in the future.
-#TEXT 2
-The epidemic is declining. I have an appetite again, which means that I am getting well, thank God.
-#TEXT 3
-We have an epidemic on the ship. The sailors are perishing to disease. The captain of boarded '@<sShipName>', may he burn in hell, was not kidding... What do we have to do now? May the Holy Virgin save us all.
-#TEXT 4
-The disease is declining. Praise the Most Holy Mother of God! In the future, I definitely need to be more careful...
+QUEST JungleGirl
+Zadanie poboczne: Dama w dżungli
 
+#TEKST 1
+Obiecałem @<sName> z osady @<sCity>, że przyniosę jej @<sText1> dużych i @<sText2> małych pereł na naszyjnik dla jej pani. Mam tylko 10 dni – inaczej cały mój wysiłek pójdzie na marne.
+
+#TEKST 2
+W zamian za perły @<sName> dała mi bardzo ładny amulet. Rzeczywiście, nigdy nie wiadomo, gdzie coś stracisz, a gdzie coś zyskasz.
+
+#TEKST 3
+Nie udało mi się zebrać wystarczającej liczby pereł dla @<sName>. Szkoda mi tej dziewczyny, ale to w końcu jej wina – nie powinna była podejmować pracy u tak kapryśnej pani...
+
+#TEKST 4
+@<sName> twierdzi, że zna miejsce, gdzie jej ojciec, słynny pirat @<sPirateName>, ukrył swój skarb. To @<sTreasureLoc>. Powinniśmy zejść na ląd w @<sShore>. Gdy znajdziemy skarb, będę musiał odwieźć ją do osady @<sCity>.
+
+#TEKST 5
+@<sName> nie żyje, a ja nie znam miejsca, w którym ukryto skrzynie. Szkoda, ale tym razem nie miałem szczęścia.
+
+#TEKST 5_1
+Zdecydowałem, że nie będę się trudzić poszukiwaniem skarbu ojca @<sName>. Może to zrobić sama, jeśli chce.
+
+#TEKST 6
+Skarb @<sPirateName> był naprawdę ogromny. Otrzymałem swoją połowę. Teraz muszę odwieźć @<sName> z powrotem do osady @<sCity>.
+
+#TEKST 7
+@<sName> zginęła. Szkoda dziewczyny, dopiero co stała się bogata... Co za głupia śmierć...
+
+#TEKST 8
+Odwiozłem @<sName> do domu razem z jej skarbem. W ramach wdzięczności podarowała mi bardzo ładny prezent... Naprawdę miło jest uszczęśliwiać ludzi...
+
+#TEKST 9
+Córka @<sText> z osady @<sCity> uciekła z domu. Twierdziła, że nienawidzi swojego narzeczonego, syna lichwiarza, i błagała mnie, bym zabrał ją do jej wybranka, @<sLover>. Co mam z nią zrobić? Nie chciałbym zrujnować jej życia, ale rozumiem też jej rodziców...
+
+#TEKST 10
+@<sName> nie żyje... Tak to się kończy, gdy młodzi nie słuchają swoich rodziców...
+
+#TEKST 11
+Przekazałem uciekinierkę straży. Niech oni zdecydują, co z nią zrobić...
+
+#TEKST 12
+W osadzie @<sCity> dziewczyna również mi uciekła. Cóż, mogę tylko mieć nadzieję, że znajdzie swoje szczęście, dla którego jest gotowa poświęcić wszystko. Ach, ta młodość...
+
+#TEKST 13
+Odwiozłem uciekinierkę do jej ojca i jestem pewien, że to była słuszna decyzja. Co może być gorszego niż rozpacz rodziców, którzy stracili swoje jedyne dziecko? Ojciec hojnie mnie wynagrodził.
+
+#TEKST 14
+Zabrałem dziewczynę do jej ukochanego. Teraz mogą sobie radzić sami, nie jestem ich niańką.
+
+#TEKST 15
+Podjąłem się dostarczenia zakochanej pary do miasta @<sCity>, do rodziców jej nowego narzeczonego. Myślę, że to właściwa decyzja.
+
+#TEKST 16
+Dostarczyłem zakochanych tam, gdzie obiecałem. Teraz powinienem udać się do @<sText> i odebrać swoją nagrodę od ojca pana młodego. Ciekawe, jak bardzo ucieszy się na mój widok?
+
+#TEKST 17
+Zdecydowałem, że nie będę niepokoić rodziców pana młodego, na pewno mają ważniejsze sprawy. Poza tym moje koszty w tej sprawie były niewielkie.
+
+#TEKST 18
+Ojciec pana młodego podziękował mi i podarował bardzo przyzwoity prezent... Prawie zazdroszczę tej dwójce młodych zakochanych...
+
+#TEKST 19
+Wydaje się, że zmarnowałem swój czas. Ojciec pana młodego okazał się prawdziwym skąpcem. Prawie współczuję tej młodej parze – żadne z nich nie miało szczęścia do rodziców... Ludzie w tej zapadłej dziurze są bezduszni i myślą tylko o złocie. Mimo wszystko cieszę się, że mogłem pomóc młodym. Zasługują na lepsze życie.
+
+#TEKST 20
+Podjąłem się dostarczenia dziewczyny @<sName>, która uciekła z burdelu w @<sBrothelCity>, do jej rodziców w @<sCity>.
+
+#TEKST 21
+Podjąłem się dostarczenia @<sName>, która uciekła z burdelu, jej tobołka. Muszę go poszukać w pokoju prywatnym. W środku powinny być jakieś pieniądze, dokumenty, porządna suknia i inne rzeczy należące do biednej dziewczyny.
+
+#TEKST 22
+Byłem zbyt zajęty i musiałem zostawić dziewczynę w karczmie. Mam nadzieję, że jest wystarczająco sprytna, by poradzić sobie sama.
+
+#TEKST 23
+Zrobiłem wszystko, co mogłem. Mogę tylko mieć nadzieję, że @<sName> bezpiecznie dotrze do domu.
+
+#TEKST 24
+Dostarczyłem @<sName> do osady @<sCity>. Nie zabrałem jej do rodziców – na pewno mają ważniejsze sprawy...
+
+#TEKST 25
+Odwiozłem @<sName> do domu. W nagrodę otrzymałem porządny rapier oraz satysfakcję moralną.
+
+#TEKST 26
+Odwiozłem @<sName> do domu. W nagrodę otrzymałem wspaniałą muszkiet oraz satysfakcję moralną.
+
+#TEKST 27
+Odwiozłem @<sName> do domu. Jej brat zaproponował mi udział we wspólnym rajdzie przeciwko piratom, ale musiałem odmówić.
+
+QUEST ShipEpidemy
+Wydarzenie: Epidemia
+
+#TEKST 1
+Wygląda na to, że złapałem jakąś infekcję. Najwyraźniej kapitan '@<sShipName>' nie żartował w sprawie epidemii. Muszę ograniczyć kontakt z załogą i w przyszłości być bardziej ostrożny.
+
+#TEKST 2
+Epidemia ustępuje. Odzyskałem apetyt, co oznacza, że wracam do zdrowia, dzięki Bogu.
+
+#TEKST 3
+Na pokładzie wybuchła epidemia. Marynarze umierają z powodu choroby. Kapitan przechwyconego '@<sShipName>', niech sczeźnie w piekle, nie kłamał... Co teraz mamy zrobić? Niech Najświętsza Panienka ma nas w swojej opiece.
+
+#TEKST 4
+Choroba ustępuje. Chwała Najświętszej Matce Bożej! W przyszłości zdecydowanie muszę być ostrożniejszy
 #QUEST ChurchGenQuest1
-Side Job: @<sCity> priest's manuscripts
+Zadanie poboczne: @<sCity> i kapłańskie manuskrypty
+
 #TEXT 1
-Holy father @<sName> tasked me with an errand: bring precious theosophical manuscripts, given by him for the sake of enlightenment and by the order of his superiors to the priest of @<sOwnerCity>, which he hasn't promptly returned. I undertook to help him in resolving this delicate matter.
+Kapłan @<sName> zlecił mi zadanie: przynieść cenne rękopisy teozoficzne, które przekazał kapłanowi w mieście @<sOwnerCity> na polecenie swoich przełożonych, a których ten jeszcze nie oddał. Podjąłem się pomocy w rozwiązaniu tej delikatnej sprawy.
+
 #TEXT 2
-Adult men, servants of God and acting like little children! Well, not a big deal, the most important thing is that I have the manuscripts! Now to take them back to @<sColony>.
+Dorośli mężczyźni, słudzy Boży, a zachowują się jak dzieci! Cóż, najważniejsze, że mam rękopisy! Teraz trzeba je odwieźć do @<sColony>.
+
 #TEXT 3_1
-Well, it's amazing to see how people try to vindicate their laziness and irresponsibility by some high purpose. How could one give such priceless things to a random person without any warranties? What a careless priest... Now I must chase that @<sCapName>, captain of "@<sShipName>" across the entire archipelago.
+To niesamowite, jak ludzie usprawiedliwiają swoją nieodpowiedzialność wzniosłymi celami. Jak można było powierzyć tak cenne rzeczy przypadkowej osobie, nie mając żadnej gwarancji? Co za lekkomyślny kapłan... Teraz muszę ścigać tego @<sCapName>, kapitana „@<sShipName>” po całym archipelagu.
+
 #TEXT 3_2
-That will be not an easy task to seek for a ship, a name of which I don't know. And I must act quickly, before that God-fearing captain gets rid of these precious books... but the first thing to do is to find out, what is that SACRED name written by @<sCapName> on the backside of his old tub?
+Nie będzie łatwo odnaleźć statek, którego nazwy nawet nie znam. Muszę działać szybko, zanim ten bogobojny kapitan pozbędzie się tych cennych ksiąg… Ale najpierw trzeba się dowiedzieć, jakie to ŚWIĘTE imię wypisał @<sCapName> na rufie swojego starego statku.
+
 #TEXT 4
-I wonder - why should I be the one paying for someone's religious impulses?! Goddammit! I do hope that near the colony of @<sColony> I will finally catch up with this old tub "@<sShipName>" and her God-fearing captain at the helm, and I will get these papers from him. Perhaps, the Lord will absolve me of a couple of sins for that.
+Dlaczego to ja mam ponosić konsekwencje czyichś religijnych impulsów?! Cholera! Mam nadzieję, że w pobliżu kolonii @<sColony> w końcu dopadnę tę starą krypę „@<sShipName>” i jej bogobojnego kapitana, a wtedy odbiorę od niego te dokumenty. Może Pan wybaczy mi przy tej okazji parę grzechów.
+
 #TEXT 5
-Out of luck again. That @<sName> is surely an interesting guy: the priest entrusted to him an extremely valuable cargo, but the port officials are trembling just at the sound of his name. Well, we'll see how it works out when we finally meet in @<sColony>...
+Znów pech. Ten @<sName> to naprawdę interesujący typ: kapłan powierzył mu niezwykle cenny ładunek, ale urzędnicy portowi drżą na samo wspomnienie jego imienia. Cóż, zobaczymy, jak się sprawy potoczą, gdy w końcu spotkamy się w @<sColony>…
+
 #TEXT 6
-That captain is surely an interesting person. Well, it's time to meet him face to face, take those longed-for books from him and deliver them to their rightful owner in @<sColony>.
+Ten kapitan to naprawdę ciekawa postać. Czas spotkać się z nim twarzą w twarz, odebrać upragnione księgi i dostarczyć je do prawowitego właściciela w @<sColony>.
+
 #TEXT 7
-Today I have handed the priest of @<sColony> his precious manuscripts and received my reward together with a warning against the mortal sin of greed.
+Dziś przekazałem kapłanowi z @<sColony> jego cenne rękopisy i otrzymałem nagrodę – razem z przestrogą przed śmiertelnym grzechem chciwości.
+
 #TEXT 7_2
-Old fool @<sCapName> made a debt in the tavern and gave the owner precious books and manuscripts as a pledge. Expenses and expenses again... I will buy out the manuscripts and finally deliver them to @<sColony>.
+Stary głupiec @<sCapName> zadłużył się w tawernie i zastawił u właściciela cenne księgi i rękopisy. Wydatki, wydatki i jeszcze raz wydatki… Wykupię te rękopisy i w końcu dostarczę je do @<sColony>.
+
 #TEXT 8
-Another expense in my ledger: I have paid the debt of an old cachalot @<sName> in the tavern. The manuscripts of the priest in the colony of @<sColony> have been bought out, and now it's time to return his longed-for manuscripts to him and show him my expenses book as well!
+Kolejny wydatek w moim rejestrze: spłaciłem dług starego kaszalota @<sName> w tawernie. Rękopisy kapłana z kolonii @<sColony> zostały wykupione, teraz czas mu je zwrócić – i pokazać mu też mój rachunek!
+
 #TEXT 9
-In fact, there are yet unselfish tavern owners around. I will hurry to @<sColony> to return the theosophical manuscripts and tell the story about a tavern keeper, who gave away priceless books only to uphold his vow.
+Są jeszcze na świecie bezinteresowni właściciele tawern. Spieszę do @<sColony>, by zwrócić teozoficzne rękopisy i opowiedzieć o tawerniku, który oddał bezcenne księgi, by dotrzymać złożonej przysięgi.
+
 #TEXT 10
-Oh, my... I would never imagine that such a simple task will be so time and effort-consuming. Well, at least the God-fearing captain @<sCapName> didn't cause me any trouble - he gave me the precious manuscripts and told me to get lost, which I gladly did. Now back to @<sColony>.
+Nie przypuszczałem, że tak proste zadanie pochłonie tyle czasu i wysiłku. Cóż, przynajmniej bogobojny kapitan @<sCapName> nie sprawił mi problemów – oddał mi cenne rękopisy i kazał mi się wynosić, co z przyjemnością uczyniłem. Teraz z powrotem do @<sColony>.
 
 #QUEST ChurchGenQuest2
-Side Job: Church Robbery in @<sCity>
+Zadanie poboczne: Kościelny rabunek w @<sCity>
+
 #TEXT 1
-Stealing the church money! What's wrong with this world?! Well, while Father @<sName> is bringing curses upon the heads of these scoffers, I should undertake more effective actions - and if the Lord does not reward me for them, then Padre certainly will... They couldn't have gone far...
+Kradzież kościelnych pieniędzy! Co się dzieje z tym światem?! Podczas gdy ojciec @<sName> złorzeczy na głowy tych bezbożników, ja powinienem podjąć skuteczniejsze działania – jeśli Pan mnie za nie nie wynagrodzi, to przynajmniej zrobi to ksiądz… Złodzieje nie mogli uciec daleko.
+
 #TEXT 2
-People in the town say that the money was stolen by the local bandits, who were smart enough to go into hiding. Perhaps I should visit their hunting grounds.
+Ludzie w mieście mówią, że pieniądze skradli lokalni bandyci, którzy byli na tyle sprytni, by się ukryć. Może powinienem odwiedzić ich kryjówkę.
+
 #TEXT 3
-Indeed, God gives everyone his due - the bandits got what they deserved, and I got the church money. Now back to see Father.
+Bóg każdemu daje to, na co zasłużył – bandyci dostali to, na co zasłużyli, a ja odzyskałem kościelne pieniądze. Czas wracać do ojca.
+
 #TEXT 4
-Isn't that nice? I did a favor to God and didn't forget about myself, either. A blessing!
+Czyż to nie piękne? Przysłużyłem się Bogu i nie zapomniałem o sobie. Błogosławieństwo!
+
 #TEXT 5
-That's even more than I could expect! Indeed, working for the church really pays off sometimes!
+To nawet więcej, niż mogłem oczekiwać! Praca dla Kościoła czasem naprawdę się opłaca!
+
 #TEXT 6
-Well, I am rich and I am cursed. Whatever. With such money I don't care neither about God nor about Devil.
+Jestem bogaty i przeklęty. Wszystko mi jedno. Z taką gotówką nie przejmuję się ani Bogiem, ani diabłem.
+
 #TEXT 7
-The jungle is full of scoundrels of all sorts, but I still haven't found those I was looking for. I'll have to get back to the town to get more precise information regarding their whereabouts.
+Dżungla pełna jest wszelkiej maści łotrów, ale wciąż nie znalazłem tych, których szukałem. Będę musiał wrócić do miasta po dokładniejsze informacje.
+
 #TEXT 8
-The stealers of the church property were smarter than I thought, and they fled the settlement. I must hurry to @<sCity> on @<sIsland>, before they have wasted all their money on booze and hookers!
+Złodzieje kościelnych pieniędzy okazali się sprytniejsi, niż myślałem, i uciekli z osady. Muszę się spieszyć do @<sCity> na @<sIsland>, zanim przepiją wszystko i wydadzą na dziwki!
+
 #TEXT 9
-Well, smugglers turned out to be easy to come to an agreement with. They helped the scoundrels for money, and they betrayed them for money. Alright, to @<sShore>, then.
+Przemytnicy okazali się łatwi do przekupienia. Pomogli złodziejom za pieniądze i zdradzili ich za pieniądze. Dobra, czas na @<sShore>.
+
 #TEXT 10_1
-Now that's quite a story... Could Father @<sName> indeed be so treacherous? Well, anyway I should talk to him first - it might be that I am suspecting a completely innocent man...
+To dopiero historia… Czy to możliwe, że ojciec @<sName> jest aż tak podstępny? Muszę najpierw z nim porozmawiać – może niesłusznie go podejrzewam…
 #TEXT 10_2
 Now that's quite a story... Could Father @<sName> indeed be so treacherous? Well, since I have killed all those scoundrels, no one but the padre himself can now confirm or disprove their words...
 #TEXT 11_1
@@ -367,7 +516,7 @@ Who could have thought that the church property could be so expensive... Well, a
 #TEXT 11_4
 Being poor is no sin... being a liar is! And God has rewarded such nobleness: the scoundrels who defied Him shall be put down, the church property will be saved, and I will receive my due reward!
 #TEXT 12_1
-I would like to believe that the repentance of the priest of @<sCity> was sincere. Of course, I have lost something from the material point of view - but moral satisfaction more than makes up for it!
+Chciałbym wierzyć, że skrucha kapłana z @<sCity> była szczera. Oczywiście, coś straciłem w sensie materialnym, ale moralna satysfakcja mi to wynagradza!
 #TEXT 12_2
 What a twist of events! It turns out that even the priests can fall victim to greed. But, as they say, all is well that ends well. Father @<sName> managed to cope with his temptation and even compensated my expenses.
 #TEXT 12_3
@@ -375,7 +524,7 @@ What a twist of events! It turns out that even the priests can fall victim to gr
 #TEXT 12_4
 In these times driven by greed, the Devil can seduce even the clergy, not to mention the laymen. Well, it might seem stupid, but I didn't take the dirty money of that crook in the soutane.
 #TEXT 12_5
-Indeed, our Lord is merciful if He allows sinners like Father @<sName> to deceive their credulous congregation. I am not as good-natured, and I'd be happy to turn in that crook to the authorities - but, unfortunately, I have no solid evidence of his collusion... Well, that's enough good deeds in our Lord's name. I was lucky enough to make that crook compensate my expenses, though.
+Nasz Pan jest naprawdę miłosierny, skoro pozwala takim grzesznikom jak ojciec @<sName> oszukiwać swoją łatwowierną trzódkę. Nie jestem aż tak pobłażliwy – chętnie wydałbym go władzom, ale niestety nie mam solidnych dowodów na jego winę… Cóż, dość już dobrych uczynków w imię Pana. Na szczęście udało mi się zmusić go do zwrotu moich wydatków.
 #TEXT 12_6
 Indeed, our Lord is merciful if He allows sinners like Father @<sName> to deceive their credulous congregation. I am not as good-natured, and I'd be happy to turn in that crook to the authorities - but, unfortunately, I have no solid evidence of his collusion... Well, that's enough good deeds in our Lord's name - all I am left with are expenses and disappointments.
 #TEXT 12_7
@@ -391,296 +540,365 @@ Will the Lord forgive me? He is the only one who might know why I deceived the o
 #TEXT 12_12
 No money! No glory! All I was left with are filthy insinuations!!! I will never deal with these hypocrites again!
 #TEXT 13
-The Bible says that all trials we face are given by the Lord according to our strengths, and God tempers the wind to the shorn lamb. Well, it seems that I have lost my strength, and this burden became too heavy for me. I hope that Father @<sName> will understand when I tell him that I had failed his mission.
+Biblia mówi, że Bóg zsyła nam próby na miarę naszych sił. Cóż, wygląda na to, że moje siły się wyczerpały, a ten ciężar stał się dla mnie zbyt wielki. Mam nadzieję, że ojciec @<sName> zrozumie, gdy powiem mu, że nie podołałem jego misji.
 
-#QUEST CaptainComission1
-Side Job: Last Wish
-#TEXT 1
-Captain of @<sShipName>, @<sCapName>, before he died, had asked me to tell @<sCharName> from @<sCity> that he didn't have time to do his errand. I will have to find this man. The last will of the dying man should be respected...
-#TEXT 2
-I decided to not waste time on petty business. Surely that man must have long forgotten about that errand of his.
-#TEXT 3
-@<sCharName> offered me to ransom his captive @<sCharType>. I didn't agree to that, pleading being busy.
-#TEXT 4
-@<sCharName> from @<sCity> asked me to deliver 150,000 pesos to @<sPirateName> in @<sPirateCity>, to liberate his @<sFamilyType> @<sSlaveName>, held by the pirates in waiting for ransom. When I return, I will receive 40,000 pesos for the job well done.
-#TEXT 5
-I was caught in dire straits. It turns out that @<sCapName> was delivering @<sPirateName> in @<sPirateCity> a ransom for some captive @<sSlaveName> - 3 chests of gold. That type, @<sCharName>, told me that his assignment still holds. If I don't bring @<sSlaveName> to the tavern of @<sCity> in 30 days, he promised to set bounty hunters upon my trail... But how could I have missed these chests in the cabin of the late captain?!
-#TEXT 6
-I failed to complete @<sCharName>'s assignment, but he must forgive me. After all, I could have perished just like captain @<sCapName>.
-#TEXT 7
-Well, the time allotted to deliver the captive has run out. Let's see what this menacing mister @<sCharName> will do now.
-#TEXT 8
-I decided to turn down @<sCharName>'s mission. He might feel offended, but I returned him the money, after all.
-#TEXT 9
-I have liberated the captive. Now I must deliver him to @<sCharName> in @<sCity>.
-#TEXT 10
-@<sName> got tired of waiting for a ransom to arrive and sold his captive to a plantation on Barbados. Well, that must be for the best - surely a slave cannot cost more than a hostage. I must hurry to Barbados to visit colonel Bishop.
-#TEXT 11
-I paid for @<sName> @<sSum> pesos. Now I must hurry to @<sCity> to @<sCharName>. He must be worried, poor soul. And a reward wouldn't hurt, either.
-#TEXT 12
-A blunder with the chests has cost me a lot. I paid for @<sName> a hefty sum of @<sSum> pesos. But the captive was not so simple and he offered me to take him to @<sCity> in exchange for some very valuable information. I agreed since the client didn't seem to be willing to pay me anything.
-#TEXT 13
-A blunder with the chests has cost me a lot. I paid for @<sName> a hefty sum of @<sSum> pesos. It seems that the liberated guy doesn't want to meet with my client at all, but this is not my business. I don't need any more trouble because of this ragamuffin.
-#TEXT 14
-I have delivered a former hostage and now the free citizen @<sName> to his relative and received my promised reward of 40,000 pesos in credit chests.
-#TEXT 15
-I have delivered a former hostage @<sName> to his relative, but he refused to compensate my additional expenses... People become really intractable when they don't need anything from you anymore.
-#TEXT 16
-I delivered the former captive to the client. It turned out that it was a specialist of @<sSpeciality>, hunted by @<sNation>. I was given a valuable gift as a reward on behalf of the government.
-#TEXT 17
-During an escape attempt @<sName> was killed. Perhaps, I shouldn't have endangered him. What am I supposed to say to the client now?
-#TEXT 17_1
-@<sName> perished in the jungle. Perhaps, I shouldn't have endangered him. What am I supposed to say to the client now?
-#TEXT 18
-I managed to arrange @<sName>'s escape from the plantation. Now I only need to find him and deliver him to the client.
-#TEXT 19
-That captive was not so simple and he offered me to take him to @<sCity> in exchange for some very valuable information. I agreed since the client didn't seem to be willing to pay me anything.
-#TEXT 20
-It seems that the liberated guy doesn't want to meet with my client at all, but this is not my business. I don't need any more trouble because of this ragamuffin.
-#TEXT 21
-That captive engineer was rather useful. The information I had obtained from him would be priceless even for a seasoned warrior.
-#TEXT 22
-I notified @<sCharName> about the death of @<sName>, his relative. I kept the ransom money as compensation for my expenses.
-#TEXT 23
-I notified @<sCharName> about the death of @<sName>, his relative, and returned him the ransom money - 150,000 pesos. Of course, I could have demanded to compensate my expenses, but hardly in this case.
-#TEXT 24
-@<sName> charged me with the task of sinking two pirate vessels - '@<sShipName1>' and '@<sShipName2>', which went to @<sShoreName> on @<sShoreType>. I must manage in 15 days before they clear the cache.
-#TEXT 25
-@<sName>'s task was fulfilled, '@<sShipName1>' and '@<sShipName2>' were destroyed. Now I must hurry to @<sCity> before @<sNameNom> sells the captive to slavers.
-#TEXT 26
-I failed to catch up with the pirates. Surely they have cleared the cache by now. I'll have to return to @<sName> empty-handed.
-#TEXT 27
-I failed to come to an agreement with @<sName>. Now I have no idea whether I should return to @<sCity> to meet @<sCharName>. What will I tell him?
-#TEXT 28
-After my blunder with the mission @<sName> increased the ransom to 200,000 pesos. I didn't pay it with my own money. Now I have no idea whether I should return to @<sCity> to meet @<sCharName>. What will I tell him?
-#TEXT 29
-After my blunder with the mission @<sName> increased the ransom to 200,000 pesos. I had to pay it with my own money. Now I should hurry to @<sCity> to meet @<sCharName>. Perhaps, the client will compensate my additional expenses, after all?
-#TEXT 30
-I didn't pay such an outrageous sum. Ransoming a hostage is one thing, but buying a plantation slave is a different story... I wonder, did Bishop reinforce the guard after the incident, or is he still saving?
-#TEXT 31
-@<sName> doesn't want to part with his captive without a ransom. Well, I'll have to either find the money or just abandon the whole matter.
-#TEXT 32
-I told @<sName> about the captive's death. It seems that now he is in the same hopeless position he had put me in before.
-#TEXT 33
-I failed to destroy the pirate ships @<sShipName1> and @<sShipName2>. Now I'll have to return to @<sName> empty-handed.
-#TEXT 34
-Finally @<sName> is on board my ship. Now I must hurry to @<sCity> to meet @<sCharName> before he has a heart attack.
-#TEXT 35
-Eh ... I should not have chosen this option. There was no need to quarrel with @<sName>. Now we really have to solve problems...
-#TEXT 36
-Eh ... I should not have chosen this option. There was no need to abandon the @<sName> quest. Now the prisoner had to be redeemed for 250,000 pesos.
+QUEST CaptainComission1
+Side Job: Ostatnia Wola
+
+TEXT 1
+Kapitan @<sShipName>, @<sCapName>, zanim zginął, poprosił mnie, żebym powiedział @<sCharName> z @<sCity>, że nie zdążył wykonać swojej misji. Muszę odnaleźć tego człowieka. Ostatnia wola umierającego powinna zostać uszanowana...
+
+TEXT 2
+Zdecydowałem, że nie będę tracił czasu na drobne sprawy. Z pewnością ten człowiek dawno zapomniał o swojej misji.
+
+TEXT 3
+@<sCharName> zaproponował mi wykupienie swojego jeńca @<sCharType>. Nie zgodziłem się na to, tłumacząc się brakiem czasu.
+
+TEXT 4
+@<sCharName> z @<sCity> poprosił mnie, żebym dostarczył 150 000 pesos do @<sPirateName> w @<sPirateCity>, aby uwolnić jego @<sFamilyType> @<sSlaveName>, trzymanego przez piratów w oczekiwaniu na okup. Kiedy wrócę, otrzymam 40 000 pesos za dobrze wykonaną pracę.
+
+TEXT 5
+Znalazłem się w trudnej sytuacji. Okazało się, że @<sCapName> dostarczał @<sPirateName> w @<sPirateCity> okup za jakiegoś jeńca @<sSlaveName> - 3 skrzynie złota. Ten typ, @<sCharName>, powiedział mi, że jego zadanie nadal obowiązuje. Jeśli nie dostarczę @<sSlaveName> do tawerny w @<sCity> w ciągu 30 dni, obiecał wysłać na mnie łowców nagród... Ale jak mogłem przeoczyć te skrzynie w kajucie zmarłego kapitana?!
+
+TEXT 6
+Nie udało mi się wykonać zadania @<sCharName>, ale musi mi wybaczyć. W końcu mogłem zginąć tak jak kapitan @<sCapName>.
+
+TEXT 7
+Czas na dostarczenie jeńca minął. Zobaczymy, co teraz zrobi ten groźny @<sCharName>.
+
+TEXT 8
+Postanowiłem odrzucić misję @<sCharName>. Może poczuje się obrażony, ale oddałem mu pieniądze, w końcu.
+
+TEXT 9
+Uwolniłem jeńca. Teraz muszę dostarczyć go do @<sCharName> w @<sCity>.
+
+TEXT 10
+@<sName> znudziło się czekanie na okup i sprzedał swojego jeńca na plantację na Barbadosie. Cóż, chyba to lepsze - w końcu niewolnik nie kosztuje więcej niż zakładnik. Muszę szybko udać się na Barbados, by odwiedzić pułkownika Bishopa.
+
+TEXT 11
+Zapłaciłem @<sName> @<sSum> pesos. Teraz muszę szybko udać się do @<sCity>, by spotkać się z @<sCharName>. Na pewno jest zmartwiony, biedak. A nagroda się przyda.
+
+TEXT 12
+Pomylka z skrzyniami kosztowała mnie sporo. Zapłaciłem @<sName> sporą sumę @<sSum> pesos. Ale jeniec nie był taki prosty i zaoferował mi, że zabierze mnie do @<sCity> w zamian za bardzo cenne informacje. Zgodziłem się, ponieważ klient nie wydawał się skłonny zapłacić mi niczego.
+
+TEXT 13
+Pomylka z skrzyniami kosztowała mnie sporo. Zapłaciłem @<sName> sporą sumę @<sSum> pesos. Okazuje się, że uwolniony facet nie chce wcale spotkać się z moim klientem, ale to nie moja sprawa. Nie potrzebuję więcej kłopotów przez tego łachmytka.
+
+TEXT 14
+Dostarczyłem byłego zakładnika, a teraz wolnego obywatela @<sName> do jego krewnego i otrzymałem obiecaną nagrodę w wysokości 40 000 pesos w skrzyniach kredytowych.
+
+TEXT 15
+Dostarczyłem byłego zakładnika @<sName> do jego krewnego, ale odmówił pokrycia moich dodatkowych wydatków... Ludzie stają się naprawdę nieprzystępni, kiedy już niczego od ciebie nie potrzebują.
+
+TEXT 16
+Dostarczyłem byłego jeńca klientowi. Okazało się, że był to specjalista od @<sSpeciality>, ścigany przez @<sNation>. Dostałem cenny prezent jako nagrodę w imieniu rządu.
+
+TEXT 17
+Podczas próby ucieczki @<sName> zginął. Może nie powinienem go narażać. Co teraz mam powiedzieć klientowi?
+
+TEXT 17_1
+@<sName> zginął w dżungli. Może nie powinienem go narażać. Co teraz mam powiedzieć klientowi?
+
+TEXT 18
+Udało mi się zorganizować ucieczkę @<sName> z plantacji. Teraz muszę go tylko znaleźć i dostarczyć klientowi.
+
+TEXT 19
+Ten jeniec nie był taki prosty i zaoferował mi, że zabierze mnie do @<sCity> w zamian za bardzo cenne informacje. Zgodziłem się, ponieważ klient nie wydawał się skłonny zapłacić mi niczego.
+
+TEXT 20
+Okazuje się, że uwolniony facet wcale nie chce spotkać się z moim klientem, ale to nie moja sprawa. Nie potrzebuję więcej kłopotów przez tego łachmytka.
+
+TEXT 21
+Ten inżynier jeniec był całkiem użyteczny. Informacje, które od niego uzyskałem, byłyby bezcenne nawet dla doświadczonego wojownika.
+
+TEXT 22
+Poinformowałem @<sCharName> o śmierci @<sName>, jego krewnego. Zachowałem pieniądze za okup jako rekompensatę za moje wydatki.
+
+TEXT 23
+Poinformowałem @<sCharName> o śmierci @<sName>, jego krewnego, i oddałem mu pieniądze za okup - 150 000 pesos. Oczywiście mógłbym domagać się zwrotu moich wydatków, ale chyba nie w tej sytuacji.
+
+TEXT 24
+@<sName> zlecił mi zadanie zatopienia dwóch statków piratów - '@<sShipName1>' i '@<sShipName2>', które udały się do @<sShoreName> na @<sShoreType>. Muszę się wyrobić w ciągu 15 dni, zanim oczyścić skarb.
+
+TEXT 25
+Zadanie @<sName> zostało wykonane, '@<sShipName1>' i '@<sShipName2>' zostały zniszczone. Teraz muszę się spieszyć do @<sCity>, zanim @<sNameNom> sprzeda jeńca handlarzom niewolników.
+
+TEXT 26
+Nie udało mi się dogonić piratów. Pewnie już oczyścili skarb. Muszę wrócić do @<sName> z pustymi rękami.
+
+TEXT 27
+Nie udało mi się dojść do porozumienia z @<sName>. Teraz nie wiem, czy powinienem wrócić do @<sCity>, by spotkać się z @<sCharName>. Co mu powiem?
+
+TEXT 28
+Po mojej pomyłce z misją @<sName> zwiększył okup do 200 000 pesos. Nie zapłaciłem tego własnymi pieniędzmi. Teraz nie wiem, czy powinienem wrócić do @<sCity>, by spotkać się z @<sCharName>. Co mu powiem?
+
+TEXT 29
+Po mojej pomyłce z misją @<sName> zwiększył okup do 200 000 pesos. Musiałem zapłacić to własnymi pieniędzmi. Teraz muszę się spieszyć do @<sCity>, by spotkać się z @<sCharName>. Może klient jednak zwróci moje dodatkowe wydatki?
+
+TEXT 30
+Nie zapłaciłem tej absurdalnej kwoty. Wykupienie zakładnika to jedno, ale kupowanie niewolnika z plantacji to zupełnie inna sprawa... Zastanawiam się, czy Bishop wzmocnił straż po incydencie, czy nadal oszczędza?
+
+TEXT 31
+@<sName> nie chce rozstać się ze swoim jeńcem bez okupu. Cóż, będę musiał znaleźć pieniądze lub po prostu porzucić tę sprawę.
+
+TEXT 32
+Poinformowałem @<sName> o śmierci jeńca. Wygląda na to, że teraz znalazł się w tej samej beznadziejnej sytuacji, w której mnie wcześniej postawił.
+
+TEXT 33
+Nie udało mi się zniszczyć statków piratów @<sShipName1> i @<sShipName2>. Teraz będę musiał wrócić do @<sName> z pustymi rękami.
+
+TEXT 34
+W końcu @<sName> jest na pokładzie mojego statku. Teraz muszę się spieszyć do @<sCity>, by spotkać się z @<sCharName>, zanim dostanie zawału serca.
+
+TEXT 35
+Eh... Nie powinienem był wybierać tej opcji. Nie było potrzeby kłócić się z @<sName>. Teraz naprawdę musimy rozwiązać te problemy...
+
+TEXT 36
+Eh... Nie powinienem był wybierać tej opcji. Nie było potrzeby porzucać misji @<sName>. Teraz jeńca trzeba było wykupić za 250 000 pesos.
 
 #QUEST CaptainComission2
-Side Job: Last Wish
+Side Job: Ostatnia Wola
 #TEXT 1
-Captain @<sName>, before he died, had asked me to inform the captain of @<sShipType> '@<sShipName>', @<sCapName>, that he is going to be arrested in @<sCity1>. The authorities have sniffed something out about him... @<sShipTypeNom> sails from @<sCity2> and will arrive at the port of @<sCity1> in 10-15 days. I must catch up with it. The last will of a dying man has to be respected.
+Kapitan @<sName>, zanim umarł, poprosił mnie, żebym poinformował kapitana @<sShipType> '@<sShipName>', @<sCapName>, że zostanie aresztowany w @<sCity1>. Władze coś wykryły na jego temat... @<sShipTypeNom> wypływa z @<sCity2> i dotrze do portu w @<sCity1> za 10-15 dni. Muszę go dogonić. Ostatnią wolę umierającego człowieka należy uszanować.
 #TEXT 2
-I was too busy to give @<sCapName> notice about the impending danger. I guess he will pull through, if he is smart enough.
+Byłem zbyt zajęty, żeby powiadomić @<sCapName> o nadchodzącym niebezpieczeństwie. Chyba da sobie radę, jeśli będzie wystarczająco mądry.
 #TEXT 3
-I have fulfilled the task of @<sName>, but didn't help his friend, pleading being busy. He's a smart guy and will pull through by himself.
+Wykonałem zadanie od @<sName>, ale nie pomogłem jego przyjacielowi, tłumacząc się, że jestem zajęty. To mądry facet i poradzi sobie sam.
 #TEXT 4
-Captain @<sName> asked me to help him to secretly take out a load of @<sGoods> from @<sShoreName>. When I refused, he just took my ship and left me on a desert coast. Now I have to start from scratch... That's what happens to those willing to help others.
+Kapitan @<sName> poprosił mnie o pomoc w potajemnym wywiezieniu ładunku @<sGoods> z @<sShoreName>. Kiedy odmówiłem, po prostu zabrał moją łódź i zostawił mnie na bezludnym wybrzeżu. Teraz muszę zacząć od zera... Tak się dzieje z tymi, którzy chcą pomagać innym.
 #TEXT 5
-Captain @<sName> asked me to help him to secretly take out a load of @<sGoods> from @<sShoreName>. When I refused, he attempted to take my ship. He shouldn't have tried better because I sent him down to feed the sharks. Unfortunately, I don't know where the cache is.
+Kapitan @<sName> poprosił mnie o pomoc w potajemnym wywiezieniu ładunku @<sGoods> z @<sShoreName>. Kiedy odmówiłem, próbował zabrać moją łódź. Lepiej, żeby nie próbował, bo wysłałem go na rekiny. Niestety, nie wiem, gdzie jest ukryty ładunek.
 #TEXT 6
-Captain @<sName> asked me to help him to secretly take out a load of @<sGoods> from @<sShoreName>. When I refused, he attempted to take my ship. I had to flee with all sails set.
+Kapitan @<sName> poprosił mnie o pomoc w potajemnym wywiezieniu ładunku @<sGoods> z @<sShoreName>. Kiedy odmówiłem, próbował zabrać moją łódź. Musiałem uciekać ze wszystkimi żaglami na pełnym wietrze.
 #TEXT 7
-Captain @<sName> asked me to help him to secretly take out a load of @<sGoods> from @<sShoreName>. I will receive everything which doesn't fit into his hold... I'll need to moor at @<sShoreNameDat> right after midnight.
+Kapitan @<sName> poprosił mnie o pomoc w potajemnym wywiezieniu ładunku @<sGoods> z @<sShoreName>. Otrzymam wszystko, co nie zmieści się w jego ładowni... Muszę zacumować w @<sShoreNameDat> tuż po północy.
 #TEXT 8
-I changed my mind and will not deal with @<sName>. Let him face the consequences alone.
+Zmieniłem zdanie i nie będę zajmował się @<sName>. Niech sam stawi czoła konsekwencjom.
 #TEXT 9
-It seems that an ambush was set up at @<sShoreName> - the patrol showed up way too quickly. Captain @<sName> was killed in the skirmish. The sailors have scoured the cove, but haven't found the cache. Perhaps, the authorities have already cleared it...
+Wygląda na to, że zastawiono zasadzkę w @<sShoreName> - patrol pojawił się zbyt szybko. Kapitan @<sName> zginął w starciu. Żołnierze przeszukali zatokę, ale nie znaleźli ładunku. Może władze już go oczyściły...
 #TEXT 10
-The cargo is in the holds. My share is @<sGoodsQuantity> pieces of @<sGoods>. It is time for us to part. We should hurry before the crown sends hunters for our heads.
+Ładunek znajduje się w ładowniach. Moja część to @<sGoodsQuantity> sztuk @<sGoods>. Czas się rozstać. Musimy się pośpieszyć, zanim korona wyśle łowców na nasze głowy.
 #TEXT 11
-The cargo is in the holds. My share was @<sGoodsQuantity> units of @<sGoods>. Captain @<sName> fears that a chase is possible, and asks to escort his ship to @<sShoreName>, on @<sShoreType>. I decided to help him, all the more so that he promised me a decent reward of @<sSum> pesos.
+Ładunek znajduje się w ładowniach. Moja część to @<sGoodsQuantity> jednostek @<sGoods>. Kapitan @<sName> obawia się, że może dojść do pościgu, i prosi o eskortowanie jego statku do @<sShoreName>, na @<sShoreType>. Zdecydowałem się pomóc, tym bardziej, że obiecał mi przyzwoitą nagrodę w wysokości @<sSum> pesos.
 #TEXT 12
-A patrol squadron was already waiting for us at the exit of the cove. We had to accept the battle. @<sShipType> '@<sShipName>' with a hold full of @<sGoods> has sunk, and captain @<sName> with it as well.
+Już na wyjściu z zatoki czekała na nas eskadra patrolowa. Musieliśmy stawić czoła bitwie. @<sShipType> '@<sShipName>' z pełną ładownią @<sGoods> zatonął, a kapitan @<sName> wraz z nim.
 #TEXT 13
-We accepted the battle, and @<sShipType> '@<sShipName>' with a hold full of @<sGoods> has sunk... Well, seems like that was God's will... Brave captain @<sName> had no time to enjoy his newly found riches.
+Stawiliśmy czoła bitwie, a @<sShipType> '@<sShipName>' z pełną ładownią @<sGoods> zatonął... Cóż, wygląda na to, że to była wola Boża... Odważny kapitan @<sName> nie miał czasu nacieszyć się nowo znalezionym bogactwem.
 #TEXT 14
-Me and captain @<sName> decided that it's best for us to go separate ways in order not to bind ourselves by mutual obligations. He went to @<sShoreName>, and I went about my own business.
+Ja i kapitan @<sName> postanowiliśmy, że najlepiej będzie, jeśli pójdziemy osobnymi drogami, aby nie obciążać się wzajemnymi zobowiązaniami. On udał się do @<sShoreName>, a ja poszedłem w swoją stronę.
 #TEXT 15
-I failed to escort @<sShipType> '@<sShipName>' in time, and captain @<sName> refused to pay me my reward. Still, I didn't come off as a loser, anyway.
+Nie udało mi się eskortować @<sShipType> '@<sShipName>' na czas, a kapitan @<sName> odmówił zapłaty mojej nagrody. Mimo to i tak nie wyszedłem na przegranego.
 #TEXT 16
-Captain @<sName> lured me into a trap and demanded to return the cargo or pay ransom in gold. At @<sShoreName>, part of his heroic crew was already waiting for us. I had to accept the battle.
+Kapitan @<sName> wciągnął mnie w pułapkę i zażądał zwrotu ładunku lub zapłacenia okupu w złocie. W @<sShoreName> czekała już część jego bohaterskiej załogi. Musiałem zgodzić się na bitwę.
 #TEXT 17
-Captain @<sName> lured me into a trap and demanded to return the cargo or pay ransom in gold. At @<sShoreName>, part of his heroic crew was already waiting for us. I had to pay him @<sSum> pesos.
+Kapitan @<sName> wciągnął mnie w pułapkę i zażądał zwrotu ładunku lub zapłacenia okupu w złocie. W @<sShoreName> czekała już część jego bohaterskiej załogi. Musiałem zapłacić mu @<sSum> pesos.
 #TEXT 18
-It turned out that captain of patrol @<sShipType>, @<sName>, has connections with smugglers. Perhaps I should visit him in the fort's dungeons, shouldn't I?
+Okazało się, że kapitan patrolu @<sShipType>, @<sName>, ma powiązania ze szmuglerami. Może powinienem go odwiedzić w lochach fortu, co?
 #TEXT 19
-It turned out that captain of patrol @<sShipType>, @<sName>, is entangled in a dirty story with some lost cargo. Perhaps, I should visit him in the fort's dungeons, shouldn't I?
+Okazało się, że kapitan patrolu @<sShipType>, @<sName>, jest uwikłany w brudną sprawę ze zgubionym ładunkiem. Może powinienem go odwiedzić w lochach fortu, co?
 #TEXT 20
-I failed to find the cache of captain @<sName>. I think I should not bother the governor of @<sCity> with this.
+Nie udało mi się znaleźć ukrytego ładunku kapitana @<sName>. Chyba nie będę zawracał głowy gubernatorowi @<sCity> tym tematem.
 #TEXT 21
-Captain @<sName> agreed to show me the cache in exchange for half of its contents. First, I'll need to hide the escaper on my ship, and then I'll deal with the rest.
+Kapitan @<sName> zgodził się pokazać mi ukryty ładunek w zamian za połowę jego zawartości. Najpierw muszę ukryć uciekiniera na moim statku, a potem zajmę się resztą.
 #TEXT 22
-Captain @<sName> died - and my hope to find the cache died with him.
+Kapitan @<sName> zginął - a moja nadzieja na znalezienie ładunku zginęła wraz z nim.
 #TEXT 23
-I totally failed the governor's mission... What a shame...
+Całkowicie zawaliłem misję gubernatora... Co za wstyd...
 #TEXT 24
-The cache of captain @<sName> is in @<sShoreName>. I need to prepare the hold to accept @<sGoodsQuantity> units of @<sGoods>. We need to hurry before the cache is found.
+Ukryty ładunek kapitana @<sName> znajduje się w @<sShoreName>. Muszę przygotować ładownię na przyjęcie @<sGoodsQuantity> sztuk @<sGoods>. Musimy się pośpieszyć, zanim ładunek zostanie znaleziony.
 #TEXT 25
-I was so foolish to let captain @<sName> slip away! I could have earned quite a bit.
+Byłem tak głupi, że pozwoliłem kapitanowi @<sName> umknąć! Mógłbym zarobić całkiem sporo.
 #TEXT 26
-We have found the cache, @<sGoodsQuantity> units of @<sGoods> were loaded into the hold. @<sSum1> of those belong to captain @<sName>. In @<sDays> days I'll have to deliver it to @<sShoreName> on @<sShoreType>. Let those governor's hounds chase captain @<sName> and his precious cargo and add me to their list as well.
+Znaleźliśmy ukryty ładunek, @<sGoodsQuantity> jednostek @<sGoods> załadowanych do ładowni. @<sSum1> z nich należy do kapitana @<sName>. Za @<sDays> dni będę musiał dostarczyć je do @<sShoreName> na @<sShoreType>. Niech te gubernatorskie psy szukają kapitana @<sName> i jego cennego ładunku, a mnie dodadzą do swojej listy...
 #TEXT 27
-Finally, captain @<sName> revealed his cache, but I thought that I wasn't going to share with him. He tried to dispute my decision and paid for it. And now @<sGoodsQuantity> units of @<sGoods> belong to me.
+W końcu kapitan @<sName> ujawnil swój ukryty ładunek, ale uznałem, że nie będę dzielił się z nim. Próbował zakwestionować moją decyzję i zapłacił za to. A teraz @<sGoodsQuantity> jednostek @<sGoods> należy do mnie.
 #TEXT 28
-Finally, captain @<sName> revealed his cache, but he couldn't stand the news that I was going to hand the whole cargo to the authorities. I had to use surgical intervention, and captain died as a result. Now I need to tell the governor of @<sCity> about the whereabouts of the cache.
+W końcu kapitan @<sName> ujawnil swój ukryty ładunek, ale nie zniosł wiadomości, że zamierzam oddać cały ładunek władzy. Musiałem użyć chirurgicznej interwencji, a kapitan zginął w wyniku tego. Teraz muszę powiedzieć gubernatorowi @<sCity> o miejscu ukrycia ładunku.
 #TEXT 29
-I didn't tell the authorities about the location of captain @<sName>'s cache. I guess they'll find it without my aid.
+Nie powiedziałem władzom o miejscu ukrycia ładunku kapitana @<sName>. Chyba i tak go znajdą bez mojej pomocy.
+
 #TEXT 30
-The task of the governor of @<sCity> was completed. Instead of monetary compensation, I have received a very decent gift.
+Zadanie gubernatora @<sCity> zostało zakończone. Zamiast wynagrodzenia pieniężnego, otrzymałem bardzo porządny prezent.
+
 #TEXT 31
-We were late, and there were no buyers at @<sShoreName>. Captain @<sName> offered me to buy his share, but I see no reason to throw away my money for the cargo which is already in my hold anyway. Our dispute was decided by the duel.
+Zatrzymaliśmy się za późno i nie było kupców na @<sShoreName>. Kapitan @<sName> zaproponował mi, abym odkupił jego część, ale nie widzę sensu wyrzucać pieniędzy na ładunek, który i tak mam już w ładowni. Nasz spór rozstrzygnął pojedynek.
+
 #TEXT 32
-We were late, and there were no buyers at @<sShoreName>. Captain @<sName> offered me to buy his share for @<sSum> pesos. I agreed, and in turn, the captain gave me a nice gift. We parted as friends.
+Zatrzymaliśmy się za późno i nie było kupców na @<sShoreName>. Kapitan @<sName> zaproponował mi, abym odkupił jego część za @<sSum> pesos. Zgodziłem się, a w zamian kapitan dał mi ładny prezent. Rozstaliśmy się jak przyjaciele.
+
 #TEXT 33
-Apparently, captain @<sName> could not share the loot with his crew. I had to reduce the number of those willing to get his share. Captain himself didn't last much longer, either. So, our agreement is now null and void due to the death of one of the partners. I get to keep the whole cargo.
+Wydaje się, że kapitan @<sName> nie mógł podzielić się łupem ze swoją załogą. Musiałem zmniejszyć liczbę osób chętnych na jego część. Sam kapitan długo już nie wytrzymał. Nasza umowa jest teraz nieważna z powodu śmierci jednego z partnerów. Cały ładunek należy do mnie.
+
 #TEXT 34
-Apparently, captain @<sName> could not share the loot with his crew. I had to reduce the number of those willing to get his share. Besides, the captain offered me to buy his share for @<sSum> pesos. I agreed, and in turn, the captain gave me a nice gift. We parted as friends.
+Wydaje się, że kapitan @<sName> nie mógł podzielić się łupem ze swoją załogą. Musiałem zmniejszyć liczbę osób chętnych na jego część. Poza tym, kapitan zaproponował mi, abym odkupił jego część za @<sSum> pesos. Zgodziłem się, a w zamian kapitan dał mi ładny prezent. Rozstaliśmy się jak przyjaciele.
+
 #TEXT 35
-Apparently, captain @<sName> could not share the loot with his crew. I had to reduce the number of those willing to get his share. Besides, the captain offered me to buy his share for @<sSum> pesos. He also asked me to accept him in my crew, but I refused. He is way too independent.
+Wydaje się, że kapitan @<sName> nie mógł podzielić się łupem ze swoją załogą. Musiałem zmniejszyć liczbę osób chętnych na jego część. Poza tym, kapitan zaproponował mi, abym odkupił jego część za @<sSum> pesos. Zaproponował też, abym przyjął go do swojej załogi, ale odmówiłem. Jest zbyt niezależny.
+
 #TEXT 36
-It seems that captain @<sName> failed to share the booty with his crew. I had to lower the amount of those who wanted a cut. Besides, the captain offered to buy out the booty for @<sSum> pesos. So I did it. And also hired him as an officer under my command. Everyone is looking for such fighters.
+Wydaje się, że kapitan @<sName> nie podzielił się łupem ze swoją załogą. Musiałem zmniejszyć liczbę osób chętnych na jego część. Poza tym, kapitan zaproponował mi, abym odkupił łup za @<sSum> pesos. Zgodziłem się. A także przyjąłem go na oficera pod moim dowództwem. Wszyscy szukają takich wojowników.
+
 #TEXT 37
-I was late, and the captain of the patrol @<sShipType>, @<sName>, was executed with his entire crew. I should learn more about it.
+Spóźniłem się, a kapitan patrolu @<sShipType>, @<sName>, został stracony wraz z całą swoją załogą. Powinienem dowiedzieć się więcej o tej sprawie.
+
 #TEXT 38
-I was late, and the captain of the patrol @<sShipType>, @<sName>, was executed with his entire crew. But he could have enough time to take to the shore the contents of @<sShipTypeQuest>'s hold.
+Spóźniłem się, a kapitan patrolu @<sShipType>, @<sName>, został stracony wraz z całą swoją załogą. Miał jednak wystarczająco dużo czasu, by zabrać na brzeg ładunek z @<sShipTypeQuest>.
+
 #TEXT 39
-It turns out that things are not as simple as they look like. The captain of the patrol @<sShipType>, @<sName>, was executed with part of his crew, but there was no evidence of his crime. I should meet with @<sCharName>, contused former cannoneer of @<sShipType> '@<sShipName>'.
+Okazuje się, że sprawy nie są tak proste, jak się wydają. Kapitan patrolu @<sShipType>, @<sName>, został stracony wraz z częścią swojej załogi, ale nie było dowodów na jego winę. Powinienem spotkać się z @<sCharName>, poturbowanym byłym kanonierem z @<sShipType> '@<sShipName>'.
+
 #TEXT 40
-Former cannoneer of @<sShipType> '@<sShipName>', @<sName>, told me the entire story of the death of @<sShipTypeQuest> '@<sShipNameQuest>'. But that confused guy asked an outrageous price for the information about the cache. I refused to pay him.
+Były kanonier z @<sShipType> '@<sShipName>', @<sName>, opowiedział mi całą historię śmierci @<sShipTypeQuest> '@<sShipNameQuest>'. Jednak ten zagubiony facet zażądał nieprzyzwoitej ceny za informacje o skrytce. Odrzuciłem jego propozycję.
+
 #TEXT 41
-The conversation with the former cannoneer of @<sShipType> '@<sShipName>' was very fruitful. I need to find @<sSum> pesos - that's what @<sName> has asked for the information about the cache.
+Rozmowa z byłym kanonierem z @<sShipType> '@<sShipName>' była bardzo owocna. Muszę zdobyć @<sSum> pesos – to, czego zażądał @<sName> za informacje o skrytce.
+
 #TEXT 42
-I abandoned the whole affair with the cache of captain @<sName>. May the former cannoneer @<sCharName> forgive me, but he asked just too much for it, and I have more important things to do.
+Porzuciłem całą sprawę ze skrytką kapitana @<sName>. Niech wybaczy mi były kanonier @<sCharName>, ale zażądał za dużo, a ja mam ważniejsze sprawy do załatwienia.
+
 #TEXT 43
-Former cannoneer of @<sShipType> '@<sShipName>', @<sName>, told me the entire story of the death of @<sShipTypeQuest> '@<sShipNameQuest>'. As it turns out, the cache indeed exists and contains the entire cargo of @<sShipTypeQuest> - @<sSum> pieces of @<sGoods> is stored there. I need to prepare the hold and come to @<sShoreName> after midnight - @<sName> will be waiting for me there.
+Były kanonier z @<sShipType> '@<sShipName>', @<sName>, opowiedział mi całą historię śmierci @<sShipTypeQuest> '@<sShipNameQuest>'. Okazuje się, że skrytka faktycznie istnieje i zawiera cały ładunek z @<sShipTypeQuest> - @<sSum> sztuk @<sGoods> jest tam przechowywanych. Muszę przygotować ładownię i przyjść na @<sShoreName> po północy – @<sName> będzie na mnie czekać.
+
 #TEXT 44
-I foolishly missed my chance to scavenge the cache of captain @<sName>! Perhaps, @<sCharName> didn't wait for me, or, maybe, he decided to put me on. Either way, it was wasted time and money...
+Głupio przegapiłem swoją szansę na zrabowanie skrytki kapitana @<sName>! Może @<sCharName> na mnie nie czekał, a może postanowił mnie oszukać. Tak czy inaczej, czas i pieniądze zostały zmarnowane...
+
 #TEXT 45
-The smugglers cleaned out the cache of captain @<sName>. Or, perhaps, @<sCharName> decided to put me on and worked on both fronts. Either way, it was wasted time and money...
+Przemytnicy opróżnili skrytkę kapitana @<sName>. A może @<sCharName> postanowił mnie oszukać i działał na obu frontach. Tak czy inaczej, czas i pieniądze zostały zmarnowane...
+
 #TEXT 46
-The smugglers found the cache of captain @<sName> before me. I had to recapture the cargo by force. Unfortunately, cannoneer @<sCharName> perished. Ironically, all members of the crew of that ill-fated @<sShipType> '@<sShipName>' are dead, and none of them managed to make any use of their heroic undertaking... I took all goods that fitted into my hold - @<sSum> units of @<sGoods>.
+Przemytnicy znaleźli skrytkę kapitana @<sName> przede mną. Musiałem odzyskać ładunek siłą. Niestety, kanonier @<sCharName> zginął. Ironią jest to, że wszyscy członkowie załogi tego nieszczęsnego @<sShipType> '@<sShipName>' są martwi i nikt nie zdołał skorzystać z ich heroicznego przedsięwzięcia... Wziąłem cały towar, który zmieścił się w mojej ładowni – @<sSum> jednostek @<sGoods>.
+
 #TEXT 47
-The smugglers found the cache of captain @<sName> before me. I had to recapture the cargo by force. I took all goods that fitted into my hold - @<sSum> units of @<sGoods>. Now to deliver cannoneer @<sCharName> to the settlement of @<sCity>.
+Przemytnicy znaleźli skrytkę kapitana @<sName> przede mną. Musiałem odzyskać ładunek siłą. Wziąłem cały towar, który zmieścił się w mojej ładowni – @<sSum> jednostek @<sGoods>. Teraz muszę dostarczyć kanoniera @<sCharName> do osady @<sCity>.
+
 #TEXT 48
-We parted with the former cannoneer of @<sShipType> '@<sShipName>' @<sCharName> in the port of @<sCity>. As a token of his gratitude, he gave me a valuable thing as a gift. At least someone from @<sShipType>'s crew made some use of their risky affair.
+Pożegnałem się z byłym kanonierem z @<sShipType> '@<sShipName>' @<sCharName> w porcie @<sCity>. Na pamiątkę jego wdzięczności, dał mi cenny przedmiot. Przynajmniej ktoś z załogi @<sShipType> skorzystał na swojej ryzykownej sprawie.
+
 #TEXT 49
-It turned out that captain of patrol @<sShipType>, @<sName>, was arrested for naval banditry. Perhaps I should visit him in the fort's dungeons, shouldn't I?
+Okazało się, że kapitan patrolu @<sShipType>, @<sName>, został aresztowany za bandytyzm morski. Może powinienem go odwiedzić w lochach fortu, prawda?
+
 #TEXT 50
-It turned out that the captain of patrol @<sShipType>, @<sName>, was arrested for naval banditry, and now the governor of @<sCity> is searching for his cache. I undertook to help him in that affair and obtained permission to pay the prisoner a visit.
+Okazało się, że kapitan patrolu @<sShipType>, @<sName>, został aresztowany za bandytyzm morski, a teraz gubernator @<sCity> szuka jego skrytki. Podjąłem się pomóc mu w tej sprawie i uzyskałem pozwolenie, by odwiedzić więźnia.
+
 #TEXT 51
-I completely forgot about the contract with the captain with his cargo ... And to hell with him ... I'll manage somehow. And I'll drop the captain in the first city.
+Całkowicie zapomniałem o umowie z kapitanem i jego ładunkiem... A cholera z nim... Jakoś sobie poradzę. A kapitana zostawię w pierwszym mieście.
+
 #TEXT 52
-I think that the governor will not get poorer from the fact that I deceived him. And the captain ... As they say: they cut down the forest - the chips fly.
+Myślę, że gubernator nie stanie się biedniejszy od tego, że go oszukałem. A kapitan... Jak to mówią: rąbią las – wióry lecą.
+
 #TEXT 53
-We found a stash, @<sGoodsQuantity> pieces @<sGoods> loaded into the hold. Of these, @<sSum1> belongs to my partner. In @<sDays> days, it needs to be delivered to @<sShoreName>, which is near @<sShoreType>. I decided not to hand the captain over to the authorities, but to hide with him! Now let the governor's bloodhounds look for me ... good luck to them in this!
+Znaleźliśmy skrytkę, @<sGoodsQuantity> sztuk @<sGoods> załadowanych do ładowni. Z tego @<sSum1> należy do mojego partnera. Za @<sDays> dni, ładunek trzeba dostarczyć na @<sShoreName>, które znajduje się w pobliżu @<sShoreType>. Postanowiłem nie oddać kapitana władzom, lecz ukryć się z nim! Teraz niech gubernatorscy psy gończe mnie szukają... powodzenia im w tym!
+
 #TEXT 54
-Looks like Captain @<sName> couldn't share the loot with his crew. I had to reduce the number of people who wanted to get his share. Then he offered to buy it from me. But I refused to pay him. The duel decided our issue in my favor.
+Wygląda na to, że kapitan @<sName> nie mógł podzielić się łupem ze swoją załogą. Musiałem zmniejszyć liczbę osób, które chciały dostać jego część. Potem zaproponował, abym odkupił ją od niego. Ale odmówiłem mu zapłaty. Pojedynek rozstrzygnął naszą sprawę na moją korzyść.
+
 #TEXT 55
-Captain @<sName> accidentally died on his way from jail to my ship. Too bad. Now you can forget about the cache.
+Kapitan @<sName> przypadkowo zginął w drodze z więzienia na moją łódź. Szkoda. Teraz można zapomnieć o skrytce.
 
 #QUEST Convict
-Side Job: Fugitives
+Zadanie poboczne: Uciekinierzy
 #TEXT 1
-In the jungle of @<sIslandType> I met @<sConvictNum> fugitive convicts. I decided to accept them into my crew. Around midnight I'll need to moor at @<sShoreName>.
+W dżungli @<sIslandType> spotkałem @<sConvictNum> zbiegłych więźniów. Postanowiłem przyjąć ich do mojej załogi. Około północy będę musiał zacumować w @<sShoreName>.
 #TEXT 2
-The fugitive convicts, whom I met at @<sIslandType>, asked me to procure a tartane or long boat for them, and promised to pay double. I'll have to bring their new tub to @<sShoreName>. The deadline is tomorrow morning.
+Zbiegli więźniowie, których spotkałem na @<sIslandType>, poprosili mnie, abym załatwił dla nich tartanę lub łódź długą i obiecali zapłacić podwójnie. Muszę dostarczyć im nową łódź do @<sShoreName>. Termin to jutrzejszy poranek.
 #TEXT 3
-I changed my mind - I won't help the convicts. They'll have to pull through all by themselves.
+Zmieniłem zdanie - nie pomogę więźniom. Będą musieli poradzić sobie sami.
 #TEXT 4
-I brought the vessel to @<sShoreName>. The fugitive convicts have paid me in full.
+Dostarczyłem statek do @<sShoreName>. Zbiegli więźniowie zapłacili mi w całości.
 #TEXT 5
-I brought the vessel to @<sShoreName>. But instead of paying me, the convicts made me a very decent gift. I am fine with that.
+Dostarczyłem statek do @<sShoreName>. Ale zamiast zapłacić mi, więźniowie podarowali mi bardzo porządny prezent. Jestem z tego zadowolony.
 #TEXT 6
-I brought the vessel to @<sShoreName>. But the damned convicts chose to put me on. I had to explain to them that one should stay true to his word. Pity that this lesson will be of no use to them anymore.
+Dostarczyłem statek do @<sShoreName>. Ale przeklęci więźniowie postanowili mnie oszukać. Musiałem wyjaśnić im, że należy dotrzymywać słowa. Szkoda, że ta lekcja już im się nie przyda.
 #TEXT 7
-The convicts saw the ship called @<sShipName> being loaded yesterday night with @<sGoodName>. Whoever they were, they couldn't have gone far.
+Więźniowie widzieli, jak wczoraj wieczorem załadowano statek o nazwie @<sShipName> towarami @<sGoodName>. Kimkolwiek byli, na pewno nie poszli daleko.
 #TEXT 8
-In the jungle of @<sIslandType> I met @<sConvictNum> fugitive convicts. They asked to be delivered to the lighthouse of @<sCity>. I agreed to do this for @<sSum> pesos. About midnight I'll need to send a lifeboat for them to @<sShoreName>.
+W dżungli @<sIslandType> spotkałem @<sConvictNum> zbiegłych więźniów. Poprosili, abym dowiózł ich do latarni morskiej w @<sCity>. Zgodziłem się zrobić to za @<sSum> pesos. Około północy będę musiał wysłać łódź ratunkową do @<sShoreName>.
 #TEXT 9
-I refused to take the convicts onboard, which caused unhealthy aggression among them. I had to pacify them in my own way.
+Odmówiłem zabrania więźniów na pokład, co spowodowało u nich niezdrową agresję. Musiałem ich uspokoić na swój sposób.
 #TEXT 10
-The convicts are onboard. Now I have to cut and run, before a patrol shows up.
+Więźniowie są na pokładzie. Teraz muszę uciekać, zanim pojawi się patrol.
 #TEXT 11
-I delivered the convicts to @<sMayak> and received my reward - @<sSum> pesos in gold ingots. As they say, money has no smell...
+Dostarczyłem więźniów do @<sMayak> i otrzymałem swoją nagrodę - @<sSum> pesos w sztabkach złota. Jak mówią, pieniądze nie mają zapachu...
 #TEXT 12
-I delivered the convicts to @<sMayak>. But instead of paying me, the convicts made me a very decent gift. I am fine with that.
+Dostarczyłem więźniów do @<sMayak>. Ale zamiast zapłacić mi, więźniowie podarowali mi bardzo porządny prezent. Jestem z tego zadowolony.
 #TEXT 13
-I delivered the convicts to @<sMayak>. But the damned convicts chose to put me on. I had to explain to them that one should stay true to his word. Pity that this lesson will be of no use to them anymore.
+Dostarczyłem więźniów do @<sMayak>. Ale przeklęci więźniowie postanowili mnie oszukać. Musiałem wyjaśnić im, że należy dotrzymywać słowa. Szkoda, że ta lekcja już im się nie przyda.
 
 #QUEST HoldQuest
-Side Job: Lead from captive Captain
+Zadanie poboczne: Łup od ujętego kapitana
 #TEXT 1
-Captive captain @<sName> told me that a wealthy merchant is transporting @<sGoods> from @<sCityFrom> to @<sCityTo>. At times he hires an escort. One could try to intercept his ship '@<sShipName>' on approach to either of these ports. If the captain was telling the truth, the loot will be very rich. The captive was set free, by the way.
+Ujęty kapitan @<sName> powiedział mi, że bogaty kupiec transportuje @<sGoods> z @<sCityFrom> do @<sCityTo>. Czasami wynajmuje eskortę. Można by spróbować przechwycić jego statek '@<sShipName>' w pobliżu jednego z tych portów. Jeśli kapitan mówił prawdę, łup będzie bardzo bogaty. Zresztą, ujęty kapitan został uwolniony.
 #TEXT 2
-Before I managed to prepare the assault, '@<sShipName>' lifted the anchor and sailed away. I have no hopes for another chance of tracking it down.
+Zanim zdążyłem przygotować atak, '@<sShipName>' podniósł kotwicę i wypłynął. Nie liczę na kolejną szansę na jego śledzenie.
 #TEXT 3
-I failed to capture ship '@<sShipName>' loaded with @<sGoods>. I have no hopes for another chance of tracking it down.
+Nie udało mi się przechwycić statku '@<sShipName>' załadowanego @<sGoods>. Nie liczę na kolejną szansę na jego śledzenie.
 #TEXT 4
-I managed to capture ship '@<sShipName>' loaded with @<sGoods>.
+Udało mi się przechwycić statek '@<sShipName>' załadowany @<sGoods>.
 #TEXT 5
-In the heat of battle, ship '@<sShipName>' was sunk, and the whole cargo of @<sGoods> now rests on the seabed!
+W gorączce bitwy statek '@<sShipName>' został zatopiony, a cały ładunek @<sGoods> teraz spoczywa na dnie morza!
 #TEXT 6
-Captive captain @<sName> told me that in the city of @<sCity> he has a friend, @<sNameChar>, who, allegedly, can pay a large ransom for the liberation of his former companion. I guess I need to see that 'friend' of his.
+Ujęty kapitan @<sName> powiedział mi, że w mieście @<sCity> ma przyjaciela, @<sNameChar>, który rzekomo może zapłacić dużą kwotę za uwolnienie swojego byłego towarzysza. Chyba muszę odwiedzić tego "przyjaciela".
 #TEXT 7
-That captive captain @<sName> tried to put me on! Well, he's not getting away with that! I'll have him hanged right now!
+Ten ujęty kapitan @<sName> próbował mnie oszukać! No cóż, nie ujdzie mu to na sucho! Powieszę go teraz!
 #TEXT 8
-The owner of the tavern in @<sCity> advised me to visit @<sFoundChar>; if I am lucky, I'll see @<sName> there.
+Właściciel tawerny w @<sCity> radził mi odwiedzić @<sFoundChar>; jeśli będę miał szczęście, spotkam tam @<sName>.
 #TEXT 9
-I have foolishly let @<sName> slip away! I could have got a nice ransom for the captive.
+Głupio pozwoliłem @<sName> uciec! Mogłem zdobyć porządną kwotę za tego więźnia.
 #TEXT 10
-That captive captain @<sName> tried to put me on! Well, he's not getting away with that! I'll have him hanged right now!
+Ten ujęty kapitan @<sName> próbował mnie oszukać! No cóż, nie ujdzie mu to na sucho! Powieszę go teraz!
 #TEXT 11
-Captive captain @<sName> didn't trick me. His mate @<sNameChar> without more ado paid @<sSum> pesos. I'll need to order the bosun to send our sufferer to the shore.
+Ujęty kapitan @<sName> mnie nie oszukał. Jego towarzysz @<sNameChar> bez zbędnych ceregieli zapłacił mi @<sSum> pesos. Muszę rozkazać bosmanowi, by wysłał naszego nieszczęśnika na brzeg.
 #TEXT 12
-Captive captain @<sName> told me that in the city of @<sCity> lives a @<sNameChar>, who is willing to sell the map to the treasure of @<sPirateName>. I don't know whether this is true or not, but I still had to release the captive. I'll need to pay a visit to that @<sNameChar>, before he claims the treasure for himself.
+Ujęty kapitan @<sName> powiedział mi, że w mieście @<sCity> mieszka @<sNameChar>, który jest gotów sprzedać mapę do skarbu @<sPirateName>. Nie wiem, czy to prawda, ale i tak musiałem uwolnić kapitana. Muszę odwiedzić tego @<sNameChar>, zanim on sam zdobędzie skarb.
 #TEXT 13
-I don't know whether captive captain @<sName> has tricked me or it just so happened, but I never found @<sNameChar>, the owner of the map... And I don't think that I ever will...
+Nie wiem, czy ujęty kapitan @<sName> mnie oszukał, czy to po prostu przypadek, ale nigdy nie znalazłem @<sNameChar>, właściciela mapy... I nie sądzę, żeby kiedykolwiek go znalazł...
 #TEXT 14
-I have foolishly let @<sName> slip away!
+Głupio pozwoliłem @<sName> uciec!
 #TEXT 15
-I have bought a map of @<sPirateName> for @<sSum> pesos. I can only hope that the treasure is still there.
+Kupiłem mapę @<sPirateName> za @<sSum> pesos. Mogę tylko mieć nadzieję, że skarb wciąż tam jest.
 #TEXT 16
-I decided not to buy the map from @<sName>. @<sSum> - it's just too expensive, all the more so that the treasure might already not be there...
+Postanowiłem nie kupować mapy od @<sName>. @<sSum> - to po prostu za drogo, tym bardziej, że skarb może już tam nie być...
 #TEXT 17
-There was nothing worthy in the chest. Perhaps, the owner of the treasure was there before me - or that rascal @<sName> invented an original method of making money on fools like me.
+Nie było nic wartościowego w skrzyni. Może właściciel skarbu był przede mną - albo ten łajdak @<sName> wymyślił oryginalny sposób zarabiania na takich głupkach jak ja.
 #TEXT 18
-Captive captain @<sCapName> wasn't lying. All treasures were there. Now that's a stroke of luck!
+Ujęty kapitan @<sCapName> nie kłamał. Wszystkie skarby tam były. To szczęśliwy traf!
 
 #QUEST zpq
-The Dangerous Cargo
+Niebezpieczny Ładunek
 #TEXT 0
-Smugglers whispered that in one of the Spanish colonies on the Maine, there was a big problem with the stocks of gunpowder in the local fort. If there is a chance, you need to talk to the commandants - maybe someone will want to buy this dangerous cargo from me. There are only two problems: firstly, they say that the commandant will not deal with rogues, and secondly, the party will be very large - it will be necessary to take care of the ship's capacity and its safety. But that's all later - to begin with, to find this buyer in general.
+Przemytnicy szeptali, że w jednej z hiszpańskich kolonii na Maine jest duży problem z zapasami prochu strzelniczego w miejscowej twierdzy. Jeśli będzie taka szansa, trzeba porozmawiać z komendantami - może ktoś będzie chciał kupić ten niebezpieczny ładunek ode mnie. Są tylko dwa problemy: po pierwsze, mówią, że komendant nie będzie zajmował się łotrzykami, a po drugie, partia będzie bardzo duża - trzeba będzie zadbać o pojemność statku i jego bezpieczeństwo. Ale to wszystko później - najpierw trzeba w ogóle znaleźć tego kupca.
 #TEXT 1
-The commandant of Cumana's fort asked me to deliver him a batch of gunpowder barrels - 15,000 pcs. A reward of 100,000 pesos surely looks very lucrative. I decided to undertake this affair, although having so much gunpowder in the hold is surely dangerous.
+Komendant twierdzy w Cumana poprosił mnie o dostarczenie mu partii beczek z prochem - 15 000 sztuk. Nagroda w wysokości 100 000 pesos z pewnością wygląda bardzo kusząco. Postanowiłem podjąć się tej sprawy, chociaż mając tak dużo prochu w ładowni, to z pewnością niebezpieczne.
 #TEXT 2
-The cargo is delivered, and, despite the bad memory of the fort's commandant, I still managed to receive my due reward.
+Ładunek dostarczony, a mimo złych wspomnień o komendancie twierdzy, udało mi się otrzymać należną nagrodę.
 #TEXT 3
-Who could have thought that the fort's commandant is just an ordinary crook! Using his position, he only paid me half of the sum we agreed upon! I decided that it's still better than nothing and he was too well-guarded, anyway...
+Kto by pomyślał, że komendant twierdzy to zwykły oszust! Wykorzystując swoją pozycję, zapłacił mi tylko połowę ustalonej sumy! Uznałem, że i tak lepiej niż nic, a był zbyt dobrze strzeżony, w każdym razie...
 #TEXT 4
-That skunk in an officer's uniform tried to trick me and appropriate half of my reward! Such treachery cannot be forgiven! I had to take what's mine from his cold dead body.
+Ten łajdak w mundurze próbował oszukać mnie i przywłaszczyć sobie połowę mojej nagrody! Takiej zdrady nie można wybaczyć! Musiałem zabrać swoje z jego zimnego martwego ciała.
 #TEXT 5
-That wannabe machinator tried to pay me only half of the promised sum. I had to explain to him who was right in this case. My arguments turned out to be very persuasive, and in the end, the commandant paid me even a quarter more. Still, I am certain that he didn't come off as a loser, anyway.
+Ten naśladowca machinatora próbował zapłacić mi tylko połowę obiecanej kwoty. Musiałem wyjaśnić mu, kto ma rację w tej sprawie. Moje argumenty okazały się bardzo przekonujące, a na końcu komendant zapłacił mi nawet o ćwierć więcej. Wciąż jestem pewny, że i tak nie wyszedł na przegranego.
 #TEXT 6
-I decided to turn this mission down. 100,000 pesos is a whole lot of money, but I still value my own life higher than that.
+Postanowiłem zrezygnować z tej misji. 100 000 pesos to sporo pieniędzy, ale i tak cenię swoje życie wyżej niż to.
 #TEXT 7
-At the exit from the town I was approached by some goons, who evidently were waiting for me. They kindly requested to give them all the money. Surely they were hired by that stinky rat. Well, I had to disappoint him yet another time...
+Na wyjściu z miasta podeszło do mnie kilku zbirów, którzy najwyraźniej czekali na mnie. Uprzejmie poprosili o przekazanie im wszystkich pieniędzy. Z pewnością zostali wynajęci przez tego śmierdzącego szczura. Cóż, musiałem rozczarować go jeszcze raz...
 #TEXT 8
-At the exit from the fort I was approached by some goons, who evidently were waiting for me. They kindly requested to give them back all the money. Surely they were hired by that stinky rat. I decided not to tangle with them - they were very well-armed. I had to give away all my money...
+Na wyjściu z twierdzy podeszło do mnie kilku zbirów, którzy najwyraźniej czekali na mnie. Uprzejmie poprosili o oddanie im wszystkich pieniędzy. Z pewnością zostali wynajęci przez tego śmierdzącego szczura. Postanowiłem nie wdawać się w walkę - byli bardzo dobrze uzbrojeni. Musiałem oddać wszystkie moje pieniądze...
 
 #QUEST NoiseCemetery
-Spooky Cemetery
+Na Cmentarzu Straszy
 #TEXT 1
-The cemetery guard on the island @<sCity> is scared to death. According to him, for several nights now, there have been strange noises and eerie moans, like those of a ghost. Of course, I don't believe much in these tales but I decided to help the poor old man and see what's going on there. Worst case scenario, I'll either have to fight some marauders or run for my life if this is indeed a ghost. I just need to wait for nightfall.
+Strażnik cmentarny niedaleko miasta @<sCity> jest autentycznie przerażony i żyje w strachu. Jak sam tłumaczy, już od kilku nocy zdawało mu się słyszeć dziwne odgłosy, jakby ktoś lub coś pojękiwało, sam twierdzi, że może być to duch. Oczywiście, że ja nie wierzę w takie bajeczki o zmarłych, ale i tak zdecydowałem się pomóc starcowi w sprawdzeniu krypty i tego, co się tam dzieje. W najgorszym przypadku, albo oklepię kilku rzezimieszków, albo będę uciekał gdzie pieprz rośnie, jeśli to rzeczywiście będzie duch... Muszę tylko poczekać, aż się ściemni.
 #TEXT 2
-It's both funny and sad. All these noises and moans are not the wailing of a ghost at all but merely secret meetings of a couple of lovebirds. Their parents are against them seeing each other, so they thought they would find a suitable secluded place. Now I can put the guard's mind at ease. On my way to him, I'll need to think of what to tell him.
+Śmieszne to, a zarazem smutne. Wszystkie te dziwne dźwięki i pojękiwania wcale nie pochodziły od ducha, a w rzeczywistości były to dźwięki rozkoszy dwóch kochanków. Rodzice są przeciwni wobec ich spotkań, dlatego uznali, że cmentarz na obrzeżach miasta będzie idealną kryjówką, w której będą mogli się parzyć jak nigdy dotąd... Mogę w końcu uspokoić strażnika oraz zaspokoić jego paranoiczne myśli. Będąc w drodze, zastanowię się, co mu dokładnie powiedzieć.
 #TEXT 3
-I decided not to spoil the life of the unlucky couple and did not tell the guard about them. Young love... Hopefully, everything works out for them.
+Postanowiłem nie zdradzać pechowej pary i nie powiedziałem o nich strażnikowi. Zamiast tego, zmyśliłem na szybko historyjkę o tym, jak pokonałem ducha, a następnie oczyściłem kryptę, którą na szczęście łyknął. Cóż tu dużo mówić?... Mam nadzieję, że młodym powiedzie się zarówno w życiu, jak i miłości.
 #TEXT 4
-I told the guard the truth. He was, of course, furious at first but calmed down eventually. We've all sinned. This couple just didn't have another place to see each other. Young love... Hopefully, everything works out for them.
+Powiedziałem strażnikowi prawdę. Oczywiście, że na początku był wściekły, lecz po chwili uspokoił się. Prawda jest taka, że wszyscy grzeszymy, a wspomniana para nie miała swojego kącika, w którym mogliby się spotykać. Cóż tu dużo mówić?... Mam nadzieję, że młodym powiedzie się zarówno w życiu, jak i miłości.
 #TEXT 5
-I decided that I did not care about any noises and terrible groans imagined by the watchman. My time is more valuable.
+Stwierdziłem, że nie obchodzą mnie żadne dźwięki, czy straszne jęki wymyślone przez strażnika. Mój czas jest wart o wiele więcej.
+#QUEST SixCaptains
+Sześciu Kapitanów
+#TEXT	1
+ Być może to pierwszy raz, gdy krótkie spotkanie z kimś, kto nie miał dla mnie ani pracy, ani interesu, skłoniło mnie do zapisania wpisu w tym dzienniku. Nie rozumiem, dlaczego ten ksiądz wywarł na mnie takie wrażenie. Nie znam jego imienia, a czasami gadał bzdury, ale zapadł mi w pamięć. Spotkaliśmy się już dwa razy i można by to uznać za zbieg okoliczności. Ale jeśli spotkamy się ponownie...
+Muszę przyznać, że jego zainteresowanie jest nieco pochlebne. To spojrzenie w jego oczach jest takie... oceniające. Jakby podziwiał moje osiągnięcia. A kto by nie podziwiał? Dwa legendarne statki, dwóch kapitanów, o których krążyły opowieści po całym Archipelagu – obaj polegli z mojej ręki.
+Ciekawe, co powie, gdy dowie się o moich przyszłych wyczynach? Archipelag jest ogromny, ale moja sława, jak się zdaje, rośnie szybciej, niż myślałem.

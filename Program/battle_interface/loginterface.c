@@ -194,6 +194,7 @@ void Notification(string strLog, string ability)
 		case "Troopers": IconIndex = 48; break;
 		case "HPPlus": IconIndex = 57; break;
 		case "Mimicry": IconIndex = 65; break;
+		case "Icollection": IconIndex = 71; break;
 		case "Leadership": IconIndex = 72; break;
 		case "FencingL": IconIndex = 73; break;
 		case "FencingS": IconIndex = 74; break;

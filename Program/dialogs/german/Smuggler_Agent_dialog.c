@@ -523,7 +523,7 @@ void ProcessDialogEvent()
 			
 			if (iTmp)
 			{
-				dialog.text = NPCStringReactionRepeat("Warum nimmst du das nächste Mal nicht einen königlichen Kriegsschiff. Dein Schiff kann vom Fort aus leicht gesichtet werden. Wir riskieren nicht unsere Köpfe. Komm das nächste Mal auf einem einzelnen kleinen Schiff.","Soll ich mich wiederholen? Finde ein kleineres Schiff und dann werden wir reden.","Bist du wirklich so idiotisch? Such dir eine Schoner oder eine Brigantine. Nur in diesem Fall werden wir Geschäfte machen.","Ach, so ein Idiot...","Block",1,npchar,Dialog.CurrentNode);
+				dialog.text = NPCStringReactionRepeat("Warum nimmst du das nächste Mal nicht einen königlichen Kriegsschiff. Dein Schiff kann vom Fort aus leicht gesichtet werden. Wir riskieren nicht unsere Köpfe. Komm das nächste Mal auf einem einzelnen kleinen Schiff.","Soll ich mich wiederholen? Finde ein kleineres Schiff und dann werden wir reden.","Bist du wirklich so idiotisch? Such dir eine Schoner oder eine Brigantine. Nur in diesem Fall werden wir Geschäfte machen.","Ach, so ein Idiot...","block",1,npchar,Dialog.CurrentNode);
 				link.l1 = HeroStringReactionRepeat("Gut, ich habe dich verstanden.","Ich verstehe, ich wollte nur etwas klären.","Nein, kein Idiot, nur ein Geizhals. Dachte, dass sich etwas geändert hat. Ich würde ein paar weitere Pinassen nehmen...","Schau in den Spiegel...",npchar,Dialog.CurrentNode);
 				link.l1.go = DialogGoNodeRepeat("exit", "", "", "", npchar, Dialog.CurrentNode);	
 				break;
@@ -806,7 +806,7 @@ void ProcessDialogEvent()
 			pchar.questTemp.Shadowtrader = "true";
 			AddQuestRecord("Shadowtrader", "3");
 			CloseQuestHeader("Shadowtrader");
-			DeleteAttribute(pchar, "questTemp.Shadowtrader_Block");
+			DeleteAttribute(pchar, "questTemp.Shadowtrader_block");
 		break;
 		
 		case "Shadowtrader_smugglers_1":

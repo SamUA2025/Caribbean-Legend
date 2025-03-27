@@ -4,7 +4,7 @@ Bartolomeo
 }
 Portugal_2
 {
-Portuguese
+Portugiese
 }
 
 Portugal_3
@@ -27,7 +27,7 @@ Cord
 
 Portugal_7
 {
-Two days later@<NewStr()>nemy's vessel was not seen
+Zwei Tage später@<NewStr()>wurde das gegnerische Schiff nicht mehr gesehen
 }
 
 Portugal_8
@@ -46,7 +46,7 @@ Albatross
 
 Portugal_11
 {
-Bart the Portuguese has left your ship!
+Bart, der Portugiese, hat Ihr Schiff verlassen!
 }
 
 Portugal_12
@@ -60,15 +60,15 @@ Vaskez
 
 Portugal_14
 {
-One hour has passed...@<NewStr()>The Portuguese was carried into the house
+Eine Stunde ist vergangen...@<NewStr()>Der Portugiese wurde ins Haus getragen
 }
 
 Portugal_15
 {
-Two hours passed...
+Zwei Stunden vergingen...
 }
 
 Portugal_16
 {
-You have discovered the treasures of Bart the Portuguese!
+Sie haben die Schätze von Bart dem Portugiesen entdeckt!
 }

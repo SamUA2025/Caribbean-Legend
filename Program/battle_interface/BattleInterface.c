@@ -1787,6 +1787,12 @@ void SetShipPictureDataByShipTypeName(string sType)
 			BI_intNRetValue[2] = BI_ICONS_TEXTURE_SHIP1;
 		break;
 
+		case "LadyBeth":	// Леди Бет
+			BI_intNRetValue[0] = 8+5*16;
+			BI_intNRetValue[1] = 8+5*16 + 1;
+			BI_intNRetValue[2] = BI_ICONS_TEXTURE_SHIP1;
+		break;
+
 		case "Santisima":	// Линейный корабль "Реус де Сан-Педро"
 			BI_intNRetValue[0] = 8+3*16;
 			BI_intNRetValue[1] = 8+3*16 + 1;
@@ -2965,6 +2971,11 @@ ref procGetRiggingData()
 // --> ugeen
 void SetTownFlag(ref loc, object mdl)
 {
+	if(loc.id == "Caiman_Jungle_01")
+	{
+		SendMessage(&Flag, "lil", MSG_FLAG_INIT_TOWN, &mdl, ENGLAND);
+		return;
+	}
 	if (!CheckAttribute(loc, "townsack")) return;
 	int iNation = GetCityNation(loc.townsack);
 	if(iNation == PIRATE) 

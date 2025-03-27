@@ -885,24 +885,49 @@ void BLI_SetObjectData()
 	objLandInterface.equipment.MusketOn           	=  0;
 	
 	// evganat - прицел - атрибуты
-	objLandInterface.crosshair.center_width			= 15;
-	objLandInterface.crosshair.center_height		= 15;
-	objLandInterface.crosshair.center_x				= sti(showWindow.right)/2;
-	objLandInterface.crosshair.center_y 			= sti(showWindow.bottom)/2;
-	objLandInterface.crosshair.center_uv			= "0.10546875, 0.2109375, 0.14453125, 0.2890625";
-	objLandInterface.crosshair.center_texture		= "interfaces\le\battle_interface\crosshairs.tga.tx";
-	objLandInterface.crosshair.center_color			= argb(255, 128, 128, 128);
-	objLandInterface.crosshair.frame_width_max		= 40;
-	objLandInterface.crosshair.frame_width_min		= 40;
-	objLandInterface.crosshair.frame_height_max		= 50;
-	objLandInterface.crosshair.frame_height_min		= 50;
-	objLandInterface.crosshair.frame_dist_max		= 40;
-	objLandInterface.crosshair.frame_dist_min		= 10;
-	objLandInterface.crosshair.frame_uv				= "0.00390625, 0.140625, 0.10546875, 0.3671875";
-	objLandInterface.crosshair.frame_texture		= "interfaces\le\battle_interface\crosshairs.tga.tx";
-	objLandInterface.crosshair.frame_color			= argb(255, 128, 128, 128);
-	objLandInterface.crosshair.symmetry				= "diagonal";
+	/*
+		Для элементов прицела используются следующие атрибуты:
+		texture и uv - если изображение задано текстурой
+		group и picture - если изображение не задано текстурой и задано картинкой в battle_interface.ini
+		technique - позволяет задавать технику, по умолчанию "battle_tex_col_Rectangle"
+		priority - позволяет задавать порядок наложения элементов, по умолчанию 10000
+		color - цвет
+		pos - целочисленная позиция прямоугольника в формате "left,top,right,bottom"
+		
+		Также используются функции:
+		BI_CrosshairSetPos(элемент, 
+							горизонтальное смещение, 
+							вертикальное смещение,
+							ширина, 
+							высота)
+		- позволяет задавать вместо координат прямоугольника для элемента его относительную позицию относительно точки отсчёта и размеры
+		BI_CrosshairSetSteadyParams(элемент, 
+									начальное горизонтальное смещение, 
+									конечное горизонтальное смещение,
+									начальное вертикальное смещение,
+									конечное вертикальное смещение,
+									начальная ширина, 
+									конечная ширина, 
+									начальная высота, 
+									конечная высота)
+		- позволяет задавать параметры для автоматического обновления позиции и размеров элемента в зависимости от времени прицеливания
+	*/
+	aref arElement;
 	
+	makearef(arElement, objLandInterface.crosshair.elements.center);
+	arElement.group		= "CROSSHAIRS";
+	arElement.picture	= "crosc11";
+	BI_CrosshairSetPos(arElement, 0, 0, 20, 20);
+	
+	makearef(arElement, objLandInterface.crosshair.elements.left);
+	arElement.group		= "CROSSHAIRS";
+	arElement.picture	= "crosf11";
+	BI_CrosshairSetSteadyParams(arElement, -40, -30, 0, 0, 40, 40, 40, 40);
+	
+	makearef(arElement, objLandInterface.crosshair.elements.right);
+	arElement.group		= "CROSSHAIRS";
+	arElement.picture	= "crosf12";
+	BI_CrosshairSetSteadyParams(arElement, 40, 30, 0, 0, 40, 40, 40, 40);
 	
 /*
 	objLandInterface.ManSign.iconoffset1 = "70,70";
@@ -2248,14 +2273,126 @@ int UpdateStealthIndicator(int luck, int vigilance)
 	return 0;
 }
 
-// evganat - прицел - обновление
-#event_handler("BI_RefreshCrosshair", "RefreshCrosshair");
-float RefreshCrosshair()
+// evganat - прицел -->
+// расчёт позиции по заданным оффсетам, ширине, высоте и точке отсчёта
+void BI_CrosshairSetPos(aref element, int x, int y, int w, int h)
 {
-	if(!CheckAttribute(pchar, "chr_ai.aiming_time"))
-		pchar.chr_ai.aiming_time = 0.0;
-	float fAimingTime = stf(pchar.chr_ai.aiming_time);
-	float fMaxTime = MAX_AIMING_TIME;
-	float fSteady = Bring2Range(1.0, 0.0, 0.0, fMaxTime, fAimingTime);
-	return fSteady;
+	int ox = sti(showWindow.right)/2;
+	int oy = sti(showWindow.bottom)/2);
+	float fHtRatio = stf(Render.screen_y) / iHudScale;
+	int left = makeint(ox + (x - w/2) * fHtRatio);
+	int right = makeint(ox + (x + w/2) * fHtRatio);
+	int top = makeint(oy + (y - h/2) * fHtRatio);
+	int bottom = makeint(oy + (y + h/2) * fHtRatio);
+	element.pos = left + "," + top + "," + right + "," + bottom;
 }
+
+// выставление параметров, зависящих от времени прицеливания
+void BI_CrosshairSetSteadyParams(aref element, int x1, int x2, int y1, int y2, int w1, int w2, int h1, int h2)
+{
+	float fHtRatio = stf(Render.screen_y) / iHudScale;
+	element.steady.offsetX.start	= makeint(x1 * fHtRatio);
+	element.steady.offsetX.end		= makeint(x2 * fHtRatio);
+	element.steady.offsetY.start	= makeint(y1 * fHtRatio);
+	element.steady.offsetY.end		= makeint(y2 * fHtRatio);
+	element.steady.width.start		= makeint(w1 * fHtRatio);
+	element.steady.width.end		= makeint(w2 * fHtRatio);
+	element.steady.height.start		= makeint(h1 * fHtRatio);
+	element.steady.height.end		= makeint(h2 * fHtRatio);
+	BI_CrosshairSetPos(element, x1, y1, w1, h1);
+}
+
+// обновление элемента от времени прицеливания
+void BI_CrosshairUpdatePos(aref element, float fSteady)
+{
+	if(!CheckAttribute(element, "steady"))
+		return;
+	
+	int start, end, width, height, offsetX, offsetY;
+	aref attr;
+	
+	makearef(attr, element.steady.width);
+	start = sti(attr.start);
+	end = sti(attr.end);
+	width = start + (end - start)*fSteady;
+	
+	makearef(attr, element.steady.height);
+	start = sti(attr.start);
+	end = sti(attr.end);
+	height = start + (end - start)*fSteady;
+	
+	makearef(attr, element.steady.offsetX);
+	start = sti(attr.start);
+	end = sti(attr.end);
+	offsetX = start + (end - start)*fSteady;
+	
+	makearef(attr, element.steady.offsetY);
+	start = sti(attr.start);
+	end = sti(attr.end);
+	offsetY = start + (end - start)*fSteady;
+	
+	BI_CrosshairSetPos(element, offsetX, offsetY, width, height);
+}
+
+// evganat - прицел - выставление элементов в зависимости от вида оружия
+void BI_CrosshairSet()
+{
+	if(CharUseMusket(pchar))
+	{
+		objLandInterface.crosshair.elements.left.picture = "crosf21";
+		objLandInterface.crosshair.elements.right.picture = "crosf22";
+	}
+	else
+	{
+		objLandInterface.crosshair.elements.left.picture = "crosf11";
+		objLandInterface.crosshair.elements.right.picture = "crosf12";
+	}
+}
+
+// evganat - прицел - обновление
+void BI_CrosshairRefresh(float fAimingTime, bool isFindedTarget, aref target)
+{
+	float fMaxTime = MAX_AIMING_TIME;
+	float fSteady = Bring2Range(0.0, 1.0, 0.0, fMaxTime, fAimingTime);
+
+	aref arElement;
+	makearef(arElement, objLandInterface.crosshair.elements.center);
+
+	// если есть цель, красим прицел
+	if(isFindedTarget)
+	{
+		if(LAi_group_IsEnemy(pchar, target))
+			arElement.color = argb(255, 128, 40, 40);	// враги
+		else
+		{
+			if(pchar.chr_ai.group == target.chr_ai.group || target.chr_ai.group == "TMP_FRIEND")
+				arElement.color = argb(255, 0, 128, 0);	// друзья
+			else
+				arElement.color = argb(255, 128, 100, 40);	// прочие
+		}
+	}
+	else
+		objLandInterface.crosshair.elements.center.color = argb(255, 128, 128, 128);
+	
+	// если цель мертва, меняем прицел на крестик
+	if(CheckAttribute(pchar, "chr_ai.kill_timer"))
+	{
+		arElement.picture = "crosc12";
+		arElement.color = argb(255, 128, 40, 40);
+		objLandInterface.crosshair.elements.left.color = argb(55, 128, 128, 128);
+		objLandInterface.crosshair.elements.right.color = argb(55, 128, 128, 128);
+	}
+	else
+	{
+		arElement.picture = "crosc11";
+		objLandInterface.crosshair.elements.left.color = argb(255, 128, 128, 128);
+		objLandInterface.crosshair.elements.right.color = argb(255, 128, 128, 128);
+	}
+	
+	// обновляем позицию элементов
+	makearef(arElement, objLandInterface.crosshair.elements.left);
+	BI_CrosshairUpdatePos(arElement, fSteady);
+	makearef(arElement, objLandInterface.crosshair.elements.right);
+	BI_CrosshairUpdatePos(arElement, fSteady);
+}
+

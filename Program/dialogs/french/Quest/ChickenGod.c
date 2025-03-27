@@ -303,13 +303,13 @@ void ProcessDialogEvent()
 		
         case "native_dice_story_12":
 			dialog.text = "Non. J'étais le chef de mon peuple et, contrairement à l'argent, le pouvoir corrompt assurément les hommes. Vous savez quoi, capitaine ? Je vous regarde maintenant et je réalise que vous ferez face au même dilemme un jour.";
-			link.l1 = "Non. J'étais le chef de mon peuple et, contrairement à l'argent, le pouvoir corrompt définitivement les hommes. Tu sais quoi, capitaine ? Je te regarde maintenant et je réalise que tu feras face au même dilemme un jour.";
+			link.l1 = "Ton idole t’a aussi doté"+GetSexPhrase("","e")+" du don de voyance ? Alors tu devrais aller à Santiago, j’ai entendu"+GetSexPhrase("","e")+" dire qu’on y porte un intérêt particulier aux médiums et aux devins.";
 			link.l1.go = "native_dice_story_13";
 		break;
 		
         case "native_dice_story_13":
 			dialog.text = "Finissons notre... euh, salon sans bagarres ni coucheries, s'il vous plaît. Je n'ai pas réussi à tirer une morale de mon histoire, alors je voudrais proposer un toast à la place.";
-			link.l1 = "Écoutez, écoutez !";
+			link.l1 = "Tu es complètement perdu, chef. Mais sur un point, tu as raison. Buvons plutôt !";
 			link.l1.go = "native_dice_story_14";
 		break;
 		
@@ -773,6 +773,10 @@ void ProcessDialogEvent()
 				break;
 				
 				case SHIP_GALEON_SM:
+					dialog.text = "Et avez-vous vu le prêtre? Eh bien, vous le rencontrerez. Et vous feriez mieux de faire le plein de munitions à double charge pour pistolet. Si cela ne fonctionne pas - essayez un pieu en bois.";
+				break;
+				
+				case SHIP_LADYBETH:
 					dialog.text = "Et avez-vous vu le prêtre? Eh bien, vous le rencontrerez. Et vous feriez mieux de faire le plein de munitions à double charge pour pistolet. Si cela ne fonctionne pas - essayez un pieu en bois.";
 				break;
 			}
@@ -1338,15 +1342,26 @@ void ChickenGod_InitAmmo() {
 		InitGunExt(		 "howdah",  "t3", "grapeshot_double",	            "",  50.0, 140.0,  30.0,  70.0,  5.0,  5.0, 1, 1, 1, 0, 0, 1, 50, 30, 0);
 		InitGunExt(		 "pistol14", "t3",   "bullet_double",               "", 130.0, 330.0,  90.0, 290.0,  0.0,  0.0, 1, 0, 0, 4, 0, 0, 70, 34, 0); // Дуэльный двухзарядный пистоль cle 1.3
 		
-		InitGrapeGunExt(	"pistol2",	"t2",		3,		50,		4.25,	5.0,	3);		// трёхствольный дробовик, двойной заряд
-		InitGrapeGunExt(	"pistol3",	"t2",		4,		40,		6.0,	5.0,	4);		// тромбон, двойной заряд
-		InitGrapeGunExt(	"pistol8",	"t4",		4,		110,	5.0,	3.0,	2);		// бландербуз, двойной заряд
-		InitGrapeGunExt(	"howdah",	"t3",		3,		85,		3.0,	5.5,	2);		// гауда, двойной заряд
-		InitGrapeGunExt(	"mushket3",	"t2",		3,		60,		6.0,	3.0,	3);		// аркебуза, картечь
-		InitGrapeGunExt(	"mushket6",	"t3",		3,		90,		4.0,	3.5,	2);		// башенный мушкетон, картечь
-		
 		UnloadSegment("items\initItems.c");
 	}
+	
+	CGInitGrapeGunExt(	"pistol2",	"t2",		3,		50,		4.25,	5.0,	3);		// трёхствольный дробовик, двойной заряд
+	CGInitGrapeGunExt(	"pistol3",	"t2",		4,		40,		6.0,	5.0,	4);		// тромбон, двойной заряд
+	CGInitGrapeGunExt(	"pistol8",	"t4",		4,		110,	5.0,	3.0,	2);		// бландербуз, двойной заряд
+	CGInitGrapeGunExt(	"howdah",	"t3",		3,		85,		3.0,	5.5,	2);		// гауда, двойной заряд
+	CGInitGrapeGunExt(	"mushket3",	"t2",		3,		60,		6.0,	3.0,	3);		// аркебуза, картечь
+	CGInitGrapeGunExt(	"mushket6",	"t3",		3,		90,		4.0,	3.5,	2);		// башенный мушкетон, картечь
+}
+
+void CGInitGrapeGunExt(string id, string sAttr, int basedmg, int shards, float width, float height, int dispersion)
+{
+	ref gun = ItemsFromID(id);
+	gun.type.(sAttr).basedmg = basedmg;
+	gun.type.(sAttr).shards = shards;
+	string sArea = "grapes_area_"+dispersion;
+	gun.type.(sAttr).area = XI_ConvertString(sArea);
+	gun.type.(sAttr).width = width;
+	gun.type.(sAttr).height = height;
 }
 
 bool ChickenGod_FindQuestShips() {

@@ -381,6 +381,13 @@ void ProcessDialogEvent()
                 }
                 else
                 {
+					if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_tavern") // Блеквуд в городе
+					{
+						Dialog.text = "Capitaine, il n’y a pas âme qui vive à la taverne aujourd’hui. Tous ceux qui le voulaient sont partis avec le capitaine Blackwood.";
+						link.l1 = "C'est dommage !";
+						link.l1.go = "exit";
+						break;
+					}
 					if (CheckAttribute(NPChar, "CrewHired.PGGId") && GetNpcQuestPastDayParam(NPChar, "CrewHired") < 3 && GetCrewQuantity(rColony) == 0)
 					{
 						Dialog.text = "Ah, désolé capitaine, vous êtes juste un peu trop tard. Tous les gars qui voulaient partir viennent juste de prendre la mer avec le vaillant capitaine "+GetFullName(CharacterFromID(NPChar.CrewHired.PGGId))+".";
@@ -971,6 +978,21 @@ void ProcessDialogEvent()
 				link.l1.go = "exit";
 				break;
 			}
+			if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_tavern") // Блеквуд в городе
+			{
+				Dialog.text = "Hélas, non, capitaine. Toutes les chambres sont occupées par Blackwood et ses hommes.";
+				if (CheckAttribute(pchar, "questTemp.LadyBeth_TavernRoomDialog"))
+				{
+					link.l1 = "Eh, dommage !";
+					link.l1.go = "exit";
+				}
+				else
+				{
+					link.l1 = "Toutes les chambres ? Il y a plus d'une chambre ici ?";
+					link.l1.go = "LadyBeth_Room";
+				}
+				break;
+			}
 			//-->> квест официантки
 			if (pchar.questTemp.different == "FackWaitress_toRoom")
 			{
@@ -1142,7 +1164,7 @@ void ProcessDialogEvent()
 		case "hall_night_wait":
 			if (cRand(3) == 1)
             {
-                Dialog.text = "Dégage d'ici, espèce de vaurien ! La salle commune est libre, mais nous attendons un comportement décent !";
+                dialog.text = "Dégage d'ici, espèce de vaurien ! La salle commune est libre, mais nous attendons un comportement décent !";
 				link.l1 = "D'accord, d'accord, je pars.";
 				link.l1.go = "exit";
             }
@@ -1205,7 +1227,7 @@ void ProcessDialogEvent()
 		case "hall_day_wait":
 			if (drand(1) == 1)
             {
-                Dialog.text = "Dégage d'ici, espèce de vaurien! La salle commune peut être libre, mais nous attendons un comportement décent!";
+                dialog.text = "Dégage d'ici, espèce de vaurien! La salle commune peut être libre, mais nous attendons un comportement décent!";
 				link.l1 = "D'accord, d'accord, je m'en vais.";
 				link.l1.go = "exit";
             }
@@ -1688,7 +1710,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Helen_room_day_next":
-			dialog.text = "Bien sûr, Ellen. Ça fera dix pesos.";
+			dialog.text = "Bien sûr, Helen. Ça fera dix pesos.";
 			if (makeint(pchar.money) >= 10)
 			{
 				link.l1 = "Bien sûr, voici pour vous.";
@@ -1699,7 +1721,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Helen_night_exit":
-			dialog.text = "Comme vous voulez, Ellen.";
+			dialog.text = "Comme vous voulez, Helen.";
 			link.l1 = "Mhm.";
 			link.l1.go = "exit";
 		break;
@@ -1721,6 +1743,21 @@ void ProcessDialogEvent()
 			link.l1 = "Quelles sont les dernières nouvelles ou rumeurs intéressantes en ville?";
 			link.l1.go = "rumours_tavern";
 		break;
+		
+		// Леди Бет -->
+		case "LadyBeth_Room":
+			dialog.text = "Il paie le triple du prix habituel, alors... vous comprenez. Et je vous déconseille de lui dire non - il a un caractère difficile. Surtout ces derniers temps.";
+			link.l1 = "Qu'est-ce qu'il lui arrive ?";
+			link.l1.go = "LadyBeth_Room_2";
+		break;
+		
+		case "LadyBeth_Room_2":
+			dialog.text = "Une obsession, voilà ce que c'est. Au début, c'était un gars généreux et gentil. Ses marins dépensaient sans compter dans les tavernes, offraient des cadeaux aux filles. C'était la fête quand la 'Lady Beth' arrivait au port. Et maintenant ? Maintenant, ils n'achètent que des provisions et recrutent n'importe qui. Comme s'ils avaient besoin de bras, pas de marins. Mais vous pouvez lui parler vous-même.";
+			link.l1 = "Je passerai peut-être. Merci.";
+			link.l1.go = "exit";
+			pchar.questTemp.LadyBeth_TavernRoomDialog = true;
+		break;
+		// Леди Бет <--
 	}
 }
 

@@ -1029,7 +1029,7 @@ bool LAi_CanNearEnemy(aref chr, float radius)
 	return false;
 }
 // boal dead can be searched 14.12.2003 -->
-object	Dead_Characters[100];
+object	Dead_Characters[MAX_CHARS_IN_LOC];
 int     Dead_Char_num = 0;
 
 void Dead_AddLoginedCharacter(aref chr)
@@ -1046,7 +1046,7 @@ void Dead_AddLoginedCharacter(aref chr)
 	string  sBullet, sGunPowder;
 	//trace("Dead_AddLoginedCharacter nLuck = " + nLuck);
 	
-	if(GetCharacterPos(chr, &x, &y, &z) == true && Dead_Char_num < (100))
+	if(GetCharacterPos(chr, &x, &y, &z) == true && Dead_Char_num < (MAX_CHARS_IN_LOC))
 	{
 		Dead_Characters[Dead_Char_num].id = chr.id;
 		Dead_Characters[Dead_Char_num].index = chr.index;

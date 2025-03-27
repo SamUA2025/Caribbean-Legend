@@ -798,7 +798,7 @@ float FindShipSpeed(aref refCharacter)
 
 	//float	fTRFromSailDamage = Bring2Range(0.1, 1.0, 0.1, 100.0, fSailsDamage); //0.3
 	float	fTRFromSailDamage = CalculateSpeedDebuff_SP(fSailsDamage);
-	if(refCharacter.id == "blaze") log_testinfo("fTRFromSailDamage "+FloatToString(fTRFromSailDamage,2));
+	// if(refCharacter.id == "blaze") log_testinfo("fTRFromSailDamage "+FloatToString(fTRFromSailDamage,2));
 
 	float fTRFromShipState = fSpeedFromHp * fTRFromSailDamage;
 	
@@ -852,7 +852,7 @@ float FindShipWindAgainstSpeed(aref refCharacter)
 
 	float fWindAgainstSpeed = stf(rShip.WindAgainstSpeed);
 	
-	if(ShipBonus2Artefact(refCharacter))
+	if(ShipBonus2Artefact(refCharacter, SHIP_GALEON_SM))
 	{
 		fWindAgainstSpeed *= isEquippedArtefactUse(refCharacter, "obereg_11", 1.0, 1.25);
 	}

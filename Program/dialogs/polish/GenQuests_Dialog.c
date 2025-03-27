@@ -1022,7 +1022,8 @@ void ProcessDialogEvent()
 		
 		case "ShipWreck_34":
 			dialog.text = RandPhraseSimple(RandPhraseSimple("Kapitanie, czy to już Dunkierka?","Naprawdę jesteśmy w Dunkierce, kapitanie?"),RandPhraseSimple("Kapitanie, czy to Europa?","Czyżbyśmy tak szybko dopłynęli do Europy?"));
-			bTemp = !GetCharacterItem(pchar, "map_part1") || !GetCharacterItem(pchar, "map_part2");
+			bTemp = !GetCharacterItem(pchar, "map_full") && !GetCharacterItem(pchar, "map_part2");
+			bTemp = !GetCharacterItem(pchar, "map_part1") || bTemp;
 			if(rand(100) > 75 && !isDay() && bTemp)
 			{
 				link.l1 = "A-ha...";
@@ -1096,8 +1097,7 @@ void ProcessDialogEvent()
 			sld = CharacterFromID("ShipWreck_0");
 			RemovePassenger(pchar, sld);
 			AddCharacterExpToSkill(pchar, "Fortune", 200);
-			if (!GetCharacterItem(pchar, "map_part1")) 	GiveItem2Character(pchar, "map_part1");
-			else 										GiveItem2Character(pchar, "map_part2");
+			AddMapPart();
 			AddQuestRecord("ShipWrecked", "9");
 			AddQuestUserData("ShipWrecked", "sSex", GetSexPhrase("",""));
 			CloseQuestHeader("ShipWrecked");	
@@ -3920,7 +3920,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "CaptainComission_371":
-			dialog.text = "…były kapitan"+pchar.GenQuest.CaptainComission.Name+"... -> ";
+			dialog.text = "...były kapitan"+pchar.GenQuest.CaptainComission.Name+"... -> ";
 			link.l1 = "Jestem "+GetFullName(pchar)+", a mam do ciebie kilka pytań.";
 			link.l1.go = "CaptainComission_372";
 		break;

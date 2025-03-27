@@ -113,6 +113,8 @@ native bool ShowSteamVirtualKeyboard(int iVKMode, int iTextFieldX, int iTextFiel
 //     }
 // }
 native int GetOverlaysInfo(ref paOutOverlaysInfo);
+native bool GameOverlayToWebPage(string url);
+//GameOverlayToWebPage("https://steamcommunity.com/app/2230980/workshop/");
 
 #libriary "script_libriary_test"
 #libriary "dx9render_script_libriary"

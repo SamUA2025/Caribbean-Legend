@@ -9,7 +9,7 @@ Stivenson
 
 Regatta_3
 {
-You are too late for the regatta.
+Sie sind zu spät für die Regatta.
 }
 
 Regatta_4
@@ -19,7 +19,7 @@ Saint Catherine
 
 Regatta_5
 {
-lieutenant
+Leutnant
 }
 Regatta_6
 {
@@ -37,15 +37,15 @@ Doggerty
 
 Regatta_9
 {
-The navigator has left your ship!
+Der Navigator hat Ihr Schiff verlassen!
 }
 
 Regatta_10
 {
-Passengers are onboard.
+Passagiere sind an Bord.
 }
 
 Regatta_11
 {
-Your ship is overloaded. Her speed and maneuverability are crippled.
+Ihr Schiff ist überladen. Seine Geschwindigkeit und Manövrierfähigkeit sind beeinträchtigt.
 }

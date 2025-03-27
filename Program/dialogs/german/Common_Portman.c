@@ -3697,6 +3697,11 @@ void ProcessDialogEvent()
 				link.l1 = "Galeone 'Heilige Barmherzigkeit'.";
 				link.l1.go = "UniqueShips_SantaMisericordia";
 			}
+			if (GetDLCenabled(DLC_APPID_5) && !CheckAttribute(pchar, "questTemp.LadyBeth_InfoPU") && CharacterIsAlive("LadyBeth_cap"))
+			{
+				link.l2 = "Patrouillenschnau 'Lady Beth'.";
+				link.l2.go = "UniqueShips_LadyBeth";
+			}
 			link.l99 = "Ich glaube, ich weiß genug.";
 			link.l99.go = "node_2";
 		break;
@@ -3706,6 +3711,15 @@ void ProcessDialogEvent()
 			AddQuestRecordInfo("LegendaryShips", "1");
 			pchar.questTemp.SantaMisericordia_InfoPU = true;
 			dialog.text = "Heilige Barmherzigkeit wurde vom Escorial aus Europa gesandt, um die spanischen Kolonien zu überwachen. Ihr Kapitän, Don Alamida, ist ein bekannter Diener der spanischen Krone, ein rücksichtsloser Kämpfer gegen Korruption und Verbrechen und ein Eiferer des katholischen Glaubens. Heilige Barmherzigkeit kreuzt zwischen den Kolonien, beginnt und beendet ihre Reise in Havanna und konzentriert sich ausschließlich auf ihre Mission.\nIn jedem Hafen verbringt Alamida mehrere Tage, manchmal länger. Man sagt, dass er in diesen Zeiten sogar auf der Straße getroffen werden kann, aber die Einheimischen sind nicht besonders daran interessiert - in den Spaniern weckt der Señor nur Angst und Ehrfurcht.\nHeilige Barmherzigkeit hat eine erfahrene und loyale Crew, die von Alamida persönlich ausgewählt wurde. Jeder Seemann ist bereit, sein Vaterland und seinen Kapitän mit seinem Leben zu verteidigen. Man sagt, Don Fernando habe angeordnet, dass Heilige Barmherzigkeit nie erobert werden dürfe, und es gibt Gerüchte, dass die Besatzung bei unüberwindbaren Boarding-Quoten das Schiff lieber in die Tiefe schicken würde, als zu sehen, wie es geentert wird.";
+			link.l1 = "Vielen Dank.";
+			link.l1.go = "node_2";
+		break;
+		
+		case "UniqueShips_LadyBeth":
+			AddMoneyToCharacter(pchar, -25000);
+			AddQuestRecordInfo("LegendaryShips", "2");
+			pchar.questTemp.LadyBeth_InfoPU = true;
+			dialog.text = "'Lady Beth' ist eine wahre Schönheit. Ein Wunder britischer Marinekunst unter dem Kommando von Albert Blackwood, einem ehemaligen Offizier der Royal Navy. Nicht jeder schafft es, so spektakulär zu desertieren! Er verließ den Dienst, zerstörte eine glänzende Karriere und stahl ein Kriegsschiff - alles wegen der Schatzsuche!\nUnd es war nicht umsonst. Er hat schon so viel gefunden, dass er die Hälfte von Barbados kaufen könnte, aber ihm reicht das nicht. Wenn ihr ihm auf See begegnet - versucht gar nicht erst, ihn abzufangen\nZu gutes Schiff, und der Kapitän ist erfahren und vorsichtig. In letzter Zeit ist Blackwood oft auf den Kaimaninseln - gräbt dort Tag und Nacht, treibt die Leute bis zum Umfallen. Wenn ihr nachsehen wollt - nehmt mindestens 60 Mann und gute Schusswaffen... Vielleicht reicht selbst das nicht\nIch hoffe, ihr könnt schießen, denn mit ihm ist eine Kompanie ehemaliger Marineinfanteristen unter Colonel Fox desertiert. Profis, keine gewöhnlichen Halunken. Und greift ihn niemals in französischen Häfen an - dort hat er Schutz und Gönner, die an seinen Funden mitverdienen.";
 			link.l1 = "Vielen Dank.";
 			link.l1.go = "node_2";
 		break;

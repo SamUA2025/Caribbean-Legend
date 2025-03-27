@@ -1366,7 +1366,7 @@ void ProcessDialogEvent()
 		
 		case "sea_bomb_3":
 			dialog.text = "Zaryzykujmy to, "+pchar.name+"?";
-			link.l1 = "Dobrze. Zabierajmy się za to! Chłopaki! Weźcie trzy beczki prochu! Wynosimy się stąd, do diabła! Uwielbiam twoją wyobraźnię, "+npchar.name+"…nigdy bym sama na to nie wpadła.";
+			link.l1 = "Dobrze. Zabierajmy się za to! Chłopaki! Weźcie trzy beczki prochu! Wynosimy się stąd, do diabła! Uwielbiam twoją wyobraźnię, "+npchar.name+"...nigdy bym sama na to nie wpadła.";
 			link.l1.go = "sea_bomb_4";
 		break;
 		

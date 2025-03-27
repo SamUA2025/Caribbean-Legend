@@ -30,9 +30,9 @@ City_Rum9 {Ha! Der 'Heilige' Fernando hat wieder alle Bordelle geschlossen. Mach
 
 City_Rum10 {Der Insp... Inspektor ist da, das ist es! Don Fernando de Almeyda, oder, wie heißt er, Alamida! So wichtig, dass selbst der Gouverneur auf Zehenspitzen um ihn herumschleicht. Es heißt, er sieht dir in die Augen und erkennt sofort alle deine Sünden. Schrecklich!}
 
-Cap_Name {Diego}
+Pop_Name {Diego}
 
-Cap_lastname {de Landa}
+Pop_lastname {de Landa}
 
 SM_WorldMap 
 {

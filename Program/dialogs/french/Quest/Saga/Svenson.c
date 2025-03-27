@@ -1699,7 +1699,7 @@ void ProcessDialogEvent()
 		
 		case "UpgradeBakaut_1":
 			dialog.text = "Hélas, "+pchar.name+", tel est aujourd'hui le prix de la tranquillité - les appétits de ces messieurs en perruques et uniformes grandissent chaque jour. Rien ne les attire plus que les doublons qui tintent dans leurs coffres. Je te garantis une remise de quinze pour cent sur toutes les livraisons suivantes, si cela te console.";
-			link.l1 = "Au diable ! Demander de telles sommes ! Avec une telle avidité, ils devraient acheter des trésors de rois, pas marchander le silence ! Jan, peut-être devrions-nous… leur montrer qui est la vraie force dans l'archipel, hein ?";
+			link.l1 = "Au diable ! Demander de telles sommes ! Avec une telle avidité, ils devraient acheter des trésors de rois, pas marchander le silence ! Jan, peut-être devrions-nous... leur montrer qui est la vraie force dans l'archipel, hein ?";
 			link.l1.go = "UpgradeBakaut_2";
 		break;
 		

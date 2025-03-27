@@ -23,32 +23,32 @@ Dassien
 
 Patria_6
 {
-Exploration mode: timer extended. Complete the quest!
+Erkundungsmodus: Timer verlängert. Beenden Sie die Quest!
 }
 
 Patria_7
 {
-The Spanish has been given a note to send parleys to Trinidad's lighthouse to start negotiations!
+Die Spanier wurden angewiesen, Parleys zum Leuchtturm von Trinidad zu schicken, um Verhandlungen aufzunehmen!
 }
 
 Patria_8
 {
-One day has passed...
+Ein Tag ist vergangen...
 }
 
 Patria_9
 {
-Exploration mode: timer is not disabled. Meet the deadline!
+Erkundungsmodus: Der Timer ist nicht deaktiviert. Halten Sie die Frist ein!
 }
 
 Patria_10
 {
-Baron Noel Forget has left your ship!
+Baron Noel Forget hat Ihr Schiff verlassen!
 }
 
 Patria_11
 {
-Another enemy ship is on us!
+Ein weiteres feindliches Schiff hat uns im Visier!
 }
 
 Patria_12
@@ -67,12 +67,12 @@ Stuyvesant
 
 Patria_15
 {
-The Company's trade convoy
+Der Handelskonvoi der Company
 }
 
 Patria_16
 {
-The Company's Ost-Indian has been captured!
+Der Company's East-India ist gefangen genommen worden!
 }
 
 Patria_17
@@ -114,27 +114,27 @@ Beusson
 
 Patria_25
 {
-The Company's Africa convoy
+Der Afrika-Konvoi der Company
 }
 
 Patria_26
 {
-Exploration mode: timer is disabled.
+Erkundungsmodus: Der Timer ist deaktiviert.
 }
 
 Patria_27
 {
-We must destroy the enemy squadron!
+Wir müssen das feindliche Geschwader vernichten!
 }
 
 Patria_28
 {
-Colonel Doily has given a signal to land in Blanca lagoon!
+Colonel Doily hat das Signal zur Landung in der Lagune von Blanca gegeben!
 }
 
 Patria_29
 {
-After a two hours bombardement,@<NewStr()>the Dutch has sent a parley party
+Nach einem zweistündigen Bombardement, @<NewStr()>schickten die Holländer eine Verhandlungsgruppe
 }
 
 Patria_30
@@ -176,12 +176,12 @@ Tyrex
 
 Patria_38
 {
-Two hours later...@<NewStr()>
+Zwei Stunden später...@<NewStr()>
 }
 
 Patria_39
 {
-Baron Noel Forget died of fever!
+Baron Noel Forget starb an Fieber!
 }
 
 Patria_40
@@ -204,15 +204,15 @@ Casper
 
 Patria_44
 {
-The governor of the mine has been spotted in one of the houses, caught and imprisoned
+Der Gouverneur der Mine wurde in einem der Häuser gesichtet, gefangen genommen und inhaftiert
 }
 
 Patria_45
 {
-Twenty three hours later...@<NewStr()>Peter Stuyvesant has shown himself at the gates
+23 Stunden später...@<NewStr()>Peter Stuyvesant hat sich vor den Toren gezeigt
 }
 
 Patria_46
 {
-One day later...@<NewStr()>
+Einen Tag später...@<NewStr()>
 }

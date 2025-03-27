@@ -266,7 +266,7 @@ bool FilterItems(ref Item)
 		if(refStoreChar.Merchant.type == "jeweller" || refStoreChar.Merchant.type == "GasparGold")
 		{
 			if(!CheckAttribute(Item,"TradeType")) return false;
-			if(Item.TradeType != ITEM_TRADE_JEWELRY && Item.id != "cirass3" ) return false;
+			if(Item.TradeType != ITEM_TRADE_JEWELRY && !items2) return false;
 			if(items4) return false;
 			if(items5) return false;
 		}

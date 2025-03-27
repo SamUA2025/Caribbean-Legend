@@ -1,8 +1,8 @@
 void InitCharactersNames()
 {
-	int		n;
-// English
-// man names
+	int n;
+	// English
+	// man names
 	n = AddStr2Array(&sEnManNames, n, "Allan,Adam,Anthony,Alan,Albert,Alfred,Andrew,Arthur");
 	n = AddStr2Array(&sEnManNames, n, "Bernard,Bertram,Brendan,Bruce,Brian,Basil,Benjamin,Cecil,Charles,Christian,Claude");
 	n = AddStr2Array(&sEnManNames, n, "Cyril,Cyrus,Daniel,David,Donald,Dougal,Duncan,Dwain,Dylan,Edgar,Edmund,Edward,Edwin,Egbert,Elias");
@@ -14,16 +14,16 @@ void InitCharactersNames()
 	n = AddStr2Array(&sEnManNames, n, "Patrick,Paul,Peter,Philip,Quentin,Ralph,Randolph,Raphael,Raymond,Rayner,Reginald,Reynard,Reynold");
 	n = AddStr2Array(&sEnManNames, n, "Richard,Robert,Robin,Roger,Roland,Ronald,Ronan,Samson,Samuel,Shawn,Silas,Simon,Solomon,Stephen");
 	n = AddStr2Array(&sEnManNames, n, "Terence,Thomas,Timothy,Tobias,Tristan,Walter,Wilbert,Wilfred,William,Winfred,Zachary");
-	
-// women names
+
+	// women names
 	n = 0;
 	n = AddStr2Array(&sEnWomenNames, n, "Agatha,Alice,Alvina,Amanda,Amelia,Amy,Anne,Annabel,Arabella,Audrey,Aurora,Avis");
 	n = AddStr2Array(&sEnWomenNames, n, "Bridget,Camilla,Catherine,Cecily,Clare,Cora,Diana,Dorothy,Edith,Elizabeth,Emily");
 	n = AddStr2Array(&sEnWomenNames, n, "Emma,Eva,Flora,Gloria,Hilary,Ida,Jane,Joan,Julia,Karen,Laura,Letitia,Lilian,Linda");
 	n = AddStr2Array(&sEnWomenNames, n, "Mabel,Margaret,Margery,Martha,Mary,Matilda,Molly,Monica,Nora,Prudence,Rose,Sarah,Serena,Silvia");
-	n = AddStr2Array(&sEnWomenNames, n, "Stella,Susan,Theresa,Ursula,Valerie,Violet,Vivien,Yvonne");	
+	n = AddStr2Array(&sEnWomenNames, n, "Stella,Susan,Theresa,Ursula,Valerie,Violet,Vivien,Yvonne");
 
-// families
+	// families
 	n = 0;
 	n = AddStr2Array(&sEnFamilies, n, "Abbot,Abrams,Adams,Addison,Irons,Adrian,Adkins,Acton,Addington,Adderley,Allen,Aldridge,Adney,Albury");
 	n = AddStr2Array(&sEnFamilies, n, "Almond,Archer,Argent,Underwood,Anderson,Armstrong,Atkinson,Attridge,Ackroyd,Attwood,Arkwright");
@@ -133,12 +133,10 @@ void InitCharactersNames()
 	n = AddStr2Array(&sEnFamilies, n, "Webb,Webber,Webster,Wentworth,Westwood,Wheatley,Wilkins,Willard,Winchester,Woodbridge");
 	n = AddStr2Array(&sEnFamilies, n, "Welham,Winslow,Winthrop,Wood,Woodford,Woodland,Whitney");
 	n = AddStr2Array(&sEnFamilies, n, "Wicken,Waker,Whitfield,Warburton,Willows,Ward,Woodman,Woods,Woodstock,Wharton");
-	n = AddStr2Array(&sEnFamilies, n, "Waters,Watkins,Watt,Westcott,Woodward,Wright,Wells,Young,Yarwood");	
-	
-	
+	n = AddStr2Array(&sEnFamilies, n, "Waters,Watkins,Watt,Westcott,Woodward,Wright,Wells,Young,Yarwood");
 
-// Holland
-// man names
+	// Holland
+	// man names
 	n = 0;
 	n = AddStr2Array(&sHoManNames, n, "Albert,Albrecht,Abraham,Adam,Aalrik,Arjen,Aart,Abe,Aldert,Abel,Adalbert");
 	n = AddStr2Array(&sHoManNames, n, "Aaldrik,Adelbrecht,Adelmar,Adelrik,Adelwijn,Adriaan,Aegidius,Aemilius,Andreas,Alard,Ansem");
@@ -179,10 +177,9 @@ void InitCharactersNames()
 	n = AddStr2Array(&sHoManNames, n, "Theodoor,Theofilus,Thomas,Tideman,Tijlbert,Tijmen,Tijn,Timotheus,Titus,Tobias,Tristan,Ulrik");
 	n = AddStr2Array(&sHoManNames, n, "Urbaan,Urbanus,Valentijn,Valentinus");
 	n = AddStr2Array(&sHoManNames, n, "Veit,Victor,Vincentius,Vitus,Walter,Waltherus,Wibe,Weinandus,Weinant,Wilhelm");
-	n = AddStr2Array(&sHoManNames, n, "Willem,Willemus,Willibrord,Willie,Winandus,Wolfert,Wouter,Xander,Zacharias,Zeger");	
-		
+	n = AddStr2Array(&sHoManNames, n, "Willem,Willemus,Willibrord,Willie,Winandus,Wolfert,Wouter,Xander,Zacharias,Zeger");
 
-// women names
+	// women names
 	n = 0;
 	n = AddStr2Array(&sHoWomenNames, n, "Abigail,Ada,Adela,Adelheid,Adelina,Adolfine,Adriana,Aemilia,Agatha,Agnes,Alberta,Albertina,Aldegonda,Aleida,Aletta");
 	n = AddStr2Array(&sHoWomenNames, n, "Alexandra,Algonda,Alida,Alina,Aloisia,Amalia,Amanda,Amelia,Angela,Angelica,Anna");
@@ -196,11 +193,11 @@ void InitCharactersNames()
 	n = AddStr2Array(&sHoWomenNames, n, "Karen,Karijn,Karlijn,Katelijn,Katharina");
 	n = AddStr2Array(&sHoWomenNames, n, "Klara,Klasina,Kristina,Lambertina,Laura,Laurentia,Lina,Liliane,Louisa,Ludwina");
 	n = AddStr2Array(&sHoWomenNames, n, "Magdalena,Margaretha,Maria,Marina,Mathilda,Mirte,Nathalia,Nora,Olivia,Patricia");
-	n = AddStr2Array(&sHoWomenNames, n, "Paulina,Rebecca,Regina,Sandra,Sanna,Sara,Saskia,Sebastiana,Sibilla,Simone");	
+	n = AddStr2Array(&sHoWomenNames, n, "Paulina,Rebecca,Regina,Sandra,Sanna,Sara,Saskia,Sebastiana,Sibilla,Simone");
 	n = AddStr2Array(&sHoWomenNames, n, "Sofia,Stephanie,Sterre,Susanna,Tessa,Thecla,Theresa,Theresia,Titia,Valentina,Veronica,Victoria");
-	n = AddStr2Array(&sHoWomenNames, n, "Vincenta,Vincentia,Wijnanda,Willemina");	
-	
-// families
+	n = AddStr2Array(&sHoWomenNames, n, "Vincenta,Vincentia,Wijnanda,Willemina");
+
+	// families
 	n = 0;
 	n = AddStr2Array(&sHoFamilies, n, "Aalbers,Abrahams,Acker,Ackerman,Ackersdijk,Adriaens,Aerents,Aerts");
 	n = AddStr2Array(&sHoFamilies, n, "Alberts,Alderink,Alderts,Alers,Ameling,Andries,Appelman,Arents,Ariaens,Ariens");
@@ -299,70 +296,67 @@ void InitCharactersNames()
 	n = AddStr2Array(&sHoFamilies, n, "Witsen,Witteman,Woertman,Wouters,Wuytiers");
 	n = AddStr2Array(&sHoFamilies, n, "Wybrants,Wynants,Wyncoop,Wyngaert,Ysbrants,Zaaijman,Zeedijk,Zegers");
 
-// French
-// man names
+	// French
+	// man names
 	n = 0;
-	n = AddStr2Array(&sFrManNames, n, "Adalbert,Adelmar,Adrien,Agnel,Aimard,Alain,Alban,Albert,Albin,Alexandre,Amable,Amaury,Amos,Andre");
+	n = AddStr2Array(&sFrManNames, n, "Adalbert,Adelmar,Adrien,Agnel,Aimard,Alain,Alban,Albert,Albin,Alexandre,Amable,Amaury,Amos,André");
 	n = AddStr2Array(&sFrManNames, n, "Anatole,Ange,Annibal,Anselme,Antoine,Apollinaire,Aquilin,Archambaud,Ariel,Aristide,Armand");
-	n = AddStr2Array(&sFrManNames, n, "Arnaud,Arnolphe,Arsene,Aubain,Aubertin,Aubry,Audry,Auguste,Augustin,Aurelien,Aurien");
-	n = AddStr2Array(&sFrManNames, n, "Balthazar,Barthelemy,Basile,Benedict,Benjamin,Benoit,Bernard,Bertrand,Boniface");
-	n = AddStr2Array(&sFrManNames, n, "Blaise,Brian,Camille,Candide,Celestin,Cesar,Charles");
-	n = AddStr2Array(&sFrManNames, n, "Christian,Christophe,Clair,Clarent,Claude,Clement,Corneille,Damien");
-	n = AddStr2Array(&sFrManNames, n, "Daniel,David,Denis,Didier,Dominique,Domitien,Donatien,Edgar,Edmond,Emile,Eric,Etienne");
-	n = AddStr2Array(&sFrManNames, n, "Eugene,Fabien,Felicien,Felix,Fernand,Flavien,Florent,Florentin,Florian,Florimond,Foulques,Francis");
-	n = AddStr2Array(&sFrManNames, n, "Francois,Frederic,Fulgence,Gabriel,Gaetan,Gaspard,Gaston");
-	n = AddStr2Array(&sFrManNames, n, "Gaubert,Gedeon,Geoffroy,Georges,Gerard,Gerault,Germain,Ghislain");
-	n = AddStr2Array(&sFrManNames, n, "Gilbert,Gilles,Giraud,Gregoire,Guillaume,Gustave,Guy,Henri");
-	n = AddStr2Array(&sFrManNames, n, "Hercule,Herman,Honore,Hubert,Hugo,Humbert,Ignace");
-	n = AddStr2Array(&sFrManNames, n, "Jacob,Jacques,Janvier,Jason,Jean,Jeremie,Jerome,Joel,Joseph,Josselin,Jourdain,Jules");
-	n = AddStr2Array(&sFrManNames, n, "Julien,Justin,Juvenal,Lambert,Laurent,Leon,Lionel,Louis,Lucas,Lucien,Macaire,Manuel");
-	n = AddStr2Array(&sFrManNames, n, "Marc,Marcel,Martin,Matthieu,Maurice,Maurin,Maximilien,Maximin,Medard,Mercure");
-	n = AddStr2Array(&sFrManNames, n, "Michel,Modeste,Nicolas,Noel,Octavien,Olivier,Onesime,Pascal,Patrice,Patrick");
-	n = AddStr2Array(&sFrManNames, n, "Paul,Philibert,Philippe,Pierre,Prosper,Quentin,Raimond,Raoul,Raphael,Remi,Rene,Richard,Robert,Roger");
-	n = AddStr2Array(&sFrManNames, n, "Roland,Romain,Rufin,Samuel,Sebastien,Simon,Stephane,Theodore");
-	n = AddStr2Array(&sFrManNames, n, "Thomas,Valbert,Valere,Vaubert,Victor,Vincent,Xavier,Yves");	
-	
-	
+	n = AddStr2Array(&sFrManNames, n, "Arnaud,Arnolphe,Arsène,Aubain,Aubertin,Aubry,Audry,Auguste,Augustin,Aurélien,Aurien");
+	n = AddStr2Array(&sFrManNames, n, "Balthazar,Barthélemy,Basile,Baudoin,Benjamin,Benoît,Bernard,Bertrand,Boniface");
+	n = AddStr2Array(&sFrManNames, n, "Blaise,Brian,Camille,Candide,Célestin,César,Charles");
+	n = AddStr2Array(&sFrManNames, n, "Christian,Christophe,Clair,Clarent,Claude,Clément,Corneille,Damien");
+	n = AddStr2Array(&sFrManNames, n, "Daniel,David,Denis,Didier,Dominique,Domitien,Donatien,Edgar,Edmond,Émile,Éric,Étienne");
+	n = AddStr2Array(&sFrManNames, n, "Eugène,Fabien,Félicien,Félix,Fernand,Flavien,Florent,Florentin,Florian,Florimond,Foulques,Francis");
+	n = AddStr2Array(&sFrManNames, n, "François,Frédéric,Fulgence,Gabriel,Gaëtan,Gaspard,Gaston");
+	n = AddStr2Array(&sFrManNames, n, "Gaubert,Gédéon,Geoffroy,Georges,Gérard,Gérault,Germain,Ghislain");
+	n = AddStr2Array(&sFrManNames, n, "Gilbert,Gilles,Giraud,Grégoire,Guillaume,Gustave,Guy,Henri");
+	n = AddStr2Array(&sFrManNames, n, "Hercule,Herman,Honoré,Hubert,Hugo,Humbert,Ignace");
+	n = AddStr2Array(&sFrManNames, n, "Jacob,Jacques,Janvier,Jason,Jean,Jérémie,Jérome,Joël,Joseph,Josselin,Jourdain,Jules");
+	n = AddStr2Array(&sFrManNames, n, "Julien,Justin,Juvénal,Lambert,Laurent,Léon,Lionel,Louis,Lucas,Lucien,Macaire,Manuel");
+	n = AddStr2Array(&sFrManNames, n, "Marc,Marcel,Martin,Matthieu,Maurice,Maurin,Maxime,Maximilien,Maximin,Médard,Mercure");
+	n = AddStr2Array(&sFrManNames, n, "Michel,Modeste,Nicolas,Noël,Octavien,Olivier,Onésime,Pascal,Patrice,Patrick");
+	n = AddStr2Array(&sFrManNames, n, "Paul,Philibert,Philippe,Pierre,Prosper,Quentin,Raimond,Raoul,Raphaël,Rémi,René,Richard,Robert,Roger");
+	n = AddStr2Array(&sFrManNames, n, "Roland,Romain,Rufin,Samuel,Sébastien,Simon,Stéphane,Théodore");
+	n = AddStr2Array(&sFrManNames, n, "Thomas,Valbert,Valère,Vaubert,Victor,Vincent,Xavier,Yves");
 
-// women names
+	// women names
 	n = 0;
-	n = AddStr2Array(&sFrWomenNames, n, "Adelaide,Adele,Agathe,Agnes,Albine,Alexandrine,Alice,Amande,Amandine,Amelie,Anastasie");
-	n = AddStr2Array(&sFrWomenNames, n, "Angelique,Anne,Antoinette,Arabelle,Ariane,Armande,Artemise,Audeline");
-	n = AddStr2Array(&sFrWomenNames, n, "Aurelie,Aurore,Barbe,Bathilde,Beatrice");
+	n = AddStr2Array(&sFrWomenNames, n, "Adélaïde,Adèle,Agathe,Agnès,Albine,Alexandrine,Alice,Amande,Amandine,Amélie,Anastasie");
+	n = AddStr2Array(&sFrWomenNames, n, "Angélique,Anne,Antoinette,Arabelle,Ariane,Armande,Artémise,Audeline");
+	n = AddStr2Array(&sFrWomenNames, n, "Aurélie,Aurore,Barbe,Bathilde,Béatrice");
 	n = AddStr2Array(&sFrWomenNames, n, "Bernadette,Bernardine,Berthe,Bertile,Blanche");
 	n = AddStr2Array(&sFrWomenNames, n, "Bleuette,Brigitte,Brunette,Camelle,Carine");
-	n = AddStr2Array(&sFrWomenNames, n, "Carmelle,Caroline,Catherine,Cecile,Celine,Chantal,Charlotte");
+	n = AddStr2Array(&sFrWomenNames, n, "Carmelle,Caroline,Catherine,Cécile,Céline,Chantal,Charlotte");
 	n = AddStr2Array(&sFrWomenNames, n, "Christine,Claire,Claudette,Constance,Danielle");
-	n = AddStr2Array(&sFrWomenNames, n, "Desiree,Edith,Eleonore,Elisabeth,Emilie,Emmanuelle");
-	n = AddStr2Array(&sFrWomenNames, n, "Esther,Eugenie,Evelyne,Fleur,Flore,Florence,Florine,Francoise");
-	n = AddStr2Array(&sFrWomenNames, n, "Gabrielle,Genevieve,Georgette,Geraldine,Gertrude,Gilberte,Gisele");
-	n = AddStr2Array(&sFrWomenNames, n, "Helene,Henriette,Irene,Isabelle,Jacqueline,Jeanne");
-	n = AddStr2Array(&sFrWomenNames, n, "Josephine,Judith,Julie,Juliette,Justine,Laure,Laurence,Laurette,Liliane,Louise");
-	n = AddStr2Array(&sFrWomenNames, n, "Lucie,Lucienne,Lucille,Lydie,Mabel,Madeleine,Manuelle,Marceline");
-	n = AddStr2Array(&sFrWomenNames, n, "Marguerite,Marianne,Marie,Marthe,Mathilde,Melanie,Michelle,Monique");
-	n = AddStr2Array(&sFrWomenNames, n, "Mylene,Nadine,Nathalie,Nicole,Noemie,Odette,Odile,Ophelie,Paulette");
-	n = AddStr2Array(&sFrWomenNames, n, "Pauline,Rachel,Rebecca,Regine,Renee,Rosette,Rosine");
-	n = AddStr2Array(&sFrWomenNames, n, "Sabine,Salome,Sarah,Serene,Sibylle,Simone,Sophie,Stephanie,Suzanne,Sylvie,Therese,Ursule");
-	n = AddStr2Array(&sFrWomenNames, n, "Valentine,Valerie,Veronique,Victorine,Virginie,Vivienne,Yolande,Yvette,Yvonne");	
-	
-	
-// families
+	n = AddStr2Array(&sFrWomenNames, n, "Désirée,Édith,Éléonore,Élisabeth,Émilie,Emmanuelle");
+	n = AddStr2Array(&sFrWomenNames, n, "Esther,Eugénie,Évelyne,Fleur,Flore,Florence,Florine,Françoise");
+	n = AddStr2Array(&sFrWomenNames, n, "Gabrielle,Geneviève,Georgette,Géraldine,Gertrude,Gilberte,Gisèle");
+	n = AddStr2Array(&sFrWomenNames, n, "Hélène,Henriette,Irène,Isabelle,Jacqueline,Jeanne");
+	n = AddStr2Array(&sFrWomenNames, n, "Joséphine,Judith,Julie,Juliette,Justine,Laure,Laurence,Laurette,Liliane,Louise");
+	n = AddStr2Array(&sFrWomenNames, n, "Lucie,Lucienne,Lucille,Ludivine,Lydie,Mabel,Madeleine,Manuelle,Marceline");
+	n = AddStr2Array(&sFrWomenNames, n, "Marguerite,Marianne,Marie,Marthe,Mathilde,Mélanie,Michelle,Monique");
+	n = AddStr2Array(&sFrWomenNames, n, "Mylène,Nadine,Nathalie,Nicole,Noémie,Odette,Odile,Ophélie,Paulette");
+	n = AddStr2Array(&sFrWomenNames, n, "Pauline,Rachel,Rébecca,Régine,Renée,Rosette,Rosine");
+	n = AddStr2Array(&sFrWomenNames, n, "Sabine,Salomé,Sarah,Serène,Sibylle,Simone,Sophie,Stéphanie,Suzanne,Sylvie,Thérèse,Ursule");
+	n = AddStr2Array(&sFrWomenNames, n, "Valentine,Valérie,Véronique,Victorine,Virginie,Vivienne,Yolande,Yvette,Yvonne");
+
+	// families
 	n = 0;
-	n = AddStr2Array(&sFrFamilies, n, "Abadie,Abeille,Adam,Agard,Aguillard,Aime,Airoldi,Alary,Alibert");
+	n = AddStr2Array(&sFrFamilies, n, "Abadie,Abeille,Adam,Agard,Aguillard,Aimé,Airoldi,Alary,Alibert");
 	n = AddStr2Array(&sFrFamilies, n, "Allaire,Allais,Allard,Allier,Alphonse,Amar,Amaury,Ambre");
-	n = AddStr2Array(&sFrFamilies, n, "Ambroise,Amiel,Amiens,Amieux,Amiot,Amirault,Ampere,Ancel,Ancelet,Ancillion,Anctil");
+	n = AddStr2Array(&sFrFamilies, n, "Ambroise,Amiel,Amiens,Amieux,Amiot,Amirault,Ampère,Ancel,Ancelet,Ancillion,Anctil");
 	n = AddStr2Array(&sFrFamilies, n, "Andrepont,Andrieu,Angevin,Angier,Annaud,Anquetil,Antaya,Antin,Arbogast,Arbour,Arcand,Ardant");
 	n = AddStr2Array(&sFrFamilies, n, "Arlais,Arnoult,Arpignon,Arraud,Arsel,Artois");
 	n = AddStr2Array(&sFrFamilies, n, "Astruc,Aubel,Aubert,Aubier,Aubin,Aubret,Aubuchon,Aucagne,Auclair,Aucoin");
 	n = AddStr2Array(&sFrFamilies, n, "Audibert,Audubon,Auger,Augier,Auneil,Aurand,Auriol,Authier,Autin,Auxier,Auzenne,Auzier");
 	n = AddStr2Array(&sFrFamilies, n, "Aydelotte,Aymond,Bachand,Bacot,Badeaux,Badie,Badon,Badret");
 	n = AddStr2Array(&sFrFamilies, n, "Bainville,Balay,Ballin,Banet,Banse,Bara,Barbeau,Barbier,Barbin,Bardin");
-	n = AddStr2Array(&sFrFamilies, n, "Bardot,Baribeau,Barnier,Barousse,Barras,Barre,Barreau,Barriere,Barteau");
-	n = AddStr2Array(&sFrFamilies, n, "Bastide,Bastien,Bayard,Bazin,Beaudet,Beaudry,Beaumier,Beaupre,Beauvais");
-	n = AddStr2Array(&sFrFamilies, n, "Becar,Becotte,Bedard,Begnaud,Begnier,Begnoche,Belcourt,Belizaire,Belleau");
+	n = AddStr2Array(&sFrFamilies, n, "Bardot,Baribeau,Barnier,Barousse,Barras,Barre,Barreau,Barrière,Barteau");
+	n = AddStr2Array(&sFrFamilies, n, "Bastide,Bastien,Bayard,Bazin,Beaudet,Beaudry,Beaumier,Beaupré,Beauvais");
+	n = AddStr2Array(&sFrFamilies, n, "Becar,Becotte,Bedard,Begnaud,Begnier,Begnoche,Belcourt,Bélizaire,Belleau");
 	n = AddStr2Array(&sFrFamilies, n, "Bellefleur,Bellerose,Belliveau,Belyeu,Berard,Bercier");
 	n = AddStr2Array(&sFrFamilies, n, "Berge,Bergeron,Berland,Bernier,Bernot,Berrier,Bertin");
-	n = AddStr2Array(&sFrFamilies, n, "Berton,Besancon,Besson,Bethune,Bettencourt,Bettinger,Bevard,Bevier,Bibeau,Bickert");
+	n = AddStr2Array(&sFrFamilies, n, "Berton,Besançon,Besson,Béthune,Bettencourt,Bettinger,Bevard,Bevier,Bibeau,Bickert");
 	n = AddStr2Array(&sFrFamilies, n, "Billadeau,Billard,Billeaud,Billotte,Bisson,Bizier,Blanc");
 	n = AddStr2Array(&sFrFamilies, n, "Blanchard,Blanchet,Blandin,Bleau,Blier,Blondeau,Bocande,Bodart,Bodin,Boicourt,Boileau,Boirot");
 	n = AddStr2Array(&sFrFamilies, n, "Bois,Boisseau,Boisvert,Boivin,Bollard,Bombard,Bonneau");
@@ -371,155 +365,155 @@ void InitCharactersNames()
 	n = AddStr2Array(&sFrFamilies, n, "Bouchard,Boucher,Boudin,Boudoin,Boudrot");
 	n = AddStr2Array(&sFrFamilies, n, "Bouic,Boulais,Boulier,Bourcier,Bourdin");
 	n = AddStr2Array(&sFrFamilies, n, "Bourget,Bourles,Bourque,Bourret,Bousquet");
-	n = AddStr2Array(&sFrFamilies, n, "Boussot,Boutard,Boutilier,Boutin,Boutron,Bouvard,Bouvier,Bouyer,Bovee,Boyette");
-	n = AddStr2Array(&sFrFamilies, n, "Bozon,Branche,Brassard,Brasseur,Brazier,Breard");
-	n = AddStr2Array(&sFrFamilies, n, "Brebeuf,Bresette,Bresson,Breton,Brevard,Briault,Brideau,Briere,Brignac,Brillon,Brion,Briquet");
+	n = AddStr2Array(&sFrFamilies, n, "Boussot,Boutard,Boutilier,Boutin,Boutron,Bouvard,Bouvier,Bouyer,Bovée,Boyette");
+	n = AddStr2Array(&sFrFamilies, n, "Bozon,Branche,Brassard,Brasseur,Brazier,Bréard");
+	n = AddStr2Array(&sFrFamilies, n, "Brébeuf,Bresette,Bresson,Breton,Brevard,Briault,Brideau,Brière,Brignac,Brillon,Brion,Briquet");
 	n = AddStr2Array(&sFrFamilies, n, "Brisset,Broc,Brocard,Brodeur,Brosseau,Brouillet,Broussard");
-	n = AddStr2Array(&sFrFamilies, n, "Brule,Brunelle,Brunet,Brunot,Bruyere,Buchon,Bugnon,Buisson,Bujold,Burdin,Burel,Burnet,Burtin,Bury");
-	n = AddStr2Array(&sFrFamilies, n, "Bussiere,Buysse,Cabaniel,Cabet,Cadet,Cadieux,Caillier,Caissie");
+	n = AddStr2Array(&sFrFamilies, n, "Brûlé,Brunelle,Brunet,Brunot,Bruyère,Buchon,Bugnon,Buisson,Bujold,Burdin,Burel,Burnet,Burtin,Bury");
+	n = AddStr2Array(&sFrFamilies, n, "Bussière,Buysse,Cabaniel,Cabet,Cadet,Cadieux,Caillier,Caissie");
 	n = AddStr2Array(&sFrFamilies, n, "Calame,Calcet,Calle,Callier,Callot,Calvet");
 	n = AddStr2Array(&sFrFamilies, n, "Cambre,Campeau,Camus,Candel,Cantrelle,Capel,Cardin,Cardon,Cariveau");
-	n = AddStr2Array(&sFrFamilies, n, "Carlier,Carrade,Carreau,Carriere,Carron,Cartier,Carville,Cassard,Cassel");
+	n = AddStr2Array(&sFrFamilies, n, "Carlier,Carrade,Carreau,Carrière,Carron,Cartier,Carville,Cassard,Cassel");
 	n = AddStr2Array(&sFrFamilies, n, "Cassin,Castel,Caton,Cauchon,Cavalier,Cavin,Caye,Cazier");
-	n = AddStr2Array(&sFrFamilies, n, "Cedotal,Cenac,Chabert,Chabot,Chachere,Chagnon,Chaille,Chaloux,Chambon");
+	n = AddStr2Array(&sFrFamilies, n, "Cedotal,Cenac,Chabert,Chabot,Chacheré,Chagnon,Chaille,Chaloux,Chalumeau,Chambon");
 	n = AddStr2Array(&sFrFamilies, n, "Champeau,Champlain,Champoux,Chancy,Chappuis,Charbonnet,Chardin,Chardon");
-	n = AddStr2Array(&sFrFamilies, n, "Charvet,Chatard,Chatel,Chaumont,Chauvin,Chenard,Chenault,Chenier");
-	n = AddStr2Array(&sFrFamilies, n, "Cherrier,Chesson,Chevrier,Choiniere,Choquet,Chouinard");
-	n = AddStr2Array(&sFrFamilies, n, "Chretien,Claret,Clary,Clavel,Claverie,Clavette,Clavier,Clemence");
-	n = AddStr2Array(&sFrFamilies, n, "Clermont,Closson,Clouatre,Clouet,Clouthier,Cluzeau");
+	n = AddStr2Array(&sFrFamilies, n, "Charvet,Chatard,Châtel,Chaumont,Chauvin,Chenard,Chenault,Chenier");
+	n = AddStr2Array(&sFrFamilies, n, "Cherrier,Chesson,Chevrier,Choinière,Choquet,Chouinard");
+	n = AddStr2Array(&sFrFamilies, n, "Chrétien,Claret,Clary,Clavel,Claverie,Clavette,Clavier,Clémence");
+	n = AddStr2Array(&sFrFamilies, n, "Clermont,Closson,Clouâtre,Clouet,Clouthier,Cluzeau");
 	n = AddStr2Array(&sFrFamilies, n, "Cocteau,Colin,Collard,Collette,Combes,Comeau");
-	n = AddStr2Array(&sFrFamilies, n, "Compere,Comtois,Contant,Contois,Coppin,Corbin,Cordier,Cormier,Corneau");
+	n = AddStr2Array(&sFrFamilies, n, "Compère,Comtois,Contant,Contois,Coppin,Corbin,Cordier,Cormier,Corneau");
 	n = AddStr2Array(&sFrFamilies, n, "Cornellier,Cornet,Cotnoir,Cottard,Coudert,Couillard,Courbet,Courchesne,Cournoyer");
 	n = AddStr2Array(&sFrFamilies, n, "Courtade,Courtois,Cousineau,Couvillion,Couyer");
-	n = AddStr2Array(&sFrFamilies, n, "Crasson,Credeur,Crepeau,Crevier,Crochet,Croisier,Crotteau,Crozier,Cuny");
+	n = AddStr2Array(&sFrFamilies, n, "Crasson,Crédeur,Crépeau,Crevier,Crochet,Croisier,Crotteau,Crozier,Cuny");
 	n = AddStr2Array(&sFrFamilies, n, "Curie,Cusson,Cuvelier,Dabry,Daguet,Daigneault");
 	n = AddStr2Array(&sFrFamilies, n, "Daigre,Daigrepont,Dalier,Dallaire,Damboise,Dangler,Danos,Dansereau,Dantin,Dassier");
-	n = AddStr2Array(&sFrFamilies, n, "Daudelin,Daudet,Daumier,Dauphinais,Dauzat,Davolt,Debarge,Deblois,Debree");
+	n = AddStr2Array(&sFrFamilies, n, "Daudelin,Daudet,Daumier,Dauphinais,Dauzat,Davolt,Debarge,Deblois,Debrée");
 	n = AddStr2Array(&sFrFamilies, n, "Debroux,Debussy,Decelle,Decour,Decoux,Dedeaux");
 	n = AddStr2Array(&sFrFamilies, n, "Deforge,Defrain,Degrange,Dejarnette,Delafosse,Delaine,Delanoy,Delavergne");
 	n = AddStr2Array(&sFrFamilies, n, "Delisle,Delmas,Delon,Delorge");
 	n = AddStr2Array(&sFrFamilies, n, "Delorme,Deloy,Delvaux,Demange,Demarais,Demers,Demeuse,Demory");
 	n = AddStr2Array(&sFrFamilies, n, "Demoulin,Denard,Deneau,Denier,Denoyer,Deroche,Deroy,Dery");
 	n = AddStr2Array(&sFrFamilies, n, "Desautels,Deschamps,Descoteaux,Desjardins,Desormeaux,Detemple");
-	n = AddStr2Array(&sFrFamilies, n, "Devault,Deveaux,Deville,Devilliers,Didion,Dieudonne,Dionne");
+	n = AddStr2Array(&sFrFamilies, n, "Devault,Deveaux,Deville,Devilliers,Didion,Dieudonné,Dionne");
 	n = AddStr2Array(&sFrFamilies, n, "Dodier,Doiron,Donais,Dorais,Doreau,Doucet,Dougnac,Douville");
 	n = AddStr2Array(&sFrFamilies, n, "Dozier,Drouhard,Drouillard,Drouin,Dubas,Dubeau,Dubois,Dubord,Dubray,Dubuisson,Ducasse,Duchamp");
-	n = AddStr2Array(&sFrFamilies, n, "Ducharme,Duchateau,Duchesne,Duchon,Duclos,Ducret,Dufault,Dufort,Dufour");
+	n = AddStr2Array(&sFrFamilies, n, "Ducharme,Duchâteau,Duchesne,Duchon,Duclos,Ducret,Dufault,Dufort,Dufour");
 	n = AddStr2Array(&sFrFamilies, n, "Dufresne,Dugas,Duguay,Duhamel,Duhart,Dumaine,Dumais,Dumas,Dumesnil");
-	n = AddStr2Array(&sFrFamilies, n, "Dumont,Dumouchel,Dumoulin,Dupere,Duplantier,Dupre,Dupuis,Duquesne,Durand,Duret,Durocher,Duron");
+	n = AddStr2Array(&sFrFamilies, n, "Dumont,Dumouchel,Dumoulin,Duperré,Duplantier,Dupré,Dupuis,Duquesne,Durand,Duret,Durocher,Duron");
 	n = AddStr2Array(&sFrFamilies, n, "Dusseault,Dutoit,Dutronc,Duval,Duvernay,Duvernois,Emard,Embert,Emery");
-	n = AddStr2Array(&sFrFamilies, n, "Emond,Erbland,Erignac,Eschete,Espy,Esquier,Ethier");
-	n = AddStr2Array(&sFrFamilies, n, "Evard,Evrard,Eymard,Fabre,Fabry,Fafard,Fagnant,Fagot,Faivre,Falgout,Fanguy");
-	n = AddStr2Array(&sFrFamilies, n, "Faubert,Faucheux,Faudree,Faure,Faurot,Fauteux,Favier,Favreau,Favret,Fayard,Fayolle,Fecteau");
-	n = AddStr2Array(&sFrFamilies, n, "Ferland,Ferrier,Fevre,Feydeau,Figard,Filiatrault,Filiault,Fillion,Filteau,Flamand,Fleury,Fluet");
-	n = AddStr2Array(&sFrFamilies, n, "Fontaine,Fontenette,Fontenot,Fonville,Forcier,Foret,Forney,Fortier");
-	n = AddStr2Array(&sFrFamilies, n, "Fortin,Foubert,Foucault,Fouche");
-	n = AddStr2Array(&sFrFamilies, n, "Foucret,Foulon,Fouquet,Fournet,Fournier,Frappier,Fredieu,Fregeau,Fremont");
+	n = AddStr2Array(&sFrFamilies, n, "Emond,Erbland,Érignac,Escheté,Espy,Esquier,Éthier");
+	n = AddStr2Array(&sFrFamilies, n, "Evard,Évrard,Eymard,Fabre,Fabry,Fafard,Fagnant,Fagot,Faivre,Falgout,Fanguy");
+	n = AddStr2Array(&sFrFamilies, n, "Faubert,Faucheux,Faudrée,Faure,Faurot,Fauteux,Favier,Favreau,Favret,Fayard,Fayolle,Fecteau");
+	n = AddStr2Array(&sFrFamilies, n, "Ferland,Ferrier,Fèvre,Feydeau,Figard,Filiatrault,Filiault,Fillion,Filteau,Flamand,Fleury,Fluet");
+	n = AddStr2Array(&sFrFamilies, n, "Fontaine,Fontenette,Fontenot,Fonville,Forcier,Forêt,Forney,Fortier");
+	n = AddStr2Array(&sFrFamilies, n, "Fortin,Foubert,Foucault,Fouché");
+	n = AddStr2Array(&sFrFamilies, n, "Foucret,Foulon,Fouquet,Fournet,Fournier,Frappier,Fredieu,Frégeau,Fremont");
 	n = AddStr2Array(&sFrFamilies, n, "Frenier,Friant,Frichet,Frigon");
-	n = AddStr2Array(&sFrFamilies, n, "Friloux,Frison,Fugere,Fumont,Furnon,Gaboury,Gadbois,Gagnard,Gagne");
+	n = AddStr2Array(&sFrFamilies, n, "Friloux,Frison,Fugère,Fumont,Furnon,Gaboury,Gadbois,Gagnard,Gagné");
 	n = AddStr2Array(&sFrFamilies, n, "Gagnon,Gaillard,Galant,Galarneau");
 	n = AddStr2Array(&sFrFamilies, n, "Galipeau,Gallatin,Gallet,Gallien,Gallier,Gallon,Gamelin,Gamet,Garand,Gardin");
 	n = AddStr2Array(&sFrFamilies, n, "Gareau,Garin,Garneau,Garnier,Garoutte,Gaudet,Gaudin");
-	n = AddStr2Array(&sFrFamilies, n, "Gaudreau,Gaulin,Gaumond,Gauthier,Gautreau,Gauvin,Gauvreau,Gelin,Gelineau,Gendreau");
-	n = AddStr2Array(&sFrFamilies, n, "Gendron,Genet,Gereau,Germond,Gerould,Gervais");
-	n = AddStr2Array(&sFrFamilies, n, "Gervin,Giard,Gibeau,Gibert,Gignac,Gignard,Giguere,Gillet,Gilliard,Gimbert,Gionet,Girardeau,Girardin");
+	n = AddStr2Array(&sFrFamilies, n, "Gaudreau,Gaulin,Gaumond,Gauthier,Gautreau,Gauvin,Gauvreau,Gélin,Gélineau,Gendreau");
+	n = AddStr2Array(&sFrFamilies, n, "Gendron,Genêt,Géreau,Germond,Gerould,Gervais");
+	n = AddStr2Array(&sFrFamilies, n, "Gervin,Giard,Gibeau,Gibert,Gignac,Gignard,Giguère,Gillet,Gilliard,Gimbert,Gionet,Girardeau,Girardin");
 	n = AddStr2Array(&sFrFamilies, n, "Giraudeau,Girault,Giroux,Gladieux,Gladin,Gobeil,Gobin,Godard");
 	n = AddStr2Array(&sFrFamilies, n, "Godbout,Godeaux,Godin,Goffinet,Gonsoulin,Gossard,Gosselin");
 	n = AddStr2Array(&sFrFamilies, n, "Goubeaux,Goudeau,Goudreau,Gougeon,Gouin,Goulet,Goulinet,Goupil,Gourdin,Gourneau");
-	n = AddStr2Array(&sFrFamilies, n, "Goyer,Grandin,Grandpre,Granger,Gravel,Gravois,Greaux");
+	n = AddStr2Array(&sFrFamilies, n, "Goyer,Grandin,Grandpré,Granger,Gravel,Gravois,Gréaux");
 	n = AddStr2Array(&sFrFamilies, n, "Grenier,Grignon,Grimaud,Groleau,Groux");
-	n = AddStr2Array(&sFrFamilies, n, "Guebert,Guedry,Guerin,Gueroult,Guertin,Guevin,Guibault,Guibert,Guichard,Guignard,Guilbeau");
+	n = AddStr2Array(&sFrFamilies, n, "Guébert,Guédry,Guérin,Gueroult,Guertin,Guévin,Guibault,Guibert,Guichard,Guignard,Guilbeau");
 	n = AddStr2Array(&sFrFamilies, n, "Guillard,Guillet,Guillory,Guillot,Guimond,Guyon,Guyot");
-	n = AddStr2Array(&sFrFamilies, n, "Hache,Hamel,Hamelin,Harnois,Haury,Henault,Henrion,Herbin,Heroux,Herpin");
-	n = AddStr2Array(&sFrFamilies, n, "Hilaire,Hils,Hotard,Houde,Houle,Houy,Huard,Huet,Huguet");
+	n = AddStr2Array(&sFrFamilies, n, "Hache,Hamel,Hamelin,Harnois,Haury,Hénault,Henrion,Herbin,Héroux,Herpin");
+	n = AddStr2Array(&sFrFamilies, n, "Hilaire,Hils,Hotard,Houdé,Houlé,Houy,Huard,Huet,Huguet");
 	n = AddStr2Array(&sFrFamilies, n, "Hulin,Hunault,Huot,Hurteau,Hymbert,Jacquemin,Jacquet,Jacquin");
-	n = AddStr2Array(&sFrFamilies, n, "Jaillet,Jalbert,Janis,Janvrin,Jarbeau,Jarreau,Jasmin,Javault,Jenerette");
+	n = AddStr2Array(&sFrFamilies, n, "Jaillet,Jalbert,Janis,Janvrin,Jarbeau,Jarreau,Jasmin,Javault,Jeanneret");
 	n = AddStr2Array(&sFrFamilies, n, "Jobin,Jolicoeur,Jolin,Jolivet,Jossart,Josserand,Joyal");
-	n = AddStr2Array(&sFrFamilies, n, "Joyelle,Juaire,Juillerat,Juneau,Jutras,Kirouac,Labadie,Labelle,Labonte");
+	n = AddStr2Array(&sFrFamilies, n, "Joyelle,Juaire,Juillerat,Juneau,Jutras,Kirouac,Labadie,Labelle,Labonté");
 	n = AddStr2Array(&sFrFamilies, n, "Labrie,Lacasse,Lachapelle,Lacombe,Lacour,Lacroix,Ladouceur");
-	n = AddStr2Array(&sFrFamilies, n, "Lafargue,Lafleche,Lafleur,Lafontaine,Laforge,Laframboise");
+	n = AddStr2Array(&sFrFamilies, n, "Lafargue,Laflèche,Lafleur,Lafontaine,Laforge,Laframboise");
 	n = AddStr2Array(&sFrFamilies, n, "Lagarde,Lajeunesse,Lallier,Lalonde");
 	n = AddStr2Array(&sFrFamilies, n, "Lamarche,Lamere,Lamoreaux,Lamothe,Lamour,Lamoureux,Lampron,Lanctot,Landry,Langelier,Langevin");
-	n = AddStr2Array(&sFrFamilies, n, "Langille,Langlois,Lanoue,Laperle,Laperriere,Laplante");
-	n = AddStr2Array(&sFrFamilies, n, "Lapointe,Laporte,Larche,Lareau,Larivee,Lariviere");
+	n = AddStr2Array(&sFrFamilies, n, "Langille,Langlois,Lanoue,Laperle,Laperrière,Laplante");
+	n = AddStr2Array(&sFrFamilies, n, "Lapointe,Laporte,Larche,Lareau,Larivée,Larivière");
 	n = AddStr2Array(&sFrFamilies, n, "Laroche,Larouche,Laroux,Larue,Lasalle");
-	n = AddStr2Array(&sFrFamilies, n, "Latour,Laurendeau,Laurin,Lavallee,Lavelle,Laverdure");
-	n = AddStr2Array(&sFrFamilies, n, "Lavergne,Lavier,Lavigne,Lavoie,Lebeau,Lebel");
-	n = AddStr2Array(&sFrFamilies, n, "Lebert,Leblanc,Lebon,Lebourgeois,Lebrun,Leclerc,Lecompte,Lecuyer,Ledoux,Lefebvre");
-	n = AddStr2Array(&sFrFamilies, n, "Lefort,Legault,Leger,Leguay,Lehouillier,Lejeune,Lemaire,Lemaitre,Lemelin,Lemery,Lemieux");
-	n = AddStr2Array(&sFrFamilies, n, "Lemire,Lepage,Lepere,Leriche,Leroy,Lesage");
-	n = AddStr2Array(&sFrFamilies, n, "Lescarbeau,Lesieur,Lestage,Letarte,Letellier,Leveque,Levert");
+	n = AddStr2Array(&sFrFamilies, n, "Latour,Laurendeau,Laurin,Lavallée,Lavelle,Laverdure");
+	n = AddStr2Array(&sFrFamilies, n, "Lavergne,Lavier,Lavigne,Lavoie,Lavoisier,Lebeau,Lebel");
+	n = AddStr2Array(&sFrFamilies, n, "Lebert,Leblanc,Lebon,Lebourgeois,Lebrun,Leclerc,Lecompte,Lécuyer,Ledoux,Lefebvre");
+	n = AddStr2Array(&sFrFamilies, n, "Lefort,Legault,Léger,Leguay,Lehouillier,Lejeune,Lemaire,Lemaître,Lemelin,Lémery,Lemieux");
+	n = AddStr2Array(&sFrFamilies, n, "Lemire,Lepage,Lepère,Leriche,Leroy,Lesage");
+	n = AddStr2Array(&sFrFamilies, n, "Lescarbeau,Lesieur,Lestage,Letarte,Letellier,Lévêque,Levert");
 	n = AddStr2Array(&sFrFamilies, n, "Levron,Lhommedieu,Libert,Linard,Lincourt,Liotard");
-	n = AddStr2Array(&sFrFamilies, n, "Liou,Livernois,Lobel,Loignon,Loiseau,Loisel,Lombard,Longpre,Longtin");
-	n = AddStr2Array(&sFrFamilies, n, "Loret,Lorge,Lormand,Lorrain,Losier,Loubier,Louviere,Loyer,Lucier,Luneau,Lupien,Lusignan,Macon");
-	n = AddStr2Array(&sFrFamilies, n, "Madore,Magnan,Magnin,Magnon,Maheu,Mailhot");
-	n = AddStr2Array(&sFrFamilies, n, "Maillard,Maillet,Maitre,Malenfant,Malette,Mallet,Maltais");
+	n = AddStr2Array(&sFrFamilies, n, "Liou,Livernois,Lobel,Loignon,Loiseau,Loisel,Lombard,Longpré,Longtin");
+	n = AddStr2Array(&sFrFamilies, n, "Loret,Lorge,Lormand,Lorrain,Losier,Loubier,Louvière,Loyer,Lucier,Luneau,Lupien,Lusignan,Macon");
+	n = AddStr2Array(&sFrFamilies, n, "Madoré,Magnan,Magnin,Magnon,Maheu,Mailhot");
+	n = AddStr2Array(&sFrFamilies, n, "Maillard,Maillet,Maître,Malenfant,Malette,Mallet,Maltais");
 	n = AddStr2Array(&sFrFamilies, n, "Malveaux,Mandeville,Mangin,Manier,Manigault,Manseau,Marcantel");
-	n = AddStr2Array(&sFrFamilies, n, "Marceau,Marcelin,Marchand,Marcil,Marcoux,Marcy,Marechal,Maret");
+	n = AddStr2Array(&sFrFamilies, n, "Marceau,Marcelin,Marchand,Marcil,Marcoux,Marcy,Maréchal,Maret");
 	n = AddStr2Array(&sFrFamilies, n, "Marien,Marier,Marineau,Marion");
-	n = AddStr2Array(&sFrFamilies, n, "Marois,Marotte,Marquer,Marquette,Marsan,Martel,Martineau,Martinet,Massard,Masse,Masson");
-	n = AddStr2Array(&sFrFamilies, n, "Mathey,Mathieu,Maurin,Mayeaux,Mayette,Mayeux,Mayon,Meilleur,Melancon");
-	n = AddStr2Array(&sFrFamilies, n, "Melin,Meline,Menard,Mercier,Mercure,Merillat,Merle,Merlin,Messier");
-	n = AddStr2Array(&sFrFamilies, n, "Metayer,Metivier,Metoyer,Mette,Meunier,Meuret,Micheau,Michelin,Michon");
+	n = AddStr2Array(&sFrFamilies, n, "Marois,Marotte,Marquer,Marquette,Marsan,Martel,Martineau,Martinet,Massard,Massé,Masson");
+	n = AddStr2Array(&sFrFamilies, n, "Mathey,Mathieu,Maurin,Mayeaux,Mayette,Mayeux,Mayon,Meilleur,Melançon");
+	n = AddStr2Array(&sFrFamilies, n, "Melin,Méline,Ménard,Mercier,Mercure,Mérillat,Merle,Merlin,Messier");
+	n = AddStr2Array(&sFrFamilies, n, "Métayer,Métivier,Métoyer,Mette,Meunier,Meuret,Micheau,Michelin,Michon");
 	n = AddStr2Array(&sFrFamilies, n, "Mignon,Milbert,Millet,Milot,Mineau,Miron,Miville,Moffet,Moisan,Mole");
-	n = AddStr2Array(&sFrFamilies, n, "Mollere,Mollet,Molleur,Monceaux,Mondor,Monet,Mongeau,Mongeon,Mongrain");
+	n = AddStr2Array(&sFrFamilies, n, "Mollere,Mollet,Molleur,Monceaux,Mondor,Monet,Mongazon,Mongeau,Mongeon,Mongrain");
 	n = AddStr2Array(&sFrFamilies, n, "Monier,Monin,Moniot,Monnin,Monnot,Montagne,Montandon,Montavon");
 	n = AddStr2Array(&sFrFamilies, n, "Montet,Montfort,Montigny,Montpetit,Monty,Moquin,Morand,Moreau,Morel,Morency");
 	n = AddStr2Array(&sFrFamilies, n, "Moret,Morier,Morin,Morisset,Morneau,Moron,Moulin,Mousseau");
 	n = AddStr2Array(&sFrFamilies, n, "Mouton,Mouzon,Moy,Munier,Murat,Nadeau,Nadon,Naquin,Nardin,Naud");
-	n = AddStr2Array(&sFrFamilies, n, "Naudet,Navarre,Nedeau,Nerriere,Neuville,Neveu,Nezat,Nicolet,Nobert,Noblet");
-	n = AddStr2Array(&sFrFamilies, n, "Noiret,Nolet,Nolette,Nolin,Normandeau,Normandin,Noury,Noyer,Orme,Oubre,Ouelette,Ouellet");
-	n = AddStr2Array(&sFrFamilies, n, "Ouimet,Oury,Pageau,Painchaud,Papin,Papineau,Paquin,Paradis,Pare,Parent");
-	n = AddStr2Array(&sFrFamilies, n, "Parenteau,Paris,Parise,Patenaude,Patenostre");
+	n = AddStr2Array(&sFrFamilies, n, "Naudet,Nauleau,Navarre,Nedeau,Nerrière,Neuville,Neveu,Nezat,Nicolet,Nobert,Noblet");
+	n = AddStr2Array(&sFrFamilies, n, "Noiret,Nolet,Nolette,Nolin,Normandeau,Normandin,Noury,Noyer,Orme,Oubré,Ouelette,Ouellet");
+	n = AddStr2Array(&sFrFamilies, n, "Ouimet,Oury,Pageau,Painchaud,Papin,Papineau,Paquin,Paradis,Paré,Parent");
+	n = AddStr2Array(&sFrFamilies, n, "Parenteau,Paris,Parise,Patenaude,Patenôtre");
 	n = AddStr2Array(&sFrFamilies, n, "Patry,Paulin,Payant,Palissier,Pelland,Pellerin");
-	n = AddStr2Array(&sFrFamilies, n, "Pelletier,Peloquin,Pepin,Perilloux,Perodeau,Perot,Perrault,Perrenoud,Perret,Perrier,Perron,Perthuis,Perusse");
-	n = AddStr2Array(&sFrFamilies, n, "Petit,Picard,Piche,Pichon,Picot,Picou,Pierron");
-	n = AddStr2Array(&sFrFamilies, n, "Pillot,Pilotte,Pinard,Pineau,Pinet,Pinsonneau,Plamondon,Plante,Pleau");
+	n = AddStr2Array(&sFrFamilies, n, "Pelletier,Péloquin,Pépin,Périlloux,Pérodeau,Pérot,Perrault,Perrenoud,Perret,Perrier,Perron,Perthuis,Pérusse");
+	n = AddStr2Array(&sFrFamilies, n, "Petit,Picard,Piché,Pichon,Picot,Picou,Pierron");
+	n = AddStr2Array(&sFrFamilies, n, "Pillot,Pilotte,Pinard,Pineau,Pinet,Pinsonneau,Plamondon,Planté,Pleau");
 	n = AddStr2Array(&sFrFamilies, n, "Plourde,Poche,Poilleux,Poirier,Poirot,Poissant,Poisson,Poitier,Poitras");
 	n = AddStr2Array(&sFrFamilies, n, "Poliquin,Pollet,Pommier,Porche");
 	n = AddStr2Array(&sFrFamilies, n, "Porte,Portier,Pothier,Potvin,Poudrier,Poulin,Pouliot");
-	n = AddStr2Array(&sFrFamilies, n, "Poupart,Pourciau,Pourier,Poyer,Precourt,Prefontaine,Prejean");
-	n = AddStr2Array(&sFrFamilies, n, "Prevot,Priaulx,Prieur,Prignaud,Pronovost,Proteau,Proulx,Provost,Prudhomme,Pruneau,Prunier,Quebedeau,Quenneville");
+	n = AddStr2Array(&sFrFamilies, n, "Poupart,Pourciau,Pourier,Poyer,Précourt,Préfontaine,Préjean");
+	n = AddStr2Array(&sFrFamilies, n, "Prévôt,Priaulx,Prieur,Prignaud,Pronovost,Proteau,Proulx,Provost,Prudhomme,Pruneau,Prunier,Quebedeau,Quenneville");
 	n = AddStr2Array(&sFrFamilies, n, "Quesnel,Quintal,Quintin,Quesnel,Rabalais,Rabourdin,Racicot,Racine,Raiche");
-	n = AddStr2Array(&sFrFamilies, n, "Rainville,Raison,Rambert,Ramel,Rancourt,Ranger,Reaume");
-	n = AddStr2Array(&sFrFamilies, n, "Reaux,Rebert,Regimbal,Regnault,Regnier,Rembert,Remillard,Remondiere,Remy,Renard,Renaud");
-	n = AddStr2Array(&sFrFamilies, n, "Renaudet,Renaut,Resseguie,Reymond,Reynard,Reyneau,Ricard,Riche,Richoux,Rigaud");
-	n = AddStr2Array(&sFrFamilies, n, "Riouffrait,Rioux,Rivard,Rivet,Riviere,Roberge,Robichaud,Robideau,Robidoux,Robillard");
+	n = AddStr2Array(&sFrFamilies, n, "Rainville,Raison,Rambert,Ramel,Rancourt,Ranger,Réaume");
+	n = AddStr2Array(&sFrFamilies, n, "Réaux,Rebert,Régimbal,Regnault,Régnier,Rembert,Rémillard,Rémondière,Rémy,Renard,Renaud");
+	n = AddStr2Array(&sFrFamilies, n, "Renaudet,Renaut,Rességuié,Reymond,Reynard,Reyneau,Ricard,Riche,Richoux,Rigaud");
+	n = AddStr2Array(&sFrFamilies, n, "Riouffrait,Rioux,Rivard,Rivet,Rivière,Roberge,Robichaud,Robideau,Robidoux,Robillard");
 	n = AddStr2Array(&sFrFamilies, n, "Robin,Robinet,Rochefort,Rocheleau,Rochet,Rocheteau,Rochette,Rochon");
 	n = AddStr2Array(&sFrFamilies, n, "Rodier,Rondeau,Rossignol,Rougeau,Rouhard,Rouillard,Rouleau,Rousse,Rousseau,Roussel,Roussin");
 	n = AddStr2Array(&sFrFamilies, n, "Routhier,Roux,Roy,Royer,Ruelle,Rutan,Sabatier,Sabourin,Saindon,Salle,Salois,Salvas");
-	n = AddStr2Array(&sFrFamilies, n, "Sansoucy,Sarasin,Sarazine,Sarchet,Sasseville,Saucier,Saulnier,Saunier,Sauvageau,Sauve,Sauviot");
-	n = AddStr2Array(&sFrFamilies, n, "Savant,Savard,Savary,Savoie,Seguin,Selle,Senecal");
-	n = AddStr2Array(&sFrFamilies, n, "Senechal,Senesac,Sequin,Serre,Servais");
-	n = AddStr2Array(&sFrFamilies, n, "Servant,Severin,Sicard,Sicotte,Sigouin,Silvestre,Simard,Simeon,Simoneau,Simonet,Simonin,Sirois,Soileau");
-	n = AddStr2Array(&sFrFamilies, n, "Soisson,Soleau,Sorel,Soucy,Souliere,Spenard,Suire,Surette,Surprenant,Sylvain");
-	n = AddStr2Array(&sFrFamilies, n, "Tache,Taillon,Tanguay,Tanguy,Tardif,Tardy,Tauzin,Tavernier,Tebeau");
-	n = AddStr2Array(&sFrFamilies, n, "Tellier,Templair,Templet,Terrien,Tessier,Tesson,Tetreault,Theberge");
-	n = AddStr2Array(&sFrFamilies, n, "Theriault,Therien,Theroux,Thevenin,Thevenot,Thibault,Thibert,Thibodeau");
-	n = AddStr2Array(&sFrFamilies, n, "Thierry,Thirion,Thomure,Tierce,Tissier,Tissot,Tondreau,Toupin");
+	n = AddStr2Array(&sFrFamilies, n, "Sansoucy,Sarasin,Sarazine,Sarchet,Sasseville,Saucier,Saulnier,Saunier,Sauvageau,Sauvé,Sauviot");
+	n = AddStr2Array(&sFrFamilies, n, "Savant,Savard,Savary,Savoie,Séguin,Selle,Senécal");
+	n = AddStr2Array(&sFrFamilies, n, "Sénéchal,Sénésac,Sequin,Serre,Servais");
+	n = AddStr2Array(&sFrFamilies, n, "Servant,Séverin,Sicard,Sicotte,Sigouin,Silvestre,Simard,Siméon,Simoneau,Simonet,Simonin,Sirois,Soileau");
+	n = AddStr2Array(&sFrFamilies, n, "Soisson,Soleau,Sorel,Soucy,Soulière,Spénard,Suire,Surette,Surprenant,Sylvain");
+	n = AddStr2Array(&sFrFamilies, n, "Taché,Taillon,Tanguay,Tanguy,Tardif,Tardy,Tauzin,Tavernier,Tebeau");
+	n = AddStr2Array(&sFrFamilies, n, "Tellier,Templair,Templet,Terrien,Tessier,Tesson,Tétreault,Théberge");
+	n = AddStr2Array(&sFrFamilies, n, "Thériault,Thérien,Théroux,Thévenin,Thévenot,Thibault,Thibert,Thibodeau");
+	n = AddStr2Array(&sFrFamilies, n, "Thierry,Thirion,Thomure,Tiercé,Tissier,Tissot,Tondreau,Toupin");
 	n = AddStr2Array(&sFrFamilies, n, "Tourangeau,Toureau,Tourigny,Tournel,Tourville");
 	n = AddStr2Array(&sFrFamilies, n, "Tousignant,Toussaint,Toutant,Tremblay,Tribolet,Trottier");
 	n = AddStr2Array(&sFrFamilies, n, "Truchon,Trudeau,Trudel,Tullier,Turcot,Turin,Turmel,Turpin,Vachon");
 	n = AddStr2Array(&sFrFamilies, n, "Vadnais,Vaillant,Valade,Valcourt,Valin,Valiquette,Valleau,Vallet,Vallier");
-	n = AddStr2Array(&sFrFamilies, n, "Valliere,Valois,Vanier,Vannier,Varin,Vasseur,Vautour,Vautrin,Veilleux,Veillon,Venier,Ventre");
+	n = AddStr2Array(&sFrFamilies, n, "Vallière,Valois,Vanier,Vannier,Varin,Vasseur,Vautour,Vautrin,Veilleux,Veillon,Venier,Ventré");
 	n = AddStr2Array(&sFrFamilies, n, "Vercher,Verdier,Verdun,Verne,Vernier,Vernon,Verreault,Verret,Verrette");
 	n = AddStr2Array(&sFrFamilies, n, "Verrier,Vezina,Vibert,Vicknair,Videaul,Viel");
 	n = AddStr2Array(&sFrFamilies, n, "Vien,Vigeant,Viger,Vigneau,Vigneault,Vignes,Vilbois,Villaret,Villeneuve,Villiers");
 	n = AddStr2Array(&sFrFamilies, n, "Vinet,Violet,Violette,Vivier,Voirol");
 	n = AddStr2Array(&sFrFamilies, n, "Voisard,Voisier,Voisin,Voisinet,Voyer,Vuitton");
 
-// Spain
-// man names
+	// Spain
+	// man names
 	n = 0;
 	n = AddStr2Array(&sSpManNames, n, "Abel,Abelardo,Abrahan,Acacio,Adalbaldo,Adalberto");
-	n = AddStr2Array(&sSpManNames, n, "Adan,Adelardo,Adolfo,Adrian,Agilberto,Agofredo,Agustin,Albano,Alberto,Albino,Alcides");
+	n = AddStr2Array(&sSpManNames, n, "Adan,Adelardo,Adolfo,Adrian,Agilberto,Agofredo,Agustín,Albano,Alberto,Albino,Alcides");
 	n = AddStr2Array(&sSpManNames, n, "Alejandro,Alejo,Alfonso,Alfredo,Alonso,Alvaro");
-	n = AddStr2Array(&sSpManNames, n, "Amadeo,Amado,Amancio,Amando,Amaranto,Amaro,Ambrosio,Americo,Amilcar,Anacleto,Ananias");
+	n = AddStr2Array(&sSpManNames, n, "Amadeo,Amado,Amancio,Amando,Amaranto,Amaro,Ambrosio,Americo,Amilcar,Anacleto,Ananías");
 	n = AddStr2Array(&sSpManNames, n, "Anastasio,Andres,Angel,Anibal,Aniceto,Anselmo,Antonino,Antonio,Apolinar,Arcadio,Archibaldo");
-	n = AddStr2Array(&sSpManNames, n, "Argymiro,Aristides,Armando,Arnaldo,Arnoldo");
+	n = AddStr2Array(&sSpManNames, n, "Argimiro,Aristides,Armando,Arnaldo,Arnoldo");
 	n = AddStr2Array(&sSpManNames, n, "Arsenio,Artemio,Arturo,Astolfo,Atanacio,Audomaro");
 	n = AddStr2Array(&sSpManNames, n, "Augusto,Aureliano,Aurelio,Balduino,Baltasar,Bartolome,Basilio,Baudelio");
-	n = AddStr2Array(&sSpManNames, n, "Beltran,Benito,Bernabe,Bernardo,Bertran,Blasco,Bonifacio,Bruno");
+	n = AddStr2Array(&sSpManNames, n, "Beltrán,Benito,Bernabe,Bernardo,Bertran,Blasco,Bonifacio,Bruno");
 	n = AddStr2Array(&sSpManNames, n, "Camilo,Carlos,Cataldo,Cecilio,Celestino,Cesar,Cipriano,Claudio");
 	n = AddStr2Array(&sSpManNames, n, "Clemente,Constancio,Constantino,Cosme,Cristian,Cristobal");
 	n = AddStr2Array(&sSpManNames, n, "Dalmasio,Damian,Daniel,Dario,David,Demetrio,Deodato,Desiderio,Diego,Dioclesio,Diodoro,Dionisio,Domingo");
@@ -553,10 +547,9 @@ void InitCharactersNames()
 	n = AddStr2Array(&sSpManNames, n, "Teofano,Teofilo,Terencio,Ticiano,Tico,Timoteo,Tito,Tobias");
 	n = AddStr2Array(&sSpManNames, n, "Tomas,Toribio,Tristan,Tulio,Ubaldo,Ulises,Ulrico,Urbano,Uriel,Urso,Valentin");
 	n = AddStr2Array(&sSpManNames, n, "Valeriano,Valerio,Vasco,Velasco,Venancio,Vespasiano,Vicente,Victor");
-	n = AddStr2Array(&sSpManNames, n, "Victoriano,Victorino,Vinicio,Virgilio,Virginio,Vito,Viviano,Zacarias,Zeferino,Zenobio");	
-	
-	
-// women names
+	n = AddStr2Array(&sSpManNames, n, "Victoriano,Victorino,Vinicio,Virgilio,Virginio,Vito,Viviano,Zacarias,Zeferino,Zenobio");
+
+	// women names
 	n = 0;
 	n = AddStr2Array(&sSpWomenNames, n, "Adela,Adelaida,Adelina,Adelita,Agustina,Alba,Alberta,Amalia,Amanda,Ana,Angela,Antonia,Ariadna");
 	n = AddStr2Array(&sSpWomenNames, n, "Arsenia,Asuncion,Augusta,Aurelia,Aurora,Barbara,Beatriz,Belen,Belinda,Benigna,Benita");
@@ -574,9 +567,9 @@ void InitCharactersNames()
 	n = AddStr2Array(&sSpWomenNames, n, "Palmira,Paloma,Patricia,Paula,Pilar,Priscila,Quinta,Rafaela,Raimunda,Ramona,Raquel,Rebeca,Renata,Roberta");
 	n = AddStr2Array(&sSpWomenNames, n, "Roquelina,Rosa,Rosalia,Rosamunda,Rosina,Sabina,Sabrina,Salome,Sancha,Sara,Selena,Serafina");
 	n = AddStr2Array(&sSpWomenNames, n, "Serena,Sibila,Silvia,Sofia,Sol,Soledad,Susana,Tabita,Teodora,Teodosia,Teresa,Ticiana,Ursula,Veronica");
-	n = AddStr2Array(&sSpWomenNames, n, "Viola,Violeta,Virginia,Viviana,Yolanda,Zenobia");	
-	
-// families
+	n = AddStr2Array(&sSpWomenNames, n, "Viola,Violeta,Virginia,Viviana,Yolanda,Zenobia");
+
+	// families
 	n = 0;
 	n = AddStr2Array(&sSpFamilies, n, "Abalos,Abarca,Abrego,Acedo,Acevedo,Acosta,Agosto,Aguero,Aguila,Aguilar,Alameda,Alamo");
 	n = AddStr2Array(&sSpFamilies, n, "Alatorre,Albo,Alcantar,Alcazar,Alegre");
@@ -645,4 +638,4 @@ void InitCharactersNames()
 	n = AddStr2Array(&sSpFamilies, n, "Vidal,Viera,Villa,Villalon,Villanueva,Villar,Villescas");
 	n = AddStr2Array(&sSpFamilies, n, "Viloria,Vinas,Violante,Vivanco,Vivar,Volante,Ximenes,Yanez,Yegros,Yuste");
 	n = AddStr2Array(&sSpFamilies, n, "Zamorano,Zapata,Zendejas,Zermeno,Zorrilla,Zuaza,Zubia,Zuniga,Zurita");
-}	
+}

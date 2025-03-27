@@ -30,9 +30,9 @@ City_Rum9 {Ha ! Le "Saint" Fernando a encore fermé tous les bordels. Qu'à cela
 
 City_Rum10 {L'insp... inspecteur est arrivé ! Don Fernando de Almeyda, ou, comment s'appelle-t-il, Alamida ! Si important que le gouverneur lui-même le contourne sur la pointe des pieds. On dit qu'il vous regarde dans les yeux et qu'il voit tout de suite tous vos péchés. C'est terrifiant !}
 
-Cap_Name {Diego}
+Pop_Name {Diego}
 
-Cap_lastname {de Landa}
+Pop_lastname {de Landa}
 
 SM_WorldMap 
 {

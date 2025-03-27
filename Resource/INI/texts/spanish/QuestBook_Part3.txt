@@ -990,7 +990,7 @@ Marcus Tyrex me ha entregado su fragmento del calendario.
 #TEXT    26
 Tuve una breve negociación con Jaques Barbazon y me dio su fragmento del calendario.
 #TEXT    27
-El Pastor Negro me dio su fragmento del calendario a cambio del libro que tanto ansiaba conseguir. 
+Black Pastor me dio su fragmento del calendario a cambio del libro que tanto ansiaba conseguir. 
 
 #QUEST Testament
 El testamento de Sharp
@@ -1110,7 +1110,7 @@ Esto es un fracaso. Hundí el lugre de mensajería con la correspondencia con de
 Ha sido un fracaso. No logré interceptar el lugre correo de camino a Porto Bello. Ahora los detalles del barco del botín se desconocen.
 #TEXT 8
 ¡Excelente! He interceptado el lugre de mensajería que se dirigía a Porto Bello y he cogido los documentos que necesitaba. Ahora sólo queda entregarlos al destinatario. Pero tengo que darme prisa, creo que tengo diez días.
-And why did Shark come up with such a plan to pass me off as a Spanish merchant? Since we knew that the courier had to leave within three weeks, we could just wait for him and intercept ... Which, in fact, I did.
+¿Y por qué Shark ideó semejante plan para hacerme pasar por un mercader español? Como sabíamos que el correo tenía que salir dentro de tres semanas, podíamos esperarle e interceptarle... Lo que, de hecho, hice.
 #TEXT 9
 ¡Maldita sea! Olvidé que tengo que entregar unos documentos al responsable de la Autoridad Portuaria en Porto Bello. Me temo que no tiene sentido ir allí, lo más probable es que todo el mundo esté al corriente de la desaparición del correo. Puedes olvidarte del asunto.
 #TEXT 10
@@ -1440,7 +1440,7 @@ Encontré una antigua máscara india dentro de una caja metálica cerrada, emana
 #TEXT    11-1
 He encontrado otra máscara antigua que estaba dentro de una caja metálica cerrada con llave que yacía en la arena, creo que es la verdadera máscara. Si no hubiera encontrado la gruta del Guardián, no quiero pensar que podría haber pasado si hubiera sido el caso...
 #TEXT    12
-He encontrado un antiguo templo indio custodiado por el terrible guardián de Ksocheatem, es un esqueleto gigante que era un español sacrificado en Tayasal hace mucho tiempo. Tuve una pelea difícil con la criatura, pero le mostré de lo que es capaz un capitán y decidió que era digno de negociar con él. Le di la daga que se usó para matarlo cuando estaba vivo y pude coger la máscara, incluso ha fortalecido mis habilidades de alguna forma.
+He encontrado un antiguo templo indio custodiado por el terrible guardián de Ksocheatem, es un esqueleto gigante que era un español sacrificado en Tayasal hace mucho tiempo. Tuve una pelea difícil con la criatura, pero le mostré de lo que es capaz un capitán y decidió que era digno de negociar con él. Le di la daga que se usó para matarlo cuando estaba vivo y pude coger la máscara, incluso ha fortalecido mis destrezas de alguna forma.
 El guardián ha desaparecido, se quedó con la daga y su esperado descanso. Tengo que coger la máscara y dejar este lugar lo antes posible.
 #TEXT    13
 ¡Ya tengo la máscara de Kukulcán! Su encarnación nunca alcanzará el pasado y no podrá cambiarlo. ¡Mi expedición a Ksocheatem está completa! Pero no he encontrado al 'Santa Quiteria' y sus tesoros, así que debería seguir explorando la isla hasta encontrar el barco o asegurarme que no está aquí.
@@ -2260,7 +2260,7 @@ Me vi obligado a abandonar Guadalupe. Por mucho que lo sintiera por Longway, las
 #TEXT 7
 ¿En qué estaba pensando? Debería haber corrido a la selva para rescatar a Longway lo antes posible. El comandante no perdió el tiempo y envió otra unidad tras nuestra pelea, quizá incluso más de una. Pero no, entré en pánico y corrí de vuelta a la nave, trasladándola a otra bahía, aunque ya estaba en un lugar seguro. No fue hasta que izamos las velas y dimos la vuelta cuando me di cuenta de lo que había hecho. Ahora es demasiado tarde para dar marcha atrás. Pobre Longway... Si voy a huir, es hora de abandonar las aguas de la isla. Tendré que intentar olvidar este día.
 #TEXT 8
-Oh, it's bad enough when other people's actions turn someone against you in advance... I arrived in Basse-Terre, but Longway was nowhere to be found in town. I asked the innkeeper about it, but he refused to tell me anything, claiming that “yellows” weren't welcome in his establishment. It was a convenient excuse, but I could tell he knew something. I decided to continue my search on my own, but the soldiers found me first. As soon as I hit the streets, I was surrounded and taken to the commandant. When he learned that Longway was my officer, he became hostile to me immediately. It turned out my faithful navigator had cut down many guards when they tried to question him about the purpose of his visit - both in the city and the jungle. I tried to suggest a solution, but the commandant was beyond reasoning. I was arrested, which seemed better than being drawn into a conflict with the whole city garrison. As a result, Longway was pinned down in the cave and didn't survive the fight. Fortunately, the commandant released me immediately afterward. On Longway's body, they found several bloody sheets from van Merden's archives. I wonder why Longway needed them. However, there's no way of knowing that now...
+Oh, ya es bastante malo cuando las acciones de otros ponen a alguien en tu contra de antemano... Llegué a Basse-Terre, pero Longway no aparecía por ninguna parte de la ciudad. Pregunté al posadero, pero se negó a decirme nada, alegando que los "amarillos" no eran bienvenidos en su establecimiento. Era una excusa cómoda, pero me di cuenta de que sabía algo. Decidí continuar mi búsqueda por mi cuenta, pero los soldados me encontraron primero. En cuanto salí a la calle, me rodearon y me llevaron ante el comandante. Cuando supo que Longway era mi oficial, se volvió hostil conmigo de inmediato. Resultó que mi fiel navegante había reducido a muchos guardias cuando intentaron interrogarle sobre el propósito de su visita, tanto en la ciudad como en la jungla. Intenté sugerir una solución, pero el comandante estaba más allá del razonamiento. Me arrestaron, lo que me pareció mejor que verme envuelto en un conflicto con toda la guarnición de la ciudad. Como resultado, Longway quedó inmovilizado en la cueva y no sobrevivió al combate. Afortunadamente, el comandante me liberó inmediatamente después. En el cuerpo de Longway encontraron varias sábanas ensangrentadas de los archivos de van Merden. Me pregunto por qué Longway las necesitaba. Sin embargo, no hay forma de saberlo ahora...
 #TEXT 9
 ¿Por qué, por qué no aceptaste mi ayuda, Longway? ¿Y por qué pensé que tenía que hacerlo todo yo solo? Sólo llegué un poco tarde, así que ahora estás muerto. Cuando llegué a Basse-Terre, al principio pensé que te habías ido y que tendría que buscarte por todo el Archipiélago. No fue necesario. El posadero lo había olvidado o no quería hablar de ello. Pero el comandante sí, y me convocó para explicárselo. Han encontrado páginas arrugadas y ensangrentadas de los archivos de Johan van Merden en tu cuerpo. ¿De qué sirven ahora? Ya no importa.
 #TEXT 10
@@ -2382,7 +2382,7 @@ Hoy he presenciado una escena insólita y he conocido a un hombre insólito. Al 
 #TEXT 2
 Quinientas piezas de oro. Con ese dinero podrías comprar... bueno, mucho. ¡Es un robo! En el faro de Barbados, conocí a Tommy Irons, un mercenario y tirador de talento que conoce bien su valor. Demasiado bien, de hecho. Acordamos que se uniría a mí por una bolsa de oro. Me esperará en una cueva local durante un par de días.
 #TEXT 3
-No conseguí reunir tanto dinero en un par de días. Si me hubiera pedido pesos, bien, aquí crecen en los árboles. Pero no, monsieur best shot in the world sólo quería doblones. No me extraña que siga viajando solo con semejante actitud y exigencias. Sin remordimientos.
+No conseguí reunir tanto dinero en un par de días. Si me hubiera pedido pesos, bien, aquí crecen en los árboles. Pero no, monsieur el mejor tirador del mundo sólo quería doblones. No me extraña que siga viajando solo con semejante actitud y exigencias. Sin remordimientos.
 #TEXT 4
 Le traje a Tommy el oro que quería, y si es la mitad de bueno de lo que presume, fue una inversión que valió la pena. Sólo espero que no me meta en problemas...
 #TEXT 5

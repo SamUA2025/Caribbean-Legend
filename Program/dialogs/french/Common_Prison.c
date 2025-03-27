@@ -1074,9 +1074,19 @@ void ProcessDialogEvent()
 					link.l1.go = "Node_3";
 				break;
 				case 4:
-					dialog.text = "Sacrebleu... Comment cela peut-il être? Cela ne peut pas être!";
-					link.l1 = "Qu'est-ce qui se passe, mon pote? Où est le trésor? Ne me dis pas qu'il n'y en a pas!";
-					link.l1.go = "Node_4";
+                    ok = GetCharacterItem(pchar, "map_full") == 0 && GetCharacterItem(PChar, "map_part2") == 0;
+                    if(GetCharacterItem(PChar, "map_part1") > 0 && !ok) // Первая половинка есть, но вторую дать нельзя
+                    {
+                        dialog.text = "Écoute, j'ai tout vérifié, mais je n'ai trouvé aucun trésor. C'est dommage que cela se soit passé ainsi. Quelqu'un a dû le déterrer avant nous.";
+                        link.l1 = "Et comment cela peut-il être?!";
+                        link.l1.go = "PrisonerInPlace_1";
+                    }
+                    else
+                    {
+                        dialog.text = "Sacrebleu... Comment cela peut-il être? Cela ne peut pas être!";
+                        link.l1 = "Qu'est-ce qui se passe, mon pote? Où est le trésor? Ne me dis pas qu'il n'y en a pas!";
+                        link.l1.go = "Node_4";
+                    }
 				break;
 			}
 		break;
@@ -1154,14 +1164,7 @@ void ProcessDialogEvent()
 		break;
 			
 		case "Node_4_2":
-			if (CheckCharacterItem(pchar, "map_part1"))
-			{
-				GiveItem2Character(pchar, "map_part2");
-			}
-			else
-			{
-				GiveItem2Character(pchar, "map_part1");
-			}
+			AddMapPart();
 			dialog.text = "Bien sûr, prenez-le. Capitaine, libérez-moi... s'il vous plaît? Je croyais vraiment que le trésor était là. Peut-être, vous comprendrez, où il est, et le prendrez pour vous. Je vous en supplie.";
 			link.l1 = "Je vois... En effet, il est difficile de comprendre quoi que ce soit avec ce bout de papier. Il faut une seconde moitié de la carte. Bon, dégage. Je vois maintenant que ce n'était pas de ta faute.";
 			link.l1.go = "PrisonerInPlace_4";

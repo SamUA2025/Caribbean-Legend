@@ -153,7 +153,7 @@ void Sharlie_CreateStorehelper()//создаем помощника торгов
 
 void Tutorial_LandMap(string qName)
 {
-	LaunchTutorial("LandMap" + LanguageGetLanguage(), 1);
+	LaunchTutorial("LandMap", 1);
 }
 
 void StorehelperOver(string qName)
@@ -340,7 +340,7 @@ void Rum_NewGameTip2(string qName) {
 void Rum_NewGameTip3(string qName) {
 	//if(!SandBoxMode) DoQuestFunctionDelay("Rum_NewGameTip4", 20.0);
 	//if(IsEquipCharacterByMap(pchar, "map_martiniqua")) 
-	//LaunchTutorial("LandMapAtSea"+ LanguageGetLanguage(), 0);
+	//LaunchTutorial("LandMapAtSea", 0);
 	//LaunchTutorial("SeaTimeScaleUp", 1);
 	pchar.questTemp.Sharlie.Rum.TipT = true;
 }
@@ -630,7 +630,7 @@ void CaptiveSpain_saveTip(string qName)// подсказка сохранить�
 
 void CaptiveSpain_saveTip2(string qName) 
 {
-	LaunchTutorial("Stealth" + LanguageGetLanguage(), 1);
+	LaunchTutorial("Stealth", 1);
 }
 
 void CaptiveSpain_reload(string qName)//телепорт, если ночь на дворе
@@ -2610,7 +2610,7 @@ bool SharlieTrial_QuestComplete(string sQuestName, string qname)
 					pchar.BasTer_Orujeinek.id = characterRef.id;
 				}
 			}
-			LaunchTutorial("Fighter" + LanguageGetLanguage(), 1);
+			LaunchTutorial("Fighter", 1);
 	}
 	else if (sQuestName == "ZsI_Draka")
 	{

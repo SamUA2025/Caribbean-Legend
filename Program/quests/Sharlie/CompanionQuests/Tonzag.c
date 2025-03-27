@@ -1037,7 +1037,7 @@ void Tonzag_Rolik(string qName)
 	TeleportCharacterToPos(pchar, 27.57, 19.46, -28.39);
 	LAi_SetActorType(pchar);
 	LAi_ActorGoToLocator(pchar, "quest", "quest1", "", -1);
-	locCameraFlyToPosition(-4.8, 4.5, 7.25, 21.5, 24.0, -25.6, 1, 15000/GetDeltaTime());
+	locCameraFlyToPositionLookToHero(-4.8, 4.5, 7.25, 21.5, 24.0, -25.6, 1, 15000/GetDeltaTime());
 	Pchar.FuncCameraFly = "Tonzag_Rolik_2";
 }
 

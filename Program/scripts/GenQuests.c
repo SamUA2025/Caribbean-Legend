@@ -2796,6 +2796,7 @@ void Set_TreasureBarrel()
 
 	if(GetSummonSkillFromName(pchar, "Fortune") > drand(200))
 	{
+        // О, ГОСПОДИ... to_do: hrand всё исправит
 		irand = drand(20);
 		if(irand == 1) trBarrel.items.jewelry1 = rand(18) + 27;
 		irand = drand(20);
@@ -2857,13 +2858,12 @@ void Set_TreasureBarrel()
 		if(irand == 2)  trBarrel.items.hat3 = 1;
 
 		irand = drand(25);
-		if(irand == 24 && GetCharacterItem(pchar, "map_full") == 0)
+		if(irand == 24)
 		{
-			if (GetCharacterItem(pchar, "map_part1") == 0) trBarrel.items.map_part1 = 1;
-			else
-			{
-				if (GetCharacterItem(pchar, "map_part2") == 0) trBarrel.items.map_part2 = 1;
-			}			
+			if (GetCharacterItem(pchar, "map_part1") == 0)
+                trBarrel.items.map_part1 = 1;
+			else if (GetCharacterItem(pchar, "map_full") == 0 && GetCharacterItem(pchar, "map_part2") == 0)
+                trBarrel.items.map_part2 = 1;		
 		}
 		if (drand(30) == 1 && CheckAttribute(pchar, "questTemp.AdmiralMap")) // адм.карты
 		{

@@ -504,6 +504,14 @@ void DailyTradersMoneyUpdate()
 				if(sti(rCharacter.money) > TRADER_MAX_MONEY || sti(rCharacter.money) < TRADER_MIN_MONEY) 	
 				{
 					rCharacter.money = TRADER_MIN_MONEY + rand(TRADER_NORM);
+					if(ShipBonus2Artefact(pchar, SHIP_LADYBETH))
+					{
+						rCharacter.money = sti(rCharacter.money) * 2;
+					}
+				}
+				if(CheckAttribute(rCharacter, "City") && rCharacter.City == GetLadyBethCity())
+				{
+					rCharacter.money = sti(rCharacter.money) * 2;
 				}
 				if(rCharacter.Merchant.type == "GasparGold") 
 				{

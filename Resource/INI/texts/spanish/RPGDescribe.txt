@@ -26,8 +26,8 @@ Las destrezas "Precisión" y "Sigilo" requieren de esta característica.
 Agility
 {
 (Reacción) La coordinación y agilidad. 
-Los que carezcan de esta habilidad no podrán sacar la espada lo suficientemente rápido. 
-Esta característica es necesaria para las destrezas "Armas ligeras", "Armas medias", "Armas de fuego" y "Abordaje". 
+Los que carezcan de esta destreza no podrán sacar la espada lo suficientemente rápido. 
+Esta característica es necesaria para la destreza de "Armas ligeras", "Armas medias", "Armas de fuego" y "Abordaje". 
 ~
 Determina la cantidad máxima de "Energía".
 }
@@ -46,7 +46,7 @@ Intellect
 Una persona talentosa necesita menos tiempo para recargar los cañones y no tendrá ningún problema para contratar más hombres a un menor precio. Podrás usar las herramientas de navegación de forma más sencilla.
 ~
 Las destrezas "Comercio", "Cañones" y "Navegación" requieren de esta característica. 
-Lo más importante es que determina la rapidez con la que ganas "Rango" y "Habilidades".
+Lo más importante es que determina la rapidez con la que ganas "Rango" y desbloqueas puntos de "Ventajas".
 }
 
 Endurance
@@ -70,19 +70,19 @@ Crit
 Probabilidad básica de infligir un golpe/disparo crítico al enemigo.
 ~
 Los indicadores están influidos por:
-Suerte, habilidades personales y equipo - golpe crítico
+Suerte, destrezas personales y equipo - golpe crítico
 Suerte, Intuición y arma de fuego especial - disparo crítico
 ~
-No se ajustan a las habilidades y equipamiento del enemigo.
+No se ajustan a la destreza y equipamiento del enemigo.
 }
 
 CharDefence
 {
 Indicadores básicos de protección contra armas blancas, armas de fuego y golpes críticos.
 ~
-El rendimiento se ve afectado por las habilidades personales y el equipamiento.
+El rendimiento se ve afectado por las destrezass personales y el equipamiento.
 ~
-No se ajustan a las habilidades y equipamiento del enemigo.
+No se ajustan a las destrezas y equipamiento del enemigo.
 }
 
 FencingL
@@ -124,13 +124,13 @@ Depende de: "Autoridad" y "Talento" (A*0,9+T*0,1)
 
 Commerce
 {
-Una habilidad para obtener beneficios vendiendo hoy lo que se compró más barato ayer. A un hombre de negocios siempre le vendrá bien conocer las rutas comerciales rentables, hacer buen uso del espacio en la bodega y realizar cálculos precisos. 
+Una destreza para obtener beneficios vendiendo hoy lo que se compró más barato ayer. A un hombre de negocios siempre le vendrá bien conocer las rutas comerciales rentables, hacer buen uso del espacio en la bodega y realizar cálculos precisos. 
 Depende de: "Talento" y "Autoridad" (T*0,8+A*0,2)
 }
 
 Accuracy
 {
-La precisión. Una de las habilidades más importantes para quienes navegan en alta mar. Un capitán decente no malgastará pólvora y balas de cañón solo para asustar a los peces. ¡Cada salva debe dar en el blanco! Y cuando el viento salado dispersa el humo sobre el puente del capitán, ¡no deben quedar barcos enemigos en el horizonte! 
+La precisión. Una de las destrezas más importantes para quienes navegan en alta mar. Un capitán decente no malgastará pólvora y balas de cañón solo para asustar a los peces. ¡Cada salva debe dar en el blanco! Y cuando el viento salado dispersa el humo sobre el puente del capitán, ¡no deben quedar barcos enemigos en el horizonte! 
 Depende de: "Intuición" y "Suerte". (I*0,8+S*0,2)
 }
 
@@ -175,7 +175,7 @@ Depende de: "Aguante" y "Autoridad". (E*0,5+A*0,5)
 
 Sneak
 {
-Sigilo: Es una habilidad totalmente necesaria si quieres pasar al lado de un fuerte enemigo sin ser visto, ocultarte de tus perseguidores en alta mar o atacar como un relámpago a un enemigo que no te ha visto. 
+Sigilo: Es una destreza totalmente necesaria si quieres pasar al lado de un fuerte enemigo sin ser visto, ocultarte de tus perseguidores en alta mar o atacar como un relámpago a un enemigo que no te ha visto. 
 Depende de: "Suerte" e "Intuición". (S*0,5+I*0,5)
 }
 
@@ -221,7 +221,7 @@ Las habilidades amplían las capacidades de tu personaje.
 Ship_abilities
 {
 Habilidades que afectan a la eficacia del control de la nave.
-Pueden ser adquiridas por el protagonista si los oficiales se asignan a los puestos del barco que mejor se ajusten a sus destrezas.
+Pueden ser adquiridas por el protagonista si los oficiales se asignan a los puestos del barco que mejor se ajusten a sus habilidades.
 }
 
 Abilities_available
@@ -236,7 +236,7 @@ El número muestra el número de habilidades que tiene el personaje.
 
 Rank
 {
-Rango: Es el nivel de desarrollo del personaje en el juego. A medida que aumentan las destrezas, también lo hace el rango. Al subir el rango también aumenta la vida del personaje, dependiendo del "Aguante". 
+Rango: Es el nivel de desarrollo del personaje en el juego. A medida que aumentan la destreza, también lo hace el rango. Al subir el rango también aumenta la vida del personaje, dependiendo del "Aguante". 
 ~
 Cuando el personaje suba de rango, atraerá a enemigos más fuertes y conseguirá objetos más sofisticados.
 }
@@ -251,7 +251,7 @@ A medida que aumenta el rango del héroe, también aumenta su Vida, en función 
 Health
 {
 Salud: Es la condición física general del héroe. Cuanto peor sea la salud, más mermadas se verán tus capacidades. La salud empeora cada vez que te hieren o al consumir pociones con demasiada frecuencia. Se recupera si evitas los combates.
-Si cae por debajo de excelente, el personaje recibe penalizaciones en las destrezas y características "PIRATAS".																																																																								   
+Si cae por debajo de excelente, el personaje recibe penalizaciones en la destrezas de "PIRATAS".																																																																								   
 ~
 La salud se recupera por sí sola, con bastante lentitud, especialmente al navegar. Los placeres amorosos restauran la salud más rápidamente. Dormir en una taberna ayuda un poco menos. La habilidad 'Salud excelente' duplica la recuperación de salud. 
 ~
@@ -282,7 +282,7 @@ El protagonista se distingue de todos los demás personajes por la autoridad, la
 
 Weight
 {
-Peso: Es el peso máximo que puede cargar el personaje antes de perder la movilidad y obtener penalizaciones a sus destrezas. 
+Peso: Es el peso máximo que puede cargar el personaje antes de perder movilidad y sufrir penalizaciones a su destreza. 
 Depende del "Poder" y el "Aguante", así como del nivel de dificultad del juego.
 ~ 
 Si vas sobrecargado te moverás a un ritmo extremadamente lento.																																
@@ -295,7 +295,7 @@ Título honorífico que indica los beneficios que el personaje aporta a la naci�
 
 NextExp
 {
-El umbral de experiencia muestra tu rango actual, la cantidad de destrezas que has acumulado y las que faltan para pasar de nivel.
+El umbral de experiencia muestra tu rango actual, la cantidad de destreza que has acumulado y las que faltan para pasar de nivel.
 ~
 Puedes ganar puntos de destreza con las acciones. Por ejemplo, cada vez que realices un disparo certero con la pistola, ganarás experiencia en la destreza "Armas de fuego". Cada nuevo nivel de destreza conseguido se acumula en el medidor de Rango y en el de Habilidades personales o de barco (dependiendo del tipo de destreza).
 ~
@@ -331,7 +331,7 @@ El botón "Ir a" para viajar rápidamente a un sitio no funciona en las ciudades
 
 Drunk_hint
 {
-El alcohol afecta las habilidades. Si estás borracho, no sentirás fatiga, pero tampoco podrás hacer trabajos delicados.
+El alcohol afecta la destreza. Si estás borracho, no sentirás fatiga, pero tampoco podrás hacer trabajos delicados.
 }
 
 England_descr
@@ -452,7 +452,7 @@ EXP_SLIDE {Incremento de la experiencia}
 
 EXP_SLIDE_desc
 {
-Aquí puedes cambiar la velocidad en la que el héroe y sus oficiales adquieren experiencia. Cuanto mayor sea la velocidad, más rápido acumularán puntos de destreza, adquiriendo nuevas habilidades y subiendo de nivel.
+Aquí puedes cambiar la velocidad en la que el héroe y sus oficiales adquieren experiencia. Cuanto mayor sea la velocidad, más rápido acumularán puntos de destreza, adquiriendo nuevas destrezas y subiendo de nivel.
 }
 
 Partition_hint

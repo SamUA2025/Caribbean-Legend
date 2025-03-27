@@ -103,6 +103,11 @@ Un symbole de la puissance et de l'ambition espagnole. Ses ponts brillent d'orne
 Renforce le pouvoir des sorts et des amulettes chrétiennes.
 }
 
+LadyBeth
+{
+Un magnifique exemple de construction navale anglaise, créé pour un service de patrouille indépendant dans des eaux dangereuses. Ce senau possède d'excellentes qualités de navigation et un armement impressionnant pour sa taille, lui permettant de rivaliser avec des navires de classes supérieures. Les années de son service militaire sont loin derrière elle, et la renommée de son ancien propriétaire attire désormais davantage les marchands d'antiquités et de cartes au trésor que les loups de mer.
+}
+
 Corvette
 {
 Les corvettes sont conçues pour des opérations indépendantes dans les eaux littorales, ainsi que pour des missions de reconnaissance et des services de courrier importants. Dotée d'une bonne vitesse et d'une bonne manoeuvrabilité, une corvette peut rattraper les navires plus légers et éviter avec succès les combats avec les navires plus lourds. Après le commandement d'un sloop, l'étape suivante la plus fréquente dans une carrière dans la marine est le commandement d'une corvette.

@@ -210,7 +210,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "mary_8":
-			dialog.text = "Il est pire qu’un vaurien ! Il… je n’ai même pas les mots pour décrire ce monstre ! Je me suis retournée et je suis partie, mais le matin suivant, je l’ai retrouvé et je lui ai dit tout ce que je pensais de lui. Oui, je lui ai dit que je ne veux rien avoir à faire avec son complot contre l’amiral, ouais, hein ?";
+			dialog.text = "Il est pire qu’un vaurien ! Il... je n’ai même pas les mots pour décrire ce monstre ! Je me suis retournée et je suis partie, mais le matin suivant, je l’ai retrouvé et je lui ai dit tout ce que je pensais de lui. Oui, je lui ai dit que je ne veux rien avoir à faire avec son complot contre l’amiral, ouais, hein ?";
 			link.l1 = "Et ça ne lui a évidemment pas plu... C'était fait sous le coup de la colère, Mary. Tu devrais être plus prudente.";
 			link.l1.go = "mary_9";
 		break;
@@ -1047,7 +1047,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "narval_11":
-			dialog.text = "C’est ce que je vais faire. Merci encore, gentleman ! "+pchar.name+"… Viens me voir ce soir, quand tu seras prêt… (gloussements)";
+			dialog.text = "C’est ce que je vais faire. Merci encore, gentleman ! "+pchar.name+"... Viens me voir ce soir, quand tu seras prêt... (gloussements)";
 			link.l1 = "Bien sûr, milady. Je te verrai ce soir.";
 			link.l1.go = "narval_12";
 		break;
@@ -1099,7 +1099,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "return_1":
-			dialog.text = "Ah, "+pchar.name+"… Tu n'imagines même pas ce que j'ai ressenti ! Les narvals parlaient de ta mort, ils disaient que tu t'étais noyé. Ils étaient tous sûrs que tu étais mort. Je continuais à leur dire que tu es vivant… Bien sûr, personne ne me croyait, ils pensaient que j'étais devenue folle après tout ce qui s'est passé.";
+			dialog.text = "Ah, "+pchar.name+"... Tu n'imagines même pas ce que j'ai ressenti ! Les narvals parlaient de ta mort, ils disaient que tu t'étais noyé. Ils étaient tous sûrs que tu étais mort. Je continuais à leur dire que tu es vivant... Bien sûr, personne ne me croyait, ils pensaient que j'étais devenue folle après tout ce qui s'est passé.";
 			link.l1 = "Mary... Ma chère ! Qu'est-ce qui ne va pas chez toi ? Tu trembles... Tu as froid ?";
 			link.l1.go = "return_2";
 		break;

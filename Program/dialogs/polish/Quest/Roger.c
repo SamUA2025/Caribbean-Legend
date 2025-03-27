@@ -1505,14 +1505,14 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Pelly_67":
-            dialog.text = "Cóż, myśl sobie. Ale pamiętaj—podczas gdy myślisz, liczba siniaków na twarzy i ciele Przystojniaka rośnie z każdą godziną, heh-heh-heh.";
+            dialog.text = "Cóż, myśl sobie. Ale pamiętaj-podczas gdy myślisz, liczba siniaków na twarzy i ciele Przystojniaka rośnie z każdą godziną, heh-heh-heh.";
 			link.l1 = "Dostanę ci te dublony...";
 			link.l1.go = "exit";
 			NextDiag.TempNode = "Pelly_67_2";
 		break;
 		
 		case "Pelly_67_1":
-            dialog.text = "Nie chodzi o wielkość ładunku—chodzi o czas i ryzyko. Ale rób, jak uważasz.";
+            dialog.text = "Nie chodzi o wielkość ładunku-chodzi o czas i ryzyko. Ale rób, jak uważasz.";
 			link.l1 = "Zaufaj mi, wiem. Przygotuj tylko skrzynię - dalej zajmę się tym sam.";
 			link.l1.go = "Pelly_10";
 		break;
@@ -5782,7 +5782,7 @@ void ProcessDialogEvent()
 		// <-- legendary edition
 		
 		case "enrico_Tonzag_1":
-			dialog.text = "Masz rację, drzwi są solidne, nawet jeśli stare. Dzięki, że nie opuściłeś bramy — to by mnie opóźniło. Ale nie na długo.";
+			dialog.text = "Masz rację, drzwi są solidne, nawet jeśli stare. Dzięki, że nie opuściłeś bramy - to by mnie opóźniło. Ale nie na długo.";
 			link.l1 = "Hercule Tonzag, Łysy Gaston! Powinienem był się domyślić, że ktoś taki jak ty stanie po stronie Księcia i jego całej zgrai. Szczęście dla mnie, że spotykam cię tu również.";
 			link.l1.go = "enrico_Tonzag_2";
 			sld = CharacterFromID("Zorro");
@@ -6427,7 +6427,7 @@ void ProcessDialogEvent()
 		
 		case "Nemezida_Knippel_9":
             dialog.text = "To nic poważnego, Kapitanie, tylko wyczerpanie. Wejście za tobą zawaliło się niemal natychmiast, a my odpieraliśmy tych ludzi przez wieki. W końcu zostałem sam, ranny. Więc dotarłem tutaj, aby oczyścić drogę i uzyskać pierwszą pomoc.";
-			link.l1 = "Rozumiem. Cóż, zrobiłeś dziś swoje. Jeśli chodzi o mnie... zawiodłem. Wszyscy byliśmy oszukani i nastawieni przeciwko sobie dla czyjejś rozrywki—nie było nawet żadnego skarbu. I nie byłem jedynym głupcem tam.";
+			link.l1 = "Rozumiem. Cóż, zrobiłeś dziś swoje. Jeśli chodzi o mnie... zawiodłem. Wszyscy byliśmy oszukani i nastawieni przeciwko sobie dla czyjejś rozrywki-nie było nawet żadnego skarbu. I nie byłem jedynym głupcem tam.";
 			link.l1.go = "Nemezida_Knippel_10";
 		break;
 		
@@ -6444,7 +6444,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Nemezida_Knippel_12":
-            dialog.text = "Tak zrobiłem. Hiszpanie, Holendrzy—wielu innych też. Jak mi kiedyś powiedział Dick, nasza służba jest niebezpieczna i wymagająca. Ale dlaczego pytasz? Jaki masz cel?";
+            dialog.text = "Tak zrobiłem. Hiszpanie, Holendrzy-wielu innych też. Jak mi kiedyś powiedział Dick, nasza służba jest niebezpieczna i wymagająca. Ale dlaczego pytasz? Jaki masz cel?";
 			link.l1 = "Wyjaśnię. Ale najpierw, kolejne pytanie. Czy kiedykolwiek wątpiłeś w to, co robiłeś i dlaczego to robiłeś, Charlie?";
 			link.l1.go = "Nemezida_Knippel_13";
 		break;

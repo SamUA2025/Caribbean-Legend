@@ -629,6 +629,50 @@ itmdescr_m8_barrel
 Schaft und Lauf eines zerlegten vierschüssigen Gewehrs.
 }
 
+itmname_mushket9 {Alte Arkebuse}
+itmdescr_mushket9
+{
+Eine alte, aber zuverlässige Arkebuse. Wenn man den Geschichten glauben darf, hat Cortés selbst mit ihr den Dschungel mit Schrot überschüttet und den Einheimischen Angst und Schrecken eingejagt.
+}
+
+UpgradeStageInfo_mushket9_1 
+{
+Im Moment sieht sie ziemlich schlecht aus, aber mit fachkundiger Pflege und gutem Werkzeug kann sie verwandelt werden.
+}
+
+UpgradeStageInfo_mushket9_2 
+{
+Nach dem Austausch des Schafts und einer gründlichen Reinigung sieht sie nicht mehr wie ein rostiges Eisenstück aus. Mit einer solchen Waffe auf dem Rücken muss man sich jetzt nicht mehr schämen, durch die Straße zu gehen.
+}
+
+UpgradeStageInfo_mushket9_3 
+{
+Mit dem ausgetauschten Schloss beginnt sie, einer modernen Waffe zu ähneln. Das mit Knochenöl geschmierte Metall glänzt in der Sonne, als wäre die Waffe gerade aus den Händen des Meisters genommen worden.
+}
+
+UpgradeStageInfo_mushket9_4 
+{
+In Ihren Händen hat diese Waffe ihren Höhepunkt erreicht - es gibt einfach keinen Weg, sie weiter zu entwickeln. Der letzte Schliff - ein erweiterter Lauf - hat das Laden vereinfacht und beschleunigt und die Effizienz um ein Vielfaches erhöht. Sie können stolz auf sich sein.
+}
+
+itmname_FirearmStockPart_1 {Schaft und Ladestock}
+itmdescr_FirearmStockPart_1
+{
+Ein schön geschnitzter Schaft für altmodische Gewehre und ein Bürsten-Ladestock zur Reinigung des Laufs. Sie waren in ein Leinentuch gewickelt und sorgfältig in einer Ecke weit weg von den anderen Inhalten des Schatzes platziert, als ob sie deutlich später dorthin gelegt worden wären.
+}
+
+itmname_FirearmStockPart_2 {Schloss und Knochenöl}
+itmdescr_FirearmStockPart_2
+{
+Ein modernes Federschloss, Lappen und ein Fläschchen Knochenöl zur Waffenpflege, die verdächtig gut zur bei Blackwood gefundenen Arkebuse passen. Sie lagen ebenfalls getrennt von den anderen Wertsachen im Schatz.
+}
+
+itmname_FirearmStockPart_3 {Lauf und Pulverhorn}
+itmdescr_FirearmStockPart_3
+{
+Dieses Set von Gegenständen wird das Laden jeder langläufigen Waffe erheblich beschleunigen, aber aus irgendeinem Grund haben Sie das Gefühl, dass sie am besten mit genau dieser Arkebuse verwendet werden sollten. Sie waren in ein kleines Papierbündel verpackt, offensichtlich zum Schutz vor Feuchtigkeit, im Gegensatz zu allen anderen Gegenständen im Schatz.
+}
+
 itmname_grape_mushket {Handmörser}
 itmdescr_grape_mushket
 {
@@ -1131,7 +1175,9 @@ Kann unbegrenzt benutzt werden.
 itmname_talisman17	{'Liber Misericordiae'}
 itmdescr_talisman17
 {
-Ein Band der Heiligen Schrift, der für seinen Besitzer einst eine sehr persönliche Bedeutung hatte, ähnlich wie ein geliebtes Tagebuch. Während viele die Bibel als Leuchtfeuer und Wegweiser bei sich tragen, dient dieser Wälzer als buchstäblicher Ehrenkodex. Sie beschützt das Leben der Seeleute und des Kapitäns auf ihren weiten Reisen und bietet besonders starken Schutz an Bord der 'Holy Mercy'.
+Ein Exemplar der Heiligen Schrift, das für seinen Besitzer sehr persönlich war, fast wie ein Tagebuch. Viele tragen die Bibel als Licht und Orientierung, aber dieses Buch ist ein wörtlicher Ehrenkodex. 
+Reduziert den Schaden für die Crew und den Kapitän um 5%, und an Bord der Heiligen Barmherzigkeit erhöht es die Verteidigungsfähigkeit um 10. 
+Um das Potenzial dieses Amuletts freizuschalten, muss man den Weg des Gerechten gehen.
 ~
 Besitzt keine Nachteile.
 Kann unbegrenzt benutzt werden.
@@ -1141,6 +1187,16 @@ talisman17_quests{Aufträge der Kirche: #dQBonus# / 5}
 
 talisman17_questsNoBonus{Aufträge der Kirche: 0 / 5}
 
+itmname_talisman18	{Amulett 'Blackwoods Charta'}
+itmdescr_talisman18
+{
+Der persönliche Statut von Albert Blackwood. Er beschreibt im Detail die Funktionsweise der Lady Bet, die Positionierung der Schützen und die Taktiken der Seekatzen. Ein separater Abschnitt widmet sich der Schatzsuche und dem Belohnen geübter Schützen mit den gefundenen Reichtümern. 
+Jeder gefundene Schatz verstärkt die Feuerkraft des Musketenfeuerstoßes der Besatzung und erhöht den Schaden der Schrotflinten.
+}
+
+talisman18_Bonus{Gefundene Schätze : #dQBonus# / 10}
+
+talisman18_NoBonus{Gefundene Schätze : 0 / 10}
 ; ==================================================================================================================== ТАЛИСМАНЫ
 
 itmname_totem_01 {Talisman 'Blechkehle'}
@@ -3762,8 +3818,8 @@ itmdescr_alexs_chest
 Metallkiste von Meister Alexus, sicher verschlossen.
 }
 
-itmname_treasure_note_1	{Schatznotiz}
-itmdescr_treasure_note_1
+itmname_treasure_note {Schatznotiz}
+itmdescr_treasure_note
 {
 Diese Notiz wurde in einem Schatz gefunden. Höchstwahrscheinlich ist ihr Verfasser bereits vor langer Zeit aus dieser irdischen Welt geschieden. Ihr Inhalt sollte sorgfältig in einem speziellen Abschnitt des Schiffslogs abgeschrieben werden.
 }
@@ -3887,6 +3943,20 @@ itmdescr_key_candlestick_Villemstad
 {
 Ein massiver, antiker Ring mit einem Rubin. Offenbar soll er mir als Schlüssel dienen.
 }
+
+itmname_LadyBeth_Book	{Blackwoods Tagebuch}
+itmdescr_LadyBeth_Book
+{
+Gedanken eines elenden Mannes.
+}
+
+itmname_LadyBeth_Map	{Blackwoods Karte}
+itmdescr_LadyBeth_Map
+{
+Der Weg zum wertvollsten Schatz des größten Schatzsuchers.
+}
+
+
 
 ;====================================== предметы для пиратской линейки ===============================
 

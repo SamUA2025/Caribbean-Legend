@@ -1891,7 +1891,7 @@ void ProcessDialogEvent()
 		break;
 		// <-- legendary edition
 		case "mtraxx_97":
-            dialog.text = "Príncipe, ¿dónde demonios has estado? ¡Siéntate! ¿Ya? Bien hecho. ¡Comencemos!\n¡Mis valientes corsarios, esta noche el mejor ron y las mejores mujeres son todas vuestras! ¡El oro de Cartagena nos espera, y juro, amigos míos, que lo conseguiréis! ¡Así que brindemos por nuestro éxito mutuo! ¡Hasta el fondo!";
+            dialog.text = "Príncipe, ¡por fin! Mira, chicos - le hemos preparado un regalo, y él anda por ahí, ¿quién sabe dónde! ¡Siéntate, empezamos!\nAsí que, valientes corsarios! ¡El oro de Cartagena nos espera, ja-ja! Y lo conseguiremos, lo juro por el trueno! Pero aquellos que trabajan bien también deben descansar bien. ¡Por eso hoy pasaremos un tiempo maravilloso en este magnífico establecimiento! ¡Sirve un poco de ron, cuanto más, mejor! ¡Llenen sus jarras hasta el borde! ¡Por el viento del tesoro, por el viento de la suerte! ¡Brindamos hasta el fondo!\nPara ustedes, la mejor bebida de los sótanos de nuestra taberna, y las damas más hermosas de la isla, ja-ja-ja!\nY para ti, Charles, de nuestra parte - un espléndido sombrero. ¡Póntelo y no discutas!\n¡Corsarios, canten nuestra canción! ¡Nuestra favorita!..";
 			link.l1 = "";
 			link.l1.go = "mtraxx_98";
 		break;
@@ -1900,6 +1900,8 @@ void ProcessDialogEvent()
             DialogExit();
 			npchar.dialog.currentnode = "mtraxx_wait";
 			LAi_SetSitType(npchar);
+			GiveItem2Character(PChar, "hat8");
+			EquipCharacterByItem(PChar, "hat8");
 			DoQuestCheckDelay("Mtraxx_CartahenaTavernSong", 1.0);
 		break;
 		

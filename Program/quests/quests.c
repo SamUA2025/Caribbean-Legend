@@ -2406,7 +2406,7 @@ bool bQuestConditionInLoc(string loc_id)
         quest = GetAttributeN(quests, i);
         if (CheckAttribute(quest, "over")) continue;
 		
-		if(DailySkipQuest(quest)) continue;
+		if(DailySkipQuest(GetAttributeName(quest))) continue;
 		
         // допущение: проверяем только ветку Л1, тк сложные квесты (не л1) на локацию редкость, а тормоза не нужны.
 		if (CheckAttribute(quest, "win_condition.l1") && quest.win_condition.l1 == "Location" && quest.win_condition.l1.Location == loc_id)
@@ -2433,12 +2433,12 @@ bool bQuestConditionInLoc(string loc_id)
 
 bool DailySkipQuest(string sQuest) // ежедневные квесты исключения
 {
-	if(GetAttributeName(sQuest) == "hwic_officer") return true;
-	if(GetAttributeName(sQuest) == "caleuche_support1") return true;
-	if(GetAttributeName(sQuest) == "mtraxx_mirabella_life") return true;
-	if(GetAttributeName(sQuest) == "saga_jessfire3") return true;
-	if(GetAttributeName(sQuest) == "ksochitam_adversary5_1") return true;
-	//if(GetAttributeName(sQuest) == "ksochitam_adversary5_1") return true;
+	if(sQuest == "hwic_officer") return true;
+	if(sQuest == "caleuche_support1") return true;
+	if(sQuest == "mtraxx_mirabella_life") return true;
+	if(sQuest == "saga_jessfire3") return true;
+	if(sQuest == "ksochitam_adversary5_1") return true;
+	//if(sQuest == "ksochitam_adversary5_1") return true;
 	
 	return false;
 }

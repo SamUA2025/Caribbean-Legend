@@ -46,7 +46,7 @@ void Tutorial_WorldMap(string qName)
 
 void Tutorial_WorldMap2(string qName)
 {
-	LaunchTutorial("WorldMap" + LanguageGetLanguage(), 1);
+	LaunchTutorial("WorldMap", 1);
 }
 
 void Tutorial_Navigator(string qName)
@@ -81,7 +81,7 @@ void Tutorial_Navigator2(string qName)
 			SetFunctionTimerCondition("DelNavigatorNoShow", 0, 0, 180, false);
 		}
 	}
-	LaunchTutorial("Navigator" + LanguageGetLanguage(), 1);
+	LaunchTutorial("Navigator", 1);
 	if(GetCharacterShipClass(pchar) < 5) 
 	{
 		DeleteAttribute(pchar,"systeminfo.tutorial.navigator");
@@ -107,7 +107,7 @@ void DelNavigatorNoShow(string qName)
 
 void Tutorial_Alchemy(string qName)
 {
-	LaunchTutorial("Alchemy" + LanguageGetLanguage(), 1);
+	LaunchTutorial("Alchemy", 1);
 }
 
 void Tutorial_Salary(string qName)
@@ -116,7 +116,7 @@ void Tutorial_Salary(string qName)
 	{
 		DeleteAttribute(Pchar, "quest.Tutorial_Salary.again");
 		pchar.quest.Tutorial_Salary.over = "yes";//снять таймер
-		LaunchTutorial("Salary" + LanguageGetLanguage(), 1);
+		LaunchTutorial("Salary", 1);
 	}
 	else
 	{
@@ -140,7 +140,7 @@ void Tutorial_Dubloons2(string qName)
 {
 	if (!dialogRun && !bQuestCheckProcessFreeze && pchar.chr_ai.type == "player")
 	{
-		LaunchTutorial("Dubloons" + LanguageGetLanguage(), 1);
+		LaunchTutorial("Dubloons", 1);
 	}
 	else
 	{
@@ -155,7 +155,7 @@ void Tutorial_Box(string qName)
 
 void Tutorial_Box2(string qName)
 {
-	LaunchTutorial("Box" + LanguageGetLanguage(), 1);
+	LaunchTutorial("Box", 1);
 }
 
 void Tutorial_Amulet(string qName)
@@ -175,7 +175,7 @@ void Tutorial_Amulet2(string qName)
 	if (!dialogRun && !bQuestCheckProcessFreeze && pchar.chr_ai.type == "player")
 	{
 		DeleteAttribute(pchar,"systeminfo.tutorial.Amulet");
-		LaunchTutorial("Amulet" + LanguageGetLanguage(), 1);
+		LaunchTutorial("Amulet", 1);
 	}
 	else
 	{
@@ -199,7 +199,7 @@ void Tutorial_Perk2(string qName)
 {
 	if (!dialogRun && !bQuestCheckProcessFreeze && pchar.chr_ai.type == "player")
 	{
-		LaunchTutorial("Perk" + LanguageGetLanguage(), 1);
+		LaunchTutorial("Perk", 1);
 	}
 	else
 	{
@@ -214,7 +214,7 @@ void Tutorial_Rest_Delay(string qName)
 
 void Tutorial_Rest(string qName)
 {
-	LaunchTutorial("Rest" + LanguageGetLanguage(), 1);
+	LaunchTutorial("Rest", 1);
 }
 
 void Tutorial_Mushket(string qName)
@@ -233,7 +233,7 @@ void Tutorial_Mushket2(string qName)
 {
 	if (!dialogRun && !bQuestCheckProcessFreeze && pchar.chr_ai.type == "player")
 	{
-		LaunchTutorial("Mushket" + LanguageGetLanguage(), 1);
+		LaunchTutorial("Mushket", 1);
 	}
 	else
 	{
@@ -248,7 +248,7 @@ void Tutorial_Stealth(string qName)
 
 void Tutorial_Stealth2(string qName)
 {
-	LaunchTutorial("Stealth" + LanguageGetLanguage(), 1);
+	LaunchTutorial("Stealth", 1);
 }
 
 void Tutorial_BoardingTactics(string qName)

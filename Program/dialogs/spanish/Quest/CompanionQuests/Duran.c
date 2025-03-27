@@ -32,7 +32,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "SKD_DomAnri_2":
-			dialog.text = "Así que así es… ¡Alicia! Déjanos, por favor. Estos caballeros tienen asuntos conmigo.";
+			dialog.text = "Así que así es... ¡Alicia! Déjanos, por favor. Estos caballeros tienen asuntos conmigo.";
 			link.l1 = "";
 			link.l1.go = "SKD_DomAnri_2_1";
 			CharacterTurnToLoc(npchar, "goto", "goto1");

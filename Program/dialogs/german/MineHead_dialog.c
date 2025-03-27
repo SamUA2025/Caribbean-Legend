@@ -18,7 +18,7 @@ void ProcessDialogEvent()
 		case "First time":
 			if (LAi_grp_playeralarm > 0)
 			{
-       			dialog.text = NPCharRepPhrase(pchar,LinkRandPhrase("Du wagst es, dein Gesicht hier zu zeigen?! Weiß nicht, ob du mutig oder dumm bist...","Wie konnten diese Faulenzer einen Feind in meine Residenz eindringen lassen? Das ist mir unverständlich...","Sicherlich, meine Wachen sind keinen Kupfer wert, wenn solche Bastarde hier herumlaufen..."),LinkRandPhrase("Was brauchst du,"+GetSexPhrase("Schurke","Stinker")+"?! Meine Soldaten sind bereits auf deiner Spur, "+GetSexPhrase(", dreckiger Pirat","")+"!","Dreckiger Mörder, verlasse sofort meine Residenz! Wachen!","Ich habe keine Angst vor dir, "+GetSexPhrase("Ratte","Schlampe")+"! Bald wirst du in unserem Fort gehängt werden und danach wirst du nicht weit kommen..."));
+       			dialog.text = NPCharRepPhrase(pchar,LinkRandPhrase("Du wagst es, dein Gesicht hier zu zeigen?! Weiß nicht, ob du mutig oder dumm bist...","Wie konnten diese Faulenzer einen Feind in meine Residenz eindringen lassen? Das ist mir unverständlich...","Meine Wachen sind tatsächlich keinen Kupfer wert, wenn solche Bastarde hier herumlaufen..."),LinkRandPhrase("Was brauchst du, "+GetSexPhrase("du Schurke","du Miststück")+"?! Meine Soldaten sind bereits auf deiner Spur "+GetSexPhrase(",dreckiger Pirat","")+"!","Dreckiger Mörder, verlasse sofort meine Residenz! Wachen!","Ich habe keine Angst vor dir, du "+GetSexPhrase("Ratte","Schlampe")+"! Bald wirst du in unserem Fort gehängt werden und danach wirst du nicht weit kommen..."));
 				link.l1 = NPCharRepPhrase(pchar,RandPhraseSimple("Diese Soldaten sind keinen einzigen Peso wert...","Sie werden mich nie kriegen."),RandPhraseSimple("Halt dein Maul, "+GetWorkTypeOfMan(npchar,"")+", oder ich reiß dir die verdammte Zunge raus!","Ich würde dir vorschlagen, still zu sitzen, und vielleicht kommst du lebend davon..."));
 				link.l1.go = "fight";
 				break;
@@ -30,7 +30,7 @@ void ProcessDialogEvent()
 				link.l1.go = "fight"; 
 				break;
 			}	
-			dialog.text = LinkRandPhrase(""+TimeGreeting()+", senor. Ich bin "+GetFullName(npchar)+", der Bergbauingenieur der Los-Teques-Mine. Was brauchst du hier?","Hallo, Senor. Was wollten Sie?","Hmm... wollten Sie etwas von mir, Senor? Ich höre zu.");
+			dialog.text = LinkRandPhrase(""+TimeGreeting()+", Señor. Ich bin "+GetFullName(npchar)+", der Bergbauingenieur der Los-Teques-Mine. Was brauchst du hier?","Hallo, Señor. Was wollen Sie?","Hmm... wollten Sie etwas von mir, Señor? Ich höre zu.");
 			if (!CheckAttribute(location, "quest.info"))
 			{
 				link.l9 = "Ich bin neu hier und möchte mehr über diese Mine erfahren...";
@@ -57,7 +57,7 @@ void ProcessDialogEvent()
 		// генератор купли-продажи рабов
 		case "slaves_0":
 			location.quest.slaves.qty = 200; // стартовая потребность
-			dialog.text = "Natürlich, senor! Wie viele haben Sie?";
+			dialog.text = "Natürlich, Señor! Wie viele haben Sie?";
 			link.l1 = "Ich habe "+FindRussianQtyString(GetSquadronGoods(pchar,GOOD_SLAVES))+".";
 			link.l1.go = "slaves_1";
 		break;
@@ -67,8 +67,8 @@ void ProcessDialogEvent()
 			if (sti(location.quest.slaves.qty) > 350) location.quest.slaves.qty = 350; // максимум потребности
 			if (sti(location.quest.slaves.qty) < 5)
 			{
-				dialog.text = "Herr, leider haben wir im Moment keinen Bedarf an mehr Sklaven. Aber die Situation kann sich jederzeit ändern, also schauen Sie in ein paar Wochen oder zu einem anderen Zeitpunkt wieder vorbei.";
-				link.l1 = "In Ordnung, Senor, ich verstehe. Sie brauchen sie jetzt nicht, aber vielleicht brauchen Sie sie in einiger Zeit.";
+				dialog.text = "Señor, leider haben wir im Moment keinen Bedarf an mehr Sklaven. Aber die Situation kann sich jederzeit ändern, also schauen Sie in ein paar Wochen oder zu einem anderen Zeitpunkt wieder vorbei.";
+				link.l1 = "In Ordnung, Señor, ich verstehe. Sie brauchen sie jetzt nicht, aber vielleicht brauchen Sie sie in einiger Zeit.";
 				link.l1.go = "exit";
 			}
 			else
@@ -109,14 +109,14 @@ void ProcessDialogEvent()
 			iTotalTemp = sti(dialogEditStrings[6]);
 			if (iTotalTemp < 1)
 			{
-				dialog.text = "Herr, ich habe keine Zeit für dumme Witze. Wenn du zum Scherzen aufgelegt bist, geh in die Taverne!";
+				dialog.text = "Señor, ich habe keine Zeit für dumme Witze. Wenn du zum Scherzen aufgelegt bist, geh in die Taverne!";
 				link.l1 = "Hmm...";
 				link.l1.go = "slaves_exit";
 				break;
 			}
 			if (iTotalTemp > GetSquadronGoods(pchar, GOOD_SLAVES))
 			{
-				dialog.text = "Herr, ich glaube, Sie müssen sich ausruhen. Vielleicht sind Sie sehr müde oder haben einen Hitzschlag bekommen. Gehen Sie in die Taverne, ruhen Sie sich gut aus, und dann können wir unsere Verhandlungen fortsetzen.";
+				dialog.text = "Señor, ich glaube, Sie müssen sich ausruhen. Vielleicht sind Sie sehr müde oder haben einen Hitzschlag bekommen. Gehen Sie in die Taverne, ruhen Sie sich gut aus, und dann können wir unsere Verhandlungen fortsetzen.";
 				link.l1 = "Hmm...";
 				link.l1.go = "slaves_exit";
 				break;
@@ -126,25 +126,25 @@ void ProcessDialogEvent()
 				dialog.text = "Leider, Señor, benötigen wir im Moment nicht so viele Sklaven. Die Mine benötigt derzeit "+FindRussianQtyString(sti(location.quest.slaves.qty))+". Wirst du so viele verkaufen?";
 				link.l1 = "Ja, natürlich!";
 				link.l1.go = "slaves_max";
-				link.l2 = "Hmm... Ich denke, ich bin es nicht.";
+				link.l2 = "Hmm... Ich denke, erst einmal nicht.";
 				link.l2.go = "slaves_exit";
 				break;
 			}
 			dialog.text = ""+FindRussianQtyString(iTotalTemp)+"? Ausgezeichnet. Bitte befehlen Sie, sie zum Stadttor zu bringen. Ich schicke meine Männer, um sie abzuholen.";
-			link.l1 = "Machen Sie sich keine Sorgen, Senor. Ihre Sklaven werden Ihnen rechtzeitig geliefert. Ich werde sofort alle relevanten Befehle erteilen.";
+			link.l1 = "Machen Sie sich keine Sorgen, Señor. Ihre Sklaven werden Ihnen rechtzeitig geliefert. Ich werde sofort alle relevanten Befehle erteilen.";
 			link.l1.go = "slaves_calk";
 		break;
 		
 		case "slaves_max":
 			iTotalTemp = sti(location.quest.slaves.qty);
 			dialog.text = "Ausgezeichnet. Bitte befehlen Sie, sie zum Stadttor zu bringen. Ich werde meine Männer für sie schicken.";
-			link.l1 = "Machen Sie sich keine Sorgen, senor. Ihre Sklaven werden Ihnen rechtzeitig geliefert. Ich werde sofort alle relevanten Befehle erteilen.";
+			link.l1 = "Machen Sie sich keine Sorgen, Señor. Ihre Sklaven werden Ihnen rechtzeitig geliefert. Ich werde sofort alle relevanten Befehle erteilen.";
 			link.l1.go = "slaves_calk";
 		break;
 		
 		case "slaves_calk":
 			DialogExit();
-			Log_Info("Exchange of slaves for ingots has been completed");
+			Log_Info("Der Austausch von Sklaven gegen Barren ist abgeschlossen");
 			PlaySound("interface\important_item.wav");
 			LAi_Fade("", "");
 			WaitDate("",0,0,0,5,10);

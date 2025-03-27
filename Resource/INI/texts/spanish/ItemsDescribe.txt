@@ -388,7 +388,7 @@ itmname_blade_38 {Espada de duelo}
 itmdescr_blade_38
 {
 Exquisitamente elaborado para duelistas experimentados, aunque quizá fuera de lugar en ciertos entornos.
-(+5 to Light Weapons skill)
+(+5 a la habilidad Armas ligeras)
 }
 
 itmname_blade_39 {Estoque bretón}
@@ -542,7 +542,7 @@ Es un trabuco naval único que se puede disparar con un brazo. Utiliza flechas d
 itmname_pistol9 {Pistola de cargas superpuestas}
 itmdescr_pistol9
 {
-Es una pistola con un cañón sajón superpuesto, capaz de disparar dos balas sucesivamente. Es un arma muy rara que tarda mucho tiempo en recargar, pero que no requiere habilidades especiales.
+Es una pistola con un cañón sajón superpuesto, capaz de disparar dos balas sucesivamente. Es un arma muy rara que tarda mucho tiempo en recargar, pero que no requiere destreza especial.
 }
 
 itmname_pistol10 {Águila dorada}
@@ -630,6 +630,50 @@ itmname_m8_barrel {Culata y cañón}
 itmdescr_m8_barrel
 {
 La culata y el cañón de un rifle de cuatro cañones desmontado.
+}
+
+itmname_mushket9 {Vieja arcabuz}
+itmdescr_mushket9
+{
+Starożytna, ale niezawodna arkebuz. Jeśli wierzyć opowieściom, sam Kortez używał jej do zasypywania dżungli kartaczami, wzbudzając przerażenie wśród tubylców.
+}
+
+UpgradeStageInfo_mushket9_1 
+{
+Actualmente se ve bastante deteriorado, pero el cuidado adecuado y las buenas herramientas pueden transformarlo.
+}
+
+UpgradeStageInfo_mushket9_2 
+{
+Después de reemplazar la culata y una buena limpieza, ya no parece un trozo de hierro oxidado. Ahora no te avergonzaría caminar por la calle con semejante arma a la espalda.
+}
+
+UpgradeStageInfo_mushket9_3 
+{
+Con la llave reemplazada, ha comenzado a parecerse a un arma moderna. El metal, lubricado con aceite de hueso, brilla al sol como si el arma acabara de ser tomada de las manos del maestro.
+}
+
+UpgradeStageInfo_mushket9_4 
+{
+En tus manos, esta arma ha alcanzado su cúspide - simplemente no hay forma de desarrollarla más. El toque final - un cañón ampliado - ha simplificado y acelerado la carga, aumentando enormemente la eficiencia. Puedes estar orgulloso de ti mismo.
+}
+
+itmname_FirearmStockPart_1 {Culata y baqueta}
+itmdescr_FirearmStockPart_1
+{
+Una culata bellamente tallada para armas anticuadas y una baqueta-escobillón para limpiar el cañón. Estaban envueltos en un paño de lona y cuidadosamente colocados en una esquina alejada del resto del contenido del tesoro, como si hubieran sido puestos allí notablemente más tarde.
+}
+
+itmname_FirearmStockPart_2 {Llave y aceite de hueso}
+itmdescr_FirearmStockPart_2
+{
+Una llave de resorte moderna, trapos y un vial de aceite de hueso para el mantenimiento de armas, sospechosamente adecuados para el arcabuz encontrado en la propiedad de Blackwood. Fueron colocados de manera similar en el tesoro, separados del resto de objetos de valor.
+}
+
+itmname_FirearmStockPart_3 {Cañón y polvorín}
+itmdescr_FirearmStockPart_3
+{
+Este conjunto de objetos acelerará enormemente la carga de cualquier arma de cañón largo, pero por alguna razón sientes que es mejor usarlos con ese mismo arcabuz. Estaban empaquetados en un pequeño bulto de papel, obviamente para protegerlos de la humedad, a diferencia de todos los demás objetos del tesoro.
 }
 
 itmname_grape_mushket {Mortero de mano}
@@ -743,7 +787,7 @@ La armadura de un mercenario profesional y la mejor elección de un duelista. Ex
 Reduce todo el daño recibido en un 25%.
 70% de probabilidad de evitar un golpe crítico.
 Salva de ser aturdido en combate.
-(+5 a todas las habilidades con armas, +5% de probabilidad de golpe crítico)
+(+5 a todas las destrezas con armas, +5% de probabilidad de golpe crítico)
 }
 
 itmname_cirass10 {Peto Ironside}
@@ -828,7 +872,7 @@ Una pequeña linterna es un compañero indispensable en la oscuridad. Engánchal
 itmname_hat1 {Sombrero del condotiero}
 itmdescr_hat1
 {
-Siendo el tocado favorito de duelistas y esgrimistas, este sombrero motiva a perfeccionar constantemente las habilidades con armas blancas para lucir apropiado.
+Siendo el tocado favorito de duelistas y esgrimistas, este sombrero motiva a perfeccionar constantemente las destrezas con armas blancas para lucir apropiado.
 ~
 Aumenta la velocidad de obtención de experiencia con armas ligeras, medias y pesadas cuerpo a cuerpo en un 10%.
 }
@@ -854,7 +898,7 @@ itmdescr_hat4
 {
 Un tricornio popular entre los oficiales de barco. Al ver uno así, los marineros comunes comienzan a cumplir con sus deberes particularmente rápido. Si es por respeto o por miedo al castigo es una pregunta retórica.
 ~
-Aumenta la velocidad de obtención de experiencia en todas las Habilidades Navales en un 15%.
+Aumenta la velocidad de obtención de experiencia de todas las destrezas navales en un 15%.
 }
 
 itmname_hat5 {Sombrero de almirante}
@@ -862,7 +906,7 @@ itmdescr_hat5
 {
 Tal sombrero rara vez lo ve un marinero común incluso una vez en la vida; inspira y motiva a todos los que lo rodean. Estar en el mismo escuadrón que el dueño de este sombrero es un gran honor, y todos, desde el marinero hasta el oficial, están dispuestos a seguirlo hasta el infierno y de vuelta.
 ~
-Transfiere tus Habilidades Navales a todos los capitanes de tu flota. Reduce en un 15% el salario de la tripulación y de los oficiales en todos los barcos, excepto el buque insignia.
+Transfiere tu destreza naval a todos los capitanes de tu flota. Reduce en un 15% el salario de la tripulación y de los oficiales en todos los barcos, excepto el buque insignia.
 Acaba con la hostilidad de las naciones hacia los buques de guerra correspondientes y permite que los buques de guerra nacionales capturados entren en los puertos de sus antiguos propietarios.
 }
 
@@ -1071,7 +1115,7 @@ itmname_talisman11	{Figura de 'Dios pollo'}
 itmdescr_talisman11
 {
 Un sencillo talismán que se cree que trae buena fortuna.
-Aumenta en 2 todas las habilidades personales y navales.
+Aumenta en 2 todas las destrezas personales y navales.
 ~
 Sin penalizaciones ni límites de activación.
 }
@@ -1124,7 +1168,9 @@ Sin penalizaciones, sin límites de activación.
 itmname_talisman17	{Ward 'Liber Misericordiae'}
 itmdescr_talisman17
 {
-Un volumen de las Sagradas Escrituras, una vez profundamente personal para su propietario, similar a un preciado diario. Mientras que muchos llevan la Biblia como faro y guía, este tomo sirve como código literal de honor. Salvaguarda las vidas de los marineros y del capitán en sus lejanos viajes, ofreciendo una protección especialmente potente a bordo del "Holy Mercy".
+Un ejemplar de las Escrituras Sagradas, que fue muy personal para su dueño, casi como un diario. Muchos llevan la Biblia como un faro y una guía, pero este libro es un código de honor literal. 
+Reduce el daño a la tripulación y al capitán en un 5%, y a bordo de la Santa Misericordia, aumenta la habilidad de defensa en 10. 
+Para desbloquear el potencial de este amuleto, uno debe seguir el camino del justo.
 ~
 Sin penalizaciones, sin límites de activación.
 }
@@ -1132,6 +1178,19 @@ Sin penalizaciones, sin límites de activación.
 talisman17_quests{Church Quests: #dQBonus# / 5}
 
 talisman17_questsNoBonus{Church Quests: 0 / 5}
+
+itmname_talisman18	{Amuleto 'Carta de Blackwood'}
+itmdescr_talisman18
+{
+El estatuto personal de Albert Blackwood. Describe en detalle el funcionamiento de la Lady Bet, la disposición de los tiradores y la táctica de las Zorras Marinas. Una sección aparte está dedicada a la caza de tesoros y a recompensar a los tiradores hábiles con las riquezas recuperadas. 
+Cada tesoro encontrado aumenta el poder de la descarga de mosquetes de la tripulación y el daño de las escopetas.
+~
+Sin penalizaciones, sin límites de activación.
+}
+
+talisman18_Bonus{Tesoros Encontrados : #dQBonus# / 10}
+
+talisman18_NoBonus{Tesoros Encontrados : 0 / 10}
 
 ; ==================================================================================================================== ТАЛИСМАНЫ
 
@@ -2892,21 +2951,21 @@ itmname_mangarosapower	{Poción de Golpe de Marea}
 itmdescr_mangarosapower
 {
 Una poción de Mangarosa preparada según la receta de Amelie. 
-Aumenta temporalmente el poder y el aguante, así como las destrezas con las armas medias y pesadas.
+Aumenta temporalmente el poder y el aguante, así como la destreza con las armas medias y pesadas.
 }
 
 itmname_mangarosafast	{Poción de Squall}
 itmdescr_mangarosafast
 {
 Una poción de Mangarosa preparada según la receta de Amelie. 
-Aumenta temporalmente la reacción y la intuición, así como las destrezas con armas ligeras y de fuego.
+Aumenta temporalmente la reacción y la intuición, así como la destreza con armas ligeras y de fuego.
 }
 
 itmname_mangarosatotal	{Poción de Abrazo del Mar}
 itmdescr_mangarosatotal
 {
 Una poción de Mangarosa preparada de acuerdo a la receta de Amelie. 
-Aumenta temporalmente el poder, aguante, reacción, intuición, autoridad y suerte, así como las destrezas con todas las armas blancas y de fuego.
+Aumenta temporalmente el poder, aguante, reacción, intuición, autoridad y suerte, así como la destreza con todas las armas blancas y de fuego.
 }
 
 itmname_cannabis1	{Trompetas de Ángel o Datura}
@@ -3767,8 +3826,8 @@ itmdescr_alexs_chest
 Caja de metal del maestro Alexus, cerrada con seguridad.
 }
 
-itmname_treasure_note_1	{Nota del tesoro}
-itmdescr_treasure_note_1
+itmname_treasure_note {Nota del tesoro}
+itmdescr_treasure_note
 {
 Esta nota fue encontrada dentro de un tesoro. Lo más probable es que su autor haya abandonado este mundo hace mucho tiempo. Su contenido debe copiarse con cuidado en una sección especial del cuaderno de bitácora.
 }
@@ -3800,7 +3859,7 @@ Un original amuleto indio hecho en un río pedregoso y precipitosamente pintado.
 }
 itmdescr_kaleuche_amulet2_sword
 {
-Amuleto encantado por Tuttuathapak, chamán del Caribe. Permite que los entes del templo Chavinavi sean vulnerables a tus armas. Aumenta todas las destrezas con armas en un 25%.
+Amuleto encantado por Tuttuathapak, chamán del Caribe. Permite que los entes del templo Chavinavi sean vulnerables a tus armas. Aumenta la destreza con armas en un 25%.
 }
 
 itmname_kaleuche_amulet2_potion	{Poción de Tuttuathapak}
@@ -3891,6 +3950,20 @@ itmdescr_key_candlestick_Villemstad
 {
 Un anillo antiguo y macizo con un rubí. Al parecer, me servirá como llave.
 }
+
+itmname_LadyBeth_Book	{Diario de Blackwood}
+itmdescr_LadyBeth_Book
+{
+Pensamientos de un hombre miserable.
+}
+
+itmname_LadyBeth_Map	{Mapa de Blackwood}
+itmdescr_LadyBeth_Map
+{
+El camino hacia el tesoro más preciado del mayor buscador de tesoros.
+}
+
+
 
 ;====================================== предметы для пиратской линейки ===============================
 

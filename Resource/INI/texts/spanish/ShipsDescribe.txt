@@ -103,6 +103,11 @@ Símbolo de la potencia y la ambición españolas. Sus cubiertas brillan con orn
 Aumenta el poder de los amuletos cristianos.
 }
 
+LadyBeth
+{
+Un magnífico ejemplo de construcción naval inglesa, creado para el servicio de patrulla independiente en aguas peligrosas. Esta galeota tiene excelentes cualidades de navegación y un armamento impresionante para su tamaño, lo que le permite competir con embarcaciones de clases superiores. Los años de su servicio militar quedaron muy atrás, y la fama de su antiguo propietario ahora atrae más a comerciantes de antigüedades y mapas del tesoro que a lobos de mar.
+}
+
 Corvette
 {
 Las corbetas están destinadas a la exploración, servicio de mensajería y operaciones navales en general. Con una buena velocidad y maniobrabilidad, la corbeta puede ponerse a la altura de los barcos más ligeros y evitar con éxito el combate con navíos de guerra.
@@ -150,7 +155,7 @@ Los barcos de este tipo fueron construidos en tiempos del cardenal Richelieu y e
 
 Ecliaton
 {
-Ships of this type were built back nearly thirty years ago in the times of Cardinal Richelieu. Now they are rather outdated in terms of construction. Despite this, they retain excellent sailing abilities and the capacity to carry the heaviest cannons, making them a significant threat.
+Este tipo de barcos se construyeron hace casi treinta años, en tiempos del cardenal Richelieu. Ahora están bastante anticuados en términos de construcción. A pesar de ello, conservan excelentes aptitudes para la navegación y la capacidad de transportar los cañones más pesados, lo que los convierte en una amenaza significativa.
 }
 
 Pink
@@ -241,12 +246,12 @@ Velas: El daño actual y máximo que pueden recibir las velas.
 
 Speed
 {
-Velocidad: Indica la velocidad máxima actual del barco, teniendo en cuenta el cargamento, las habilidades del capitán y el daño recibido; comparándolo con la velocidad máxima genérica. 
+Velocidad: Indica la velocidad máxima actual del barco, teniendo en cuenta el cargamento, la destreza del capitán y el daño recibido; comparándolo con la velocidad máxima genérica. 
 }
 
 Maneuver
 {
-Maniobrabilidad: Muestra la maniobrabilidad máxima actual del barco, teniendo en cuenta el cargamento, las habilidades del capitán y el daño recibido; comparándolo con la maniobrabilidad máxima alcanzable del barco.
+Maniobrabilidad: Muestra la maniobrabilidad máxima actual del barco, teniendo en cuenta el cargamento, la destreza del capitán y el daño recibido; comparándolo con la maniobrabilidad máxima alcanzable del barco.
 }
 
 AgainstWind
@@ -257,7 +262,7 @@ Cuanto más alto sea el número, más se podrá aproximar el barco a la direcci�
 
 Capacity
 {
-Bodega: Indica el volumen actual y máximo de la bodega de carga. Cuanto menos espacio libre quede, más lento y peor se manejará el barco. 
+Bodega: Indica el volumen actual y máximo de la bodega. Cuanto menos espacio libre quede, más lento y peor se manejará el barco. 
 Cualquier artillería a bordo disminuye el espacio de almacenamiento. Puedes gestionar los cañones presionando por defecto la tecla S en la interfaz de Barcos.
 }
 

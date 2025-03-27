@@ -4,28 +4,28 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
     switch (Dialog.CurrentNode)
 	{
 		case "quests":
-			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("Welche Art von Fragen, "+GetSexPhrase("mein Sohn","meine Tochter")+"?","Frag ruhig, ich höre zu..."),"Ich höre zu, sprich jetzt, "+GetSexPhrase("mein Sohn","meine Tochter")+"..., Freund.","Zum dritten Mal, "+GetSexPhrase("mein Sohn","meine Tochter")+", fragen Sie nach dem, was Sie brauchen.","Ein Geistlicher hat viel Arbeit und Sie lenken mich ab, "+GetSexPhrase("mein Sohn","meine Tochter")+"...","Block",1,npchar,Dialog.CurrentNode);
-			link.l1 = HeroStringReactionRepeat(RandPhraseSimple("Ich habe meine Meinung geändert...","Nicht zu dieser Zeit, Padre..."),"Ich habe nichts zu sagen, meine Entschuldigung.","Ich werde fragen, aber später. Verzeihen Sie mir, Vater.","Verzeihen Sie mir, heiliger Vater...",npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("Hast du Fragen, "+GetSexPhrase("mein Sohn","meine Tochter")+"?","Frag ruhig, ich höre zu..."),"Ich höre zu, sprich jetzt, "+GetSexPhrase("mein Sohn","meine Tochter")+"...","Zum dritten Mal, "+GetSexPhrase("mein Sohn","meine Tochter")+", frag mich, was brauchst du?","Ein Geistlicher hat viel Arbeit und du lenkst mich ab, "+GetSexPhrase("mein Sohn","meine Tochter")+".","block",1,npchar,Dialog.CurrentNode);
+			link.l1 = HeroStringReactionRepeat(RandPhraseSimple("Ich habe meine Meinung geändert...","Nicht jetzt, Padre..."),"Ich habe nichts zu sagen, Entschuldigt mich.","Ich werde fragen haben, aber nicht jetzt. Verzeiht mir, Vater.","Verzeihen Sie mir, heiliger Vater...",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 		break;
 		
 		case "Gravel1":
 			dialog.text = "Was kann ich für dich tun, mein Sohn?";
-			link.l1 = "Ich suche dich, Georges.";
+			link.l1 = "Ich suche Sie, Georges.";
 			link.l1.go = "Gravel2";
 			DelLandQuestMark(npchar);
 		break;
 		
 		case "Gravel2":
-			dialog.text = "Ich? Aber warum?";
-			link.l1 = "Longway und Mynheer Van Merden brauchen Sie, um erneut zu ermitteln. Longway kann sich hier nach seiner... vorherigen Tour nicht blicken lassen.";
+			dialog.text = "Mich? Aber warum?";
+			link.l1 = "Longway und Mynheer Van Merden brauchen Sie, um erneut zu ermitteln. Longway kann sich hier seit seiner... vorherigen Tour nicht blicken lassen.";
 			link.l1.go = "Gravel3";
 		break;
 		
 		case "Gravel3":
 			AddQuestRecord("PZ", "23");
-			dialog.text = "Halte deine Stimme unten, um Gottes Willen! Aber ich verstehe. Ich werde mein Bestes tun.";
-			link.l1 = "Ausgezeichnet, Georges. Du bist einer unserer wertvollsten Verbündeten. Auf Wiedersehen.";
+			dialog.text = "Senke deine Stimme, um Gottes Willen! Aber ich verstehe. Ich werde mein Bestes tun.";
+			link.l1 = "Ausgezeichnet, Georges. Sie sind einer unserer wertvollsten Verbündeten. Auf Wiedersehen.";
 			link.l1.go = "Exit";
 			DelMapQuestMarkCity("Charles");
 			

@@ -1120,7 +1120,7 @@ void ProcessDialogEvent()
 			RemovePassenger(Pchar, sld);
 			DeleteAttribute(sld, "Payment");
 			DeleteAttribute(Pchar, "questTemp.FiringOfficerIDX");//удаляем из офицеров
-			log_info("Вудро Доггерти сошел на берег");
+			log_info("Вудро Доггерти сошёл на берег");
 			pchar.quest.SiegeSkiperOver.over = "yes"; //снять таймер
 		}
 		else

@@ -940,7 +940,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "BM_Pyanitsa_11":
-			dialog.text = "Ha ha, of course I do, eek! Everybody knows that. Old Gabe lives literally next door - you leave the tavern and turn right. Hit his house right away.";
+			dialog.text = "Ha-ha! Of course, hic, I know! Everyone knows! Old Gabe lives by the old windmill. Just go around the tavern and look up... hic!";
 			link.l1 = "When's he home? Sounds like he's a busy man.";
 			link.l1.go = "BM_Pyanitsa_12";
 		break;

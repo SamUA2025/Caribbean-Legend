@@ -1079,9 +1079,19 @@ void ProcessDialogEvent()
 					link.l1.go = "Node_3";
 				break;
 				case 4:
-					dialog.text = "Чёрт возьми... Ну как же так? Не может быть!";
-					link.l1 = "Ты чего, приятель? Где наш клад? Только не говори, что его нет!";
-					link.l1.go = "Node_4";
+                    ok = GetCharacterItem(pchar, "map_full") == 0 && GetCharacterItem(PChar, "map_part2") == 0;
+                    if(GetCharacterItem(PChar, "map_part1") > 0 && !ok) // Первая половинка есть, но вторую дать нельзя
+                    {
+                        dialog.text = "Слушай, я тут проверил всё, но моего клада не нашёл. Очень жаль, что так вышло, наверное, кто-то раскопал его до нас.";
+                        link.l1 = "Как такое может быть?!";
+                        link.l1.go = "PrisonerInPlace_1";
+                    }
+                    else
+                    {
+                        dialog.text = "Чёрт возьми... Ну как же так? Не может быть!";
+                        link.l1 = "Ты чего, приятель? Где наш клад? Только не говори, что его нет!";
+                        link.l1.go = "Node_4";
+                    }
 				break;
 			}
 		break;
@@ -1159,14 +1169,7 @@ void ProcessDialogEvent()
 		break;
 			
 		case "Node_4_2":
-			if (CheckCharacterItem(pchar, "map_part1"))
-			{
-				GiveItem2Character(pchar, "map_part2");
-			}
-			else
-			{
-				GiveItem2Character(pchar, "map_part1");
-			}
+			AddMapPart();
 			dialog.text = "Вот, берите, конечно. Капитан, отпустите меня, пожалуйста... Я и в самом деле думал, что клад тут. Может, вы разберётесь по этому клочку, где он, и заберёте всё себе. Прошу вас.";
 			link.l1 = "Да уж... Разобрать что-либо тут очень сложно. Нужна вторая половина карты. Ладно, проваливай, вижу, ты действительно хотел, как лучше.";
 			link.l1.go = "PrisonerInPlace_4";

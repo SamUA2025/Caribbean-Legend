@@ -747,6 +747,10 @@ void ProcessDialogEvent()
 				Link.l2 = "Helen, Liebste, darf ich dich einladen, einige schöne Stunden in der Taverne zu verbringen?";
 				Link.l2.go = "special_sex";
 			}
+			if (CheckAttribute(pchar, "questTemp.MysteryPortRoyal_Helena")) {
+				link.l4 = "Helen, ich glaube, ich habe das letzte Vermächtnis deines Verehrers Francis gefunden. Er hat dir sein Erbe hinterlassen.";
+				link.l4.go = "MysteryPortRoyal_Helena_1";
+			}
 			if (CheckCharacterItem(pchar, "pirate_cutlass") && !CheckAttribute(pchar, "questTemp.Saga.Helena_officer")) {
 				link.l4 = "Ich glaube, dieser Entermesser gehört jetzt dir. Blaise ist dein sogenannter Onkel...";
 				link.l4.go = "give_cutlass";
@@ -3506,6 +3510,20 @@ void ProcessDialogEvent()
 			dialog.text = "Sie wissen, wie es läuft. Lassen Sie ein Mädchen zuerst abkühlen.";
 			link.l1 = "Seufz...";
 			link.l1.go = "exit";
+		break;
+		
+		// Тайна Порт-Рояля
+		case "MysteryPortRoyal_Helena_1":
+			dialog.text = "Francis... ich erinnere mich. Er wartete immer auf meine Ankunft in Port Royal und war ein unverbesserlicher Romantiker. Ich genoss es, Zeit mit jemandem zu verbringen, der so weit weg vom Meer war – all diese Gedichte und Serenaden... Es war etwas Neues. Ein Hauch einer Welt, die ich nie gekannt hatte\nFrancis war reich, klug und gut aussehend – ein begehrenswerter Bräutigam. Jedes Mädchen hier hätte sich um seine Aufmerksamkeit gerissen, aber damals war ich mehr damit beschäftigt, die Regenbogen über Wasser zu halten.";
+			link.l1 = "Offenbar konnte die empfindsame Seele eines Dichters deine Ablehnung nicht ertragen. In all seinen Briefen sprach er nur von dir, erinnerte sich an eure Treffen. Ich kann dir alles geben, was er hinterlassen hat, wenn du es möchtest.";
+			link.l1.go = "MysteryPortRoyal_Helena_2";
+		break;
+		
+		case "MysteryPortRoyal_Helena_2":
+			dialog.text = "Ich wusste nicht, dass er krank war. Das ist irgendwie... dumm. Und was sein Geschenk angeht... Ich habe genug von Testamenten und Erbschaften. Glaub mir, ich habe alles, was ich brauche – und noch mehr. Behalte es lieber.";
+			link.l1 = "Sein Vermächtnis wird dir so oder so zugutekommen – also habe ich wohl ungewollt seinen letzten Wunsch erfüllt. Eine interessante Geschichte.";
+			link.l1.go = "exit";
+			DeleteAttribute(pchar, "questTemp.MysteryPortRoyal_Helena");
 		break;
 		
 		case "Exit":

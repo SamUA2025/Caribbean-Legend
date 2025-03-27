@@ -24,6 +24,7 @@
 #include "quests\Common_Quests\Portugal.c"
 #include "quests\Common_Quests\Consumption.c"
 #include "quests\Common_Quests\Caleuche.c"
+#include "quests\Common_Quests\LadyBeth.c"
 
 ref		sld, rCharacter;
 int     iTemp, i; // нужно для вычислений любых целых (нации)
@@ -241,105 +242,6 @@ void Colt_Timer(string qName) //
 {
 	sld = characterFromId("Jino");	
 	sld.quest.cartridge = true;
-}
-
-//------------------------------------------------ клады ---------------------------------------------------
-void Treasure_SetCaribWarrior()
-{
-	chrDisableReloadToLocation = true;//закрыть локацию
-	int iRank = 10+sti(pchar.rank)+makeint(MOD_SKILL_ENEMY_RATE)/2;
-	for(int i=1; i<=4; i++)
-	{
-		sld = GetCharacter(NPC_GenerateCharacter("Treasure_carib_"+i, "canib_"+(rand(5)+1), "man", "man", iRank, PIRATE, 1, true, "native"));
-		SetFantomParamFromRank(sld, iRank, true);
-		sld.name = GetIndianName(MAN);
-		sld.lastname = "";
-		LAi_CharacterDisableDialog(sld);
-		GetCharacterPos(pchar, &locx, &locy, &locz);
-		ChangeCharacterAddressGroup(sld, pchar.location, "monsters", LAi_FindFarFreeLocator("monsters", locx, locy, locz));
-		LAi_SetWarriorType(sld);
-		LAi_group_MoveCharacter(sld, "EnemyFight");
-		LAi_group_SetRelation("EnemyFight", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
-		LAi_group_FightGroups("EnemyFight", LAI_GROUP_PLAYER, true);
-		LAi_group_SetCheck("EnemyFight", "OpenTheDoors");
-	}
-}
-
-void Treasure_SetBandosWarrior()
-{
-	chrDisableReloadToLocation = true;//закрыть локацию
-	int iRank = 8+sti(pchar.rank)+makeint(MOD_SKILL_ENEMY_RATE)/2;
-	for(int i=1; i<=4; i++)
-	{
-		sld = GetCharacter(NPC_GenerateCharacter("Treasure_bandos_"+i, "citiz_"+(rand(9)+41), "man", "man", iRank, PIRATE, 1, true, "marginal"));
-		SetFantomParamFromRank(sld, iRank, true);
-		LAi_CharacterDisableDialog(sld);
-		GetCharacterPos(pchar, &locx, &locy, &locz);
-		ChangeCharacterAddressGroup(sld, pchar.location, "monsters", LAi_FindFarFreeLocator("monsters", locx, locy, locz));
-		LAi_SetWarriorType(sld);
-		LAi_group_MoveCharacter(sld, "EnemyFight");
-		LAi_group_SetRelation("EnemyFight", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
-		LAi_group_FightGroups("EnemyFight", LAI_GROUP_PLAYER, true);
-		LAi_group_SetCheck("EnemyFight", "OpenTheDoors");
-	}
-}
-
-void Treasure_SetCaptainWarrior(string qName) //
-{
-	string model;
-	int iRank = sti(pchar.rank)+MOD_SKILL_ENEMY_RATE;
-	chrDisableReloadToLocation = true;//закрыть локацию
-	LAi_LocationFightDisable(&Locations[FindLocation(pchar.location)], true);//запретить драться // patch-6
-	for(int i=1; i<=4; i++)
-	{
-		model = "citiz_"+(rand(9)+51);
-		if (i > 1) model = "mercen_"+(rand(29)+1);
-		sld = GetCharacter(NPC_GenerateCharacter("Treasure_sailor_"+i, model, "man", "man", iRank, PIRATE, 1, true, "soldier"));
-		SetFantomParamFromRank(sld, iRank, true);
-		sld.Dialog.Filename = "Hunter_dialog.c";
-		sld.Dialog.currentnode = "TreasureCaptain";
-		sld.greeting = "hunter";
-		if (i > 1) LAi_CharacterDisableDialog(sld);
-		GetCharacterPos(pchar, &locx, &locy, &locz);
-		ChangeCharacterAddressGroup(sld, pchar.location, "goto", LAi_FindFarLocator("goto", locx, locy, locz));
-		LAi_SetActorType(sld);
-		LAi_ActorDialog(sld, pchar, "", -1, 0);
-	}
-}
-
-void Treasure_SetOfficerWarrior(string qName) //
-{
-	string model;
-	int iRank = sti(pchar.rank)+MOD_SKILL_ENEMY_RATE;
-	int iNation = sti(colonies[FindColony(GetCityNameByIsland(Pchar.curIslandId))].nation);
-	if (iNation == "") iNation = drand(3);
-	if (iNation > 3) iNation = drand(3); // patch-6
-	chrDisableReloadToLocation = true;//закрыть локацию
-	LAi_LocationFightDisable(&Locations[FindLocation(pchar.location)], true);//запретить драться // patch-6
-	for(int i=1; i<=4; i++)
-	{
-		model = "off_"+NationShortName(iNation)+"_"+(rand(4)+1);
-		if (i > 1) model = "sold_"+NationShortName(iNation)+"_"+(rand(7)+1);
-		sld = GetCharacter(NPC_GenerateCharacter("Treasure_soldier_"+i, model, "man", "man", iRank, PIRATE, 1, true, "soldier"));
-		SetFantomParamFromRank(sld, iRank, true);
-		sld.Dialog.Filename = "Hunter_dialog.c";
-		sld.Dialog.currentnode = "TreasureOfficer";
-		sld.greeting = "patrol";
-		if (i > 1) LAi_CharacterDisableDialog(sld);
-		GetCharacterPos(pchar, &locx, &locy, &locz);
-		ChangeCharacterAddressGroup(sld, pchar.location, "goto", LAi_FindFarLocator("goto", locx, locy, locz));
-		LAi_SetActorType(sld);
-		LAi_ActorDialog(sld, pchar, "", -1, 0);
-	}
-}
-
-void Treasure_Stories(string attr) // открыли записку из клада
-{
-    pchar.questTemp.Treasure_Stories.(attr) = "";
-	pchar.questTemp.Treasure_Stories = sti(pchar.questTemp.Treasure_Stories) + 1;
-	//if (sti(pchar.questTemp.Treasure_Stories) == 4) Achievment_Set("ach_CL_98");
-	//if (sti(pchar.questTemp.Treasure_Stories) == 9) Achievment_Set("ach_CL_98");
-	//if (sti(pchar.questTemp.Treasure_Stories) == 18) Achievment_Set("ach_CL_98");
 }
 
 void TownPirate_battle(string qName)
@@ -868,6 +770,11 @@ void PR_Letter_Reaction()
 			rItem.startLocator = "key1";
 			Item_OnLoadLocation("PortRoyal_town");
 		}
+		else if (sti(rItem.(locId).find) == 5)
+		{
+			Achievment_Set("ach_CL_145");
+			pchar.questTemp.MysteryPortRoyal_Helena = true;
+		}
 	}
 	
 	if(locId == "Villemstad_town")
@@ -892,6 +799,10 @@ void PR_Letter_Reaction()
 		else if(sti(rItem.(locId).find) < 4)
 		{
 			DoQuestFunctionDelay("Show_Next_PR_Letter", 1.0);
+		}
+		else if (sti(rItem.(locId).find) == 5)
+		{
+			Achievment_Set("ach_CL_146");
 		}
 	}
 }

@@ -1920,7 +1920,7 @@ void Ship_CheckSituation()
 							if (CheckAttribute(pchar, "questTemp.Sharlie.Rum.Tip1") && Ship_GetDistance2D(pchar, rCharacter) < 3500-MOD_SKILL_ENEMY_RATE*100) {
 								DeleteAttribute(pchar, "questTemp.Sharlie.Rum.Tip1");
 								//NewGameTip(XI_ConvertString("RumCap"));
-								LaunchTutorial("SeaFastTravel"+LanguageGetLanguage(), 1);
+								LaunchTutorial("SeaFastTravel", 1);
 							}
 						}
 						if (rCharacter.id == "TK_Genrih") 
@@ -2395,7 +2395,7 @@ void Ship_ApplyCrewHitpoints(ref rOurCharacter, float fCrewHP)
 			fMultiply = fMultiply * 0.9;
 		}
 	}
-	if(ShipBonus2Artefact(rOurCharacter))
+	if(ShipBonus2Artefact(rOurCharacter, SHIP_GALEON_SM))
 	{
 		fMultiply = fMultiply * isEquippedArtefactUse(rOurCharacter, "amulet_10", 1.0, 0.90 );
 	}
@@ -2465,7 +2465,7 @@ void Ship_ApplyHullHitpoints(ref rOurCharacter, float fHP, int iKillStatus, int 
 	
 	if(IsCharacterEquippedArtefact(rOurCharacter, "amulet_8"))
 	{
-		if(ShipBonus2Artefact(rOurCharacter))
+		if(ShipBonus2Artefact(rOurCharacter, SHIP_GALEON_SM))
 			fMinus += 0.10;
 		else
 			fMinus += 0.05; // belamour произведение даёт 0 без перков

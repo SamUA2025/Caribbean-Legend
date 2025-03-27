@@ -1452,17 +1452,17 @@ void SetBlade_FgtLvl (ref Chr, ref Blade)
 }
 
 // belamour бонус артефактам если персонаж на квестовом галеоне
-bool ShipBonus2Artefact(ref chr)
+bool ShipBonus2Artefact(ref chr, int shipType)
 {
 	if(GetCharacterShipType(chr) == SHIP_NOTUSED) return false;
 	if(IsMainCharacter(chr))
 	{	
-		if(sti(RealShips[sti(chr.Ship.Type)].BaseType) == SHIP_GALEON_SM) return true;
+		if(sti(RealShips[sti(chr.Ship.Type)].BaseType) == shipType) return true;
 	}
 	else
 	{
 		ref mc = GetMainCharacter();
-		if(sti(RealShips[sti(mc.Ship.Type)].BaseType) == SHIP_GALEON_SM)
+		if(sti(RealShips[sti(mc.Ship.Type)].BaseType) == shipType)
 		{
 			return isOfficerInShip(chr, true);
 		}
@@ -1548,3 +1548,128 @@ float fLiberMisBonus(ref chr)
 
 	return 1.0;
 }
+
+void addArticlesBonus()
+{
+	if(!IsEquipCharacterByArtefact(pchar, "talisman18")) return;
+	
+	ref Articles = ItemsFromID("talisman18");
+	
+	if(CheckAttribute(Articles,"QBonus.max")) return;
+	
+	if(!CheckAttribute(Articles,"QBonus")) Articles.QBonus = 0;
+	Articles.QBonus = sti(Articles.QBonus) + 1;
+	if(sti(Articles.QBonus) >= 10)
+	{
+		Articles.QBonus = 10;
+		Articles.QBonus.max = true;
+	}
+}
+
+float ArticlesBonus(ref chr)
+{
+	if(!IsMainCharacter(chr)) return 0.0;
+	if(!IsEquipCharacterByArtefact(pchar, "talisman18")) return 0.0;
+	ref Articles = ItemsFromID("talisman18");
+	
+	if(!CheckAttribute(Articles, "QBonus")) return 0.0;
+	
+	if(CheckAttribute(Articles,"QBonus.max")) return 0.10;
+	else return 0.0 + wPercentFloat(stf(Articles.QBonus), 1.0);
+
+	return 0.0;
+}
+
+bool CanUpgradeMusketSP(ref chr, ref itm)
+{
+	if(!CheckCharacterItem(chr, "mushket9")) return false;
+	
+	ref mus;
+	makeref(mus, items[FindItem("mushket9")]);
+	
+	if(!CheckAttribute(mus, "UpgradeStage"))  return false;
+	if(!CheckAttribute(itm, "PartNumber")) return false;
+	
+	if(sti(itm.PartNumber) == sti(mus.UpgradeStage)) return true;
+	
+	return false;
+}
+
+void UpgradeMusketSP(ref chr)
+{
+	ref itm;
+	
+	makeref(itm, items[FindItem("mushket9")]);
+	if(CheckAttribute(itm, "UpgradeStage"))
+	{
+		itm.UpgradeStage = sti(itm.UpgradeStage) + 1;
+		int iUpgradeStage = sti(itm.UpgradeStage);
+		
+		switch (iUpgradeStage)
+		{
+			case 2:	
+				itm.model			= "Mushket2_SP2";
+				itm.picIndex		= 11;
+				itm.price			= 47000;
+				itm.type.t1.shards  = 80;
+				itm.type.t1.width   = 8.0;
+				itm.type.t1.height  = 7.5;
+				itm.type.t2.shards  = 80;
+				itm.type.t2.width   = 7.0;
+				itm.type.t2.height  = 5.75;
+			break;
+			
+			case 3:	
+				itm.model			= "Mushket3_SP2";
+				itm.picIndex		= 12;
+				itm.price			= 56000;
+				itm.type.t1.Accuracy = 70.0;
+				itm.type.t1.basedmg  = 4;
+				itm.type.t1.shards  = 85;
+				itm.type.t1.width   = 6.5;
+				itm.type.t1.height  = 5.25;
+				itm.type.t1.area    = XI_ConvertString("grapes_area_4");
+				itm.type.t2.Accuracy = 60.0;
+				itm.type.t2.basedmg  = 4;
+				itm.type.t2.shards  = 85;
+				itm.type.t2.width   = 5.5;
+				itm.type.t2.height  = 4.5;
+				itm.type.t2.area    = XI_ConvertString("grapes_area_3");
+			break;
+			
+			case 4:	
+				itm.model			= "Mushket4_SP2";
+				itm.picIndex		= 12;
+				itm.price			= 85000;
+				itm.type.t1.Accuracy = 80.0;
+				itm.type.t1.basedmg  = 5;
+				itm.type.t1.width   = 5.5;
+				itm.type.t1.height  = 4.5;
+				itm.type.t1.area    = XI_ConvertString("grapes_area_3");
+				itm.type.t2.Accuracy = 70.0;
+				itm.type.t2.basedmg  = 5;
+				itm.type.t2.width   = 4.5;
+				itm.type.t2.height  = 3.75;
+				itm.type.t2.area    = XI_ConvertString("grapes_area_2");
+			break;
+		}
+		if(IsEquipCharacterByItem(chr, "mushket9"))
+		{
+			RemoveCharacterEquip(chr, itm.groupID);
+			EquipCharacterByItem(chr, "mushket9");
+		}
+		
+		RemoveItems(chr, "FirearmStockPart_" + (iUpgradeStage - 1), 1);
+	}
+}
+
+// Вторая половинка выдаётся лишь, когда нет первой и всей карты, но так как это используется в диалогах,
+// то проверка на наличие целой карты зачастую будет предварительно, поэтому тут её нет, чтобы не дублировать
+void AddMapPart()
+{
+    if (GetCharacterItem(PChar, "map_part1") == 0)
+        GiveItem2Character(PChar, "map_part1");
+    else
+        GiveItem2Character(PChar, "map_part2");
+}
+

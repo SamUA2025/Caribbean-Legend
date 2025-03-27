@@ -103,6 +103,11 @@ A symbol of Spanish might and ambition. Its decks gleam with golden ornaments, w
 Enhances the power of Christian wards and amulets.
 }
 
+LadyBeth
+{
+Wspaniały przykład angielskiego budownictwa okrętowego, stworzony do samodzielnej służby patrolowej na niebezpiecznych wodach. Ta szniawa ma doskonałe właściwości żeglugowe i imponujące jak na swoje rozmiary uzbrojenie, pozwalające konkurować z jednostkami wyższych klas. Lata jej służby wojskowej są już dawno za nią, a sława poprzedniego właściciela przyciąga teraz raczej handlarzy antyków i map skarbów niż wilków morskich.
+}
+
 Corvette
 {
 Corvettes are built for independent operations in littoral waters as well as scouting and important courier service. Possessing good speed and maneuverability, a corvette can catch up with lighter ships and successfully avoid combat with heavier ones. After commanding a sloop, the most common next step in a navy career is taking command of a corvette.

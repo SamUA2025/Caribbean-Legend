@@ -695,3 +695,10 @@ Decidí no arruinar la vida de la desafortunada pareja y no contarle al guardia 
 Le dije la verdad al guardia. Al principio se puso furioso, claro, pero al final se calmó. Todos hemos pecado. Esta pareja simplemente no tenía otro lugar para verse. Amor juvenil... Esperemos que todo les vaya bien.
 #TEXT	5
 Decidí no involucrarme en los ruidos y los terribles gemidos que imaginaba el vigilante. Mi tiempo es más valioso.
+
+#QUEST SixCaptains
+Seis Capitanes
+#TEXT	1
+Quizás sea la primera vez que un breve encuentro con alguien que no tenía ni trabajo ni asuntos para mí me ha hecho escribir una entrada en este diario. No entiendo por qué este sacerdote me causó tal impresión. No sé su nombre, y a veces hablaba tonterías, pero se hizo memorable. Nos hemos encontrado dos veces ahora, y podría descartarse como una coincidencia. Pero si nos encontramos de nuevo...
+Debo admitir que su interés es algo halagador. Esa mirada en sus ojos es tan... evaluadora. Como si admirara mis logros. ¿Y quién no lo haría? Dos barcos legendarios, dos capitanes cuyas historias se extendieron por todo el Archipiélago, ambos caídos por mi mano.
+Me pregunto qué dirá cuando se entere de mis futuras hazañas. El Archipiélago es vasto, pero mi fama, al parecer, está creciendo más rápido de lo que pensaba.

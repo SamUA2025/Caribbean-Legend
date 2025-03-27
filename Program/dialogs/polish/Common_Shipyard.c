@@ -1146,7 +1146,7 @@ void ProcessDialogEvent()
 			}	
             TuningAvailable();
             NextDiag.TempNode = "First time";
-			dialog.Text = "… Zrobione, Kapitanie. Teraz możesz zatrudnić więcej marynarzy, będzie wystarczająco miejsca dla wszystkich.";
+			dialog.Text = "... Zrobione, Kapitanie. Teraz możesz zatrudnić więcej marynarzy, będzie wystarczająco miejsca dla wszystkich.";
 			Link.l1 = "Dzięki! Przetestuję to.";
 			Link.l1.go = "Exit";
 			

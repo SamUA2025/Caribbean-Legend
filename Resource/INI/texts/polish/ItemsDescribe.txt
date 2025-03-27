@@ -632,6 +632,50 @@ itmdescr_m8_barrel
 Kolba i lufa ze zdemontowanego karabinu czterostrzałowego.
 }
 
+itmname_mushket9 {Stara arkebuz}
+itmdescr_mushket9
+{
+Starożytna, ale niezawodna arkebuz. Jeśli wierzyć opowieściom, sam Kortez używał jej do zasypywania dżungli kartaczami, wzbudzając przerażenie wśród tubylców.
+}
+
+UpgradeStageInfo_mushket9_1 
+{
+Obecnie wygląda dość marnie, ale odpowiednia pielęgnacja i dobre narzędzia mogą ją całkowicie odmienić.
+}
+
+UpgradeStageInfo_mushket9_2 
+{
+Po wymianie kolby i dokładnym czyszczeniu przestała wyglądać jak zardzewiały kawałek żelaza. Teraz z taką bronią na plecach można bez wstydu przejść się po ulicy.
+}
+
+UpgradeStageInfo_mushket9_3 
+{
+Z wymienionym zamkiem zaczęła przypominać nowoczesną broń. Metal, nasmarowany olejem kostnym, błyszczy w słońcu, jakby broń została dopiero co wzięta z rąk mistrza.
+}
+
+UpgradeStageInfo_mushket9_4 
+{
+W twoich rękach ta broń osiągnęła swój szczyt - po prostu nie ma już możliwości jej dalszego rozwoju. Ostatni szlif - rozszerzona lufa - uprościł i przyspieszył ładowanie, wielokrotnie zwiększając efektywność. Możesz być z siebie dumny.
+}
+
+itmname_FirearmStockPart_1 {Kolba i stempel}
+itmdescr_FirearmStockPart_1
+{
+Pięknie rzeźbiona kolba do staromodnych strzelb i szczotka-stempel do czyszczenia lufy. Były owinięte w płótno i starannie ułożone w rogu z dala od pozostałej zawartości skarbu, jakby zostały tam położone znacznie później.
+}
+
+itmname_FirearmStockPart_2 {Zamek i olej kostny}
+itmdescr_FirearmStockPart_2
+{
+Nowoczesny zamek sprężynowy, szmaty i fiolka oleju kostnego do konserwacji broni, podejrzanie pasujące do arkebuz znalezionej u Blackwooda. Podobnie jak poprzednie, leżały w skarbie oddzielnie od pozostałych cennych przedmiotów.
+}
+
+itmname_FirearmStockPart_3 {Lufa i prochownica}
+itmdescr_FirearmStockPart_3
+{
+Ten zestaw przedmiotów znacznie przyspieszy ładowanie każdej broni długolufowej, ale z jakiegoś powodu czujesz, że najlepiej używać ich razem z tą konkretną arkebuzą. Były zapakowane w małą papierową paczuszkę, najwyraźniej w celu ochrony przed wilgocią, w przeciwieństwie do wszystkich innych przedmiotów w skarbie.
+}
+
 itmname_grape_mushket {Moździerz}
 itmdescr_grape_mushket
 {
@@ -1079,13 +1123,28 @@ Złoty nóż ceremonialny Azteków, który dziwnym trafem nie został jeszcze pr
 itmname_talisman17 {Artefakt 'Liber Misericordiae'}
 itmdescr_talisman17
 {
-Tom Pisma Świętego, niegdyś bardzo osobisty dla swojego właściciela, niczym pamiętnik. Chociaż wielu uważa Biblię za światło wiary i przewodnika, ta księga służy jako dosłowny kodeks honorowy. Chroni życie marynarzy i kapitana podczas ich dalekich rejsów, zapewniając szczególnie skuteczną ochronę na pokładzie „Świętego Miłosierdzia”.
+Egzemplarz Świętej Księgi, który był dla właściciela bardzo osobisty, prawie jak dziennik. Wiele osób nosi Biblię jako latarnię i przewodnik, ale ta książka to dosłowny kodeks honorowy. 
+Zmniejsza obrażenia dla załogi i kapitana o 5%, a na pokładzie Świętej Miłosierdzia zwiększa umiejętność obrony o 10. 
+Aby odkryć potencjał tego amuletu, trzeba przejść ścieżką sprawiedliwego.
 ~
 Żadnych kar ani limitów czasowych podczas noszenia.
 }
 
 talisman17_quests {Zadania kościelne: #dQBonus# / 5}
 talisman17_questsNoBonus {Zadania kościelne: 0 / 5}
+
+itmname_talisman18	{Amulet 'Statut Blackwooda'}
+itmdescr_talisman18
+{
+Osobisty statut Alberta Blackwooda. Opisuje szczegółowo działanie Lady Bet, rozstawienie strzelców i taktykę Morskich Lisów. Osobny dział poświęcony jest poszukiwaniu skarbów i nagradzaniu celnych strzelców zdobytymi bogactwami. 
+Każdy znaleziony skarb wzmacnia moc ognia muszkietowego załogi i zwiększa obrażenia zadawane przez strzelby.
+~
+Żadnych kar ani limitów czasowych podczas noszenia.
+}
+
+talisman18_Bonus{Znalezione Skarby : #dQBonus# / 10}
+
+talisman18_NoBonus{Znalezione Skarby : 0 / 10}
 
 ; 
 ==================================================================================================================== TALIZMANY
@@ -3723,8 +3782,8 @@ itmdescr_alexs_chest
 Metalowe pudełko mistrza Alexusa, bezpiecznie zamknięte na kłódkę.
 }
 
-itmname_treasure_note_1	{Notatka ze skarbu}
-itmdescr_treasure_note_1
+itmname_treasure_note {Notatka ze skarbu}
+itmdescr_treasure_note
 {
 Ta notatka została znaleziona w skarbie. Najprawdopodobniej jej autor już dawno opuścił ten ziemski świat. Jej treść należy starannie przepisać do specjalnego działu dziennika okrętowego.
 }
@@ -3848,6 +3907,20 @@ itmdescr_key_candlestick_Villemstad
 {
 Masywny, zabytkowy pierścień z rubinem. Najwyraźniej ma mi posłużyć jako klucz.
 }
+
+itmname_LadyBeth_Book	{Dziennik Blackwooda}
+itmdescr_LadyBeth_Book
+{
+Myśli nieszczęsnego człowieka.
+}
+
+itmname_LadyBeth_Map	{Mapa Blackwooda}
+itmdescr_LadyBeth_Map
+{
+Droga do najcenniejszego skarbu największego poszukiwacza skarbów.
+}
+
+
 
 ;====================================== предметы для пиратской линейки ===============================
 

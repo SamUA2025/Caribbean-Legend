@@ -116,7 +116,7 @@ explotó
 
 GenQuests_24
 {
-~ hook the camera.
+~ engancha la cámara.
 }
 
 GenQuests_25
@@ -251,35 +251,35 @@ Toda la mercancía está cargada en la bodega.
 
 GenQuests_51
 {
-the three
+el tres
 }
 GenQuests_52
 {
-the four
+el cuatro
 }
 GenQuests_53
 {
-the five
+el cinco
 }
 GenQuests_54
 {
-the six
+el seis
 }
 GenQuests_55
 {
-the seven
+el siete
 }
 GenQuests_56
 {
-the eight
+el ocho
 }
 GenQuests_57
 {
-the nine
+el nueve
 }
 GenQuests_58
 {
-the ten
+el diez
 }
 
 GenQuests_59

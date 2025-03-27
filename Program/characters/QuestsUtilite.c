@@ -897,11 +897,15 @@ void FillAboardCabinBox(ref _location, ref _npchar)
 	if (_npchar.id == "Ignasio" && CheckAttribute(PChar, "questTemp.Mtraxx.Corrida.Logbook"))
 	{
         DeleteAttribute(_location, "box1");
-        _location.box1.money = 25600;//
+        _location.box1.money = 25600;
 		_location.box1.items.gold_dublon = 155;
 		_location.box1.items.map_normal = 1;
-		_location.box1.items.map_part1 = 1;
-		_location.box1.items.wolfreeks_book = 1;
+        if(GetCharacterItem(PChar, "map_part1") == 0)
+            _location.box1.items.map_part1 = 1;
+        else if(GetCharacterItem(pchar, "map_full") == 0 && GetCharacterItem(PChar, "map_part2") == 0)
+            _location.box1.items.map_part2 = 1;
+        _location.box1.items.wolfreeks_book = 1;
+        
         ok = false;
 	}
 	// шхуна Кантавро
@@ -1135,8 +1139,11 @@ void FillAboardCabinBox(ref _location, ref _npchar)
 		DeleteAttribute(_location, "box1");
 		_location.box1.money = 1500;
 		_location.box1.items.gold_dublon = 10;
-		_location.box1.items.map_part1 = 1;
-		
+        if(GetCharacterItem(PChar, "map_part1") == 0)
+            _location.box1.items.map_part1 = 1;
+        else if(GetCharacterItem(pchar, "map_full") == 0 && GetCharacterItem(PChar, "map_part2") == 0)
+            _location.box1.items.map_part2 = 1;
+        
         ok = false;
 	}
 	// Барк Генрих по квесту "Травля Крысы"
@@ -1179,19 +1186,12 @@ void FillAboardCabinBox(ref _location, ref _npchar)
 		if(iNation == PIRATE)
 		{
 			nLuck   = GetCharacterSkillToOld(Pchar, SKILL_FORTUNE);			
-			if (nLuck > rand(250) && GetCharacterItem(pchar, "map_full") == 0)  // шанс 1/30 
+			if (nLuck > rand(250))  // шанс 1/30 
 			{
 				if (GetCharacterItem(pchar, "map_part1") == 0)
-				{
-					_location.box1.items.map_part1 = 1;
-				}
-				else
-				{
-					if (GetCharacterItem(pchar, "map_part2") == 0)
-					{
-						_location.box1.items.map_part2 = 1;
-					}
-				}
+                    _location.box1.items.map_part1 = 1;
+				else if (GetCharacterItem(pchar, "map_full") == 0 && GetCharacterItem(pchar, "map_part2") == 0)
+                    _location.box1.items.map_part2 = 1;
 			}
 			FillCabinBoxMap(_location, 200 - (7 - iTemp) * 5); 
 			if(rand(10) == 5) _location.box1.items.Chest_open = 1;
@@ -4668,28 +4668,26 @@ void Delay_DeleteGroup(string GroupName)
 //Перехват всех попыток ГГ залезть в боксы
 void QuestCheckTakeBoxes(ref itemsRef) 
 {	
-//	ref locLoad = &locations[reload_location_index];
-	ref locLoad = &LoadedLocation; // Warship fix - косило в каютах
-    ref sld;
-	int i, num;
-	
-	String title;
-	
-	//--> флаг 'в сундуке'
+	int iTemp;
+	string title;
+
+	// Флаг 'в сундуке'
 	bMainCharacterInBox = true;
-	//<-- флаг 'в сундуке'
+
 	//-------------------- КЛАДЫ ------------>>>>>>>>>>>>>
 	if (CheckAttribute(itemsRef, "Treasure"))
 	{
 		Log_Info(StringFromKey("QuestsUtilite_156"));
 		PlaySound("interface\notebook.wav");
+        iTemp = sti(itemsRef.Treasure); // Тир клада
+        AddCharacterExpToSkill(PChar, "Fortune", iTemp*3);
         // Ачивки
-        //if(sti(itemsRef.Treasure) == 15) Achievment_Set("ach_CL_98");
+        if(!GetAchievement("ach_CL_151") && iTemp == 15) Achievment_Set("ach_CL_151");
 		Statistic_AddValue(Pchar, "Treasure", 1);
 		Achievment_SetStat(8, 1);
 		if(SandBoxMode) Achievment_SetStat(101, 1);
         DeleteAttribute(itemsRef, "Treasure");
-		//eddy. для безконфликтности квестов
+		//eddy. для бесконфликтности квестов
 		locations[FindLocation(pchar.location)].DisableEncounters = false; //энкаутеры открыть
 		if(CheckAttribute(itemsRef, "PiratesOnUninhabitedTreasure"))
 		{
@@ -4722,17 +4720,9 @@ void QuestCheckTakeBoxes(ref itemsRef)
 			}
 			else
 			{
-				// ситуация
+				// ОЗК (Выход из пещеры)
 				switch (sti(pchar.GenQuest.Treasure.Vario))
 				{
-					case 0: 
-						Treasure_SetCaribWarrior(); 
-					break;
-					
-					case 1:
-						Treasure_SetBandosWarrior();
-					break;
-					
 					case 2:  
 						pchar.quest.Treasure_evilcaptain.win_condition.l1 = "ExitFromLocation";
 						pchar.quest.Treasure_evilcaptain.win_condition.l1.location = pchar.location;
@@ -4765,8 +4755,17 @@ void QuestCheckTakeBoxes(ref itemsRef)
 			DeleteAttribute(pchar,"GenQuest.Hold_GenQuest");
 		}
 	}
+    if (CheckAttribute(itemsRef, "treasure_note")) // Проверка записок
+    {
+        // Пока открыт этот сундук, запоминаем всю инфу для взятия записки
+        ref rNote = &items[FindItem("treasure_note")];
+        rNote.curNumb = itemsRef.treasure_note;
+        rNote.curLoc  = PChar.location;
+        rNote.curBox  = GetAttributeName(itemsRef);
+    }
 	//<<<<<<<<<<---------- КЛАДЫ --------------------------
 }
+
 //открытие дверей в локации города для коммонов. только на текущие сутки + ещё одни, потом снимается само.
 void SetOpenDoorCommonLoc(string City, string locationId)
 {
@@ -6916,7 +6915,7 @@ bool QuestCheckReturn2SeaAfterCabin() {
 		} else {
 			PlaySound("interface\knock.wav");
 			//Log_Info("Назначьте Фулька Делюка своим штурманом в окне персонажа (F4)");
-			LaunchTutorial("Navigator" + LanguageGetLanguage(), 1);
+			LaunchTutorial("Navigator", 1);
 			return false;
 		}
 		pchar.systeminfo.tutorial.navigator = true;

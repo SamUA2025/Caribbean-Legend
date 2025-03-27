@@ -1486,7 +1486,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Pelly_65":
-            dialog.text = "Devrais-je aussi te présenter à tous mes informateurs ? Très bien. Avec les dépenses, les risques, et ma part… cela coûtera à peu près autant que la rançon pour Beau.";
+            dialog.text = "Devrais-je aussi te présenter à tous mes informateurs ? Très bien. Avec les dépenses, les risques, et ma part... cela coûtera à peu près autant que la rançon pour Beau.";
 			link.l1 = "Sabre, crains Dieu...";
 			link.l1.go = "Pelly_66";
 		break;
@@ -1505,14 +1505,14 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Pelly_67":
-            dialog.text = "Eh bien, pense à cela. Mais souviens-toi—pendant que tu réfléchis, le nombre de bleus sur le visage et le corps de Beau augmente d'heure en heure, heh-heh-heh.";
+            dialog.text = "Eh bien, pense à cela. Mais souviens-toi-pendant que tu réfléchis, le nombre de bleus sur le visage et le corps de Beau augmente d'heure en heure, heh-heh-heh.";
 			link.l1 = "Je vous apporterai les doublons...";
 			link.l1.go = "exit";
 			NextDiag.TempNode = "Pelly_67_2";
 		break;
 		
 		case "Pelly_67_1":
-            dialog.text = "Ce n'est pas une question de taille de la cargaison—c'est une question de timing et de risques. Mais fais à ta guise.";
+            dialog.text = "Ce n'est pas une question de taille de la cargaison-c'est une question de timing et de risques. Mais fais à ta guise.";
 			link.l1 = "Fais-moi confiance, je sais. Prépare juste le coffre - je m'en occupe à partir d'ici.";
 			link.l1.go = "Pelly_10";
 		break;
@@ -5782,7 +5782,7 @@ void ProcessDialogEvent()
 		// <-- legendary edition
 		
 		case "enrico_Tonzag_1":
-			dialog.text = "Tu as raison, la porte est fiable, même si elle est ancienne. Merci de ne pas avoir abaissé la grille—cela m'aurait retardé. Mais pas pour longtemps.";
+			dialog.text = "Tu as raison, la porte est fiable, même si elle est ancienne. Merci de ne pas avoir abaissé la grille-cela m'aurait retardé. Mais pas pour longtemps.";
 			link.l1 = "Hercule Tonzag, Gaston le Chauve ! J'aurais dû deviner qu'un homme comme toi s'allierait avec le Prince et tous ses semblables. Quelle chance de te rencontrer ici, aussi.";
 			link.l1.go = "enrico_Tonzag_2";
 			sld = CharacterFromID("Zorro");
@@ -6427,7 +6427,7 @@ void ProcessDialogEvent()
 		
 		case "Nemezida_Knippel_9":
             dialog.text = "Ce n'est rien de sérieux, Capitaine, juste de l'épuisement. L'entrée derrière vous s'est effondrée presque immédiatement, et nous avons dû repousser tous ces hommes pendant une éternité. À la fin, je me suis retrouvé seul, blessé. Alors, je suis venu ici pour dégager le chemin et recevoir les premiers soins.";
-			link.l1 = "Je vois. Eh bien, tu as fait ta part aujourd'hui. Quant à moi... J'ai échoué. Nous avons tous été trompés et montés les uns contre les autres pour l'amusement de quelqu'un—il n'y avait même pas de trésor. Et je n'étais pas le seul imbécile là-bas.";
+			link.l1 = "Je vois. Eh bien, tu as fait ta part aujourd'hui. Quant à moi... J'ai échoué. Nous avons tous été trompés et montés les uns contre les autres pour l'amusement de quelqu'un-il n'y avait même pas de trésor. Et je n'étais pas le seul imbécile là-bas.";
 			link.l1.go = "Nemezida_Knippel_10";
 		break;
 		
@@ -6444,7 +6444,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Nemezida_Knippel_12":
-            dialog.text = "Je l'ai fait. Espagnols, Hollandais—beaucoup d'autres aussi. Comme Dick me l'a dit une fois, notre service est dangereux et exigeant. Mais pourquoi demandes-tu cela? Quel est ton but?";
+            dialog.text = "Je l'ai fait. Espagnols, Hollandais-beaucoup d'autres aussi. Comme Dick me l'a dit une fois, notre service est dangereux et exigeant. Mais pourquoi demandes-tu cela? Quel est ton but?";
 			link.l1 = "Je vais expliquer. Mais d'abord, une autre question. As-tu jamais douté de ce que tu faisais et pourquoi tu le faisais, Charlie?";
 			link.l1.go = "Nemezida_Knippel_13";
 		break;

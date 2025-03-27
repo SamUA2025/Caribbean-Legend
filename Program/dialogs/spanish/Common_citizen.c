@@ -107,15 +107,6 @@ void ProcessDialogEvent()
 
                 //LinkRandPhrase("I am Captain" + GetFullName(Pchar) + ".", "My name is " + GetFullName(Pchar) + ".", "You may call me Captain " + GetFullName(Pchar));
 				Link.l1.go = "Meeting";
-				
-				//==> прибыла инспекция на Святом Милосердии
-				if (pchar.location == pchar.questTemp.SantaMisericordia.ColonyZapret + "_town")
-				{
-					dialog.Text = LinkRandPhrase(LinkRandPhrase("La ciudad entera está en vilo - ha llegado don Fernando de Alamida, el inspector real. Sabes, he visto mucho aquí, pero esto... No es la tristeza lo que cambia a las personas, sino cómo lidian con ella. Dicen que se convirtió en un hombre diferente después de la muerte de su padre. Ahora no encontrarás a un servidor más incorruptible y... despiadado de la Corona en todo el Archipiélago.","¡Solo mira el 'Santa Misericordia'! Dicen que el propio rey ordenó que se construyera según diseños especiales. Y observa - ni un solo rasguño. Como si la Virgen María misma lo protegiera. Aunque he oído rumores... tal vez no sea la Virgen en absoluto.","¿Sabes cuántas veces han intentado matar a don Fernando? ¡Doce ataques en aguas abiertas, y eso solo en el último año! Bueno, con una tripulación tan leal y entrenada, y bajo la protección del Señor, ¡sobrevivirá también al decimotercero!"),LinkRandPhrase("¿Has oído? Don Fernando de Alamida ha llegado a nuestra ciudad, y dicen que está en alguna parte de las calles en este momento. Me encantaría verlo con mis propios ojos...","Un hombre complicado, este don Fernando. Algunos dicen que es un salvador, limpiando la Madre Patria de la inmundicia. Otros susurran que algo se rompió en él después de la muerte de su padre y pronto todos estaremos llorando. Pero te diré esto: no le temas. Teme a aquellos que lo hicieron lo que es.","¡Qué hombre tan guapo, este don Fernando! ¿Pero sabes qué es extraño? Es como si no notara a nadie. Todo deber y servicio. Escuché que había una chica... pero después de encontrarse con algún cura, rechazó completamente los placeres mundanos. Como si tomara un voto."),RandPhraseSimple(RandPhraseSimple("¡Maldito inspector! Mientras él está aquí, la ciudad parece muerta. No hay comercio, no hay diversión. Incluso la respiración, parece, debe ser más silenciosa. ¿Y sabes qué es lo más aterrador? Es lo mismo en cada puerto. Como un reloj. Su Majestad Real no podría haber inventado deliberadamente esta tortura para todos nosotros.","Don Fernando visitó el orfanato de nuevo. Dona generosamente, ora durante horas. ¡Un hombre tan digno debería ser presentado como ejemplo para esos malditos estafadores!"),RandPhraseSimple("¡Ja! 'Santo' Fernando cerró todos los burdeles de nuevo. Bueno, no importa, pronto zarpará y volverán a abrir enseguida.","¡Ha llegado el ins... inspector, eso es lo que! Don Fernando de Almeyda, o, ¿cómo se llama, Alamida! Tan importante que el propio gobernador anda de puntillas a su alrededor. Dicen que te mira a los ojos y ve todos tus pecados de inmediato. ¡Aterrador!")));
-					link.l1 = "...";
-					link.l1.go = "exit";
-				}
-				//<== прибыла инспекция на Святом Милосердии
 			}
 			else
 			{

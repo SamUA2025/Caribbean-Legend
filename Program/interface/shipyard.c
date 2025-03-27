@@ -1716,8 +1716,8 @@ void SetShipOTHERTable2(string _tabName, ref _chr)
 
 void ExitShipPaintMenu() {
 	XI_WindowShow("PAINT_WINDOW", false);
-	XI_WindowDisable("PAINT_WINDOW", true);
 	XI_WindowDisable("MAIN_WINDOW", false);
+	XI_WindowDisable("PAINT_WINDOW", true);
 	XI_WindowDisable("INFO_WINDOW", false);
 	SetCurrentNode("SHIPS_SCROLL");
 	sMessageMode = "";
@@ -1726,9 +1726,9 @@ void ExitShipPaintMenu() {
 
 void ShowShipPaintMenu() {
 	// проверка что корабль есть? и свой
-	XI_WindowShow("PAINT_WINDOW", true);
-	XI_WindowDisable("PAINT_WINDOW", false);
 	XI_WindowDisable("MAIN_WINDOW", true);
+	XI_WindowDisable("PAINT_WINDOW", false);
+	XI_WindowShow("PAINT_WINDOW", true);
 	XI_WindowDisable("INFO_WINDOW", true);
 	SetCurrentNode("PAINT_CANCEL");
 	

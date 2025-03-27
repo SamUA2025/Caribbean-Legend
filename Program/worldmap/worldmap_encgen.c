@@ -334,6 +334,6 @@ void Map_TraderSucces_quest(string sChar)
 	
 	if (sChar == "LadyBeth_cap" && characters[GetCharacterIndex(sChar)].quest == "InMap")
 	{
-		//LadyBeth_ToCity(sChar);
+		LadyBeth_ToCity(sChar);
 	}
 }

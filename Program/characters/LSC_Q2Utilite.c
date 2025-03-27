@@ -491,6 +491,9 @@ void SetAlchemyRecipeKnown(string Recipe)
 
 void initStartState2Character(ref ch)
 {// метод вызывается в момент новой игры, заполняет главного героя атрибутами, чтоб убрать лишние проверки в if
+    int i;
+    string sTemp;
+
     NullCharacter.Siege = "";
     
 	ch.SystemInfo.SaveCount = 0;
@@ -535,7 +538,13 @@ void initStartState2Character(ref ch)
 	ch.MapsAtlasCount = 0;
     // ==> Найдено историй в кладах
     ch.questTemp.Treasure_Stories = 0;
-	// ==> Номер пиратского флага (берется из текстуры персональных флагов ГГ)
+    // ==> Истории в кладах
+    for(i = 1; i <= TREASURE_NOTES; i++)
+    {
+        sTemp = i; //Safe moment
+        ch.questTemp.Treasure_Stories.(sTemp) = i;
+	}
+    // ==> Номер пиратского флага (берется из текстуры персональных флагов ГГ)
 	ch.Flags.Pirate = 3;
 	// ==> работорговец
 	ch.questTemp.Slavetrader = "canTakeQuest"; //сюда же пихаем флаг

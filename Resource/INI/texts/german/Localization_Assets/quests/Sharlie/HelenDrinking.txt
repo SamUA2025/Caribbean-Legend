@@ -23,12 +23,12 @@ Rainbow
 
 HelenDrinking_6
 {
-Is that a dream? Where is everyone?
+Ist das ein Traum? Wo sind alle?
 }
 
 HelenDrinking_7
 {
-I should see Jan and apologize.
+Ich sollte Jan suchen und mich entschuldigen.
 }
 
 HelenDrinking_8
@@ -60,7 +60,7 @@ HelenDrinking_13
 
 HelenDrinking_14
 {
-And how sickening it is to have two homes. Oh, Mary... After everything that happened, what should we do now, the three of us?
+Und wie schrecklich es ist, zwei Heime zu haben. Oh, Mary... Nach allem, was passiert ist, was sollen wir jetzt tun, wir drei?
 }
 
 HelenDrinking_15
@@ -92,15 +92,15 @@ Helen disapproves
 
 HelenDrinking_21
 {
-Ironwood delivered to your hold!
+Eisenholz wurde in Ihren Laderaum geliefert!
 }
 
 HelenDrinking_22
 {
-~ got +1 to ~
+~ erhielt +1 für ~
 }
 
 HelenDrinking_23
 {
-~ got +1 to ~
+~ erhielt +1 für ~
 }

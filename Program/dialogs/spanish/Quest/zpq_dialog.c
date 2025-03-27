@@ -23,7 +23,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "zpq_sld2":
-			dialog.text = "Un momento, señor, ¿es usted "+GetFullName(pchar)+"¿?";
+			dialog.text = "Un momento, señor, ¿es usted "+GetFullName(pchar)+"?";
 			link.l1 = "Sí.. ¿Cómo puedo ayudarte??";
 			link.l1.go = "zpq_sld2_1";
 		break;

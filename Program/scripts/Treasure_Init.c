@@ -978,6 +978,7 @@ void InitTreasureTiers()
     Render.T8.Equip.hat1 = "On"; // Шляпа кондотьера
     Render.T8.Equip.hat3 = "On"; // Треуголка моряка
     Render.T8.Equip.hat7 = "On"; // Счастливая шляпа
+    Render.T8.Equip.spyglass3 = "On"; // Хорошая подзорная труба
     Render.T8.Equip.spyglass4 = "On"; // Отличная подзорная труба
 
     // = Jewelry =
@@ -1136,6 +1137,7 @@ void InitTreasureTiers()
     Render.T9.Equip.hat2 = "On"; // Шляпа кавалера
     Render.T9.Equip.hat4 = "On"; // Треуголка морского офицера
     Render.T9.Equip.hat7 = "On"; // Счастливая шляпа
+    Render.T9.Equip.spyglass3 = "On"; // Хорошая подзорная труба
     Render.T9.Equip.spyglass4 = "On"; // Отличная подзорная труба
 
     // = Jewelry =
@@ -1319,6 +1321,10 @@ void InitTreasureTiers()
     Render.T10.Jewelry.jewelry1 = "On";
     Render.T10.Jewelry.jewelry1.min = 16;
     Render.T10.Jewelry.jewelry1.dif = 15;
+    // Тинктура Ометочтли
+    Render.T10.Jewelry.berserker_potion = "On";
+    Render.T10.Jewelry.berserker_potion.min = 1;
+    Render.T10.Jewelry.berserker_potion.dif = 0;
     // Рубин
     Render.T10.Jewelry.jewelry3 = "On";
     Render.T10.Jewelry.jewelry3.min = 19;
@@ -1484,6 +1490,10 @@ void InitTreasureTiers()
     Render.T11.Jewelry.jewelry1 = "On";
     Render.T11.Jewelry.jewelry1.min = 18;
     Render.T11.Jewelry.jewelry1.dif = 18;
+    // Тинктура Ометочтли
+    Render.T11.Jewelry.berserker_potion = "On";
+    Render.T11.Jewelry.berserker_potion.min = 1;
+    Render.T11.Jewelry.berserker_potion.dif = 0;
     // Рубин
     Render.T11.Jewelry.jewelry3 = "On";
     Render.T11.Jewelry.jewelry3.min = 23;
@@ -1497,9 +1507,9 @@ void InitTreasureTiers()
     Render.T11.Jewelry.GunEchin.min = 8;
     Render.T11.Jewelry.GunEchin.dif = 9;
     // Сокровища
-    Render.T11.Jewelry.incas_collection = "On";
-    Render.T11.Jewelry.incas_collection.min = 1;
-    Render.T11.Jewelry.incas_collection.dif = 1;
+    Render.T11.Jewelry.icollection = "On";
+    Render.T11.Jewelry.icollection.min = 1;
+    Render.T11.Jewelry.icollection.dif = 1;
     // Голубой янтарь
     Render.T11.Jewelry.jewelry7 = "On";
     Render.T11.Jewelry.jewelry7.min = 6;
@@ -1638,6 +1648,7 @@ void InitTreasureTiers()
     Render.T12.Equip.hat2 = "On"; // Шляпа кавалера
     Render.T12.Equip.hat4 = "On"; // Треуголка морского офицера
     Render.T12.Equip.hat7 = "On"; // Счастливая шляпа
+    Render.T12.Equip.spyglass4 = "On"; // Отличная подзорная труба
 
     // = Jewelry =
     // Песо
@@ -1647,6 +1658,10 @@ void InitTreasureTiers()
     Render.T12.Jewelry.jewelry1 = "On";
     Render.T12.Jewelry.jewelry1.min = 20;
     Render.T12.Jewelry.jewelry1.dif = 21;
+    // Тинктура Ометочтли
+    Render.T12.Jewelry.berserker_potion = "On";
+    Render.T12.Jewelry.berserker_potion.min = 1;
+    Render.T12.Jewelry.berserker_potion.dif = 1;
     // Стрела
     Render.T12.Jewelry.harpoon = "On";
     Render.T12.Jewelry.harpoon.min = 10;
@@ -1660,9 +1675,9 @@ void InitTreasureTiers()
     Render.T12.Jewelry.grenade.min = 7;
     Render.T12.Jewelry.grenade.dif = 9;
     // Сокровища
-    Render.T12.Jewelry.incas_collection = "On";
-    Render.T12.Jewelry.incas_collection.min = 1;
-    Render.T12.Jewelry.incas_collection.dif = 1;
+    Render.T12.Jewelry.icollection = "On";
+    Render.T12.Jewelry.icollection.min = 1;
+    Render.T12.Jewelry.icollection.dif = 1;
     // Голубой янтарь
     Render.T12.Jewelry.jewelry7 = "On";
     Render.T12.Jewelry.jewelry7.min = 7;
@@ -1797,6 +1812,7 @@ void InitTreasureTiers()
     Render.T13.Equip.hat2 = "On"; // Шляпа кавалера
     Render.T13.Equip.hat4 = "On"; // Треуголка морского офицера
     Render.T13.Equip.hat7 = "On"; // Счастливая шляпа
+    Render.T13.Equip.spyglass4 = "On"; // Отличная подзорная труба
 
     // = Jewelry =
     // Песо
@@ -1806,6 +1822,10 @@ void InitTreasureTiers()
     Render.T13.Jewelry.cannabis7 = "On";
     Render.T13.Jewelry.cannabis7.min = 1;
     Render.T13.Jewelry.cannabis7.dif = 2;
+    // Тинктура Ометочтли
+    Render.T13.Jewelry.berserker_potion = "On";
+    Render.T13.Jewelry.berserker_potion.min = 1;
+    Render.T13.Jewelry.berserker_potion.dif = 1;
     // Стрела
     Render.T13.Jewelry.harpoon = "On";
     Render.T13.Jewelry.harpoon.min = 12;
@@ -1819,9 +1839,9 @@ void InitTreasureTiers()
     Render.T13.Jewelry.grenade.min = 9;
     Render.T13.Jewelry.grenade.dif = 11;
     // Сокровища
-    Render.T13.Jewelry.incas_collection = "On";
-    Render.T13.Jewelry.incas_collection.min = 1;
-    Render.T13.Jewelry.incas_collection.dif = 1;
+    Render.T13.Jewelry.icollection = "On";
+    Render.T13.Jewelry.icollection.min = 1;
+    Render.T13.Jewelry.icollection.dif = 1;
     // Голубой янтарь
     Render.T13.Jewelry.jewelry7 = "On";
     Render.T13.Jewelry.jewelry7.min = 8;
@@ -1953,6 +1973,7 @@ void InitTreasureTiers()
     Render.T14.Equip.hat2 = "On"; // Шляпа кавалера
     Render.T14.Equip.hat4 = "On"; // Треуголка морского офицера
     Render.T14.Equip.hat7 = "On"; // Счастливая шляпа
+    Render.T14.Equip.spyglass4 = "On"; // Отличная подзорная труба
 
     // = Jewelry =
     // Песо
@@ -1979,9 +2000,9 @@ void InitTreasureTiers()
     Render.T14.Jewelry.grenade.min = 11;
     Render.T14.Jewelry.grenade.dif = 13;
     // Сокровища
-    Render.T14.Jewelry.incas_collection = "On";
-    Render.T14.Jewelry.incas_collection.min = 2;
-    Render.T14.Jewelry.incas_collection.dif = 2;
+    Render.T14.Jewelry.icollection = "On";
+    Render.T14.Jewelry.icollection.min = 2;
+    Render.T14.Jewelry.icollection.dif = 2;
     // Голубой янтарь
     Render.T14.Jewelry.jewelry7 = "On";
     Render.T14.Jewelry.jewelry7.min = 9;
@@ -2088,16 +2109,6 @@ void InitTreasureTiers()
     Render.T14.Special.amulet_6 = "On";
     Render.T14.Special.amulet_6.min = 2;
     Render.T14.Special.amulet_6.dif = 1;
-    // Яд индейцев таино
-    Render.SingleTreasure.indian_poison = "";
-    Render.T14.Special.indian_poison = "On";
-    Render.T14.Special.indian_poison.min = 1;
-    Render.T14.Special.indian_poison.dif = 0;
-    // Шкура ягуара
-    Render.SingleTreasure.KhaelRoa_item = "";
-    Render.T14.Special.KhaelRoa_item = "On";
-    Render.T14.Special.KhaelRoa_item.min = 1;
-    Render.T14.Special.KhaelRoa_item.dif = 0;
     // Адмиральские карты
     Render.T14.Special.map_a = "On";
     Render.T14.Special.map_a.min = 1;
@@ -2148,9 +2159,9 @@ void InitTreasureTiers()
     Render.T15.Jewelry.grenade.min = 13;
     Render.T15.Jewelry.grenade.dif = 15;
     // Сокровища
-    Render.T15.Jewelry.incas_collection = "On";
-    Render.T15.Jewelry.incas_collection.min = 3;
-    Render.T15.Jewelry.incas_collection.dif = 3;
+    Render.T15.Jewelry.icollection = "On";
+    Render.T15.Jewelry.icollection.min = 3;
+    Render.T15.Jewelry.icollection.dif = 3;
     // Голубой янтарь
     Render.T15.Jewelry.jewelry7 = "On";
     Render.T15.Jewelry.jewelry7.min = 10;
@@ -2257,16 +2268,6 @@ void InitTreasureTiers()
     Render.T15.Special.amulet_6 = "On";
     Render.T15.Special.amulet_6.min = 2;
     Render.T15.Special.amulet_6.dif = 1;
-    // Яд индейцев таино
-    //Render.SingleTreasure.indian_poison = "";
-    Render.T15.Special.indian_poison = "On";
-    Render.T15.Special.indian_poison.min = 1;
-    Render.T15.Special.indian_poison.dif = 0;
-    // Шкура ягуара
-    //Render.SingleTreasure.KhaelRoa_item = "";
-    Render.T15.Special.KhaelRoa_item = "On";
-    Render.T15.Special.KhaelRoa_item.min = 1;
-    Render.T15.Special.KhaelRoa_item.dif = 0;
     // Адмиральские карты
     Render.T15.Special.map_a = "On";
     Render.T15.Special.map_a.min = 2;
@@ -2275,56 +2276,49 @@ void InitTreasureTiers()
 
 void InitTreasureTiers_Additions(bool SandBoxMode)
 {
-    if(SandBoxMode) // Фриплей
+    // Общие уникальные сокровища
+    SetSingleItemToTiers(14, 15, "Special", "indian_poison"); // Яд индейцев таино
+    SetSingleItemToTiers(14, 15, "Special", "KhaelRoa_item"); // Шкура ягуара
+
+    // Фриплейные уникальные сокровища
+    if(SandBoxMode)
     {
         // Костюм Лампорта
-        Render.T8.Equip.suit4 = "On";
-        Render.T9.Equip.suit4 = "On";
-        Render.T10.Equip.suit4 = "On";
-        Render.SingleTreasure.suit4 = "";
+        SetSingleItemToTiers(8, 10, "Equip", "suit4");
         // Водолазный скафандр
-        Render.T15.Equip.underwater = "On";
-        Render.SingleTreasure.underwater = "";
+        SetSingleItemToTiers(15, 15, "Equip", "underwater");
         // Мальтийский меч
         Render.T15.Equip.blade_36 = "On";
         // Танат
         Render.T15.Equip.blade_32 = "On";
         // Катана
-        Render.T11.Equip.blade_28 = "On";
-        Render.T12.Equip.blade_28 = "On";
-        Render.T13.Equip.blade_28 = "On";
-        Render.T14.Equip.blade_28 = "On";
-        Render.SingleTreasure.blade_28 = "";
+        SetSingleItemToTiers(11, 14, "Equip", "blade_28");
         // Цзянь
-        Render.T14.Equip.blade_41 = "On";
-        Render.T15.Equip.blade_41 = "On";
-        Render.SingleTreasure.blade_41 = "";
+        SetSingleItemToTiers(14, 15, "Equip", "blade_41");
         // Мария
-        Render.T14.Equip.knife_02 = "On";
-        Render.T15.Equip.knife_02 = "On";
-        Render.SingleTreasure.knife_02 = "";
+        SetSingleItemToTiers(14, 15, "Equip", "knife_02");
         // Охотничий штуцер
-        Render.T13.Equip.Mushket2x2 = "On";
-        Render.T14.Equip.Mushket2x2 = "On";
-        Render.SingleTreasure.Mushket2x2 = "";
+        SetSingleItemToTiers(13, 14, "Equip", "Mushket2x2");
         // Револьвер Кольта
-        Render.T15.Equip.pistol7 = "On";
-        Render.SingleTreasure.pistol7 = "";
+        SetSingleItemToTiers(15, 15, "Equip", "pistol7");
         // Корабельный телескоп
-        Render.T14.Equip.spyglass5 = "On";
-        Render.T15.Equip.spyglass5 = "On";
-        Render.SingleTreasure.spyglass5 = "";
+        SetSingleItemToTiers(14, 15, "Equip", "spyglass5");
+        // Инструкция по изготовлению ежового заряда
+        SetSingleItemToTiers(10, 15, "Jewelry", "recipe_GunEchin");
+        // Пулелейка
+        SetSingleItemToTiers(15, 15, "Jewelry", "Mineral32");
+        // Тигель
+        SetSingleItemToTiers(15, 15, "Jewelry", "Tigel");
+        // Учебник химии Лавуазье
+        SetSingleItemToTiers(15, 15, "Jewelry", "chemistry");
+        // Отличная карта
+        SetSingleItemToTiers(15, 15, "Special", "Map_Best");
         // Работающий секстант
-        Render.T15.Special.sextant2 = "On";
-        Render.T15.Special.sextant2.min = 1;
-        Render.T15.Special.sextant2.dif = 0;
-        Render.SingleTreasure.sextant2 = "";
+        SetSingleItemToTiers(15, 15, "Special", "sextant2");
     }
-    else // Сюжет
-    {
-        
-    }
-    if(GetDLCenabled(DLC_APPID_1)) // DLC
+
+    // Сокровища из DLC
+    if(GetDLCenabled(DLC_APPID_1))
     {
         // Золотой орёл
         Render.T11.Equip.pistol10 = "On";
@@ -2332,4 +2326,22 @@ void InitTreasureTiers_Additions(bool SandBoxMode)
         Render.T13.Equip.pistol10 = "On";
         Render.T14.Equip.pistol10 = "On";
     }
+}
+
+void SetSingleItemToTiers(int min, int max, string sType, string sItem)
+{
+    int i;
+    string sTemp;
+    bool bVar = (sType != "Equip");
+    for(i = min; i <= max; i++)
+    {
+        sTemp = "T" + i;
+        Render.(sTemp).(sType).(sItem) = "On";
+        if(bVar)
+        {
+            Render.(sTemp).(sType).(sItem).min = 1;
+            Render.(sTemp).(sType).(sItem).dif = 0;
+        }
+    }
+    Render.SingleTreasure.(sItem) = "";
 }

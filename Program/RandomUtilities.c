@@ -20,6 +20,22 @@ float uniform_angle(float left, float right)
   return uniform(PI * left / 180.0, PI * right / 180.0);
 }
 
+aref GetRandomAttr(aref Lottery)
+{
+    ref TEV = &Render;
+
+    aref aError;
+    makearef(aError, TEV.Error);
+    int num = GetAttributesNum(Lottery);
+    if (num == 0) return aError;
+    return GetAttributeN(Lottery, rand(num-1));
+}
+
+string GetRandomAttrName(aref Lottery)
+{
+    return GetAttributeName(GetRandomAttr(Lottery));
+}
+
 //  Из Новых Горизонтов:
 //  Return a normally distributed random number with specified mean and standard deviation
 //  68% of samples will be within 1 stdev of mean, 95% within 2 stdev's, 99% within 3 stdev's.
@@ -342,8 +358,8 @@ void InitWeightParameters()
 {
     ref LTR = &Render;
 
-    int i;
-    string sTemp;
+    int i, j;
+    string sTemp, sVar;
 
     // Карты сокровищ
     for(i = 1; i <= 15; i++)
@@ -351,5 +367,15 @@ void InitWeightParameters()
         sTemp = "T" + i;
         LTR.TresuareMapTier.(sTemp) = i;
         LTR.TresuareMapTier.(sTemp).weight = 10;
+    }
+    // Описания карт сокровищ (shuffle bag)
+    for(i = 1; i <= 3; i++)
+    {
+        sTemp = "T" + i;
+        for(j = 1; j <= 3; j++)
+        {
+            sVar = "v" + j;
+            LTR.TresuareMapDescribe.(sTemp).(sVar) = j;
+        }
     }
 }

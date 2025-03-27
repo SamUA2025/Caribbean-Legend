@@ -3000,45 +3000,47 @@ void InitShips()
 	refship.Track2.Width	= "6.0, 8.0";
 	refship.Track2.Speed	= "0.15, 0.25";
 	
-	// --> квестовые корабли - заглушки
+	
 	///////////////////////////////////////////////////////////////////////////
-	//// квестовый корабль №3 - 4-ый класс
+	//// Военная шнява "Леди Бет" - 4-ый класс
 	///////////////////////////////////////////////////////////////////////////
-	makeref(refShip,ShipsTypes[SHIP_QUEST3]);
-	refShip.Name            			= "QuestShip3";
+	makeref(refShip,ShipsTypes[SHIP_LADYBETH]);
+	refShip.Name            			= "LadyBeth";
 	refship.Soundtype					= "corvette";
 	refShip.Class						= 4;
-	refShip.Cannon          			= CANNON_TYPE_CANNON_LBS16;
-	refShip.MaxCaliber      			= 18;	
-	refShip.Weight						= Tonnes2CWT(320);	
-	refShip.Capacity        			= 1800;
-	refShip.CannonsQuantity				= 16; // 2,0,7,7	2,0,6,6
-	refShip.CannonsQuantityMin			= 14;
-	refShip.rcannon 					= 7;
-	refShip.lcannon 					= 7;
+	refShip.Cannon          			= CANNON_TYPE_CANNON_LBS24;
+	refShip.MaxCaliber      			= 24;	
+	refShip.Weight						= Tonnes2CWT(386);	
+	refShip.Capacity        			= 2630;
+	refShip.CannonsQuantity				= 20; // 9,9,2,0
+	refShip.CannonsQuantityMin			= 20;
+	refShip.rcannon 					= 9;
+	refShip.lcannon 					= 9;
 	refShip.fcannon 					= 2;
 	refShip.bcannon 					= 0;		
-	refShip.MaxCrew         			= 175;
-	refShip.OptCrew         			= 140;
-	refShip.MinCrew         			= 16;	
-	refShip.SpeedRate       			= 14.0;
-	refShip.TurnRate        			= 50.0;
-	refShip.Price           			= 33900;
-	refShip.HP              			= 2800;
+	refShip.MaxCrew         			= 190;
+	refShip.OptCrew         			= 152;
+	refShip.MinCrew         			= 22;	
+	refShip.SpeedRate       			= 14.5;
+	refShip.TurnRate        			= 52.0;
+	refShip.Price           			= 42000;
+	refShip.HP              			= 2430;
 	refShip.SP              			= 100;
 
-	refship.Type.Merchant				= false;
-	refship.Type.War					= true;	
+	refship.Type.Merchant				= true;
+	refship.Type.War					= true;
+	refship.QuestShip                   = true;
+	
 	refShip.lowpolycrew 				= 12;
 
 	refship.Rocking.y 					= 0.5;
 	refship.Rocking.az 					= 0.04;
 	
-	refship.WaterLine					= 0.0;
+	refship.WaterLine					= 0.8;
 	refship.SpeedDependWeight			= 0.27;
 	refship.SubSeaDependWeight			= 0.6;
 	refship.TurnDependWeight			= 0.3;
-	refship.WindAgainstSpeed   			= 1.40;
+	refship.WindAgainstSpeed   			= 1.20;
 	
 	refship.CabinType          			= "Cabin_Medium"; 
 
@@ -3067,13 +3069,7 @@ void InitShips()
 	refship.Track2.Width	= "4.0, 6.0";
 	refship.Track2.Speed	= "0.15, 0.25";
 	
-	refship.nation.england	= false;
-	refship.nation.france	= false
-	refship.nation.spain	= true;;
-	refship.nation.holland	= false;
-	refship.nation.pirate	= true;
-	
-		
+	// --> квестовые корабли - заглушки
 	///////////////////////////////////////////////////////////////////////////
 	//// квестовый корабль №4 - 3-ый класс
 	///////////////////////////////////////////////////////////////////////////

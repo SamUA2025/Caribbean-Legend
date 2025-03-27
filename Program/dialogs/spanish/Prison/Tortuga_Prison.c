@@ -27,7 +27,7 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 		
 		case "tonzag_bail_b":
 			dialog.text = " Sé   bastante   sobre   lo   que   pasó.   Repito   la   pregunta.";
-			link.l1 = "Entendido, перевод будет выполнен в соответствии с указанными инструкциями.";
+			link.l1 = "";
 			link.l1.go = "tonzag_bail_1";
 		break;
 		
@@ -183,7 +183,7 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 		break;
 		
 		case "tonzag_bailed":
-			dialog.text = "Принято, если у тебя есть текст для перевода, пожалуйста, предоставь его, и я переведу его с английского на испанский.";
+			dialog.text = "";
 			link.l1 = "Los fondos están depositados. ¿Dónde está Hercule?";
 			link.l1.go = "tonzag_bailed_1";
 		break;

@@ -1405,7 +1405,7 @@ void ProcessDialogEvent()
 			idaysQty = GetMaxDaysFromIsland2Island(GetArealByCityName(pchar.questTemp.WPU.Escort.StartCity), GetArealByCityName(pchar.questTemp.WPU.Escort.City));
 			pchar.questTemp.WPU.Escort.DaysQty = makeint(sti(idaysQty)*(frand(0.5)+1)); 
 			pchar.questTemp.WPU.Escort.Money = (sti(idaysQty)*2000)*sti(idaysQty)/sti(pchar.questTemp.WPU.Escort.DaysQty)*(1+frand(0.2));
-			dialog.text = "Więc, będziesz musiał eskortować statki '"+pchar.questTemp.WPU.Escort.ShipName1+"„' i '”"+pchar.questTemp.WPU.Escort.ShipName2+" do miasta "+XI_ConvertString("Colony"+pchar.questTemp.WPU.Escort.City)+", dla "+FindRussianDaysString(pchar.questTemp.WPU.Escort.DaysQty)+". Zapłata - "+FindRussianMoneyString(sti(pchar.questTemp.WPU.Escort.Money))"Oba statki muszą dotrzeć do celu bezpiecznie i w całości. Przekażesz statki urzędnikowi miejscowej władzy portowej. On również zapłaci ci za tę robotę.";
+			dialog.text = "Więc, będziesz musiał eskortować statki '"+pchar.questTemp.WPU.Escort.ShipName1+"„' i ''"+pchar.questTemp.WPU.Escort.ShipName2+" do miasta "+XI_ConvertString("Colony"+pchar.questTemp.WPU.Escort.City)+", dla "+FindRussianDaysString(pchar.questTemp.WPU.Escort.DaysQty)+". Zapłata - "+FindRussianMoneyString(sti(pchar.questTemp.WPU.Escort.Money))"Oba statki muszą dotrzeć do celu bezpiecznie i w całości. Przekażesz statki urzędnikowi miejscowej władzy portowej. On również zapłaci ci za tę robotę.";
 			link.l1 = "Wszystko wydaje się jasne. Czy mam kontynuować?";
 			link.l1.go = "escort_1";
 			link.l2 = "Hmm... Ale nie idę w tamtą stronę. Przykro mi, ale muszę odmówić.";
@@ -3697,6 +3697,11 @@ void ProcessDialogEvent()
 				link.l1 = "Galera 'Święta Łaska'.";
 				link.l1.go = "UniqueShips_SantaMisericordia";
 			}
+			if (GetDLCenabled(DLC_APPID_5) && !CheckAttribute(pchar, "questTemp.LadyBeth_InfoPU") && CharacterIsAlive("LadyBeth_cap"))
+			{
+				link.l2 = "Szniawa patrolowa 'Lady Beth'.";
+				link.l2.go = "UniqueShips_LadyBeth";
+			}
 			link.l99 = "Myślę, że wiem wystarczająco.";
 			link.l99.go = "node_2";
 		break;
@@ -3705,7 +3710,16 @@ void ProcessDialogEvent()
 			AddMoneyToCharacter(pchar, -25000);
 			AddQuestRecordInfo("LegendaryShips", "1");
 			pchar.questTemp.SantaMisericordia_InfoPU = true;
-			dialog.text = "„Święta Łaska została wysłana przez Escorial z Europy, aby nadzorować hiszpańskie kolonie. Jej kapitan, Don Alamida, jest znanym sługą hiszpańskiej korony, bezwzględnym wojownikiem przeciw korupcji i zbrodni oraz żarliwym wyznawcą wiary katolickiej. Święta Łaska krąży między koloniami, zaczynając i kończąc swoją podróż w Hawanie, skupiając się wyłącznie na swojej misji.\nW każdym porcie Alamida spędza kilka dni, czasem dłużej. Mówią, że w tych czasach można go nawet spotkać na ulicy, ale miejscowi nie są szczególnie chętni na takie spotkania - w Hiszpanach señor wzbudza tylko strach i podziw.\nŚwięta Łaska ma doświadczoną i lojalną załogę, osobiście wybraną przez Alamidę. Każdy marynarz jest gotów bronić swej Ojczyzny i kapitana swoim życiem. Mówią, że Don Fernando nakazał, aby Święta Łaska nigdy nie została zdobyta, a są szmery, że gdyby załoga stanęła przed nieprzezwyciężonymi przeszkodami podczas abordażu, prędzej posłałaby statek na dno, niż pozwoliła go zdobyć.”";
+			dialog.text = "„Święta Łaska została wysłana przez Escorial z Europy, aby nadzorować hiszpańskie kolonie. Jej kapitan, Don Alamida, jest znanym sługą hiszpańskiej korony, bezwzględnym wojownikiem przeciw korupcji i zbrodni oraz żarliwym wyznawcą wiary katolickiej. Święta Łaska krąży między koloniami, zaczynając i kończąc swoją podróż w Hawanie, skupiając się wyłącznie na swojej misji.\nW każdym porcie Alamida spędza kilka dni, czasem dłużej. Mówią, że w tych czasach można go nawet spotkać na ulicy, ale miejscowi nie są szczególnie chętni na takie spotkania - w Hiszpanach señor wzbudza tylko strach i podziw.\nŚwięta Łaska ma doświadczoną i lojalną załogę, osobiście wybraną przez Alamidę. Każdy marynarz jest gotów bronić swej Ojczyzny i kapitana swoim życiem. Mówią, że Don Fernando nakazał, aby Święta Łaska nigdy nie została zdobyta, a są szmery, że gdyby załoga stanęła przed nieprzezwyciężonymi przeszkodami podczas abordażu, prędzej posłałaby statek na dno, niż pozwoliła go zdobyć.'";
+			link.l1 = "Dziękuję bardzo.";
+			link.l1.go = "node_2";
+		break;
+		
+		case "UniqueShips_LadyBeth":
+			AddMoneyToCharacter(pchar, -25000);
+			AddQuestRecordInfo("LegendaryShips", "2");
+			pchar.questTemp.LadyBeth_InfoPU = true;
+			dialog.text = "'Lady Beth' to prawdziwa piękność. Cud brytyjskiej inżynierii morskiej pod dowództwem Alberta Blackwooda, byłego oficera Royal Navy. Nie każdemu udaje się zdezerterować w tak spektakularny sposób! Opuścił służbę, zniszczył świetną karierę i ukradł okręt wojenny - wszystko dla poszukiwania skarbów!\nI słusznie. Już znalazł tyle, że mógłby kupić połowę Barbadosu, ale wciąż mu mało. Jeśli spotkasz go na morzu - nawet nie próbuj go przechwycić. Zbyt dobry statek, a kapitan doświadczony i ostrożny\nOstatnio Blackwood często bywa na Kajmanach - kopie tam dniami i nocami, wykańczając ludzi. Jeśli chcesz to sprawdzić - zabierz co najmniej 60 ludzi i dobrą broń palną... Choć może i to nie wystarczy. Mam nadzieję, że potrafisz strzelać, bo wraz z nim zdezerterowała kompania byłych marines pułkownika Foxa\nProfesjonaliści, nie byle rzezimieszki. I nigdy nie atakuj go we francuskich portach - tam ma ochronę i protektorów, którzy czerpią z jego znalezisk zyski.";
 			link.l1 = "Dziękuję bardzo.";
 			link.l1.go = "node_2";
 		break;

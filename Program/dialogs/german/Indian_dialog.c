@@ -30,7 +30,7 @@ void ProcessDialogEvent()
 		// ==> индейцы в поселении
 		case "IndianMan":
 			NextDiag.TempNode = "IndianMan";
-			dialog.text = NPCStringReactionRepeat(""+GetSexPhrase("Bleichgesicht","Weißes Weib")+" will reden?","Du schon wieder, "+GetSexPhrase("Bleichgesicht","Weißes Squaw")+".",""+GetSexPhrase("Bleichgesicht mag das Reden. Er sieht aus wie eine Squaw.","Die weiße Squaw redet gern.")+"","Geister brachten mein bleichgesicht "+GetSexPhrase("Bruder","Schwester")+" zu mir.","Block",1,npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat(""+GetSexPhrase("Bleichgesicht","Weißes Weib")+" will reden?","Du schon wieder, "+GetSexPhrase("Bleichgesicht","Weißes Squaw")+".",""+GetSexPhrase("Bleichgesicht mag das Reden. Er sieht aus wie eine Squaw.","Die weiße Squaw redet gern.")+"","Geister brachten mein bleichgesicht "+GetSexPhrase("Bruder","Schwester")+" zu mir.","block",1,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Ja.","Ja, ich schon wieder.","Sehr poetisch.","Ich freue mich auch, dich zu sehen.",npchar,Dialog.CurrentNode);
 			link.l1.go = "IndPearlMan_1";
 		break;
@@ -43,7 +43,7 @@ void ProcessDialogEvent()
 		
 		case "IndianWoman":
 			NextDiag.TempNode = "IndianWoman";
-			dialog.text = NPCStringReactionRepeat("Weißer Mann will reden?","Du schon wieder, Bleichgesicht?","Bleichgesicht spricht gerne.","Geister haben meinen bleichgesichtigen Bruder zu mir gebracht.","Block",1,npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat("Weißer Mann will reden?","Du schon wieder, Bleichgesicht?","Bleichgesicht spricht gerne.","Geister haben meinen bleichgesichtigen Bruder zu mir gebracht.","block",1,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Ja.","Ja, ich schon wieder.","Sehr poetisch.","Ich freue mich auch, dich zu sehen.",npchar,Dialog.CurrentNode);
 			link.l1.go = "IndianWoman_1";
 		break;
@@ -226,7 +226,7 @@ void ProcessDialogEvent()
 			GiveItem2Character(pchar, "indian_7");
 			GiveItem2Character(pchar, "obereg_3");
 			dialog.text = "Oh-ey! Was für eine hübsche bleiche Waffe! Kumwana akzeptiert dein Geschenk! Du auch, Sohn des Meeres, akzeptiere ein Geschenk von Kumwana und dem Locono Volk.";
-			link.l1 = "Dankbarkeit, Häuptling!..";
+			link.l1 = "Ich bedanke mich, Häuptling!..";
 			link.l1.go = "cumvana_3";
 		break;
 		
@@ -239,7 +239,7 @@ void ProcessDialogEvent()
 			GiveItem2Character(pchar, "indian_6");
 			GiveItem2Character(pchar, "obereg_1");
 			dialog.text = "Oh-ey! Magisches Amulett der bleichgesichter! Kumwana akzeptiert dein Geschenk! Du auch, Sohn des Meeres, akzeptiere ein Geschenk von Kumwana und dem Locono Volk.";
-			link.l1 = "Dankbarkeit, Hauptmann!..";
+			link.l1 = "Ich bedanke mich, Hauptmann!..";
 			link.l1.go = "cumvana_3";
 		break;
 		
@@ -252,7 +252,7 @@ void ProcessDialogEvent()
 			GiveItem2Character(pchar, "indian_5");
 			GiveItem2Character(pchar, "obereg_1");
 			dialog.text = "Oh-ey! Magische Röhre der Bleichgesichter! Kumwana akzeptiert dein Geschenk! Du auch, Sohn des Meeres, akzeptiere ein Geschenk von Kumwana und dem Locono Volk.";
-			link.l1 = "Dankbarkeit, Häuptling!..";
+			link.l1 = "Ich bedanke mich, Häuptling!..";
 			link.l1.go = "cumvana_3";
 		break;
 		
@@ -265,7 +265,7 @@ void ProcessDialogEvent()
 			GiveItem2Character(pchar, "indian_6");
 			GiveItem2Character(pchar, "obereg_1");
 			dialog.text = "Oh-ey! Magische Röhre der Bleichgesichter! Kumwana akzeptiert dein Geschenk! Du auch, Sohn des Meeres, akzeptiere ein Geschenk von Kumwana und dem Locono Volk.";
-			link.l1 = "Dankbarkeit, Häuptling!..";
+			link.l1 = "Ich bedanke mich, Häuptling!..";
 			link.l1.go = "cumvana_3";
 		break;
 		
@@ -278,7 +278,7 @@ void ProcessDialogEvent()
 			GiveItem2Character(pchar, "indian_7");
 			GiveItem2Character(pchar, "obereg_5");
 			dialog.text = "Oh-ey! Magische Röhre der Bleichgesichter! Kumwana nimmt dein Geschenk an! Auch du, Sohn des Meeres, nimm ein Geschenk von Kumwana und dem Volk der Locono an.";
-			link.l1 = "Dankbarkeit, Häuptling!..";
+			link.l1 = "Ich bedanke mich, Häuptling!..";
 			link.l1.go = "cumvana_3";
 		break;
 		
@@ -296,7 +296,7 @@ void ProcessDialogEvent()
 		
 		case "cumvana_5":
 			dialog.text = "Sehr gut, Sohn des Meeres. Ich werde einen Kreis von Kriegern versammeln und ihnen von deinen Wünschen erzählen. Sieh mich morgen nach der Morgendämmerung.";
-			link.l1 = "Dankbarkeit, Chef!";
+			link.l1 = "Ich bedanke mich, Chef!";
 			link.l1.go = "cumvana_6";
 		break;
 		
@@ -491,7 +491,7 @@ void ProcessDialogEvent()
 			dialog.text = "Nein, yalanaui. Der bleiche Gesicht hält nie sein Wort. Der bleiche Gesicht spricht - und das Wort fliegt sofort in die Leere. Die Kapong werden Tagofa töten und dann zu unserem Dorf kommen, die Lokono töten.";
 			link.l1 = "Glaubst du, dass diese Kapongs alles sind, worum du dich sorgen musst? Du liegst sehr falsch...";
 			link.l1.go = "hayamee_bad_4";
-			if (stf(pchar.questTemp.Indian.relation) < 40.0) notification("The Indians don't respect you "+stf(pchar.questTemp.Indian.relation)+"/40", "None");
+			if (stf(pchar.questTemp.Indian.relation) < 40.0) notification("Die Indianer respektieren dich nicht "+stf(pchar.questTemp.Indian.relation)+"/40", "None");
 			if (!IsCharacterPerkOn(pchar, "Trustworthy")) notification("Perk Check Failed", "Trustworthy");
 		break;
 		
@@ -517,7 +517,7 @@ link.l1.go = "hayamee_1_1";
 			dialog.text = "Lokono vertrauen den Yalanaui nicht. Yalanaui täuschen den Indianer, machen den Indianer zum Sklaven. Aber Lokono hört deinen Namen, Bleichgesicht. Mein Vertrauen gehört dir. Komm morgen nach Sonnenuntergang, Sohn des Meeres. Ich werde bei Tagofa in dieser Hütte sein. Ich werde ihn fragen, ob er mit dir gehen wird oder nicht.";
 			link.l1 = "Sag Tagofa, dass ich ihm meine schönste Pistole geben werde. Und für dich habe ich viele Juwelen.";
 			link.l1.go = "hayamee_2";
-			notification("The Indians respect you "+stf(pchar.questTemp.Indian.relation)+"/40", "None");
+			notification("Die Indianer respektieren dich "+stf(pchar.questTemp.Indian.relation)+"/40", "None");
 			notification("Trustworthy", "Trustworthy");
 		break;
 		
@@ -649,7 +649,7 @@ link.l1.go = "hayamee_1_1";
 			
 		case "CitizenNotBlade":
 			dialog.text = "Stecke deine Waffe weg, Bleichgesicht, oder wir zwingen dich dazu!";
-			link.l1 = LinkRandPhrase("Gut.","Gut.","Mach dir keine Sorgen, ich räume es weg...");
+			link.l1 = LinkRandPhrase("Gut.","Gut.","Mach dir keine Sorgen, ich stecke es weg...");
 			link.l1.go = "exit";
 		break;  
 

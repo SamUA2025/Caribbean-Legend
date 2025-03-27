@@ -20,38 +20,8 @@ void ProcessDialogEvent()
 		break;
 		
 		case "":
-			dialog.text = "Entendido. Пожалуйста, предоставьте текст для перевода.";
-			link.l1 = "";
-			link.l1.go = "";			
-		break;
-		
-		case "":
-			dialog.text = "Hola, Capitán.";
-			link.l1 = "Entendido. Пожалуйста, предоставьте английский текст для перевода.";
-			link.l1.go = "";			
-		break;
-		
-		case "":
 			dialog.text = "";
-			link.l1 = "Entendido. Вышлите текст для перевода.";
-			link.l1.go = "";			
-		break;
-		
-		case "":
-			dialog.text = "Hola, Amigo.";
 			link.l1 = "";
-			link.l1.go = "";			
-		break;
-		
-		case "":
-			dialog.text = "Понял. Пожалуйста, предоставьте текст для перевода.";
-			link.l1 = " ";
-			link.l1.go = "";			
-		break;
-		
-		case "":
-			dialog.text = " ";
-			link.l1 = "Entendido. Пожалуйста, предоставьте текст для перевода.";
 			link.l1.go = "";			
 		break;
 		
@@ -62,14 +32,44 @@ void ProcessDialogEvent()
 		break;
 		
 		case "":
-			dialog.text = "Entendido, я переведу текст, если он будет предоставлен.";
+			dialog.text = "";
 			link.l1 = "";
 			link.l1.go = "";			
 		break;
 		
 		case "":
-			dialog.text = "Hola, Amigo.";
-			link.l1 = "Entendido. Por favor, предоставьте текст для перевода.";
+			dialog.text = "";
+			link.l1 = "";
+			link.l1.go = "";			
+		break;
+		
+		case "":
+			dialog.text = "";
+			link.l1 = "";
+			link.l1.go = "";			
+		break;
+		
+		case "":
+			dialog.text = "";
+			link.l1 = "";
+			link.l1.go = "";			
+		break;
+		
+		case "":
+			dialog.text = "";
+			link.l1 = "";
+			link.l1.go = "";			
+		break;
+		
+		case "":
+			dialog.text = "";
+			link.l1 = "";
+			link.l1.go = "";			
+		break;
+		
+		case "":
+			dialog.text = "";
+			link.l1 = "";
 			link.l1.go = "";			
 		break;
 		

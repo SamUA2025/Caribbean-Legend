@@ -31,8 +31,8 @@ void ProcessDialogEvent()
 				bool bOk1 = (pchar.questTemp.HWIC.Detector == "holl_win") || (pchar.questTemp.HWIC.Detector == "eng_win") || (pchar.questTemp.HWIC.Detector == "self_win") || SandBoxMode;
 				if (sti(pchar.rank) > 6 && npchar.location == "PortSpein_tavern" && !CheckAttribute(npchar, "quest.Consumption")  && bOk1)
 				{
-					dialog.text = "¿Qué deseas, señor? Lo siento, solo estoy...'llora'... oh... Lo siento.";
-					link.l1 = "¿Por qué estás tan molesta, mi señora? ¿Lágrimas en una cara tan hermosa? ¿Qué ha sucedido?";
+					dialog.text = "¿Qué desea, señor? Lo siento, solo estoy...'llora'... oh... Lo siento.";
+					link.l1 = "¿Por qué estás tan molesta, señorita? ¿Lágrimas en una cara tan hermosa? ¿Qué ha sucedido?";
 					link.l1.go = "Consumption";
 					break;
 				}
@@ -44,9 +44,9 @@ void ProcessDialogEvent()
             {
 				DelMapQuestMarkCity("PortPax");
 				DelLandQuestMark(npchar);
-				PlaySound("Voice\English\Enc_RapersGirl_1.wav");
+				PlaySound("Voice\Spanish\Enc_RapersGirl_1.wav");
 				dialog.text = "¡Señor! ¡Señor, ayuda! ¡Asesinato!";
-				link.l1 = "¿Eh? ¿Asesinando a quién? ¿Dónde? ¿Es esto una broma, mi querido?";
+				link.l1 = "¿Eh? ¿Asesinato? ¿Dónde? ¿Es esto una broma, señorita?";
 				link.l1.go = "FMQP";
 				break;
 			}
@@ -55,14 +55,14 @@ void ProcessDialogEvent()
 			{
 				if (pchar.questTemp.different == "FackWaitress_toRoom" || pchar.questTemp.different == "FackWaitress_toRoomUp")
 				{
-					dialog.text = "Te he pedido que subas. No te quedes aquí y atraigas atención.";
+					dialog.text = "Te he pedido que subas. No te quedes aquí llamando la atención.";
 					link.l1 = "Bien, me voy, no quiero comprometerte...";
 					link.l1.go = "exit";
 				}
 				if (pchar.questTemp.different == "FackWaitress_noMoney" || pchar.questTemp.different == "FackWaitress_fighted")
 				{
-					dialog.text = "Soy nuevo aquí, así que por favor, no me distraigas de mi trabajo. Todavía no me acostumbro...";
-					link.l1 = "¿Y dónde está la camarera que trabajaba aquí antes que tú? "+pchar.questTemp.different.FackWaitress.Name+", como recuerdo...";
+					dialog.text = "Soy nueva aquí, así que por favor, no me distraigas de mi trabajo. Todavía no me acostumbro...";
+					link.l1 = "¿Y dónde está la camarera que trabajaba aquí antes que tú? "+pchar.questTemp.different.FackWaitress.Name+", creo recordar...";
 					link.l1.go = "Love_IDN";
 				}
 				if (pchar.questTemp.different == "FackWaitress_facking")
@@ -82,14 +82,14 @@ void ProcessDialogEvent()
 		    switch (Rand(4))
 			{
 				case 0:
-					dialog.text = "Lo siento, "+GetSexPhrase("guapo","belleza")+", Estoy demasiado ocupado ahora. Es un buen momento para la taberna pero no para las charlas!";
+					dialog.text = "Lo siento, "+GetSexPhrase("guapo","belleza")+", Estoy demasiado ocupado ahora. Es un buen momento para la taberna, ¡pero no para las charlas!";
 					link.l1 = "...";
 					link.l1.go = "exit";
 				break;
 
 				case 1:
 					dialog.text = "Por favor, capitán, ¡no pelee aquí! Es un trabajo duro limpiar este lugar.";
-					link.l1 = ""+GetSexPhrase("Hm... Ni siquiera iba a hacerlo.","¿Parezco un borracho buscando pelea? Solo soy una chica, igual que tú, no te preocupes.")+"";
+					link.l1 = ""+GetSexPhrase("Hm... No pretendía hacerlo de igual forma.","¿Parezco un borracho buscando pelea? Solo soy una chica, igual que tú, no te preocupes.")+"";
 					link.l1.go = "exit";
 				break;
 
@@ -97,7 +97,7 @@ void ProcessDialogEvent()
 					if (drand(1) == 0) // Addon-2016 Jason
 					{
 						dialog.text = ""+GetSexPhrase("¡Oh, capitán! ¿Te gustaría compartir una cama conmigo hoy? No me gusta jactarme pero...","Toma asiento, capitán. Siempre es un placer conocer a un verdadero lobo de mar como tú.")+"";
-						link.l1 = "Qué lástima que tenga prisa ahora. ¡La próxima vez!";
+						link.l1 = "Qué lástima que tenga prisa. ¡Será para la próxima!";
 						link.l1.go = "exit";
 						bool bOk = (CheckAttribute(pchar, "questTemp.Saga.Helena_officer")) || (CheckAttribute(pchar, "questTemp.LSC.Mary_officer")); // 291112
 						if (pchar.questTemp.different == "free" && !CheckAttribute(pchar, "questTemp.different.FackWaitress") && PChar.sex != "woman" && pchar.GenQuest.EncGirl != "HorseToTavern" && !bOk)
@@ -108,21 +108,21 @@ void ProcessDialogEvent()
 					}
 					else
 					{
-						dialog.text = "Toma asiento, capitán. Prueba nuestro ron, juega una partida de cartas o dados. ¡Siéntete como en casa! Siempre es un placer conocer a un verdadero lobo de mar como tú.";
+						dialog.text = "Tome asiento, capitán. Pruebe nuestro ron, juegue una partida de cartas o dados. ¡Siéntase como en casa! Siempre es un placer conocer a un verdadero lobo de mar como usted.";
 						link.l1 = "Gracias, bonita.";
 						link.l1.go = "exit";
 					}
 				break;
 
 				case 3:
-					dialog.text = "Habla con el maestro si quieres pedir algo. Está detrás del mostrador del bar.";
+					dialog.text = "Hable con el maestro si quiere pedir algo. Está detrás del mostrador del bar.";
 					link.l1 = "Gracias por el consejo.";
 					link.l1.go = "exit";
 				break;
 
 				case 4:
-					dialog.text = "Si quieres descansar y recuperar tu salud, alquila una habitación entonces. Pasar toda la noche en el salón no te ayudará mucho.";
-					link.l1 = "Mi agradecimiento.";
+					dialog.text = "Si quiere descansar y recuperar su salud, alquile una habitación entonces. Pasar toda la noche en el salón no le ayudará mucho.";
+					link.l1 = "Te lo agradezco.";
 					link.l1.go = "exit";
 				break;
 			}			
@@ -131,7 +131,7 @@ void ProcessDialogEvent()
 		break;
 		
         case "Love_1":
-			dialog.text = "Escucha entonces. Alquila una habitación aquí en la taberna. Ve allí y espérame. Me escabulliré allí un poco más tarde...";
+			dialog.text = "Entonces, escuche. Alquile una habitación aquí en la taberna. Vaya y espéreme ahí. Me escabulliré allí un poco más tarde...";
 			link.l1 = "¡Ja! ¡Lo haré, cariño! ¡Te estaré esperando!";
 			link.l1.go = "exit";
 			pchar.questTemp.different = "FackWaitress_toRoom";
@@ -153,20 +153,20 @@ void ProcessDialogEvent()
 		break;
 		
         case "Love_IDN":
-			dialog.text = "Ella ya no trabaja aquí, se ha retirado... Lo siento, tengo un trabajo que hacer.";
+			dialog.text = "Ella ya no trabaja aquí, se ha retirado... Lo siento, tengo mucho trabajo que hacer.";
 			link.l1 = "Bien...";
 			link.l1.go = "exit";
 		break;
 		
         case "Love_IDN_1":
-			dialog.text = "Escucha bien, idiota lujurioso. ¡No sé dónde está tu dinero! Y si sigues presionándome, llamaré a los guardias y te encontrarás en prisión!";
-			link.l1 = "Bien, no se necesitan guardias... Que tonto...";
+			dialog.text = "Escucha bien, idiota lujurioso. ¡No sé dónde está tu dinero! Y si sigues presionándome, llamaré a los guardias y te enviarán a prisión!";
+			link.l1 = "Bien, no se necesitan guardias... Que tonto he sido...";
 			link.l1.go = "Love_IDN_2";
 		break;
 		
         case "Love_IDN_2":
 			dialog.text = "Exactamente, tal tonto. La próxima vez serás más inteligente y decente.";
-			link.l1 = "Lo intentaré... (susurrando) Puta de mierda...";
+			link.l1 = "Lo intentaré... (susurrando) Cortesana de mierda...";
 			link.l1.go = "exit";
 		break;
 
@@ -178,19 +178,19 @@ void ProcessDialogEvent()
 		break;
 
 		case "without_money_2":
-			dialog.text = "¿Te sientes mal? ¿Tienes dolor de cabeza?";
+			dialog.text = "¿Se siente mal? ¿Tiene dolor de cabeza?";
 			link.l1 = "Maldición... ¿dónde estoy?";
 			link.l1.go = "without_money_3";
 		break;
 
 		case "without_money_3":
-			dialog.text = "¿No te acuerdas? Te han robado.";
+			dialog.text = "¿No lo recuerda? Le han robado.";
 			link.l1 = "¿Qué? Oh... Mi cabeza... ¿Quién se atrevería?!";
 			link.l1.go = "without_money_4";
 		break;
 
 		case "without_money_4":
-			dialog.text = "¿Cómo debería saberlo? Entraron a la fuerza, amenazaron con matar, revisaron tus bolsillos y se fueron.";
+			dialog.text = "¿Cómo debería saberlo? Entraron a la fuerza, amenazaron con matar a todos, revisaron sus bolsillos y se fueron.";
 			link.l2 = "Ya veo... Mierda... Me gustaría un poco de agua... Gracias.";
 			link.l2.go = "exit";
 		break;
@@ -199,18 +199,18 @@ void ProcessDialogEvent()
 		case "Consumption":
 			npchar.quest.Consumption = "true";
 			dialog.text = "No, no es nada, señor... gracias por su amabilidad pero yo ... (llorando)";
-			link.l1 = "¿Alguien te ha ofendido? Calma, bonita, cuéntame todo.";
+			link.l1 = "¿Alguien te ha ofendido? Calma, bonita, cuéntamelo todo.";
 			link.l1.go = "Consumption_1";
 		break;
 		
 		case "Consumption_1":
-			dialog.text = "No, no, señor, no es nada. Perdóname por mi falta de contención, es solo que... Es mi hermano, dicen que está muerto pero no lo creo. No sé qué creer pero siento con mi propio corazón que está en grandes apuros. Y no tengo a nadie más que a Angelo después de que nuestros padres pas... (llorando)";
+			dialog.text = "No, no, señor, no es nada. Perdóneme por mi falta de contención, es solo que... Es mi hermano, dicen que está muerto, pero no lo creo. No sé qué creer, pero siento con mi propio corazón que está en grandes apuros. Y no tengo a nadie más que a Angelo después de que nuestros padres murie... (llorando)";
 			link.l1 = "Entiendo, pero te pido que te calmes, por favor. ¿Qué le pasó a tu hermano?";
 			link.l1.go = "Consumption_2";
 		break;
 		
 		case "Consumption_2":
-			dialog.text = "Señor... por favor no me malinterprete, pero ¿por qué debería importarle a un capitán tal una chica ordinaria y modesta de la taberna? Ni siquiera tengo nada que prometerle por su ayuda...";
+			dialog.text = "Señor... por favor no me malinterprete, pero ¿por qué debería importarle a un capitán tal, una chica ordinaria y modesta de la taberna? Ni siquiera tengo nada que prometerle por su ayuda...";
 			link.l1 = "De hecho, tienes razón. La abnegación no es para mí, así que sé fuerte, todos perdemos a nuestros parientes. C'est la vie como decimos en Francia...";
 			link.l1.go = "exit";
 			link.l2 = "Una mujer siempre puede encontrar una forma de agradecer a un hombre.... Ja-ja. Ahora, solo deja de llorar y cuéntame sobre tu problema.";
@@ -242,14 +242,14 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Consumption_4":
-			dialog.text = "Muy bien, señor. Mi hermano, él... oh, no es fácil contener las lágrimas para mí, lo siento mucho... Estábamos realmente pobres debido a mi... modestia en el trabajo quizás... Y Angelo comenzó a trabajar con los contrabandistas locales. Pensó que su pequeño bote de pesca ganaría más dinero transportando algo para evitar las aduanas.";
+			dialog.text = "Muy bien, señor. Mi hermano, él... oh, no es fácil contener las lágrimas para mí, lo siento mucho... Estábamos realmente pobres debido a mi... modestia en el trabajo quizás... Y Angelo comenzó a trabajar con los contrabandistas locales. Pensó que, con su pequeño bote de pesca ganaría más dinero transportando algo para evitar las aduanas.";
 			link.l1 = "Para decirlo en palabras más simples, ¿tu hermano se convirtió en un criminal, verdad?";
 			link.l1.go = "Consumption_5";
 		break;
 		
 		case "Consumption_5":
 			dialog.text = "No, señor, no entiendes ... ¡él no es así! ¡Lo hizo por mí! Para salvarme de ganar dinero extra aquí ... ya sabes a lo que me refiero. Estábamos endeudados y lo hizo por mi honor y mi alma. Y luego ... fue atrapado. No fue un gran problema, incluso pedí más dinero prestado para pagar su liberación ... Pero dijeron que murió.";
-			link.l1 = "¿Ellos dijeron? ¿Quién dijo? ¿Y por qué no les crees? ¿Murió en una prisión?";
+			link.l1 = "¿Ellos dijeron eso? ¿Quién ha sido? ¿Y por qué no les crees? ¿Murió en una prisión?";
 			link.l1.go = "Consumption_6";
 		break;
 		
@@ -260,14 +260,14 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Consumption_7":
-			dialog.text = "¡No... No! (llorando) Sé que suena estúpido, pero estoy seguro de que lo sabría si él muriera. Verás, Angelo siempre fue fuerte, un verdadero marinero. Pero hay una cosa más\nMi abuelo murió de consunción cuando era niño y él, un viejo, había estado luchándola durante años. Sé cómo funciona, la consunción no mata a la gente en días, ¡créeme!";
-			link.l1 = "Hm... Tú también me has hecho dudar, algo está muy mal aquí. No puedo prometerte nada pero intentaré averiguar más.";
+			dialog.text = "¡No... No! (llorando) Sé que suena estúpido, pero estoy segura de que lo sabría si él muriera. Verás, Angelo siempre fue fuerte, un verdadero marinero. Pero hay una cosa más\nMi abuelo murió de consunción cuando era niño y él, un viejo, había estado luchando contra su enfermedad durante años. Sé cómo funciona, la consunción, no mata a la gente en días, ¡créeme!";
+			link.l1 = "Hm... Tú también me has hecho dudar, algo está muy mal aquí. No puedo prometerte nada, pero intentaré averiguar más.";
 			link.l1.go = "Consumption_8";
 		break;
 		
 		case "Consumption_8":
 			dialog.text = "¡Incluso una promesa simple es mucho más de lo que esperaba! ¡Eres tan amable, señor! ¡Estaré esperando aquí!";
-			link.l1 = "¡Oh, juventud! Tan inconstante en sentimientos... ¿Serías tan amable de devolverme mi mano, belleza, aún la necesito ja-ja... Muy bien entonces, iré a buscar por ahí.";
+			link.l1 = "¡Oh, la juventud! Tan inconstante en sentimientos... ¿Serías tan amable de devolverme mi mano, belleza, aún la necesito ja-ja... Muy bien entonces, iré a averiguar qué es lo que sucede.";
 			link.l1.go = "Consumption_9";
 		break;
 		
@@ -282,10 +282,10 @@ void ProcessDialogEvent()
 		
 		// Addon-2016 Jason, французские миниквесты (”ЊЉ) Џорт Џренс
 		case "FMQP":
-			dialog.text = "¡No, no bromas! ¡Arriba! ¡Dos matones están asesinando a un noble caballero! ¡Ayúdale, capitán, eres el único hombre armado aquí!";
+			dialog.text = "¡No, no es broma! ¡Arriba! ¡Dos matones están asesinando a un noble caballero! ¡Ayúdele, capitán, eres el único hombre armado aquí!";
 			link.l1 = "¡Corre afuera, llama a los guardias! ¡Voy a subir!";
 			link.l1.go = "FMQP_1";
-			link.l2 = "Querido, debes haberme confundido con un guardia. Llama a una patrulla en caso de asesinato.";
+			link.l2 = "Querida, debes haberme confundido con un guardia. Llama a una patrulla en caso de asesinato.";
 			link.l2.go = "FMQP_exit";
 		break;
 		

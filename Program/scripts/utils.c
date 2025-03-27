@@ -397,12 +397,23 @@ void GiveItemToTrader(aref ch)
 			if(irand == 300 ) AddItems(ch, "recipe_totem_12", 1);
 			//if(irand == 320 ) AddItems(ch, "recipe_totem_13", 1);
 			//if(irand == 340 ) AddItems(ch, "recipe_potion4", 1); // belamour legendary edition
+			if(CheckAttribute(ch, "City") && ch.City == GetLadyBethCity())
+			{
+				AddItems(ch, "potion4", rand(5) + 2);
+				AddItems(ch, "jewelry16", rand(20) + 20);
+				AddItems(ch, "jewelry18", rand(10) + 10);
+			}
+			
 		break;
 		
 		case "veteran" 		: // скобяные изделия
 			AddItems(ch, "mineral1", 	Rand(3) + 2);	
 			AddItems(ch, "mineral2", 	Rand(1) + 1);
-			AddItems(ch, "mineral23", 	Rand(1) + 1);			
+			AddItems(ch, "mineral23", 	Rand(1) + 1);
+			if(CheckAttribute(ch, "City") && ch.City == GetLadyBethCity())
+			{
+				AddItems(ch, "mineral23", 	Rand(9) + 5);
+			}			
 			
 			irand = drand(5);
 			if(irand == 1) AddItems(ch, "mineral3", 	Rand(4) + 5);
@@ -623,6 +634,31 @@ void GiveItemToTrader(aref ch)
 			if(irand == 0) AddItems(ch, "Mineral15", drand(2)+1);
 			if(irand == 3) AddItems(ch, "Mineral13", drand(2)+1);
 			if(irand == 6) AddItems(ch, "Mineral30", drand(5)+1);
+			
+			if(CheckAttribute(ch, "City") && ch.City == GetLadyBethCity())
+			{
+				irand = drand(19);
+				if(irand == 0) AddItems(ch, "cirass3", 1);
+				if(irand == 1) AddItems(ch, "cirass6", 1);
+				if(irand == 3) AddItems(ch, "cirass7", 1);
+				if(irand == 4) GenerateAndAddItems(ch, "blade_12", 1);
+				if(irand == 5) GenerateAndAddItems(ch, "topor_03", 1);
+				if(irand == 6) GenerateAndAddItems(ch, "blade_15", 1);
+				if(irand == 7) GenerateAndAddItems(ch, "blade_07", 1);
+				if(irand == 8) GenerateAndAddItems(ch, "blade_16", 1);
+				if(irand == 9) GenerateAndAddItems(ch, "blade_14", 1);
+				if(irand == 10) GenerateAndAddItems(ch, "blade_27", 1);
+				if(irand == 11) GenerateAndAddItems(ch, "blade_39", 1);
+				if(irand == 12) GenerateAndAddItems(ch, "topor_02", 1);
+				if(irand == 13) GenerateAndAddItems(ch, "blade_04", 1);
+				if(irand == 14) GenerateAndAddItems(ch, "blade_09", 1);
+				if(irand == 15) AddItems(ch, "pistol2", 1);
+				if(irand == 16) AddItems(ch, "mushket1", 1);
+				if(irand == 17) AddItems(ch, "pistol3", 1);
+				if(irand == 18) AddItems(ch, "pistol6", 1);
+				if(irand == 19) AddItems(ch, "mushket3", 1);
+			}
+			
 		break;
 
 		case "monk" 		: //  амулеты+всякая мурня, карты убрал
@@ -688,6 +724,12 @@ void GiveItemToTrader(aref ch)
 					if(GetDataDay() > 20) AddItems(ch, "recipe_berserker_potion", 1);
 				}
 			}
+			if(CheckAttribute(ch, "City") && ch.City == GetLadyBethCity())
+			{
+				AddItems(ch, "chest", rand(1) + 1);
+				AddItems(ch, "jewelry17", rand(10) + 15);
+				AddItems(ch, "jewelry5", rand(25) + 25);
+			}
 			//irand = drand(55); // 5% вероятности belamour теперь чуть больше
 			//if(irand == 19 ) AddItems(ch, "recipe_potion3", 1);
 			//if(irand == 37 ) AddItems(ch, "recipe_potion4", 1); // belamour legendary edition
@@ -727,12 +769,26 @@ void GiveItemToTrader(aref ch)
 			if(irand == 1) AddItems(ch, "indian_10", 1);
 			irand = rand(10);
 			if(irand == 1) AddItems(ch, "indian_11", 1);
+			if(CheckAttribute(ch, "City") && ch.City == GetLadyBethCity())
+			{
+				AddItems(ch, "jewelry1", rand(20) + 10);
+				AddItems(ch, "gold_dublon", rand(25) + 30);
+			}
 		break;
 		
 		case "jeweller" 	:// ювелир
-		
-			//AddItems(ch, "gold_dublon", Rand(USURER_MAX_DUBLONS - USURER_MIN_DUBLONS) + USURER_MIN_DUBLONS); // дублоны
-			AddItems(ch, "gold_dublon", sti(pchar.rank) * 2 + rand(GetCharacterSkill(pchar, SKILL_COMMERCE)) + 25); // дублоны
+			if(ShipBonus2Artefact(pchar, SHIP_LADYBETH))
+			{
+				AddItems(ch, "gold_dublon", sti(pchar.rank) * 6 + rand(GetCharacterSkill(pchar, SKILL_COMMERCE)) + 25); // дублоны
+			}
+			else if(CheckAttribute(ch, "City") && ch.City == GetLadyBethCity())
+			{
+				AddItems(ch, "gold_dublon", sti(pchar.rank) * 6 + rand(GetCharacterSkill(pchar, SKILL_COMMERCE)) + 25);
+			}
+			else
+			{
+				AddItems(ch, "gold_dublon", sti(pchar.rank) * 2 + rand(GetCharacterSkill(pchar, SKILL_COMMERCE)) + 25); // дублоны
+			}
 			irand = rand(2);
 			if(irand == 1) AddItems(ch, "chest_open", Rand(1) + 1); // пустые сундуки
 			
@@ -780,6 +836,26 @@ void GiveItemToTrader(aref ch)
 			if(drand(10) == 5 && rank >= 5) AddItems(ch, "cirass3", 1);
 			if(drand(10) == 9) AddItems(ch, "hat1", 1);
 			if(drand(10) == 2 && rank > 11) AddItems(ch, "hat4", 1);
+			if(CheckAttribute(ch, "City") && ch.City == GetLadyBethCity())
+			{
+				irand = drand(7);
+				if(irand == 0) AddItems(ch, "cirass1", 1);
+				if(irand == 0) GenerateAndAddItems(ch, "topor_01", 1);
+				if(irand == 1) AddItems(ch, "cirass3", 1);
+				if(irand == 1) GenerateAndAddItems(ch, "blade_15", 1);
+				if(irand == 2) AddItems(ch, "mushket2", 1);
+				if(irand == 2) GenerateAndAddItems(ch, "blade_30", 1);
+				if(irand == 3) AddItems(ch, "mushket1", 1);
+				if(irand == 3) GenerateAndAddItems(ch, "blade_16", 1);
+				if(irand == 4) AddItems(ch, "pistol6", 1);
+				if(irand == 4) GenerateAndAddItems(ch, "topor_04", 1);
+				if(irand == 5) AddItems(ch, "mushket3", 1);
+				if(irand == 5) GenerateAndAddItems(ch, "blade_06", 1);
+				if(irand == 6) GenerateAndAddItems(ch, "blade_27", 1);
+				if(irand == 6) GenerateAndAddItems(ch, "blade_39", 1);
+				if(irand == 7) GenerateAndAddItems(ch, "blade_13", 1);
+				if(irand == 7) GenerateAndAddItems(ch, "blade_04", 1);
+			}
 		break;
 		
 		case "lightman": //Jason - смотрители маяков

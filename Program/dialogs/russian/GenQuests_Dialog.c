@@ -1037,7 +1037,8 @@ void ProcessDialogEvent()
 		
 		case "ShipWreck_34":
 			dialog.text = RandPhraseSimple(RandPhraseSimple("Капитан, это уже Дюнкерк?","Неужели мы в Дюнкерке, капитан?"),RandPhraseSimple("Капитан, это Европа?","Мы так быстро добрались до Европы?"));
-			bTemp = !GetCharacterItem(pchar, "map_part1") || !GetCharacterItem(pchar, "map_part2");
+            bTemp = !GetCharacterItem(pchar, "map_full") && !GetCharacterItem(pchar, "map_part2");
+			bTemp = !GetCharacterItem(pchar, "map_part1") || bTemp;
 			if(rand(100) > 75 && !isDay() && bTemp)
 			{
 				link.l1 = "Угу...";
@@ -1113,8 +1114,7 @@ void ProcessDialogEvent()
 			sld = CharacterFromID("ShipWreck_0");
 			RemovePassenger(pchar, sld);
 			AddCharacterExpToSkill(pchar, "Fortune", 200);
-			if (!GetCharacterItem(pchar, "map_part1")) 	GiveItem2Character(pchar, "map_part1");
-			else 										GiveItem2Character(pchar, "map_part2");
+			AddMapPart();
 			AddQuestRecord("ShipWrecked", "9");
 			AddQuestUserData("ShipWrecked", "sSex", GetSexPhrase("","а"));
 			CloseQuestHeader("ShipWrecked");	
@@ -5220,9 +5220,7 @@ void ProcessDialogEvent()
 			{
 				rChar = CharacterFromID("PirateOnUninhabited_" + i);
 				LAi_SetWarriorTypeNoGroup(rChar);
-				//rChar.LifeDay = 0;
-				rChar.location = "none"; // Убираем из локации при выходе  
-				rChar.location.locator = ""; // лесник  
+				rChar.LifeDay = 0; 
 				
 				if(bTemp)
 				{

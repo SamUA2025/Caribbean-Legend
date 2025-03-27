@@ -30,8 +30,8 @@ Aproveche la aceleración: ahorra tiempo, sobre todo en el mar.
 Controles: + y -
 }
 
-SeaFastTravelEnglish {Viaje rápido}
-SeaFastTravelEnglish_descr
+SeaFastTravel {Viaje rápido}
+SeaFastTravel_descr
 {
 El menú de acciones abre muchas funciones útiles tanto en tierra como en el mar.
 ~
@@ -40,7 +40,7 @@ La función 'Navegar hasta' te permite viajar rápidamente junto a un barco amig
 Utiliza el menú de acción para llegar instantáneamente al 'Fantasma' y luego enviar un barco largo hasta él.
 }
 
-SeaFastTravelEnglish_controlsimg1 {BICommandsActivate}
+SeaFastTravel_controlsimg1 {BICommandsActivate}
 
 LandTimeScaleDown {Control del tiempo de combate}
 LandTimeScaleDown_descr
@@ -83,14 +83,15 @@ Casi siempre puedes encontrar un lugar donde obligar al enemigo a luchar contigo
 Collision {Cambio de posición}
 Collision_descr
 {
-A veces, durante una batalla, se hace necesario cambiar de posición, ya sea rompiendo la línea enemiga o sorteando a los aliados.
+A veces, durante la batalla, surge la necesidad de cambiar de posición, rompiendo la línea del enemigo o maniobrando alrededor de los aliados.
 ~
-Sal del modo combate para que el héroe pueda apartar a otros personajes de tu camino. Tras cambiar de posición, vuelve a entrar en el modo combate para seguir luchando.
+Tu héroe empujará automáticamente a los aliados, y para romper la formación enemiga, necesitarás usar el sprint o saltos.
+En combate, el sprint consume energía, así que utilízalo sabiamente.
 }
 Collision_controlsimg1 {ChrFightMode}
 
-WorldMapEnglish {Mapa global}
-WorldMapEnglish_descr
+WorldMap {Mapa global}
+WorldMap_descr
 {
 El mapa global te permite realizar viajes por mar a través del Caribe. No es necesario navegar exactamente hasta cada ciudad o bahía; basta con salir del mapa global en las proximidades de su objetivo y utilizar la función 'Navegar hasta'.
 ~
@@ -100,20 +101,20 @@ Utiliza las teclas de acceso rápido para alejar el mapa y mostrar el Atlas con 
 
 }
 
-WorldMapEnglish_controlsimg1 {WMapCameraSwitch}
-WorldMapEnglish_controlsimg2 {MapView}
+WorldMap_controlsimg1 {WMapCameraSwitch}
+WorldMap_controlsimg2 {MapView}
 
-LandMapEnglish {Viajar por tierra}
-LandMapEnglish_descr
+LandMap {Viajar por tierra}
+LandMap_descr
 {
 Los mapas se pueden comprar o encontrar. Recoge todos los mapas de las islas que encuentres para navegar por la masa continental. Esto es especialmente útil en misiones, infiltraciones en colonias y búsqueda de tesoros.
 Todos los mapas recogidos se pueden encontrar en el Atlas. 
 }
 
-LandMapEnglish_controlsimg1 {MapView}
+LandMap_controlsimg1 {MapView}
 
-NavigatorEnglish {Habilidad de navegación}
-NavigatorEnglish_descr
+Navigator {Habilidad de navegación}
+Navigator_descr
 {
 ¡Asigna un Navegante con suficiente habilidad de Navegación!
 ~
@@ -127,10 +128,10 @@ La habilidad Navegación crece lentamente, así que contrata a navegantes experi
 
 }
 
-NavigatorEnglish_controlsimg1 {Abilities}
+Navigator_controlsimg1 {Abilities}
 
-AlchemyEnglish {Elaboración}
-AlchemyEnglish_descr
+Alchemy {Elaboración}
+Alchemy_descr
 {
 La fabricación de objetos, principalmente talismanes, pociones y munición, puede aliviarte la vida considerablemente. Esto es especialmente útil en los combates contra jefes.
 ~
@@ -140,16 +141,16 @@ Al principio del juego, tienes una opción: coger la habilidad Alquimia y empeza
 
 }
 
-AlchemyEnglish_controlsimg1 {Alquimia}
+Alchemy_controlsimg1 {Alquimia}
 
-LandMapAtSeaEnglish {}
-LandMapAtSeaEnglish_descr
+LandMapAtSea {}
+LandMapAtSea_descr
 {
 Dirígete al lado opuesto de la isla para completar tu misión. Sal de la bahía por la derecha y pégate a la costa.
 }
 
-SalaryEnglish {Mantenimiento del barco}
-SalaryEnglish_descr
+Salary {Mantenimiento del barco}
+Salary_descr
 {
 Los pagos mensuales a oficiales y tripulación pueden complicar considerablemente la vida del capitán. La cantidad total depende de tus habilidades de Comercio y Liderazgo, el tamaño del barco y el nivel de dificultad.
 ~
@@ -157,10 +158,10 @@ Incluso en los barcos pequeños, es muy recomendable tener un contable a bordo, 
 
 }
 
-SalaryEnglish_controlsimg1 {ShipState}
+Salary_controlsimg1 {ShipState}
 
-DubloonsEnglish {Doblones}
-DubloonsEnglish_descr
+Dubloons {Doblones}
+Dubloons_descr
 {
 Los doblones de oro son la verdadera medida de la riqueza de tu personaje y de su capacidad para resolver problemas con dinero. Esfuérzate siempre por ganar estas monedas, ya que las personas más poderosas del Caribe sólo ofrecen sus servicios a cambio de doblones.
 ~
@@ -168,8 +169,8 @@ Las buenas fuentes de doblones incluyen la caza de tesoros, los depósitos banca
 
 }
 
-BoxEnglish {Almacenamiento de artículos}
-BoxEnglish_descr
+Box {Almacenamiento de artículos}
+Box_descr
 {
 Los cofres de tu camarote pueden almacenar un número ilimitado de objetos personales. Además del equipo obligatorio en tus ranuras de equipo, es aconsejable que sólo lleves contigo pociones, amuletos y munición.
 ~
@@ -179,8 +180,8 @@ Otros capitanes también siguen esta práctica, así que siempre merece la pena 
 
 }
 
-HealthEnglish {Vitalidad}
-HealthEnglish_descr
+Health {Vitalidad}
+Health_descr
 {
 ¡Tu Vitalidad ha disminuido! Esta estadística describe el estado general de tu personaje y afecta a todas sus habilidades.
 ~
@@ -190,8 +191,8 @@ Se recupera con pociones especiales, actividades románticas, descansando en una
 
 }
 
-AmuletEnglish {Amuletos}
-AmuletEnglish_descr
+Amulet {Amuletos}
+Amulet_descr
 {
 Los amuletos son potentes potenciadores del personaje divididos en ofensivos, defensivos y auxiliares. No puedes equipar amuletos ofensivos y defensivos simultáneamente, así que elige sabiamente.
 ~
@@ -201,10 +202,10 @@ Ten siempre varios juegos de potenciadores en tu inventario para los chequeos de
 
 }
 
-AmuletEnglish_controlsimg1 {Inventario}
+Amulet_controlsimg1 {Inventario}
 
-PerkEnglish {Perk Points}
-PerkEnglish_descr
+Perk {Perk Points}
+Perk_descr
 {
 Acabas de recibir tu primer punto de ventaja (PP). Los PP son cruciales para el desarrollo del personaje y se dividen en Navales y Personales.
 ~
@@ -216,10 +217,10 @@ Para ganar PP navales rápidamente, completa misiones secundarias y contratos en
 
 }
 
-PerkEnglish_controlsimg1 {Habilidades}
+Perk_controlsimg1 {Habilidades}
 
-FighterEnglish {vanguardias}
-FighterEnglish_descr
+Fighter {vanguardias}
+Fighter_descr
 {
 ¡Tu primer combatiente se ha unido a la tripulación! Asígnalo a través del Menú de Personajes.
 ~
@@ -235,13 +236,13 @@ Puedes ordenar a los vanguardias que mantengan su posición, sigan al capitán o
 
 }
 
-FighterEnglish_controlsimg1 {Abilities}
-FighterEnglish_controlsimg2 {OfficersFollow}
-FighterEnglish_controlsimg3 {OfficersCharge}
-FighterEnglish_controlsimg4 {OfficersHold}
+Fighter_controlsimg1 {Abilities}
+Fighter_controlsimg2 {OfficersFollow}
+Fighter_controlsimg3 {OfficersCharge}
+Fighter_controlsimg4 {OfficersHold}
 
-RestEnglish {Opción de descanso}
-RestEnglish_descr
+Rest {Opción de descanso}
+Rest_descr
 {
 La opción Descanso ya está disponible en el Menú de Acciones.
 ~
@@ -250,7 +251,7 @@ Todo en el juego sigue un ciclo temporal: por la noche no hay guardias en el emb
 Utiliza esta función en el mar y en la naturaleza. Alquila una habitación en una taberna si estás en una ciudad.
 
 }
-RestEnglish_controlsimg1{BICommandsActivate}
+Rest_controlsimg1{BICommandsActivate}
 
 Navigation{Control de buques}
 Navigation_descr
@@ -274,8 +275,8 @@ Navigation_controlsimg2 {Ship_SailDown}
 Navigation_controlsimg3 {MiniMapZoomIn}
 Navigation_controlsimg4 {MiniMapZoomOut}
 
-StealthEnglish{Sigilo}
-StealthEnglish_descr
+Stealth{Sigilo}
+Stealth_descr
 {
 No eres bienvenido en la mayoría de los asentamientos caribeños. Hay dos formas de infiltrarse en una ciudad: por el puerto o por las puertas.
 ~
@@ -320,8 +321,8 @@ Contar con un contramaestre experimentado, vanguardias, amuletos y habilidades d
 
 }
 
-MushketEnglish{Mosquetes}
-MushketEnglish_descr
+Mushket{Mosquetes}
+Mushket_descr
 {
 Las armas de fuego de cañón largo son extremadamente peligrosas en la batalla. Sólo el personaje principal con la habilidad Mosquetero y algunos oficiales únicos pueden usarlas.
 El ejemplo más notable es Tichingitu, debe ser él quien consiga el primer mosquete que encuentres.
@@ -330,20 +331,20 @@ A diferencia de las armas cuerpo a cuerpo, las armas de fuego ofrecen una mayor 
 
 }
 
-MushketEnglish_controlsimg1 {Inventario}
+Mushket_controlsimg1 {Inventario}
 
-CameraControl{¡Ahoy!}
+CCameraControl{¡Ahoy!}
 CameraControl_descr
 {
-¡Bienvenido al modo Historia! Antes de zarpar, tendrás que asegurarte de que la tierra no te derrotará.
-~
-Caribbean Legend es un reto, pero no es difícil de jugar. Para ayudarte a asentarte en el Nuevo Mundo, hemos preparado una aventura tutorial ampliada en la isla de Martinica. Al completarla, dominarás todas las habilidades necesarias y comprenderás la mecánica del juego.
-~
-El juego se controla mediante las teclas de movimiento y el uso activo del ratón. En la mayoría de los casos, basta con pulsar la tecla de movimiento hacia delante y dirigirte con la cámara. Siempre puedes ajustar la velocidad de la cámara en los ajustes.
-~
-Algunos jugadores consideran que los controles no responden lo suficiente, y estamos de acuerdo. Por eso estamos trabajando activamente en mejorarlos, y esperamos que en la próxima gran actualización, este mensaje tutorial sea diferente.
-~
-¡Gracias por jugar, y nos vemos en el mar!
+Bienvenido al Modo Historia.  
+Antes de enfrentarte al mar abierto, debes sobrevivir en la tierra. El Nuevo Mundo no tolera a los tontos - y no ofrece segundas oportunidades.
+~  
+Para ayudarte a encontrar tu equilibrio en alta mar, hemos preparado una aventura tutorial en la isla de Martinica. Allí, dominarás las habilidades que todo capitán debe conocer - y ganarás tu primer mando.
+~  
+Muévete con tus teclas, mira a tu alrededor con el ratón. Puedes caminar, correr o hacer sprint cuando sea necesario. El menú de acción también será útil con frecuencia - especialmente para el viaje rápido, que se desbloquea después del tutorial.
+~  
+Tu leyenda comienza aquí.  
+¡Nos vemos en el mar!
 }
 
 CameraControl_controlsimg1 {ChrForward}
@@ -351,20 +352,21 @@ CameraControl_controlsimg2 {ChrStrafeLeft}
 CameraControl_controlsimg3 {ChrBackward}
 CameraControl_controlsimg4 {ChrStrafeRight}
 CameraControl_controlsimg5 {ShipCamera_Turn_H}
+CameraControl_controlsimg6 {LICommandsActivate}
 
 CameraControlFP{¡Ahoy!}
 CameraControlFP_descr
 {
-¡Bienvenido al Nuevo Mundo, Capitán!
-~
-Caribbean Legend es un juego desafiante, pero no es difícil de jugar. Si aún no has jugado al modo historia, te recomendamos que le dediques un par de horas para sentirte cómodo y aprender las mecánicas básicas del juego.
-~
-El juego se controla mediante teclas de movimiento y el uso activo del ratón. En la mayoría de los casos, basta con pulsar la tecla de movimiento hacia delante y dirigir el coche con la cámara. Siempre puedes ajustar la velocidad de la cámara en los ajustes.
-~
-Algunos jugadores consideran que los controles no responden lo suficiente, y estamos de acuerdo. Por eso estamos trabajando activamente en mejorarlos, y esperamos que en la próxima gran actualización, este mensaje tutorial sea diferente.
-~
-¡Gracias por jugar y nos vemos en el mar!
-
+¡Bienvenido al Nuevo Mundo!
+~  
+Estas aguas son implacables - y la fortuna rara vez favorece a los imprudentes. Comienza con calma: viaja entre colonias amigas, corre en recados, entrega bienes y pasajeros, participa en el comercio local.
+~  
+Los doblones de oro te comprarán mapas de tesoros enterrados. Los pesos de plata mantendrán tu barco a flote y te permitirán contratar oficiales - y sin ellos, incluso un comerciante solitario puede ser tu perdición.
+~  
+Muévete con tus teclas, mira a tu alrededor con el ratón. Puedes caminar, correr o hacer sprint cuando sea necesario. El menú de acción también será útil - especialmente para el viaje rápido y otras características avanzadas.
+~  
+Tu leyenda comienza aquí.  
+¡Nos vemos en el mar!
 }
 
 CameraControlFP_controlsimg1 {ChrForward}
@@ -372,3 +374,19 @@ CameraControlFP_controlsimg2 {ChrStrafeLeft}
 CameraControlFP_controlsimg3 {ChrBackward}
 CameraControlFP_controlsimg4 {ChrStrafeRight}
 CameraControlFP_controlsimg5 {ShipCamera_Turn_H}
+CameraControlFP_controlsimg6 {LICommandsActivate}
+
+MarksmanMode{Puntería}
+MarksmanMode_descr
+{
+Puedes apuntar con cualquier arma de fuego para disparar con más precisión. Mantén presionado el botón de apuntar para entrar en el modo francotirador. Suelta el botón para salir sin disparar.  
+~  
+Disparar desde el modo francotirador es más preciso y letal, pero el coste es una visibilidad y velocidad de movimiento reducidas.  
+~  
+Cuanto más tiempo apuntas, más daño causará tu disparo. Un disparo a la cabeza causará aún más daño. Si recibes daño, tu puntería se restablecerá y tu personaje tambaleará. 
+}
+
+MarksmanMode_controlsimg1 {ChrAiming}
+
+
+

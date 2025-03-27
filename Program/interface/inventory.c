@@ -1824,6 +1824,7 @@ void FillItemsTable(int _mode) // 1 - все 2 - снаряжение 3 - эли
 				(sGood == "Map_Best") ||
 				(sGood == "mapQuest") ||
 				(sGood == "mapEnrico") ||
+				(sGood == "LadyBeth_Map") ||
 				(sGood == "map_full") ||
 				(sGood == "map_part1") ||
 				(sGood == "map_part2");
@@ -2035,6 +2036,21 @@ void FillItemsSelected()
 							SetNewGroupPicture("SLOT_PIC_6", "ITEMS_USE10", "items_use" + picIndex);
 							SetNodeUsing("SLOT_PIC_6", true);
 							SetFormatedText("SLOT6_TEXT", iQBonus +"/5");
+							SetNodeUsing("SLOT6_TEXT", true);
+						}
+						//TODO переписать в один метод (расставить предметам QBonus в квестах)
+						if (IsEquipCharacterByArtefact(xi_refCharacter, "talisman18"))
+						{
+							ref Articles = ItemsFromID("talisman18");
+							int QBonus = 0;
+							if(CheckAttribute(Articles, "QBonus"))
+							{
+								QBonus = sti(Articles.QBonus);
+							}
+							picIndex = QBonus;
+							SetNewGroupPicture("SLOT_PIC_6", "ITEMS_USE10", "items_use" + picIndex);
+							SetNodeUsing("SLOT_PIC_6", true);
+							SetFormatedText("SLOT6_TEXT", QBonus +"/10");
 							SetNodeUsing("SLOT6_TEXT", true);
 						}
 					break;
@@ -2330,6 +2346,10 @@ void SetItemInfo(int iGoodIndex)
 				describeStr = GetAssembledString(LanguageConvertString(lngFileID,"mushket parameters equipped"), arItm) + newStr();		
 			
 			describeStr = describeStr + GetAssembledString(LanguageConvertString(lngFileID, Items[iGoodIndex].describe), arItm);
+			if(CheckAttribute(arItm, "UpgradeStage"))
+			{
+				describeStr += newStr() + LanguageConvertString(lngFileID,"UpgradeStageInfo_" + arItm.id + "_" + sti(arItm.UpgradeStage));
+			}
 			SetFormatedText("INFO_TEXT", describeStr);
 
 			LanguageCloseFile(lngFileID);
@@ -2459,9 +2479,19 @@ bool ThisItemCanBeEquip(aref arItem)
 	{
 		if(IsEquipCharacterByMap(xi_refCharacter, arItem.ID)) return false;
 	}
-	
+
+    // нельзя собрать новую карту сокровищ, если текущий клад не найден
+	if(arItem.ID == "map_part1" || arItem.ID == "map_part2")
+	{
+		if(GetCharacterItem(PChar, "map_full") > 0 && GetCharacterItem(PChar, "map_part1") > 0 && GetCharacterItem(PChar, "map_part2") > 0) return false;
+	}
+
 	// спецпредметы только для ГГ
 	if (arItem.groupID == SPECIAL_ITEM_TYPE && !IsMainCharacter(xi_refCharacter)) 
+	{
+		return false;
+	}
+	if(HasSubStr(arItem.id, "FirearmStockPart") && !CanUpgradeMusketSP(xi_refCharacter, arItem))
 	{
 		return false;
 	}
@@ -2690,7 +2720,7 @@ void EquipPress()
 			if(itmRef.id == "mapQuest")
 			{
 				totalInfo = GenQuest_GetQuestTreasureMapDescription(itmRef);
-				SetNewPicture("MAP_PICTURE", "interfaces\maps\" + LanguageGetLanguage() + "\" + "treasure map.tga");
+				SetNewPicture("MAP_PICTURE", "interfaces\maps\treasure map.tga");
 				SetFormatedText("MAP_TEXT", totalInfo);
 				SetVAligmentFormatedText("MAP_TEXT");
 				ShowMapWindow();
@@ -2700,27 +2730,41 @@ void EquipPress()
 			if(itmRef.id == "mapEnrico")
 			{
 				totalInfo = XI_ConvertString("mapEnrico");
-				SetNewPicture("MAP_PICTURE", "interfaces\maps\" + LanguageGetLanguage() + "\" + "treasure map.tga");
+				SetNewPicture("MAP_PICTURE", "interfaces\maps\treasure map.tga");
 				SetFormatedText("MAP_TEXT", totalInfo);
 				SetVAligmentFormatedText("MAP_TEXT");
 				ShowMapWindow();
 				return;
 			}
+			if(itmRef.id == "LadyBeth_Map")
+			{
+					if(!CheckAttribute(itmRef, "Plantation"))
+					{
+						// начинается этап Барбадос
+						SetFunctionLocationCondition("LadyBeth_Barbados_Elizabeth_1", "Plantation_Sp1", false);
+						itmRef.Plantation = true;
+					}
+					totalInfo = XI_ConvertString("LadyBeth_Map");
+					SetNewPicture("MAP_PICTURE", "interfaces\maps\treasure map.tga");
+					SetFormatedText("MAP_TEXT", totalInfo);
+					SetVAligmentFormatedText("MAP_TEXT");
+					ShowMapWindow();
+				return;
+			}
             if (itmRef.id == "map_full" || itmRef.id == "map_part1" || itmRef.id == "map_part2")
             {// клады
-            	SetNewPicture("MAP_PICTURE", "interfaces\maps\" + LanguageGetLanguage() + "\" + "treasure map2.tga");
-            	if (GetCharacterItem(pchar, "map_part1")>0  && GetCharacterItem(pchar, "map_part2")>0)
+            	SetNewPicture("MAP_PICTURE", "interfaces\maps\treasure map2.tga");
+            	if (GetCharacterItem(pchar, "map_part1") > 0 && GetCharacterItem(pchar, "map_part2") > 0)
 			    {
+                    // Тут применяем логику двух кусков, из них одна карта
 			        TakeNItems(xi_refCharacter, "map_part1", -1);
 			        TakeNItems(xi_refCharacter, "map_part2", -1);
 			        TakeNItems(pchar, "map_full",   1);
 			        itmRef = &Items[Items_FindItem("map_full", &itmRef)];
-			        // здесь генерация назначение и типа клада
 			        pchar.GenQuest.TreasureBuild = true;
 			        FillMapForTreasure(itmRef);
 			        SetVariable();
 			    }
-			    // тут применяем логику двух кусков, из них одна карта <--
 			    if (itmRef.mapType == "Full")
 			    {
 		            if (CheckAttribute(itmRef, "MapTypeIdx") && (sti(itmRef.MapTypeIdx) == -1))
@@ -2852,7 +2896,7 @@ void EquipPress()
 				if (itmRef.id == "skinmap") // // Jason 120712 карта двух появлений
 				{
 					int mark = sti(itmRef.mark);
-					SetNewPicture("MAP_PICTURE", "interfaces\maps\" + LanguageGetLanguage() + "\" + "skinmap_"+mark+".tga");
+					SetNewPicture("MAP_PICTURE", "interfaces\maps\" + "skinmap_"+mark+".tga");
 					ShowMapWindow();
 					if (CheckAttribute(pchar, "questTemp.Ksochitam"))
 					{
@@ -2864,7 +2908,10 @@ void EquipPress()
 				if (itmRef.id == "mark_map") // // Jason 130712 карта с пометками
 				{
 					mark = sti(itmRef.mark);
-					SetNewPicture("MAP_PICTURE", "interfaces\maps\" + LanguageGetLanguage() + "\" + "map_TM_"+mark+".tga");
+					if(LanguageGetLanguage() != "Russian")
+						SetNewPicture("MAP_PICTURE", "interfaces\maps\english\" + "map_TM_"+mark+".tga");
+					else 
+						SetNewPicture("MAP_PICTURE", "interfaces\maps\russian\" + "map_TM_"+mark+".tga");
 					ShowMapWindow();
 					return;
 				}
@@ -2875,11 +2922,20 @@ void EquipPress()
 					pchar.questTemp.Ksochitam.SQCapBookRead = "true";
 				}
 				if (itmRef.id == "wolfreeks_book") Mtraxx_WolfreekReadLogbook(); // // Addon 2016-1 Jason Пиратская линейка журнал Вульфрика
-				if (itmRef.name == "itmname_treasure_note_1") // Записки из кладов
+				if (itmRef.id == "treasure_note") // Записки из кладов
 				{
-					RemoveItems(pchar, itmRef.id, 1);
-					AddQuestRecordInfo("StoriesTreasures", itmRef.number);
-					Treasure_Stories(itmRef.id);
+                    aref aReadSequence;
+                    makearef(aReadSequence, PChar.Treasure_Stories_Read);
+                    totalInfo = GetAttributeValue(GetAttributeN(aReadSequence, 0)); // Берём хронологически первый номер
+					RemoveItems(pchar, "treasure_note", 1);
+					AddQuestRecordInfo("StoriesTreasures", totalInfo);
+					Treasure_Stories(totalInfo);
+				}
+				if(HasSubStr(itmRef.id, "FirearmStockPart") && CanUpgradeMusketSP(xi_refCharacter, itmRef))
+				{
+					UpgradeMusketSP(xi_refCharacter);
+					FillItemsSelected();
+					FillTableOther();
 				}
 				SetVariable();
 				UpdateItemInfo();

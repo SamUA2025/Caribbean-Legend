@@ -177,6 +177,15 @@ void ProcessDialogEvent()
 				link.l1.go = "FMQG_x";
 				break;
 			}
+			// Леди Бет -->
+			if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_Bank" && !CheckAttribute(pchar, "questTemp.LadyBeth_Usurer")) // Блеквуд в городе
+			{
+				dialog.Text = "Oh, capitaine ! Regardez ce que j’ai aujourd’hui. J’ai acquis certaines choses auprès des hommes de Blackwood. Ils ont besoin d’argent pour une nouvelle expédition, et nous - nous y gagnons, n’est-ce pas ?";
+				link.l1 = "Blackwood sait-il que ses hommes vendent leurs découvertes ?";
+				link.l1.go = "LadyBeth_Usurer_1";
+				break;
+			}
+			// Леди Бет <--
 			
 			if(NPChar.quest.meeting == "0")
 			{
@@ -2688,6 +2697,22 @@ void ProcessDialogEvent()
 			link.l1 = "... ";
 			link.l1.go = "exit";
 		break;
+		
+		// Леди Бет -->
+		case "LadyBeth_Usurer_1":
+			dialog.text = "Bien sûr ! Beaucoup veulent juste récupérer leur argent et s’en aller. Surtout avec les rumeurs récentes...";
+			link.l1 = "Quelles rumeurs ?";
+			link.l1.go = "LadyBeth_Usurer_2";
+		break;
+		
+		case "LadyBeth_Usurer_2":
+			dialog.text = "On dit que les conditions dans l’équipage se dégradent. Monsieur Blackwood tolérerait même des pertes régulières - ce qui n’était jamais le cas avant. Mais ce n’est pas mon affaire. Moi, je vends. Alors, qu’est-ce qui vous intéresse ?";
+			link.l1 = "...";
+			link.l1.go = "next";
+			npchar.quest.item_date = "LadyBeth";
+			pchar.questTemp.LadyBeth_Usurer = true;
+		break;
+		// Леди Бет <--
 	}	
 }
 

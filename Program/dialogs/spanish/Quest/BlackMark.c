@@ -689,7 +689,7 @@ void ProcessDialogEvent()
 		
 		case "BM_IronsThirdJungle_16":
 			dialog.text = "¡Demonios, sí! Los mejores años de mi vida. Jack Mills era un capitán con mayúscula C - Espero que seas como él algún día. Navegué en su 'Grulla' durante unos dos años hasta...";
-			link.l1 = "… hasta que te cansaste de la anarquía, como dijiste? ¿Por qué dices que esos fueron los mejores años de tu vida?";
+			link.l1 = "... hasta que te cansaste de la anarquía, como dijiste? ¿Por qué dices que esos fueron los mejores años de tu vida?";
 			link.l1.go = "BM_IronsThirdJungle_17";
 		break;
 		
@@ -940,7 +940,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "BM_Pyanitsa_11":
-			dialog.text = "Ja ja, por supuesto, ¡ay! Todo el mundo lo sabe. El viejo Gabe vive literalmente al lado: sales de la taberna y giras a la derecha. Llegas a su casa de inmediato.";
+			dialog.text = "¡Ja, ja! ¡Por supuesto, hip, lo sé! ¡Todos lo saben! El viejo Gabe vive junto al viejo molino de viento. Solo rodea la taberna y mira hacia arriba... hip!";
 			link.l1 = "¿Cuándo está en casa? Parece que es un hombre ocupado.";
 			link.l1.go = "BM_Pyanitsa_12";
 		break;

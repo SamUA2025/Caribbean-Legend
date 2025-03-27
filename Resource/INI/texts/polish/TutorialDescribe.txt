@@ -30,8 +30,8 @@ Wykorzystaj funkcję przyspieszenia czasu – zwłaszcza na morzu, pozwala to za
 Do kontroli używaj: + i -
 }
 
-SeaFastTravelEnglish {Szybka podróż}
-SeaFastTravelEnglish_descr
+SeaFastTravel {Szybka podróż}
+SeaFastTravel_descr
 {
 Menu akcji, które skrywa się pod klawiszem 'Enter', oferuje wiele przydatnych funkcji zarówno na lądzie, jak i morzu.
 ~
@@ -40,7 +40,7 @@ Funkcja „Płyń do” pozwala na szybką podróż do przyjaznego statku lub pu
 Użyj menu akcji, aby natychmiast dotrzeć do 'Ghost', a następnie wysłać szalupę.
 }
 
-SeaFastTravelEnglish_controlsimg1 {BICommandsActivate}
+SeaFastTravel_controlsimg1 {BICommandsActivate}
 
 LandTimeScaleDown {Kontrola czasu w walce}
 LandTimeScaleDown_descr
@@ -83,15 +83,16 @@ Prawie zawsze możesz znaleźć miejsce, w którym zmusisz wroga do walki jeden 
 Collision {Zmiana pozycji}
 Collision_descr
 {
-Czasami podczas bitwy konieczna jest zmiana pozycji, czy to poprzez przebicie się przez linię wroga, czy ominięcie sojuszników.
+Czasami w trakcie walki zachodzi potrzeba zmiany pozycji, przerywając linię przeciwnika lub obchodząc sojuszników.
 ~
-Wyjdź z trybu walki, aby bohater mógł odepchnąć inne postacie z drogi. Po zmianie pozycji ponownie wejdź w tryb walki, aby kontynuować starcie.
+Twój bohater automatycznie odsuwa sojuszników, a aby przełamać formację przeciwników, musisz użyć sprintu lub skoków.
+W walce sprint zużywa energię, więc korzystaj z niego mądrze.
 }
 
 Collision_controlsimg1 {ChrFightMode}
 
-WorldMapEnglish {Mapa globalna}
-WorldMapEnglish_descr
+WorldMap {Mapa globalna}
+WorldMap_descr
 {
 Mapa globalna pozwala na odbywanie morskich podróży po Karaibach. Nie musisz płynąć dokładnie do każdego miasta czy zatoki – wystarczy opuścić mapę globalną w pobliżu celu i użyć funkcji „Płyń do”.
 ~
@@ -100,21 +101,21 @@ Umiejętne korzystanie z tej funkcji może znacząco zaoszczędzić czas. Na prz
 Używaj skrótów klawiszowych, aby oddalić mapę oraz wyświetlić Atlas z mapami.
 }
 
-WorldMapEnglish_controlsimg1 {WMapCameraSwitch}
-WorldMapEnglish_controlsimg2 {MapView}
+WorldMap_controlsimg1 {WMapCameraSwitch}
+WorldMap_controlsimg2 {MapView}
 
-LandMapEnglish {Podróżowanie po lądzie}
-LandMapEnglish_descr
+LandMap {Podróżowanie po lądzie}
+LandMap_descr
 {
 Mapy można kupować lub znajdować. Zbieraj każdą mapę wyspy, na jaką natrafisz, aby łatwiej poruszać się po lądzie. Jest to szczególnie przydatne w zadaniach, infiltracjach kolonii i poszukiwaniach skarbów.
 ~
 Wszystkie zebrane mapy można znaleźć w Atlasie.
 }
 
-LandMapEnglish_controlsimg1 {MapView}
+LandMap_controlsimg1 {MapView}
 
-NavigatorEnglish {Umiejętność nawigacji}
-NavigatorEnglish_descr
+Navigator {Umiejętność nawigacji}
+Navigator_descr
 {
 Przydziel Nawigatora z odpowiednią umiejętnością Nawigacji!
 ~
@@ -126,10 +127,10 @@ Wymagania dla każdej rangi statku można sprawdzić, klikając prawym przyciski
 ~
 Umiejętność Nawigacji rośnie powoli, więc przy pierwszej okazji zatrudnij doświadczonego nawigatora w tawernie. Pamiętaj jednak, że nie znajdziesz specjalisty z poziomem umiejętności powyżej 75.
 
-NavigatorEnglish_controlsimg1 {Umiejętności}
+Navigator_controlsimg1 {Umiejętności}
 
-AlchemyEnglish {Rzemiosło}
-AlchemyEnglish_descr
+Alchemy {Rzemiosło}
+Alchemy_descr
 {
 Wytwarzanie przedmiotów, głównie talizmanów, mikstur i amunicji, może znacząco ułatwić życie. Jest to szczególnie przydatne w starciach z bossami.
 ~
@@ -138,34 +139,34 @@ Aby wytworzyć przedmiot, musisz znaleźć lub kupić przepis. Składniki nie mu
 Na początku gry masz wybór: rozwijać umiejętność Alchemii i od razu zacząć kupować przepisy lub odłożyć to na późniejszy etap, gdy zdobędziesz zestawy narzędzi zastępujące wydawanie cennego punktu umiejętności na Alchemię.
 }
 
-AlchemyEnglish_controlsimg1 {Alchemy}
+Alchemy_controlsimg1 {Alchemy}
 
-LandMapAtSeaEnglish {Podróżowanie po wodzie}
-LandMapAtSeaEnglish_descr
+LandMapAtSea {Podróżowanie po wodzie}
+LandMapAtSea_descr
 {
 Kieruj się na przeciwną stronę wyspy, aby ukończyć zadanie. Opuść zatokę po prawej stronie i trzymaj się linii brzegowej!
 }
 
-SalaryEnglish {Utrzymanie statku}
-SalaryEnglish_descr
+Salary {Utrzymanie statku}
+Salary_descr
 {
 Miesięczne wypłaty dla oficerów i załogi mogą znacząco skomplikować życie kapitana. Całkowita suma zależy od twoich umiejętności Handlu i Dowodzenia, wielkości statku oraz poziomu trudności gry.
 ~
 Nawet na małych statkach warto mieć kwatermistrza, a duży okręt wojenny może doprowadzić nawet do bankructwa państwa. Jeśli opcja podziału łupów jest aktywna, koszty utrzymania mogą być jeszcze wyższe.
 }
 
-SalaryEnglish_controlsimg1 {ShipState}
+Salary_controlsimg1 {ShipState}
 
-DubloonsEnglish {Dublony}
-DubloonsEnglish_descr
+Dubloons {Dublony}
+Dubloons_descr
 {
 Złote dublony są prawdziwą miarą twojego bogactwa i zdolności do rozwiązywania problemów za pomocą pieniędzy. Zawsze staraj się zdobywać te monety, ponieważ najpotężniejsze osoby na Karaibach oferują swoje usługi tylko za dublony.
 ~
 Dobre źródła dublonów to poszukiwanie skarbów, lokaty bankowe, handel towarami strategicznymi i wymiana waluty u lichwiarzy. Nie musisz nosić złota przy sobie – możesz je przechowywać w jednej ze skrzyń w swojej kajucie.
 }
 
-BoxEnglish {Przechowywanie przedmiotów}
-BoxEnglish_descr
+Box {Przechowywanie przedmiotów}
+Box_descr
 {
 Skrzynie w twojej kajucie mogą pomieścić nieograniczoną liczbę przedmiotów osobistych. Oprócz obowiązkowego wyposażenia w slotach ekwipunku, warto mieć przy sobie jedynie mikstury, amulety i amunicję.
 ~
@@ -174,8 +175,8 @@ Sprzedawaj nadmiarowe przedmioty, ale zawsze zachowuj rozsądny zapas biżuterii
 Inni kapitanowie stosują podobną praktykę, dlatego zawsze warto przeszukać skrzynie w kajucie przejętego statku.
 }
 
-HealthEnglish {Witalność}
-HealthEnglish_descr
+Health {Witalność}
+Health_descr
 {
 Twoja Witalność spadła! Ten parametr opisuje ogólny stan twojej postaci i wpływa na wszystkie jej zdolności.
 ~
@@ -184,8 +185,8 @@ Witalność zmniejsza się w wyniku stosowania prymitywnych metod leczenia, dram
 Można ją przywrócić za pomocą specjalnych mikstur, odpoczynku w tawernie, romantycznych aktywności oraz po prostu z upływem czasu. W ciężkich przypadkach mogą pomóc kapłani. Unikalni oficerowie również tracą Witalność, gdy zostaną ranni w walce, ale regenerują ją z czasem.
 }
 
-AmuletEnglish {Amulety}
-AmuletEnglish_descr
+Amulet {Amulety}
+Amulet_descr
 {
 Amulety to potężne wzmocnienia postaci podzielone na ofensywne, defensywne i wspomagające. Nie można jednocześnie wyposażyć amuletów ofensywnych i defensywnych, więc wybieraj mądrze.
 ~
@@ -194,10 +195,10 @@ Oprócz amuletów istnieją także talizmany i symbole ochronne. Talizmany dzia�
 Zawsze miej w zapasie kilka zestawów wzmocnień na trudne testy umiejętności oraz wymagające bitwy na morzu i lądzie.
 }
 
-AmuletEnglish_controlsimg1 {Inventory}
+Amulet_controlsimg1 {Inventory}
 
-PerkEnglish {Punkty talentów}
-PerkEnglish_descr
+Perk {Punkty talentów}
+Perk_descr
 {
 Zdobyłeś właśnie pierwszy punkt talentu (PP)! PP są kluczowe dla rozwoju postaci i dzielą się na Morskie oraz Osobiste.
 ~
@@ -208,10 +209,10 @@ Oba typy punktów rozwijają się niezależnie wraz ze wzrostem twoich umiejętn
 Aby szybko zdobywać Morskie PP, wykonuj morskie zadania poboczne i kontrakty. Osobiste punkty rosną szybciej, jeśli walczysz różnymi rodzajami broni i spędzasz czas w tawernach. Pamiętaj, że Osobiste PP są cenniejsze, ponieważ większość Morskich talentów mogą zastąpić twoi oficerowie.
 }
 
-PerkEnglish_controlsimg1 {Abilities}
+Perk_controlsimg1 {Abilities}
 
-FighterEnglish {Straż Przednia}
-FighterEnglish_descr
+Fighter {Straż Przednia}
+Fighter_descr
 {
 Do twojej załogi dołączył pierwszy członek Straży Przedniej! Przydziel go za pomocą Menu Postaci.
 ~
@@ -226,13 +227,13 @@ Zawsze wyposażaj swoich strażników w amulety, przedmioty lecznicze, broń i a
 Możesz wydawać strażnikom polecenia, aby utrzymywali pozycję, podążali za tobą lub atakowali, korzystając ze skrótów klawiszowych lub dialogów.
 }
 
-FighterEnglish_controlsimg1 {Abilities}
-FighterEnglish_controlsimg2 {OfficersFollow}
-FighterEnglish_controlsimg3 {OfficersCharge}
-FighterEnglish_controlsimg4 {OfficersHold}
+Fighter_controlsimg1 {Abilities}
+Fighter_controlsimg2 {OfficersFollow}
+Fighter_controlsimg3 {OfficersCharge}
+Fighter_controlsimg4 {OfficersHold}
 
-RestEnglish {Opcja Odpoczynku}
-RestEnglish_descr
+Rest {Opcja Odpoczynku}
+Rest_descr
 {
 Opcja odpoczynku jest teraz dostępna w Menu Akcji!
 ~
@@ -241,7 +242,7 @@ Wszystko w grze podąża za cyklem dobowym: strażników nie ma na nabrzeżu i p
 Możesz używać tej funkcji na morzu i na dzikim lądzie. Jeśli jesteś w mieście, wynajmij pokój w tawernie.
 }
 
-RestEnglish_controlsimg1 {BICommandsActivate}
+Rest_controlsimg1 {BICommandsActivate}
 
 Navigation {Sterowanie Statkiem}
 Navigation_descr
@@ -259,15 +260,13 @@ Tryb Zwiniętych Żagli stopniowo spowalnia statek do całkowitego zatrzymania. 
 Złota zasada: w bitwie – tryb Żagli Bitewnych, poza bitwą – tryb Pełnych Żagli.
 }
 
-
-}
-
 Navigation_controlsimg1 {Ship_SailUp}
 Navigation_controlsimg2 {Ship_SailDown}
 Navigation_controlsimg3 {MiniMapZoomIn}
 Navigation_controlsimg4 {MiniMapZoomOut}
-StealthEnglish {Skradanie się}
-StealthEnglish_descr
+
+Stealth {Skradanie się}
+Stealth_descr
 {
 Większość karaibskich osad nie przywita cię z otwartymi ramionami. Istnieją dwa sposoby na przedostanie się do miasta: przez port lub przez bramy.
 ~
@@ -309,8 +308,8 @@ Im wyższa twoja umiejętność Abordażu, tym łatwiej będzie ci skutecznie za
 Doświadczeni bosmani, oddziały szturmowe, amulety oraz rozwinięte umiejętności walki wręcz mogą zniwelować przewagę liczebną przeciwnika.
 }
 
-MushketEnglish {Muszkiety}
-MushketEnglish_descr
+Mushket {Muszkiety}
+Mushket_descr
 {
 Długolufowa broń palna jest niezwykle groźna w walce. Mogą jej używać jedynie główny bohater posiadający umiejętność Muszkieter oraz niektórzy unikalni oficerowie.
 Najbardziej znanym przykładem jest Tichingitu – to właśnie on powinien otrzymać pierwszy znaleziony muszkiet.
@@ -318,20 +317,40 @@ Najbardziej znanym przykładem jest Tichingitu – to właśnie on powinien otrz
 W przeciwieństwie do broni białej, broń palna oferuje większą elastyczność. Rozwijając swoją postać jako strzelca, nosząc odpowiednie amulety i wyposażenie oraz używając różnych typów amunicji, możesz odwrócić losy każdej bitwy.
 }
 
-MushketEnglish_controlsimg1 {Inventory}
-
-CameraControl {Ahoy!}
+Mushket_controlsimg1 {Inventory}
+CameraControl{Ahoy!}
 CameraControl_descr
 {
-Witaj w trybie fabularnym! Zanim wyruszysz w morze, musisz upewnić się, że ląd cię nie pokona.
-~
-Caribbean Legend to wymagająca gra, ale nie jest trudna do opanowania. Aby pomóc ci odnaleźć się w Nowym Świecie, przygotowaliśmy rozszerzony samouczek na wyspie Martynika. Ukończenie go pozwoli ci opanować wszystkie niezbędne umiejętności i zrozumieć mechaniki gry.
-~
-Sterowanie odbywa się za pomocą klawiszy ruchu oraz aktywnego użycia myszy. W większości przypadków wystarczy nacisnąć klawisz ruchu do przodu i sterować kamerą. Prędkość kamery można dostosować w ustawieniach.
-~
-Niektórzy gracze uważają, że sterowanie nie jest wystarczająco responsywne – zgadzamy się. Dlatego aktywnie pracujemy nad jego ulepszeniem i mamy nadzieję, że w następnej dużej aktualizacji ten komunikat będzie już wyglądał inaczej.
-~
-Dziękujemy za grę i do zobaczenia na morzu!
+Witaj w Trybie Fabularnym.  
+Zanim stawisz czoła otwartemu morzu, musisz przetrwać na lądzie. Nowy Świat nie toleruje głupców - i nie daje drugich szans.
+~  
+Aby pomóc ci odnaleźć się w nowym świecie, przygotowaliśmy rozbudowaną przygodę instruktażową na wyspie Martynika. Tam opanujesz umiejętności, które każdy kapitan musi znać - i zdobędziesz swoje pierwsze dowództwo.
+~  
+Poruszaj się za pomocą klawiszy, a przyglądaj się otoczeniu za pomocą myszy. Możesz chodzić, biegać lub sprintować, gdy zajdzie taka potrzeba. Menu akcji również okaże się przydatne - szczególnie do szybkiej podróży, która odblokowuje się po zakończeniu samouczka.
+~  
+Twoja legenda zaczyna się tutaj.  
+Do zobaczenia na morzu.
+}
+
+CameraControl_controlsimg1 {ChrForward}
+CameraControl_controlsimg2 {ChrStrafeLeft}
+CameraControl_controlsimg3 {ChrBackward}
+CameraControl_controlsimg4 {ChrStrafeRight}
+CameraControl_controlsimg5 {ShipCamera_Turn_H}
+CameraControl_controlsimg6 {LICommandsActivate}
+
+CameraControlFP{Ahoy!}
+CameraControlFP_descr
+{
+Witaj w Nowym Świecie!  
+Te wody nie wybaczają - a fortuna rzadko sprzyja lekkomyślnym. Zacznij od małych rzeczy: podróżuj między przyjaznymi koloniami, załatwiaj sprawy, dostarczaj towary i pasażerów, zajmuj się lokalnym handlem.
+~  
+Złote doubloony kupią ci mapy do zakopanych skarbów. Srebrne pesos utrzymają twój statek na wodzie i pozwolą na zatrudnienie oficerów - a bez nich nawet samotny kupiec może być twoją zgubą.
+~  
+Poruszaj się za pomocą klawiszy, patrz wokół za pomocą myszy. Możesz chodzić, biegać lub sprintować, gdy to konieczne. Menu akcji również okaże się przydatne - szczególnie do szybkiej podróży i innych zaawansowanych funkcji.
+~  
+Twoja legenda zaczyna się tutaj.  
+Do zobaczenia na morzu.
 }
 
 CameraControlFP_controlsimg1 {ChrForward}
@@ -339,3 +358,23 @@ CameraControlFP_controlsimg2 {ChrStrafeLeft}
 CameraControlFP_controlsimg3 {ChrBackward}
 CameraControlFP_controlsimg4 {ChrStrafeRight}
 CameraControlFP_controlsimg5 {ShipCamera_Turn_H}
+CameraControlFP_controlsimg6 {LICommandsActivate}
+
+MarksmanMode{Celowanie}
+MarksmanMode_descr
+{
+Witaj w Nowym Świecie, kapitanie!  
+~  
+Caribbean Legend to skomplikowana gra, ale granie w nią nie jest trudne. Aby pomóc ci przystosować się do Nowego Świata, przygotowaliśmy obszerną przygodę instruktażową na wyspie Martynika. Po jej ukończeniu opanujesz wszystkie niezbędne umiejętności i zapoznasz się z mechaniką gry.  
+~  
+Sterowanie w grze odbywa się za pomocą klawiszy ruchu i myszy. Twój bohater może chodzić i biegać we wszystkich kierunkach oraz wykorzystać sprint do przyspieszenia. Menu akcji będzie również często przydatne — zawiera wiele użytecznych opcji.  
+~  
+Możesz swobodnie rozglądać się myszą — pozwoli ci to znaleźć ukryte przedmioty, kontrolować walki i po prostu podziwiać widoki.  
+~  
+Dziękujemy za grę, i do zobaczenia na morzu!
+}
+
+MarksmanMode_controlsimg1 {ChrAiming}
+
+
+

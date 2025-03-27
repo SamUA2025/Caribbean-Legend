@@ -1074,9 +1074,19 @@ void ProcessDialogEvent()
 					link.l1.go = "Node_3";
 				break;
 				case 4:
-					dialog.text = "Verdammt... Wie könnte das sein? Das kann nicht sein!";
-					link.l1 = "Was ist los, Kumpel? Wo ist der Schatz? Sag mir nicht, dass es keinen gibt!";
-					link.l1.go = "Node_4";
+                    ok = GetCharacterItem(pchar, "map_full") == 0 && GetCharacterItem(PChar, "map_part2") == 0;
+                    if(GetCharacterItem(PChar, "map_part1") > 0 && !ok) // Первая половинка есть, но вторую дать нельзя
+                    {
+                        dialog.text = "Hör zu, ich habe alles überprüft, aber keinen Schatz gefunden. Schade, dass es so gekommen ist. Jemand muss es vor uns ausgegraben haben.";
+                        link.l1 = "Und wie kann das sein?!";
+                        link.l1.go = "PrisonerInPlace_1";
+                    }
+                    else
+                    {
+                        dialog.text = "Verdammt... Wie könnte das sein? Das kann nicht sein!";
+                        link.l1 = "Was ist los, Kumpel? Wo ist der Schatz? Sag mir nicht, dass es keinen gibt!";
+                        link.l1.go = "Node_4";
+                    }
 				break;
 			}
 		break;
@@ -1154,14 +1164,7 @@ void ProcessDialogEvent()
 		break;
 			
 		case "Node_4_2":
-			if (CheckCharacterItem(pchar, "map_part1"))
-			{
-				GiveItem2Character(pchar, "map_part2");
-			}
-			else
-			{
-				GiveItem2Character(pchar, "map_part1");
-			}
+			AddMapPart();
 			dialog.text = "Natürlich, nimm es. Kapitän, befreie mich... bitte? Ich dachte wirklich, dass der Schatz dort war. Vielleicht findest du heraus, wo er ist, und nimmst ihn für dich. Ich flehe dich an.";
 			link.l1 = "Ich sehe... Tatsächlich, es ist schwer, aus diesem Fetzen etwas herauszufinden. Die zweite Hälfte der Karte ist nötig. Also, verschwinde. Ich sehe jetzt, dass es nicht deine Schuld war.";
 			link.l1.go = "PrisonerInPlace_4";

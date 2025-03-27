@@ -4,7 +4,7 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
     switch (Dialog.CurrentNode)
 	{
 		case "quests":
-			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("Welche Art von Fragen?","Was willst du, "+GetAddress_Form(NPChar)+"?"),"Du hast mir bereits eine Frage gestellt "+GetAddress_Form(NPChar)+"...","Sie sprechen heute zum dritten Mal über eine bestimmte Frage...","Schau, wenn du mir nichts über die Angelegenheiten des Hafens zu erzählen hast, dann belästige mich nicht mit deinen Fragen.","Block",1,npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("Welche Art von Fragen?","Was willst du, "+GetAddress_Form(NPChar)+"?"),"Du hast mir bereits eine Frage gestellt "+GetAddress_Form(NPChar)+"...","Sie sprechen heute zum dritten Mal über eine bestimmte Frage...","Schau, wenn du mir nichts über die Angelegenheiten des Hafens zu erzählen hast, dann belästige mich nicht mit deinen Fragen.","block",1,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat(RandPhraseSimple("Ich habe meine Meinung geändert.","Ich habe nichts zu besprechen."),"Macht nichts.","Ja, bereits das dritte Mal...","Es tut mir leid, aber ich interessiere mich momentan nicht für die Angelegenheiten des Hafens.",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			if (pchar.questTemp.Slavetrader == "FindRatHavana")
@@ -27,7 +27,7 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 		break;
 		
 		case "Havana_ratP_1":
-			dialog.text = NPCStringReactionRepeat("Ja, er war hier. Aber er ist schon gegangen. Frag unseren Wirt nach ihm, er hat ein Zimmer im Obergeschoss gemietet.","Sie haben bereits danach gefragt und ich habe geantwortet.","Ich sage Ihnen, dass Sie bereits nach diesem Gontier gefragt haben..","Ich bitte Sie, mich nicht zu belästigen!","Block",0,npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat("Ja, er war hier. Aber er ist schon gegangen. Frag unseren Wirt nach ihm, er hat ein Zimmer im Obergeschoss gemietet.","Sie haben bereits danach gefragt und ich habe geantwortet.","Ich sage Ihnen, dass Sie bereits nach diesem Gontier gefragt haben..","Ich bitte Sie, mich nicht zu belästigen!","block",0,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Danke. Das werde ich tun.","Hm, nun ...","Ja, ich habe wirklich gefragt ...","Entschuldigung, "+npchar.name+"...",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 		break;

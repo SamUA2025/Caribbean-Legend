@@ -74,7 +74,7 @@ Tus golpes tienen un 20% de probabilidad de penetrar el bloqueo enemigo. Aumenta
 Gunman {Mosquetero}
 perkGunman
 {
-Mejoras las habilidades con las armas de fuego: la precisión y la velocidad de recarga aumentan en un 10%. 
+Mejoras la destreza con armas de fuego: la precisión y la velocidad de recarga aumentan en un 10%. 
 Puedes usar arcabuces, mosquetes, morteros y otras armas largas de un solo cañón.
 }
 

@@ -111,8 +111,8 @@ void ProcessDialogEvent()
 		break;
 		
 		case "urakan_10":
-			PlaySound("Voice\English\Complete.wav");
-			dialog.text = "¡Se ha cumplido! Cuando veo cómo luchas contra Kukulcán, sé que eres Cavil en persona. Vienes a Tayasal para salvar al pueblo Itza de la muerte a causa de mi padre y de Kukulcán. Mi padre, el gran sacerdote Kanek, condenó al pueblo Itza en la gloria de los ancestros mayas hace mucho tiempo muertos.\nSoy el jefe de guerra Urakán, quien ha protegido al pueblo Itza durante muchos años. Ni un solo rostro pálido dejará Tayasal con vida. Yo y mis guerreros nos aseguramos de que el pueblo Itza permanezca protegido y vivo por muchos, muchos años por venir. No quiero sacrificar a todo mi pueblo.";
+			PlaySound("Voice\Spanish\Complete.wav");
+			dialog.text = "¡Finalmente, está hecho! ¡Se ha cumplido! Cuando veo cómo luchas contra Kukulcán, sé que eres Cavil en persona. Vienes a Tayasal para salvar al pueblo Itza de la muerte a causa de mi padre y de Kukulcán. Mi padre, el gran sacerdote Kanek, condenó al pueblo Itza en la gloria de los ancestros mayas hace mucho tiempo muertos.\nSoy el jefe de guerra Urakán, quien ha protegido al pueblo Itza durante muchos años. Ni un solo rostro pálido dejará Tayasal con vida. Yo y mis guerreros nos aseguramos de que el pueblo Itza permanezca protegido y vivo por muchos, muchos años por venir. No quiero sacrificar a todo mi pueblo.";
 			link.l1 = "Lo sabía, Urakan. Y te pedí que me ayudaras en el puente.";
 			link.l1.go = "urakan_11";
 		break;
@@ -217,8 +217,8 @@ void ProcessDialogEvent()
 		break;
 		
 		case "urakan_19":
-			PlaySound("Voice\English\Complete.wav");
-			dialog.text = "Lo lograste, ¡oh gran Cavil! El pueblo de Itza ahora está a salvo. Yo, Urakan, hijo de Kanek, te aseguro que no deshonraré el honor que me das y protegeré Tayasal de cualquier invasión de rostros pálidos deshonrosos en tu nombre.";
+			PlaySound("Voice\Spanish\Complete.wav");
+			dialog.text = "¡Finalmente, está hecho! Lo lograste, ¡oh gran Cavil! El pueblo de Itza ahora está a salvo. Yo, Urakan, hijo de Kanek, te aseguro que no deshonraré el honor que me das y protegeré Tayasal de cualquier invasión de rostros pálidos deshonrosos en tu nombre.";
 			link.l1 = "Bien puedo creerlo, jefe. Bueno, ahora podemos celebrar: hemos detenido los traicioneros planes de Kukulcán. Nunca más podrá materializar una revolución temporal.";
 			link.l1.go = "urakan_20";
 		break;

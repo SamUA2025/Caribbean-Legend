@@ -1,4 +1,4 @@
-A// диалоги по квесту Цена чахотки
+// диалоги по квесту Цена чахотки
 void ProcessDialogEvent()
 {
 	ref sld, NPChar;
@@ -446,12 +446,12 @@ void ProcessDialogEvent()
 			}
 			if(sti(pchar.questTemp.SergioOil) >= 1 && !CheckAttribute(pchar, "questTemp.SergioOilBlock")) // увеличить объём поставок смолами
 			{
-				link.l4 = "Señor Sergio, ich möchte mehr Harz kaufen. Könnten Sie Lieferungen anbieten, die, sagen wir, fünfmal größer sind?";
+				link.l4 = "Herr Sergio, ich möchte mehr Harz kaufen. Könnten Sie Chargen liefern, sagen wir, fünfmal größer?";
 				link.l4.go = "UpgradeOil";
 			}
 			if(sti(pchar.questTemp.SergioOil) >= 1 && CheckAttribute(pchar, "questTemp.SergioOilPotom") && PCharDublonsTotal() >= 3000) // увеличить объём поставок смолами, если в первый раз не принесли
 			{
-				link.l4 = "Hier, wie versprochen, Señor Sergio, dreitausend Dublonen, wie Sie erbeten haben. Ich bin sicher, dass mit Ihrer Umsicht und meiner Investition dieses Unternehmen uns beiden beträchtlichen Gewinn bringen wird.";
+				link.l4 = "Hier, wie versprochen, Señor Sergio, dreitausend Dublonen, wie Sie es verlangt haben. Ich bin sicher, dass dieses Unterfangen mit Ihrer Weitsicht und meiner Investition erhebliche Vorteile für uns beide bringen wird.";
 				link.l4.go = "UpgradeOil_Agreed";
 			}
 		break;
@@ -485,42 +485,42 @@ void ProcessDialogEvent()
 		case "UpgradeOil":
 			if (GetSummonSkillFromName(pchar, SKILL_COMMERCE) >= 80)
 			{
-				dialog.text = "Señor"+GetSexPhrase("","ita")+", Ihr Wunsch, mehr Harz zu kaufen, zeugt zweifellos von Vertrauen in unser Geschäft. Allerdings gibt es eine Schwierigkeit: Mit steigendem Volumen wächst das Risiko, die Aufmerksamkeit der Inselbehörden zu erregen, und die Kontrolle solcher Lieferungen erfordert Personal und Sicherheitsmaßnahmen, was, wie ich zugeben muss, nicht billig ist. Wenn Sie bereit sind, dem Preis dreitausend Dublonen als einmalige Zahlung hinzuzufügen, werde ich zuverlässige Leute einstellen, die die Ladung schützen und Informationslecks verhindern können. Dann wird unsere Route sicherer, und ich kann Ihnen monatlich dreihundert Fässer Harz liefern. Als Ausgleich für Ihre Investition biete ich Ihnen als Großabnehmer einen Rabatt von fünfzehn Prozent auf alle zukünftigen Lieferungen.";
-				link.l1 = "Dreitausend Dublonen für die Sicherheit der Lieferungen? Señor Sergio, ich verhehle nicht, dieser Preis erscheint mir unglaublich - als ob Sie mir vorschlagen, eine Verschwörung im Escorial zu organisieren, anstatt nur den Schutz der Harzladungen zu gewährleisten!";
+				dialog.text = "Herr"+GetSexPhrase("","es")+", Ihr Wunsch, mehr Harz zu kaufen, zeigt sicherlich Vertrauen in unser Geschäft. Es gibt jedoch eine Komplexität\nMit steigenden Mengen besteht ein größeres Risiko, die Aufmerksamkeit der Inselbehörden zu erregen, und die Kontrolle solcher Sendungen erfordert Menschen und Sicherheitsmaßnahmen, was, ich gebe es zu, nicht billig ist. Wenn Sie bereit sind, den Preis um drei Tausend Dublonen zu erhöhen, als einmalige Zahlung, werde ich zuverlässige Leute einstellen, die die Ladung schützen und Informationslecks verhindern können. Dann wird unsere Route sicherer und ich kann Ihnen monatlich dreihundert Fässer Harz liefern. Um Ihre Investition auszugleichen, biete ich Ihnen als Großkäufer einen fünfzehnprozentigen Rabatt auf alle zukünftigen Sendungen.";
+				link.l1 = "Dreitausend Dublonen, um die Lieferungen zu sichern? Señor Sergio, ich werde es nicht verbergen, dieser Preis scheint unglaublich - als ob Sie eine Verschwörung im Escorial vorschlagen würden, anstatt nur eine Pechladung zu sichern!";
 				link.l1.go = "UpgradeOil_1";
 				notification("Skill Check Passed", SKILL_COMMERCE);
 			}
 			else
 			{
-				dialog.text = "Señor"+GetSexPhrase("","ita")+", ich schätze Ihr Interesse, aber so große Geschäfte erfordern Erfahrung und Vorsicht. Ehrlich gesagt, ist Ihr Niveau in Handelsfragen noch nicht hoch genug, um mit einem solchen Volumen umzugehen. Ich rate Ihnen, etwas mehr Erfahrung zu sammeln und zu mir zurückzukehren, wenn Sie für größere Lieferungen bereit sind. Dann werden wir die Angelegenheit vielleicht gründlich besprechen.";
-				link.l1 = "Gut. Wir kommen später auf diese Frage zurück.";
+				dialog.text = "Herr"+GetSexPhrase("","es")+", Ich schätze Ihr Interesse, aber solche großen Transaktionen erfordern Erfahrung und Vorsicht. Zugegeben, Ihr Handelsniveau ist noch nicht hoch genug, um ein solches Volumen zu bewältigen. Ich rate Ihnen, etwas mehr Erfahrung zu sammeln und zu mir zurückzukommen, wenn Sie bereit für mehr Paritäten sind. Dann werden wir vielleicht die Angelegenheit gründlich besprechen.";
+				link.l1 = "Gut. Wir werden später auf dieses Thema zurückkommen.";
 				link.l1.go = "oil_trade_exit";
 				notification("Skill Check Failed (80)", SKILL_COMMERCE);
 			}
 		break;
 		
 		case "UpgradeOil_1":
-			dialog.text = "Señor"+GetSexPhrase("","ita")+", ich verstehe Ihre Besorgnis. Aber Sie wissen doch, Sicherheit ist nie billig, besonders wenn es um eine so seltene Ware geht. Außerdem garantiere ich Ihnen nicht nur das Ausbleiben von Lecks, sondern biete auch einen Rabatt an, der mit der Zeit Ihre Investition ausgleichen wird. Ist das nicht ein vernünftiger Kompromiss?";
-			link.l1 = "Ich gebe zu: In unserem Geschäft sind Zuverlässigkeit und Geheimhaltung teuer, und der Rabatt macht unser potenzielles Geschäft etwas attraktiver. Aber trotzdem, dreitausend Dublonen ist eine übermäßig hohe Summe. Vielleicht könnten Sie den Betrag etwas reduzieren?";
+			dialog.text = "Herr"+GetSexPhrase("","es")+", Ich verstehe Ihre Bedenken. Aber Sie wissen, Sicherheit ist nie billig, besonders bei so seltenen Waren. Außerdem garantiere ich nicht nur keine Lecks, sondern biete auch einen Rabatt an, der Ihre Investition über die Zeit ausgleichen wird. Ist das nicht ein vernünftiger Kompromiss?";
+			link.l1 = "Ich gebe zu: In unserem Geschäft sind Zuverlässigkeit und Diskretion teuer und der Rabatt macht unser mögliches Geschäft etwas attraktiver. Aber trotzdem, dreitausend Dublonen sind eine übermäßige Summe. Vielleicht könnten Sie sie etwas reduzieren?";
 			link.l1.go = "UpgradeOil_2";
 		break;
 		
 		case "UpgradeOil_2":
-			dialog.text = "Ich bedauere, aber bei solchen Angelegenheiten sind halbe Maßnahmen nicht akzeptabel. Entweder wir gewährleisten vollen Schutz, oder wir riskieren alles. Die Summe bleibt unverändert, und nur so kann ich Zuverlässigkeit und Vertraulichkeit garantieren. Sie wollen doch nicht, dass erst mich und dann Sie die gesamte königliche Flotte jagt, oder?";
+			dialog.text = "Es tut mir leid, aber Halbheiten sind in solchen Angelegenheiten nicht akzeptabel. Entweder wir gewährleisten vollen Schutz oder wir riskieren alles. Die Summe bleibt dieselbe und nur auf diese Weise kann ich Zuverlässigkeit und Vertraulichkeit garantieren. Sie möchten doch nicht, dass die gesamte königliche Flotte erst mich, dann Sie jagt, oder?";
 			if (PCharDublonsTotal() >= 3000)
 			{
-				link.l1 = "Gut, Señor Saldo, Sie haben mich überzeugt. Sicherheit und Zuverlässigkeit sind ihren Preis wert. Dreitausend Dublonen. Hier, bitte.";
+				link.l1 = "Sehr gut, Señor Saldo, Sie haben mich überzeugt. Sicherheit und Zuverlässigkeit haben ihren Preis. Dreitausend Dublonen. Hier sind sie.";
 				link.l1.go = "UpgradeOil_Agreed";
 			}
-			link.l2 = "Señor Saldo, Sie haben mich von der Notwendigkeit dieser Maßnahmen überzeugt. Allerdings sind dreitausend Dublonen eine beträchtliche Summe, und im Moment habe ich sie nicht. Ich muss ein wenig warten, bis ich die erforderliche Menge zusammenhabe.";
+			link.l2 = "Herr Saldo, Sie haben mich von der Notwendigkeit dieser Maßnahmen überzeugt. Allerdings sind dreitausend Dublonen eine ernste Summe, und ich habe sie im Moment nicht. Ich muss warten, bis ich den erforderlichen Betrag gesammelt habe.";
 			link.l2.go = "UpgradeOil_4";
-			link.l3 = "Für so viel Geld könnte man eine ganze Flotte bestechen und alle Soldaten auf dem Kontinent, ganz zu schweigen von Wachen für eine bescheidene Harzladung! Ich entschuldige mich, aber ich kann einem solchen Angebot nicht zustimmen. Lassen wir alles, wie es ist, ohne Übertreibungen und zusätzliche Kosten.";
+			link.l3 = "Für solches Geld könnte man eine ganze Flotte und alle Soldaten auf dem Kontinent bestechen, geschweige denn Wachen für eine bescheidene Teerladung anheuern! Entschuldigung, aber ich kann einem solchen Angebot nicht zustimmen. Lassen wir alles so wie es ist, ohne Übertreibungen und zusätzliche Kosten.";
 			link.l3.go = "UpgradeOil_3";
 		break;
 		
 		case "UpgradeOil_Agreed":
-			dialog.text = "Nun gut, Señor"+GetSexPhrase("","ita")+", ich sehe, dass unser Vertrauen gegenseitig ist. Seien Sie versichert: Die Sache wird wie nötig arrangiert. Nun zu den Details: 300 Fässer Harz werden wie üblich am 5. jedes Monats hier am Leuchtturm von Trinidad auf Sie warten. Sie können die gesamte Partie für 2550 Dublonen erwerben.";
-			link.l1 = "Hervorragend, Señor Sergio. Enttäuschen Sie mich nicht.";
+			dialog.text = "Nun, Señor, ich sehe, dass unser Vertrauen gegenseitig ist. Seien Sie sicher, dass der Fall ordnungsgemäß behandelt wird. Nun zu den Details: 300 Fässer Öl, wie üblich, am 5. jeden Monats, werden hier am Leuchtturm von Trinidad auf Sie warten. Sie können die gesamte Partie für 2550 Dublonen einlösen.";
+			link.l1 = "Das ist großartig, Señor Sergio. Enttäuschen Sie mich nicht.";
 			link.l1.go = "UpgradeOil_Agreed_1";
 			RemoveDublonsFromPCharTotal(3000);
 			AddQuestRecord("Unique_Goods", "4_1");
@@ -530,8 +530,8 @@ void ProcessDialogEvent()
 		break;
 		
 		case "UpgradeOil_Agreed_1":
-			dialog.text = "Zweifeln Sie nicht, Señor"+GetSexPhrase("","ita")+". Alles wird auf höchstem Niveau organisiert sein, und unsere gemeinsame Arbeit wird Früchte tragen.";
-			link.l1 = "Bis zum nächsten Mal.";
+			dialog.text = "Zögern Sie nicht, señor"+GetSexPhrase("","es")+". Alles wird auf höchstem Niveau organisiert werden, und unsere gemeinsame Arbeit wird Vorteile bringen.";
+			link.l1 = "Bis dann.";
 			link.l1.go = "oil_trade_exit";
 		break;
 		
@@ -542,7 +542,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "UpgradeOil_4":
-			dialog.text = "Kommen Sie, wenn Sie die gesamte Summe haben. Ich freue mich darauf, mit Ihnen ein neues Geschäft abzuschließen.";
+			dialog.text = "Komm, wenn du den vollen Betrag hast. Ich werde mich freuen, einen neuen Handel mit dir zu machen.";
 			link.l1 = "In Ordnung.";
 			link.l1.go = "oil_trade_exit";
 			pchar.questTemp.SergioOilBlock = true;

@@ -16,7 +16,7 @@ void ProcessDialogEvent()
 		case "First time":
 			if (CheckAttribute(pchar, "questTemp.Terrapin_KathyFox"))
 			{
-				dialog.text = "Saludos, "+pchar.name+". Come in; I've already been informed.";
+				dialog.text = "Saludos, "+pchar.name+". Pase, ya me han informado.";
 				link.l1 = "¿Informado? Puede que haya algún error, Excelencia. Vine a informar sobre la exitosa finalización de su misión, pero veo que no está de buen ánimo.";
 				link.l1.go = "PZ_PoincyAngry1";
 				DeleteAttribute(pchar, "questTemp.Terrapin");
@@ -1861,7 +1861,7 @@ void ProcessDialogEvent()
 			}
 			else 
 			{
-				dialog.text = "Greetings, Charles. Come in; I've already been informed.";
+				dialog.text = "Saludos, Charles. Pase, ya me han informado.";
 				link.l1 = "¿Informado? Puede que haya algún error, Su Excelencia. Vine a informar sobre la exitosa finalización de su misión, pero veo que no está de buen ánimo.";
 				link.l1.go = "PZ_PoincyAngry1";
 			}

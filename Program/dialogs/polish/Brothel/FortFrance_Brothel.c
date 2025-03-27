@@ -5,8 +5,8 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 	switch (Dialog.CurrentNode)
 	{
 		case "quests":
-			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("Jakie to pytania, "+GetSexPhrase("młody człowieku","młoda dama")+"?","Czego potrzebujesz, "+GetSexPhrase("przystojniaku","ślicznotko")+"Proszę pytać."),"Znowu pytania","Hee-hee, jeśli to dla ciebie bez różnicy - pytania..."," "+GetSexPhrase("Hm, czemuż byś sobie nie wybrał jakiejś piękności? Zaczynam nabierać podejrzeń co do ciebie...","Hm, czemu nie wybierzesz sobie jakiejś piękności? Obawiam się, że nie mamy tutaj chłopców, hi-hi...")+" ","blokada",1,npchar,Dialog.CurrentNode);
-			link.l1 = HeroStringReactionRepeat(RandPhraseSimple("Zmieniłem zdanie, przepraszam.","Właściwie, nieważne."),"Przepraszam, nie mam pytań, na razie.","Masz rację, to już trzeci raz. Wybacz mi.","Może następnym razem, Madame.",npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("Jakie to pytania, "+GetSexPhrase("młody człowieku","młoda damo")+"?","Czego potrzebujesz, "+GetSexPhrase("przystojniaku","ślicznotko")+"Proszę pytać."),"Znowu pytania","Hee-hee, jeśli to dla ciebie bez różnicy - jakie pytania..."," "+GetSexPhrase("Hm, czemu nie wybierzesz sobie jakiejś piękności? Zaczynam nabierać podejrzeń co do ciebie...","Hm, czemu nie wybierzesz sobie jakiejś piękności? Obawiam się, że nie mamy tutaj chłopców, hi-hi...")+" ","block",1,npchar,Dialog.CurrentNode);
+			link.l1 = HeroStringReactionRepeat(RandPhraseSimple("Zmieniłem zdanie, przepraszam.","Właściwie, nieważne."),"Przepraszam, jednak nie mam pytań, do widzenia.","Masz rację, to już trzeci raz. Wybacz mi.","Może następnym razem, Droga Pani.",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			/* //--> Бремя гасконца
 			if (CheckAttribute(pchar, "questTemp.Sharlie.Gigolo") && pchar.questTemp.Sharlie.Gigolo == "start")
@@ -20,8 +20,8 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 		
 		//--> Бремя гасконца
 		case "Gigolo":
-			dialog.text = "Oczywiście, kochanie. Czy już znalazłeś odpowiednią Panienkę, czy mam to zrobić?";
-			link.l1 = "Rzeczywiście, tak zrobiłem. Mam oko na dziewczynę o imieniu Lucille.";
+			dialog.text = "Oczywiście, kochanie. Czy już znalazłeś odpowiednią Panienkę, czy ja mam to zrobić?";
+			link.l1 = "Oczywiście, już wybrałem. Mam oko na dziewczynę o imieniu Lucille.";
 			link.l1.go = "Gigolo_1";
 		break;
 		
@@ -33,7 +33,7 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 		
 		case "Gigolo_2":
 			dialog.text = "Tak, to ją doskonale opisuje. Dobrze. Ale powiedz mi, czemu właśnie ona? Czy inne dziewczęta ci się nie podobają?";
-			link.l1 = "„Widzisz... ona dopiero zaczęła tu pracować, więc sądzę, że nie ma jeszcze wystarczającego doświadczenia w 'Rzemiośle', by zbytnio obciążać moją sakiewkę.”";
+			link.l1 = "Widzisz... ona dopiero zaczęła tu pracować, więc sądzę, że nie ma jeszcze wystarczającego doświadczenia w 'Rzemiośle', by zbytnio obciążać moją sakiewkę.";
 			link.l1.go = "Gigolo_2_1";
 			link.l2 = "Widzisz, uwielbiam blondynki o jasnej cerze. Lucille idealnie się w tym wpasuje.";
 			link.l2.go = "Gigolo_2_2";
@@ -43,30 +43,30 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 			if (sti(pchar.questTemp.Sharlie.Gigolo.Rand1) == 0)
 			{
 				pchar.questTemp.Sharlie.Gigolo.Money = 5000;
-				dialog.text = "Teraz Monsieur, to nieprawda! Ona jest młoda, piękna i doświadczona, moi klienci ją wszyscy podziwiają. Będzie cię kosztować dużo. Pięć tysięcy pesos za noc z nią, i ani peso mniej.";
+				dialog.text = "Teraz Monsieur, to nieprawda! Ona jest młoda, piękna i doświadczona, moi klienci ją podziwiają. Będzie cię kosztować naprawde dużo. Pięć tysięcy pesos za noc z nią, i ani peso mniej.";
 				if (sti(pchar.money) >= 5000)
 				{
-					link.l1 = "Drogo, ale bardzo dobrze. Masz swoją monetę.";
+					link.l1 = "Dosyć drogo, ale bardzo dobrze. Masz swoją monetę.";
 					link.l1.go = "Gigolo_3";
 				}
 				else
 				{
-					link.l1 = "To jest drogie! Nie mam tyle. Porozmawiamy później.";
+					link.l1 = "To za drogo! Nie mam tyle. Porozmawiamy później.";
 					link.l1.go = "exit";
 				}
 			}
 			else
 			{
 				pchar.questTemp.Sharlie.Gigolo.Money = 2500;
-				dialog.text = "Westchnienie, masz rację, Monsieur, jest ładna i młoda, ale brakuje jej doświadczenia. Moi klienci zazwyczaj jej nie zauważają, dlatego zapytałam. Ale jeśli naprawdę lubisz skromne dziewczęta, powiem, że to dobry wybór. Będzie cię kosztować dwa tysiące pięćset pesos.";
+				dialog.text = "*Westchnienie* Masz rację, Monsieur, jest ładna i młoda, ale brakuje jej doświadczenia. Moi klienci zazwyczaj jej nie zauważają, dlatego zapytałam. Ale jeśli naprawdę lubisz skromne dziewczęta, powiem, że to dobry wybór. Będzie cię kosztować dwa tysiące pięćset pesos.";
 				if (sti(pchar.money) >= 2500)
 				{
-					link.l1 = "Och, ona się nada. Masz swoje monety.";
+					link.l1 = "Cudnie, nada się. Oto twoje monety.";
 					link.l1.go = "Gigolo_3";
 				}
 				else
 				{
-					link.l1 = "To jest drogie! Nie mam tyle. Porozmawiamy później.";
+					link.l1 = "To za drogo! Nie mam tyle. Porozmawiamy później.";
 					link.l1.go = "exit";
 				}
 			}
@@ -79,12 +79,12 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 				dialog.text = "Nie byłbyś pierwszy, przystojniaku. Czasami moi klienci ustawiają się w kolejce po jej uwagę, gdyż jest bardzo odmienna od ciemnoskórych córek naszych wysp. Będzie cię kosztować cztery tysiące pięćset pesos.";
 				if (sti(pchar.money) >= 4500)
 				{
-					link.l1 = "Drogo, ale bardzo dobrze. Masz swą monetę.";
+					link.l1 = "Drogo, ale bardzo dobrze. Oto twoje monety.";
 					link.l1.go = "Gigolo_3";
 				}
 				else
 				{
-					link.l1 = "To jest drogie! Nie mam tyle. Porozmawiam z tobą później.";
+					link.l1 = "To za drogo! Nie mam tyle. Porozmawiam z tobą później.";
 					link.l1.go = "exit";
 				}
 			}
@@ -94,12 +94,12 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 				dialog.text = "Naprawdę, monsieur? Już tęsknisz za domem? Moje kreolki, a zwłaszcza mulatki, są bardziej namiętne niż ta wyluzowana paryska kocica. Ale cóż, to twój wybór. Kosztować cię to będzie trzy tysiące pesos.";
 				if (sti(pchar.money) >= 3000)
 				{
-					link.l1 = "Drogo, ale bardzo dobrze. Masz swoją monetę.";
+					link.l1 = "Drogo, ale bardzo dobrze. Oto twoje monety.";
 					link.l1.go = "Gigolo_3";
 				}
 				else
 				{
-					link.l1 = "To jest drogie! Nie mam tyle. Porozmawiamy później.";
+					link.l1 = "To za drogo! Nie mam tyle. Porozmawiamy później.";
 					link.l1.go = "exit";
 				}
 			}
@@ -107,8 +107,8 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 		
 		case "Gigolo_3":
 			AddMoneyToCharacter(pchar, -sti(pchar.questTemp.Sharlie.Gigolo.Money));
-			dialog.text = "Jak sobie życzysz, drogi. Lucille będzie oczekiwać na ciebie z niecierpliwością o jedenastej wieczorem. Dodatkowo, musi wrócić najpóźniej o siódmej rano. Jeśli nie przybędziesz przed północą, obsłuży innego klienta, a wtedy będziesz musiał poczekać do następnego wieczoru, by ją wziąć.\nI nie myśl nawet o... skrzywdzeniu jej w jakikolwiek sposób, bo tego pożałujesz. To uczciwe ostrzeżenie, drogi.";
-			link.l1 = "Nie martw się, potraktuję ją jak miłostkę, nie jak brutala. Wezmę ją o jedenastej. Co mam robić do tego czasu?";
+			dialog.text = "Jak sobie życzysz, drogi. Lucille będzie oczekiwać na ciebie z niecierpliwością o jedenastej wieczorem. Dodatkowo, musi wrócić najpóźniej o siódmej rano. Jeśli nie przybędziesz przed północą, obsłuży innego klienta, a wtedy będziesz musiał poczekać do następnego wieczoru, by ją wziąć.\nI nie myśl nawet o... skrzywdzeniu jej w jakikolwiek sposób, bo tego pożałujesz. Radze nie lekceważyć mojego ostrzeżenia, drogi.";
+			link.l1 = "Nie martw się, będe ją traktował jak kochanek, nie jak brutal. Wezmę ją o jedenastej. Co mam robić do tego czasu?";
 			link.l1.go = "Gigolo_4a";
 		break;
 		

@@ -2621,7 +2621,7 @@ void ProcessDialogEvent()
 			
 			LAi_SetActorType(pchar);
 			LAi_SetActorType(npchar);
-			LAi_ActorGoToLocation(npchar, "goto", "goto4", "", "", "", "DTSG_Kortni_Vyprygnul", -1);
+			LAi_ActorGoToLocation(npchar, "goto", "goto4", "", "", "", "DTSG_Kortni_Vyprygnul", 7);
 			npchar.lifeday = 0;
 			npchar.location = "None";
 		break;

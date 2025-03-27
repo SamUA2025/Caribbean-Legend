@@ -63,7 +63,7 @@ void ProcessDialogEvent()
 		break;
 
 		case "question":
-			dialog.text = NPCStringReactionRepeat(""+GetFullName(npchar)+" zu Ihren Diensten, guter Herr! Was möchten Sie wissen?","Freut mich, mit Ihnen zu sprechen, Kapitän!","Nun... Ich denke, ich habe noch etwas mehr Zeit zum Reden...","Leider muss ich jetzt gehen. Lebewohl!","Block",1,npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat(""+GetFullName(npchar)+" zu Ihren Diensten, guter Herr! Was möchten Sie wissen?","Freut mich, mit Ihnen zu sprechen, Kapitän!","Nun... Ich denke, ich habe noch etwas mehr Zeit zum Reden...","Leider muss ich jetzt gehen. Lebewohl!","block",1,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Hast du etwas Interessantes zu erzählen?","Hast du etwas Interessantes zu erzählen?","Haben Sie etwas Interessantes zu erzählen?","Sicher. Viel Glück!",npchar,Dialog.CurrentNode);
 			link.l1.go = DialogGoNodeRepeat("rumours_sailor", "rumours_sailor", "rumours_sailor", "exit", npchar, Dialog.CurrentNode);
 		break;

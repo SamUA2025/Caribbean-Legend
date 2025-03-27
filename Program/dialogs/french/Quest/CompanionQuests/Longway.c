@@ -1001,7 +1001,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "PZ_LongwayRazgovorOProshlom_9":
-			dialog.text = "Il m'a aidé dans ma quête de gens vraiment mauvais — même selon les normes des hommes blancs. Oliveiro Fermentelos, Antoon van Diemen, et Joep van der Vink.";
+			dialog.text = "Il m'a aidé dans ma quête de gens vraiment mauvais - même selon les normes des hommes blancs. Oliveiro Fermentelos, Antoon van Diemen, et Joep van der Vink.";
 			link.l1 = "À en juger par leurs noms, l'un est Portugais et les deux autres sont Néerlandais.";
 			link.l1.go = "PZ_LongwayRazgovorOProshlom_10";
 		break;
@@ -6314,7 +6314,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.text = "Ravi de vous revoir, monsieur ! Mais vous savez que nous n'acceptons pas les invités… de basse classe ici. Même s'ils sont recommandés et payés. Surtout les travailleurs à la peau jaune ou les esclaves nègres. J'ai bien peur que votre ami doive partir.";
+				dialog.text = "Ravi de vous revoir, monsieur ! Mais vous savez que nous n'acceptons pas les invités... de basse classe ici. Même s'ils sont recommandés et payés. Surtout les travailleurs à la peau jaune ou les esclaves nègres. J'ai bien peur que votre ami doive partir.";
 				link.l1 = "Ne dis pas ça devant ta maîtresse. Elle a aussi la peau jaune. Et ce n'est pas un travailleur, mais son frère. Tu ne t'opposerais pas à des retrouvailles familiales, n'est-ce pas ?";
 				link.l1.go = "PZ_ElitaShluha_WithLongway1";
 			}

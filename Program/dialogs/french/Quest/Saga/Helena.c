@@ -747,6 +747,10 @@ void ProcessDialogEvent()
 				Link.l2 = "Helen, ma chère, puis-je vous inviter à passer un bon moment à la taverne ?";
 				Link.l2.go = "special_sex";
 			}
+			if (CheckAttribute(pchar, "questTemp.MysteryPortRoyal_Helena")) {
+				link.l4 = "Helen, il semble que j’aie trouvé la dernière volonté de ton admirateur – Francis. Il t’a légué son héritage.";
+				link.l4.go = "MysteryPortRoyal_Helena_1";
+			}
 			if (CheckCharacterItem(pchar, "pirate_cutlass") && !CheckAttribute(pchar, "questTemp.Saga.Helena_officer")) {
 				link.l4 = "Je pense que ce sabre est maintenant à toi. Blaise est ton soi-disant oncle...";
 				link.l4.go = "give_cutlass";
@@ -3506,6 +3510,20 @@ void ProcessDialogEvent()
 			dialog.text = "Tu sais comment ça se passe. Laisse une fille se calmer d'abord.";
 			link.l1 = "Soupir...";
 			link.l1.go = "exit";
+		break;
+		
+		// Тайна Порт-Рояля
+		case "MysteryPortRoyal_Helena_1":
+			dialog.text = "Francis... Je me souviens de lui. Il attendait toujours mon arrivée à Port Royal et était un romantique invétéré. J’aimais passer du temps avec quelqu’un d’éloigné de la mer – tous ces poèmes et sérénades... C’était quelque chose de nouveau. Un éclat d’un monde que je n’avais jamais connu.\nFrancis était riche, intelligent et séduisant – un excellent parti. N’importe quelle fille d’ici aurait perdu la tête pour lui, mais à l’époque, je me souciais surtout de garder l’Arc-en-ciel à flot.";
+			link.l1 = "Il semble que l’âme sensible d’un poète n’ait pas supporté ton refus. Dans toutes ses lettres, il ne parlait que de toi, se remémorant vos rencontres. Je peux te remettre tout ce qu’il t’a légué, si tu le souhaites.";
+			link.l1.go = "MysteryPortRoyal_Helena_2";
+		break;
+		
+		case "MysteryPortRoyal_Helena_2":
+			dialog.text = "Je ne savais pas qu’il était malade. Tout cela semble bien absurde maintenant. Quant à son cadeau... J’en ai assez des testaments et des héritages. Crois-moi, j’ai tout ce dont j’ai besoin – et même plus. Garde-le plutôt.";
+			link.l1 = "D’une manière ou d’une autre, son héritage te profitera toujours – ce qui signifie que, sans le vouloir, j’ai accompli son dernier souhait. Une histoire fascinante.";
+			link.l1.go = "exit";
+			DeleteAttribute(pchar, "questTemp.MysteryPortRoyal_Helena");
 		break;
 		
 		case "Exit":

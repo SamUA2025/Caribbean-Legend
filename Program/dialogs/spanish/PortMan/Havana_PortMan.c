@@ -4,7 +4,7 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
     switch (Dialog.CurrentNode)
 	{
 		case "quests":
-			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("¿Qué tipo de preguntas?","¿Qué quieres, "+GetAddress_Form(NPChar)+"¿?"),"Ya has intentado hacerme una pregunta "+GetAddress_Form(NPChar)+"...","Has estado hablando de alguna cuestión por tercera vez hoy...","Mira, si no tienes nada que decirme sobre los asuntos del puerto, entonces no me molestes con tus preguntas.","bloqueo",1,npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("¿Qué tipo de preguntas?","¿Qué quieres, "+GetAddress_Form(NPChar)+"?"),"Ya has intentado hacerme una pregunta "+GetAddress_Form(NPChar)+"...","Has estado hablando de alguna cuestión por tercera vez hoy...","Mira, si no tienes nada que decirme sobre los asuntos del puerto, entonces no me molestes con tus preguntas.","block",1,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat(RandPhraseSimple("He cambiado de opinión.","No tengo nada de qué hablar."),"No importa.","De hecho, ya es la tercera vez...","Lo siento, pero no estoy interesado en los asuntos del puerto por ahora.",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			if (pchar.questTemp.Slavetrader == "FindRatHavana")
@@ -27,7 +27,7 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 		break;
 		
 		case "Havana_ratP_1":
-			dialog.text = NPCStringReactionRepeat("Sí, estuvo aquí. Pero ya se ha ido. Pregunta a nuestro tabernero por él, ha alquilado una habitación arriba.","Ya has preguntado sobre esto y te he respondido.","Te digo que ya has preguntado por este Gontier..","¡Te pido que no me molestes!","bloqueo",0,npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat("Sí, estuvo aquí. Pero ya se ha ido. Pregunta a nuestro tabernero por él, ha alquilado una habitación arriba.","Ya has preguntado sobre esto y te he respondido.","Te digo que ya has preguntado por este Gontier..","¡Te pido que no me molestes!","block",0,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Gracias. Haré eso.","Mm, bueno ...","Sí, realmente he preguntado ...","Perdón, "+npchar.name+"...",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 		break;

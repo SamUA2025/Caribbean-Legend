@@ -80,15 +80,15 @@ void ProcessDialogEvent()
 		case "First time":
 			if (LAi_grp_playeralarm > 0)
 			{
-       			dialog.text = LinkRandPhrase("Ich bin vielleicht betrunken, aber ich bin kein Idiot. Wenn ich jetzt mit dir trinke, werden die Soldaten mich am nächsten Tag erwischen. Auf keinen Fall!","Ich bin kein Feind meiner eigenen Stadt. Ich trinke nicht mit dir!",""+GetSexPhrase("Kumpel","lass")+", du solltest diesen Ort verlassen, solange du noch kannst...");
-				link.l1 = RandPhraseSimple("Nun, wie du willst...","Heh, weißt du, ich muss nicht so betrunken werden. Es ist nicht die richtige Zeit dafür."); 
+       			dialog.text = LinkRandPhrase("Ich bin vielleicht betrunken, aber kein Idiot. Wenn ich jetzt mit dir trinke, holen mich die Soldaten am nächsten Tag. Auf keinen Fall!","Ich bin kein Feind meiner eigenen Stadt. Ich trinke nicht mit dir!",""+GetSexPhrase("Kumpel","Fräulein")+", du solltest diesen Ort verlassen, solange du noch kannst...");
+				link.l1 = RandPhraseSimple("Nun, wie du willst...","Heh, weißt du, ich sollte sowieso nicht viel trinken. Es ist nicht die richtige Zeit dafür."); 
 				link.l1.go = "exit";
 				break;
 			}
 			if(CheckAttribute(pchar,"questTemp.HabitueSpeakDisable") && rand(1) == 0) // если дуэлянт то каждый второй посылает нафик
 			{
-				dialog.text = "Ha, fehlgeschlagen"+GetSexPhrase("ter","s")+", sicherlich, ich habe von dir gehört, he-he. Die Leute in den Tavernen sagen, dass du ein Spötter und ein Duellant bist. Ich sage, dass unser Volk nicht leicht zu erschrecken ist, aber niemand will für einen Becher Rum sterben. Ich finde es sogar beängstigend, in deiner Nähe zu sitzen, also lasse ich besser vorbei.";
-				link.l1 = LinkRandPhrase("Dann ist es gut, dass du gehst!","Verschwinde, während ich noch gut gelaunt bin...","Geh, geh! Verschwinde, Fischfutter!");
+				dialog.text = "Ha, mis"+GetSexPhrase("ter","s")+", ich habe ganz sicher von dir schon gehört, he-he. Die Leute in den Tavernen sagen, dass du ein Spötter und ein Duellant bist. Ich sage es dir, unser Volk ist nicht leicht zu erschrecken, aber niemand will für einen Becher Rum sterben. Ich finde es sogar beängstigend, in deiner Nähe zu sitzen, also lasse ich es besser sein.";
+				link.l1 = LinkRandPhrase("Auf Nimmerwiedersehen dann!","Verschwinde, während ich noch gut gelaunt bin...","Geh, geh! Verschwinde, Fischfutter!");
 				link.l1.go = "exit";
 				link.l2 = "Warte, ich wollte eine Frage stellen....";
 				link.l2.go = "talk_habitue_duel";
@@ -105,13 +105,13 @@ void ProcessDialogEvent()
 	            switch (npchar.quest.last_theme)
 				{
 					case "0": //пьяный.
-						dialog.text = "Hicks! Oh, "+GetSexPhrase("Kumpel, sicherlich siehst du aus wie ein erfahrener alter Seebär","lass, sicherlich siehst du aus wie ein erfahrener alter Seebär")+"! Vielleicht würden Sie mir ein Glas Rum kaufen?";
-						link.l1 = "Ich mag vielleicht ein alter Seebär sein, aber das bedeutet nicht, dass ich Fusel für Gesindel kaufe...";
+						dialog.text = "Hicks! Oh, "+GetSexPhrase("Kumpel, du siehst aus wie ein echter erfahrener Seebär","Fräulein, du siehst aus wie eine echte erfahrene Seewölfin")+"! Vielleicht würden Sie mir ein Glas Rum kaufen?";
+						link.l1 = "Mag sein, aber das bedeutet nicht, dass ich Fusel für Gesindel kaufe...";
 						link.l1.go = "exit";
 
 						if (makeint(pchar.money) >= 100 && ok) // только старые острова окучены на сесть
 						{
-							link.l2 = "Ich würde mich freuen, Ihrer Gesellschaft beizutreten.";
+							link.l2 = "Ich schließe mich gerne deiner Gesellschaft an.";
 							link.l2.go = "talk_with_alchogol";
 						}
 						else
@@ -133,7 +133,7 @@ void ProcessDialogEvent()
 										Dialog.text = RandPhraseSimple("Ein Kartenspiel, vielleicht? Ein sehr interessantes Spiel!","Ich schlage vor, eine Partie Karten zu spielen. Was sagst du dazu?");
 										link.l1 = "Und warum nicht? Sicher, lass uns spielen.";
 										link.l1.go = "Cards_begin";
-										link.l2 = "Und was sind die Regeln Ihres Spiels?";
+										link.l2 = "Und was sind die Regeln deines Spiels?";
 										link.l2.go = "Cards_Rule";
 										link.l3 = "Nicht jetzt.";
 										link.l3.go = "exit";
@@ -155,7 +155,7 @@ void ProcessDialogEvent()
 										Dialog.text = RandPhraseSimple("Ein Spiel mit Würfeln, vielleicht? Ein sehr interessantes Spiel!","Ich schlage vor, einige Würfel zu werfen. Was sagst du dazu?");
 										link.l1 = "Und warum nicht? Sicher, lass uns spielen.";
 										link.l1.go = "Dice_begin";
-										link.l2 = "Und was sind die Regeln Ihres Spiels?";
+										link.l2 = "Und was sind die Regeln deines Spiels?";
 										link.l2.go = "Dice_Rule";
 										link.l3 = "Nicht jetzt.";
 										link.l3.go = "exit";
@@ -179,10 +179,10 @@ void ProcessDialogEvent()
 						}
 	        			else
 	        			{
-	                        dialog.text = RandPhraseSimple("Verschwinde von meinem Tisch! Jetzt!"," Oh? Was? Wer ist das? Hic... Verschwinde!");
+	                        dialog.text = RandPhraseSimple("Verschwinde von meinem Tisch! Sofort!"," Oh? Was? Wer ist das? Hic... Verschwinde!");
 	                        link.l1 = RandPhraseSimple("Trinken verdammt deine sündige Seele! Komm zur Besinnung!","Sei nicht unhöflich zu mir.");
 	        			    link.l1.go = "exit";
-	        			    link.l2 = RandPhraseSimple("Hüte deine Zunge, du Tölpel! Oder ich bringe dir gute Manieren bei.","Was wäre, wenn ich dir jetzt eins auf den Kopf gebe, ich denke, das wird dir helfen, nüchtern zu werden.");
+	        			    link.l2 = RandPhraseSimple("Hüte deine Zunge, du Tölpel! Oder ich bringe dir gute Manieren bei.","Was wäre, wenn ich dir jetzt eins auf den Kopf gebe, ich denke, das wird dir helfen nüchtern zu werden.");
 	        	            link.l2.go = "tavern_keeper";
 	        			}
 					break;
@@ -192,7 +192,7 @@ void ProcessDialogEvent()
 	    break;
 	    
 		case "talk_habitue_duel":
-			dialog.text = "Ich sage Ihnen gar nichts, Fräulein"+GetSexPhrase("ter","s")+"! Und ich glaube nicht, dass noch jemand mit dir sprechen wird, denn das bedeutet immer Ärger. Aber weißt du, die Leute neigen dazu, ein kurzes Gedächtnis zu haben, also könnten sie in einem Monat oder zwei deine Abenteuer vergessen, wenn du sie natürlich nicht noch einmal daran erinnerst, he-he! Auf Wiedersehen, Miss"+GetSexPhrase("ter","s")+". ";
+			dialog.text = "Ich sage Ihnen gar nichts, mis"+GetSexPhrase("ter","s")+"! Und ich glaube nicht, dass noch jemand mit dir sprechen wird, denn das bedeutet immer Ärger. Aber weißt du, die Leute neigen dazu, ein kurzes Gedächtnis zu haben, also könnten sie in einem Monat oder zwei deine Abenteuer vergessen, wenn du sie natürlich nicht noch einmal daran erinnerst, he-he! Auf Wiedersehen, mis"+GetSexPhrase("ter","s")+". ";
 			link.l1 = "In Ordnung...";
 			link.l1.go = "exit";
 		break;
@@ -217,7 +217,7 @@ void ProcessDialogEvent()
 		case "Cards_Node":
 			Diag.tempNode = "first time";
 
-			Dialog.text = "Lassen wir zuerst die Wette festlegen (Wette eingeben).";
+			Dialog.text = "Lass uns zuerst die Wette festlegen (Wette eingeben).";
 			link.l1 = "100";
 			link.l1.edit = 1;
 			link.l1.go = "Cards_Node_2";
@@ -237,7 +237,7 @@ void ProcessDialogEvent()
 		    
 			if (sti(PCHar.Money) < sti(iLa_Puesta)*3)
 		    {
-                dialog.text = "Ich sehe, du bist pleite, "+GetSexPhrase("Freund","Schatz")+". Komm zurück, wenn du reich wirst.";
+                dialog.text = "Ich sehe, du bist pleite, "+GetSexPhrase("Freund","Schätzchen")+". Komm zurück, wenn du reich wirst.";
                 link.l1 = "Gut.";
 			    link.l1.go = "exit_sit";
 			    break;
@@ -254,8 +254,8 @@ void ProcessDialogEvent()
 		{
 			if(sti(iLa_Puesta) < 50)
 			{
-				dialog.text = "Lachst du mich aus oder was?! Spielst du für "+iLa_Puesta+" Pesos?! Lasst uns um vernünftige Einsätze spielen, oder ich bin raus!";
-				link.l1 = "Ja, du hast Recht. Wir müssen die Wette ein bisschen erhöhen.";
+				dialog.text = "Lachst du über mich oder was?! Du willst für "+iLa_Puesta+" Pesos spielen?! Lass uns um vernünftige Einsätze spielen, oder ich bin raus!";
+				link.l1 = "Ja, du hast Recht. Wir sollten die Wette ein bisschen erhöhen.";
 				link.l1.go = "Cards_begin_2";
 				link.l2 = "Ich habe es mir anders überlegt, ich spiele nicht.";
 				link.l2.go = "exit_sit";
@@ -264,8 +264,8 @@ void ProcessDialogEvent()
 			
 			if(sti(iLa_Puesta) > 1000)
 			{
-				dialog.text = "Spielen für so viel Geld? Nein, ich passe, es sei denn, wir ändern den Einsatz.";
-				link.l1 = "Ja, du hast recht. Wir müssen den Einsatz ein bisschen senken.";
+				dialog.text = "Um so viel Geld spielen? Nein, ich passe, es sei denn, wir ändern den Einsatz.";
+				link.l1 = "Ja, du hast recht. Wir sollten den Einsatz ein bisschen senken.";
 				link.l1.go = "Cards_begin_2";
 				link.l2 = "Eigentlich habe ich beschlossen, überhaupt nicht zu spielen.";
 				link.l2.go = "exit_sit";
@@ -281,7 +281,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Cards_begin_2":
-			dialog.text = "Also, was ist die Wette? (Gib Wette ein)";
+			dialog.text = "Also, was ist der Einsatz? (Gib Einsatz ein)";
 			link.l1 = "50";
 			link.l1.edit = 1;
 			link.l1.go = "Cards_Node_2";
@@ -315,7 +315,7 @@ void ProcessDialogEvent()
 
 		case "Dice_Node":
 		    Diag.tempNode = "first time";		    
-			Dialog.text = "Lassen Sie uns die Wette festlegen (Wette eingeben).";
+			Dialog.text = "Lass uns den Einsatz festlegen (Einsatz eingeben).";
 			link.l1 = "50";
 			link.l1.edit = 1;
 			link.l1.go = "Dice_Node_2";
@@ -335,7 +335,7 @@ void ProcessDialogEvent()
 
 			if (sti(pchar.Money) < sti(iLa_Puesta)*6)
 		    {
-                dialog.text = "Ich sehe, du bist pleite, "+GetSexPhrase("Freund","Schatz")+". Komm zurück, wenn du reich bist.";
+                dialog.text = "Ich sehe, du bist pleite, "+GetSexPhrase("Freund","Schätzchen")+". Komm zurück, wenn du reich bist.";
                 link.l1 = "Gut.";
 			    link.l1.go = "exit_sit";
 			    break;
@@ -352,8 +352,8 @@ void ProcessDialogEvent()
 		{
 			if(sti(iLa_Puesta) < 50)
 			{
-				dialog.text = "Lachst du über mich oder was?! Spielst du für "+iLa_Puesta+" Pesos pro Tag?! Spielen wir um vernünftige Einsätze, oder ich bin raus!";
-				link.l1 = "Ja, du hast recht. Wir müssen die Wette etwas erhöhen.";
+				dialog.text = "Lachst du über mich oder was?! Du willst für "+iLa_Puesta+" Pesos pro Würfel spielen?! Spielen wir um vernünftige Einsätze, oder ich bin raus!";
+				link.l1 = "Ja, du hast recht. Wir sollten den Einsatz etwas erhöhen.";
 				link.l1.go = "Dice_begin_2";
 				link.l2 = "Ich habe es mir anders überlegt, ich spiele nicht.";
 				link.l2.go = "exit_sit";
@@ -362,8 +362,8 @@ void ProcessDialogEvent()
 			
 			if(sti(iLa_Puesta) > 1000)
 			{
-				dialog.text = "Spielen Würfel um so viel Geld? Nein, ich verzichte, es sei denn, wir ändern den Einsatz.";
-				link.l1 = "Ja, du hast recht. Wir müssen den Einsatz ein bisschen senken.";
+				dialog.text = "Um so viel Geld würfeln? Nein, ich verzichte, es sei denn, wir ändern den Einsatz.";
+				link.l1 = "Ja, du hast recht. Wir sollten den Einsatz ein bisschen senken.";
 				link.l1.go = "Dice_begin_2";
 				link.l2 = "Eigentlich habe ich beschlossen, überhaupt nicht zu spielen.";
 				link.l2.go = "exit_sit";
@@ -397,7 +397,7 @@ void ProcessDialogEvent()
 
 		/////////////////////////////////////////////
         case "talk_with_alchogol_song":
-			dialog.text = "Nun, h-hicks! Alles ist gut. Hicks! Du siehst es nicht kommen. Hi-icks! Dieser Rum ist gut. Jamaika schwarzer Rum. hicks!\nHier, stell hin und gieß ein!";
+			dialog.text = "Nun, h-hicks! Alles ist gut. Hicks! Du siehst es nicht kommen. Hi-icks! Dieser Rum ist gut. Jamaika schwarzer Rum. hicks!\nHier, komm her und gieß ein!";
 			link.l1 = "In Ordnung, warum nicht.";
 			link.l1.go = "talk_with_alchogol_song_2";
 			link.l2 = "Entschuldigung Freund, ich muss gehen.";
@@ -405,8 +405,8 @@ void ProcessDialogEvent()
 		break;
 		
 		case "talk_with_alchogol_song_2":
-			dialog.text = "Krug und Gesichter kommen und gehen... Hicks... Bis ich auf den Boden falle. Ich trinke die ganze Zeit... Hicks! Wo ist der Schnaps... Und was ist der Reim...";
-			link.l1 = "Der Schnaps ist hier und die Mädchen sind fein, alle wollen einen Freibeuter, aber nur der Rum scheint meins zu sein.";
+			dialog.text = "Krüge und Gesichter kommen und gehen... Hicks... Bis ich auf den Boden falle. Ich trinke die ganze Zeit... Hicks! Wo ist der Schnaps... Und was ist der Reim...";
+			link.l1 = "Der Schnaps ist hier und die Mädchen sind fein, alle wollen einen Freibeuter, aber nur der Rum scheint mein zu sein.";
 			link.l1.go = "talk_with_alchogol_song_3";
 			link.l2 = "Ich habe keine Zeit dafür.";
 			link.l2.go = "exit";
@@ -429,7 +429,7 @@ void ProcessDialogEvent()
 		case "begin_sit":
 			Diag.TempNode = "first time";
 			dialog.snd = "Voice\HADI\HADI028";
-			dialog.text = LinkRandPhrase("Hicks! Jetzt ist es besser! Das ist sicherlich besser! Also? Kaufen Sie mir etwas Rum oder was?","Setz dich, "+GetAddress_Form(npchar)+", lass uns einen Becher guten alten jamaikanischen Rum kippen. Das ist nie schlecht für die Gesundheit. Und wenn du interessiert bist, was los ist - du wirst nie einen besseren Ort als diese Taverne finden, das versichere ich dir. Ein wenig Geld, ein paar Becher anständigen Rum - und du wirst alles wissen, was du wissen musstest, und noch mehr, vertraue einem alten Stammgast...","Heh, bitte, setz dich, "+GetSexPhrase("mein guter Freund","Fräulein")+", lasst uns einen Trinken... Warum nicht in guter Gesellschaft trinken? Man kann viel Interessantes hören, wenn man geduldig ist und langsam, in kleinen Schlucken trinkt... Es gibt Kapitäne, die mit ihren Abenteuern prahlen, es gibt viele andere, die wichtige Dinge ausplaudern, wenn sie sich nicht mehr kontrollieren können... Viele Leute verbringen dort ihre Zeit, und viele haben etwas zu erzählen, glaub mir, "+GetSexPhrase("mein guter Freund","Fräulein")+".");
+			dialog.text = LinkRandPhrase("Hicks! Jetzt ist es besser! Das ist sicherlich besser! Also? Kaufen Sie mir etwas Rum oder was?","Setz dich, "+GetAddress_Form(npchar)+", lass uns einen Becher guten alten jamaikanischen Rum kippen. Das ist nie schlecht für die Gesundheit. Und wenn du interessiert bist, was los ist - du wirst nie einen besseren Ort als diese Taverne finden, das versichere ich dir. Ein wenig Geld, ein paar Becher anständigen Rum - und du wirst alles wissen, was du wissen musstest, und noch mehr, vertraue einem alten Stammgast...","Heh, bitte, setz dich, "+GetSexPhrase("guter Freund","Fräulein")+", lasst uns einen Trinken... Warum nicht in guter Gesellschaft trinken? Man kann viel Interessantes hören, wenn man geduldig ist und langsam, in kleinen Schlucken trinkt... Es gibt Kapitäne, die mit ihren Abenteuern prahlen, es gibt viele andere, die wichtige Dinge ausplaudern, wenn sie sich nicht mehr kontrollieren können... Viele Leute verbringen dort ihre Zeit, und viele haben etwas zu erzählen, glaub mir, "+GetSexPhrase("guter Freund","Fräulein")+".");
 			link.l1 = "Und warum nicht! Wirt! Rum, für uns beide!";
 			link.l1.go = "sit_2";
 		break;
@@ -445,25 +445,25 @@ void ProcessDialogEvent()
 			break;
 			
 		case "Alcogol_GenQuest_Church_2_2":
-			dialog.text = "Welche Piraten? Nur deine gewöhnlichen Landratten, und natürlich die verdammt lokalen... Wenn es Besucher wären, hätten sie nicht gewusst, wann die Kirchentruhen voll sind. Und sie würden sich kaum in dieses Durcheinander einmischen.";
-				link.l1 = "Verwegene Kerle, das ist sicher. Sie haben so tapfer eine schwache Türsperre geöffnet...";
+			dialog.text = "Welche Piraten? Nur die gewöhnlichen Landratten, und natürlich die verdammten Lokalen... Wenn es Besucher wären, hätten sie nicht gewusst, wann die Kirchentruhen voll sind. Und sie würden sich kaum in dieses Durcheinander einmischen.";
+				link.l1 = "Wagemutige Kerle, das ist sicher. Sie öffneten so galant einen fadenscheinigen Türriegel...";
 				link.l1.go = "Alcogol_GenQuest_Church_2_3";
 			break;
 			
 		case "Alcogol_GenQuest_Church_2_3":
-			dialog.text = "A-ha. Und auch kluge. Wer würde sich auf solche Weise ausstellen?";
+			dialog.text = "A-ha. Und auch kluge. Wer würde sich derart bloßstellen?";
 				link.l1 = "Wahr. Die ganze Gemeinde hat Geld gespart, um es der Kirche zu spenden, und jetzt haben diese klugen Kerle ihr Vermögen daraus gemacht? Sicherlich werden sie gefangen genommen. Die ganze Welt wird jetzt nach ihnen suchen.";
 				link.l1.go = "Alcogol_GenQuest_Church_2_4";
 			break;
 			
 		case "Alcogol_GenQuest_Church_2_4":
-			dialog.text = "Kaum. Wer wird danach suchen? Sie haben einfach die Kirche ausgeraubt und die Stadt verlassen, fort mit dem Wind. Der Dschungel ist groß, sehr groß, du würdest bis zum Jüngsten Tag nach ihnen suchen. Und nach ein paar Monaten werden die Leute es einfach vergessen, markiere meine Worte!";
+			dialog.text = "Wohl kaum. Wer wird nach ihnen suchen? Sie haben einfach die Kirche ausgeraubt und die Stadt verlassen, fort mit dem Wind. Der Dschungel ist groß, sehr groß, du würdest bis zum Jüngsten Tag nach ihnen suchen. Und nach ein paar Monaten werden die Leute es einfach vergessen, merke dir meine Worte!";
 				link.l1 = "Ich glaube nicht. Solche Dinge können nicht vergeben werden.";
 				link.l1.go = "Alcogol_GenQuest_Church_2_5";
 			break;
 			
 		case "Alcogol_GenQuest_Church_2_5":
-			dialog.text = "Ein Menschenerinnerung ist wie ein leckes Boot. Die Leute werden vergessen und vergeben. Aber Gott?! Er sieht alles. Vor ihm musst du Angst haben. Ich sage, vor zehn Jahren ist meinem alten Kumpel etwas Schreckliches passiert. Er hatte auch keinen Respekt vor dem Schöpfer und wäre fast direkt zum Seeteufel gegangen...";
+			dialog.text = "Ein Menschenerinnerung ist wie ein sinkendes Boot. Die Leute werden vergessen und vergeben. Aber Gott?! Er sieht alles. Vor ihm musst du Angst haben. Ich sage es dir, vor zehn Jahren ist meinem alten Kumpel etwas Schreckliches passiert. Er hatte auch keinen Respekt vor dem Schöpfer und wäre fast direkt zum Seeteufel gegangen...";
 				link.l1 = "Entschuldigung Freund, ich muss gehen. Wir werden ein anderes Mal über deinen Kumpel sprechen. Bis dann.";
 				link.l1.go = "Alcogol_GenQuest_Church_2_6";
 			break;
@@ -478,7 +478,7 @@ void ProcessDialogEvent()
 			locations[FindLocation(sGenLocation)].DisableEncounters = true;
 			PChar.GenQuest.ChurchQuest_2.WayOfShortVariant = true; // Нужно для проверки при убийстве банды
 			SetFunctionTimerConditionParam("Church_GenQuest2_TimeIsLeft", 0, 0, 1, MakeInt(24 - GetHour()), false);
-			Log_TestInfo("The bandits who raided the church shall be in location - " + sGenLocation + " Time to search for them - 1 day");
+			Log_TestInfo("Die Banditen, welche die Kirche überfallen haben, sollten irgendwo im - " + sGenLocation + " sein. Zeit diese zu suchen - 1 Tag");
 			sQuestTitle = PChar.GenQuest.ChurchQuest_2.QuestTown + "ChurchGenQuest2";
 			AddQuestRecordEx(sQuestTitle, "ChurchGenQuest2", "2");
 			break;
@@ -493,24 +493,24 @@ void ProcessDialogEvent()
 			
 			case "EscapeSlave_Villemstad_H1":
 				dialog.text = "Ja, sehr seltsame Dinge können manchmal auf offener See passieren. Auf meiner letzten Reise habe ich etwas wirklich ...";
-				link.l1 = "Mach weiter, erzähl mir, übertreib es nur nicht zu sehr. Ich hole dir derweil noch mehr Rum.";
+				link.l1 = "Mach weiter, erzähl es mir, übertreib es nur nicht zu sehr. Ich hole dir derweil noch mehr Rum.";
 				link.l1.go = "EscapeSlave_Villemstad_H2";
 			break;
 			
 			case "EscapeSlave_Villemstad_H2":
-				dialog.text = "Ich schwöre bei Gott, edler"+GetSexPhrase("Herr","Dame")+" - Ich habe es mit meinen eigenen Augen gesehen... Ein Schiff segelte, aber anstelle von Matrosen gab es riesige Affen... oder Makaken... Affen, weißt du.";
+				dialog.text = "Ich schwöre bei Gott, "+GetSexPhrase("edler Herr","edle Dame")+" - Ich habe es mit meinen eigenen Augen gesehen... Ein Schiff segelte, aber anstelle von Matrosen gab es riesige Affen... oder Makaken... Affen, weißt du.";
 				link.l1 = "Was?! Sag mir, Freund, trinkst du auch während der Wache?";
 				link.l1.go = "EscapeSlave_Villemstad_H3";
 			break;
 			
 			case "EscapeSlave_Villemstad_H3":
-				dialog.text = "Bei Gott, ich lüg nicht! Hast du noch nie vom Affengarnele gehört? Verdammt, Garnele, ha-ha! ... Das Affenschiff.";
+				dialog.text = "Bei Gott, ich lüg nicht! Hast du noch nie vom Affenshrimp gehört? Verdammt, Shrimp, ha-ha! ... Das Affenschiff.";
 				link.l1 = "Welches Affenschiff?";
 				link.l1.go = "EscapeSlave_Villemstad_H4";
 			break;
 			
 			case "EscapeSlave_Villemstad_H4":
-				dialog.text = "Oh-hoe, ich sage, dass ich es mit meinen eigenen Augen gesehen habe. Es stürmte. Man konnte nichts sehen, und dann tauchte das Schiff aus dem Nichts auf. Zerrissene Segel. Sie hatte ihr Vorsegel ebenso wie das Großsegel gebrochen, und Topf und verdammt noch mal, sie hatte alles gebrochen! Und doch stürmte sie gegen den Wind!\nUnd es waren Affen an Deck... viele von ihnen wie... eine Robbenkolonie! Und ein reiner Gorilla stand am Ruder! Neun Fuß, rotes Hemd und Haifischzähne anstelle des Kreuzes auf seiner Brust... Die Augen sind rot, die Reißzähne blitzen, es sah uns und schrie etwas...";
+				dialog.text = "Oh-hoe, ich sage, dass ich es mit meinen eigenen Augen gesehen habe. Es stürmte. Man konnte nichts sehen, und dann tauchte das Schiff aus dem Nichts auf. Zerrissene Segel. Sie hatte ihr Vorsegel ebenso wie das Großsegel gebrochen, und verdammt noch mal, sie hatte alles gebrochen! Und doch stürmte sie gegen den Wind!\nUnd es waren Affen an Deck... viele von ihnen wie... eine Robbenkolonie! Und ein reiner Gorilla stand am Ruder! Neun Fuß, rotes Hemd und Haifischzähne anstelle des Kreuzes auf seiner Brust... Die Augen sind rot, die Reißzähne blitzen, es sah uns und schrie etwas...";
 				link.l1 = "Du lügst, dass sich die Balken biegen, Freund. Weißt du, man sieht Dinge, wenn man betrunken ist. Als nächstes erzählst du mir, dass sie der Fliegende Holländer war.";
 				link.l1.go = "EscapeSlave_Villemstad_H5";
 			break;
@@ -542,44 +542,44 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Lucas_Tavern_1":
-			dialog.text = "Ha! Kaum, Kapitän. Ich glaube nicht, dass der Chinese sein Schiff an dich oder sonst jemanden verkaufen wird.";
-			link.l1 = "Ein Chinese? Es gibt Chinesen auf Curacao? Und sogar einen Kapitän seines eigenen Schiffes?";
+			dialog.text = "Ha! Wohl kaum, Kapitän. Ich glaube nicht, dass der Chinese sein Schiff an dich oder sonst jemanden verkaufen wird.";
+			link.l1 = "Ein Chinese? Es gibt Chinesen auf Curacao? Und sogar einen Kapitän mit sein eigenes Schiff?";
 			link.l1.go = "Lucas_Tavern_2";
 		break;
 		
 		case "Lucas_Tavern_2":
-			dialog.text = "Es gibt, wie Sie sehen können. Aber das ist eigentlich nicht sein Schiff - es gehört der Handelsgesellschaft. Sie sagen, Mynheer Rodenburg, der stellvertretende Direktor und jetzt amtierende Gouverneur, besitzt es.";
-			link.l1 = "Also, hat Matthias Beck aufgehört?";
+			dialog.text = "Es gibt sie, wie Sie sehen können. Aber das ist eigentlich nicht sein Schiff - es gehört der Handelsgesellschaft. Sie sagen, Mynheer Rodenburg, der stellvertretende Direktor und jetzt amtierende Gouverneur, besitzt es.";
+			link.l1 = "Also ist Matthias Beck im Ruhestand?";
 			link.l1.go = "Lucas_Tavern_3";
 		break;
 		
 		case "Lucas_Tavern_3":
 			dialog.text = "Ha! Herr, Sie sollten wirklich öfter an Land gehen - oder zumindest für die Nachrichten sorgen. Matthias Beck wurde entlassen und hinter Gitter gebracht, bis alle Umstände geklärt sind.";
-			link.l1 = "Das sagst du! Tatsächlich, ich verbringe zu viel Zeit auf See. Und wann ist das passiert?";
+			link.l1 = "Was du nicht sagst! Tatsächlich, ich verbringe zu viel Zeit auf See. Und wann ist das passiert?";
 			link.l1.go = "Lucas_Tavern_4";
 		break;
 		
 		case "Lucas_Tavern_4":
-			dialog.text = "Eigentlich erst vor ein paar Tagen. Ein Kurier-Brigg kam im Hafen an. Sie war nicht im besten Zustand, sie hat offensichtlich an einem heftigen Kampf teilgenommen. Der Kapitän ging direkt zu Mynheer Rodenburg mit seinem Bericht, und nur wenige Stunden später wurde Matthias Beck von Mynheer Rodenburg und dem Kommandanten auf Verdacht der Zusammenarbeit mit dem englischen Geheimdienst festgenommen.";
+			dialog.text = "Eigentlich erst vor ein paar Tagen. Eine Kurier-Brigg kam im Hafen an. Sie war nicht im besten Zustand, sie hat offensichtlich an einem heftigen Kampf teilgenommen. Der Kapitän ging direkt zu Mynheer Rodenburg mit seinem Bericht, und nur wenige Stunden später wurde Matthias Beck von Mynheer Rodenburg und dem Kommandanten auf Verdacht der Zusammenarbeit mit dem englischen Geheimdienst festgenommen.";
 			link.l1 = "Du erzählst schreckliche Dinge. Wie kann ein Gouverneur von Curacao ein englischer Spion sein?";
 			link.l1.go = "Lucas_Tavern_5";
 		break;
 		
 		case "Lucas_Tavern_5":
 			dialog.text = "Ehrlich gesagt, ich kann es kaum glauben. Ich habe gehört, dass bald der Direktor der Gesellschaft, Peter Stuyvesant selbst, hier eintreffen wird. Anscheinend wird er die Untersuchung persönlich durchführen.";
-			link.l1 = "Dann liegen Sie richtig. Es kann riskant sein, Mynheer Rodenburg zu dieser Zeit zu belästigen.";
+			link.l1 = "Dann liegst du richtig. Es kann riskant sein, Mynheer Rodenburg zu dieser Zeit zu belästigen.";
 			link.l1.go = "Lucas_Tavern_6";
 		break;
 		
 		case "Lucas_Tavern_6":
 			dialog.text = "Guter Gedanke, Kapitän! Umso mehr, dass die 'Meifeng' gerade beladen wird. Sie ist gerade von der Reise zur Südküste des Main zurückgekehrt und wird bald wieder in See stechen. Und, ich sage dir, dort geschehen seltsame Dinge. Holländische Matrosen und Wachen der Kompanie wurden vom Dienst befreit und eine andere Mannschaft wird zusammengestellt. Und ich schwöre bei allen Rumtassen, die ich in meinem Leben getrunken habe, diese neuen Freiwilligen sind ganz anders, alles Piraten, Banditen und Halsabschneider!";
-			link.l1 = "Ein Wunder, tatsächlich! Nun, es ist eine Schande! So ein schönes Schiff... Nun, das Schicksal hat es anders bestimmt... Danke für die interessante Geschichte und die Neuigkeiten! Es war ein Vergnügen, mit Ihnen zu sprechen!";
+			link.l1 = "Ein Wunder, tatsächlich! Nun, es ist eine Schande! So ein schönes Schiff... Nun, das Schicksal hat es anders bestimmt... Danke für die interessante Geschichte und die Neuigkeiten! Es war ein Vergnügen, mit dir zu sprechen!";
 			link.l1.go = "Lucas_Tavern_7";
 		break;
 		
 		case "Lucas_Tavern_7":
 			dialog.text = "Nun, danke für die Gesellschaft und den Rum, Kapitän! Schau mal wieder vorbei!";
-			link.l1 = "Sicher werde ich!";
+			link.l1 = "Sicher, werde ich!";
 			link.l1.go = "exit_sit";
 			AddQuestRecord("Holl_Gambit", "3-44");
 			pchar.questTemp.HWIC.Self = "AttackMeifeng";
@@ -590,7 +590,7 @@ void ProcessDialogEvent()
 			pchar.quest.HWIC_Meifeng.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 1);
 			pchar.quest.HWIC_Meifeng.win_condition.l1.date.year  = GetAddingDataYear(0, 0, 1);
 			pchar.quest.HWIC_Meifeng.function = "CreateMeifengOnMap";
-			if(bImCasual) NewGameTip("Exploration mode: timer is not disabled. Meet the deadline!");
+			if(bImCasual) NewGameTip("Erkundungsmodus: Der Timer ist nicht deaktiviert. Halten Sie die Frist ein!");
 			SetFunctionTimerCondition("QuestShipsTerms_Over", 0, 0, 12, false); // таймер
 			pchar.quest.Meifeng_fail.over = "yes"; //снять прерывание
 			Group_DelCharacter("Meifeng_Empty", "Longway");
@@ -730,7 +730,7 @@ void ProcessDialogEvent()
 			}
 			// <== Квест "Путеводная звезда" - Sinistra
 			
-			dialog.text = LinkRandPhrase("Du bist ein "+GetSexPhrase("echter Freund","tolle Maid")+"! Schön dich zu treffen! Prost!","Hicks! Das ist toller Rum! Hicks... Prost!","Auf Ihre Gesundheit und auf Ihre Großzügigkeit!");
+			dialog.text = LinkRandPhrase("Du bist ein "+GetSexPhrase("echter Freund","tolles Mädel")+"! Schön dich zu treffen! Prost!","Hicks! Das ist toller Rum! Hicks... Prost!","Auf Ihre Gesundheit und auf Ihre Großzügigkeit!");
 			link.l1 = "Heh, das ist wirklich starker Rum. Also gut, ich muss gehen. Viel Spaß noch!";
 			link.l1.go = "exit_sit";
 			if (makeint(pchar.money) >=2)
@@ -739,7 +739,7 @@ void ProcessDialogEvent()
 				link.l2.go = "sit_3";
 			}
 
-			link.l4 = LinkRandPhrase("Es fühlt sich an, als hätte ich eine Ewigkeit auf See verbracht. Gibt es Neuigkeiten?","Was sagen die Leute? Sicher, ich werde dir Getränke kaufen.","Sag mir, Kumpel, welche Geschichten sind jetzt in Tavernen beliebt?");
+			link.l4 = LinkRandPhrase("Es fühlt sich an, als hätte ich eine Ewigkeit auf See verbracht. Gibt es Neuigkeiten?","Was sagen die Leute? Natürlich werde ich dir Drinks kaufen.","Sag mir, Kumpel, welche Geschichten sind jetzt in Tavernen beliebt?");
 			link.l4.go = "rumours_habitue";
 		break;
 
@@ -756,21 +756,21 @@ void ProcessDialogEvent()
 				break;
 
 				case 1:
-					dialog.text = "Für dich! Oh, verdammt! Wer ist das?";
+					dialog.text = "Für dich! Oh, Hölle! Wer ist das?";
 					link.l1 = "Hä? Was? Wo? Ich muss Dinge sehen.";
 					link.l1.go = "sit_2";// to_do "sit_case_5_exit";
 				break;
 				
                 case 2:
 	         		dialog.text = "Lass uns trinken, dann! Noch einen?";
-					link.l1 = "Mach weiter!";
+					link.l1 = "Nur zu!";
 					link.l1.go = "sit_2";
                 break;				
 				
 				case 3:
 					if(rand(1) == 0)
 					{
-						dialog.text = RandPhraseSimple("He, du, "+GetAddress_Form(NPChar)+", du denkst sicher, dass dich alle bewundern, nicht wahr? Nun, wenn du mich fragst, bist du nur ein gewöhnlicher Brigant!.. Und Mörder! 'Edler Pirat'! Ha! Ein Bandit ist ein Bandit... Hic... Sei es an Land oder auf See..","Hicks! "+GetSexPhrase("Scho... Schurke","Dre... Dreck")+"! Du willst, dass ich trinke, bis ich ohnmächtig werde - hic - und dann stiehlst du all mein Geld!");
+						dialog.text = RandPhraseSimple("He, du, "+GetAddress_Form(NPChar)+", du denkst sicher, dass dich alle bewundern, nicht wahr? Nun, wenn du mich fragst, bist du nur ein gewöhnlicher Räuber!.. Und Mörder! 'Edler Pirat'! Ha! Ein Bandit ist ein Bandit... Hic... Sei es an Land oder auf See..","Hicks! "+GetSexPhrase("Scho... Schurke","Dre... Drecksau")+"! Du willst, dass ich trinke, bis ich ohnmächtig werde - hic - und dann stiehlst du all mein Geld!");
 						link.l1 = "Ich sehe, du hast schon genug getrunken... Geh es ausschlafen... Und ich muss gehen...";
 						link.l1.go = "exit_sit";						
 						link.l2 = "Ich mag deinen Ton nicht, Kumpel. Halt deine Klappe, klar?";
@@ -794,7 +794,7 @@ void ProcessDialogEvent()
 							dialog.text = RandPhraseSimple("Warum starrst du mich an? Du wirst warten, bis ich ohnmächtig werde - hic - und dann wirst du all mein Geld stehlen! Woher kommt dieser ganze Pöbel?! Hic... Kein Platz für anständige Leute in dieser Kneipe?","Respektierst du mich?.. Ja, du! Respektierst du mich?! Pass nur auf dich auf... Ich bin nicht derjenige, mit dem man sich anlegt... Ein Schlag zwischen die Augen... Und du bist so gut wie tot...");
 							link.l1 = "Kumpel, du bist betrunken wie ein Schwein. Geh nach Hause und schlaf es aus... Und ich muss auch gehen...";	
 							link.l1.go = "exit_sit";
-							link.l2 = "Halt die Pferde, Kumpel. Pass auf, mit wem du redest.";
+							link.l2 = "Zügle dein Temperament, Kumpel. Pass auf, mit wem du redest.";
 							link.l2.go = "sit_case_2_enemy1";
 							link.l3 = "Was hast du gerade gesagt?! Ich werde dir eine Lektion erteilen!";
 							link.l3.go = "sit_case_2_enemy2";
@@ -957,13 +957,13 @@ void ProcessDialogEvent()
 			ChangeCharacterComplexReputation(pchar, "nobility", -1);
 			if(rand(1) == 0)
 			{
-				dialog.text = LinkRandPhrase("Los geht's, Schurken! Ihr werdet gleich satt!",RandSwear()+"Jetzt werde ich dich richtig ausplündern!","Ha! Komm schon, Seemann - lass uns sehen, was du an Land kannst!");
+				dialog.text = LinkRandPhrase("Los geht's, Schurken! Gleich bekommt ihr eure Portion!",RandSwear()+"Jetzt werde ich dich richtig ausplündern!","Ha! Komm schon, Seemann - lass uns sehen, was du an Land kannst!");
 				link.l1 = RandPhraseSimple(RandPhraseSimple("Ich schwöre, du wirst das bereuen!","Ich werde deine verdammte Zunge kürzen!"),RandPhraseSimple("Ich werde dich wie ein Schwein ausnehmen, von deinem Hintern zu deinem Scheißloch, das manche Mund nennen!","Ich schwöre, ich bringe dich zum Schweigen!"));
 				link.l1.go = "fight_right_now";
 			}
 			else
 			{
-				dialog.text = "Los, Jungs! Lasst uns diese Waage aus unserer Stadt holen!";
+				dialog.text = "Los, Jungs! Lasst uns diesen Abschaum aus unserer Stadt fegen!";
 				link.l1 = RandPhraseSimple(RandSwear()+"Betet, ihr Bastarde!","Oh, du bist nicht allein! Nun, du wirst Gesellschaft in der Hölle haben!");
 				link.l1.go = "fight_right_now_1";
 			}
@@ -973,13 +973,13 @@ void ProcessDialogEvent()
 			ChangeCharacterComplexReputation(pchar, "nobility", 1);
 			if(rand(1) == 0)
 			{
-				dialog.text = LinkRandPhrase("Los, ihr Halunken! Ihr werdet gleich satt!",RandSwear()+"Jetzt werde ich dich richtig ausziehen!","Ha! Los, Seemann - lass uns mal sehen, was du an Land kannst!");
+				dialog.text = LinkRandPhrase("Los, ihr Halunken! Ihr werdet gleich kriegen was ihr verdient!",RandSwear()+"Jetzt werde ich dich richtig ausziehen!","Ha! Los, Seemann - lass uns mal sehen, was du an Land kannst!");
 				link.l1 = RandPhraseSimple(RandPhraseSimple("Ich schwöre, du wirst das bereuen!","Ich werde deine verdammte Zunge kürzen!"),RandPhraseSimple("Ich schlitz dich auf wie ein Schwein, von deinem Arsch zu dem Scheißloch, das einige Mund nennen!","Ich schwöre, ich bringe dich zum Schweigen!"));
 				link.l1.go = "fight_right_now";
 			}
 			else
 			{
-				dialog.text = "Los Leute! Lasst uns diese Waage aus unserer Stadt holen!";
+				dialog.text = "Los Leute! Lasst uns diesen Abschaum aus unserer Stadt fegen!";
 				link.l1 = RandPhraseSimple(RandSwear()+"Betet, ihr Bastarde!","Oh, du bist nicht allein! Nun, du wirst Gesellschaft in der Hölle haben!");
 				link.l1.go = "fight_right_now_1";
 			}
@@ -987,7 +987,7 @@ void ProcessDialogEvent()
 		
 		//--> Sinistra Длинные тени старых грехов
 		case "DTSG_NightIskat":
-			dialog.text = "Natürlich, wir kennen uns alle! Warum fragst du?";
+			dialog.text = "N-natürlich, wir kennen uns alle! Warum fragst du?";
             link.l1 = "Ich wollte den Geldverleiher besuchen und habe herausgefunden, dass er sein altes Haus verkauft hat. Weißt du, wo er jetzt wohnt?";
             link.l1.go = "DTSG_NightIskat_2";
 		break;
@@ -1040,14 +1040,14 @@ void ProcessDialogEvent()
 		break;
 		
 		case "PZ_BasTerAlkash_3":
-			dialog.text = "Ein Wanderzirkus, mein Arsch! Er sprang, drehte sich und wirbelte mit diesem Säbel herum - Ich habe noch nie jemanden so geschickt und erschreckend mit einer Waffe gesehen.";
+			dialog.text = "Ein Wanderzirkus, am Arsch! Er sprang, drehte sich und wirbelte mit diesem Säbel herum - Ich habe noch nie jemanden so geschickt und erschreckend mit einer Waffe gesehen.";
 			link.l1 = "Das klingt nach ihm. Mit wem hat er gekämpft? Erinnern Sie sich?";
 			link.l1.go = "PZ_BasTerAlkash_4";
 		break;
 		
 		case "PZ_BasTerAlkash_4":
 			dialog.text = "Die Wachen, Kamerad! Er verengt auch die Augen bei ihnen! Obwohl, ich denke, er sieht immer so aus. Was denkst du?";
-			link.l1 = "Ich weiß nicht, Kumpel. Mach weiter. Dachten sie, er wäre ein Spion? Warum haben die Wachen ihn angegriffen?";
+			link.l1 = "Ich weiß nicht, Kumpel. Erzähl weiter. Dachten sie, er wäre ein Spion? Warum haben die Wachen ihn angegriffen?";
 			link.l1.go = "PZ_BasTerAlkash_5";
 		break;
 		
@@ -1087,7 +1087,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Sotta1":
-			dialog.text = "Habe ihn selbst nicht gesehen - er war bei der Büro des Gouverneurs, eh! Aber seine Crew hat hier eine große Party gefeiert.";
+			dialog.text = "Habe ihn selbst nicht gesehen - er war beim Büro des Gouverneurs, eh! Aber seine Crew hat hier eine große Party gefeiert.";
 			link.l1 = "Ist das so?";
 			link.l1.go = "Sotta2";
 		break;

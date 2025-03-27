@@ -10,13 +10,13 @@ string savefile_info = "ver 1.4.0";
 #define DLC_APPID_2       2628610
 #define DLC_APPID_3       3162620
 #define DLC_APPID_4       3398030
-#define DLC_APPID_5       0
+#define DLC_APPID_5       3549890
 #define DLC_APPID_6       0
 #define DLC_NAME_1        "Loyalty Pack"
 #define DLC_NAME_2        "Vile Liittle God"
 #define DLC_NAME_3        "Black Mark"
 #define DLC_NAME_4        "Ships Pack #1"
-#define DLC_NAME_5        ""
+#define DLC_NAME_5        "Ships Pack #2"
 #define DLC_NAME_6        ""
 #define DLC_DATE_1	      ""
 #define DLC_DATE_2        ""
@@ -226,6 +226,7 @@ int EventReturn_iGrassQuality()
 {
     //trace("GrassQuality"); - эта хрень работает 5-10 раз в секунду
     if (bSeaActive && bStorm && iGrassQuality < 2) { return 2; } //Low
+	if (CheckLocGrassOpt() && iGrassQuality < 2) { return 1; } //Medium
 	return iGrassQuality;
 }
 

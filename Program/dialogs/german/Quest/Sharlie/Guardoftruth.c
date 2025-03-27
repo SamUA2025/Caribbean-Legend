@@ -509,7 +509,7 @@ void ProcessDialogEvent()
 		// Гай Марше
 		case "marshe_tavern":
 			PlaySound("Voice\English\tavern\Kontrabandisti-08.wav");
-			dialog.text = NPCStringReactionRepeat("Ho! Bist du nicht von dem Handelsschiff? Nein? Oh, entschuldige. Natürlich nicht... Mein Fehler.","Ich bin nicht in Stimmung, Monsieur, also suchen Sie sich jemand anderen zum Reden.","Ach, du schon wieder?!","Ähem...","Block",1,npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat("Ho! Bist du nicht von dem Handelsschiff? Nein? Oh, entschuldige. Natürlich nicht... Mein Fehler.","Ich bin nicht in Stimmung, Monsieur, also suchen Sie sich jemand anderen zum Reden.","Ach, du schon wieder?!","Ähem...","block",1,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Mach dir keine Sorgen, Kumpel. Es passiert.","Haben Sie etwas Rum, Kapitän. Es wird Ihre Sorgen ein wenig lindern...","Sei nicht nervös, Kumpel. Es ist schlecht für deine Gesundheit.","In Ordnung, in Ordnung. Ich gehe jetzt.",npchar,Dialog.CurrentNode); 
 			link.l1.go = DialogGoNodeRepeat("exit", "", "", "", npchar, Dialog.CurrentNode);
 			NextDiag.TempNode = "marshe_tavern";

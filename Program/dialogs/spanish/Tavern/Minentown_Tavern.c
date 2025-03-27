@@ -22,7 +22,7 @@ void ProcessDialogEvent()
 			if (LAi_grp_playeralarm > 0)
 			{
        			dialog.text = NPCharRepPhrase(pchar,LinkRandPhrase("¡Ha habido una alarma en el pueblo! ¡Todos te están buscando! Yo no me quedaría aquí mucho tiempo si fuera tú.","¡Toda la guardia está peinando el pueblo tratando de encontrarte! ¡No soy un idiota y no pienso hablar contigo!","Corre, camarada, antes de que los soldados te hagan picadillo..."),LinkRandPhrase("¿Qué necesitas, granuja? ¡La guardia de la ciudad ya está tras de ti. No llegarás lejos, pirata!","¡Asesino sucio, sal de mi casa! ¡Guardias!","¡No te tengo miedo, perro! La soga te llama, no llegarás lejos..."));
-				link.l1 = NPCharRepPhrase(pchar,RandPhraseSimple("Heh, no me preocupa la alarma...","No tienen ninguna oportunidad de atraparme."),RandPhraseSimple("Cierra la boca, "+GetWorkTypeOfMan(npchar,"Entendido. Предоставь текст, который необходимо перевести.")+", o te cortaré la maldita lengua.","Heh, "+GetWorkTypeOfMan(npchar,"Entendido. Задавайте текст для перевода.")+", tú también quieres cazar a un pirata? Escucha, camarada, mantén la calma y podrías vivir..."));
+				link.l1 = NPCharRepPhrase(pchar,RandPhraseSimple("Heh, no me preocupa la alarma...","No tienen ninguna oportunidad de atraparme."),RandPhraseSimple("Cierra la boca, "+GetWorkTypeOfMan(npchar,"")+", o te cortaré la maldita lengua.","Heh, "+GetWorkTypeOfMan(npchar,"")+", tú también quieres cazar a un pirata? Escucha, camarada, mantén la calma y podrías vivir..."));
 				link.l1.go = "exit";
 				break;
 			}

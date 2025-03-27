@@ -29,15 +29,12 @@ void zpq_sld1_fc(string qName)
 			AddMoneyToCharacter(sld, 1000+rand(1000));
 			sld.SaveItemsForDead  = true;
 			sld.DontClearDead = true;
-			if (GetCharacterItem(pchar, "map_full") == 0)
-			{
-				if (GetCharacterItem(pchar, "map_part1") == 0) GiveItem2Character(sld, "map_part1");
-				else
-				{
-					if (GetCharacterItem(pchar, "map_part2") == 0) GiveItem2Character(sld, "map_part2");
-				}
-			}
-			else GiveItem2Character(sld, "map_normal");
+            if (GetCharacterItem(pchar, "map_part1") == 0)
+                GiveItem2Character(sld, "map_part1");
+            else if (GetCharacterItem(pchar, "map_full") == 0 && GetCharacterItem(pchar, "map_part2") == 0)
+                GiveItem2Character(sld, "map_part2");
+			else
+                GiveItem2Character(sld, "map_normal");
 		}
 		else
 		{

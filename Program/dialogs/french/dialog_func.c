@@ -957,21 +957,35 @@ string TimeGreeting()
 {
     if (GetHour() >= 18 && GetHour() < 23)
     {
-       return "Good evening";
+       return "Bonsoir";
     }
     if (GetHour() >= 6 && GetHour() < 12)
     {
-       return "Good morning";
+       return "Bonjour";
     }
     if (GetHour() >= 12 && GetHour() < 18)
     {
-       return "Good day";
+       return "Bonjour";
     }
     if (GetHour() >= 23 || GetHour() < 6)
     {
-       return "Good night";
+       return "Bonne nuit";
     }
     return "Hallo!";
+}
+
+string Greeting()
+{
+    return "Bonjour";
+}
+
+string Goodbye()
+{
+    if (GetHour() >= 23 || GetHour() < 6)
+    {
+       return "Bonne nuit";
+    }
+    return RandPhraseSimple("À la revoyure", "Adieu");
 }
 
 // выбор фразы от репутации

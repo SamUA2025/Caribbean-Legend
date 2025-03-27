@@ -11,6 +11,7 @@ void LAi_type_monkey_Init(aref chr)
 	chr.chr_ai.type = LAI_TYPE_MONKEY;
 	LAi_tmpl_stay_InitTemplate(chr);
 	//Установим анимацию персонажу
+    // TO_DO: Если потребуется мартышка, то придётся переписать под новое управление
 	BeginChangeCharacterActions(chr);
 	chr.actions.idle.i1 = "idle_1";
 	chr.actions.idle.i2 = "idle_2";

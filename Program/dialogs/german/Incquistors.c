@@ -19,8 +19,8 @@ void ProcessDialogEvent()
 			}
 			else
 			{	
-				dialog.text = NPCStringReactionRepeat(RandPhraseSimple("Hallo dort, "+GetSexPhrase("mein Sohn","meine Tochter")+". Was hat dich hierher gebracht?..","Ich freue mich, dich in unserer Behausung zu sehen, "+GetSexPhrase("mein Sohn","meine Tochter")+". . Was hat dich hierher gebracht?"),""+GetSexPhrase("Mein Sohn","Meine Tochter")+", wir haben heute schon gesprochen. Brauchst du noch etwas?",""+GetSexPhrase("Mein Sohn","Meine Tochter")+", die Akolythen unserer Ordnung sind nicht für ihre grenzenlose Geduld bekannt. Also, lass mich dich noch einmal fragen: Brauchst du etwas?",RandPhraseSimple("Du lenkst die Anderen von ihren Pflichten ab. Ich werde nicht mehr mit dir reden.",""+GetSexPhrase("Mein Sohn","Meine Tochter")+", Ich mag sinnlose und nutzlose Gespräche nicht. Ich werde nicht mehr mit dir sprechen."),"Block",1,npchar,Dialog.CurrentNode);
-				link.l1 = HeroStringReactionRepeat(RandPhraseSimple("Einfach reingeschneit..","Völlig voll mit Geschäft..."),"Oh, nein, Vater......","Nein, padre, ich wollte nur sprechen...",RandPhraseSimple("Hmm...","Nun, wie Sie wünschen, Vater..."),npchar,Dialog.CurrentNode);
+				dialog.text = NPCStringReactionRepeat(RandPhraseSimple("Hallo, "+GetSexPhrase("mein Sohn","meine Tochter")+". Was hat dich hierher gebracht?..","Ich freue mich, dich in unserer Behausung zu sehen, "+GetSexPhrase("mein Sohn","meine Tochter")+". . Was hat dich hierher gebracht?"),""+GetSexPhrase("Mein Sohn","Meine Tochter")+", wir haben heute schon gesprochen. Brauchst du noch etwas?",""+GetSexPhrase("Mein Sohn","Meine Tochter")+", die Akolythen unserer Ordnung sind nicht für ihre grenzenlose Geduld bekannt. Also, lass mich dich noch einmal fragen: Brauchst du etwas?",RandPhraseSimple("Du lenkst die Anderen von ihren Pflichten ab. Ich werde nicht mehr mit dir reden.",""+GetSexPhrase("Mein Sohn","Meine Tochter")+", Ich mag sinnlose und nutzlose Gespräche nicht. Ich werde nicht mehr mit dir sprechen."),"block",1,npchar,Dialog.CurrentNode);
+				link.l1 = HeroStringReactionRepeat(RandPhraseSimple("Einfach reingeschneit..","Völlig voll mit Geschäften..."),"Oh, nein, Vater......","Nein, padre, ich wollte nur sprechen...",RandPhraseSimple("Hmm...","Nun, wie Sie wünschen, Vater..."),npchar,Dialog.CurrentNode);
 				link.l1.go = DialogGoNodeRepeat("exit", "none", "none", "NoMoreTalkExit", npchar, Dialog.CurrentNode);				
 			}
 			if (CheckAttribute(npchar, "protector.CheckAlways")) //гарды на камерах
@@ -28,7 +28,7 @@ void ProcessDialogEvent()
 				if (GetNationRelation2MainCharacter(sti(NPChar.nation)) == RELATION_ENEMY)
 				{					
 					dialog.text = "Zu den Waffen! Es ist ein Spion! Ergreift ihn!";
-					link.l1 = "Donnerwetter!";
+					link.l1 = "Verdammt noch mal!";
 					link.l1.go = "fight";
 				}
 				else

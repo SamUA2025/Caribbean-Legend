@@ -17,7 +17,7 @@ void ProcessDialogEvent()
 			{
 				if (pchar.questTemp.HWIC.Holl == "AbbySeekIsland" && !CheckAttribute(npchar, "quest.HWICHoll.Task"))
 				{
-					dialog.text = "¡Buen día, señor! Soy el Doctor Joachim Merriman. ¿Tengo el placer de dirigirme al Capitán "+GetFullName(pchar)+"¿?";
+					dialog.text = "¡Buen día, señor! Soy el Doctor Joachim Merriman. ¿Tengo el placer de dirigirme al Capitán "+GetFullName(pchar)+"?";
 					link.l1 = "¡Ay, ese soy yo! ¿Cómo demonios sabes mi nombre? No recuerdo haberte conocido antes.";
 					link.l1.go = "JoakimSeekSkull";
 					break;
@@ -38,7 +38,7 @@ void ProcessDialogEvent()
 			{
 				if (pchar.questTemp.HWIC.Self == "JoakimMeeting" && !CheckAttribute(npchar, "quest.HWICHoll.Task"))
 				{
-					dialog.text = "¡Buen día, señor! Soy el Doctor Joachim Merriman. ¿Tengo el placer de dirigirme al Capitán "+GetFullName(pchar)+"¿?";
+					dialog.text = "¡Buen día, señor! Soy el Doctor Joachim Merriman. ¿Tengo el placer de dirigirme al Capitán "+GetFullName(pchar)+"?";
 					link.l1 = "Sí, ese soy yo. ¿Cómo diablos sabes mi nombre? No recuerdo haberte conocido antes.";
 					link.l1.go = "JoakimSeekSkull";
 					break;
@@ -85,7 +85,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "JoakimSeekSkull":
-			PlaySound("Voice\English\hambit\Joakim Merriman-01.wav");
+			PlaySound("Voice\Spanish\hambit\Joakim Merriman-01.wav");
 			dialog.text = "¡Tus asuntos no son tan privados como podrías creer, capitán! Pero no te alarmes, ¡tengo una proposición para ti! Soy un hombre de ciencia, una especie de filósofo natural que estudia la fascinante cultura de los paganos indios del Litoral español y las Indias Occidentales. ¿Serías tan amable de caminar conmigo hasta mi casa y discutir los detalles potencialmente muy lucrativos en mi sala de estar?";
 			link.l1 = "Tienes mi curiosidad y mi atención. Lleva el camino.";
 			link.l1.go = "JoakimSeekSkull_1";
@@ -104,7 +104,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "JoakimSeekSkull_3":
-			PlaySound("Voice\English\hambit\Joakim Merriman-01.wav");
+			PlaySound("Voice\Spanish\hambit\Joakim Merriman-01.wav");
 			dialog.text = "Podemos hablar aquí sin temor a oídos curiosos. Has estado visitando recientemente a mi vecino Solomon Shneur. Estaba caminando cerca y, debes perdonarme capitán, accidentalmente escuché algunos detalles de tu conversación con Solomon. ¡Fue todo tan fascinante que tuve que escuchar toda la charla!";
 			link.l1 = "Un espía que teme a otros espías, ¿eh?";
 			link.l1.go = "JoakimSeekSkull_4";
@@ -138,7 +138,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "JoakimFindSkull":
-			PlaySound("Voice\English\hambit\Joakim Merriman-02.wav");
+			PlaySound("Voice\Spanish\hambit\Joakim Merriman-02.wav");
 			dialog.text = "¡Oh, sí! Definitivamente tienes razón sobre su poder... Pero basta de palabras, déjame verlo, estoy temblando de impaciencia.";
 			link.l1 = "Aquí, por favor, tómalo. ¿Espero no haberme equivocado?";
 			link.l1.go = "JoakimFindSkull_1";
@@ -176,7 +176,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "JoakimSeekSkull_8":
-			PlaySound("Voice\English\hambit\Joakim Merriman-01.wav");
+			PlaySound("Voice\Spanish\hambit\Joakim Merriman-01.wav");
 			DelLandQuestMark(npchar);
 			dialog.text = "Podemos hablar aquí, capitán. Sé que eres un íntimo asociado de Abigail Shneur, la hija de mi vecino Salomón. Ella ha zarpado en tu barco hacia su amante... pero eso realmente no importa.";
 			link.l1 = "¿Qué insinúas, Doctor?";
@@ -227,7 +227,7 @@ void ProcessDialogEvent()
 		
 		// калеуче
 		case "caleuche":
-			PlaySound("Voice\English\LSC\Chymiset-03.wav");
+			PlaySound("Voice\Spanish\LSC\Chymiset-03.wav");
 			dialog.text = "Síííí. ¡Las piedras sacrificiales corren rojas con la sangre de mis enemigos! ¡Yum Cimil me ha concedido su poder para comandar a los muertos! ¡Con este poder pronto gobernaré a los vivos!";
 			link.l1 = " Muy melodramático, Merriman. ¿Qué planeas hacer con tu ejército de cadáveres ambulantes? ¿Estás jugando a ser César, tratando de conquistar el mundo?";
 			link.l1.go = "caleuche_1";
@@ -241,7 +241,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "caleuche_2":
-			PlaySound("Types\warrior04.wav");
+			PlaySound("Types\Spanish\warrior04.wav");
 			dialog.text = "¡Oh ho ho! ¿Te atreverías a desafiarme a mí y a mis sirvientes esqueléticos? ¡Entonces contempla lo que realmente soy y tiembla de miedo!";
 			link.l1 = "Ven a por algo.";
 			link.l1.go = "caleuche_3";
@@ -257,8 +257,8 @@ void ProcessDialogEvent()
 		break;
 		
 		case "caleuche_4":
-			PlaySound("Voice\English\hambit\Joakim Merriman-04.wav");
-			dialog.text = "¿Ahora entiendes quién está delante de ti, gusano gimoteante? ¡Tengo cuentas pendientes contigo! ¡El mismo Yum Cimil me favorece! ¡Voy a devorar tu alma!";
+			PlaySound("Voice\Spanish\hambit\Joakim Merriman-04.wav");
+			dialog.text = "¿Ahora entiendes quién está delante de ti, gusano gimoteante? ¡Tengo cuentas pendientes contigo! ¡El mismo Yum Cimil me favorece! Me comeré tu higado, ya verás.";
 			link.l1 = "Está bien, cabeza hueca. Vamos a bailar.";
 			link.l1.go = "caleuche_5";
 		break;

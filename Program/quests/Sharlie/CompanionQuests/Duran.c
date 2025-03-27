@@ -159,12 +159,13 @@ bool Duran_QuestComplete(string sQuestName, string qname)
 
 	else if (sQuestName == "SKD_DomAnri_DuranDruzhba_2") {
 		StartQuestMovie(true, false, true);
-		locCameraFromToPos(-11.07, 7.25, 24.15, false, -5.64, 4.20, 26.00);
+		locCameraFromToPos(-66.07, 6.11, 49.81, false, -60.74, 3.06, 48.80);
 		DoQuestCheckDelay("SKD_DomAnri_DuranDruzhba_2_1", 2.0);
 	}
 
 	else if (sQuestName == "SKD_DomAnri_DuranDruzhba_2_1") {
-		LAi_ActorGoToLocator(pchar, "officers", "houseSp1_1", "SKD_DomAnri_DuranDruzhba_3", -1);
+		locCameraSleep(true);
+		LAi_ActorGoToLocator(pchar, "officers", "houseSp1_3", "SKD_DomAnri_DuranDruzhba_3", -1);
 		SetMusic("");
 	}
 
@@ -173,7 +174,8 @@ bool Duran_QuestComplete(string sQuestName, string qname)
 	}
 
 	else if (sQuestName == "SKD_DomAnri_DuranDruzhba_4") {
-		locCameraFromToPos(-11.07, 7.25, 24.15, false, -8.01, 6.60, 24.10);
+		locCameraSleep(false);
+		locCameraFromToPos(-66.07, 6.11, 49.81, false, -59.25, 5.86, 46.70);
 		DoQuestCheckDelay("SKD_DomAnri_DuranDruzhba_5", 3.0);
 	}
 
@@ -189,7 +191,7 @@ bool Duran_QuestComplete(string sQuestName, string qname)
 	}
 
 	else if (sQuestName == "SKD_DomAnri_DuranDruzhba_7") {
-		locCameraFromToPos(-11.07, 7.25, 24.15, false, -5.64, 4.20, 26.00);
+		locCameraFromToPos(-66.07, 6.11, 49.81, false, -60.74, 3.06, 48.80);
 		DoQuestCheckDelay("SKD_DomAnri_DuranDruzhba_8", 3.0);
 	}
 

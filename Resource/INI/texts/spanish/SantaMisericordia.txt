@@ -30,9 +30,9 @@ City_Rum9 {¡Ha! "San" Fernando volvió a cerrar todos los burdeles. Bueno, no i
 
 City_Rum10 {¡Ha llegado el insp... inspector, eso es! ¡Don Fernando de Almeyda, o como se llame, Alamida! Tan importante que el propio gobernador anda de puntillas a su alrededor. Dicen que te mira a los ojos y ve enseguida todos tus pecados. ¡Aterrador!}
 
-Cap_Name {Diego}
+Pop_Name {Diego}
 
-Cap_lastname {de Landa}
+Pop_lastname {de Landa}
 
 SM_WorldMap 
 {
@@ -41,9 +41,9 @@ Un adversario feroz. ¿Estamos realmente preparados para hacerle frente?
 ¿Quizás deberíamos interceptarlo en mar abierto, lejos de las colonias?
 }
 
-City_Rum11 {Word has reached mine ears that the target of the Holy Mercy this time is the  ~}
+City_Rum11 {Ha llegado a mis oídos la noticia de que el objetivo de la Santa Misericordia esta vez es el  ~}
 
-City_Rum12 {. Once more, we shall all bow our heads under the yoke of Escorial. Have we truly earned this fate?}
+City_Rum12 {. Una vez más, todos inclinaremos la cabeza bajo el yugo del Escorial. ¿De verdad nos hemos ganado este destino?}
 
 City_Rum13 {Ha llegado un nuevo inspector a ~}
 

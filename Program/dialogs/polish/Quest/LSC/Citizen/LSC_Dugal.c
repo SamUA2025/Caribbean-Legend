@@ -45,7 +45,7 @@ void ProcessDialogEvent()
 		
 		case "meeting": // первая встреча
 			dialog.text = "Nie znasz ich dobrze. Czy dopiero tu przybyłeś? Nie pamiętam jednak żadnego niedawnego wraku statku...";
-			link.l1 = "Przybyłem tutaj na małej barki…";
+			link.l1 = "Przybyłem tutaj na małej barki...";
 			link.l1.go = "meeting_1";
 		break;
 		

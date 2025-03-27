@@ -1,6 +1,6 @@
 Roger_1
 {
-You gave away the Spanish flag
+Sie haben die spanische Flagge weitergegeben
 }
 
 Roger_2
@@ -14,7 +14,7 @@ Chapada
 
 Roger_4
 {
-Exploration mode: timer extended. Complete the quest!
+Erkundungsmodus: Timer verlängert. Beenden Sie die Quest!
 }
 
 Roger_5
@@ -51,12 +51,12 @@ Cabanas
 
 Roger_12
 {
-Approach barges closely and take their loot. Be careful not to crush them with your ship's hull.
+Nähern Sie sich den Kähnen und nehmen Sie ihre Beute. Passen Sie auf, dass Sie sie nicht mit Ihrem Schiffsrumpf zerquetschen.
 }
 
 Roger_13
 {
-Amber acquired @<sti(pchar.questTemp.Mtraxx_SobralVsyo)> / 5
+Bernstein erworben @<sti(pchar.questTemp.Mtraxx_SobralVsyo)> / 5
 }
 
 Roger_14
@@ -103,17 +103,17 @@ Gusen
 
 Roger_23
 {
-brigantine 'Utrecht'
+Brigantine 'Utrecht'
 }
 
 Roger_24
 {
-Exploration mode: timer is not disabled. Meet the deadline!
+Erkundungsmodus: Der Timer ist nicht deaktiviert. Halten Sie die Frist ein!
 }
 
 Roger_25
 {
-One hour later...@<NewStr()>The silk was unloaded to the buyer
+Eine Stunde später...@<NewStr()>Die Seide wurde beim Käufer abgeladen
 }
 
 Roger_26
@@ -141,84 +141,84 @@ Picard
 
 Roger_31
 {
-30 pieces of cold arms has been taken from the ship's arsenal
+30 Kalte Waffen wurden aus dem Arsenal des Schiffes entwendet.
 }
 
 Roger_32
 {
-Gathered cold arms - 30 pieces
+Gesammelte kalte Waffen - 30 Stück
 }
 
 Roger_33
 {
-No cold arms
+Keine kalten Waffen
 }
 
 Roger_34
 {
-Gathered pistols - @<FindRussianQtyString(iGun)>
+Gesammelte Pistolen - @<FindRussianQtyString(iGun)>
 }
 
 Roger_35
 {
-Gathered muskets - @<FindRussianQtyString(iMushket)>
+Gesammelte Musketen - @<FindRussianQtyString(iMushket)>
 }
 
 Roger_36
 {
-Gathered healing potions - @<FindRussianQtyString(iPotion)>
+Gesammelte Heiltränke - @<FindRussianQtyString(iPotion)>
 }
 
 Roger_37
 {
-Gathered supplies for @<iShot> shots
+Gesammelte Materialien für @<iShot>- Schüsse
 }
 
 Roger_38
 {
-Gathered cold arms - 30 pieces
+Gesammelte kalte Waffen - 30 Stück
 }
 Roger_39
 {
-Gathered pistols - 50 pieces
+Gesammelte Pistolen - 50 Stück
 }
 Roger_40
 {
-Gathered healing potions - 90 pieces
+Gesammelte Heiltränke - 90 Stück
 }
 Roger_41
 {
-Gathered supplies for 70 shots
+Gesammelte Materialien für 70 Schüsse
 }
 
 Roger_42
 {
-Later, next evening...
+Später, am nächsten Abend...
 }
 
 Roger_43
 {
-Some time later...
+Einige Zeit später...
 }
 
 Roger_44
 {
-Plantation is alarmed!
+Die Plantage ist alarmiert!
 }
 
 Roger_45
 {
-You have 300 seconds before the Spanish will get reinforces from the fort
+Sie haben 300 Sekunden Zeit, bevor die Spanier Verstärkung von dem Fort erhalten.
 }
 
 Roger_46
 {
-The Spanish has lost their flagship! We can try to flee!
+Die Spanier haben ihr Flaggschiff verloren! Wir können versuchen zu fliehen!
 }
 
 Roger_47
 {
-Dutch convoy is on the horizon!
+Ein holländischer Konvoi ist am Horizont zu sehen!
 }
 
 Roger_48
@@ -233,7 +233,7 @@ Gryphon
 
 Roger_50
 {
-Night has come...
+Die Nacht ist angebrochen...
 }
 
 Roger_51
@@ -247,7 +247,7 @@ Roger_52
 
 Roger_53
 {
-Mirabelle died of fever!
+Mirabelle starb an Fieber!
 }
 
 Roger_54
@@ -288,7 +288,7 @@ Roger_61
 
 Roger_62
 {
-Two days later...@<NewStr()>Six longboats has been built...
+Zwei Tage später...@<NewStr()>Sechs Langboote wurden gebaut...
 }
 
 Roger_63
@@ -321,7 +321,7 @@ Marco
 
 Roger_69
 {
-Exploration mode: timer is disabled.
+Erkundungsmodus: Der Timer ist deaktiviert.
 }
 
 Roger_70
@@ -340,7 +340,7 @@ El Casador
 
 Roger_73
 {
-Go to your cabin in order to study the ship log
+Gehen Sie in Ihre Kabine und studieren Sie das Schiffslogbuch.
 }
 
 Roger_74
@@ -354,7 +354,7 @@ Goldenteeth
 
 Roger_76
 {
-Boarding party is ready!
+Entermannschaft ist bereit!
 }
 
 Roger_77
@@ -387,12 +387,12 @@ Roger_82
 
 Roger_83
 {
-The Torero is on a raid of Le Francois!
+Die Torero ist auf einem Überfall auf Le Francois!
 }
 
 Roger_84
 {
-You are waiting stealthily from your hiding place...
+Sie warten heimlich in Ihrem Versteck...
 }
 
 Roger_85
@@ -402,7 +402,7 @@ Roger_85
 
 Roger_86
 {
-Exploration mode: quest duration doubled
+Erkundungsmodus: Questdauer verdoppelt
 }
 
 Roger_87
@@ -421,17 +421,17 @@ Jim
 
 Roger_90
 {
-Exploration mode: Corrida - the coordinates are correct
+Erkundungsmodus: Corrida - die Koordinaten sind korrekt
 }
 
 Roger_91
 {
-Exploration mode: Corrida - the coordinates are not correct
+Erkundungsmodus: Corrida - die Koordinaten sind nicht korrekt
 }
 
 Roger_92
 {
-Spanish convoy on the horizon!
+Ein spanischer Konvoi ist am Horizont zu sehen!
 }
 
 Roger_93
@@ -446,39 +446,39 @@ Red Dragon
 
 Roger_95
 {
-A huge explosion on @<pchar.ship.name>!
+Eine gewaltige Explosion auf der @<pchar.ship.name>!
 }
 
 Roger_96
 {
-We've arrived to Cartagena! Tyrex orders to sail to Covenas Bay
+Wir sind in Cartagena angekommen! Tyrex befiehlt, nach Covenas Bay zu segeln
 }
 
 Roger_97
 {
-Landing parties are ready to storm Cartagena!
+Die Landungstruppen sind bereit zum Sturm auf Cartagena!
 }
 
 Roger_98
 {
-Landing party of '@<pchar.ship.name>' has @<iCrew1> men
+Landungstrupp der '@<pchar.schiff.name>' hat @<iCrew1> Männer
 }
 Roger_99
 {
-Landing party of Red Dragon has @<iCrew2> men
+Landungstrupp der Red Dragon hat @<iCrew2> Männer
 }
 Roger_100
 {
-Landing party of Snake has @<iCrew3> men
+Landungstrupp der Snake hat @<iCrew3> Männer
 }
 Roger_101
 {
-Landing party of Moray has @<iCrew4> men
+Landungstrupp der Moray hat @<iCrew4> Männer
 }
 
 Roger_102
 {
-One day later...@<NewStr()>Barrels with gunpowder have been delivered to the logjam.
+Einen Tag später...@<NewStr()>Fässer mit Schießpulver wurden an die Blockade geliefert.
 }
 
 Roger_103
@@ -512,7 +512,7 @@ Roger_108
 
 Roger_109
 {
-Three hours later...
+Drei Stunden später...
 }
 
 Roger_110
@@ -526,22 +526,22 @@ Janssen
 
 Roger_112
 {
-Ignacio Marco landed on the pier!
+Ignacio Marco ist auf dem Pier gelandet!
 }
 
 Roger_113
 {
-2 hours passed...@<NewStr()>
+2 Stunden sind vergangen...@<NewStr()>
 }
 
 Roger_114
 {
-Ignacio Marco left the residence
+Ignacio Marco verließ die Residenz
 }
 
 Roger_115
 {
-together with two captains
+zusammen mit zwei Kapitänen
 }
 
 Roger_116
@@ -569,12 +569,12 @@ Peres
 
 Roger_121
 {
-One day later...@<NewStr()>The ransom for Cartagena was collected
+Einen Tag später...@<NewStr()>Das Lösegeld für Cartagena wurde kassiert
 }
 
 Roger_122
 {
-Two days have passed swiftly @<NewStr()> in partying and amorous pleasures...
+Zwei Tage sind schnell vergangen @<NewStr()> mit Feiern und amourösen Vergnügungen...
 }
 
 Roger_123
@@ -615,65 +615,65 @@ Tyrex
 
 Roger_131
 {
-I, Charles de Maure, a French nobleman and a captain, swear:
+Ich, Charles de Maure, ein französischer Adliger und Kapitän, schwöre:
 }
 
 Roger_132
 {
-... I am done with my pirate past for good ...
+... Ich bin mit meiner Piratenvergangenheit endgültig fertig ...
 }
 
 Roger_133
 {
-... No more innocent civilians will die from my hand ...
+... Keine unschuldigen Zivilisten werden mehr durch meine Hand sterben ...
 }
 
 Roger_134
 {
-... I swear to protect women despite  their status and nationality ...
+... Ich schwöre, die Frauen zu schützen, ungeachtet ihres Status und ihrer Nationalität ...
 }
 
 Roger_135
 {
-... I swear that gold will no longer make me blind ...
+... Ich schwöre, dass Gold mich nicht mehr blind machen wird ...
 }
 
 Roger_136
 {
-... I swear to oppose any villain I will meet on my path ...
+... Ich schwöre, mich jedem Bösewicht zu widersetzen, dem ich auf meinem Weg begegne ...
 }
 
 Roger_137
 {
-... I swear to always choose honor between it and riches ...
+... Ich schwöre, die Ehre immer zwischen ihr und dem Reichtum zu wählen ...
 }
 
 Roger_138
 {
-... I swear to stay an worthy and noble man in any situation and with any people ...
+... Ich schwöre, in jeder Situation und mit jedem Volk ein würdiger und edler Mann zu bleiben ...
 }
 
 Roger_139
 {
-I keep thinking of Mirabelle for some reason. How is she there? Is she missing me? It must had been cruel of me to leave a young girl alone. I will fix this! I should see her soon.
+Aus irgendeinem Grund muss ich immer an Mirabelle denken. Wie ist sie dort? Vermisst sie mich? Es muss grausam von mir gewesen sein, ein junges Mädchen allein zu lassen. Ich werde das in Ordnung bringen! Ich sollte sie bald sehen.
 }
 
 Roger_140
 {
-Книппель
+Knippel
 }
 
 Roger_141
 {
-Лонгвэй
+Longway
 }
 
 Roger_142
 {
-Тичингиту
+Tichingitu
 }
 
 Roger_143
 {
-Томми
+Thomas
 }

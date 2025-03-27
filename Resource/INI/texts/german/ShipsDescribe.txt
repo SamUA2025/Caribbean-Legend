@@ -103,6 +103,11 @@ Ein Symbol der spanischen Macht und des Ehrgeizes. Ihre Decks glänzen mit golde
 Verstärkt die Kraft von christlichen Schutzwällen und Amuletten.
 }
 
+LadyBeth
+{
+Ein hervorragendes Beispiel englischer Schiffsbaukunst, geschaffen für den selbständigen Patrouillendienst in gefährlichen Gewässern. Diese Schnau verfügt über ausgezeichnete Segeleigenschaften und eine für ihre Größe beeindruckende Bewaffnung, die es ihr ermöglicht, mit Schiffen höherer Klassen zu konkurrieren. Die Jahre ihres Militärdienstes liegen weit zurück, und der Ruhm ihres früheren Besitzers zieht heute eher Antiquitätenhändler und Schatzkartenhändler an als Seewölfe.
+}
+
 Corvette
 {
 Korvetts werden für unabhängige Kreuzeroperationen sowie für Aufklärungs- und wichtige Kurierdienste gebaut. Durch ihre hohe Geschwindigkeit und Manövrierfähigkeit kann eine Korvette leichtere Schiffe einholen und Kämpfe mit schwereren Schiffen erfolgreich vermeiden. Nach dem Kommando über eine Schaluppe ist der häufigste nächste Schritt in einer Marinekarriere die Übernahme des Kommandos einer Korvette.

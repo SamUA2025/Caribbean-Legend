@@ -32,7 +32,7 @@ void wdmInitWorldMap()
 	//
 	worldMap.icon.width = 32;
 	worldMap.icon.height = 32;
-	worldMap.icon.num = 8;
+	worldMap.icon.num = 16;
 	worldMap.icon.frames = 8;
 	worldMap.icon.fps = 30;
 	worldMap.icon.texture = "interfaces\le\battle_interface\worldmap\icons.tga";

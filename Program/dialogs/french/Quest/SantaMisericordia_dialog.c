@@ -159,7 +159,7 @@ void ProcessDialogEvent()
 			if (startHeroType == 4)
 			{
 				dialog.text = "Une demoiselle avec une épée ? Eh bien, je n'aurais jamais cru vivre assez longtemps pour voir un tel spectacle. Et qui pourriez-vous être, señorita, pour oser attaquer le 'Sainte Miséricorde' ?";
-				link.l1 = "Capitaine Hellen McArthur. Et cette expression de surprise sur ton visage est bien connue pour moi.";
+				link.l1 = "Capitaine Helen McArthur. Et cette expression de surprise sur ton visage est bien connue pour moi.";
 				link.l1.go = "Alamida_HelenaCaptain";
 			}
 			else
@@ -517,8 +517,16 @@ void ProcessDialogEvent()
 		
 		case "Alamida_monah":
 			dialog.text = "Curieux... Qu'est-ce qui amène un enfant de Dieu en ce lieu de... repos ?";
-			link.l1 = "Je...";
-			link.l1.go = "Alamida_monah_2";
+			if (sti(pchar.questTemp.ISawDiegoDeLanda) == 1)
+			{
+				link.l1 = "Je...";
+				link.l1.go = "Alamida_monah_2";
+			}
+			else
+			{
+				link.l1 = "Je... Attendez ! On s’est déjà rencontrés !";
+				link.l1.go = "Alamida_monah_Second_2";
+			}
 		break;
 		
 		case "Alamida_monah_2":
@@ -589,7 +597,9 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Alamida_monah_11":
-			dialog.text = "Qu'il n'était que... le premier.";
+			if (sti(pchar.questTemp.ISawDiegoDeLanda) == 1) sStr = "premier";
+ 			if (sti(pchar.questTemp.ISawDiegoDeLanda) == 2)	sStr = "deuxième";
+			dialog.text = "Qu'il n'était que... le " + sStr + ".";
 			link.l1 = "...";
 			link.l1.go = "Alamida_monah_12";
 		break;
@@ -603,6 +613,54 @@ void ProcessDialogEvent()
 			sld.lifeday = 0;
 			LAi_CharacterDisableDialog(sld);
 			LAi_group_MoveCharacter(sld, "SPAIN_CITIZENS");
+		break;
+		
+		case "Alamida_monah_Second_2":
+			dialog.text = "Savez-vous ce qui rend ce caveau particulier ? Deux âmes y reposent, unies... par le sang. Le père et le fils de Alameda. L’un est tombé sous la main des pécheurs, l’autre... hmm, a trouvé son chemin vers Dieu.";
+			link.l1 = "Vous servez dans la paroisse locale ? Vous connaissiez Don Fernando ?";
+			link.l1.go = "Alamida_monah_Second_3";
+		break;
+		
+		case "Alamida_monah_Second_3":
+			dialog.text = "J’ai... observé son chemin. Et ce livre que vous avez pris. Savez-vous ce qu’il a de spécial ?";
+			link.l1 = "Elle semble ancienne.";
+			link.l1.go = "Alamida_monah_Second_4";
+		break;
+		
+		case "Alamida_monah_Second_4":
+			dialog.text = "Elle a une histoire riche, et vous feriez preuve de sagesse en consacrant un peu de votre force au service des Frères en Christ, en la portant sur vous. Mais ce n’est pas cela qui est intéressant.";
+			link.l1 = "La dernière fois, vous parliez par énigmes. Allez-vous recommencer ?";
+			link.l1.go = "Alamida_monah_Second_5";
+		break;
+		
+		case "Alamida_monah_Second_5":
+			dialog.text = "\nLa véritable énigme se tient devant moi. Vous avez réuni de nombreuses... reliques intéressantes. Une Bible. Une charte. Vous aimez collectionner ce genre d’objets ? Vous êtes collectionneur ?";
+			link.l1 = "Comment savez-vous pour la charte ?";
+			link.l1.go = "Alamida_monah_Second_6";
+		break;
+		
+		case "Alamida_monah_Second_6":
+			dialog.text = "Chasseur de trophées ?";
+			link.l1 = "Je répète ma question : comment savez-vous pour la charte ?";
+			link.l1.go = "Alamida_monah_Second_7";
+		break;
+		
+		case "Alamida_monah_Second_7":
+			dialog.text = "Amateur de sensations fortes ?";
+			link.l1 = "...";
+			link.l1.go = "Alamida_monah_Second_8";
+		break;
+		
+		case "Alamida_monah_Second_8":
+			dialog.text = "\nAh. Bien sûr. Évidemment. Eh bien, capitaine, je ne vais pas vous retenir davantage.";
+			link.l1 = "Un instant, mon père. Vous n’avez toujours pas répondu à ma question.";
+			link.l1.go = "Alamida_monah_Second_9";
+		break;
+		
+		case "Alamida_monah_Second_9":
+			dialog.text = "Oh, capitaine. Je ne peux pas. Parfois, les réponses font plus de mal que l’ignorance. Allez en paix. Et prenez soin de votre collection... de trophées. Ils pourraient vous être utiles pour le voyage qui vous attend.";
+			link.l1 = "...";
+			link.l1.go = "Alamida_monah_9";
 		break;
 		
 		//замечение по обнажённому оружию

@@ -13,6 +13,11 @@
 #define LOCCAMERA_FLYTOPOS "FlyToPosition"
 #define LOCCAMERA_NEARHERO "LockNearHero"
 
+// evganat - меняем целевую точку камеры
+#define LOCCAMERA_LOOKTOHERO "LookToHero"
+#define LOCCAMERA_LOOKTOPOINT "LookToPoint"
+#define LOCCAMERA_LOOKTOANGLE "LookToAngle"
+
 #event_handler("frame", "locCameraUpdate");
 
 Object objLocCameraStates[LOCCAMERA_MAX_STATES];
@@ -119,14 +124,21 @@ void locCameraTarget(ref _char)
 bool locCameraFromToPos(float from_x,float from_y,float from_z, bool isTeleport, float to_x,float to_y,float to_z)
 {
 	if(IsEntity(&locCamera) == 0)
-	{
 		return false;
-	}
 	if(locCameraEnableFree == true)
-	{
 		return true;
-	}
-	bool res = SendMessage(&locCamera, "lffflfff", -4, from_x,from_y,from_z, isTeleport, to_x,to_y,to_z);
+	bool res = SendMessage(&locCamera, "lffflfffl", -4, from_x, from_y, from_z, isTeleport, to_x, to_y, to_z, true);
+	locCameraCurMode = LOCCAMERA_TOPOS;
+	return res;
+}
+
+bool locCameraFromToPosEx(float from_x, float from_y, float from_z, bool isTeleport, float to_x, float to_y, float to_z, bool targetChr)
+{
+	if(IsEntity(&locCamera) == 0)
+		return false;
+	if(locCameraEnableFree == true)
+		return true;
+	bool res = SendMessage(&locCamera, "lffflfffl", -4, from_x, from_y, from_z, isTeleport, to_x, to_y, to_z, targetChr);
 	locCameraCurMode = LOCCAMERA_TOPOS;
 	return res;
 }
@@ -171,20 +183,13 @@ bool locCameraRotateAroundHero(float _offsetX, float _offsetY, float _offsetZ, f
 }
 
 // Полет камеры от начальных точек _startX ... _startZ до конечных точек _endX ... _endZ
-// float _speed - множитель скорости в режиме полета _time == -1. Если _speed == 1, то это станрадтрая скорость
+// float _speed - множитель скорости в режиме полета _time == -1. Если _speed == 1, то это стандартная скорость
 // int _time - кол-во кадров, за которое должно долететь. Если -1, то высчитывается исходя из расстояния
 // bool _fromCurCameraPos - если true, то при переходе на эту функци полета, начальная позиция будет считаться как текущая позиция камеры
-bool locCameraFlyToPosition(float _startX, float _startY, float _startZ, float _endX, float _endY, float _endZ, float _speed, int _time)
+void locCameraFlyToPosition(ref curCameraState, float _startX, float _startY, float _startZ, float _endX, float _endY, float _endZ, float _speed, int _time)
 {
-	ref curCameraState;
-	int cameraCurState = locCameraGetFirstEmptyState();
-	float distance;
-	
-	if(cameraCurState == -1) return false;
-	
-	distance = GetDistance3D(_startX, _startY, _startZ, _endX, _endY, _endZ);
+	float distance = GetDistance3D(_startX, _startY, _startZ, _endX, _endY, _endZ);
 
-	curCameraState = &objLocCameraStates[cameraCurState];
 	curCameraState.curCameraX = _startX;
 	curCameraState.curCameraY = _startY;
 	curCameraState.curCameraZ = _startZ;
@@ -210,7 +215,60 @@ bool locCameraFlyToPosition(float _startX, float _startY, float _startZ, float _
 	curCameraState.type = LOCCAMERA_FLYTOPOS; // Тип камеры
 	
 	if(iLocCameraCurState == -1) iLocCameraCurState = 0;
-	
+}
+
+bool locCameraFlyToPositionLookToHero(float _startX, float _startY, float _startZ, float _endX, float _endY, float _endZ, float _speed, int _time)
+{
+	int iCameraCurState = locCameraGetFirstEmptyState();
+	if(iCameraCurState == -1)
+		return false;
+	ref curCameraState = &objLocCameraStates[iCameraCurState];
+	locCameraFlyToPosition(curCameraState, _startX, _startY, _startZ, _endX, _endY, _endZ, _speed, _time);
+	curCameraState.lookTo = LOCCAMERA_LOOKTOHERO;	// смотрим на ГГ
+	return true;
+}
+
+bool locCameraFlyToPositionLookToPoint(float _startX, float _startY, float _startZ, float _endX, float _endY, float _endZ, float _lookToX, float _lookToY, float _lookToZ, float _speed, int _time)
+{
+	int iCameraCurState = locCameraGetFirstEmptyState();
+	if(iCameraCurState == -1)
+		return false;
+	ref curCameraState = &objLocCameraStates[iCameraCurState];
+	locCameraFlyToPosition(curCameraState, _startX, _startY, _startZ, _endX, _endY, _endZ, _speed, _time);
+	curCameraState.lookTo = LOCCAMERA_LOOKTOPOINT;	// смотрим на точку
+	curCameraState.lookTo.x = _lookToX;
+	curCameraState.lookTo.y = _lookToY;
+	curCameraState.lookTo.z = _lookToZ;
+	return true;
+}
+
+bool locCameraFlyToPositionLookToOffset(float _startX, float _startY, float _startZ, float _endX, float _endY, float _endZ, float _offsetX, float _offsetY, float _offsetZ, float _speed, int _time)
+{
+	int iCameraCurState = locCameraGetFirstEmptyState();
+	if(iCameraCurState == -1)
+		return false;
+	ref curCameraState = &objLocCameraStates[iCameraCurState];
+	locCameraFlyToPosition(curCameraState, _startX, _startY, _startZ, _endX, _endY, _endZ, _speed, _time);
+	curCameraState.lookTo = LOCCAMERA_LOOKTOANGLE;	// смотрим под углом
+	curCameraState.lookTo.offsetX = _offsetX;
+	curCameraState.lookTo.offsetY = _offsetY;
+	curCameraState.lookTo.offsetZ = _offsetZ;
+	return true;
+}
+
+bool locCameraFlyToPositionLookToAngle(float _startX, float _startY, float _startZ, float _endX, float _endY, float _endZ, float _ax, float _ay, float _speed, int _time)
+{
+	int iCameraCurState = locCameraGetFirstEmptyState();
+	if(iCameraCurState == -1)
+		return false;
+	ref curCameraState = &objLocCameraStates[iCameraCurState];
+	locCameraFlyToPosition(curCameraState, _startX, _startY, _startZ, _endX, _endY, _endZ, _speed, _time);
+	curCameraState.lookTo = LOCCAMERA_LOOKTOANGLE;	// смотрим под углом
+	float ax = _ax * PI / 180.0;
+	float ay = _ay * PI / 180.0;
+	curCameraState.lookTo.offsetX = cos(ax) * sin(ay);
+	curCameraState.lookTo.offsetY = sin(ax);
+	curCameraState.lookTo.offsetZ = cos(ax) * cos(ay);
 	return true;
 }
 
@@ -334,6 +392,8 @@ void locCameraUpdate()
 			
 			time = stf(curCameraState.time);
 			
+			bool bSetPoint = false;
+			
 			switch(curCameraState.type)
 			{
 				case LOCCAMERA_ROTATE:
@@ -370,6 +430,18 @@ void locCameraUpdate()
 					curCameraState.curCameraX = stf(curCameraState.curCameraX) + stf(curCameraState.speedX) * timeScale;
 					curCameraState.curCameraY = stf(curCameraState.curCameraY) + stf(curCameraState.speedY) * timeScale;
 					curCameraState.curCameraZ = stf(curCameraState.curCameraZ) + stf(curCameraState.speedZ) * timeScale;
+					if(CheckAttribute(curCameraState, "lookTo") && curCameraState.lookTo != LOCCAMERA_LOOKTOHERO)
+					{
+						if(curCameraState.lookTo == LOCCAMERA_LOOKTOANGLE)
+						{
+							curCameraState.lookTo.x = stf(curCameraState.curCameraX) + stf(curCameraState.lookTo.offsetX);
+							curCameraState.lookTo.y = stf(curCameraState.curCameraY) + stf(curCameraState.lookTo.offsetY);
+							curCameraState.lookTo.z = stf(curCameraState.curCameraZ) + stf(curCameraState.lookTo.offsetZ);
+						}
+						//Log_TestInfo("camPos = " + curCameraState.curCameraX + ", " + curCameraState.curCameraY + ", " + curCameraState.curCameraZ + ", lookTo = " + curCameraState.lookTo.x + ", " + curCameraState.lookTo.y + ", " + curCameraState.lookTo.z);
+						locCameraFromToPosEx(stf(curCameraState.curCameraX), stf(curCameraState.curCameraY), stf(curCameraState.curCameraZ), true, stf(curCameraState.lookTo.x), stf(curCameraState.lookTo.y), stf(curCameraState.lookTo.z), false);
+						bSetPoint = true;
+					}
 				break;
 				
 				case LOCCAMERA_NEARHERO:
@@ -391,7 +463,8 @@ void locCameraUpdate()
 				break;
 			}
 			
-			locCameraToPos(stf(curCameraState.curCameraX), stf(curCameraState.curCameraY), stf(curCameraState.curCameraZ), true);
+			if(!bSetPoint)
+				locCameraToPos(stf(curCameraState.curCameraX), stf(curCameraState.curCameraY), stf(curCameraState.curCameraZ), true);
 			
 			if(time != -1.0)
 			{
@@ -430,6 +503,7 @@ void AimingActive()
 	{
 		locCameraSetRadius(stf(locCamera.maxRadius)*0.75);
 		locCamera.zoom.lock = true;
+		BI_CrosshairSet();
 		SendMessage(&objLandInterface, "ll", MSG_BATTLE_LAND_CROSSHAIR_SHOW, 1);
 	}
 	else

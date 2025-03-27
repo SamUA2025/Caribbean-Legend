@@ -1902,8 +1902,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "SpaOfficer_10":
-			if (CheckCharacterItem(pchar, "map_part1")) GiveItem2Character(pchar, "map_part2");
-			else GiveItem2Character(pchar, "map_part1");
+			AddMapPart();
 			dialog.text = "Das ist alles, was ich von Wert bei mir hatte. Ich zweifle nicht daran, dass ihr das andere Stück leicht finden werdet. Lebewohl! Und viel Glück für dich, mein Freund.";
 			link.l1 = "Auf Wiedersehen, Grand. Denk an dein Wort, und viel Glück!";
 			link.l1.go = "SpaOfficer_11";

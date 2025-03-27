@@ -381,6 +381,13 @@ void ProcessDialogEvent()
                 }
                 else
                 {
+					if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_tavern") // Блеквуд в городе
+					{
+						Dialog.text = "Capitán, hoy no hay ni un alma en la taberna. Todos los que querían se han ido con el capitán Blackwood.";
+						link.l1 = "¡Qué lástima!";
+						link.l1.go = "exit";
+						break;
+					}
 					if (CheckAttribute(NPChar, "CrewHired.PGGId") && GetNpcQuestPastDayParam(NPChar, "CrewHired") < 3 && GetCrewQuantity(rColony) == 0)
 					{
 						Dialog.text = "Ah, lo siento capitán, llegas un poco tarde. Todos los muchachos que buscaban navegación ya zarparon con el gallardo capitán "+GetFullName(CharacterFromID(NPChar.CrewHired.PGGId))+".";
@@ -969,6 +976,21 @@ void ProcessDialogEvent()
 				dialog.text = "La habitación está ocupada, "+GetAddress_Form(NPChar)+", no hay nada que pueda hacer por ti.";
 				link.l1 = "Bueno, eso es una lástima...";
 				link.l1.go = "exit";
+				break;
+			}
+			if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_tavern") // Блеквуд в городе
+			{
+				Dialog.text = "Por desgracia, no, capitán. Todas las habitaciones están ocupadas por Blackwood y su gente.";
+				if (CheckAttribute(pchar, "questTemp.LadyBeth_TavernRoomDialog"))
+				{
+					link.l1 = "Eh, qué pena...";
+					link.l1.go = "exit";
+				}
+				else
+				{
+					link.l1 = "¿Todas las habitaciones? ¿Hay más de una aquí?";
+					link.l1.go = "LadyBeth_Room";
+				}
 				break;
 			}
 			//-->> квест официантки
@@ -1688,7 +1710,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Helen_room_day_next":
-			dialog.text = "Por supuesto, Ellen. Serán diez pesos.";
+			dialog.text = "Por supuesto, Helen. Serán diez pesos.";
 			if (makeint(pchar.money) >= 10)
 			{
 				link.l1 = "Por supuesto, aquí tienes.";
@@ -1699,7 +1721,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Helen_night_exit":
-			dialog.text = "Como desees, Ellen.";
+			dialog.text = "Como desees, Helen.";
 			link.l1 = "Mhm.";
 			link.l1.go = "exit";
 		break;
@@ -1721,6 +1743,21 @@ void ProcessDialogEvent()
 			link.l1 = "¿Cuáles son las últimas noticias o rumores interesantes en la ciudad?";
 			link.l1.go = "rumours_tavern";
 		break;
+		
+		// Леди Бет -->
+		case "LadyBeth_Room":
+			dialog.text = "Paga el triple de la tarifa normal, así que... ya se imagina. Y no le recomendaría negarle nada - tiene un carácter difícil. Especialmente últimamente.";
+			link.l1 = "¿Qué le pasa?";
+			link.l1.go = "LadyBeth_Room_2";
+		break;
+		
+		case "LadyBeth_Room_2":
+			dialog.text = "Obsesión, eso es. Al principio era un tipo generoso y amable. Sus marineros derrochaban dinero en las tabernas, compraban regalos a las chicas. Era una fiesta cuando la 'Lady Beth' llegaba al puerto. ¿Y ahora? Ahora sólo compran provisiones y reclutan gente sin criterio. Como si no necesitaran marineros, sino solo manos para trabajar. Pero puede hablar con él usted mismo.";
+			link.l1 = "Puede que lo haga. Gracias.";
+			link.l1.go = "exit";
+			pchar.questTemp.LadyBeth_TavernRoomDialog = true;
+		break;
+		// Леди Бет <--
 	}
 }
 

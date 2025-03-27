@@ -337,3 +337,14 @@ void wdmGetWindParameters()
 	//trace("WorldMap.WindAngle " + WindAngle + " worldMap.playerShipAY " + worldMap.playerShipAY);
 }
 
+// belamour модель корабля главного героя на глобальной карте
+#event_handler("WorldMap_GetPlayerShipModel", "GetPlayerShipModel");
+string GetPlayerShipModel()
+{
+	if(GetCharacterShipType(pchar) != SHIP_NOTUSED)
+	{
+		if(sti(RealShips[sti(pchar.Ship.Type)].BaseType) == SHIP_LADYBETH) return "shnyava_sp2_player";
+	}
+	return "Ship";
+}
+

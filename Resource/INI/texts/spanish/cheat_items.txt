@@ -14,15 +14,15 @@ Cheat_Comming_soon {Muy pronto.}
 
 f1 {Desbloquea todas las recetas de alquimia}
 
-f2 {Añadir materiales de alquimia}
+f2 {AÃ±adir materiales de alquimia}
 
-f3 {Añadir hierbas}
+f3 {AÃ±adir hierbas}
 
-f4 {Añadir gemas}
+f4 {AÃ±adir gemas}
 
-f5 {Añadir piedra +100}
+f5 {AÃ±adir piedra +100}
 
-f6 {Munición +50}
+f6 {MuniciÃ³n +50}
 
 f7 {Obtener hojas}
 
@@ -38,7 +38,7 @@ f12 {Obtener talismanes}
 
 f13 {Obtener amuletos}
 
-f14 {¿Acceder a salas?}
+f14 {Â¿Acceder a salas?}
 
 f15 {Obtener pociones}
 
@@ -46,7 +46,7 @@ f16 {Conseguir Catalejos}
 
 f17 {Obtener farol}
 
-f18 {Obtener dispositivos de navegación}
+f18 {Obtener dispositivos de navegaciÃ³n}
 
 f19 {Obtener herramientas}
 

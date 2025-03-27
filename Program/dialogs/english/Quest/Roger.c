@@ -1486,7 +1486,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Pelly_65":
-            dialog.text = "Should I introduce you to all my informants too? Fine. With expenses, risks, and my cut… it'll cost about the same as the ransom for Handsome.";
+            dialog.text = "Should I introduce you to all my informants too? Fine. With expenses, risks, and my cut... it'll cost about the same as the ransom for Handsome.";
 			link.l1 = "Cutlass, fear God...";
 			link.l1.go = "Pelly_66";
 		break;

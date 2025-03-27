@@ -177,6 +177,15 @@ void ProcessDialogEvent()
 				link.l1.go = "FMQG_x";
 				break;
 			}
+			// Леди Бет -->
+			if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_Bank" && !CheckAttribute(pchar, "questTemp.LadyBeth_Usurer")) // Блеквуд в городе
+			{
+				dialog.Text = "¡Oh, capitán! Por favor, mire lo que tengo hoy. Algunas cosas las adquirí de los hombres de Blackwood. Necesitan dinero para una nueva expedición, y nosotros - bueno, nosotros sacamos provecho, ¿no?";
+				link.l1 = "¿Sabe Blackwood que sus hombres están vendiendo sus hallazgos?";
+				link.l1.go = "LadyBeth_Usurer_1";
+				break;
+			}
+			// Леди Бет <--
 			
 			if(NPChar.quest.meeting == "0")
 			{
@@ -1016,7 +1025,7 @@ void ProcessDialogEvent()
 		
 		case "Deposit_return":
 			Dialog.snd = "voice\USDI\USDI034";
-			dialog.text = "Teniendo en cuenta el interés prometido y el tiempo transcurrido, te debo "+FindRussianMoneyString(sti(Pchar.Quest.Deposits.(sDepositType1).Result))+"… ¿Estás seguro de que quieres tomar el dinero?";
+			dialog.text = "Teniendo en cuenta el interés prometido y el tiempo transcurrido, te debo "+FindRussianMoneyString(sti(Pchar.Quest.Deposits.(sDepositType1).Result))+"... ¿Estás seguro de que quieres tomar el dinero?";
 			Link.l1 = "Absolutamente. Dámelo.";			
 			Link.l1.go = "Deposit_return_1";		
 			Link.l2 = "Quiero retirar parte de mi dinero.";			
@@ -2688,6 +2697,22 @@ void ProcessDialogEvent()
 			link.l1 = "...";
 			link.l1.go = "exit";
 		break;
+		
+		// Леди Бет -->
+		case "LadyBeth_Usurer_1":
+			dialog.text = "¡Por supuesto! Muchos solo quieren su dinero y marcharse. Especialmente con los últimos rumores...";
+			link.l1 = "¿Qué rumores?";
+			link.l1.go = "LadyBeth_Usurer_2";
+		break;
+		
+		case "LadyBeth_Usurer_2":
+			dialog.text = "Dicen que las condiciones en la tripulación están empeorando. Monsieur Blackwood incluso permite pérdidas regulares - algo que nunca había ocurrido antes. Pero eso no es asunto mío. Yo solo vendo mercancía. Así que, ¿qué le interesa?";
+			link.l1 = "...";
+			link.l1.go = "next";
+			npchar.quest.item_date = "LadyBeth";
+			pchar.questTemp.LadyBeth_Usurer = true;
+		break;
+		// Леди Бет <--
 	}	
 }
 

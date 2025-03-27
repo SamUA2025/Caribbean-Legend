@@ -36,7 +36,7 @@ MiniQuests_8
 
 MiniQuests_9
 {
-The trader has raised the black flag and attacking us!
+Der Händler hat die schwarze Flagge gehisst und greift uns an!
 }
 
 MiniQuests_10
@@ -46,22 +46,22 @@ Boatswain
 
 MiniQuests_11
 {
-Passenger @<GetFullName(sld)> has left your ship!
+Passagier @<GetFullName(sld)> hat Ihr Schiff verlassen!
 }
 
 MiniQuests_12
 {
-Chaplain @<GetFullName(sld)> has left your ship!
+Kaplan @<GetFullName(sld)> hat Ihr Schiff verlassen!
 }
 
 MiniQuests_13
 {
-barquentine '@<pchar.GenQuest.Marginpassenger.ShipName1>'
+Barkentine '@<pchar.GenQuest.Marginpassenger.ShipName1>'
 }
 
 MiniQuests_14
 {
-trading convoy
+Handelskonvoi
 }
 
 MiniQuests_15
@@ -75,35 +75,35 @@ MiniQuests_16
 
 MiniQuests_17
 {
-Enemy vessel is on the horizon!
+Ein feindliches Schiff ist am Horizont zu sehen!
 }
 
 MiniQuests_18
 {
-Enemy convoy is on the horizon!
+Ein feindlicher Konvoi ist am Horizont zu sehen!
 }
 
 MiniQuests_19
 {
-Pirate vessel in on the horizon!
+Ein Piratenschiff ist am Horizont zu sehen!
 }
 
 MiniQuests_20
 {
-@<pchar.GenQuest.FindFugitive.Name> died of calenture!
+@<pchar.GenQuest.FindFugitive.Name> starb an Fieber!
 }
 
 MiniQuests_21
 {
-@<sld.name> помещен на ваш корабль под стражу
+@<sld.name> wurde auf Ihrem Schiff in Gewahrsam genommen
 }
 
 MiniQuests_22
 {
-An hour passed...
+Eine Stunde verging...
 }
 
 MiniQuests_23
 {
-, which on ~
+, die am ~
 }

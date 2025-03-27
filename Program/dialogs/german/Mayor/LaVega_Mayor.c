@@ -38,7 +38,7 @@ void ProcessDialogEvent()
 	{
 		// ----------------------------------- Диалог первый - первая встреча
 		case "First time":
-            dialog.text = NPCStringReactionRepeat("Haben Sie mir etwas zu sagen? Nein? Dann verschwinden Sie von hier!","Ich denke, ich habe mich klar ausgedrückt, hör auf, mich zu belästigen.","Obwohl ich mich klar ausgedrückt habe, belästigst du mich weiterhin!","Richtig, ich habe genug von dieser Unhöflichkeit.","wiederholen",3,npchar,Dialog.CurrentNode);
+            dialog.text = NPCStringReactionRepeat("Haben Sie mir etwas zu sagen? Nein? Dann verschwinden Sie von hier!","Ich denke, ich habe mich klar ausgedrückt, hör auf, mich zu belästigen.","Obwohl ich mich klar ausgedrückt habe, belästigst du mich weiterhin!","Richtig, ich habe genug von dieser Unhöflichkeit.","repeat",3,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Ich gehe schon.","Sicher"+npchar.name+"...","Entschuldigung, "+npchar.name+"...","Ups...",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			NextDiag.TempNode = "First time";
@@ -50,7 +50,7 @@ void ProcessDialogEvent()
 		break;
 
         case "I_know_you_good":
-            dialog.text = NPCStringReactionRepeat(GetFullName(pchar)+", ich freue mich, Sie zu sehen! Was wünschen Sie?","Was sonst?"," Du schon wieder? Belästige die Leute nicht, wenn du nichts zu tun hast!","Ich weiß, dass Sie ein anständiger Mann sind. Aber ich habe genug davon, mit Ihnen zu reden.","Wiederholen",10,npchar,Dialog.CurrentNode);
+            dialog.text = NPCStringReactionRepeat(GetFullName(pchar)+", ich freue mich, Sie zu sehen! Was wünschen Sie?","Was sonst?"," Du schon wieder? Belästige die Leute nicht, wenn du nichts zu tun hast!","Ich weiß, dass Sie ein anständiger Mann sind. Aber ich habe genug davon, mit Ihnen zu reden.","repeat",10,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Nichts. Ich wollte dich nur sehen.","Nichts...","In Ordnung, "+npchar.name+", Entschuldigung...","Verdammt, es ist nur meine Schuld...",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			NextDiag.TempNode = "I_know_you_good";

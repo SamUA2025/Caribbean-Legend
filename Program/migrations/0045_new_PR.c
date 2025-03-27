@@ -340,6 +340,7 @@ void ApplyMigration(ref migrationState) {
 	locations[n].reload.l24.emerge = "reload1";
 	locations[n].reload.l24.autoreload = "0";
 	locations[n].reload.l24.label = "House";
+	locations[n].reload.l24.disable = false;
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Дом с винным погребом
@@ -382,7 +383,7 @@ void ApplyMigration(ref migrationState) {
 	//Reload map
 	locations[n].reload.l1.name = "reload1";
 	locations[n].reload.l1.go = "FortFrance_town";
-	locations[n].reload.l1.emerge = "houseBH2";
+	locations[n].reload.l1.emerge = "houseS2";
 	locations[n].reload.l1.autoreload = "0";
 	locations[n].reload.l1.label = "house";
 
@@ -453,6 +454,7 @@ void ApplyMigration(ref migrationState) {
 	locations[n].reload.l23.emerge = "reload1";
 	locations[n].reload.l23.autoreload = "0";
 	locations[n].reload.l23.label = "House";
+	locations[n].reload.l23.disable = false;
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Дом с винным погребом
@@ -495,7 +497,7 @@ void ApplyMigration(ref migrationState) {
 	//Reload map
 	locations[n].reload.l1.name = "reload1";
 	locations[n].reload.l1.go = "Villemstad_town";
-	locations[n].reload.l1.emerge = "houseBH2";
+	locations[n].reload.l1.emerge = "houseS2";
 	locations[n].reload.l1.autoreload = "0";
 	locations[n].reload.l1.label = "house";
 

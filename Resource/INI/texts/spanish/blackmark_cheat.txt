@@ -18,13 +18,13 @@ f1 {Pesos + 500 000}
 
 f2 {Modo foto}
 
-f3 {Navegación arcade en el mapa de batalla ON/OFF}
+f3 {NavegaciÃ³n arcade en el mapa de batalla ON/OFF}
 
-StrF3_on {Navegación Arcade Activada}
+StrF3_on {NavegaciÃ³n Arcade Activada}
 
-StrF3_off {Navegación Arcade Desactivada}
+StrF3_off {NavegaciÃ³n Arcade Desactivada}
 
-f4 {Experiencia de la tripulación +10}
+f4 {Experiencia de la tripulaciÃ³n +10}
 
 f5 {Puntos de habilidad +35}
 
@@ -46,25 +46,25 @@ f13 {Relaciones entre naciones +10}
 
 f14 {Relaciones entre naciones -10}
 
-f15 {Aumentar la reputación}
+f15 {Aumentar la reputaciÃ³n}
 
-f16 {Disminuir la reputación}
+f16 {Disminuir la reputaciÃ³n}
 
 f17 {Aumentar fama}
 
 f18 {Disminuir fama}
 
-f19 {Límite de peso  +1000}
+f19 {LÃ­mite de peso  +1000}
 
 f20 {+100 doblones}
 
 f21 {Ajustar la velocidad del viento a 14.5}
 
-f22 {Bendice el barco del héroe}
+f22 {Bendice el barco del hÃ©roe}
 
 f23 {Reparar el casco y las velas}
 
-f24 {Productos estratégicos +500}
+f24 {Productos estratÃ©gicos +500}
 
 f25 {Medicinas +500}
 
@@ -72,15 +72,15 @@ f26 {Aumentar la vitalidad}
 
 f27 {Enemigo en mapa global ON/OFF}
 
-f28 {Desplazamiento rápido ilimitado en el mar ON/OFF}
+f28 {Desplazamiento rÃ¡pido ilimitado en el mar ON/OFF}
 
-f29 {Viajes rápidos ilimitados por tierra}
+f29 {Viajes rÃ¡pidos ilimitados por tierra}
 
-f30 {Desbloquea el comando de menú 'Hundir barco enemigo'.}
+f30 {Desbloquea el comando de menÃº 'Hundir barco enemigo'.}
 
-StrF9_on {¡Los oficiales aparecerán al día siguiente!}
+StrF9_on {Â¡Los oficiales aparecerÃ¡n al dÃ­a siguiente!}
 
-StrF9_off {Trampa desactivada: ¡Oficiales en la taberna!}
+StrF9_off {Trampa desactivada: Â¡Oficiales en la taberna!}
 
 StrF27_on {Encuentros con enemigos ON}
 

@@ -574,7 +574,7 @@ void ProcessDialogEvent()
 		case "GenQuest_Church_2_Thief_4_1_3":
 			if(rand(1) == 0) // Священник хочет всучить ГГ бабло
 			{
-				dialog.text = ""+GetSexPhrase("Mon fils","Ma fille")+"... Avec les larmes de repentir et de gratitude, j'accepterai ce calice de vous. La pureté et la noblesse de votre âme m'ont véritablement bouleversé. Je vous bénis de tout cœur et je vous implore humblement d'accepter cette petite récompense de "+FindRussianMoneyString(iMoneyToCharacter)+"… J'espère que cela suffira à couvrir vos frais ?";
+				dialog.text = ""+GetSexPhrase("Mon fils","Ma fille")+"... Avec les larmes de repentir et de gratitude, j'accepterai ce calice de vous. La pureté et la noblesse de votre âme m'ont véritablement bouleversé. Je vous bénis de tout cœur et je vous implore humblement d'accepter cette petite récompense de "+FindRussianMoneyString(iMoneyToCharacter)+"... J'espère que cela suffira à couvrir vos frais ?";
 				// ГГ не берёт деньги. Плюсанем репу
 				link.l1 = "C'est inutile, saint Père "+NPChar.name+"Je ne suis pas exactement la personne la plus pauvre, alors tu ferais mieux d'utiliser cet argent pour le bien de ta paroisse.";
 				link.l1.go = "GenQuest_Church_2_Thief_4_1_4";

@@ -6830,7 +6830,7 @@ bool SharlieFinal_QuestComplete(string sQuestName, string qname)
 	{
 		SetMainCharacterIndex(GetCharacterIndex("Piter"));
 		PChar = GetMainCharacter();
-		locCameraFlyToPosition(-22.5, 9.0, 3.25, 0, 14.0, 0.2, 0.01, -1);
+		locCameraFlyToPositionLookToHero(-22.5, 9.0, 3.25, 0, 14.0, 0.2, 0.01, -1);
 		DoQuestCheckDelay("Europe_FinalFrame", 36.0);
 	}
 	else if (sQuestName == "Europe_FinalFrame")

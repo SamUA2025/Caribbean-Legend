@@ -517,8 +517,16 @@ void ProcessDialogEvent()
 		
 		case "Alamida_monah":
 			dialog.text = "Curious... What brings a child of God to this place of... rest?";
-			link.l1 = "I...";
-			link.l1.go = "Alamida_monah_2";
+			if (sti(pchar.questTemp.ISawDiegoDeLanda) == 1)
+			{
+				link.l1 = "I...";
+				link.l1.go = "Alamida_monah_2";
+			}
+			else
+			{
+				link.l1 = "I... Wait! We've met before!";
+				link.l1.go = "Alamida_monah_Second_2";
+			}
 		break;
 		
 		case "Alamida_monah_2":
@@ -589,7 +597,9 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Alamida_monah_11":
-			dialog.text = "That he was merely... the first.";
+			if (sti(pchar.questTemp.ISawDiegoDeLanda) == 1) sStr = "first";
+			if (sti(pchar.questTemp.ISawDiegoDeLanda) == 2)	sStr = "second";
+			dialog.text = "That he was merely... the " + sStr + ".";
 			link.l1 = "...";
 			link.l1.go = "Alamida_monah_12";
 		break;
@@ -603,6 +613,54 @@ void ProcessDialogEvent()
 			sld.lifeday = 0;
 			LAi_CharacterDisableDialog(sld);
 			LAi_group_MoveCharacter(sld, "SPAIN_CITIZENS");
+		break;
+		
+		case "Alamida_monah_Second_2":
+			dialog.text = "Do you know what's special about this crypt? Two souls rest here, bound by... blood ties. Father and son de Alamida. One fell to sinners' hands, the other... Hmm, found his path to the Lord.";
+			link.l1 = "You serve in the local parish? You knew don Fernando?";
+			link.l1.go = "Alamida_monah_Second_3";
+		break;
+		
+		case "Alamida_monah_Second_3":
+			dialog.text = "I... observed his path. And this book you took. Do you know what makes it special?";
+			link.l1 = "It looks old.";
+			link.l1.go = "Alamida_monah_Second_4";
+		break;
+		
+		case "Alamida_monah_Second_4":
+			dialog.text = "It has a rich history, and you would be wise to dedicate some effort to serving the Brothers in Christ while carrying it close to your heart. But that's not what's interesting.";
+			link.l1 = "Last time you spoke in riddles. Will you do so again?";
+			link.l1.go = "Alamida_monah_Second_5";
+		break;
+		
+		case "Alamida_monah_Second_5":
+			dialog.text = "\nThe real riddle stands before me now. You've collected many interesting... relics. Bible. Charter. Do you like collecting such things? Are you a collector?";
+			link.l1 = "How do you know about the manual?";
+			link.l1.go = "Alamida_monah_Second_6";
+		break;
+		
+		case "Alamida_monah_Second_6":
+			dialog.text = "A trophy hunter?";
+			link.l1 = "I repeat my question: how do you know about the manual?";
+			link.l1.go = "Alamida_monah_Second_7";
+		break;
+		
+		case "Alamida_monah_Second_7":
+			dialog.text = "A thrill-seeker?";
+			link.l1 = "...";
+			link.l1.go = "Alamida_monah_Second_8";
+		break;
+		
+		case "Alamida_monah_Second_8":
+			dialog.text = "\nAh. Of course. Certainly. Well, Captain, I won't keep you.";
+			link.l1 = "Wait a moment, Holy Father. You still haven't answered my question.";
+			link.l1.go = "Alamida_monah_Second_9";
+		break;
+		
+		case "Alamida_monah_Second_9":
+			dialog.text = "Oh, Captain. I can't. Sometimes answers hurt more than any ignorance. Go in peace. And take care of your collection... of trophies. They may be useful in the journey that awaits you.";
+			link.l1 = "...";
+			link.l1.go = "Alamida_monah_9";
 		break;
 		
 		//замечение по обнажённому оружию

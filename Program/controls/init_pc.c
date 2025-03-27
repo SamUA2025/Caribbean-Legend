@@ -41,7 +41,13 @@ void ExternControlsInit(bool bFirst, bool bClassic)
 		CI_CreateAndSetControls("", "WhrNextWeather", CI_GetKeyCode("VK_R_BREAKE"), 0, false);
 		CI_CreateAndSetControls("", "WhrUpdateWeather", CI_GetKeyCode("VK_A_QUOTE"), 0, false);
 		//CI_CreateAndSetControls("", "Tele", CI_GetKeyCode("VK_A_POINT"), 0, false);
-		
+
+		//wind
+		CI_CreateAndSetControls( "", "WindIncrease", CI_GetKeyCode("VK_NUMPAD8"), 0, true );
+		CI_CreateAndSetControls( "", "WindDecrease", CI_GetKeyCode("VK_NUMPAD5"), 0, true );
+		CI_CreateAndSetControls( "", "WindAngleIncrease", CI_GetKeyCode("VK_NUMPAD4"), 0, true );
+		CI_CreateAndSetControls( "", "WindAngleDecrease", CI_GetKeyCode("VK_NUMPAD6"), 0, true );
+
 		CI_CreateAndSetControls("", "CoastFoamLB", CI_GetKeyCode("VK_LBUTTON"), 0, true);
 		CI_CreateAndSetControls("", "CoastFoamRB", CI_GetKeyCode("VK_RBUTTON"), 0, true);
 		CI_CreateAndSetControls("", "CoastFoamINS", CI_GetKeyCode("VK_INSERT"), 0, true);

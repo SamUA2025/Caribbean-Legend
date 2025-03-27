@@ -92,6 +92,11 @@ void InitInterface(string iniName)
 		SetSelectable("UPDATES", false);
 		SetNodeUsing("A_UPDATES", false);
 	}
+	
+	// belamour ачивка за установленный мод
+	int itemsInfo;
+	if(!GetAchievement("ach_CL_153") && GetOverlaysInfo(&itemsInfo) > 0) Achievment_Set("ach_CL_153");
+	
     // при выходе в главное меню сбрасываем звуки
 	if(!bMainMenu)
     {
@@ -175,21 +180,38 @@ void ProcessCommandExecute()
 			}
 		break;
 
-		case "UPDATES":
-			if(comName == "click" || comName == "activate"){
-				if(DLCAppID > 0 && bSteamAchievements && GetSteamEnabled())
-				{
-					DLCState = DLCStartOverlay(MAIN_APPID); // открываем окошко в стиме для главной игры а не для дополнения
-				}
-			}
-		break;
-
 		case "QUIT":
 			if(comName == "click" || comName == "activate"){
 				XI_WindowDisable("MAIN_WINDOW",true);
 				XI_WindowDisable("CONFIRM_EXIT_WINDOW",false);
 				XI_WindowShow("CONFIRM_EXIT_WINDOW", true);
 				SetCurrentNode("CONFIRM_EXIT_NO");
+			}
+			if(comName == "downstep"){
+				if(DLCAppID > 0 && bSteamAchievements && GetSteamEnabled()) 
+					SetCurrentNode("UPDATES");
+				else
+					SetCurrentNode("WORKSHOP");
+			}			
+		break;
+
+		case "UPDATES":
+			if(comName == "click" || comName == "activate"){
+				if(DLCAppID > 0 && bSteamAchievements && GetSteamEnabled())
+					DLCState = DLCStartOverlay(MAIN_APPID); // открываем окошко в стиме для главной игры а не для дополнения
+			}
+		break;
+
+		case "WORKSHOP":
+			if(comName == "click" || comName == "activate"){
+				if(GetSteamEnabled())
+					GameOverlayToWebPage("https://steamcommunity.com/app/2230980/workshop/");
+			}
+			if(comName == "upstep"){
+				if(DLCAppID > 0 && bSteamAchievements && GetSteamEnabled()) 
+					SetCurrentNode("UPDATES");
+				else
+					SetCurrentNode("QUIT");
 			}
 		break;
 	}

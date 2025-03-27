@@ -3067,7 +3067,7 @@ void ProcessDialogEvent()
 		
 		case "PZ_BelizZhitelNovosti_1":
 			dialog.text = "¿Escuchaste? ¡Finalmente lo atraparon! ¡Nuestras aguas están seguras al fin!";
-			link.l1 = "¿Son… buenas noticias? Pero, ¿a quién atraparon?";
+			link.l1 = "¿Son... buenas noticias? Pero, ¿a quién atraparon?";
 			link.l1.go = "PZ_BelizZhitelNovosti_2";
 			DeleteQuestCondition("PZ_BelizFail");
 		break;

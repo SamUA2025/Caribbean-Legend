@@ -58,13 +58,13 @@ void ProcessDialogEvent()
 	      	NextDiag.TempNode = "First time";
 
 	        Dialog.Text = "Wenn du diese Zeile liest, ist es ein Fehler im Code";
-			Link.l1 = "Ausgang";
+			Link.l1 = "Schließen";
 			Link.l1.go = "exit";
 			//--> Голландский гамбит
 			if (CheckAttribute(pchar, "questTemp.HWIC_FindIsland"))
     		{
-    		    dialog.text = "Also, wir haben diesen Ort auf der Karte gefunden. Ich sollte ihn markieren, und wir können losgehen und suchen.";
-    			link.l1 = "Hallo, Freund.";
+    		    dialog.text = "Also, wir haben diesen Ort auf der Karte gefunden. Ich sollte ihn markieren, und wir können mit der Suche beginnen.";
+    			link.l1 = "...";
     			link.l1.go = "exit";
 				AddDialogExitQuestFunction("SearchingForIslandOnMap");
     		}
@@ -225,7 +225,7 @@ void ProcessDialogEvent()
     		{
 				PlaySound("Voice\English\military02.wav");
 				dialog.text = "Hast du den Oberst gehört? Die Rebellen verstecken sich dort! Durchsuche alles, kehre das Haus auf den Kopf und ergreife jeden, den du dort findest! Mach dich an die Arbeit!";
-				link.l1 = "..., Freund.";
+				link.l1 = "...";
 				link.l1.go = "exit";
 				AddDialogExitQuest("Europe_SharlieFinal_2");
     		}
@@ -333,7 +333,7 @@ void ProcessDialogEvent()
 				dialog.text = "";
 				link.l1 = "Oh mein Gott, sie haben Hercule getötet!";
 				link.l1.go = "exit";
-				link.l2 = "Ihr Schurken!";
+				link.l2 = "Ihr Bastarde!";
 				link.l2.go = "exit";
 				
 				DeleteAttribute(pchar, "questTemp.TonzagQuest.JailPanic");
@@ -398,8 +398,8 @@ void ProcessDialogEvent()
 //navy --> after duel in tavern
 			if (CheckAttribute(pchar, "questTemp.LocationClone"))
 			{
-				Dialog.Text = RandPhraseSimple("Das war ein verdammt guter Kampf... Jetzt können wir diese Feiglinge, die weggelaufen sind, so nennen...","Ha! Das war einfach. Und diese Landratten haben sich einfach verstreut!");
-				link.l1 = "..., Freund.";
+				Dialog.Text = RandPhraseSimple("Das war ein verdammt guter Kampf... Jetzt können wir diese Feiglinge, die weggelaufen sind, so auch nennen...","Ha! Das war einfach. Und diese Landratten haben sich einfach verstreut!");
+				link.l1 = "...";
 				link.l1.go = "exit";
 				DeleteAttribute(pchar, "questTemp.LocationClone");
 				break;
@@ -445,7 +445,7 @@ void ProcessDialogEvent()
 	        // захват города
 	        if (GetCharIDXForTownAttack(pchar.location) != -1 && !CheckAttribute(Pchar, "GenQuestFort.StartAttack") && !CheckAttribute(Pchar, "questTemp.Sharlie.DefendSP"))
 	        {
-	            Link.l6 = "Beginne mit der Eroberung der nächsten Stadt.";
+	            Link.l6 = "Beginne mit der Eroberung der nächstgelegenen Stadt.";
 	    		Link.l6.go = "TalkSelf_TownAttack";
 	        }
 	        
@@ -469,7 +469,7 @@ void ProcessDialogEvent()
 			{
 				if(CheckAttribute(pchar, "chr_ai.musket.bulletNum") && sti(pchar.chr_ai.musket.bulletNum) > 1)
 				{
-					Link.l9 = "Ich möchte die Munition für das Musket ändern.";
+					Link.l9 = "Ich möchte die Munition für die Muskete wechseln.";
 					Link.l9.go = "SetMusketBullets";
 				}
 					Link.l10 = "Ich möchte eine Prioritätswaffe für den Kampf auswählen.";
@@ -495,7 +495,7 @@ void ProcessDialogEvent()
 	    	}
 			if(CheckAttribute(pchar, "questTemp.FalseTrace") && pchar.questTemp.FalseTrace == "CatchAdam" && PChar.location == Get_My_Cabin()) 
 	        {
-	        	Link.l13 = "Verhaften Sie Adam Rayner.";
+	        	Link.l13 = "Nimm Adam Rayner gefangen.";
 	    		Link.l13.go = "FalseTrace_Cabin";
 	    	}
 			//<-- Ложный след
@@ -517,7 +517,7 @@ void ProcessDialogEvent()
 	    	}
 			if(CheckAttribute(pchar, "questTemp.Mtraxx.Retribution") && pchar.questTemp.Mtraxx.Retribution == "powder" && pchar.location == "shore10") 
 	        {
-	        	Link.l17 = "Befehl, das Schießpulver zum toten Schanze zu liefern.";
+	        	Link.l17 = "Befehl, das Schießpulver zur toten Schanze zu liefern.";
 	    		Link.l17.go = "mtraxx_powder";
 	    	}
 			// Jason Долго и счастливо
@@ -528,7 +528,7 @@ void ProcessDialogEvent()
 	    	}
 			if(CheckAttribute(pchar, "questTemp.LongHappy") && pchar.questTemp.LongHappy == "marry_offer" && LongHappy_CheckShore()) // 28-03-20
 	        {
-	        	Link.l18 = "Machen Sie einen Heiratsantrag.";
+	        	Link.l18 = "Mach einen Heiratsantrag.";
 	    		Link.l18.go = "LH_marry_3";
 	    	}
 			if(CheckAttribute(pchar, "questTemp.LongHappy") && pchar.questTemp.LongHappy == "toIslaTesoro" && pchar.location == "Pirates_town") 
@@ -539,7 +539,7 @@ void ProcessDialogEvent()
 			// -->Авторемонт			
 			if(Pchar.Location == Pchar.location.from_sea && CheckOfficersPerk(pchar, "SelfRepair") && CheckSelfRepairConditions()) 
 			{
-				Link.l14 = "Beginnen Sie mit der Reparatur der Schiffe";
+				Link.l14 = "Beginne mit der Reparatur der Schiffe";
 				Link.l14.go = "StartSelfRepair";
 			}			
 			// <--Авторемонт
@@ -566,7 +566,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "SetGunBullets":
-			Dialog.Text = "Wählen Sie den Munitionstyp:";
+			Dialog.Text = "Wähle den Munitionstyp:";
 			sGun = GetCharacterEquipByGroup(pchar, GUN_ITEM_TYPE);
 			rItm = ItemsFromID(sGun);
 			makearef(rType, rItm.type);	
@@ -595,7 +595,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "SetMusketBullets":
-			Dialog.Text = "Wählen Sie die Munitionsart:";
+			Dialog.Text = "Wähle den Munitionstyp:";
 			sGun = GetCharacterEquipByGroup(pchar, MUSKET_ITEM_TYPE);
 			rItm = ItemsFromID(sGun);
 			makearef(rType, rItm.type);	
@@ -624,7 +624,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "SetPriorityMode":
-			Dialog.Text = "Zu Beginn des Kampfes werde ich benutzen:";
+			Dialog.Text = "Zu Beginn des Kampfes benutze ich:";
 			Link.l1 = "Klinge";
 			Link.l1.go = "BladePriorityMode";
 			Link.l2 = "Muskete";
@@ -649,7 +649,7 @@ void ProcessDialogEvent()
 	    	Link.l2.go = "ChoosePotion2";
 			Link.l3 = "Mischung.";
 	    	Link.l3.go = "ChoosePotion3";
-			Link.l4 = "Ingerwurzel.";
+			Link.l4 = "Ingwerwurzel.";
 	    	Link.l4.go = "ChoosePotion4";
 			Link.l5 = "Rum.";
 	    	Link.l5.go = "ChoosePotion5";
@@ -665,43 +665,43 @@ void ProcessDialogEvent()
 		break;
 		
 		case "ChoosePotion1":
-			log_info("A healing essence will be used by default.");
+			log_info("Heiltrank als Standard ausgewählt.");
 			pchar.GenQuest.Potion_choice = "potion1";
 			DialogExit_Self();
 		break;
 		
 		case "ChoosePotion2":
-			log_info("An elixir will be used by default.");
+			log_info("Elixier als Standard ausgewählt.");
 			pchar.GenQuest.Potion_choice = "potion2";
 			DialogExit_Self();
 		break;
 		
 		case "ChoosePotion3":
-			log_info("A mixture will be used by default.");
+			log_info("Mischung als Standard ausgewählt.");
 			pchar.GenQuest.Potion_choice = "potion4";
 			DialogExit_Self();
 		break;
 		
 		case "ChoosePotion4":
-			log_info("A ginger root will be used by default.");
+			log_info("Ingwerwurzel als Standard ausgewählt.");
 			pchar.GenQuest.Potion_choice = "potion5";
 			DialogExit_Self();
 		break;
 		
 		case "ChoosePotion5":
-			log_info("Rum will be used by default.");
+			log_info("Rum als Standard ausgewählt.");
 			pchar.GenQuest.Potion_choice = "potionrum";
 			DialogExit_Self();
 		break;
 		
 		case "ChoosePotion6":
-			log_info("Wine will be used by default.");
+			log_info("Wein als Standard ausgewählt.");
 			pchar.GenQuest.Potion_choice = "potionwine";
 			DialogExit_Self();
 		break;
 		
 		case "ChoosePotion7":
-			log_info("Potions will be selected automatically.");
+			log_info("Tränke werden automatisch ausgewählt.");
 			DeleteAttribute(pchar, "GenQuest.Potion_choice");
 			DialogExit_Self();
 		break;
@@ -741,7 +741,7 @@ void ProcessDialogEvent()
 	            if (chr.from_sea == Pchar.location.from_sea)
 	            {
 					Dialog.Text = "Wir könnten anfangen, die Stadt einzunehmen, aber das Schiff würde die Salven der Festungskanonen nicht lange aushalten, und wir könnten keine Landungspartei schicken.";
-	    			Link.l1 = "..., Freund.";
+	    			Link.l1 = "...";
 	    			Link.l1.go = "exit";
 	            }
 	            else
@@ -793,7 +793,7 @@ void ProcessDialogEvent()
 	        {
 				if(!CheckAttribute(Pchar, "GenQuestFort.StartAttack"))
 				{
-					Dialog.Text = "Heh! There aren't enough people in the crew; we need at least "+needCrew+" men.";
+					Dialog.Text = "Heh! Es gibt nicht genug Leute in der Crew; Wir brauchen mindestens "+needCrew+" Männer.";
 					Link.l1 = "...";
 					Link.l1.go = "exit";
 				}
@@ -892,7 +892,7 @@ void ProcessDialogEvent()
 //navy CONTRABAND METRO -->
 		case "GenTravel_Main":
 			NextDiag.TempNode = "First time";
-			dialog.Text = "Dieses süße Schiff gehört jetzt mir, und ich bin der Kapitän hier! Es ist schade, dass ich die gesamte Besatzung töten musste, allerdings.";
+			dialog.Text = "Dieses süße Schiff gehört jetzt mir, und ich bin der Kapitän hier! Es ist schade allerdings, dass ich die gesamte Besatzung töten musste.";
 			Link.l1 = "Es ist Zeit, an Land zu kommen...";
 			Link.l1.go = "exit";
 
@@ -917,7 +917,7 @@ void ProcessDialogEvent()
 
 //navy --> 13.02.08
 		case "Cabin_CompanionSelect":
-			Dialog.Text = "Welchen Begleiter soll man beschwören?";
+			Dialog.Text = "Welcher Begleiter soll hergeholt werden?";
 			for (i = 1; i < GetCompanionQuantity(PChar); i++)
 			{
 				chr = GetCharacter(GetCompanionIndex(PChar, i));
@@ -986,35 +986,35 @@ void ProcessDialogEvent()
 		//--> LSC, приколы со стуком в дверь
 		case "knock_2":
 			PlaySound("interface\knock_2.wav");
-			dialog.text = "Also, ich habe geklopft, jetzt warten wir auf die Antwort...";
+			dialog.text = "Also, ich habe geklopft, jetzt warte ich auf die Antwort...";
 			link.l1 = "(warte)";
 			link.l1.go = "knock_wrong";
 		break;
 		
 		case "knock_3":
 			PlaySound("interface\knock.wav");
-			dialog.text = "Also, ich habe geklopft, jetzt warten wir auf die Antwort...";
+			dialog.text = "Also, ich habe geklopft, jetzt warte ich auf die Antwort...";
 			link.l1 = "(warte)";
 			link.l1.go = "knock_wrong";
 		break;
 		
 		case "knock_3_1":
 			PlaySound("interface\knock_3_1.wav");
-			dialog.text = "Also, ich habe geklopft, jetzt warten wir auf die Antwort...";
+			dialog.text = "Also, ich habe geklopft, jetzt warte ich auf die Antwort...";
 			link.l1 = "(warte)";
 			link.l1.go = "knock_wrong";
 		break;
 		
 		case "knock_1_3":
 			PlaySound("interface\knock_1_3.wav");
-			dialog.text = "Also, ich habe geklopft, jetzt warten wir auf die Antwort...";
+			dialog.text = "Also, ich habe geklopft, jetzt warte ich auf die Antwort...";
 			link.l1 = "(warte)";
 			link.l1.go = "knock_wrong";
 		break;
 		
 		case "knock_2_2":
 			PlaySound("interface\knock_2_2.wav");
-			dialog.text = "Also, ich habe geklopft, jetzt warten wir auf die Antwort...";
+			dialog.text = "Also, ich habe geklopft, jetzt warte ich auf die Antwort...";
 			link.l1 = "(warte)";
 			link.l1.go = "knock_right";
 		break;
@@ -1131,7 +1131,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "mtraxx_mutiny":
-            dialog.text = "Geh, stürm! Huurah!";
+            dialog.text = "Los, Angriff! Huurah!";
 			link.l1 = "";
 			link.l1.go = "exit";
 			AddDialogExitQuestFunction("Mtraxx_PlantMutiny");
@@ -1156,7 +1156,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.text = "Nicht genug Material, wir benötigen mindestens 20 Packungen Bretter und 10 Ballen Leder.";
+				dialog.text = "Nicht genug Material, wir benötigen mindestens 20 Ladungen Bretter und 10 Ballen Leder.";
 				link.l1 = "";
 				link.l1.go = "exit";
 			}
@@ -1167,7 +1167,7 @@ void ProcessDialogEvent()
 			{
 				if (GetCrewQuantity(pchar) >= 20) // наличие команды
 				{
-					dialog.text = "Alles ist bereit für eine Explosion!";
+					dialog.text = "Alles ist bereit für eine Sprengung!";
 					link.l1 = "";
 					link.l1.go = "exit";
 					AddDialogExitQuestFunction("Mtraxx_RetributionBarrels");
@@ -1228,7 +1228,7 @@ void ProcessDialogEvent()
 			if (CheckAttribute(pchar, "questTemp.Saga.Helena_officer")) sld = characterFromId("Helena");
 			else sld = characterFromId("Mary");
 			string sTemp = sld.name;
-			dialog.text = "Ich und "+sTemp+"Wir sind schon lange zusammen und unsere Bande sind stärker als jedes Kirchengebot, aber ich möchte, dass wir beide uns an diesen Moment erinnern. Daher muss ich entscheiden, wo ich ihr den Antrag machen soll:";
+			dialog.text = "Ich und "+sTemp+" sind schon lange zusammen und unser Bund ist stärker als jedes Kirchengebot, aber ich möchte, dass wir beide uns an diesen Moment erinnern. Daher muss ich entscheiden, wo ich ihr den Antrag machen soll:";
 			if (CheckAttribute(pchar, "questTemp.Saga.Helena_officer"))
 			{
 				link.l1 = "Isla Tessoro - diese Insel bedeutet viel in unserer Geschichte. Ich vermute, es gibt keinen besseren Ort - Sabu Matila Bucht ist bezaubernd bei Sonnenuntergang!";
@@ -1238,7 +1238,7 @@ void ProcessDialogEvent()
 			link.l2.go = "LH_marry_1_2";
 			if (CheckAttribute(pchar, "questTemp.LSC.Mary_officer"))
 			{
-				link.l3 = "Jamaika - da steckt so viel drin! Und den Sonnenaufgang in der Portland Bucht zu bewundern, stelle ich mir das Paradies auf Erden vor.";
+				link.l3 = "Jamaika - da steckt so viel drin! Und den Sonnenaufgang in der Portland Bucht zu bewundern, stelle ich mir als das Paradies auf Erden vor.";
 				link.l3.go = "LH_marry_1_3";
 			}
 		break;
@@ -1285,7 +1285,7 @@ void ProcessDialogEvent()
 			else sld = characterFromId("Mary");
 			sTemp = sld.name;
 			AddQuestUserData("LongHappy", "sName", sTemp);
-			dialog.text = "Nun, das kann ohne die Ernsthaftigkeit der Menschheit geschehen. Obwohl ich dies lieber diskutieren würde mit "+sTemp+" ein wenig später.";
+			dialog.text = "Nun, das kann auch ohne die Feierlichkeit der Menschheit geschehen. Obwohl ich dies lieber diskutieren würde mit "+sTemp+" ein wenig später.";
 			link.l1 = "";
 			link.l1.go = "exit";
 			pchar.questTemp.LongHappy = "choose";

@@ -1559,7 +1559,7 @@ bool Longway_QuestComplete(string sQuestName, string qname)
 	else if (sQuestName == "PZ_Kapstervil_OstavlyaemZapisku_1") {
 		LAi_SetActorType(pchar);
 		LAi_ActorGoToLocator(pchar, "goto", "goto2", "PZ_Kapstervil_OstavlyaemZapisku_2", -1);
-		locCameraFlyToPosition(0.01, 1.6, 1.30, 4.50, 1.5, -2.20, -1, 5000/GetDeltaTime());
+		locCameraFlyToPositionLookToHero(0.01, 1.6, 1.30, 4.50, 1.5, -2.20, -1, 5000/GetDeltaTime());
 		Pchar.FuncCameraFly = "PZ_Kapstervil_OstavlyaemZapisku_1_1";
 	}
 	
@@ -1937,7 +1937,7 @@ bool Longway_QuestComplete(string sQuestName, string qname)
 		pchar.questTemp.NoFast = true;
 		StartQuestMovie(true, false, true);
 		SetCameraDialogMode(CharacterFromID("PZ_BasTerJailOff_Clone"));
-		locCameraFlyToPosition(-24.56, 8.19, -5.66, 1.91, 31.11, -13.72, 1, 12000/GetDeltaTime());
+		locCameraFlyToPositionLookToHero(-24.56, 8.19, -5.66, 1.91, 31.11, -13.72, 1, 12000/GetDeltaTime());
 		Pchar.FuncCameraFly = "PZ_MayakPodslushivanie_2";
 	}
 	

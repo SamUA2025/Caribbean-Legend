@@ -236,15 +236,15 @@ void GetRealOptions(ref optref)
 	GetControlsOptions(optref);
 
 	// mouse
-	if( CheckAttribute(&InterfaceStates,"mouse.x_sens") ) {
-		optref.mouse.x_sensitivity = InterfaceStates.mouse.x_sens;
+	if( CheckAttribute(&InterfaceStates,"mouse.loc_sens") ) {
+		optref.mouse.loc_sensitivity = InterfaceStates.mouse.loc_sens;
 	} else {
-		optref.mouse.x_sensitivity = 0.5;
+		optref.mouse.loc_sensitivity = 0.5;
 	}
-	if( CheckAttribute(&InterfaceStates,"mouse.y_sens") ) {
-		optref.mouse.y_sensitivity = InterfaceStates.mouse.y_sens;
+	if( CheckAttribute(&InterfaceStates,"mouse.sea_sens") ) {
+		optref.mouse.sea_sensitivity = InterfaceStates.mouse.sea_sens;
 	} else {
-		optref.mouse.y_sensitivity = 0.5;
+		optref.mouse.sea_sensitivity = 0.5;
 	}
 	// video colors
 	if( CheckAttribute(&InterfaceStates,"video.contrast") ) {
@@ -420,16 +420,16 @@ void SetCurentOptions(ref optref)
 		InterfaceStates.InvertCameras = false;
 	}
 
-	if( CheckAttribute(optref,"mouse.x_sensitivity") ) {
-		InterfaceStates.mouse.x_sens = optref.mouse.x_sensitivity;
+	if( CheckAttribute(optref,"mouse.loc_sensitivity") ) {
+		InterfaceStates.mouse.loc_sens = optref.mouse.loc_sensitivity;
 	} else {
-		InterfaceStates.mouse.x_sens = 0.5;
+		InterfaceStates.mouse.loc_sens = 0.5;
 	}
 
-	if( CheckAttribute(optref,"mouse.y_sensitivity") ) {
-		InterfaceStates.mouse.y_sens = optref.mouse.y_sensitivity;
+	if( CheckAttribute(optref,"mouse.sea_sensitivity") ) {
+		InterfaceStates.mouse.sea_sens = optref.mouse.sea_sensitivity;
 	} else {
-		InterfaceStates.mouse.y_sens = 0.5;
+		InterfaceStates.mouse.sea_sens = 0.5;
 	}
 	// video colors
 	if( CheckAttribute(optref,"video.contrast") ) {

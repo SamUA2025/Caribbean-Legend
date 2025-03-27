@@ -288,7 +288,7 @@ float LAi_GetCharacterMaxHP(aref chr)
 		if(!CheckAttribute(chr, "chr_ai.hp_max_back"))
 		{
 			chr.chr_ai.hp_max_back = max_hp;
-			if(ShipBonus2Artefact(chr))
+			if(ShipBonus2Artefact(chr, SHIP_GALEON_SM))
 				max_hp += makeint(100.0/stf(chr.rank)) + 40.0;
 			else
 				max_hp += makeint(100.0/stf(chr.rank)) + 23.0;	
@@ -1228,6 +1228,15 @@ void LAi_AllCharactersUpdate(float dltTime)
 				SendMessage(pchar, "lse", MSG_CHARACTER_EX_MSG, "GetAimingStep", &sAimingStep);
 				if(sAimingStep != "none")
 					bAiming = true;
+				if(CheckAttribute(chr_ai, "kill_timer"))
+				{
+					float killTimer = stf(chr_ai.kill_timer);
+					killTimer -= dltTime;
+					if(killTimer <= 0.0)
+						DeleteAttribute(chr_ai, "kill_timer");
+					else
+						chr_ai.kill_timer = killTimer;
+				}
 			}
 			
 			if(CheckAttribute(chr_ai, "getheadshot"))

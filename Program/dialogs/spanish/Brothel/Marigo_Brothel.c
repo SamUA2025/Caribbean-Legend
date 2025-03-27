@@ -5,8 +5,8 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 	switch (Dialog.CurrentNode)
 	{
 		case "quests":
-			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("¿Qué clase de preguntas, "+GetSexPhrase("joven caballero","jovencita")+"¿?","¿Qué necesitas, "+GetSexPhrase("guapo","bonita")+"¿Pregunte lo que quiera?"),"¿Preguntas de nuevo?","Tee-hee, si te parece bien - preguntas...",""+GetSexPhrase("Mm, ¿por qué no escoges una belleza para ti mismo? Empiezo a sospechar de ti...","Mm, ¿por qué no escoges una belleza para ti? No tenemos muchachos aquí, me temo, je-je...")+"","bloqueo",1,npchar,Dialog.CurrentNode);
-			link.l1 = HeroStringReactionRepeat(RandPhraseSimple("He cambiado de opinión, disculpe.","En realidad, olvídalo..."),"Yo... disculpas, no tengo preguntas, por ahora.","Tienes razón, ya es la tercera vez. Discúlpame.","Tal vez la próxima vez, señora.",npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("¿Qué tipo de preguntas, "+GetSexPhrase("joven","jovencita")+"?","¿Qué necesitas, "+GetSexPhrase("guapo","bonita")+"? Pregunta lo que quieras."),"¿Preguntas otra vez?","Tee-hee, otra vez lo mismo... preguntas...",""+GetSexPhrase("Mm, ¿por qué no eliges una belleza para ti? Estoy empezando a sospechar de ti...","Mm, ¿por qué no eliges una belleza para ti? No tenemos chicos aquí, me temo, jeje...")+"","block",1,npchar,Dialog.CurrentNode);
+			link.l1 = HeroStringReactionRepeat(RandPhraseSimple("He cambiado de opinión, discúlpame.","En realidad, olvídalo..."),"Yo... lo siento, no tengo preguntas, por ahora.","Tienes razón, es la tercera vez ya. Perdóname.","Tal vez la próxima vez, señora.",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 		break;
 	}

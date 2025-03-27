@@ -36,7 +36,7 @@ void ProcessDialogEvent()
 	switch(Dialog.CurrentNode)
 	{
 		case "First time":
-            dialog.text = NPCStringReactionRepeat("Hast du irgendwelche Geschäfte mit mir? Wenn nicht, dann verschwinde von hier!","Ich denke, ich habe mich klar ausgedrückt.","Obwohl ich mich klar ausgedrückt habe, belästigst du mich weiterhin!","Genau, ich habe genug von dieser Unhöflichkeit.","wiederholen",3,npchar,Dialog.CurrentNode);
+            dialog.text = NPCStringReactionRepeat("Hast du irgendwelche Geschäfte mit mir? Wenn nicht, dann verschwinde von hier!","Ich denke, ich habe mich klar ausgedrückt.","Obwohl ich mich klar ausgedrückt habe, belästigst du mich weiterhin!","Genau, ich habe genug von dieser Unhöflichkeit.","repeat",3,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Ich gehe schon.","Natürlich, Pastor.","Es tut mir leid, Pastor.","Ups...",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			NextDiag.TempNode = "First time";
@@ -184,7 +184,7 @@ void ProcessDialogEvent()
 		break;
 
         case "I_know_you_good":
-            dialog.text = NPCStringReactionRepeat(GetFullName(pchar)+", Ich bin froh, dich zu sehen! Was willst du?","Was willst du noch?","Wieder? Belästige die Leute nicht, wenn du nichts zu tun hast!","Du bist ein "+GetSexPhrase("guter Freibeuter","braves Mädchen")+", also kannst du vorerst leben. Aber ich will nicht mehr mit dir reden.","wiederholen",10,npchar,Dialog.CurrentNode);
+            dialog.text = NPCStringReactionRepeat(GetFullName(pchar)+", Ich bin froh, dich zu sehen! Was willst du?","Was willst du noch?","Wieder? Belästige die Leute nicht, wenn du nichts zu tun hast!","Du bist ein "+GetSexPhrase("guter Freibeuter","braves Mädchen")+", also kannst du vorerst leben. Aber ich will nicht mehr mit dir reden.","repeat",10,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Ich zahle nur einen Besuch.","Nichts...","Gut, Pastor, es tut mir leid...","Verdammt, mein Fehler!",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			NextDiag.TempNode = "I_know_you_good";

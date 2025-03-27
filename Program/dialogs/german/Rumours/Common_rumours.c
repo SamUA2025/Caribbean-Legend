@@ -35,7 +35,7 @@ void ProcessCommonDialogRumors(ref NPChar, aref Link, aref NextDiag);
             answ3 = RandPhraseSimple("I doubt that I've got anything of interest to tell you.","It will be a pleasure for me, but let's talk next time.");
             answ4 = "";
         }
-		Dialog.Text = NPCStringReactionRepeat(srum,srum+posrep1,srum+posrep2,RandPhraseSimple("Ach, ich habe nichts mehr zu erzählen, lass mich passieren.","Ich habe genug von deinen Fragen, entschuldige mich, ich habe noch viele andere Dinge zu erledigen."),"Block",1,npchar,Dialog.CurrentNode);
+		Dialog.Text = NPCStringReactionRepeat(srum,srum+posrep1,srum+posrep2,RandPhraseSimple("Ach, ich habe nichts mehr zu erzählen, lass mich passieren.","Ich habe genug von deinen Fragen, entschuldige mich, ich habe noch viele andere Dinge zu erledigen."),"block",1,npchar,Dialog.CurrentNode);
         link.l1 = HeroStringReactionRepeat(answ1,answ2,answ3,answ4,npchar,Dialog.CurrentNode);
 		link.l1.go = "new question";
 		link.l2 = RandPhraseSimple("Danke, ich sollte gehen.","Auf Wiedersehen.");
@@ -68,7 +68,7 @@ void ProcessCommonDialogRumors(ref NPChar, aref Link, aref NextDiag);
             answ3 = RandPhraseSimple("I doubt that I've got anything of interest to tell you.","It will be a pleasure for me, but let's talk next time.");
             answ4 = "";
         }
-		Dialog.Text = NPCStringReactionRepeat(srum,srum+posrep1,srum+posrep2,RandPhraseSimple("Ach, ich habe nichts mehr zu erzählen, lass mich vorbei.","Ich habe genug von deinen Fragen, entschuldige, ich habe viele andere Dinge zu tun."),"Block",1,npchar,Dialog.CurrentNode);
+		Dialog.Text = NPCStringReactionRepeat(srum,srum+posrep1,srum+posrep2,RandPhraseSimple("Ach, ich habe nichts mehr zu erzählen, lass mich vorbei.","Ich habe genug von deinen Fragen, entschuldige, ich habe viele andere Dinge zu tun."),"block",1,npchar,Dialog.CurrentNode);
         link.l1 = HeroStringReactionRepeat(answ1,answ2,answ3,answ4,npchar,Dialog.CurrentNode);
 		link.l1.go = "new question";
 		link.l2 = RandPhraseSimple("Danke, ich sollte gehen.","Auf Wiedersehen.");
@@ -101,7 +101,7 @@ void ProcessCommonDialogRumors(ref NPChar, aref Link, aref NextDiag);
             answ3 = RandPhraseSimple("I doubt that I've got anything of interest to tell you.","It will be a pleasure for me, but let's talk next time.");
             answ4 = "";
         }
-		Dialog.Text = NPCStringReactionRepeat(srum,srum+posrep1,srum+posrep2,RandPhraseSimple("Ach, nichts mehr zu erzählen, lass mich passieren.","Ich habe genug von deinen Fragen, entschuldige, ich habe noch eine Menge anderer Dinge zu tun."),"Block",1,npchar,Dialog.CurrentNode);
+		Dialog.Text = NPCStringReactionRepeat(srum,srum+posrep1,srum+posrep2,RandPhraseSimple("Ach, nichts mehr zu erzählen, lass mich passieren.","Ich habe genug von deinen Fragen, entschuldige, ich habe noch eine Menge anderer Dinge zu tun."),"block",1,npchar,Dialog.CurrentNode);
         link.l1 = HeroStringReactionRepeat(answ1,answ2,answ3,answ4,npchar,Dialog.CurrentNode);
 		link.l1.go = "question";
 		link.l2 = RandPhraseSimple("Danke, ich sollte gehen.","Auf Wiedersehen.");
@@ -130,7 +130,7 @@ void ProcessCommonDialogRumors(ref NPChar, aref Link, aref NextDiag);
             answ3 = RandPhraseSimple("I doubt that I've got anything of interest to tell you.","It will be a pleasure for me, but let's talk next time.");
             answ4 = "";
         }
-		Dialog.Text = NPCStringReactionRepeat(srum,srum+posrep1,srum+posrep2,RandPhraseSimple("Ich hoffe, ich habe meinen Standpunkt klargemacht - ich habe fertig.","Ich habe genug von deinen Fragen, Kapitän. Geh und finde etwas Besseres zu tun!"),"Block",1,npchar,Dialog.CurrentNode);
+		Dialog.Text = NPCStringReactionRepeat(srum,srum+posrep1,srum+posrep2,RandPhraseSimple("Ich hoffe, ich habe meinen Standpunkt klargemacht - ich habe fertig.","Ich habe genug von deinen Fragen, Kapitän. Geh und finde etwas Besseres zu tun!"),"block",1,npchar,Dialog.CurrentNode);
         link.l1 = HeroStringReactionRepeat(answ1,answ2,answ3,answ4,npchar,Dialog.CurrentNode);
 		link.l1.go = "question";
 		link.l2 = RandPhraseSimple("Danke, ich sollte gehen.","Auf Wiedersehen.");
@@ -159,7 +159,7 @@ void ProcessCommonDialogRumors(ref NPChar, aref Link, aref NextDiag);
             answ3 = RandPhraseSimple("I doubt that I've got anything of interest to tell you.","It will be my pleasure, but let's talk next time.");
             answ4 = "";
         }
-		Dialog.Text = NPCStringReactionRepeat(srum,srum+posrep1,srum+posrep2,RandPhraseSimple("Ich hoffe, ich habe meinen Punkt klar gemacht - Ich bin fertig.","Ich habe genug von deinen Fragen, Kapitän. Geh und finde etwas Besseres zu tun!"),"Block",1,npchar,Dialog.CurrentNode);
+		Dialog.Text = NPCStringReactionRepeat(srum,srum+posrep1,srum+posrep2,RandPhraseSimple("Ich hoffe, ich habe meinen Punkt klar gemacht - Ich bin fertig.","Ich habe genug von deinen Fragen, Kapitän. Geh und finde etwas Besseres zu tun!"),"block",1,npchar,Dialog.CurrentNode);
         link.l1 = HeroStringReactionRepeat(answ1,answ2,answ3,answ4,npchar,Dialog.CurrentNode);
 		link.l1.go = "question";
 		link.l2 = RandPhraseSimple("Danke, ich sollte gehen.","Auf Wiedersehen.");
@@ -191,7 +191,7 @@ void ProcessCommonDialogRumors(ref NPChar, aref Link, aref NextDiag);
             answ3 = RandPhraseSimple("I doubt that I've got anything of interest to tell you.","It will be my pleasure, but let's talk next time.");
             answ4 = "";
         }
-		Dialog.Text = NPCStringReactionRepeat(srum,srum+posrep1,srum+posrep2,RandPhraseSimple("Ach, ich habe nichts mehr zu erzählen, lass mich durch.","Ich habe genug von deinen Fragen, entschuldige mich, ich habe eine Menge anderer Dinge zu tun."),"Block",1,npchar,Dialog.CurrentNode);
+		Dialog.Text = NPCStringReactionRepeat(srum,srum+posrep1,srum+posrep2,RandPhraseSimple("Ach, ich habe nichts mehr zu erzählen, lass mich durch.","Ich habe genug von deinen Fragen, entschuldige mich, ich habe eine Menge anderer Dinge zu tun."),"block",1,npchar,Dialog.CurrentNode);
         link.l1 = HeroStringReactionRepeat(answ1,answ2,answ3,answ4,npchar,Dialog.CurrentNode);
 		link.l1.go = "question";
 		link.l2 = RandPhraseSimple("Danke, ich sollte gehen.","Auf Wiedersehen.");
@@ -292,7 +292,7 @@ void ProcessCommonDialogRumors(ref NPChar, aref Link, aref NextDiag);
             if (!CheckAttribute(NPChar, "quest.repeat.rumours_trader") || NPChar.quest.repeat.rumours_trader!= 3 )
             strum = SelectRumourEx("trader", NPChar);
             else strum = NO_RUMOUR_TEXT[rand(SIMPLE_RUMOUR_NUM - 1)]; // fix
-			Dialog.Text = NPCStringReactionRepeat(strum,strum+"Jawohl. Nichts mehr zu erzählen.",strum+" Jetzt sollte ich zurück zur Arbeit gehen.",RandPhraseSimple("Ich habe dir schon gesagt, dass ich keine Zeit für billige Gespräche habe!","Ich bin ein beschäftigter Mann, ich habe keine Zeit, um Klatsch zu reden!"),"Block",1,npchar,Dialog.CurrentNode);
+			Dialog.Text = NPCStringReactionRepeat(strum,strum+"Jawohl. Nichts mehr zu erzählen.",strum+" Jetzt sollte ich zurück zur Arbeit gehen.",RandPhraseSimple("Ich habe dir schon gesagt, dass ich keine Zeit für billige Gespräche habe!","Ich bin ein beschäftigter Mann, ich habe keine Zeit, um Klatsch zu reden!"),"block",1,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat(pcharrepphrase(RandSwear()+"Interessant! Aber kommen wir zur Sache","Dankbarkeit, hier ist noch eine Sache."),pcharrepphrase(""+GetSexPhrase("Verdammt mich","Interessant")+"! Feiner Geschichtenerzähler. Aber ich habe noch eine Frage.","Lassen wir keine Zeit mehr verstreichen und reden wir Geschäftliches."),pcharrepphrase(RandSwear()+" Noch eine Sache und ich gehe.","Du hast recht, Zeit ist Geld."),pcharrepphrase("Immer nur an deinen eigenen Profit denken! Gut, dreh nicht durch.","Verzeih mir. Lass uns Geschäfte machen."),npchar,Dialog.CurrentNode);
 			link.l1.go = "business";
 			link.l2 = HeroStringReactionRepeat(NPCharRepPhrase(npchar,pcharrepphrase("Lebewohl, du alter Säufer.","Auf Wiedersehen, "+GetAddress_FormToNPC(NPChar)+" "+GetFullName(npchar)+"."),pcharrepphrase("Verflucht! Geh nicht weit weg. Ich komme gleich wieder.","Freut mich, dich zu sehen, "+GetAddress_FormToNPC(NPChar)+" "+GetFullName(npchar)+"! Lebewohl!")),NPCharRepPhrase(npchar,pcharrepphrase("Leinen los!","Auf Wiedersehen!"),pcharrepphrase("He! Was versteckst du da? Rum? Nein!?! Egal, ich besorge mir etwas zu trinken.","Es tut mir leid, ich habe wichtige Geschäfte in der Stadt.")),NPCharRepPhrase(npchar,pcharrepphrase("Heh! Bis zum nächsten Mal!","Ich sollte gehen. Tschüss, "+GetAddress_FormToNPC(NPChar)+" "+GetFullName(npchar)+"!"),pcharrepphrase("Streite nicht mit mir! Ich habe keine Lust darauf!","Ich denke, ich sollte mein Schiff überprüfen. Wir sehen uns, "+GetAddress_FormToNPC(NPChar)+" "+GetFullName(npchar)+"!")),NPCharRepPhrase(npchar,pcharrepphrase("Was ist los mit dir, Kumpel? Ich bin's - "+GetFullName(pchar)+"! Mach ein Nickerchen, ich werde später mit dir reden.","Ich fürchte, dass dich deine Leber tötet, bevor ich wieder hierher komme."),pcharrepphrase("Zähle dein Silber, schlauer Hund! Wir sehen uns später.","Freut mich, dich zu sehen, "+GetAddress_FormToNPC(NPChar)+" "+GetFullName(npchar)+"!")),npchar,Dialog.CurrentNode);
@@ -322,7 +322,7 @@ void ProcessCommonDialogRumors(ref NPChar, aref Link, aref NextDiag);
 		case "rumours_tavern":  // homo 03/08/06
 				if(startHeroType == 4)
 				{
-					Dialog.Text = NPCStringReactionRepeat(LinkRandPhrase("Sie kennen den Preis. Informationen sind wie ein Zimmer, Essen oder Trinken - sie kosten. Das macht tausend Pesos.","Sie kennen den Preis. Informationen sind wie ein Zimmer, Essen oder Trinken - sie kosten. Das macht tausend Pesos.","Sie kennen den Preis. Informationen sind wie ein Zimmer, Essen oder Trinken - sie kosten. Das macht tausend Pesos."),"Nichts mehr hinzuzufügen. Nun, entschuldigen Sie mich, ich sollte gehen.","","","Block",1,npchar,Dialog.CurrentNode);
+					Dialog.Text = NPCStringReactionRepeat(LinkRandPhrase("Sie kennen den Preis. Informationen sind wie ein Zimmer, Essen oder Trinken - sie kosten. Das macht tausend Pesos.","Sie kennen den Preis. Informationen sind wie ein Zimmer, Essen oder Trinken - sie kosten. Das macht tausend Pesos.","Sie kennen den Preis. Informationen sind wie ein Zimmer, Essen oder Trinken - sie kosten. Das macht tausend Pesos."),"Nichts mehr hinzuzufügen. Nun, entschuldigen Sie mich, ich sollte gehen.","","","block",1,npchar,Dialog.CurrentNode);
 				 
 					link.l1 = HeroStringReactionRepeat(RandPhraseSimple("Eigentlich, warum frage ich überhaupt? Ich könnte jeden anderen danach fragen. Entschuldigung, dass ich dich belästigt habe.","Eigentlich, warum frage ich überhaupt? Ich kann jeden anderen danach fragen. Entschuldigung, dass ich Sie belästigt habe."),"","","",npchar,Dialog.CurrentNode);
 					link.l1.go = HeroStringReactionRepeat("rumours_tavern_no", "first time", "first time", "first time", npchar, Dialog.CurrentNode);//"rumours_tavern_no";
@@ -340,7 +340,7 @@ void ProcessCommonDialogRumors(ref NPChar, aref Link, aref NextDiag);
 				}
 				else
 				{
-					Dialog.Text = NPCStringReactionRepeat(LinkRandPhrase("Informationen kosten Geld. 1000 Pesos und ich erzähle dir alles, was ich weiß.","Etwas stimmt nicht mit meinem Gedächtnis, 1000 Acht-Reales-Stücke könnten mir helfen, mich an etwas zu erinnern.","Ich bin begierig darauf, Informationen mit Ihnen zu teilen. Aber es wird Sie 1000 Achtstücke kosten. Kein Feilschen."),"Nichts mehr hinzuzufügen. Jetzt entschuldigen Sie mich, ich sollte gehen.","","","Block",1,npchar,Dialog.CurrentNode);
+					Dialog.Text = NPCStringReactionRepeat(LinkRandPhrase("Informationen kosten Geld. 1000 Pesos und ich erzähle dir alles, was ich weiß.","Etwas stimmt nicht mit meinem Gedächtnis, 1000 Acht-Reales-Stücke könnten mir helfen, mich an etwas zu erinnern.","Ich bin begierig darauf, Informationen mit Ihnen zu teilen. Aber es wird Sie 1000 Achtstücke kosten. Kein Feilschen."),"Nichts mehr hinzuzufügen. Jetzt entschuldigen Sie mich, ich sollte gehen.","","","block",1,npchar,Dialog.CurrentNode);
 				 
 					link.l1 = HeroStringReactionRepeat(RandPhraseSimple(RandSwear()+"Ich zahle nicht für wertloses Geschwätz.","Ich werde über bessere Möglichkeiten nachdenken, dieses Geld auszugeben."),"Lass uns das Thema wechseln.","Lassen wir das Thema wechseln.","Lassen wir das Thema wechseln.",npchar,Dialog.CurrentNode);
 					link.l1.go = HeroStringReactionRepeat("rumours_tavern_no", "first time", "first time", "first time", npchar, Dialog.CurrentNode);//"rumours_tavern_no";
@@ -533,7 +533,7 @@ void ProcessCommonDialogRumors(ref NPChar, aref Link, aref NextDiag);
 		
 //Jason -------------слухи смотрителей маяков, идентичны таверне, но бесплатны, по 1 шт за день--------------------
 		case "rumours_lighthouse": 
-			Dialog.Text = NPCStringReactionRepeat(RandPhraseSimple("Eh, Kapitän! Es ist immer schön, mit Ihnen zu plaudern. Alleine hier zu sein ist manchmal ziemlich langweilig...","Ich lebe allein, Besucher sind eine seltene Gelegenheit. Also bin ich immer in Stimmung zum Reden."),"Wie wär's mit einem Plausch, Käpt'n? Nun, ich könnte noch etwas anderes zu erzählen haben...","Nimm beim nächsten Besuch bei mir eine Flasche Rum mit. Gespräche sind besser mit Getränken...","Ach, ich habe dir alles erzählt, was ich wusste. Ich habe nichts hinzuzufügen.","Block",1,npchar,Dialog.CurrentNode);
+			Dialog.Text = NPCStringReactionRepeat(RandPhraseSimple("Eh, Kapitän! Es ist immer schön, mit Ihnen zu plaudern. Alleine hier zu sein ist manchmal ziemlich langweilig...","Ich lebe allein, Besucher sind eine seltene Gelegenheit. Also bin ich immer in Stimmung zum Reden."),"Wie wär's mit einem Plausch, Käpt'n? Nun, ich könnte noch etwas anderes zu erzählen haben...","Nimm beim nächsten Besuch bei mir eine Flasche Rum mit. Gespräche sind besser mit Getränken...","Ach, ich habe dir alles erzählt, was ich wusste. Ich habe nichts hinzuzufügen.","block",1,npchar,Dialog.CurrentNode);
     		link.l1 = HeroStringReactionRepeat(RandPhraseSimple("Dann teile deine Informationen. Ich unterhalte mich gern mit Leuten, weißt du...","Sag mir! Wie sie sagen, wer die Information besitzt - er besitzt die Welt?"),"Wie bitte?","Aber natürlich! Hast du noch etwas zu teilen?","Gut, wir hatten sowieso ein nettes Gespräch.",npchar,Dialog.CurrentNode);
     		link.l1.go = HeroStringReactionRepeat("rumours_lighthouse_yes", "rumours_lighthouse_void", "rumours_lighthouse_void", "exit", npchar, Dialog.CurrentNode);
 		break;

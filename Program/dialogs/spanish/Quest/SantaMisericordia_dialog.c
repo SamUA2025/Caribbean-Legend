@@ -159,7 +159,7 @@ void ProcessDialogEvent()
 			if (startHeroType == 4)
 			{
 				dialog.text = "¿Una doncella con espada? Vaya, nunca pensé que viviría para ver semejante espectáculo. Y, ¿quién podrías ser tú, señorita, para atreverte a atacar al 'Santa Misericordia'?";
-				link.l1 = "Capitana Hellen McArthur. Y esa expresión de sorpresa en tu rostro es una que conozco bien.";
+				link.l1 = "Capitana Helen McArthur. Y esa expresión de sorpresa en tu rostro es una que conozco bien.";
 				link.l1.go = "Alamida_HelenaCaptain";
 			}
 			else
@@ -517,8 +517,16 @@ void ProcessDialogEvent()
 		
 		case "Alamida_monah":
 			dialog.text = "Curioso... ¿Qué trae a un hijo de Dios a este lugar de... descanso?";
-			link.l1 = "Yo...";
-			link.l1.go = "Alamida_monah_2";
+			if (sti(pchar.questTemp.ISawDiegoDeLanda) == 1)
+			{
+				link.l1 = "Yo...";
+				link.l1.go = "Alamida_monah_2";
+			}
+			else
+			{
+				link.l1 = "Yo... ¡Espere! ¡Ya nos hemos visto antes!";
+				link.l1.go = "Alamida_monah_Second_2";
+			}
 		break;
 		
 		case "Alamida_monah_2":
@@ -589,7 +597,9 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Alamida_monah_11":
-			dialog.text = "Que él era simplemente... el primero.";
+			if (sti(pchar.questTemp.ISawDiegoDeLanda) == 1) sStr = "primero";
+ 			if (sti(pchar.questTemp.ISawDiegoDeLanda) == 2)	sStr = "segundo";
+			dialog.text = "Que él era simplemente... el " + sStr + ".";
 			link.l1 = "...";
 			link.l1.go = "Alamida_monah_12";
 		break;
@@ -603,6 +613,54 @@ void ProcessDialogEvent()
 			sld.lifeday = 0;
 			LAi_CharacterDisableDialog(sld);
 			LAi_group_MoveCharacter(sld, "SPAIN_CITIZENS");
+		break;
+		
+		case "Alamida_monah_Second_2":
+			dialog.text = "¿Sabe qué tiene de especial esta cripta? Aquí descansan dos almas, unidas... por la sangre. Padre e hijo de Alameda. Uno cayó a manos de pecadores, el otro... hmm, encontró su camino hacia Dios.";
+			link.l1 = "¿Sirve en la parroquia local? ¿Conocía al don Fernando?";
+			link.l1.go = "Alamida_monah_Second_3";
+		break;
+		
+		case "Alamida_monah_Second_3":
+			dialog.text = "Yo... observé su camino. Y ese libro que usted tomó. ¿Sabe qué tiene de especial?";
+			link.l1 = "Parece antigua.";
+			link.l1.go = "Alamida_monah_Second_4";
+		break;
+		
+		case "Alamida_monah_Second_4":
+			dialog.text = "Tiene una historia rica, y sería sabio de su parte dedicar algo de su fuerza al servicio de los Hermanos en Cristo llevándola consigo. Pero eso no es lo interesante.";
+			link.l1 = "La última vez hablaba en acertijos. ¿También lo hará ahora?";
+			link.l1.go = "Alamida_monah_Second_5";
+		break;
+		
+		case "Alamida_monah_Second_5":
+			dialog.text = "\nEl verdadero enigma está frente a mí. Ha reunido muchas... reliquias interesantes. Una Biblia. Un estatuto. ¿Le gusta coleccionar cosas así? ¿Es usted coleccionista?";
+			link.l1 = "¿Cómo sabe sobre el estatuto?";
+			link.l1.go = "Alamida_monah_Second_6";
+		break;
+		
+		case "Alamida_monah_Second_6":
+			dialog.text = "¿Cazador de trofeos?";
+			link.l1 = "Repito mi pregunta: ¿cómo sabe sobre el estatuto?";
+			link.l1.go = "Alamida_monah_Second_7";
+		break;
+		
+		case "Alamida_monah_Second_7":
+			dialog.text = "¿Amante de las emociones fuertes?";
+			link.l1 = "...";
+			link.l1.go = "Alamida_monah_Second_8";
+		break;
+		
+		case "Alamida_monah_Second_8":
+			dialog.text = "\nAh. Por supuesto. Naturalmente. Bueno, capitán, no lo detendré más.";
+			link.l1 = "Espere un momento, padre. Aún no ha respondido a mi pregunta.";
+			link.l1.go = "Alamida_monah_Second_9";
+		break;
+		
+		case "Alamida_monah_Second_9":
+			dialog.text = "Oh, capitán. No puedo. A veces las respuestas duelen más que la ignorancia. Vaya en paz. Y cuide su colección... de trofeos. Podrían serle útiles en el viaje que le espera.";
+			link.l1 = "...";
+			link.l1.go = "Alamida_monah_9";
 		break;
 		
 		//замечение по обнажённому оружию

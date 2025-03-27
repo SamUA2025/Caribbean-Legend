@@ -181,7 +181,15 @@ void ProcessDialogEvent()
 				link.l1.go = "FMQG_x";
 				break;
 			}
-			
+			// Леди Бет -->
+			if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_Bank" && !CheckAttribute(pchar, "questTemp.LadyBeth_Usurer")) // Блеквуд в городе
+			{
+				dialog.Text = "Oh, Captain! Please, look at what I have today. Some items I acquired from Blackwood's men. They need money for a new expedition, and for us - profit, right?";
+				link.l1 = "Does Blackwood know his men are selling their findings?";
+				link.l1.go = "LadyBeth_Usurer_1";
+				break;
+			}
+			// Леди Бет <--
 			if(NPChar.quest.meeting == "0")
 			{
 				dialog.Text = LinkRandPhrase(LinkRandPhrase("Good day to you, "+GetAddress_Form(NPChar)+". How can I help you? Do I know you?","Come in, captain. My name is "+GetFullName(npchar)+" and I'm the local banker.","Nice to meet you, "+GetAddress_Form(NPChar)+"! I am a local banker and if you've got a money problem then I can help you."), LinkRandPhrase("Have we met before, captain? I am "+GetFullName(npchar)+", and I'm a local banker.","Come in, captain. My name is "+GetFullName(npchar)+" and I'm the local banker.","Greetings, "+GetAddress_Form(NPChar)+". I am "+GetFullName(npchar)+", the local banker."), LinkRandPhrase("Nice to meet you, "+GetAddress_Form(NPChar)+", I am "+GetFullName(npchar)+" just a modest banker in this wonderful town.","It is your call, captain! Want to borrow some coin from me or lend money on interest?","Sir captain! I'm so glad that you've visited my modest office!"));
@@ -2710,6 +2718,22 @@ void ProcessDialogEvent()
 			link.l1 = "...";
 			link.l1.go = "exit";
 		break;
+		
+		// Леди Бет -->
+		case "LadyBeth_Usurer_1":
+			dialog.text = "Of course! Many just want to get their money and leave. Especially considering the recent rumors...";
+			link.l1 = "What rumors?";
+			link.l1.go = "LadyBeth_Usurer_2";
+		break;
+		
+		case "LadyBeth_Usurer_2":
+			dialog.text = "They say conditions in the crew are getting worse. Monsieur Blackwood has even started to tolerate regular losses - something that never happened before. But that's not my business. I just sell goods. So what are you interested in?";
+			link.l1 = "...";
+			link.l1.go = "next";
+			npchar.quest.item_date = "LadyBeth";
+			pchar.questTemp.LadyBeth_Usurer = true;
+		break;
+		// Леди Бет <--
 	}	
 }
 

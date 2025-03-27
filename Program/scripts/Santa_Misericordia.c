@@ -171,7 +171,7 @@ void SantaMisericordia_ToCity(string sChar)
 {
 	if(!CharacterIsAlive(sChar)) {Log_testinfo("Капитан ГАЛЕОНА умер"); return;}
 	pchar.questTemp.SantaMisericordia.colony = SantaMisericordia_findColony(sti(pchar.questTemp.SantaMisericordia.stage)+1);
-	Log_testinfo("капитан галеона сошел в порту "+ pchar.questTemp.SantaMisericordia.colony);
+	Log_testinfo("капитан галеона сошёл в порту "+ pchar.questTemp.SantaMisericordia.colony);
 	
 	//DeleteQuestCondition("SantaMisericordia_ToMap");
 	
@@ -550,6 +550,7 @@ void Alamida_abordage_OfficerPodhodit(string sQuest)
 	{
 		sld = GetCharacter(CreateCharacterClone(CharacterFromID("Irons"), 0));
 		sld.id = "Irons_Clone";
+		sld.MusketerDistance = 10;
 		ChangeCharacterAddressGroup(sld, PChar.location, "reload", "reload1");
 		sld.Dialog.FileName = "Quest\SantaMisericordia_dialog.c";
 		sld.dialog.currentnode = "Alamida_Tommi";
@@ -561,6 +562,7 @@ void Alamida_abordage_OfficerPodhodit(string sQuest)
 	{
 		sld = GetCharacter(CreateCharacterClone(CharacterFromID("Tichingitu"), 0));
 		sld.id = "Tichingitu_Clone";
+		sld.MusketerDistance = 10;
 		ChangeCharacterAddressGroup(sld, PChar.location, "reload", "reload1");
 		sld.Dialog.FileName = "Quest\SantaMisericordia_dialog.c";
 		sld.dialog.currentnode = "Alamida_Tichingitu";
@@ -636,7 +638,7 @@ void SantaMisericordia_HavanaCrypt_5_2(string sQuest)
 
 void SantaMisericordia_HavanaCrypt_6(string sQuest)
 {
-	sld = GetCharacter(NPC_GenerateCharacter("SantaMisericordia_priest", "priest_sp1", "man", "man1", 5, SPAIN, 0, false, "quest"));
+	sld = GetCharacter(NPC_GenerateCharacter("SantaMisericordia_priest", "priest_sp1", "man", "man2", 5, SPAIN, 0, false, "quest"));
 	sld.name = GetConvertStr("Pop_Name", LangFile);
 	sld.lastname = GetConvertStr("Pop_lastname", LangFile);
 	LAi_SetHP(sld, 999.0, 999.0);
@@ -649,6 +651,7 @@ void SantaMisericordia_HavanaCrypt_6(string sQuest)
 	LAi_SetActorType(sld);
 	LAi_ActorFollow(sld, pchar, "", -1);
 	LAi_group_MoveCharacter(sld, "SPAIN_CITIZENS");
+	pchar.questTemp.ISawDiegoDeLanda = sti(pchar.questTemp.ISawDiegoDeLanda) + 1; // встретил Диего де Ланда
 	
 	PlaySound("ambient\jail\jail_door2.wav");
 	DoQuestFunctionDelay("SantaMisericordia_HavanaCrypt_7", 5.0);
@@ -781,6 +784,13 @@ bool Santa_Misericordia_QuestComplete(string sQuestName, string qname)
 		locCameraTarget(PChar);
 		locCameraFollow();
 		LAi_SetPlayerType(pchar);
+		if (sti(pchar.questTemp.ISawDiegoDeLanda) == 2)
+		{
+			SetQuestHeader("SixCaptains");
+			AddQuestRecord("SixCaptains", "1");
+			AddQuestUserData("SixCaptains", "sSex", GetSexPhrase("","а")); 
+			CloseQuestHeader("SixCaptains");
+		}
 	}
 	
 	else if (sQuestName == "SantaMisericordia_Sluhi") {

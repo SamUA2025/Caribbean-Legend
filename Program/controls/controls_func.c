@@ -767,7 +767,48 @@ void Process_Controls(string ControlName)
 			if(locCameraEnableFree) Log_info("FreeCam On. Press TAB");
 			else Log_info("FreeCam Off");
 		break;
-        // boal <--
+		// boal <--		
+		// sith работа с ветром -->
+		case "WindAngleIncrease": // смена угла ветра +
+			if(bBettaTestMode && bSeaActive && !bAbordageStarted)
+			{
+				Weather.Wind.Angle = stf(Weather.Wind.Angle) + 0.1;
+				pchar.wind.angle = Weather.Wind.Angle;
+				fWeatherAngle = stf(Weather.Wind.Angle);
+				WhrCreateSeaEnvironment();
+			}
+		break;
+
+		case "WindAngleDecrease": // смена угла ветра -
+			if(bBettaTestMode && bSeaActive && !bAbordageStarted)
+			{
+				Weather.Wind.Angle = stf(Weather.Wind.Angle) - 0.1;
+				pchar.wind.angle = Weather.Wind.Angle;
+				fWeatherAngle = stf(Weather.Wind.Angle);
+				WhrCreateSeaEnvironment();
+			}
+		break;
+
+		case "WindIncrease": // смена силы ветра +
+			if(bBettaTestMode && bSeaActive && !bAbordageStarted)
+			{
+				Weather.Wind.Speed = stf(Weather.Wind.Speed) + 1.0;
+				pchar.wind.speed = Weather.Wind.Speed;
+				fWeatherSpeed = stf(Weather.Wind.Speed);
+				WhrCreateSeaEnvironment();
+			}
+		break;
+
+		case "WindDecrease": // смена силы ветра -
+			if(bBettaTestMode && bSeaActive && !bAbordageStarted)
+			{
+				Weather.Wind.Speed = stf(Weather.Wind.Speed) - 1.0;
+				pchar.wind.speed = Weather.Wind.Speed;
+				fWeatherSpeed = stf(Weather.Wind.Speed);
+				WhrCreateSeaEnvironment();
+			}
+		break;
+		// <--
 	}
 }
 

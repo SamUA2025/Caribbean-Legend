@@ -107,21 +107,21 @@ void FillMapForTreasure(ref item)
     item.MapIslId   = GetIslandForTreasure();
     item.MapLocId   = GetLocationForTreasure(item.MapIslId);
     item.MapBoxId   = GetBoxForTreasure(item.MapIslId, item.MapLocId);
-    if (!CheckAttribute(Pchar, "GenQuest.TreasureBuild") && rand(15) == 1)
-        item.MapTypeIdx = -1; // Подделка 6.25%
-    else // TO_DO: Для TreasureBuild можно особые описания добавить
-        item.MapTypeIdx = rand(2); // Описание из MapDescribe.txt
     DeleteAttribute(item, "BoxTreasure");
 
-    // Legendary edition - Новая система кладов
-    if (sti(item.MapTypeIdx) != -1)
+    if (!CheckAttribute(Pchar, "GenQuest.TreasureBuild") && rand(15) == 1)
     {
+        item.MapTypeIdx = -1; // Подделка 6.25%
+    }
+    else
+    {
+        // Legendary edition - Новая система кладов
         FillBoxForTreasure(item); // Всё тут
         DeleteAttribute(Pchar, "GenQuest.TreasureBuild");
         Pchar.quest.SetTreasureFromMap.win_condition.l1          = "location";
         Pchar.quest.SetTreasureFromMap.win_condition.l1.location = item.MapLocId;
         Pchar.quest.SetTreasureFromMap.win_condition             = "SetTreasureFromMap";
-		Pchar.GenQuest.Treasure.Vario = rand(5); // Определяем событие
+		Pchar.GenQuest.Treasure.Vario = rand(5); // Определяем событие (33% скип)
 		locations[FindLocation(item.MapLocId)].DisableEncounters = true;
     }
 }
@@ -161,7 +161,6 @@ string GetRandEnabledItem(aref aTier, string sType)
     aref aType, aItem;
     makearef(aType, aTier.(sType));
     int i, num = GetAttributesNum(aType);
-    if(num == 0 && sType == "Quest") return ""; //не осталось квестовых
     DeleteAttribute(&TEV, "RandItem"); //типа динамический массив
     for(i = 0; i < num; i++)
     {
@@ -194,16 +193,7 @@ string GetRandEnabledItem(aref aTier, string sType)
 
     // Рандомим и выкидываем из пулла
     sItem = GetAttributeValue(GetAttributeN(aItem, rand(numItems-1)));
-    if(CheckAttribute(&Render, "SingleTreasure." + sItem))
-    {
-        for(i = 1; i <= 15; i++)
-        {
-            sTemp = "T" + i;
-            DeleteAttribute(&Render, sTemp + "." + sType + "." + sItem);
-        }
-        DeleteAttribute(&Render, "SingleTreasure." + sItem);
-    }
-    else
+    if(!CheckAttribute(&Render, "SingleTreasure." + sItem))
     {
         for(i = 1; i <= 15; i++)
         {
@@ -213,9 +203,11 @@ string GetRandEnabledItem(aref aTier, string sType)
         }
     }
     // Уникальные предметы, которые нужно генерировать
-    if(sType == "Equip" && IsGenerableItem(sItem))
+    if(sType == "Equip")
     {
-        sItem = GetGeneratedItem(sItem);
+        CheckTreasureDeletion(sItem, "Equip");
+        if(IsGenerableItem(sItem))
+            sItem = GetGeneratedItem(sItem);
     }
     return sItem;
 }
@@ -229,14 +221,15 @@ void FillBoxForTreasure(ref item)
     if(!CheckAttribute(PChar, "Statistic.Treasure"))
         PChar.Statistic.Treasure = 0;
 
-    // Определяем тир (15 отрезков в диапазоне от 3 до 680)
+    // Определяем тир (15 отрезков в диапазоне от 3 до 692)
     iTier += GetCharacterSkill(PChar,SKILL_FORTUNE)*3;                //Везение (min 1)
-    iTier += iClamp(0, 12, sti(PChar.Statistic.Treasure))*25;         //Количество найденных кладов
-    if(CheckAttribute(PChar,"GenQuest.TreasureBuild")) iTier += 80;   //Сборная карта
-    if(CheckCharacterPerk(PChar,"HT2")) iTier += MakeInt(iTier*0.25); //Счетовод
-    iTier = iClamp(0, 14, iTier/46);    // Неполное частное от 0 до 14 (ниже +1 будет от 1 до 15)
+    iTier += iClamp(0, 12, sti(PChar.Statistic.Treasure))*16;         //Количество найденных кладов
+    if(CheckAttribute(PChar,"GenQuest.TreasureBuild")) iTier += 200;  //Сборная карта
+    if(CheckCharacterPerk(PChar,"HT2")) iTier += MakeInt(iTier*0.15); //Счетовод
+    iTier = iClamp(0, 14, iTier/47);    // Неполное частное от 0 до 14 (ниже +1 будет от 1 до 15)
     iTier = GetTresuareTier(iTier + 1); // Среди соседей взять рандомом по весу
-    item.TreasureTier = iTier;
+    item.TreasureTier = iTier;          // Сохраним для ачивки и опыта
+    SetMapDescribe(item, iTier);
 
     sTemp = "T" + iTier;
     makearef(aTier, Render.(sTemp));
@@ -244,8 +237,8 @@ void FillBoxForTreasure(ref item)
     // Заполняем
     int iBonus = 0;
     if(CheckCharacterPerk(PChar,"HT2")) iBonus = 25;
-    FillBoxForNotes(item); //Записки
-    //FillBoxForQuest(item, aTier, iBonus, true);   //Квестовое
+    FillBoxForNotes(item);                        //Записки
+    FillBoxForQuest(item, iTier, iBonus);         //Квестовое
     FillBoxForEquip(item, aTier, iBonus, true);   //Экипировка
     FillBoxForJewelry(item, aTier, iBonus, true); //Ценности
     FillBoxForSpecial(item, aTier, iBonus, true); //Специальные предметы
@@ -278,6 +271,7 @@ void FillBoxForJewelry(ref item, aref aTier, int iBonus, bool bOtherSlots)
     {
         string itmName = GetRandEnabledItem(aTier, "Jewelry");
         item.BoxTreasure.(itmName) = sti(aTier.Jewelry.(itmName).min) + rand(sti(aTier.Jewelry.(itmName).dif));
+        CheckTreasureDeletion(itmName, "Jewelry");
     }
 }
 
@@ -324,6 +318,7 @@ void FillBoxForSpecial(ref item, aref aTier, int iBonus, bool bOtherSlots)
     else
     {
         item.BoxTreasure.(itmName) = sti(aTier.Special.(itmName).min) + rand(sti(aTier.Special.(itmName).dif));
+        CheckTreasureDeletion(itmName, "Special");
     }
 
     if(bOtherSlots)
@@ -331,10 +326,8 @@ void FillBoxForSpecial(ref item, aref aTier, int iBonus, bool bOtherSlots)
         // Половинку карты во второй слот
         if(25 + iBonus > rand(99))
         {
-            if (GetCharacterItem(PChar, "map_part1") == 0)
-                item.BoxTreasure.map_part1 = 1;
-            else if (GetCharacterItem(PChar, "map_part2") == 0)
-                item.BoxTreasure.map_part2 = 1;
+            if (GetCharacterItem(PChar, "map_part1") == 0)      item.BoxTreasure.map_part1 = 1;
+            else if (GetCharacterItem(PChar, "map_part2") == 0) item.BoxTreasure.map_part2 = 1;
         }
         // Остальные три слота
         if(65 + iBonus > rand(99)) FillBoxForSpecial(item, aTier, iBonus, false);
@@ -345,43 +338,35 @@ void FillBoxForSpecial(ref item, aref aTier, int iBonus, bool bOtherSlots)
 
 void FillBoxForNotes(ref item)
 {
-    string itmName = "";
-
-    string notes[TREASURE_NOTES];
-	int i;
-    for(i = 0; i < TREASURE_NOTES; i++) notes[i] = "treasure_note_" + (i+1);
-
-    string storeArray[TREASURE_NOTES];
-    int howStore = 0;
-    string sTemp;
-
-    for (i = 0; i < TREASURE_NOTES; i++)
+    aref aTreasureStories;
+    makearef(aTreasureStories, pchar.questTemp.Treasure_Stories);
+    string sNumb = GetRandomAttrName(aTreasureStories);
+    if(sNumb != "error")
     {
-        sTemp = notes[i];
-        if (!CheckAttribute(PChar, "questTemp.Treasure_Stories." + sTemp) && !CheckCharacterItem(PChar, sTemp))
-        {
-            storeArray[howStore] = sTemp;
-            howStore++;
-        }
+        string box = item.MapBoxId;
+        ref loc = &Locations[FindLocation(item.MapLocId)];
+        loc.(box).treasure_note = sNumb; // Бокс запоминает номер
+        item.BoxTreasure.treasure_note = 1;
+        DeleteAttribute(aTreasureStories, sNumb);
     }
-
-    if (howStore > 0)
-        itmName = storeArray[rand(howStore - 1)];
-
-    if(itmName != "")
-        item.BoxTreasure.(itmName) = 1;
 }
 
-void FillBoxForQuest(ref item, aref aTier, int iBonus, bool bOtherSlots)
+// Вся логика выдачи у каждого квеста своя, это не общий пулл
+// В нужном квесте в нужный момент пишется Render.QuestSlot.(QuestName) = sFuncName
+// Эта функция должна быть в скриптах квеста с параметрами int iTier, int iBonus, ref item
+// Не забыть по надобности (например, сразу же в той же функции или по завершению квеста) удалить QuestSlot.(QuestName) атрибут
+void FillBoxForQuest(ref item, int iTier, int iBonus)
 {
-    string itmName = GetRandEnabledItem(aTier, "Quest");
-    if(itmName == "") return;
-
-    item.BoxTreasure.(itmName) = 1;
-    /*if(bOtherSlots)
+    string func, itmName;
+    aref aQuests;
+    makearef(aQuests, Render.QuestSlot);
+    int qty, num = GetAttributesNum(aQuests);
+    // Обязательно идём сверху вниз! Если в каком-то вызове удалится один из атрибутов, то верхние перенумеруются
+    for(int i = num - 1; i >= 0; i--)
     {
-       
-    }*/
+        func = GetAttributeValue(GetAttributeN(aQuests, i)); 
+        call func(iTier, iBonus, item);
+    }
 }
 
 void SetTreasureBoxFromMap()
@@ -392,14 +377,20 @@ void SetTreasureBoxFromMap()
     aref   arToBox;
     aref   arFromBox;
 
-    if (GetCharacterItem(Pchar, "map_full")>0 )
+    if (GetCharacterItem(Pchar, "map_full") > 0)
     {
-        Log_Info(XI_ConvertString("TreasuresNear"));
+		notification(XI_ConvertString("TreasuresNear"), "Icollection");
         PlaySound("interface\notebook.wav");
-
-        // немного веселой жизни
+        // ОЗК (Пещера)
+        switch (sti(pchar.GenQuest.Treasure.Vario))
+        {
+            case 0: Treasure_SetCaribWarrior();  break;
+            case 1: Treasure_SetBandosWarrior(); break;  
+        }
+        // ДУ (Море)
         if (rand(1) == 0) TraderHunterOnMap();
 		else CoolTraderHunterOnMap();
+        // ОЗК (Бухта)
         if( CheckAttribute(Pchar,"location.from_sea") )
         {
             if (rand(2) == 1) //33%
@@ -407,7 +398,7 @@ void SetTreasureBoxFromMap()
                 Pchar.quest.SetTreasureHunter.win_condition.l1          = "location";
                 Pchar.quest.SetTreasureHunter.win_condition.l1.location = Pchar.location.from_sea;
                 Pchar.quest.SetTreasureHunter.win_condition             = "";
-                Pchar.quest.SetTreasureHunter.function    = "SetTreasureHunter";
+                Pchar.quest.SetTreasureHunter.function = "SetTreasureHunter";
             }
         }
 
@@ -423,14 +414,19 @@ void SetTreasureBoxFromMap()
         CopyAttributes(arToBox, arFromBox);
 
         loc.(box) = Items_MakeTime(GetTime(), GetDataDay(), GetDataMonth(), GetDataYear());
-        loc.(box).Treasure = sti(item.TreasureTier); // признак сокровища в сундуке; запоминаем тир для ачивки
+        loc.(box).Treasure = sti(item.TreasureTier); // признак сокровища в сундуке; запоминаем тир для ачивки и опыта
 
         DeleteAttribute(item, "MapIslId");
         TakeNItems(Pchar, "map_full", -1);
+		if(IsEquipCharacterByArtefact(pchar, "talisman18"))
+		{
+			addArticlesBonus();
+			notification("Вы стали лучше понимать Устав Блэквуда", "LogBook");
+		}
     }
 }
 
-// Погоня за ГГ на карте
+// Обычные ДУ
 void  TraderHunterOnMap()
 {
     // Немного веселой жизни
@@ -462,7 +458,8 @@ void  TraderHunterOnMap()
     Map_CreateWarrior("", sCapId + "1", 8);
 }
 
-void CoolTraderHunterOnMap()//Jason, быстрые ДУ
+// Jason. Быстрые ДУ
+void CoolTraderHunterOnMap()
 {
     ref  sld;
     int  i;
@@ -501,7 +498,7 @@ void SetTreasureHunter(string temp)
 
 	if (chrDisableReloadToLocation) return; // идёт некий другой квест с запретом выхода
 	
-    Pchar.GenQuest.Hunter2Pause            = true;
+    Pchar.GenQuest.Hunter2Pause = true;
     
     j = GetOfficersQuantity(Pchar) + 2;
     
@@ -594,7 +591,7 @@ ref SetFantomSkeletForts(string group, string locator, string enemygroup, string
 string SelectUsualMaps(ref item, ref qMiss) // Выбор обычной неповторяющейся карты
 {	
     string sMap = "";
-    string map[23];
+    string map[MAPS_IN_ATLAS];
     map[0] = "map_jam";
     map[1] = "map_cayman";
     map[2] = "map_barbados";
@@ -619,13 +616,13 @@ string SelectUsualMaps(ref item, ref qMiss) // Выбор обычной неп�
     map[21] = "map_panama";
     map[22] = "map_cumana";
 
-    string storeArray[23];
+    string storeArray[MAPS_IN_ATLAS];
     int howStore = 0;
     string sTemp;
 
     if(qMiss > 0)
     {
-        for (int i = 0; i < 23; i++)
+        for (int i = 0; i < MAPS_IN_ATLAS; i++)
         {
             sTemp = map[i];
             if (!CheckMainHeroMap(sTemp) && !CheckAttribute(item, "BoxTreasure." + sTemp))
@@ -637,7 +634,7 @@ string SelectUsualMaps(ref item, ref qMiss) // Выбор обычной неп�
         qMiss--;
     }
     else
-        howStore = 23; // У игрока на пару с текущим кладом имеются все карты, теперь можно рандомить любую
+        howStore = MAPS_IN_ATLAS; // У игрока на пару с текущим кладом имеются все карты, теперь можно рандомить любую
 
     if (howStore > 0)
         sMap = storeArray[rand(howStore - 1)];
@@ -645,34 +642,158 @@ string SelectUsualMaps(ref item, ref qMiss) // Выбор обычной неп�
     return sMap;
 }
 
-void AddQuestItemToTreasures(string itemID,
-                             int minTier, int maxTier,
-                             int minQty,  int dif,
-                             bool bSingle)
+void SetMapDescribe(ref item, int iTier)
 {
-    if(GetItemIndex(itemID) == -1)
+    ref TEV = &Render;
+    iTier = 1 + ((iTier - 1) / 5); // 1 [1;5], 2 [6;10], 3 [11;15]
+
+    // Описания для составных
+    if(CheckAttribute(PChar, "GenQuest.TreasureBuild"))
     {
-        Log_Info("AddQuestItemToTreasures: BAD IDX FOR ITEM " + itemID + "!");
+        item.MapTypeIdx = 9 + iTier; // 10, 11, 12
         return;
     }
-
-    string sTemp;
-    for(int i = minTier; i <= maxTier; i++)
+    // Описания по тирам (shuffle bag)
+    aref aDesc;
+    string sTemp = "T" + iTier;
+    makearef(aDesc, TEV.TresuareMapDescribe.(sTemp));
+    if(GetAttributesNum(aDesc) == 0) // reload
     {
-        sTemp = "T" + i;
-        Render.(sTemp).Quest.(itemID) = "On";
-        Render.(sTemp).Quest.(itemID).min = minQty;
-        Render.(sTemp).Quest.(itemID).dif = dif;
+        aDesc.v1 = 1;
+        aDesc.v2 = 2;
+        aDesc.v3 = 3;
     }
-    if(bSingle) Render.SingleTreasure.(itemID) = "";
+    sTemp = GetRandomAttrName(aDesc);
+    item.MapTypeIdx = (iTier - 1) * 3 + sti(aDesc.(sTemp)); // 123, 456, 789
+    DeleteAttribute(aDesc, sTemp);
 }
 
-void RemoveQuestItemFromTreasures(string itemID)
+void CheckTreasureDeletion(string sItem, string sType)
 {
-    string sTemp;
-    for(int i = 1; i <= 15; i++)
+    if(CheckAttribute(&Render, "SingleTreasure." + sItem))
     {
-        sTemp = "T" + i;
-        DeleteAttribute(&Render, sTemp + ".Quest." + itemID);
+        string sTemp;
+        for(int i = 1; i <= 15; i++)
+        {
+            sTemp = "T" + i;
+            DeleteAttribute(&Render, sTemp + "." + sType + "." + sItem);
+        }
+        DeleteAttribute(&Render, "SingleTreasure." + sItem);
     }
+}
+
+// Открыли записку из клада
+void Treasure_Stories(string attr)
+{
+    DeleteAttribute(PChar, "Treasure_Stories_Read." + attr);
+	PChar.questTemp.Treasure_Stories = sti(PChar.questTemp.Treasure_Stories) + 1;
+	if(!GetAchievement("ach_CL_141") && sti(PChar.questTemp.Treasure_Stories) == 1)  Achievment_Set("ach_CL_141");
+	if(!GetAchievement("ach_CL_142") && sti(PChar.questTemp.Treasure_Stories) == 32) Achievment_Set("ach_CL_142");
+}
+
+// Записка попала в инвентарь из клада
+// Добавим её в последовательность прочтения, уберём атрибут с сундука
+void TreasureNotesHandler(aref arItm)
+{
+    string attr = arItm.curNumb;
+    PChar.Treasure_Stories_Read.(attr) = attr;
+    ref loc = &Locations[FindLocation(arItm.curLoc)];
+    attr = arItm.curBox;
+    DeleteAttribute(loc, attr + ".treasure_note");
+}
+
+void Treasure_SetCaribWarrior()
+{
+	chrDisableReloadToLocation = true;//закрыть локацию
+	int iRank = 10+sti(pchar.rank)+makeint(MOD_SKILL_ENEMY_RATE)/2;
+	for(int i=1; i<=4; i++)
+	{
+		sld = GetCharacter(NPC_GenerateCharacter("Treasure_carib_"+i, "canib_"+(rand(5)+1), "man", "man", iRank, PIRATE, 1, true, "native"));
+		SetFantomParamFromRank(sld, iRank, true);
+		sld.name = GetIndianName(MAN);
+		sld.lastname = "";
+		LAi_CharacterDisableDialog(sld);
+		GetCharacterPos(pchar, &locx, &locy, &locz);
+		ChangeCharacterAddressGroup(sld, pchar.location, "monsters", LAi_FindNearestFreeLocator("monsters", locx, locy, locz));
+		LAi_SetWarriorType(sld);
+		LAi_group_MoveCharacter(sld, "EnemyFight");
+		LAi_group_SetRelation("EnemyFight", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+		LAi_group_FightGroups("EnemyFight", LAI_GROUP_PLAYER, true);
+		LAi_group_SetCheck("EnemyFight", "OpenTheDoors");
+	}
+}
+
+void Treasure_SetBandosWarrior()
+{
+	chrDisableReloadToLocation = true;//закрыть локацию
+	int iRank = 8+sti(pchar.rank)+makeint(MOD_SKILL_ENEMY_RATE)/2;
+	for(int i=1; i<=4; i++)
+	{
+		sld = GetCharacter(NPC_GenerateCharacter("Treasure_bandos_"+i, "citiz_"+(rand(9)+41), "man", "man", iRank, PIRATE, 1, true, "marginal"));
+		SetFantomParamFromRank(sld, iRank, true);
+		LAi_CharacterDisableDialog(sld);
+		GetCharacterPos(pchar, &locx, &locy, &locz);
+		ChangeCharacterAddressGroup(sld, pchar.location, "monsters", LAi_FindNearestFreeLocator("monsters", locx, locy, locz));
+		LAi_SetWarriorType(sld);
+		LAi_group_MoveCharacter(sld, "EnemyFight");
+		LAi_group_SetRelation("EnemyFight", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+		LAi_group_FightGroups("EnemyFight", LAI_GROUP_PLAYER, true);
+		LAi_group_SetCheck("EnemyFight", "OpenTheDoors");
+	}
+}
+
+void Treasure_SetCaptainWarrior(string qName)
+{
+    ref loc = &Locations[FindLocation(pchar.location)];
+    if(CheckAttribute(loc, "townsack")) return; //fix: Вдруг вышли не в джунгли, а, например, в мастерскую Алексуса?
+
+	string model;
+	int iRank = sti(pchar.rank)+MOD_SKILL_ENEMY_RATE;
+	chrDisableReloadToLocation = true;//закрыть локацию
+	LAi_LocationFightDisable(loc, true);//запретить драться // patch-6
+	for(int i=1; i<=4; i++)
+	{
+		model = "citiz_"+(rand(9)+51);
+		if (i > 1) model = "mercen_"+(rand(29)+1);
+		sld = GetCharacter(NPC_GenerateCharacter("Treasure_sailor_"+i, model, "man", "man", iRank, PIRATE, 1, true, "soldier"));
+		SetFantomParamFromRank(sld, iRank, true);
+		sld.Dialog.Filename = "Hunter_dialog.c";
+		sld.Dialog.currentnode = "TreasureCaptain";
+		sld.greeting = "hunter";
+		if (i > 1) LAi_CharacterDisableDialog(sld);
+		GetCharacterPos(pchar, &locx, &locy, &locz);
+		ChangeCharacterAddressGroup(sld, pchar.location, "goto", LAi_FindFarLocator("goto", locx, locy, locz));
+		LAi_SetActorType(sld);
+		LAi_ActorDialog(sld, pchar, "", -1, 0);
+	}
+}
+
+void Treasure_SetOfficerWarrior(string qName)
+{
+    ref loc = &Locations[FindLocation(pchar.location)];
+    if(CheckAttribute(loc, "townsack")) return; //fix: Вдруг вышли не в джунгли, а, например, в мастерскую Алексуса?
+
+    int iNation = PIRATE;
+	string sTemp = GetCityNameByIsland(Pchar.curIslandId);
+    if(sTemp != "none")   iNation = sti(colonies[FindColony(sTemp)].nation);
+	if(iNation == PIRATE) iNation = drand(3);
+
+	int iRank = sti(pchar.rank)+MOD_SKILL_ENEMY_RATE;
+	chrDisableReloadToLocation = true;//закрыть локацию
+	LAi_LocationFightDisable(loc, true);//запретить драться // patch-6
+	for(int i=1; i<=4; i++)
+	{
+		sTemp = "off_"+NationShortName(iNation)+"_"+(rand(4)+1);
+		if (i > 1) sTemp = "sold_"+NationShortName(iNation)+"_"+(rand(7)+1);
+		sld = GetCharacter(NPC_GenerateCharacter("Treasure_soldier_"+i, sTemp, "man", "man", iRank, PIRATE, 1, true, "soldier"));
+		SetFantomParamFromRank(sld, iRank, true);
+		sld.Dialog.Filename = "Hunter_dialog.c";
+		sld.Dialog.currentnode = "TreasureOfficer";
+		sld.greeting = "patrol";
+		if (i > 1) LAi_CharacterDisableDialog(sld);
+		GetCharacterPos(pchar, &locx, &locy, &locz);
+		ChangeCharacterAddressGroup(sld, pchar.location, "goto", LAi_FindFarLocator("goto", locx, locy, locz));
+		LAi_SetActorType(sld);
+		LAi_ActorDialog(sld, pchar, "", -1, 0);
+	}
 }

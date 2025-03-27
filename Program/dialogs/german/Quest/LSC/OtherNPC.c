@@ -243,7 +243,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "AxelHelper_2":
-			dialog.text = NPCStringReactionRepeat("Ich habe dir bereits alles erzählt. Komm morgen hierher.","Stör mich nicht, Kumpel. Hau ab!","Mach mich nicht wütend, Trottel!","Geh weg!!","Block",1,npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat("Ich habe dir bereits alles erzählt. Komm morgen hierher.","Stör mich nicht, Kumpel. Hau ab!","Mach mich nicht wütend, Trottel!","Geh weg!!","block",1,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Gut.","Ich habe es, ich habe es.","Halt den Mund...","Was?!",npchar,Dialog.CurrentNode);
 			link.l1.go = DialogGoNodeRepeat("exit", "", "", "", npchar, Dialog.CurrentNode);
 		break;

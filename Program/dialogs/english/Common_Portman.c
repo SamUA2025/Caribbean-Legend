@@ -3717,6 +3717,11 @@ void ProcessDialogEvent()
 				link.l1 = "Galleon 'Holy Mercy'.";
 				link.l1.go = "UniqueShips_SantaMisericordia";
 			}
+			if (GetDLCenabled(DLC_APPID_5) && !CheckAttribute(pchar, "questTemp.LadyBeth_InfoPU") && CharacterIsAlive("LadyBeth_cap"))
+			{
+				link.l2 = "Patrol Snow 'Lady Beth'.";
+				link.l2.go = "UniqueShips_LadyBeth";
+			}
 			link.l99 = "I think I know enough.";
 			link.l99.go = "node_2";
 		break;
@@ -3727,6 +3732,15 @@ void ProcessDialogEvent()
 			pchar.questTemp.SantaMisericordia_InfoPU = true;
 			dialog.text = "Holy Mercy was sent by the Escorial from Europe to oversee the Spanish colonies. Its captain, Don Alamida, is a renowned servant of the Spanish crown, a ruthless fighter against corruption and crime, and a zealot of the Catholic faith. Holy Mercy cruises between colonies, starting and ending its journey in Havana, focusing solely on its mission.\nIn each port, Alamida spends several days, sometimes longer. They say during these times he can even be met on the street, but locals aren't particularly eager for such encounters - in Spaniards, the señor instills only fear and awe.\nHoly Mercy has an experienced and loyal crew, personally selected by Alamida. Each sailor is ready to defend their Homeland and captain with their life. They say Don Fernando has ordered that Holy Mercy must never be captured, and there are whispers that should the crew face insurmountable odds at boarding, they would sooner send the ship to the depths than see her boarded.";
 			link.l1 = "Thank you very much.";
+			link.l1.go = "node_2";
+		break;
+		
+		case "UniqueShips_LadyBeth":
+			AddMoneyToCharacter(pchar, -25000);
+			AddQuestRecordInfo("LegendaryShips", "2");
+			pchar.questTemp.LadyBeth_InfoPU = true;
+			dialog.text = "Lady Beth is a true beauty. A miracle of England's maritime genius, commanded by Albert Blackwood, former officer of the royal navy. Indeed, not everyone manages to desert so spectacularly! He left service, killed a brilliant career, and stole a warship - all for treasure hunting!\nAnd not in vain. He's already found enough to buy half of Barbados, but he still wants more. If you meet him at sea - don't even try to intercept him. Too good a ship, and the captain is experienced and cautious. Lately, Blackwood has been frequenting Cayman - digging day and night, working people to death. If you decide to check it out - take no less than sixty men and good firearms... Actually, even that might not be enough\nI hope you know how to shoot, since a company of former marine infantry of Colonel Fox deserted with him. Professionals, nothing like common cutthroats. And never attack him in French ports - he has protection and patrons there, receiving a share of his findings.";
+			link.l1 = "TThank you very much.";
 			link.l1.go = "node_2";
 		break;
 		

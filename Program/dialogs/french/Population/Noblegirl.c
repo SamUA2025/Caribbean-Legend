@@ -53,6 +53,15 @@ void ProcessDialogEvent()
 					DeleteAttribute(link, "l2");
 				}
 				//<== прибыла инспекция на Святом Милосердии
+				//==> Леди Бет в порту города
+				if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_town")
+				{
+					dialog.Text = findLedyBethRumour(npchar);
+					link.l1 = "...";
+					link.l1.go = "exit";
+					DeleteAttribute(link, "l2");
+				}
+				//<== Леди Бет в порту города
 			}
 			else
 			{

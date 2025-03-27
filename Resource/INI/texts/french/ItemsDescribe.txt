@@ -634,6 +634,42 @@ itmdescr_m8_barrel
 Crosse et canon d'un fusil à quatre coups démonté.
 }
 
+itmname_mushket9 {Vieille arquebuse}
+itmdescr_mushket9
+{
+FR: Une arquebuse ancienne mais fiable. Si l'on en croit les récits, Cortés lui-même l'aurait utilisée pour couvrir la jungle de mitraille, semant la terreur parmi les indigènes.
+}
+
+UpgradeStageInfo_mushket9_1 {Elle est en piteux état pour le moment, mais un entretien adéquat et de bons outils peuvent la transformer.}
+
+UpgradeStageInfo_mushket9_2 {After replacing the stock and a good cleaning, it no longer looks like a rusty piece of iron. Now you wouldn't be ashamed to walk down the street with such a weapon on your back.}
+
+UpgradeStageInfo_mushket9_3 {Avec la serrure remplacée, elle commence à ressembler à une arme moderne. Le métal, lubrifié à l'huile d'os, brille au soleil comme si l'arme venait d'être prise des mains du maître.}
+
+
+UpgradeStageInfo_mushket9_4 
+{
+Entre vos mains, cette arme a atteint son apogée - il n'y a tout simplement plus de place pour son développement. La touche finale - un canon élargi - a simplifié et accéléré le chargement, augmentant considérablement l'efficacité. Vous pouvez être fier de vous.
+}
+
+itmname_FirearmStockPart_1 {Crosse et baguette'}
+itmdescr_FirearmStockPart_1
+{
+Une crosse magnifiquement sculptée pour les fusils à l'ancienne et une baguette-écouvillon pour nettoyer le canon. Ils étaient enveloppés dans un tissu de toile et soigneusement placés dans un coin éloigné du reste du contenu du trésor, comme s'ils y avaient été mis sensiblement plus tard.
+}
+
+itmname_FirearmStockPart_2 {Platine et huile d'os}
+itmdescr_FirearmStockPart_2
+{
+Une platine à ressort moderne, des chiffons et un flacon d'huile d'os pour l'entretien des armes, étonnamment adaptés à l'arquebuse trouvée chez Blackwood. Ils étaient également placés dans le trésor séparément des autres objets de valeur.
+}
+
+itmname_FirearmStockPart_3 {Canon et poire à poudre}
+itmdescr_FirearmStockPart_3
+{
+Cet ensemble d'objets accélérera grandement le chargement de toute arme à canon long, mais pour une raison quelconque, vous avez l'impression qu'ils sont mieux utilisés avec cette même arquebuse. Ils étaient emballés dans un petit paquet de papier, évidemment pour les protéger de l'humidité, contrairement à tous les autres objets du trésor.
+}
+
 itmname_grape_mushket {Mortier portable}
 itmdescr_grape_mushket
 {
@@ -1125,7 +1161,9 @@ Aucune pénalité, aucune limite d'activation.
 itmname_talisman17	{Protection "Liber Misericordiae"}
 itmdescr_talisman17
 {
-Un volume des Saintes Écritures, autrefois profondément personnel pour son propriétaire, s'apparente à un journal intime. Alors que beaucoup portent la Bible comme une balise et un guide, ce tome sert littéralement de code d'honneur. Il protège la vie des marins et du capitaine au cours de leurs voyages lointains, offrant une protection particulièrement efficace à bord du "Santa Misericordia"
+Un exemplaire des Écritures Saintes, qui était très personnel pour son propriétaire, presque comme un journal. Beaucoup portent la Bible comme un phare et un guide, mais ce livre est un véritable code d'honneur. 
+Réduit les dégâts subis par l'équipage et le capitaine de 5 %, et à bord de la Sainte Miséricorde, augmente la compétence de défense de 10. 
+Pour révéler le potentiel de cette amulette, il faut emprunter le chemin du juste.
 ~
 Aucune pénalité, aucune limite d'activation.
 }
@@ -1133,6 +1171,19 @@ Aucune pénalité, aucune limite d'activation.
 talisman17_quests{Quêtes de l'Eglise : #dQBonus# / 5}
 
 talisman17_questsNoBonus{Quêtes de l'Eglise : 0 / 5}
+
+itmname_talisman18	{Talisman 'Charte de Blackwood'}
+itmdescr_talisman18
+{
+Le charte personnel d'Albert Blackwood. Il décrit en détail le fonctionnement de la Lady Bet, le positionnement des tireurs et les tactiques des Renards de Mer. Une section séparée est dédiée à la chasse aux trésors et à la récompense des tireurs habiles avec les richesses retrouvées. 
+Chaque trésor trouvé renforce la puissance de la volée de mousquets de l'équipage et augmente les dégâts des fusils de chasse.
+~
+Aucune pénalité, aucune limite d'activation.
+}
+
+talisman18_Bonus{Trésors Découverts : #dQBonus# / 10}
+
+talisman18_NoBonus{Trésors Découverts : 0 / 10}
 
 ; ==================================================================================================================== ТАЛИСМАНЫ
 
@@ -3751,8 +3802,8 @@ itmdescr_alexs_chest
 {
 Boîte métallique du maître Alexus, solidement verrouillée.
 }
-itmname_treasure_note_1	{Note du trésor}
-itmdescr_treasure_note_1
+itmname_treasure_note {Note du trésor}
+itmdescr_treasure_note
 {
 Cette note a été trouvée dans un trésor. Il est fort probable que son auteur ait quitté ce monde depuis longtemps. Son contenu doit être recopié avec soin dans une section spéciale du journal de bord.
 }
@@ -3877,6 +3928,20 @@ itmdescr_key_candlestick_Villemstad
 {
 Un anneau ancien et massif serti d’un rubis. Il semble qu’il doive me servir de clé.
 }
+
+itmname_LadyBeth_Book	{Journal de Blackwood}
+itmdescr_LadyBeth_Book
+{
+Pensées d'un homme misérable.
+}
+
+itmname_LadyBeth_Map	{Carte de Blackwood}
+itmdescr_LadyBeth_Map
+{
+Le chemin vers le trésor le plus précieux du plus grand chasseur de trésors.
+}
+
+
 
 ;====================================== предметы для пиратской линейки ===============================
 

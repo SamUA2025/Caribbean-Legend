@@ -39,7 +39,7 @@ void ProcessDialogEvent()
 	{
 		// ----------------------------------- Диалог первый - первая встреча
 		case "First time":
-            dialog.text = NPCStringReactionRepeat(""+GetSexPhrase("Hast du mir etwas zu sagen? Nein? Dann verschwinde von hier!","Ha, "+pchar.name+"! Hast du Geschäfte mit mir? Nein? Dann stör mich nicht.")+"","Ich denke, ich habe mich klar genug ausgedrückt, hör auf, mich zu nerven.","Obwohl ich mich klar ausgedrückt habe, nervst du mich weiterhin!","Genug, ich habe genug von dieser Unhöflichkeit, raus, Freak.","wiederholen",3,npchar,Dialog.CurrentNode);
+            dialog.text = NPCStringReactionRepeat(""+GetSexPhrase("Hast du mir etwas zu sagen? Nein? Dann verschwinde von hier!","Ha, "+pchar.name+"! Hast du Geschäfte mit mir? Nein? Dann stör mich nicht.")+"","Ich denke, ich habe mich klar genug ausgedrückt, hör auf, mich zu nerven.","Obwohl ich mich klar ausgedrückt habe, nervst du mich weiterhin!","Genug, ich habe genug von dieser Unhöflichkeit, raus, Freak.","repeat",3,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Ich gehe schon.","Sicher, Jackman...","Entschuldigung, Jackman...","Autsch...",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			NextDiag.TempNode = "First time";
@@ -93,7 +93,7 @@ void ProcessDialogEvent()
 		break;
 
         case "I_know_you_good":
-            dialog.text = NPCStringReactionRepeat(GetFullName(pchar)+", Ich freue mich, dich zu sehen! Was willst du?","Was willst du?","Du schon wieder? Belästige Leute nicht, wenn du nichts zu tun hast!","Du bist "+GetSexPhrase("ein guter Freibeuter"," ein braves Mädchen")+", also kannst du vorerst leben. Aber ich möchte nicht mehr mit dir reden.","wiederholen",10,npchar,Dialog.CurrentNode);
+            dialog.text = NPCStringReactionRepeat(GetFullName(pchar)+", Ich freue mich, dich zu sehen! Was willst du?","Was willst du?","Du schon wieder? Belästige Leute nicht, wenn du nichts zu tun hast!","Du bist "+GetSexPhrase("ein guter Freibeuter"," ein braves Mädchen")+", also kannst du vorerst leben. Aber ich möchte nicht mehr mit dir reden.","repeat",10,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Nur einen Besuch abstatten.","Nichts...","Gut, Jackman, es tut mir leid...","Verdammt! Nun, wie du sagst...",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			NextDiag.TempNode = "I_know_you_good";

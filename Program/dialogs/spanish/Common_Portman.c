@@ -3697,6 +3697,11 @@ void ProcessDialogEvent()
 				link.l1 = "Galeón 'Santa Misericordia'.";
 				link.l1.go = "UniqueShips_SantaMisericordia";
 			}
+			if (GetDLCenabled(DLC_APPID_5) && !CheckAttribute(pchar, "questTemp.LadyBeth_InfoPU") && CharacterIsAlive("LadyBeth_cap"))
+			{
+				link.l2 = "Galeota de patrulla 'Lady Beth'.";
+				link.l2.go = "UniqueShips_LadyBeth";
+			}
 			link.l99 = "Creo que sé lo suficiente.";
 			link.l99.go = "node_2";
 		break;
@@ -3705,7 +3710,16 @@ void ProcessDialogEvent()
 			AddMoneyToCharacter(pchar, -25000);
 			AddQuestRecordInfo("LegendaryShips", "1");
 			pchar.questTemp.SantaMisericordia_InfoPU = true;
-			dialog.text = "La Santa Misericordia fue enviada por el Escorial desde Europa para supervisar las colonias españolas. Su capitán, Don Alamida, es un renombrado servidor de la corona española, un luchador despiadado contra la corrupción y el crimen, y un fanático de la fe católica. La Santa Misericordia navega entre las colonias, comenzando y terminando su viaje en La Habana, enfocándose únicamente en su misión.\nEn cada puerto, Alamida pasa varios días, a veces más tiempo. Dicen que durante estos tiempos incluso se le puede encontrar en la calle, pero los locales no están particularmente ansiosos por tales encuentros - en los españoles, el señor solo infunde miedo y asombro.\nLa Santa Misericordia tiene una tripulación experimentada y leal, seleccionada personalmente por Alamida. Cada marinero está listo para defender su Patria y a su capitán con su vida. Dicen que Don Fernando ha ordenado que la Santa Misericordia nunca debe ser capturada, y se rumorea que si la tripulación se enfrenta a probabilidades insuperables al ser abordados, preferirían enviar el barco a las profundidades antes que verla abordada.";
+			dialog.text = "La Santa Misericordia fue enviada por el Escorial desde Europa para supervisar las colonias españolas. Su capitán, Don Alamida, es un renombrado servidor de la corona española, un luchador despiadado contra la corrupción y el crimen, y un fanático de la fe católica. La Santa Misericordia navega entre las colonias, comenzando y terminando su viaje en La Habana, enfocándose únicamente en su misión\nEn cada puerto, Alamida pasa varios días, a veces más tiempo. Dicen que durante estos tiempos incluso se le puede encontrar en la calle, pero los locales no están particularmente ansiosos por tales encuentros - en los españoles, el señor solo infunde miedo y asombro.\nLa Santa Misericordia tiene una tripulación experimentada y leal, seleccionada personalmente por Alamida. Cada marinero está listo para defender su Patria y a su capitán con su vida. Dicen que Don Fernando ha ordenado que la Santa Misericordia nunca debe ser capturada, y se rumorea que si la tripulación se enfrenta a probabilidades insuperables al ser abordados, preferirían enviar el barco a las profundidades antes que verla abordada.";
+			link.l1 = "Muchas gracias.";
+			link.l1.go = "node_2";
+		break;
+		
+		case "UniqueShips_LadyBeth":
+			AddMoneyToCharacter(pchar, -25000);
+			AddQuestRecordInfo("LegendaryShips", "2");
+			pchar.questTemp.LadyBeth_InfoPU = true;
+			dialog.text = "El 'Lady Beth' es una auténtica belleza. Una maravilla del genio naval británico, al mando está Albert Blackwood, un exoficial de la Royal Navy. ¡No todos logran desertar de una forma tan espectacular! Abandonó el servicio, arruinó su brillante carrera y robó un buque de guerra, todo por la caza de tesoros.\nY no fue en vano. Ya ha encontrado tanto que podría comprar la mitad de Barbados, pero nunca tiene suficiente. Si te lo encuentras en el mar, ni se te ocurra intentar interceptarlo. Su barco es demasiado bueno, y el capitán es experimentado y cauteloso. Últimamente, Blackwood visita con frecuencia las Islas Caimán, donde excava día y noche, llevando a sus hombres al límite\nSi decides ir a investigar, lleva al menos 60 hombres y buenas armas de fuego... Aunque quizás ni eso baste. Espero que sepas disparar, porque con él desertó una compañía entera de exmarines del coronel Fox. Profesionales, muy por encima de los matones comunes\nY nunca lo ataques en puertos franceses - tiene protección y mecenas que comparten sus hallazgos.";
 			link.l1 = "Muchas gracias.";
 			link.l1.go = "node_2";
 		break;

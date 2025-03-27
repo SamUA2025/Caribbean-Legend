@@ -88,7 +88,7 @@ void ProcessDialogEvent()
 				link.l1.go = "patria_x29";
 				break;
 			}
-            dialog.text = NPCStringReactionRepeat(""+GetSexPhrase("Hast du mir etwas zu sagen? Nein? Dann lass mich in Ruhe!","Ha, "+pchar.name+"! Hast du irgendwelche Geschäfte mit mir? Nein? Dann stör mich nicht.")+"","Ich dachte, ich habe mich klar ausgedrückt... Ich habe dir gesagt, dass du gehen sollst, aber du nervst mich immer noch!","Also gut, ich habe genug von dieser Unhöflichkeit.","wiederholen",3,npchar,Dialog.CurrentNode);
+            dialog.text = NPCStringReactionRepeat(""+GetSexPhrase("Hast du mir etwas zu sagen? Nein? Dann lass mich in Ruhe!","Ha, "+pchar.name+"! Hast du irgendwelche Geschäfte mit mir? Nein? Dann stör mich nicht.")+"","Ich dachte, ich habe mich klar ausgedrückt... Ich habe dir gesagt, dass du gehen sollst, aber du nervst mich immer noch!","Also gut, ich habe genug von dieser Unhöflichkeit.","repeat",3,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Ich gehe schon.","Sicher, Marcus...","Entschuldigung, Marcus...","Ups...",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			NextDiag.TempNode = "First time";
@@ -237,7 +237,7 @@ void ProcessDialogEvent()
 				link.l2 = "Ich habe Seide zu verkaufen.";
 				link.l2.go = "Mtraxx_silktrade";
 			}
-            dialog.text = NPCStringReactionRepeat(GetFullName(pchar)+", froh dich zu sehen! Was brauchst du diesmal, Kumpel?","Was willst du?","Wieder? Belästige die Leute nicht, wenn du nichts zu tun hast!","Du bist ein "+GetSexPhrase("guter Freibeuter","braves Mädchen")+", also kannst du vorerst leben. Aber ich will nicht mehr mit dir reden.","wiederholen",10,npchar,Dialog.CurrentNode);
+            dialog.text = NPCStringReactionRepeat(GetFullName(pchar)+", froh dich zu sehen! Was brauchst du diesmal, Kumpel?","Was willst du?","Wieder? Belästige die Leute nicht, wenn du nichts zu tun hast!","Du bist ein "+GetSexPhrase("guter Freibeuter","braves Mädchen")+", also kannst du vorerst leben. Aber ich will nicht mehr mit dir reden.","repeat",10,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Wollte dich nur sehen.","Nichts.","Gut, Marcus, es tut mir leid.","Verdammt, es tut mir wirklich leid, Marcus!",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			NextDiag.TempNode = "I_know_you_good";

@@ -783,17 +783,10 @@ void Location_CharacterFireShard()
 	if(stf(enemy.chr_ai.hp) < 1.0 && enemy.chr_ai.group == LAI_GROUP_PLAYER) 
 		enemy.chr_ai.hp = 5;
 	LAi_CheckKillCharacter(enemy);
-	string func = attack.chr_ai.type;
-	if(func == "") return;
-	func = "LAi_type_" + func + "_Fire";
-	call func(attack, enemy, 1.0, true);
-	LAi_group_UpdateTargets(enemy);
-	func = enemy.chr_ai.type;
-	if(func == "") return;
-	func = "LAi_type_" + func + "_Attacked";
-	call func(enemy, attack);
-	func = "LAi_type_" + enemy.chr_ai.type + "_CharacterUpdate";
-	call func(enemy, 0.0001);
+	
+	string sIdx = enemy.index;
+	string sAttr = "t" + sIdx;
+	attack.chr_ai.grapeshot_target.(sAttr) = sIdx;
 }
 
 #event_handler("Location_CharacterFireShardEnd","Location_CharacterFireShardEnd");
@@ -801,7 +794,6 @@ void Location_CharacterFireShardEnd()
 {
 	string sBullet, sGunPowder, sType, weaponID;
 	aref attack = GetEventData();
-	aref enemy = GetEventData();
 	
 	//Rosarak. Чем стреляли?
 	if(!CharUseMusket(attack))
@@ -864,4 +856,32 @@ void Location_CharacterFireShardEnd()
 	
 	if(CheckAttribute(attack, "chr_ai.explosion" ) && sti(attack.chr_ai.explosion) > 0)
 		PlayStereoSound("Sea Battles\cannon_fire_03.wav");
+	
+	// закрываем все открытые цели
+	if(!CheckAttribute(attack, "chr_ai.grapeshot_target"))
+		return;
+	aref targets, target;
+	ref chr;
+	int idx;
+	string func;
+	makearef(targets, attack.chr_ai.grapeshot_target);
+	int n = GetAttributesNum(targets);
+	for(int i = n-1; i>=0; i--)
+	{
+		target = GetAttributeN(targets, i);
+		idx = sti(GetAttributeValue(target));
+		chr = GetCharacter(idx);
+		func = attack.chr_ai.type;
+		if(func == "") return;
+		func = "LAi_type_" + func + "_Fire";
+		call func(attack, chr, 1.0, true);
+		LAi_group_UpdateTargets(chr);
+		func = chr.chr_ai.type;
+		if(func == "") return;
+		func = "LAi_type_" + func + "_Attacked";
+		call func(chr, attack);
+		func = "LAi_type_" + chr.chr_ai.type + "_CharacterUpdate";
+		call func(chr, 0.0001);
+		DeleteAttribute(targets, GetAttributeName(target));
+	}
 }

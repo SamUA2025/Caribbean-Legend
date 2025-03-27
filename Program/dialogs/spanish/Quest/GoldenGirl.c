@@ -1496,7 +1496,7 @@ void ProcessDialogEvent()
 			}
 			else
 			{
-				dialog.text = "¿Un capitán famoso, dices? Nunca he oído hablar de ti… ¿Qué vas a beber?";
+				dialog.text = "¿Un capitán famoso, dices? Nunca he oído hablar de ti... ¿Qué vas a beber?";
 			}
 			link.l1 = "...";
 			if (pchar.questTemp.GoldenGirl.Vine == "red") link.l1.go = "Angerran_1";

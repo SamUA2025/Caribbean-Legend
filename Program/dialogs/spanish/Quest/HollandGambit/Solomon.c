@@ -111,7 +111,7 @@ void ProcessDialogEvent()
 
 //-----------------------------------------------За Голландию-----------------------------------
 		case "SolomonBonanza":
-			PlaySound("Voice\English\hambit\Solomon Shneur-03.wav");
+			PlaySound("Voice\Spanish\hambit\Solomon Shneur-03.wav");
 			dialog.text = "¿Y qué quieres de mí? ¿Acaso parezco un hombre que sabe algo? ¿Cómo podría saber en un día tan olvidado por Dios exactamente dónde había una parcela de tierra con bienes y oro listo para ser tomado? ¡Imagínate cómo cualquiera de los gentiles por ahí caminando por las calles quiere engañar a un judío como yo y quitarme mi dinero!\nHay una isla. No hay un solo hombre allí, excepto Abi y yo. Ninguno. Nadie en absoluto. Había una gruta en el medio de ella. Puse mi cofre allí para salvarlo de ese pirata goyim Amalec. ¡Un cofre lleno de oro, ni un chisme entre él! ¡Lo arrastré todo el camino desde el Viejo País! Todo lo que había ganado con el sudor de mi frente está allí. Además, el cráneo de mi abuelo... Créeme, esa cosa nos salvó, sí-sí\n¡Oh-ho-ho, es un talismán antiguo cargado con magia talmúdica! ¡Dios nos salve de Amalec! ¡Oy vey, es difícil empezar de nuevo en esta era de los gentiles! ¡Ojalá lo supieras, joven! ¡Oh, ojalá lo supieras!";
 			link.l1 = "¿De qué demonios estás balbuceando, lunático? No importa. Lo resolveré por mi cuenta. ¡Adiós!";
 			link.l1.go = "SolomonBonanza_1";
@@ -249,7 +249,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Solomon_history":
-			PlaySound("Voice\English\hambit\Solomon Shneur-03.wav");
+			PlaySound("Voice\Spanish\hambit\Solomon Shneur-03.wav");
 			dialog.text = "¿Cómo se ve? Es solo una isla sin gente, solo yo y Abigail. Allí escondí mi cofre, para evitar que ese pirata goy Amalek lo tome. Todo lo que había ganado honestamente con el sudor de mi frente está en ese cofre...";
 			link.l1 = "Dime, Salomón, ¿acaso podrías recordar el nombre del fluyt del que hablaba tu hija? ¿Y cómo se llamaba su capitán?";
 			link.l1.go = "Solomon_history_1";

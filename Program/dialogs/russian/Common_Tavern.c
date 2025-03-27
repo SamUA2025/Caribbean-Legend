@@ -391,6 +391,13 @@ void ProcessDialogEvent()
                 }
                 else
                 {
+					if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_tavern") // Блеквуд в городе
+					{
+						Dialog.text = "Капитан, сегодня в таверне ни души. Все желающие ушли с капитаном Блэквудом.";
+						link.l1 = "Эх, жаль!";
+						link.l1.go = "exit";
+						break;
+					}
 					if (CheckAttribute(NPChar, "CrewHired.PGGId") && GetNpcQuestPastDayParam(NPChar, "CrewHired") < 3 && GetCrewQuantity(rColony) == 0)
 					{
 						Dialog.text = "Извините, но сейчас нет никого. Все ушли с отважным кэпом " + GetFullName(CharacterFromID(NPChar.CrewHired.PGGId)) + ".";
@@ -990,6 +997,21 @@ void ProcessDialogEvent()
 				dialog.text = "Сейчас комната занята, " + GetAddress_Form(NPChar) + ", ничем не могу помочь.";
 				link.l1 = "Жаль, очень жаль...";
 				link.l1.go = "exit";
+				break;
+			}
+			if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_tavern") // Блеквуд в городе
+			{
+				Dialog.text = "Увы, нет, капитан. Все комнаты заняты Блэквудом и его людьми.";
+				if (CheckAttribute(pchar, "questTemp.LadyBeth_TavernRoomDialog"))
+				{
+					link.l1 = "Эх, жаль!";
+					link.l1.go = "exit";
+				}
+				else
+				{
+					link.l1 = "Все комнаты? А тут больше одной комнаты?";
+					link.l1.go = "LadyBeth_Room";
+				}
 				break;
 			}
 			//-->> квест официантки
@@ -1746,6 +1768,21 @@ void ProcessDialogEvent()
 			link.l1 = "Что нового или интересного нынче слышно в городе?";
 			link.l1.go = "rumours_tavern";
 		break;
+		
+		// Леди Бет -->
+		case "LadyBeth_Room":
+			dialog.text = "Он платит втрое против обычной цены, так что... сами понимаете. Да и отказывать ему не рекомендую - у него тяжёлый характер. Особенно в последнее время.";
+			link.l1 = "А что с ним такое?";
+			link.l1.go = "LadyBeth_Room_2";
+		break;
+		
+		case "LadyBeth_Room_2":
+			dialog.text = "Одержимость, вот что. Сначала он был щедрым, добрым парнем. Его матросы сорили деньгами в тавернах, покупали подарки девушкам. Настоящий праздник начинался, когда 'Леди Бет' заходила в порт. А теперь? Теперь они только закупают провизию и набирают людей в команду без разбора. Как будто не моряки нужны им, а только рабочие руки. Да что там, сами можете с ним поговорить.";
+			link.l1 = "Может и зайду. Спасибо.";
+			link.l1.go = "exit";
+			pchar.questTemp.LadyBeth_TavernRoomDialog = true;
+		break;
+		// Леди Бет <--
 	}
 }
 

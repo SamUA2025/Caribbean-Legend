@@ -182,6 +182,15 @@ void ProcessDialogEvent()
 				link.l1.go = "FMQG_x";
 				break;
 			}
+			// Леди Бет -->
+			if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_Bank" && !CheckAttribute(pchar, "questTemp.LadyBeth_Usurer")) // Блеквуд в городе
+			{
+				dialog.Text = "О, капитан! Прошу, посмотрите, что у меня есть сегодня. Некоторые вещи я приобрел у людей Блэквуда. Им нужны деньги на новую экспедицию, а нам с вами - выгода, верно?";
+				link.l1 = "Блэквуд знает, что его люди продают находки?";
+				link.l1.go = "LadyBeth_Usurer_1";
+				break;
+			}
+			// Леди Бет <--
 			
 			if(NPChar.quest.meeting == "0")
 			{
@@ -2692,6 +2701,22 @@ void ProcessDialogEvent()
 			link.l1 = "Ладно.";
 			link.l1.go = "exit";
 		break;
+		
+		// Леди Бет -->
+		case "LadyBeth_Usurer_1":
+			dialog.text = "Конечно! Многие хотят просто получить свои деньги и уйти. Особенно, учитывая последние слухи...";
+			link.l1 = "Какие слухи?";
+			link.l1.go = "LadyBeth_Usurer_2";
+		break;
+		
+		case "LadyBeth_Usurer_2":
+			dialog.text = "Говорят, условия в команде всё хуже. Месье Блэквуд даже стал допускать регулярные потери - чего раньше никогда не было. Но это не моё дело. Я просто продаю товар.";
+			link.l1 = "...";
+			link.l1.go = "next";
+			npchar.quest.item_date = "LadyBeth";
+			pchar.questTemp.LadyBeth_Usurer = true;
+		break;
+		// Леди Бет <--
 	}	
 }
 

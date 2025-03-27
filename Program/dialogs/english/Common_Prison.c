@@ -1076,9 +1076,19 @@ void ProcessDialogEvent()
 					link.l1.go = "Node_3";
 				break;
 				case 4:
-					dialog.text = "Goddammit... How could that be? It cannot be!";
-					link.l1 = "What's up, mate? Where is the treasure? Don't tell me there is none!";
-					link.l1.go = "Node_4";
+                    ok = GetCharacterItem(pchar, "map_full") == 0 && GetCharacterItem(PChar, "map_part2") == 0;
+                    if(GetCharacterItem(PChar, "map_part1") > 0 && !ok) // Первая половинка есть, но вторую дать нельзя
+                    {
+                        dialog.text = "Listen, I've checked everything, but found no treasure. A pity it turned out this way. Someone must have dug it out before us.";
+                        link.l1 = "And how can that be?!";
+                        link.l1.go = "PrisonerInPlace_1";
+                    }
+                    else
+                    {
+                        dialog.text = "Goddammit... How could that be? It cannot be!";
+                        link.l1 = "What's up, mate? Where is the treasure? Don't tell me there is none!";
+                        link.l1.go = "Node_4";
+                    }
 				break;
 			}
 		break;
@@ -1156,14 +1166,7 @@ void ProcessDialogEvent()
 		break;
 			
 		case "Node_4_2":
-			if (CheckCharacterItem(pchar, "map_part1"))
-			{
-				GiveItem2Character(pchar, "map_part2");
-			}
-			else
-			{
-				GiveItem2Character(pchar, "map_part1");
-			}
+			AddMapPart();
 			dialog.text = "Of course, take it. Captain, release me... please? I really thought that the treasure was there. Perhaps, you'll figure out, where it is, and take it for yourself. I beg you.";
 			link.l1 = "I see... Indeed, it's hard to figure anything out by that scrap. A second half of the map is needed. Alright, get lost. I can see now it was not your fault.";
 			link.l1.go = "PrisonerInPlace_4";

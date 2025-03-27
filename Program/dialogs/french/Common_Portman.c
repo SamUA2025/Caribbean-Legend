@@ -3697,6 +3697,11 @@ void ProcessDialogEvent()
 				link.l1 = "Galion 'Sainte Miséricorde'.";
 				link.l1.go = "UniqueShips_SantaMisericordia";
 			}
+			if (GetDLCenabled(DLC_APPID_5) && !CheckAttribute(pchar, "questTemp.LadyBeth_InfoPU") && CharacterIsAlive("LadyBeth_cap"))
+			{
+				link.l2 = "Senau de patrouille 'Lady Beth'.";
+				link.l2.go = "UniqueShips_LadyBeth";
+			}
 			link.l99 = "Je pense que j'en sais assez.";
 			link.l99.go = "node_2";
 		break;
@@ -3706,6 +3711,15 @@ void ProcessDialogEvent()
 			AddQuestRecordInfo("LegendaryShips", "1");
 			pchar.questTemp.SantaMisericordia_InfoPU = true;
 			dialog.text = "Sainte Miséricorde a été envoyée par l'Escorial d'Europe pour superviser les colonies espagnoles. Son capitaine, Don Alamida, est un serviteur renommé de la couronne espagnole, un combattant impitoyable contre la corruption et le crime, et un zélote de la foi catholique. Sainte Miséricorde navigue entre les colonies, commençant et terminant son voyage à La Havane, se concentrant uniquement sur sa mission.\nDans chaque port, Alamida passe plusieurs jours, parfois plus. On dit que pendant ces périodes, il peut même être rencontré dans la rue, mais les habitants ne sont pas particulièrement désireux de telles rencontres - en Espagnols, le señor inspire seulement peur et révérence.\nSainte Miséricorde a un équipage expérimenté et loyal, personnellement sélectionné par Alamida. Chaque marin est prêt à défendre leur Patrie et capitaine avec leur vie. On dit que Don Fernando a ordonné que Sainte Miséricorde ne doit jamais être capturée, et il se murmure que si l'équipage devait faire face à des chances insurmontables lors d'un abordage, ils préfèreraient envoyer le navire par le fond plutôt que de la voir abordée.";
+			link.l1 = "Merci beaucoup.";
+			link.l1.go = "node_2";
+		break;
+		
+		case "UniqueShips_LadyBeth":
+			AddMoneyToCharacter(pchar, -25000);
+			AddQuestRecordInfo("LegendaryShips", "2");
+			pchar.questTemp.LadyBeth_InfoPU = true;
+			dialog.text = "'Lady Beth' est une vraie beauté. Un chef-d'oeuvre du génie naval britannique, sous le commandement d'Albert Blackwood, ancien officier de la Royal Navy. Peu de gens réussissent une telle désertion avec autant d'éclat ! Il a quitté le service, ruiné une brillante carrière et volé un navire de guerre - tout ça pour chasser des trésors !\nEt il a eu raison. Il en a déjà trouvé assez pour acheter la moitié de la Barbade, mais cela ne lui suffit jamais. Si vous le croisez en mer - n'essayez même pas de l'intercepter. Son navire est excellent, et le capitaine est expérimenté et prudent. Dernièrement, Blackwood fréquente souvent les Caïmans - il y creuse jour et nuit, épuisant ses hommes jusqu'à la mort\nSi vous décidez d'enquêter - prenez au moins 60 hommes et de bonnes armes à feu... Cela pourrait ne pas suffire.J'espère que vous savez tirer, car une compagnie d'anciens marines du colonel Fox a déserté avec lui. Des professionnels, bien supérieurs aux simples bandits. Et ne l'attaquez jamais dans les ports français - il y a des protections et des mécènes qui partagent ses découvertes.";
 			link.l1 = "Merci beaucoup.";
 			link.l1.go = "node_2";
 		break;

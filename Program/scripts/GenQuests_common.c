@@ -147,17 +147,13 @@ string GenQuestCommon_GenerateItem()
 	if(rand(1) == 0) itm = GenQuest_GeneratePrize();
 	else
 	{
-		if(rand(1) == 0 )
+		if(rand(1) == 0)
 		{
-			if (GetCharacterItem(pchar, "map_full") == 0) 
-			{
-				if (GetCharacterItem(pchar, "map_part1") == 0) { itm = "map_part1"; }
-				else
-				{
-					if (GetCharacterItem(pchar, "map_part2") == 0) { itm = "map_part2"; }
-					else itm = GenQuest_GenerateGoodBlade();
-				}
-			} 					
+            if (GetCharacterItem(pchar, "map_part1") == 0)
+                itm = "map_part1";
+            else if (GetCharacterItem(pchar, "map_full") == 0 && GetCharacterItem(pchar, "map_part2") == 0)
+                itm = "map_part2";
+            else itm = GenQuest_GenerateGoodBlade();					
 		}
 		else itm = GenQuest_GenerateGoodBlade();
 	}

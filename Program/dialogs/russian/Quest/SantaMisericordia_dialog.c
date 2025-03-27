@@ -517,8 +517,17 @@ void ProcessDialogEvent()
 		
 		case "Alamida_monah":
 			dialog.text = "Любопытно... Что привело дитя божье в это место... упокоения?";
-			link.l1 = "Я...";
-			link.l1.go = "Alamida_monah_2";
+			if (sti(pchar.questTemp.ISawDiegoDeLanda) == 1)
+			{
+				link.l1 = "Я...";
+				link.l1.go = "Alamida_monah_2";
+			}
+			else
+			{
+				link.l1 = "Я... Постойте! Мы уже встречались!";
+				link.l1.go = "Alamida_monah_Second_2";
+			}
+			
 		break;
 		
 		case "Alamida_monah_2":
@@ -589,7 +598,9 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Alamida_monah_11":
-			dialog.text = "То, что он был всего лишь... первым.";
+			if (sti(pchar.questTemp.ISawDiegoDeLanda) == 1) sStr = "первым";
+			if (sti(pchar.questTemp.ISawDiegoDeLanda) == 2)	sStr = "вторым";
+			dialog.text = "То, что он был всего лишь... " + sStr + ".";
 			link.l1 = "...";
 			link.l1.go = "Alamida_monah_12";
 		break;
@@ -603,6 +614,54 @@ void ProcessDialogEvent()
 			sld.lifeday = 0;
 			LAi_CharacterDisableDialog(sld);
 			LAi_group_MoveCharacter(sld, "SPAIN_CITIZENS");
+		break;
+		
+		case "Alamida_monah_Second_2":
+			dialog.text = "Знаете, что особенного в этом склепе? Здесь покоятся две души, связанные... узами крови. Отец и сын де Аламида. Один пал от рук грешников, другой... Хм, нашёл свой путь к Господу.";
+			link.l1 = "Вы служите в местном приходе? Вы знали дона Фернандо?";
+			link.l1.go = "Alamida_monah_Second_3";
+		break;
+		
+		case "Alamida_monah_Second_3":
+			dialog.text = "Я... наблюдал его путь. А эта книга, что вы забрали. Знаете, что в ней особенного?";
+			link.l1 = "Она выглядит старой.";
+			link.l1.go = "Alamida_monah_Second_4";
+		break;
+		
+		case "Alamida_monah_Second_4":
+			dialog.text = "У неё богатая история, и вы поступите мудро, если пожертвуете немного сил служению Братьям во Христе, нося её под сердцем. Но интересно не это.";
+			link.l1 = "В прошлый раз вы говорили загадками. Сейчас тоже будете?";
+			link.l1.go = "Alamida_monah_Second_5";
+		break;
+		
+		case "Alamida_monah_Second_5":
+			dialog.text = "\nНастоящая загадка стоит сейчас передо мной. Вы собрали много интересных... реликвий. Библия. Устав. Вам нравится собирать такие вещи? Вы коллекционер?";
+			link.l1 = "Откуда вы знаете про устав?";
+			link.l1.go = "Alamida_monah_Second_6";
+		break;
+		
+		case "Alamida_monah_Second_6":
+			dialog.text = "Охотник за трофеями?";
+			link.l1 = "Я повторяю свой вопрос: откуда вы знаете про устав?";
+			link.l1.go = "Alamida_monah_Second_7";
+		break;
+		
+		case "Alamida_monah_Second_7":
+			dialog.text = "Любитель острых ощущений?";
+			link.l1 = "...";
+			link.l1.go = "Alamida_monah_Second_8";
+		break;
+		
+		case "Alamida_monah_Second_8":
+			dialog.text = "\nА. Ну конечно. Разумеется. Что же, капитан, не буду вас задерживать.";
+			link.l1 = "Постойте-ка, святой отец. Вы всё ещё не ответили на мой вопрос.";
+			link.l1.go = "Alamida_monah_Second_9";
+		break;
+		
+		case "Alamida_monah_Second_9":
+			dialog.text = "О, капитан. Я не могу. Иногда ответы ранят сильнее любого невежества. Идите с миром. И берегите свою коллекцию... трофеев. Они могут пригодиться в путешествии, которое вам предстоит.";
+			link.l1 = "...";
+			link.l1.go = "Alamida_monah_9";
 		break;
 		
 		//замечение по обнажённому оружию

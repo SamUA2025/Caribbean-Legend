@@ -231,7 +231,7 @@ Chad.
 Carta explicativa de Giuseppe Fazio
 #TEXT	1
 ... el mensaje a Dodson lo escribí exclusivamente bajo la presión del antiguo contramaestre y esa loca chica, Mary. Sus argumentos fueron convincentes: el cañón de una pistola apuntándome a la cara. Aún si fuera más joven no habría podido resistirme, me vi obligado a someterme y convertirme en parte de su vil plan...
-... Chad y Mary han reunido a su alrededor a un pequeño grupo de simpatizantes que creen que Shark debe morir. Cuando Dodson venga a mi camarote a medianoche, ellos lo atacarán en masa, sin darle ninguna oportunidad. ¡Señor, ten misericordia del alma del almirante!...
+... Chad y Mary han reunido a su alrededor a un pequeño grupo de simpatizantes que creen que Shark debe morir. Cuando Dodson venga a mi camarote a medianoche, ellos lo atacarán en masa, sin darle ninguna oportunidad. ¡Señor, ten misericordia del alma del almirante!
 ... No quiero participar en esta locura. No me importa quién gane esta lucha, Kapper es una serpiente peligrosa y probablemente no dejará a ningún testigo con vida. Incluso si el almirante sobrevive, supongo que no mostrará misericordia por el pobre Giuseppe. Por eso dejaré esta carta aquí, deseando que los hombres del almirante la encuentren. Estoy fuera del juego, me esconderé en un lugar donde no me encuentren ni Kapper, ni su bruja, ni el almirante. Me quedaré ahí un tiempo hasta que este desastre se termine...
 
 #QUEST	Letter_valet
@@ -325,10 +325,10 @@ Diario de Archibald Colhaun - Extractos seleccionados
 ... han pasado meses y no ha pasado ni una sola vela. Hice una hoguera en la cima de la colina para poder encenderla tan pronto viera algún barco. Pero, ¿y si fuera un buque español? En ese caso, encontraría mi muerte en manos de la inquisición...
 ... la construcción de mi vivienda está en marcha... Me las arreglé para hacer una choza decente. Me protegerá bien del Sol, el viento y la lluvia...
 ... Cada mañana voy a pescar. A veces consigo grandes capturas con un arpón que he hecho yo mismo. Hoy tuve una buena pelea con un tiburón. Estuvo cerca de comerse al bueno de Archie, pero mis manos hicieron milagros, ahora será Archie quien se coma al tiburón. Su carne es deliciosa, pero daría todo mi dinero por un poco de cerdo y una cerveza...
-... mi casa está lista. Clavé el cráneo del tiburón en la entrada como trofeo de caza. ¡Eh, daría todo el oro del mundo por un barril de whisky!...
+... mi casa está lista. Clavé el cráneo del tiburón en la entrada como trofeo de caza. ¡Eh, daría todo el oro del mundo por un barril de whisky!
 ... hoy se han cumplido un año y medio desde que puse pie en la tierra de La Isla del Cangrejo. Ya me he acostumbrado a mi vida de ermitaño. Pero no pierdo la esperanza de volver al gran mundo, aunque sea muy ilusoria: en este año y medio no he visto ni un solo barco...
 ... ¡Veo velas! ¡Gracias a Dios, velas! Y el buque parece británico. ¡No son españoles! Mi hoguera está preparada e intentaré hacer tanto humo como pueda...
-... ¡Creo que se han dado cuenta! El barco se dirige hacia la isla. Ya veo la bandera inglesa ondeando en el palo mayor. ¡Están bajando un bote! ¡Estoy salvado!...
+... ¡Creo que se han dado cuenta! El barco se dirige hacia la isla. Ya veo la bandera inglesa ondeando en el palo mayor. ¡Están bajando un bote! ¡Estoy salvado!
 ... es imposible... ¡es Willy Patterson! ¡Mi viejo amigo y compatriota, el escocés Willy! Las lágrimas se acumulan en los ojos del viejo Colhaun cuando, después de dos años de silencio, escucha su lengua materna...
 ... me quedaré sirviendo a Willy para siempre. Después de todo, si no fuera por él, habría pasado el resto de mis días en esta isla desierta. Ya tuve suficiente con mis aventuras, tesoros misteriosos, amuletos indios y hermanos beligerantes de la Orden de Jesús. Empiezo una nueva vida en la que no habrá lugar para todo eso. Y me despido del último recuerdo de mi antigua vida: la misteriosa brújula arrebatada al desafortunado indio. Que este maldito artilugio, con el que comenzaron todos mis problemas, permanezca para siempre en esta isla desolada. No traerá más desgracias a nadie. Dejo la brújula en mi cabaña: un objeto inútil y sin valor para nadie, que solo trae pesar a su dueño...
 ... estoy dejando atrás La Isla del Cangrejo. Su colina verde casi ha desaparecido en el horizonte. Recordaré su ubicación para siempre: 16 grados Norte, 71 grados Oeste. Pero dudo que mis pies la pisen otra vez...
@@ -347,9 +347,9 @@ Diario del 'Santa Quiteria', últimas páginas
 ... hemos explorado la orilla y la bahía. La isla es desconocida y está deshabitada. Pero eso no es lo peor, este lugar es espeluznante y la tormenta nunca para. Parece que el Sol nunca brilla aquí. Es un lugar maldito...
 ... Los tesoros de los Itza se han salido de la bodega y fueron arrastrados a la playa por todas partes. Hemos sacado algunos del agua. Los acantilados nos impiden rodear la bahía y el único camino nos conduce a una cueva inundada. Hay un agujero que se interna dentro de una cueva submarina, aunque nadie es lo suficientemente valiente para explorarlo...
 ... dos marineros no han vuelto de la bahía al anochecer. Hemos encontrado sus cadáveres en la gruta, asesinados con una espada. ¿Quién podría haberlo hecho? No vimos ni el más mínimo indicio de vida en este lugar sombrío. Enterramos a los marineros allí mismo y comenzamos a organizar la vigilancia por las noches.
-... los misteriosos asesinatos siguen ocurriendo, tres hombres en tres días. Son víctimas de algún carnicero invisible con una espada. La gente está asustada. No hay posibilidad de escapar de esta isla. ¡Señor, ten piedad de nosotros!...
+... los misteriosos asesinatos siguen ocurriendo, tres hombres en tres días. Son víctimas de algún carnicero invisible con una espada. La gente está asustada. No hay posibilidad de escapar de esta isla. ¡Señor, ten piedad de nosotros!
 ... ¡Este lugar está maldito! En toda mi vida nunca he sentido un terror como este. Estaba preparado para todo, ¡pero esto! Los asesinados por el carnicero vuelven y atacan a los sobrevivientes. Estamos quemando los cuerpos...
-... nuestras oraciones no fueron escuchadas, estamos en pánico. ¡Maldito Miguel Dichoso, todo es por tu culpa! ¡Estoy seguro de que no es una coincidencia!...
+... nuestras oraciones no fueron escuchadas, estamos en pánico. ¡Maldito Miguel Dichoso, todo es por tu culpa! ¡Estoy seguro de que no es una coincidencia!
 ... una noche de pesadilla, finalmente vimos al asesino nocturno. Es un enorme esqueleto con una gran espada y mata a cualquier hombre de uno o dos golpes, nuestros cuchillos y balas no le hacen ningún daño. ¡Es absolutamente invencible! Es inútil intentar luchar contra él. Nuestro contramaestre, tres marineros y yo nos retiramos al mar y nos refugiamos en el casco del Santa Quiteria. En la costa se escucharon durante horas los terribles gritos de los hombres mientras eran asesinados...
 ... los muertos dominan la costa. Los asesinados por el esqueleto cobran vida y deambulan por toda la playa, emitiendo sonidos ininteligibles y esparciendo el olor de la carne en descomposición. Estamos encerrados dentro de la bodega del barco, escuchando los pasos de ese monstruo gigante y los ruidos de muertos vivientes en la cubierta superior...
 ... el contramaestre se ha vuelto completamente loco. Ha utilizado las cosas de Tayasal para hacer algún tipo de altar pagano. Está histérico, llamando a dioses indios o demonios, no lo entiendo. Los marineros están sentados en las esquinas escuchando a ese loco gritando...
@@ -565,7 +565,7 @@ Requiere la habilidad 'Alquimia'.
 #TEXT mangarosapower
 Poción de Golpe de Marea
 ***********************
-Una poción única hecha con la extraña planta Mangarosa, según la receta de Amelia, aumenta la potencia, resistencia y las habilidades en batalla. El efecto dura 2 días.
+Una poción única hecha con la extraña planta Mangarosa, según la receta de Amelia, aumenta la potencia, resistencia y la destreza en batalla. El efecto dura 2 días.
 
 Agregue unas pocas hojas de Mangarosa, ipecacuanha y raíz de jengibre en un frasco de cobre. Añada una pinta de ron y déjelo reposar durante unas horas. Luego agregue tres perlas pequeñas, un ámbar y calentar a fuego lento. Después enfríe el líquido, cuélelo y selle la botella.
 
@@ -577,7 +577,7 @@ Requiere la habilidad 'Alquimia'.
 #TEXT mangarosafast
 Poción de Squall
 ****************
-Una poción única hecha de la rara planta Mangarosa, según la receta de Amelia, aumenta la reacción, agudiza los sentidos y las habilidades en la batalla. El efecto dura 2 días.
+Una poción única hecha de la rara planta Mangarosa, según la receta de Amelia, aumenta la reacción, agudiza los sentidos y la destreza en batalla. El efecto dura 2 días.
 
 Añadir algunas hojas de Mangarosa, Verbena y guaraná en una jarra de plata. Añadir un poco de vino, dos perlas grandes y un ámbar. Dejar reposar un par de horas, colar el líquido y sellar la botella.
 
@@ -589,7 +589,7 @@ Requiere la habilidad 'Alquimia'.
 #TEXT mangarosatotal
 Poción de Abrazo del Mar
 ************************
-Una poción única hecha con la rara planta Mangarosa, según la receta de Amelia, incrementa la potencia, resistencia, reacción, agudeza de los sentidos, el liderazgo, diplomacia, la suerte y las habilidades de combate. El efecto dura 2 días.
+Una poción única hecha con la rara planta Mangarosa, según la receta de Amelia, incrementa la potencia, resistencia, reacción, agudeza de los sentidos, el liderazgo, diplomacia, la suerte y la destreza en combate. El efecto dura 2 días.
 
 Añadir un poco del follaje de la Mangarosa a la taza. Añadir una poción curativa, dos perlas grandes, tres perlas pequeñas, una pieza de ámbar azul y calentar a fuego lento. Después enfriamos el líquido, lo colamos en una botella limpia y la sellamos.
 
@@ -867,19 +867,19 @@ Res ipsa loquitur - La cosa habla por sí sola
 Sapienti sat - Para el sabio, la palabra es suficiente
 Scientia potentia est - El conocimiento es poder
 Sine ira et studio - Sin enojo ni pasión
-Si vis pacem para bellum - Si quieres la paz, prepárate para la guerra
-Sol lucet omnibus - El sol brilla para todos
-Suum cuique - A cada uno lo suyo
-Tempora mutantur - Los tiempos cambian
-Tertium non datur - Queda excluido un tercero
+Si vis pacem para bellum. Si quieres la paz, prepárate para la guerra
+Sol lucet omnibus. El sol brilla para todos
+Suum cuique. A cada uno lo suyo
+Tempora mutantur. Los tiempos cambian
+Tertium non datur. Queda excluido un tercero
 Ultima ratio - El último argumento
-Una hirundo non facit ver - Una golondrina no hace a la primavera
-Usus est optimus magister - La experiencia es el mejor maestro
-Ut salutas, ita salutaberis - Como saludas, serás saludado.
-Vae victis - ¡Ay de los vencidos!										  
-Veni, vidi, vici - Vine, vi, vencí
-Viribus unitis - Fuerzas unidas
-Vita sine libertate, nihil - La vida sin libertad no es vida
+Una hirundo non facit ver. Una golondrina no hace a la primavera
+Usus est optimus magister. La experiencia es el mejor maestro
+Ut salutas, ita salutaberis. Como saludas, serás saludado.
+Vae victis. ¡Ay de los vencidos!										  
+Veni, vidi, vici. Vine, vi, vencí
+Viribus unitis. Fuerzas unidas
+Vita sine libertate, nihil. La vida sin libertad no es vida
 
 #QUEST	Wolfreek_Journal
 Fragmentos del diario de Wulfric Johannsen
@@ -1071,14 +1071,14 @@ Las piedras víbora tienden a desaparecer con frecuencia y parece que no tengo s
 Tutorial: En el mar
 #TEXT	1
 El muelle es el corazón de cualquier puerto. Yo solía navegar en el pasado, así que déjame que te cuente más cosas sobre navegación.
-En primer lugar, recuerda lo más importante: ¡ni se te ocurra gobernar un barco si no tienes suficientes puntos en tu habilidad de navegación! Si no cumples este requisito, tus otras habilidades se resentirán, y también las de tus oficiales.
+En primer lugar, recuerda lo más importante: ¡ni se te ocurra gobernar un barco si no tienes suficientes puntos en tu habilidad de navegación! Si no cumples este requisito, el resto de destrezas se resentirán, y también las de tus oficiales.
 Lucharás peor, dispararás peor, comerciarás peor, etc. Eso significa que si intentas gobernar un buque de guerra con tu habilidad de navegación actual, no llegarás muy lejos y el barco se manejará como una gran bañera de madera.
 De momento, puedes manejar una tartana o un barco largo. Pero puedes -y debes- contratar a un navegante. Normalmente se encuentran en las tabernas junto con otros mercenarios.
 Comprueba siempre primero su nivel de habilidad. Si no es lo suficientemente alto para tu barco, experimentarás los mismos problemas que he mencionado antes.
 ************************************************************
 El rango de la nave lo determina. Por ejemplo, tengo experiencia suficiente (45 puntos) para controlar un buque de 4º rango sin penalizaciones. Los bergantines, barquichuelos, filibotes, jabeques y corbetas requieren más, por lo que no podré utilizarlos correctamente. Y no hablamos de barcos de segundo rango, como las fragatas y galeones pesados.
 En cuanto a los gigantescos navíos de línea o los Man Of War... sólo los expertos en navegación pueden controlar semejantes monstruos. Se necesitan años para dominar la habilidad y no hay que olvidar el dinero. Un acorazado y su tripulación pueden vaciarte la cartera en un mes si no eres tan rico como el mismísimo rey Luis.
-Cuida tus puestos de oficial. Un contramaestre entrena a tu tripulación y hace que el abordaje sea más eficaz, un contable realizará las actividades financieras en tu lugar y librará tu barco de ratas. El médico cura a tus hombres heridos y reduce el número de los que mueren en batalla, un carpintero repara cualquier daño causado al barco y los vanguardias te salvan el pellejo cuando los piratas empiezan a pulular por tu cubierta. Presta atención a las habilidades de los candidatos y a su reputación.
+Cuida tus puestos de oficial. Un contramaestre entrena a tu tripulación y hace que el abordaje sea más eficaz, un contable realizará las actividades financieras en tu lugar y librará tu barco de ratas. El médico cura a tus hombres heridos y reduce el número de los que mueren en batalla, un carpintero repara cualquier daño causado al barco y los vanguardias te salvan el pellejo cuando los piratas empiezan a pulular por tu cubierta. Presta atención a la destreza de los candidatos y a su reputación.
 ************************************************************
 Todo hombre tiene una, te muestra tal y como eres en realidad.
 Si eres un hombre honorable y siempre intentas hacer el bien, busca oficiales que compartan tus ideales. Y si quieres ser pirata... bueno, ya te haces una idea. La gente honrada no trabajará para la escoria y viceversa.
@@ -1086,7 +1086,7 @@ Hablemos ahora de los tipos de barcos. Hay dos tipos: Los mercantes y los buques
 El ángulo fuera de la proa determina cómo se ve afectado el aparejo por el viento y en qué rumbo el barco alcanzará la mejor velocidad de la que es capaz. Una vez en el mar, busca la flecha en el minimapa; ése será tu ángulo de proa.
 ************************************************************
 A continuación, su tripulación. Usted y su barco no son nada sin los hombres que lo tripulan. Todo marinero debe saber hacer tres cosas: manejar los aparejos, los cañones y luchar. Cada nación destaca en una de estas tres actividades. Por ejemplo, España tiene los mejores vanguardias del mundo, además de llevan armadura. La metralla, los tajos y las puñaladas no son tan eficaces contra ellos. Me refiero a las armas cortas, a los cañonazos de metralla les importan un bledo las corazas.
-Visita las tabernas de España, Inglaterra y Francia si quieres formar una tripulación de ensueño. Vigila la moral de tus hombres, proporciónales ron, putas y monedas con regularidad. Hazlo, y tus hombres morirán por ti. Si no lo haces, se amotinarán. Un profesional motivado vale más que diez novatos en un combate. Además, no te olvides de un médico, o desarrolla tus propias habilidades en medicina para evitar bajas extra.
+Visita las tabernas de España, Inglaterra y Francia si quieres formar una tripulación de ensueño. Vigila la moral de tus hombres, proporciónales ron, putas y monedas con regularidad. Hazlo, y tus hombres morirán por ti. Si no lo haces, se amotinarán. Un profesional motivado vale más que diez novatos en un combate. Además, no te olvides de un médico, o desbloquea tus propias ventajas en medicina para evitar bajas extra.
 Ahora unas palabras sobre las batallas navales. El Caribe es peligroso, está plagado de patrullas españolas y piratas, así que al final te enfrentarás a ellos en mar abierto.
 ************************************************************
 Los cañones de las naves utilizan cuatro tipos de munición: Balas de cañón, metralla, balas encadenadas y bombas.
@@ -1105,13 +1105,13 @@ Tutorial: En tierra
 #TEXT	1
 Las puertas de la ciudad conducen directamente a la selva del interior de la isla, la última frontera de la civilización. De día, están vigiladas por dos soldados que controlan a todos los que entran en la ciudad. Por la noche, no están de servicio. Por lo tanto, hay dos formas de entrar.
 En primer lugar, se puede echar el ancla en el puerto y desembarcar en el muelle. En segundo lugar, si quieres ser sigiloso, puedes desembarcar en alguna otra bahía o costa de la isla y viajar a través de la jungla hasta las puertas de la ciudad.
-A veces tendrás que visitar colonias españolas, recuerda que estamos en guerra con los españoles, así que ni se te ocurra entrar en su puerto sin izar la bandera española; de lo contrario, el fuerte abrirá fuego inmediatamente y convertirá tu barco en astillas. Necesitas dominar habilidades especiales y actuar con cautela para adentrarte en asentamientos hostiles. Debes saber que la única forma de echar el ancla con seguridad en puertos españoles es aprender una habilidad llamada 'izar la bandera española o holandesa".
+A veces tendrás que visitar colonias españolas, recuerda que estamos en guerra con los españoles, así que ni se te ocurra entrar en su puerto sin izar la bandera española; de lo contrario, el fuerte abrirá fuego inmediatamente y convertirá tu barco en astillas. Necesitas dominar ventajas especiales y actuar con cautela para adentrarte en asentamientos hostiles. Debes saber que la única forma de echar el ancla con seguridad en puertos españoles es aprender una habilidad llamada 'izar la bandera española o holandesa".
 ************************************************************
 Aprender estos trucos requiere tiempo y experiencia. 'Izar la bandera' no significa simplemente izar algún trapo amarillo y rojo, sino llevar a cabo diversas medidas de enmascaramiento para pasar desapercibido. La probabilidad de éxito del engaño depende del nivel de tu habilidad de sigilo, de tu clase y del número de barcos de tu flota. ¡Es fácil hacer que una sola balandra pequeña parezca un navío español, pero no se puede decir lo mismo de cinco fragatas armadas hasta los dientes! Si no consigues engañar a los guardias del fuerte y a los oficiales del puerto, deberías considerar la posibilidad de colarte por las puertas de la ciudad, como he mencionado antes. Espera a la noche para evitar a los guardias y entrar. Evita a los soldados que patrullan por la ciudad, sobre todo por la noche. Busca una taberna, descansa allí hasta la mañana y ocúpate de tus asuntos. No luches contra los soldados si te encuentran, corre a una casa vacía para perderlos y espera media hora. Esto hará que dejen de perseguirte. ¿A qué es Astuto, verdad? Si no estás para esas bravuconadas, compra una licencia de comercio a los holandeses. Te evitará la molestia de escabullirte por territorio hostil y te permitirá navegar libremente.
 La licencia comercial es un documento que puedes conseguir en la sede de la Honorable Compañía Holandesa de las Indias Occidentales, situada en Willemstad (Curaçao). Es una señal de tus intenciones pacíficas y te permitirá entrar en cualquier puerto hasta que expiren los plazos. Pero tiene algunos inconvenientes. En primer lugar, la Compañía tiene normas y exigencias especiales que cualquier capitán dispuesto a comprar la licencia debe cumplir. Segundo, cuesta mucho. Y el último y peor, sigues necesitando la cualificación "izar bandera" para desembarcar en puertos hostiles. De lo contrario, los cañones pesados del fuerte te dispararán en cuanto te vean.
 ************************************************************
 Permítame enseñarle algunos consejos sobre esgrima.
-Hay tres tipos de armas blancas: ligero, medio y pesado. Cada tipo requiere diferentes habilidades y destrezas para dominarlos, por lo que tendrás que aprenderlos por separado y además cada clase tiene sus ventajas e inconvenientes.
+Hay tres tipos de armas blancas: ligero, medio y pesado. Cada tipo requiere diferentes destrezas para lograr dominarlos, por lo que tendrás que aprenderlos por separado y además cada clase tiene sus ventajas e inconvenientes.
 Las armas ligeras, incluidos los floretes y estoques, requieren poca energía, pero son las que menos daño infligen.
 Un arma pesada, como un hacha, puede matar de un solo golpe, aunque agotará tu energía rápidamente y puede que tengas que descansar entre golpe y golpe.
 Las armas medias, como los sables o los alfanjes, son el término medio, ya que combinan un buen peso con un buen potencial de daño. Tienes a tu disposición varios movimientos y trucos de esgrima: ataque rápido, ataque de tajo, ataque pesado y ataque en grupo. También puedes parar, fintar y bloquear.
@@ -1182,7 +1182,7 @@ En cada puerto, Alamida pasa varios días, a veces más. Dicen que durante esas 
 La Santa Misericordia cuenta con una tripulación experimentada y leal, seleccionada personalmente por Alamida. Cada marinero está dispuesto a defender a su Patria y a su capitán con su vida. Dicen que Don Fernando ha ordenado que La Santa Misericordia nunca sea capturado, y les susurra que si la tripulación se enfrentara a dificultades insuperables en el abordaje, preferirían enviar el barco a las profundidades antes que verlo abordado.
 
 #QUEST StoriesTreasures
-Истории, найденные в кладах
+Cuentos de tesoros
 #TEXT	1
 ************************************************************
 Este botín me pertenece a mí, el futuro capitán de la barquentina San Sebastián. Si soy yo quien está leyendo esto, no lo olvides: Miguel te debe dinero, y probablemente aún no te lo ha pagado.
@@ -1271,42 +1271,119 @@ Si resto la parte de Gaston por el soplo, la paga de la tripulación y el soborn
 Henry, hemos conseguido un poco más de botín. Sabes qué hacer con él. 
 
 Pero no lo metas todo en un solo banco. Si el enemigo llega al pueblo, nos quedamos sin nuestro dinero y estoy demasiado viejo para lanzarme de nuevo al abordaje con un cuchillo entre los dientes. Ocúpate tú mismo de ello: después de lo que pasó en Bluevelde, Anderson no está en sus cabales. Es muy probable que pierda la cabeza y gaste toda nuestra ganancia en su absurda venganza. Se lo he dicho cien veces, que lo hecho, hecho está, pero se niega a escuchar. No confío en él.
-
+#TEXT	19
+************************************************************
+13 de Abril.
+Recibí un encargo extraño de un portugués hoy. Los portugueses en el Caribe son tan escasos como dientes en gallina, y éste me pidió un montón de baratijas nativas. La paga ofrecida es buena, así que acepto el trabajo.
+2 de Mayo.
+Entregué el primer lote de amuletos. Pago recibido según lo prometido. Este negocio parece ser bastante lucrativo, así que seguiré con ello.
+28 de Mayo.
+Segunda entrega completada, pago completo. No tengo ni idea de los verdaderos orígenes de Merriman, pero sus bolsillos son profundos y sus ambiciones aún más. Quedamos en encontrarnos en 2 meses en un lugar oculto - nada menos que el cementerio de La Habana. Suena siniestro, pero es mejor que perseguir deudores por la espesura de la selva. Todas las ganancias futuras de esta empresa serán escondidas justo aquí.
+#TEXT	20
+************************************************************
+Ed, ¡he dado con oro en esta! Lo que ves en este escondite ni siquiera es un tercio de mi botín de un solo viaje. Compartir este mapa del tesoro contigo nos deja en paz.
+Escucha con atención - al norte del Continente Español, encajado entre Cuba y Florida, hay un asentamiento increíble construido sobre los restos de innumerables naufragios. Barcos extraños, algunos tan antiguos que podrían haber transportado a nuestros abuelos. Todos ellos encallaron y se fusionaron como la pesadilla de un carpintero loco. Y Ed, ¡allí VIVE gente, almas que respiran de verdad! El lugar rebosa de objetos de valor, y los intercambian simplemente por comida. Pregunta a los contrabandistas en La Habana si no me crees.
+Ya he hecho fortuna con esto. Date prisa antes de que alguien más lo huela.
+#TEXT	21
+************************************************************
+Diario de navegación del bergantín "Rapid".
+19 de Junio.
+Asaltamos aguas de Trinidad, nos cruzamos con un convoy mercante español con escolta ligera. Resuelto sin derramamiento de sangre, botín modesto adquirido.
+24 de Junio. 
+Patrullamos la ruta comercial Willemstad-Blueveld. Aguas vacías excepto por un peculiar navío con colores desconocidos avistado en el horizonte.
+18 de Julio.
+Cazando cerca de las aguas de Willemstad, tropezamos con una patrulla holandesa. Durante nuestra huida, encontramos de nuevo ese mismo barco misterioso. Pensamos que estábamos atrapados entre la espada y la pared, pero curiosamente, los holandeses parecían temerlo tanto como nosotros. Nos escabullimos en la confusión.
+3 de Agosto.
+Empiezo a sospechar que este barco fantasma fondea en algún lugar cerca de Curazao. Avistado de nuevo, esta vez logré un reconocimiento más cercano. El primer oficial insiste en marcas portuguesas, pero sigo escéptico - los portugueses no tienen nada que hacer en estas aguas. He ordenado rastreos costeros del Continente.
+12 de Septiembre.
+Empieza a emerger un patrón. Este navío aparece aproximadamente dos veces al año, frecuenta el triángulo entre Trinidad, Curazao y el Continente durante varios meses, luego desaparece como la niebla matutina.
+8 de Octubre.
+El barco fantasma ya no está a la vista. Parece haber abandonado completamente las aguas del Caribe. La tripulación está cansada de esta caza infructuosa, así que hemos alterado el rumbo hacia el norte, a las Antillas Menores. Quizás encontremos allí presas más dignas con bolsas más pesadas.
+#TEXT	22
+************************************************************
+Roger, lee con atención y sigue estas instrucciones al pie de la letra.
+Un loco cazatesoros británico ha estado husmeando por el Caribe. Si ves casacas rojas con palas, corre como si el mismo diablo te pisara los talones - no muestran piedad a los rivales. Vacía todos nuestros escondites, reúne todo lo de valor, y luego dirígete a Antigua donde nuestro hombre espera - ya he hecho los arreglos. Perderemos algo de oro en el lavado, pero el resto saldrá limpio como un silbido. Mantente en territorios británicos - ese tal Blackwood no se atreverá a mostrar su cara allí. Puedes operar sin mirar por encima del hombro. No tengo idea de qué rencor le guardan, pero su navío solo atraca en puertos franceses.
+#TEXT	23
+************************************************************
+Jan, si estás leyendo esto, entonces has de saber - mi venganza sigue sin cumplirse, incluso aquí en el Caribe. Nuestra presa no está aquí. El recuerdo de la espada de mi padre se desvanece en mi mente, y el rostro de nuestro enemigo se difumina en la sombra.
+Hemos pasado por mucho juntos, viejo amigo, pero mi ira sigue indómita. Si hubiera previsto las consecuencias, habría buscado la paz con mayor vigor. Quizás menos almas habrían cruzado el umbral final. Dile a Teresa que aún la amo y he mantenido mis votos, aunque nunca sobreviviré al viaje de regreso. Este cofre contiene todo lo que he ganado a través de sangre y acero, aunque el sabor del confort ocioso hace tiempo que se convirtió en cenizas. Quizás tú puedas saborearlo aún.
+I.
+#TEXT	24
+************************************************************
+René, el Caribe se vuelve más traicionero cada día. Pronto nuestra clase no encontrará puerto aquí. Tú y yo fuimos de los primeros en oír sobre el nuevo escuadrón de Cromwell, liderado por su joya de la corona - el Victory. Pretenden domar estas islas salvajes y poner a los holandeses en su sitio, pero mi instinto me dice que esto acabará mal para todos los involucrados.
+Hay más - los franceses no se quedarán atrás de sus vecinos del Canal. Un verdadero monstruo ha salido de los astilleros de Brest, bautizado con el nombre de uno de sus reyes. No puedo garantizar todo lo que he oído, pero hablan de una fortaleza flotante como nunca antes se ha visto, y navega hacia estas aguas pronto.
+Es hora de tirar nuestras cartas, me parece. Tu parte de nuestra última empresa yace dentro de este cofre. Me dirijo a mis costas natales, y te sugiero encarecidamente que hagas lo mismo.
+Martin.
+#TEXT	25
+************************************************************
+Reid, desenterré toda la historia sobre ese tal Alonso. El bastardo de sangre fría sirvió bajo el Capitán Vane a bordo del "Xenon" y antes de eso pasó años como verdugo profesional. Eso explica sus habilidades mortales y esa mirada heladora que congela hasta tu médula. Se rumoreaba que había colgado su sable para siempre, pero ha sido visto ocasionalmente en puertos caribeños, siguiendo a algún joven capitán impulsivo. Mantente alerta y vigila tu espalda.
+#TEXT	26
+************************************************************
+Lucas, Artois y Mode, este cofre contiene vuestro pago adelantado por el último encargo del Sr. Rodenburg. Un nuevo jugador del viejo Europa ha aparecido en nuestras costas, se hace llamar Gascon. A pesar de su reciente llegada, ya ha armado bastante revuelo y pisoteado los intereses de varios caballeros influyentes.
+Vuestras órdenes son recopilar cada fragmento de información sobre él e informar mensualmente, por turnos. Mismo punto de encuentro que antes.
+Adjunto tres copias detallando su apariencia y el nombre de su navío. Se le avista con mayor frecuencia alrededor de las Antillas Menores.
+#TEXT	27
+************************************************************
+Karl, esto es pura locura. Mi asalto a la residencia de Muscovite en Basse-Terre ha sido frustrado dos veces ya, y ambas porque algún borracho decidió probar suerte en el peor momento posible. Pero este último fiasco desafía toda creencia - mientras preparaba la emboscada, un nativo torpe irrumpió en la casa. Apenas logré salvar mi pellejo, el patán armó tal escándalo que los guardias inundaron el lugar casi al instante. Estos problemas son tuyos para resolver ahora. Tu pago adelantado y compensación por el trabajo chapuceado están en el cofre.
+#TEXT	28
+************************************************************
+Querido diario, he dado otro paso hacia el verdadero poder. ¡Diez mil! Diez mil doblones exigidos por alguna deidad olvidada de la selva. Para alguien que se autodenomina "Inmortal", es notablemente tacaño - después de incontables siglos, uno pensaría que habría superado la necesidad de moneda mortal.
+Sin embargo, nuestro trato se mantiene - diez mil monedas, ¡y el destino del mundo se convierte en mi juguete! Un precio verdaderamente trivial.
+La única molestia es reunir estos doblones de los cambistas locales, viajando eternamente entre mi escondite y la ciudad.
+#TEXT	29
+************************************************************
+Vittorio, acabo de completar el contrato más extraño de mi vida. En Panamá, me encontré con un nativo peculiar vestido con galas europeas que me pagó un puñado de doblones puros para actuar como su paje personal. Me hizo recitar poesía, servir vino y dirigirme a él como a un aristócrata continental. Parloteaba sin cesar sobre templos perdidos y dioses heréticos, aunque parecía bastante inofensivo por lo demás.
+El pago cubre mis deudas con suficiente para contratar pasaje a La Habana, tal como planeamos.
+#TEXT	30
+************************************************************
+A quien encuentre esto - entrégalo a Marcus y no sigas leyendo. Si Marcus no significa nada para ti - devuelve esto y vete a la mierda.
+Marcus, Gaston está jugando a una mascarada peligrosa. Es un asesino a sueldo con negocios turbios en Bridgetown. En el último asalto, Jimmy y yo nos cruzamos accidentalmente en su camino - ahora Jimmy alimenta a los tiburones. Tu parte está aquí con un pequeño extra. Me dirijo a territorio español donde su alcance no puede seguirme.
+#TEXT	31
+************************************************************
+Sr. Lynch, he descubierto lo que buscaba. Su persona de interés reside en Antigua y, junto con su mano derecha, es culpable de alta traición contra nuestra patria. El pérfido asalto a la fragata de Su Majestad "Sussex" fue obra suya, no de los holandeses como se informó. Enviaré todas las pruebas a nuestro contacto mutuo una vez que llegue el resto de mi pago.
+#TEXT	32
+************************************************************
+Anna, tu persistencia ha dado frutos - ese alquimista fugitivo, Gino, efectivamente se esconde en algún lugar de estas islas. Su rastro se enfría en las Antillas Menores, pero estoy más cerca que nunca. Esta enfermedad me carcome más profundamente cada día, pero él tiene la cura, y no me detendré ante nada hasta encontrarlo.
+Por favor, acepta el contenido de este cofre tanto como gratitud como ofrenda personal. Sé que el destino de Becky aún enciende tu ira, pero concédeme al menos la oportunidad de enmendarme.
+Jack.
 #QUEST PortRoyal_town_Letter
 Los Secretos de Port Royal
 
 #TEXT 1
 ************************************************************
-Mi querida Lettis, si estás leyendo estas líneas, significa que la enfermedad ha hecho lo suyo y que ya no estoy. Tal vez has venido aquí para llorarme, pero por favor, no lo hagas. Quiero que sigas viviendo, que sonrías y que seas feliz.
-Nuestro encuentro aquí fue una casualidad, o tal vez el destino. Llegaste a mi vida en el momento en que menos lo esperaba, y desde ese día, el mundo cambió. Recuerdo la luz en tus ojos, los matices de tu voz, el calor de tus manos. Esos recuerdos se quedarán conmigo para siempre, y espero que algún día también me recuerdes, no con lágrimas, sino con una sonrisa suave y cálida.
-Por eso te pido: visita los lugares que significaron tanto para nosotros. Recuerda nuestros momentos más felices, siéntelos de nuevo y luego déjalos ir. Permítete seguir adelante, no estés triste por mí, porque me dolería verte infeliz.
-Comienza este camino en el lugar más importante: donde todo empezó. Donde nuestros caminos se cruzaron, donde apareciste por primera vez ante mí y cambiaste mi vida. Que este paso sea el símbolo del inicio de un nuevo capítulo en tu vida, un capítulo en el que no haya espacio para la pena ni la tristeza.
-P.S. La vela señalará el camino hacia lo que deseas. Incluso si no está encendida.
+Mi querida, si estás leyendo esto, significa que ya no estoy. La enfermedad ha cobrado su precio, y ahora solo soy un recuerdo del pasado. Esto probablemente no cambiará nada en tu vida. Continuarás por tu camino, como siempre: fácilmente, con confianza, sin mirar atrás. Pero antes de que regreses a tu goleta y desaparezcas nuevamente más allá del horizonte, me gustaría que cumplas mi petición. No tenía a nadie a quien pudiera dejarle todo lo que poseía, así que irá a parar a quien conquistó mi corazón a primera vista, con la primera palabra, con la primera sonrisa. Te pido que recorras los lugares donde nuestros caminos se cruzaron alguna vez. Recuerda los momentos que, sin duda, significaron más para mí que para ti. Y al final de este camino, recibirás todo lo que he logrado adquirir en los últimos años. Quiero que sientas por última vez toda la fuerza de mis sentimientos antes de que me olvides para siempre.
+P.S. Una vela mostrará el camino hacia lo deseado. Incluso si no está encendida.
 
 #TEXT 2
 ************************************************************
-Recuerdo el momento en que te vi por primera vez. Eras como una ráfaga de viento—ligera, escurridiza, brillando como un destello de luz. Había tanta sinceridad en tus ojos, tanta vida, que desde ese segundo supe que eras especial.
-El siguiente lugar es aquel donde nos escondíamos de las miradas indiscretas, solo para hablar, reír y ser nosotros mismos. Un lugar donde el tiempo se detenía y el mundo, con todos sus problemas y amenazas, se volvía insignificante.
-P.S. El vino, igual que una persona, puede guardar secretos.
+¿Recuerdas aquella noche en la que la lluvia azotaba las calles y tú reías, inclinando la cabeza hacia atrás y dejando que las gotas acariciaran tu rostro? Te dije que algún día conquistaría tu corazón, pero solo sonreíste con ironía.
+Entonces, nuestra conversación fue interrumpida por dos marineros de un barco corsario, y tuve que ponerlos en su lugar. Nunca olvidaré la forma en que me miraste aquella noche.
+Vuelve a ese lugar, recuerda aquel momento. Rememora todo lo que ocurrió aquella noche.
+P.S. El vino, al igual que las personas, puede guardar secretos.
 
 #TEXT 3
 ************************************************************
-¿Sabes qué era lo que más amaba de ti? Tu sinceridad. Nunca fingías, nunca tratabas de parecer alguien más. Brillabas desde dentro—en cada palabra, cada mirada, cada movimiento. Y esa luz invariablemente me atraía.
-El siguiente lugar es aquel que se quedó para siempre en mi corazón y en mi memoria. Allí, finalmente me atreví a decirte lo más importante. Allí mi corazón latía más fuerte, y las palabras parecían surgir por sí solas. Ve allí. Recuerda. Siente.
-P.S. El mejor lugar para un escondite es aquel donde siempre hay ruido y gente, donde nadie sospecha que algo desconocido puede estar cerca.
+Siempre fuiste brutalmente honesta, quizás demasiado. Tu franqueza me hirió más de una vez, pero incluso las rosas más hermosas deben tener espinas, ¿no es así?
+La siguiente nota está en un lugar especial – el sitio donde acordamos encontrarnos, pero al día siguiente nunca apareciste. Partiste hacia el mar, dejándome solo con mis nuevos versos y la confesión que había preparado.
+Más tarde, me explicaste que tuviste que levar anclas con urgencia debido a otra de esas supersticiones marineras que nunca logré comprender.
+P.S. El mejor lugar para un escondite es donde siempre hay ruido y multitud, donde nadie se imagina que algo desconocido pueda estar oculto cerca.
 
 #TEXT 4
 ************************************************************
-Antes de que comiences tu nueva vida, quiero darte un regalo más. Pero no será fácil encontrarlo; tuve que esconderlo bien, en un lugar que ni siquiera tú conocías.
-Cada una de estas notas contiene una pista. Júntalas y entenderás dónde buscar. Fue una medida necesaria para que nadie más que tú pudiera encontrarlo. Para lograrlo, necesitarás una llave. La dejé donde nos encantaba contemplar la puesta de sol entre el estruendo de las muelas y el crujido del viejo molino.
-P.S. Donde las olas hablan con la orilla, encontrarás una puerta tras la cual yace el secreto que protege mi regalo.
+Siempre te reías cuando decía que me convertiría en gobernador de Cuba por ti. Había algo de verdad en esas palabras – por ti habría hecho cualquier cosa. Pero el amor no tolera la imposición, y por mucho que lo intenté, por mucho que corrí hacia ti, la distancia entre nosotros nunca cambió. Ahora, eso ya no importa. Ahora, todo es solo pasado.
+Estás a un paso de reclamar lo que te he dejado. Cada nota contiene una pista. Júntalas, y sabrás dónde buscar.
+Para lograrlo, necesitarás una llave. La dejé en el lugar donde una vez vimos el atardecer, hablando de todo y de nada, entre el zumbido de las muelas y el crujir de un viejo molino.
+Tomé esta precaución para asegurarme de que nadie más que tú pudiera llegar a ese sitio. Siempre fuiste inteligente y astuta – quizás demasiado.
+P.S. Donde las olas hablan con la orilla, encontrarás una puerta detrás de la cual se esconde el secreto que protege mi regalo.
 
 #TEXT 5
 ************************************************************
-Amor mío, finalmente has llegado a mi regalo. Quiero que todo lo que fue mío pase a ser tuyo. Que esto te ayude a pasar esta página de una vez por todas. Y a mí… simplemente déjame ir. No lleves mi sombra contigo.
-Debía haberte convertido en mi esposa, pero el destino dispuso otra cosa. La muerte de mis padres lo cambió todo, y nuestra boda se quedó en un sueño que no se cumplió. Nunca te dije cuánto me dolió—más que nada, deseaba verte feliz.
-Vive como si ese dolor nunca hubiera existido. Como si todo apenas comenzara. Con amor,
-tu James.
+Así que aquí estás.
+No sé por qué decidiste seguir este camino. Tal vez solo por diversión. Tal vez por compasión. Pero quiero creer que significaba al menos un poco más para ti que tus otros admiradores.
+El Arcoíris te llevó más allá del horizonte, y yo observé cómo sus velas se desvanecían en el dorado resplandor del atardecer, con una sola esperanza: volver a verte.
+Con un amor que nunca necesitaste, tuyo hasta mi último aliento, 
+Francis.
+
 
 #QUEST Villemstad_town_Letter
 Los Secretos de Willemstad
@@ -1314,41 +1391,68 @@ Los Secretos de Willemstad
 #TEXT 1
 ************************************************************
 Has logrado encontrar este mensaje, lo que significa que el señor Attano te ha entrenado bien. Pero no todos son capaces de convertirse en uno de los nuestros. Debes demostrar que posees todas las habilidades necesarias para cumplir incluso las misiones más difíciles.
-
 Te observamos atentamente. En cuanto completes esta tarea, dejaremos otra para ti. Si logras superar todas las pruebas, te convertirás en uno de nosotros.
 La siguiente tarea es encontrar el mejor lugar para vigilar la oficina de la Compañía Neerlandesa de las Indias Occidentales. Solo una mente aguda y una mirada penetrante pueden elegir el punto de observación adecuado. Observa las calles, escucha el bullicio de la ciudad y utiliza las sombras para permanecer sin ser visto.
-
 Recuerda: la guardia está siempre alerta. Notarán de inmediato a quien se quede allí, mirando fijamente la entrada. Debes parecer alguien ocupado con sus propios asuntos, aunque sean triviales.
-
 P.S. El camino hacia lo oculto no siempre es obvio. Solo quien comprenda que incluso una vela apagada puede revelar un secreto llegará hasta el final.
 
 #TEXT 2
 ************************************************************
-Continúas tu camino, lo cual demuestra que no solo tienes ingenio, sino también astucia. Sin embargo, aquel que actúa en solitario está condenado al fracaso. Es hora de encontrar un lugar donde puedas reunirte con tu contacto.
-Debe ser un sitio que no levante sospechas, pero que permita hablar sin oídos indiscretos. Intenta averiguar dónde se podrían celebrar tales encuentros y elige el más seguro de todos ellos.
-
-Recuerda: los ruidos de fondo —ya sean los gritos de las gaviotas, el sonido de las olas o el golpe del hacha contra la madera— ayudan a ocultar tus palabras de los curiosos.
-
-P.S. Una linterna puede delatar incluso el escondite más seguro. Pero en otra situación, te mostrará el camino hacia la puerta que necesitas.
+Continúas tu camino, lo que prueba que tienes no solo inteligencia, sino también astucia. Sin embargo, cualquier persona que actúe en solitario está condenada al fracaso. Es hora de encontrar un lugar donde puedas reunirte con tu contacto.  
+Debe ser un lugar que no despierte sospechas pero que permita mantener una conversación sin oídos curiosos. Debes elegirlo con mucho cuidado, para que nadie pueda esconderse cerca y espiar. En estas cosas, es más importante ver al espía acechante primero que perderse uno mismo.  
+Y recuerda: el ruido exterior, ya sean los gritos de las gaviotas, el sonido de las olas rompiendo contra el muelle o el clangor de la cadena del ancla, ayudará a ocultar tus palabras de miradas curiosas.  
+P.D. Una linterna puede revelar incluso el escondite más fiable. Pero en una situación diferente, te señalará el camino hacia la puerta adecuada.
 
 #TEXT 3
 ************************************************************
 Estás leyendo este mensaje, así que superaste la tarea anterior. Un buen observador no solo sabe vigilar, sino también encontrar lugares donde ocultar sus herramientas para usarlas rápidamente cuando sea necesario.
 Ahora debes hallar un sitio desierto y seguro, donde puedas montar un escondite. Elige un rincón apartado que no llame la atención ni despierte la curiosidad de los transeúntes.
 No lo olvides: los guardias se fijan en quienes deambulan buscando algo. Muévete con seguridad, como si supieras adónde vas. Que los habitantes piensen que solo eres otro marinero de paso por negocios.
-
 P.S. Una casa de ladrillo es símbolo de solidez y fiabilidad. Es capaz de proteger tanto tesoros como secretos de invitados indeseados.
 
 #TEXT 4
 ************************************************************
-Ya has aprendido mucho, pero la regla principal es siempre tener un plan de respaldo. Cualquiera que desee triunfar en nuestro oficio debe contar con un escondite secreto confiable. Una casa donde puedas ocultarte, esperar o aguardar nuevas instrucciones.
-Tu siguiente paso es encontrar dicho lugar. Estará a la vista de todos, pero solo tú conocerás su verdadero propósito. Solo podrás entrar con un anillo, el símbolo de tu lealtad a la Orden. Ese anillo también será tu llave. Búscalo enfrente de la residencia, en un rincón oculto.
-
-Recuerda: en tu refugio debe haber todo lo necesario: dinero, provisiones, medicinas. Y, lo más importante, debe seguir siendo un secreto conocido solo por ti.
-
-P.S. Al mirar una casa de tres pisos, la mayoría ve únicamente lo que se eleva sobre el suelo. Pero lo más secreto suele estar escondido debajo.
-P.P.S. Si de verdad mereces ser parte de nuestra hermandad, verás la conexión donde otros solo ven sin sentido.
+Ya has aprendido mucho, pero la regla principal es siempre tener un plan de respaldo. Cualquiera que quiera tener éxito en nuestro trabajo debe tener un refugio secreto confiable. Un hogar donde se pueda ocultarse, esperar o aguardar nuevas órdenes.  
+Tu próximo paso es encontrar ese lugar. Está lejos de las miradas curiosas, pero las callejuelas que lo rodean son lo suficientemente concurridas y ruidosas como para ocultar tus movimientos, especialmente por las noches, cuando la taberna está llena de gente y es difícil entrar en el callejón sin tener que enfrentar una pelea.  
+Los ciudadanos ebrios y los carpinteros cansados te mirarán al regresar a casa, sin sospechar nada, pues su verdadera naturaleza será conocida solo por ti. Solo podrás acceder a él con el anillo: un símbolo de tu lealtad al Orden. También servirá como tu llave. Busca el anillo frente a la residencia, en un lugar apartado.  
+Recuerda: tu refugio debe contener todo lo necesario: dinero, provisiones, medicinas. Y lo más importante: debe seguir siendo un secreto conocido solo por ti.  
+P.D. Al mirar la casa de tres pisos, la mayoría ve solo lo que se eleva sobre el suelo. Pero lo más secreto suele estar escondido debajo.
+P.P.S. Si realmente mereces ser parte de nuestra hermandad, serás capaz de ver conexiones donde otros ven solo tonterías.
 
 #TEXT 5
 ************************************************************
-Has superado las pruebas que solo unos pocos elegidos pueden enfrentar. Has demostrado que sabes observar, ocultarte, mantener conversaciones secretas y planificar cada paso. Ahora eres uno de los nuestros. El contenido de este cofre es tu reserva personal para los días oscuros, y esta habitación es tu escondite seguro. Recuerda este momento. A partir de hoy, ya no eres simplemente uno más entre la multitud: eres parte de la hermandad.
+Has superado las pruebas que solo unos pocos elegidos pueden enfrentar. 
+Has demostrado que sabes observar, ocultarte, mantener conversaciones secretas y planificar cada paso. 
+Ahora eres uno de los nuestros. El contenido de este cofre es tu reserva personal para los días oscuros, y esta habitación es tu escondite seguro. 
+Recuerda este momento. A partir de hoy, ya no eres simplemente uno más entre la multitud: eres parte de la hermandad.
+
+#QUEST LadyBeth_Book
+Diario de Blackwood
+
+#TEXT 1
+***************
+Un oficial ejemplar, Blackwood. Tal orden en todo - desde la documentación hasta las formaciones de batalla. Llegará lejos", dijo el gobernador, felicitándome por la exitosa operación contra los contrabandistas. Elizabeth estaba en la recepción - vi admiración en sus ojos. Todo parece estar encajando exactamente como soñé mientras ascendía en la escala naval.
+***************
+Desperté de la misma pesadilla otra vez. Los sucios muelles de Bristol, mi padre perpetuamente borracho, un estómago vacío... Parecía que una comisión de oficial y un servicio impecable deberían haber borrado todo esto. Pero no. Tan pronto como escuché el rechazo del viejo hacendado - y aquí está de nuevo. "Usted comprende, Teniente... Los medios..." Como si volviera a ser ese niño hambriento de los muelles.
+***************
+La decisión está tomada. "Beth" es un barco hermoso, y la tripulación me es leal. Extraño - están dispuestos a dejar el servicio, sabiendo que voy a buscar tesoros. "Nunca nos ha decepcionado, señor", dijo Harris. Y no los decepcionaré.
+***************
+¡Éxito! No solo suerte, sino confirmación del método. Mapas, cálculos, interrogatorio a los lugareños - todo funciona como un reloj. La tripulación está de buen ánimo, aunque veo que algunos no están acostumbrados a tal minuciosidad en la organización de las búsquedas. Estoy empezando a entender - esto no es suficiente.
+***************
+Segundo año en el "Beth". Oro suficiente para comprar un título. Los marineros se han comprado jubones de moda, invitan a todos en las tabernas, presumen de costosos adornos. Me alegro por ellos - ¿quién mejor que yo para saber lo que es trabajar por miserables centavos?
+En cuanto a mí... todavía veo estos sueños. Elizabeth escribe que está esperando. Y su padre todavía me llama "ese marinero". Necesito algo más. Algo real. Para distraerme, incluso escribí un pequeño estatuto sobre la búsqueda de tesoros y lo envié a Barbados. Qué se puede decir - a los militares les encanta escribir reglamentos. Y me alegra hacerlo.
+***************
+Hoy todo cambió. I. parece leer mis pensamientos. "Está buscando en el lugar equivocado, Capitán. Estos hallazgos lamentables son apenas migajas y un desperdicio de su talento. Los verdaderos tesoros no solo enriquecen - permiten cambiar el destino". Pensé que estaba en el camino correcto. Qué equivocado estaba.
+***************
+¡El arcabuz regalado no deja lugar a dudas! ¡Los tesoros de Cortés existen y están enterrados en algún lugar de las Caimán! ¡No descansaré hasta haber excavado cada pedazo de tierra allí! El teniente Harris dice que me estoy volviendo diferente. I. dice que estoy en el camino correcto.
+***************
+Excavé toda la isla. Encontré muchos objetos de valor, pero no lo que busco. Es una lástima lo que pasó con Harris y los demás, pero no puedo permitirme discordia en la tripulación después de todo lo que he hecho por ellos. La escrupulosidad excesiva es buena en la marina, pero aquí necesito personas que estén dispuestas a ensuciarse las manos. Tendré que contratar franceses para la tripulación, lo que personalmente es bastante humillante para mí. Sin embargo, se pueden encontrar algunos hombres dignos entre esta chusma del puerto. Necesito cambiar mi enfoque.
+***************
+Estudiando rutas comerciales. Cada barco es una fuente de información... y mano de obra gratuita. Sus capitanes saben algo sobre los tesoros de Cortés, y las tripulaciones están acostumbradas al trabajo y la baja paga. Es hora de actuar con más decisión. ¡Juro por todas las tormentas que encontraré este maldito oro!
+***************
+Hoy escuché a escondidas a marineros hablando en la taberna. "Blackwood es ahora más rico que cualquier hacendado", dijeron. Pero yo sé - todo es solo oropel. El verdadero tesoro espera en las Caimán. Y lo encontraré. Incluso si tengo que enviar a mil hombres con palas y encadenados allí.
+***************
+Esta expedición probablemente será mi última. De ahora en adelante, trabajaré según el nuevo estatuto - no más reclutamiento ni pérdida de tiempo en tabernas. Esta isla se convertirá en mi fortaleza, y el espacio a su alrededor - en mi terreno de alimentación. Gracioso - una vez estuve orgulloso de cómo me levanté desde lo más bajo de la sociedad. Ahora lo sé - hay que caer aún más bajo para elevarse verdaderamente alto.
+Solo espérame.
+
+

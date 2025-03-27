@@ -3,66 +3,66 @@ void ProcessDialogEvent()
 	ref NPChar;
 	aref Link, NextDiag;
 
-	DeleteAttribute(&Dialog,"Links");
+	DeleteAttribute(&Dialog, "Links");
 
-	makeref(NPChar,CharacterRef);
+	makeref(NPChar, CharacterRef);
 	makearef(Link, Dialog.Links);
 	makearef(NextDiag, NPChar.Dialog);
-	
-	switch(Dialog.CurrentNode)
+
+	switch (Dialog.CurrentNode)
 	{
-		case "First time":
-			dialog.text = "";
-			link.l1 = "";
-			link.l1.go = "";
-			
-			if (npchar.quest.meeting == "0")
-			{
-				dialog.text = "What do you need?";
-				link.l1 = "Nothing.";
-				link.l1.go = "exit";
-				npchar.quest.meeting = "1";
-			}
-			
-			NextDiag.TempNode = "First time";
+	case "First time":
+		dialog.text = "";
+		link.l1 = "";
+		link.l1.go = "";
+
+		if (npchar.quest.meeting == "0")
+		{
+			dialog.text = "¿Qué necesitas?";
+			link.l1 = "Nothing.";
+			link.l1.go = "exit";
+			npchar.quest.meeting = "1";
+		}
+
+		NextDiag.TempNode = "First time";
 		break;
 
-		case "Exit":
-			NextDiag.CurrentNode = NextDiag.TempNode;
-			DialogExit();
+	case "Exit":
+		NextDiag.CurrentNode = NextDiag.TempNode;
+		DialogExit();
 		break;
 
-		case "":
-			dialog.text = NPCStringReactionRepeat("", 
-				"", 
-				"",
-                "", "block", 1, npchar, Dialog.CurrentNode);
-			link.l1 = HeroStringReactionRepeat("", 
-				"",
-                "", 
-				"", npchar, Dialog.CurrentNode);
-			link.l1.go = DialogGoNodeRepeat("exit", "", "", "", npchar, Dialog.CurrentNode);
+	case "":
+		dialog.text = NPCStringReactionRepeat("",
+											  "",
+											  "",
+											  "", "block", 1, npchar, Dialog.CurrentNode);
+		link.l1 = HeroStringReactionRepeat("",
+										   "",
+										   "",
+										   "", npchar, Dialog.CurrentNode);
+		link.l1.go = DialogGoNodeRepeat("exit", "", "", "", npchar, Dialog.CurrentNode);
 		break;
 
-		case "":
-			dialog.text = "";
-			link.l1 = "";
-			link.l1.go = "_1";
+	case "":
+		dialog.text = "";
+		link.l1 = "";
+		link.l1.go = "_1";
 		break;
-		case "_1":
-			dialog.text = "";
-			link.l1 = "";
-			link.l1.go = "_2";
+	case "_1":
+		dialog.text = "";
+		link.l1 = "";
+		link.l1.go = "_2";
 		break;
-		case "_2":
-			dialog.text = "";
-			link.l1 = "";
-			link.l1.go = "_3";
+	case "_2":
+		dialog.text = "";
+		link.l1 = "";
+		link.l1.go = "_3";
 		break;
-		case "_4":
-			dialog.text = "";
-			link.l1 = "";
-			link.l1.go = "_5";
+	case "_4":
+		dialog.text = "";
+		link.l1 = "";
+		link.l1.go = "_5";
 		break;
 	}
 }

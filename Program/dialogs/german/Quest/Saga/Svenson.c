@@ -1683,7 +1683,7 @@ void ProcessDialogEvent()
 			if (startHeroType == 4) sStr = "Helen";
 			if (GetSummonSkillFromName(pchar, SKILL_COMMERCE) >= 80)
 			{
-				dialog.text = "Freut mich, dass dir das Pockholz gefällt, " + sStr + ". Die Lieferungen zu vergrößern ist kein Problem, aber es gibt da ein "Aber", verstehst du. Mit steigenden Mengen entsteht auch eine Spur, die unerwünschte Aufmerksamkeit auf sich ziehen kann, besonders von den englischen Behörden. Aber wenn wir zuverlässige Hände, treue Ohren und Leute in der Residenz hinzufügen, die uns helfen, im Schatten zu bleiben, kann alles arrangiert werden. Allerdings wird das nicht billig - dreitausend Dublonen, um die Stadtkasse und die Bedürfnisse Englands zu umgehen. Dann kann ich dir auch fünfmal mehr liefern. Was sagst du dazu?";
+				dialog.text = "Freut mich, dass dir das Pockholz gefällt, " + sStr + ". Die Lieferungen zu vergrößern ist kein Problem, aber es gibt da ein 'Aber', verstehst du. Mit steigenden Mengen entsteht auch eine Spur, die unerwünschte Aufmerksamkeit auf sich ziehen kann, besonders von den englischen Behörden. Aber wenn wir zuverlässige Hände, treue Ohren und Leute in der Residenz hinzufügen, die uns helfen, im Schatten zu bleiben, kann alles arrangiert werden. Allerdings wird das nicht billig - dreitausend Dublonen, um die Stadtkasse und die Bedürfnisse Englands zu umgehen. Dann kann ich dir auch fünfmal mehr liefern. Was sagst du dazu?";
 				link.l1 = "Dreitausend Dublonen? Jan, das ist ja Raubüberfall am helllichten Tag! Könnten wir nicht irgendwie mit geringeren Kosten auskommen? Vielleicht gibt es einen Weg, die Sache ohne solch märchenhafte Summen zu regeln?";
 				link.l1.go = "UpgradeBakaut_1";
 				notification("Skill Check Passed", SKILL_COMMERCE);

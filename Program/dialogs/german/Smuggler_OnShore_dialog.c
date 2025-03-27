@@ -41,7 +41,7 @@ void ProcessDialogEvent()
 				
 				if (iTmp)
 				{
-					dialog.text = NPCStringReactionRepeat("Wurde dir nicht gesagt, dass du nicht mit einem so auffälligen Schiff hierher kommen sollst! Warum bringst du nicht ein Paar Linienschiffe mit? Verzieh dich und komm mit einem kleineren Schiff.","Verschwinde! Sonst geben wir dich selbst an die Patrouille weiter.","Geh zu deinem Boot und verschwinde.","So müde von dir...","Block",1,npchar,Dialog.CurrentNode);
+					dialog.text = NPCStringReactionRepeat("Wurde dir nicht gesagt, dass du nicht mit einem so auffälligen Schiff hierher kommen sollst! Warum bringst du nicht ein Paar Linienschiffe mit? Verzieh dich und komm mit einem kleineren Schiff.","Verschwinde! Sonst geben wir dich selbst an die Patrouille weiter.","Geh zu deinem Boot und verschwinde.","So müde von dir...","block",1,npchar,Dialog.CurrentNode);
 					link.l1 = HeroStringReactionRepeat("In Ordnung, in Ordnung, ich werde mein Schiff wechseln.","Beruhige dich, ich bin auf dem Weg.","Verdammt, ich dachte, es würde funktionieren...","Ja, ich bin wirklich stur!",npchar,Dialog.CurrentNode);
 						link.l1.go = DialogGoNodeRepeat("exit", "", "", "", npchar, Dialog.CurrentNode);	
 					break;

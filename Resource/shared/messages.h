@@ -24,6 +24,7 @@
 
 #define MSG_MODEL_SUBSTITUTE_GEOMETRY_NODE 20600 // "ss", geometry, new model name
 #define MSG_MODEL_PLAY_ACTION 20601 // "lls", player, action name
+#define MSG_MODEL_GET_LOCATORS 20602 // "la", object to store
 
 //============================================================================================
 // blade messages
@@ -45,6 +46,8 @@
 #define MSG_MUSKET_HAND 21013
 #define MSG_MUSKET_BELT 21014
 #define MSG_MUS_SET 21015
+
+#define MSG_BLADE_GET_GUNFIRE_LOCATOR 21016
 
 //============================================================================================
 // Island Messages

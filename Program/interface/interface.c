@@ -146,6 +146,7 @@ void LaunchDeath()	// Интерфейс смерти
 void LaunchTutorial(string tutorialName, bool bShowVideo)	// Интерфейс окна обучения
 {
 	if(CheckAttribute(&InterfaceStates, "ShowTutorial") && sti(InterfaceStates.ShowTutorial) == 0) return;
+	if(questMovieIsLockPlayerCtrl) return;
 	if(procInterfacePrepare(INTERFACE_TUTORIAL))
 	{
 		nPrevInterface = -1;

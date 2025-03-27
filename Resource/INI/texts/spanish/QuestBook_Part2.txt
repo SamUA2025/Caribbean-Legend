@@ -1359,17 +1359,17 @@ Jan Svensson tiene 25 piezas de sándalo que me puede vender los días 14 y 28 d
 Logré negociar con Jan Svenson un aumento en el suministro de madera de hierro (bakaut). Ahora, cada día 14 y 28 del mes, podré comprarle 125 troncos de madera de hierro por 3150 dublones.
 #TEXT 2
 Fadey el Moscovita me venderá 50 bobinas de cuerda el día 20 de cada mes por 500 doblones por lote.
-#TEXT 2_1
-Logré negociar con Fadey Moskovit un aumento en el suministro de cuerdas de cáñamo. Ahora, cada día 20 del mes, podré comprar 250 rollos de cuerda a Fadey por 2125 dublones.
+#TEXT   2_1
+Conseguí negociar con Fadey Moscovita el aumento de los suministros de cuerda de cáñamo. Ahora, cada día 20 del mes, podré comprarle 250 rollos de cuerda por 2125 doblones.
 #TEXT 3
 A partir de ahora estoy autorizado a comprar 30 piezas de seda de barco los días 1 y 15 de cada mes al nuevo subdirector de la Compañía Holandesa de las Indias Occidentales por 600 doblones por lote.
 #TEXT 3_1
 Logré negociar con el vicedirector de la Compañía Comercial Holandesa en Willemstad un aumento en el suministro de seda. Ahora, cada día 1 y 15 del mes, podré comprarle 150 rollos de seda a 17 dublones cada uno, con un total de 2550 dublones por todo el lote.
 #TEXT 4
 Sergio Saldo me venderá 60 barriles de resina el quinto día de cada mes por 600 doblones por lote.
-#TEXT 4_1
-Logré negociar con Sergio Saldo un aumento en el suministro de resina. Ahora, cada día 5 del mes, podré adquirir en el faro de Trinidad 300 barriles de resina por 2550 dublones.
-#TEXT 5
+#TEXT   4_1
+Conseguí negociar con Sergio Saldo para aumentar el suministro de resina. Ahora, cada día 5 del mes, podré comprar 300 barriles de resina en el Faro de Trinidad por 2550 doblones.
+#TEXT   5
 Produciré un lote de 40 troncos de sándalo el día 15 de cada mes gracias a Rodrigo Jiménez, el gerente de mi fábrica. La fábrica puede almacenar hasta 6 lotes en total antes de tener que paralizar la producción. El pago se realizará inmediatamente para todos los lotes en stock. El coste de cada uno será de: 200 doblones, 5 botellas de ron, 5 botellas de vino. Total: 5 doblones por tronco. No está mal...
 
 #QUEST FMQ_Guadeloupe

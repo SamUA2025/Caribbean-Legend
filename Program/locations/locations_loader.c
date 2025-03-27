@@ -324,11 +324,12 @@ bool LoadLocation(ref loc)
 			LocLoadGrass(loc, "models.always." + sat);
 			object objGrass;
 			GetEntity(&objGrass,"grass"));
-			if(CheckAttribute(&InterfaceStates,"GrassDrawDistance")) {
+			if(CheckAttribute(&InterfaceStates,"GrassDrawDistance"))
+			{
 				fMaxDist = stf(InterfaceStates.GrassDrawDistance);
-			} else {
-				fMaxDist = 50;
-			}
+				if(CheckLocGrassOpt() && fMaxDist > 100) fMaxDist = 100;
+			} else fMaxDist = 50;
+
 			// MSG_GRASS_SET_PARAM имеет параметры (в скобках цифры из движка по умолчанию):
 			// m_fDataScale(1.0); m_fMaxWidth(1.0); m_fMaxHeight(0.2); m_fMinVisibleDist(10.0); m_fMaxVisibleDist(50.0); m_fMinGrassLod(0.0);
 			SendMessage(objGrass,"lffffff",42666, 1.0, 1.0, 0.2, 10.0, fMaxDist, 0.0); // #define MSG_GRASS_SET_PARAM 42666
@@ -1230,6 +1231,11 @@ bool LocLoadModel(aref loc, string sat, string addition)
 	object mdl;
 	if(SendMessage(loc, "le", MSG_LOCATION_GET_MODEL, &mdl) != 0)
 	{
+		// belamour флаг для SP2 на каймане
+		if(loc.id == "Caiman_Jungle_01" && loc.models.always.jungle == "Jungle_SP2")
+		{
+			SetTownFlag(loc, &mdl);
+		}
 		string sAreal = GiveArealByLocation(loc);
 		if (sAreal != "none")
 		{
@@ -1841,4 +1847,12 @@ bool IslamonaCreateShips(ref Location)
 		//locNumShips++;
 	}
 	return true;
+}
+
+// locations grass optimisation
+bool CheckLocGrassOpt()
+{
+	if(pchar.location == "Caiman_Jungle_01") return true;
+	
+	return false;
 }

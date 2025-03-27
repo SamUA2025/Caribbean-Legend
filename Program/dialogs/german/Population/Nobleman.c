@@ -38,7 +38,7 @@ void ProcessDialogEvent()
 			//--> проверка межнациональных отношений
 				if (sti(NPChar.nation) != PIRATE && GetNationRelation2MainCharacter(sti(NPChar.nation)) == RELATION_ENEMY)
 				{
-				dialog.text = NPCStringReactionRepeat("Hm. Sie segeln unter der Flagge von "+NationNameGenitive(sti(pchar.nation))+", Kumpel. Was zur Hölle machst du hier, in unserer Stadt? Verzieh dich!","Ich möchte nicht als Freund von  verdächtigt werden"+NationNameAblative(sti(pchar.nation))+"! Verschwinde, oder ich melde es der Wache!","Das ist deine letzte Chance zu entkommen. Sonst kannst du nur dich selbst beschuldigen.","Ich habe dich gewarnt. Jetzt wirst du für deine Frechheit bezahlen, Bastard!","Block",1,npchar,Dialog.CurrentNode);
+				dialog.text = NPCStringReactionRepeat("Hm. Sie segeln unter der Flagge von "+NationNameGenitive(sti(pchar.nation))+", Kumpel. Was zur Hölle machst du hier, in unserer Stadt? Verzieh dich!","Ich möchte nicht als Freund von  verdächtigt werden"+NationNameAblative(sti(pchar.nation))+"! Verschwinde, oder ich melde es der Wache!","Das ist deine letzte Chance zu entkommen. Sonst kannst du nur dich selbst beschuldigen.","Ich habe dich gewarnt. Jetzt wirst du für deine Frechheit bezahlen, Bastard!","block",1,npchar,Dialog.CurrentNode);
 				link.l1 = HeroStringReactionRepeat("Solch ein Patriot, ha!","Gut, gut, beruhige dich. Ich gehe jetzt.","Mach nicht so viel Lärm. Ich gehe jetzt.","Was?!",npchar,Dialog.CurrentNode);
 				link.l1.go = DialogGoNodeRepeat("exit", "", "", "fight", npchar, Dialog.CurrentNode);
 			break;
@@ -47,7 +47,7 @@ void ProcessDialogEvent()
 			//--> проверка репутации - дворяне гнобят супернегодяев
 			if (sti(pchar.reputation.nobility) < 10)
 			{
-				dialog.text = NPCStringReactionRepeat("Schau dir das an! Und wie lassen unsere Wachen einen solchen Bastard wie dich einfach in der Stadt herumlaufen? Unmöglich...","Verschwinde, ich will nicht mal mit dir reden! Henker...","Das ist deine letzte Chance zu fliehen. Sonst kannst du nur dich selbst beschuldigen.","Ich habe dich gewarnt. Jetzt wirst du für deine Unverschämtheit bezahlen, Bastard!","Block",1,npchar,Dialog.CurrentNode);
+				dialog.text = NPCStringReactionRepeat("Schau dir das an! Und wie lassen unsere Wachen einen solchen Bastard wie dich einfach in der Stadt herumlaufen? Unmöglich...","Verschwinde, ich will nicht mal mit dir reden! Henker...","Das ist deine letzte Chance zu fliehen. Sonst kannst du nur dich selbst beschuldigen.","Ich habe dich gewarnt. Jetzt wirst du für deine Unverschämtheit bezahlen, Bastard!","block",1,npchar,Dialog.CurrentNode);
 				link.l1 = HeroStringReactionRepeat("He he! Zeigen Sie mir mehr Respekt, Herr!","Schau dich an, Heiliger...","Beruhige dich...","Was?!",npchar,Dialog.CurrentNode);
 				link.l1.go = DialogGoNodeRepeat("exit", "", "", "fight", npchar, Dialog.CurrentNode);
 			break;
@@ -120,10 +120,19 @@ void ProcessDialogEvent()
 					DeleteAttribute(link, "l2");
 				}
 				//<== прибыла инспекция на Святом Милосердии
+				//==> Леди Бет в порту города
+				if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_town")
+				{
+					dialog.Text = findLedyBethRumour(npchar);
+					link.l1 = "...";
+					link.l1.go = "exit";
+					DeleteAttribute(link, "l2");
+				}
+				//<== Леди Бет в порту города
 			}
 			else //--> повторные обращения
 			{
-				dialog.text = NPCStringReactionRepeat("Was? Schon wieder? Ich habe keine Zeit für dich. Such dir jemand anderen zum Reden. Es laufen viele Gemeine auf den Straßen herum. Und ich muss gehen, es wird heute Abend ein Bankett in der Residenz des Gouverneurs geben und ich muss mein Outfit vorbereiten...","Nein, jetzt ist es wirklich ärgerlich! Verstehst du es nicht? Oder bist du ein langsamer Verstand?","Herr, ich beginne zu vermuten, dass Sie nicht nur ein Idiot, sondern ein Hinterwäldler und ein Tölpel sind. Ich warne Sie, lassen Sie mich in Ruhe oder Sie werden es bereuen, mich belästigt zu haben.","Genug. Ich werde dir eine Lektion erteilen, frecher Kerl!","Block",1,npchar,Dialog.CurrentNode);
+				dialog.text = NPCStringReactionRepeat("Was? Schon wieder? Ich habe keine Zeit für dich. Such dir jemand anderen zum Reden. Es laufen viele Gemeine auf den Straßen herum. Und ich muss gehen, es wird heute Abend ein Bankett in der Residenz des Gouverneurs geben und ich muss mein Outfit vorbereiten...","Nein, jetzt ist es wirklich ärgerlich! Verstehst du es nicht? Oder bist du ein langsamer Verstand?","Herr, ich beginne zu vermuten, dass Sie nicht nur ein Idiot, sondern ein Hinterwäldler und ein Tölpel sind. Ich warne Sie, lassen Sie mich in Ruhe oder Sie werden es bereuen, mich belästigt zu haben.","Genug. Ich werde dir eine Lektion erteilen, frecher Kerl!","block",1,npchar,Dialog.CurrentNode);
 				link.l1 = HeroStringReactionRepeat("Ich verstehe. Lebewohl.","Ja-ja, habe gerade vergessen, was ich fragen wollte...","Du hast mich falsch verstanden...","Was?!",npchar,Dialog.CurrentNode);
 				link.l1.go = DialogGoNodeRepeat("exit", "", "", "fight", npchar, Dialog.CurrentNode);
 			}

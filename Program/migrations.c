@@ -92,7 +92,7 @@ void ApplyMigrationsForFolder(string migrationDir, string modName) {
 	{
 		migrationDir = migrationDir + "\" + modName;
 	}
-	fileFinder.dir = "Program\\"+migrationDir;
+	fileFinder.dir = "Program\"+migrationDir;
 	fileFinder.mask = "????_*.c";
 	CreateEntity(&fileFinder, "FINDFILESINTODIRECTORY");
 	DeleteClass(&fileFinder);
@@ -175,7 +175,7 @@ void InitMigrationsForFolder(string migrationDir) {
 	trace("Initializing migrations...");
 	
 	object fileFinder;
-	fileFinder.dir = "Program\\"+migrationDir;
+	fileFinder.dir = "Program\"+migrationDir;
 	fileFinder.mask = "????_*.c";
 	CreateEntity(&fileFinder, "FINDFILESINTODIRECTORY");
 	DeleteClass(&fileFinder);

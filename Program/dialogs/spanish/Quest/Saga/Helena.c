@@ -747,6 +747,10 @@ void ProcessDialogEvent()
 				Link.l2 = "Helen, querida, ¿puedo invitarte a pasar un buen rato en la taberna?";
 				Link.l2.go = "special_sex";
 			}
+			if (CheckAttribute(pchar, "questTemp.MysteryPortRoyal_Helena")) {
+				link.l4 = "Helen, parece que encontré la última voluntad de tu admirador, Francis. Te dejó su herencia.";
+				link.l4.go = "MysteryPortRoyal_Helena_1";
+			}
 			if (CheckCharacterItem(pchar, "pirate_cutlass") && !CheckAttribute(pchar, "questTemp.Saga.Helena_officer")) {
 				link.l4 = "Creo que este alfanje es ahora tuyo. Blaise es tu llamado tío...";
 				link.l4.go = "give_cutlass";
@@ -3506,6 +3510,20 @@ void ProcessDialogEvent()
 			dialog.text = "Sabes cómo va esto. Deja que una chica se enfríe primero.";
 			link.l1 = "Suspiro...";
 			link.l1.go = "exit";
+		break;
+		
+		// Тайна Порт-Рояля
+		case "MysteryPortRoyal_Helena_1":
+			dialog.text = "Francis... lo recuerdo. Siempre esperaba mi llegada a Port Royal y era un romántico empedernido. Disfrutaba pasar tiempo con alguien ajeno al mar – todos esos poemas y serenatas... Era algo nuevo. Un destello de un mundo que nunca conocí\nFrancis era rico, inteligente y apuesto – un gran partido. Cualquier chica del lugar habría enloquecido con su atención, pero en aquel entonces, mi única preocupación era mantener a flote el Arcoíris.";
+			link.l1 = "Parece que el alma sensible de un poeta no pudo soportar tu rechazo. En todas sus cartas solo hablaba de ti, recordando los lugares donde se encontraron. Puedo entregarte todo lo que te dejó, si lo deseas.";
+			link.l1.go = "MysteryPortRoyal_Helena_2";
+		break;
+		
+		case "MysteryPortRoyal_Helena_2":
+			dialog.text = "No sabía que estaba enfermo. Todo esto parece una tontería ahora. Y sobre su regalo... Ya he tenido suficiente con testamentos y herencias. Créeme, ahora tengo todo lo que necesito, y más. Mejor quédate con ello.";
+			link.l1 = "Su legado, de una forma u otra, seguirá beneficiándote, así que, sin quererlo, me he convertido en el ejecutor de su última voluntad. Vaya historia.";
+			link.l1.go = "exit";
+			DeleteAttribute(pchar, "questTemp.MysteryPortRoyal_Helena");
 		break;
 		
 		case "Exit":

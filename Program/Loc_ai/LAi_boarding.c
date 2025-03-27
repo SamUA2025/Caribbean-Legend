@@ -222,6 +222,10 @@ void LAi_StartBoarding(int locType, ref echr, bool isMCAttack)
 		
 		mDamage = mDamage * isEquippedArtefactUse(echr, "amulet_11", 1.0, 0.95));
 		mDamage = mDamage * isEquippedArtefactUse(mchr, "indian_6", 1.0, 1.10));
+		if(IsEquipCharacterByArtefact(mchr, "talisman18") && ShipBonus2Artefact(mchr, SHIP_LADYBETH))
+		{
+			mDamage *= 1.0 + ArticlesBonus(mchr);
+		}
 		
 		ecrewBak = makeint(mDamage);	
 		ecrew = ecrew - ecrewBak;

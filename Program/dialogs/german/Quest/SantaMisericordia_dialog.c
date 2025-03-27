@@ -159,7 +159,7 @@ void ProcessDialogEvent()
 			if (startHeroType == 4)
 			{
 				dialog.text = "Eine Maid mit einem Schwert? Nun, ich hätte nie gedacht, dass ich so eine Szene erleben würde. Und wer könnten Sie sein, Señorita, um es zu wagen, die 'Heilige Barmherzigkeit' anzugreifen?";
-				link.l1 = "Kapitän Hellen McArthur. Und dieser überraschte Ausdruck in Ihrem Gesicht ist einer, den ich gut kenne.";
+				link.l1 = "Kapitän Helen McArthur. Und dieser überraschte Ausdruck in Ihrem Gesicht ist einer, den ich gut kenne.";
 				link.l1.go = "Alamida_HelenaCaptain";
 			}
 			else
@@ -517,8 +517,16 @@ void ProcessDialogEvent()
 		
 		case "Alamida_monah":
 			dialog.text = "Seltsam... Was bringt ein Kind Gottes an diesen Ort der... Ruhe?";
-			link.l1 = "Ich...";
-			link.l1.go = "Alamida_monah_2";
+			if (sti(pchar.questTemp.ISawDiegoDeLanda) == 1)
+			{
+				link.l1 = "Ich...";
+				link.l1.go = "Alamida_monah_2";
+			}
+			else
+			{
+				link.l1 = "Ich... Moment mal! Wir haben uns doch schon getroffen!";
+				link.l1.go = "Alamida_monah_Second_2";
+			}
 		break;
 		
 		case "Alamida_monah_2":
@@ -589,7 +597,9 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Alamida_monah_11":
-			dialog.text = "Dass er nur... der Erste war.";
+			if (sti(pchar.questTemp.ISawDiegoDeLanda) == 1) sStr = "der Erste";
+ 			if (sti(pchar.questTemp.ISawDiegoDeLanda) == 2)	sStr = "Zweiter";
+			dialog.text = "Dass er nur... " + sStr + " war.";
 			link.l1 = "...";
 			link.l1.go = "Alamida_monah_12";
 		break;
@@ -603,6 +613,54 @@ void ProcessDialogEvent()
 			sld.lifeday = 0;
 			LAi_CharacterDisableDialog(sld);
 			LAi_group_MoveCharacter(sld, "SPAIN_CITIZENS");
+		break;
+		
+		case "Alamida_monah_Second_2":
+			dialog.text = "Wissen Sie, was an dieser Gruft besonders ist? Hier ruhen zwei Seelen, verbunden... durch Blut. Vater und Sohn de Alameda. Der eine fiel durch die Hand von Sündern, der andere... hm, fand seinen Weg zu Gott.";
+			link.l1 = "Dienen Sie in der örtlichen Gemeinde? Kannten Sie Don Fernando?";
+			link.l1.go = "Alamida_monah_Second_3";
+		break;
+		
+		case "Alamida_monah_Second_3":
+			dialog.text = "Ich... habe seinen Weg beobachtet. Und dieses Buch, das Sie mitgenommen haben. Wissen Sie, was daran besonders ist?";
+			link.l1 = "Sie sieht alt aus.";
+			link.l1.go = "Alamida_monah_Second_4";
+		break;
+		
+		case "Alamida_monah_Second_4":
+			dialog.text = "Sie hat eine reiche Geschichte, und es wäre klug von Ihnen, wenn Sie etwas Ihrer Kraft dem Dienst an den Brüdern in Christus widmen, indem Sie sie bei sich tragen. Aber das ist nicht das Interessante.";
+			link.l1 = "Beim letzten Mal sprachen Sie in Rätseln. Werden Sie das wieder tun?";
+			link.l1.go = "Alamida_monah_Second_5";
+		break;
+		
+		case "Alamida_monah_Second_5":
+			dialog.text = "\nDas wahre Rätsel steht jetzt vor mir. Sie haben viele interessante... Reliquien gesammelt. Eine Bibel. Eine Satzung. Sammeln Sie solche Dinge gern? Sind Sie ein Sammler?";
+			link.l1 = "Woher wissen Sie von der Satzung?";
+			link.l1.go = "Alamida_monah_Second_6";
+		break;
+		
+		case "Alamida_monah_Second_6":
+			dialog.text = "Ein Trophäenjäger?";
+			link.l1 = "Ich wiederhole meine Frage: Woher wissen Sie von der Satzung?";
+			link.l1.go = "Alamida_monah_Second_7";
+		break;
+		
+		case "Alamida_monah_Second_7":
+			dialog.text = "Ein Abenteurer?";
+			link.l1 = "...";
+			link.l1.go = "Alamida_monah_Second_8";
+		break;
+		
+		case "Alamida_monah_Second_8":
+			dialog.text = "\nAch. Natürlich. Selbstverständlich. Nun gut, Kapitän – ich will Sie nicht weiter aufhalten.";
+			link.l1 = "Moment mal, Pater. Sie haben meine Frage noch nicht beantwortet.";
+			link.l1.go = "Alamida_monah_Second_9";
+		break;
+		
+		case "Alamida_monah_Second_9":
+			dialog.text = "Oh, Kapitän. Ich kann nicht. Manchmal verletzen Antworten mehr als Unwissenheit. Gehen Sie in Frieden. Und hüten Sie Ihre Sammlung... an Trophäen. Sie könnten auf der Reise, die vor Ihnen liegt, nützlich sein.";
+			link.l1 = "...";
+			link.l1.go = "Alamida_monah_9";
 		break;
 		
 		//замечение по обнажённому оружию

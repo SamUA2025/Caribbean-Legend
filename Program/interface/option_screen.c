@@ -678,7 +678,7 @@ void procBtnAction()
 			XI_WindowShow("GRAPHICS_WINDOW", false);
 			XI_WindowShow("CONTROLS_WINDOW", true);
 			bControlsWin = true;
-			SetCurrentNode("VMOUSE_FRAME");
+			SetCurrentNode("LOC_MOUSE_SENSITIVITY_FRAME");
 			SetAlertMarksControls();
 		}
 		return;
@@ -1069,7 +1069,7 @@ void procSlideChange()
 		ChangeHUDDetail();
 		return;
 	}
-	if(sNodeName=="VMOUSE_SENSITIVITY_SLIDE" || sNodeName=="HMOUSE_SENSITIVITY_SLIDE") {
+	if(sNodeName=="LOC_MOUSE_SENSITIVITY_SLIDE" || sNodeName=="SEA_MOUSE_SENSITIVITY_SLIDE") {
 		ChangeMouseSensitivity();
 	}
 	// belamour перспектива МК
@@ -1082,8 +1082,8 @@ void procSlideChange()
 
 void ChangeMouseSensitivity()
 {
-	InterfaceStates.mouse.x_sens = stf(GameInterface.nodes.hmouse_sensitivity_slide.value);
-	InterfaceStates.mouse.y_sens = stf(GameInterface.nodes.vmouse_sensitivity_slide.value);
+	InterfaceStates.mouse.loc_sens = stf(GameInterface.nodes.loc_mouse_sensitivity_slide.value);
+	InterfaceStates.mouse.sea_sens = stf(GameInterface.nodes.sea_mouse_sensitivity_slide.value);
 	SetRealMouseSensitivity();
 }
 
@@ -1272,16 +1272,16 @@ void GetSoundOptionsData()
 
 void GetMouseOptionsData()
 {
-	float fCurXSens = 0.5;
-	float fCurYSens = 0.5;
-	if(CheckAttribute(&InterfaceStates,"mouse.x_sens")) {fCurXSens=stf(InterfaceStates.mouse.x_sens);}
-	if(CheckAttribute(&InterfaceStates,"mouse.y_sens")) {fCurYSens=stf(InterfaceStates.mouse.y_sens);}
-	if(fCurXSens<0.0) fCurXSens = 0.0;
-	if(fCurXSens>1.0) fCurXSens = 1.0;
-	if(fCurYSens<0.0) fCurYSens = 0.0;
-	if(fCurYSens>1.0) fCurYSens = 1.0;
-	GameInterface.nodes.hmouse_sensitivity_slide.value = fCurXSens;
-	GameInterface.nodes.vmouse_sensitivity_slide.value = fCurYSens;
+	float fCurLocSens = 0.5;
+	float fCurSeaSens = 0.5;
+	if(CheckAttribute(&InterfaceStates,"mouse.sea_sens")) {fCurSeaSens=stf(InterfaceStates.mouse.sea_sens);}
+	if(CheckAttribute(&InterfaceStates,"mouse.loc_sens")) {fCurLocSens=stf(InterfaceStates.mouse.loc_sens);}
+	if(fCurSeaSens<0.0) fCurSeaSens = 0.0;
+	if(fCurSeaSens>1.0) fCurSeaSens = 1.0;
+	if(fCurLocSens<0.0) fCurLocSens = 0.0;
+	if(fCurLocSens>1.0) fCurLocSens = 1.0;
+	GameInterface.nodes.sea_mouse_sensitivity_slide.value = fCurSeaSens;
+	GameInterface.nodes.loc_mouse_sensitivity_slide.value = fCurLocSens;
 }
 
 void GetVideoOptionsData()
@@ -1497,6 +1497,7 @@ void GetControlsStatesData()
 void SetAlwaysRun(bool bRun)
 {
 	InterfaceStates.alwaysrun = bRun;
+	pchar.alwaysrun = bRun;
 }
 
 void procKeyChange()
@@ -1512,6 +1513,7 @@ void ChooseOtherControl()
 {
 	bKeyChangeWin = true;
 	XI_WindowDisable("MAIN_WINDOW",true);
+	XI_WindowDisable("CONTROLS_WINDOW",true);
 	XI_WindowShow("CHANGEKEY_WINDOW",true);
 	SetCurrentNode("KEY_CHOOSER");
 	string srow = "tr" + GameInterface.controls_list.select;
@@ -1557,6 +1559,7 @@ void ReturnFromReassign()
 	sBtn1 = "";
 	XI_WindowShow("CHANGEKEY_WINDOW",false);
 	XI_WindowDisable("MAIN_WINDOW",false);
+	XI_WindowDisable("CONTROLS_WINDOW",false);
 	SetCurrentNode("CONTROLS_LIST");
 	bKeyChangeWin = false;
 	SetAlertMarksControls();
@@ -1772,15 +1775,15 @@ void ControlSettings(int iControlMode)
 void SetMouseToDefault()
 {
 	InterfaceStates.InvertCameras = false;
-	InterfaceStates.mouse.x_sens = 0.5;
-	InterfaceStates.mouse.y_sens = 0.5;
+	InterfaceStates.mouse.sea_sens = 0.5;
+	InterfaceStates.mouse.loc_sens = 0.5;
 
 	SetRealMouseSensitivity();
 	SetAlwaysRun(true);
 
 	GetControlsStatesData();
-	SendMessage(&GameInterface,"lslf",MSG_INTERFACE_MSG_TO_NODE,"VMOUSE_SENSITIVITY_SLIDE", 0,stf(InterfaceStates.mouse.y_sens));
-	SendMessage(&GameInterface,"lslf",MSG_INTERFACE_MSG_TO_NODE,"HMOUSE_SENSITIVITY_SLIDE", 0,stf(InterfaceStates.mouse.x_sens));
+	SendMessage(&GameInterface,"lslf",MSG_INTERFACE_MSG_TO_NODE,"LOC_MOUSE_SENSITIVITY_SLIDE", 0,stf(InterfaceStates.mouse.loc_sens));
+	SendMessage(&GameInterface,"lslf",MSG_INTERFACE_MSG_TO_NODE,"SEA_MOUSE_SENSITIVITY_SLIDE", 0,stf(InterfaceStates.mouse.sea_sens));
 }
 
 void ShowInfo()
@@ -1906,14 +1909,14 @@ void ShowInfo()
 			sText1 = XI_ConvertString("Invert Vertical Mouse Control_descr");
 		break;
 
-		case "VMOUSE_SENSITIVITY_SLIDE":
-			sHeader = XI_ConvertString("Vertical Mouse Sensitivity");
-			sText1 = XI_ConvertString("Vertical Mouse Sensitivity_descr");
+		case "LOC_MOUSE_SENSITIVITY_SLIDE":
+			sHeader = XI_ConvertString("Location Mouse Sensitivity");
+			sText1 = XI_ConvertString("Location Mouse Sensitivity_descr");
 		break;
 
-		case "HMOUSE_SENSITIVITY_SLIDE":
-			sHeader = XI_ConvertString("Horizontal Mouse Sensitivity");
-			sText1 = XI_ConvertString("Horizontal Mouse Sensitivity_descr");
+		case "SEA_MOUSE_SENSITIVITY_SLIDE":
+			sHeader = XI_ConvertString("Sea Mouse Sensitivity");
+			sText1 = XI_ConvertString("Sea Mouse Sensitivity_descr");
 		break;
 
 		case "BATTLE_MODE_CHECKBOX":

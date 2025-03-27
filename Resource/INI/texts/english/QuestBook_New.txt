@@ -684,3 +684,10 @@ I decided not to spoil the life of the unlucky couple and did not tell the guard
 I told the guard the truth. He was, of course, furious at first but calmed down eventually. We've all sinned. This couple just didn't have another place to see each other. Young love... Hopefully, everything works out for them.
 #TEXT 5
 I decided that I did not care about any noises and terrible groans imagined by the watchman. My time is more valuable.
+
+#QUEST SixCaptains
+Six Captains
+#TEXT	1
+Perhaps this is the first time that a brief encounter with someone who had neither work nor business for me has made me record an entry in this journal. I don't understand why this priest made such an impression on me. I don't know his name, and he sometimes talked nonsense, but he made himself memorable. We've met twice now, and it could be dismissed as coincidence. But if we meet again...
+I must admit, his interest is somewhat flattering. That look in his eyes is so... appraising. As if he admires my accomplishments. And who wouldn't? Two legendary ships, two captains whose tales spread across the entire Archipelago-both fallen by my hand.
+I wonder what he'll say when he learns of my future exploits? The Archipelago is vast, but my fame, it seems, is growing faster than I thought.

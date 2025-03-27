@@ -4,8 +4,8 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
     switch (Dialog.CurrentNode)
 	{
 		case "quests":
-			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("Jakie pytania, "+GetSexPhrase("mój synu","moja córka")+"?","Pytaj śmiało, słucham..."),"Słucham, mów teraz, "+GetSexPhrase("mój synu","moja córka")+"...","Po raz trzeci, "+GetSexPhrase("mój synu","moja córka")+"Proszę, pytaj o to, czego potrzebujesz.","Duchowny ma wiele pracy, a ty mnie rozpraszasz, "+GetSexPhrase("mój synu","moja córka")+"...","block",1,npchar,Dialog.CurrentNode);
-			link.l1 = HeroStringReactionRepeat(RandPhraseSimple("Zmieniłem zdanie...","Nie tym razem, ojcze..."),"Nie mam nic do powiedzenia, przepraszam.","Zapytam później. Wybacz mi, ojcze.","Przepraszam, święty ojcze...",npchar,Dialog.CurrentNode);
+			dialog.text = NPCStringReactionRepeat(RandPhraseSimple("Jakie pytania, "+GetSexPhrase("mój synu","moja córko")+"?","Pytaj śmiało, słucham..."),"Słucham, mów teraz, "+GetSexPhrase("mój synu","moja córko")+"...","Po raz trzeci, "+GetSexPhrase("mój synu","moja córko")+"Proszę, pytaj o to, czego potrzebujesz.","Duchowny ma od groma pracy, "+GetSexPhrase("mój synu","moja córko")+" a ty mnie ewidentnie rozpraszasz...","block",1,npchar,Dialog.CurrentNode);
+			link.l1 = HeroStringReactionRepeat(RandPhraseSimple("Już nieważne...","Nie tym razem, ojcze..."),"Nie mam nic do powiedzenia, przepraszam.","Zapytam później. Wybacz mi, ojcze.","Przepraszam, święty ojcze...",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 		break;
 		
@@ -17,15 +17,15 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 		break;
 		
 		case "Gravel2":
-			dialog.text = "Ja? Ale dlaczego?";
-			link.l1 = "Longway i Mynheer Van Merden potrzebują, abyś ponownie zbadał sprawę. Longway nie może pokazać się tutaj po swojej... poprzedniej wizycie.";
+			dialog.text = "Mnie? Ale dlaczego?";
+			link.l1 = "Longway i Mynheer Van Merden potrzebują, abyś ponownie zbadał sprawę. Longway nie może się tu pokazywać po swojej... poprzedniej wizycie.";
 			link.l1.go = "Gravel3";
 		break;
 		
 		case "Gravel3":
 			AddQuestRecord("PZ", "23");
-			dialog.text = "Ścisz głos, na miłość boską! Ale rozumiem. Zrobię, co w mojej mocy.";
-			link.l1 = "Doskonale, Georges. Jesteś jednym z naszych najcenniejszych sojuszników. Do zobaczenia później.";
+			dialog.text = "Mów ciszej, na miłość boską! Ale rozumiem. Zrobię, co w mojej mocy.";
+			link.l1 = "Doskonale, Georges. Jesteś jednym z naszych najcenniejszych sojuszników. Z Panem Bogiem.";
 			link.l1.go = "Exit";
 			DelMapQuestMarkCity("Charles");
 			

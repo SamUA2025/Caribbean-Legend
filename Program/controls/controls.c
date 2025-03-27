@@ -414,40 +414,28 @@ void SetControlForInverting(string controlName, bool invertState)
 
 void SetRealMouseSensitivity()
 {
-	float fRealMouseXSens = 1.0;
-	float fRealMouseYSens = 1.0;
+	XI_SetMouseSensitivity(1.0, 1.0);
 
-	float fx = 0.15;
-	float fy = 0.36;
-	if( CheckAttribute(InterfaceStates,"mouse.x_sens") )
-		fx = stf(InterfaceStates.mouse.x_sens);
-	if( CheckAttribute(InterfaceStates,"mouse.y_sens") )
-		fy = stf(InterfaceStates.mouse.y_sens);
+	float fLoc = 0.5;
+	float fSea = 0.5;
+	if(CheckAttribute(InterfaceStates,"mouse.loc_sens"))
+		fLoc = stf(InterfaceStates.mouse.loc_sens);
+	if(CheckAttribute(InterfaceStates,"mouse.sea_sens"))
+		fSea = stf(InterfaceStates.mouse.sea_sens);
+	float fRealMouseLocSens = Calculate_sensitivity(fLoc);
+	float fRealMouseSeaSens = Calculate_sensitivity(fSea);
 
-	/* if(fx<=0.5) {fRealMouseXSens = 0.5 + fx;}
-	else {fRealMouseXSens = fx*2.0;}
-	if(fy<=0.5) {fRealMouseYSens = 0.5 + fy;}
-	else {fRealMouseYSens = fy*2.0;} */
-    fRealMouseXSens = Calculate_sensitivity(fx);
-	fRealMouseYSens = Calculate_sensitivity(fy);
-	
-	XI_SetMouseSensitivity( fRealMouseXSens, fRealMouseYSens );
+	SeaShipCamera.MouseSensitivity = fRealMouseSeaSens;
+	SeaDeckCamera.MouseSensitivity = fRealMouseSeaSens * 0.25;
+	locCamera.MouseSensitivity = fRealMouseLocSens;
 }
 
-// belamour расчет чувствительности мыши
+// расчет чувствительности мыши
 float Calculate_sensitivity(float slider_value) 
 {
-    float x1 = 0.0; float y1 = 0.1; // начальная точка
-    float x2 = 1.0; float y2 = 2.0;   // конечная точка
-
-    float x = slider_value;
-	if(x <= 0.25) 
-	{
-		y1 = 0.01;
-		y2 = 0.25;
-	}
-    // Интерполяция
-    float result = linear_interpolate(x, x1, y1, x2, y2);
-	
-	return result;
+	float fBase = 2.0;
+	if(slider_value < 0.5)
+		fBase = 4.0;
+	float fPow = Bring2Range(-1.0, 1.0, 0.0, 1.0, slider_value);
+	return pow(fBase, fPow);
 }
