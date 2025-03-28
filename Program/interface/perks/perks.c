@@ -446,7 +446,7 @@ void PerkBerserkerReaction()
 	AddCharacterHealth(pchar, -2);
 	if(!ShowCharString()) Log_info(XI_ConvertString("TinctureUsed"));
 	PlaySound("Ambient\Tavern\glotok_001.wav");
-	PlaySound("Types\" + LanguageGetLanguage() + "\warrior03.wav");
+	PlaySound("Types\warrior03.wav");
 }
 
 // belamour legendary edition количество открытых перков у персонажа

@@ -31,6 +31,7 @@ int LocationInitGuadeloupe(int n)
 	locations[n].models.always.seabed = "Guadeloupe_sb";
 	locations[n].models.always.grassPatch = "Guadeloupe_grass";
 	locations[n].models.always.locators = "Guadeloupe_locators";
+	locations[n].models.always.parts = "Guadeloupe_parts";
 
 	//WindMill Fan
 	locations[n].models.always.MillFan = "MillFan";
