@@ -1183,7 +1183,7 @@ itmname_talisman18	{Amuleto 'Carta de Blackwood'}
 itmdescr_talisman18
 {
 El estatuto personal de Albert Blackwood. Describe en detalle el funcionamiento de la Lady Bet, la disposición de los tiradores y la táctica de las Zorras Marinas. Una sección aparte está dedicada a la caza de tesoros y a recompensar a los tiradores hábiles con las riquezas recuperadas. 
-Cada tesoro encontrado aumenta el poder de la descarga de mosquetes de la tripulación y el daño de las escopetas.
+Cada tesoro encontrado aumenta el poder de la descarga de mosquetes en 1% de la tripulación y el daño de las escopetas en 2%.
 ~
 Sin penalizaciones, sin límites de activación.
 }

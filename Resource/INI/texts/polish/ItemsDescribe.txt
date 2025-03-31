@@ -1137,7 +1137,7 @@ itmname_talisman18	{Amulet 'Statut Blackwooda'}
 itmdescr_talisman18
 {
 Osobisty statut Alberta Blackwooda. Opisuje szczegółowo działanie Lady Bet, rozstawienie strzelców i taktykę Morskich Lisów. Osobny dział poświęcony jest poszukiwaniu skarbów i nagradzaniu celnych strzelców zdobytymi bogactwami. 
-Każdy znaleziony skarb wzmacnia moc ognia muszkietowego załogi i zwiększa obrażenia zadawane przez strzelby.
+Każdy znaleziony skarb wzmacnia moc ognia muszkietowego załogi o 1% i zwiększa obrażenia zadawane przez strzelby o 2%.
 ~
 Żadnych kar ani limitów czasowych podczas noszenia.
 }

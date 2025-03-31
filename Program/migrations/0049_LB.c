@@ -195,11 +195,14 @@ void ApplyMigration(ref migrationState) {
     Render.T13.Jewelry.berserker_potion = "On";
     Render.T13.Jewelry.berserker_potion.min = 1;
     Render.T13.Jewelry.berserker_potion.dif = 1;
-    SP2SetSingleItemToTiers(10, 15, "Jewelry", "recipe_GunEchin");
-    SP2SetSingleItemToTiers(15, 15, "Jewelry", "Mineral32");
-    SP2SetSingleItemToTiers(15, 15, "Jewelry", "Tigel");
-    SP2SetSingleItemToTiers(15, 15, "Jewelry", "chemistry");
-    SP2SetSingleItemToTiers(15, 15, "Special", "Map_Best");
+    if(SandBoxMode)
+    {
+        SP2SetSingleItemToTiers(10, 15, "Jewelry", "recipe_GunEchin");
+        SP2SetSingleItemToTiers(15, 15, "Jewelry", "Mineral32");
+        SP2SetSingleItemToTiers(15, 15, "Jewelry", "Tigel");
+        SP2SetSingleItemToTiers(15, 15, "Jewelry", "chemistry");
+        SP2SetSingleItemToTiers(15, 15, "Special", "Map_Best");
+    }
     // <-- Правки тиров
 
     // --> Записки

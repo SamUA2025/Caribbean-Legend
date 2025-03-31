@@ -101,7 +101,7 @@ void ProcessDialogEvent()
 						dialog.text = ""+ GetSexPhrase("О, капитан! Вы хотели бы попасть в мои объятья сегодня? Я не люблю хвастаться, но...","Присаживайтесь, капитан. Настоящей морской волчице здесь всегда рады.") +"";
 						link.l1 = ""+ GetSexPhrase("Увы, сейчас я спешу! Давай в другой раз!","Cпасибо, милашка.") +"";
 						link.l1.go = "exit";
-						bool bOk = (CheckAttribute(pchar, "questTemp.Saga.Helena_officer")) || (CheckAttribute(pchar, "questTemp.LSC.Mary_officer")); // 291112
+						bool bOk = (CheckAttribute(pchar, "questTemp.Saga.Helena_officer")) || (CheckAttribute(pchar, "questTemp.LSC.Mary_officer")) || npchar.city == GetLadyBethCity(); // 291112
 						if (pchar.questTemp.different == "free" && !CheckAttribute(pchar, "questTemp.different.FackWaitress") && PChar.sex != "woman" && pchar.GenQuest.EncGirl != "HorseToTavern" && !bOk && !CheckAttribute(pchar, "questTemp.Sharlie.Lock")) // Addon-2016 Jason
 						{
 							link.l2 = "С превеликим удовольствием, крошка!";

@@ -349,7 +349,12 @@ void MainMenu_CreateShip()
 	characters[iChar].id = "menuCharacter";
 	ref	rCharacter = &characters[iChar];
 	LAi_SetImmortal(rCharacter, true);
-	rCharacter.ship.type = shipIndex;
+
+	// защита от несуществующих моделей кораблей, грузим лодку
+	string shipModel = "ships\" + currentShip.name + "\" + currentShip.name;
+	if(!ModelExists(shipModel)) rCharacter.ship.type = GenerateShip(SHIP_BOAT, false);
+	else rCharacter.ship.type = shipIndex;
+
 	realShip.SpeedRate = 5.0; // чтоб не летал
 	Ship_SetFantomData( rCharacter );
 	Ship_ClearImpulseStrength( rCharacter );
@@ -359,7 +364,6 @@ void MainMenu_CreateShip()
 	rCharacter.Features.GeraldSails = true;
 	rCharacter.Ship.Speed.z = 5.0;
 	rCharacter.Ship.Stopped = false;
-	// rCharacter.Ship.Pos.Mode = SHIP_WAR;
 	rCharacter.Ship.Pos.Mode = SHIP_SAIL;
 	if(CheckAttribute(&InterfaceStates,"Death"))
     {    
@@ -709,4 +713,13 @@ int CheckUpdates()
 		else continue;	
 	}
 	return 0;
+}
+
+// mitrokosta проверка наличия модели корабля в ресурсах
+bool ModelExists(string path) {
+    object testModel;
+    CreateEntity(&testModel, "MODELR");
+    bool result = SendMessage(&testModel, "ls", MSG_MODEL_LOAD_GEO, path);
+    DeleteClass(&testModel);
+    return result;
 }

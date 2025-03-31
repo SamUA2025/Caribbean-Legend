@@ -433,9 +433,9 @@ void SetRealMouseSensitivity()
 // расчет чувствительности мыши
 float Calculate_sensitivity(float slider_value) 
 {
-	float fBase = 2.0;
+	float fBase = 5.0;
 	if(slider_value < 0.5)
-		fBase = 4.0;
+		fBase = 10.0;
 	float fPow = Bring2Range(-1.0, 1.0, 0.0, 1.0, slider_value);
 	return pow(fBase, fPow);
 }

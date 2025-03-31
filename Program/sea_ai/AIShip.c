@@ -1929,7 +1929,6 @@ void Ship_CheckSituation()
 							{
 								DeleteAttribute(pchar, "questTemp.TK_Otpustil");
 								NewGameTip(XI_ConvertString("TKGenrihCap"));
-								SetTimeScale(1.0);
 								rCharacter.nation = PIRATE;
 							}
 						}

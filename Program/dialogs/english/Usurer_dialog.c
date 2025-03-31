@@ -2728,7 +2728,7 @@ void ProcessDialogEvent()
 		
 		case "LadyBeth_Usurer_2":
 			dialog.text = "They say conditions in the crew are getting worse. Monsieur Blackwood has even started to tolerate regular losses - something that never happened before. But that's not my business. I just sell goods. So what are you interested in?";
-			link.l1 = "...";
+			link.l1 = "Let's get down to business.";
 			link.l1.go = "next";
 			npchar.quest.item_date = "LadyBeth";
 			pchar.questTemp.LadyBeth_Usurer = true;

@@ -9,7 +9,7 @@ void LadyBeth_init()
 	// характеристики запишем после ТЗ
 	sld = GetCharacter(NPC_GenerateCharacter("LadyBeth_cap", "quest_off_eng", "man", "man", 30, ENGLAND, -1, false, "governor"));
 	FantomMakeCoolSailor(sld, SHIP_LADYBETH, GetConvertStr("LadyBeth_Ship_Name", "LadyBeth.txt"), CANNON_TYPE_CANNON_LBS24, 105, 105, 105);
-	FantomMakeCoolFighter(sld, 30, 100, 100, "lacrima_patris", "pistol8", "harpoon", 100);
+	FantomMakeCoolFighter(sld, 30, 70, 70, "blade_15", "pistol6", "bullet", 200);
 	SetCaptanModelByEncType(sld, "war");
 	sld.ship.Crew.Morale = 100;
 	ChangeCrewExp(sld, "Sailors",   100);
@@ -36,9 +36,6 @@ void LadyBeth_init()
 	GiveItem2Character(sld, "amulet_8");
 	GiveItem2Character(sld, "amulet_10");
 	GiveItem2Character(sld, "obereg_11");
-	//Усиленный меч
-	itm = ItemsFromID("lacrima_patris");
-	itm.Attack = 90.0;
 	//Товары в трюме
 	SetCharacterGoods(sld, GOOD_POWDER, 3000);
 	SetCharacterGoods(sld, GOOD_BALLS, 1000);
@@ -61,7 +58,7 @@ void LadyBeth_init()
 	sld.mapEnc.type = "trade";
 	sld.mapEnc.worldMapShip = "shnyava_sp2";
 	sld.mapEnc.Name = GetConvertStr("LadyBeth_Ship_Name", "LadyBeth.txt");
-	Map_CreateTrader(sld.city, sld.quest.targetCity, sld.id, 1000);
+	Map_CreateTrader(sld.city, sld.quest.targetCity, sld.id, 30);
 	
 	//общий слух
 	AddSimpleRumourAllNations(GetConvertStr("LadyBeth_Rum1", "LadyBeth.txt"), 30, 1);
@@ -128,7 +125,7 @@ void LadyBeth_ToCity(string sChar)
 	sld = CharacterFromID(pchar.questTemp.LadyBeth.colony + "_tavernkeeper");
 	sld.quest.LadyBeth = true;
 	//ростовщик даёт больше дублонов
-	DeleteAttribute(pchar, "questTemp.LadyBeth_Usurer");
+	if(CheckAttribute(pchar, "questTemp.LadyBeth_Usurer")) DeleteAttribute(pchar, "questTemp.LadyBeth_Usurer");
 	//можно зайти в комнату в таверне
 	LocatorReloadEnterDisable(pchar.questTemp.LadyBeth.colony + "_tavern", "reload2_back", false);
 	LAi_LocationFightDisable(&Locations[FindLocation(pchar.questTemp.LadyBeth.colony + "_tavern_upstairs")], true);
@@ -136,7 +133,7 @@ void LadyBeth_ToCity(string sChar)
 	sld = GetCharacter(NPC_GenerateCharacter("LadyBeth_clone_tavern", "quest_off_eng", "man", "man", 30, ENGLAND, -1, false, "governor"));
 	sld.name = GetConvertStr("LadyBeth_Cap_Name", "LadyBeth.txt");
 	sld.lastname = GetConvertStr("LadyBeth_Cap_lastname", "LadyBeth.txt");
-	FantomMakeCoolFighter(sld, 30, 100, 100, "lacrima_patris", "pistol8", "harpoon", 100);
+	FantomMakeCoolFighter(sld, 30, 70, 70, "blade_15", "pistol6", "bullet", 200);
 	sld.dialog.filename = "Quest\LadyBeth_dialog.c";
 	sld.dialog.currentnode = "LadyBeth_DialogInCity";
 	sld.City = pchar.questTemp.LadyBeth.colony;
@@ -191,7 +188,7 @@ void LadyBeth_ToMap(string sQuest)
 	sld.mapEnc.type = "trade";
 	sld.mapEnc.worldMapShip = "shnyava_sp2";
 	sld.mapEnc.Name = GetConvertStr("LadyBeth_Ship_Name", "LadyBeth.txt");
-	Map_CreateTrader(sld.city, sld.quest.targetCity, sld.id, 1000);
+	Map_CreateTrader(sld.city, sld.quest.targetCity, sld.id, 30);
 	
 	//если шнява вышла из Каймана, то чистим
 	if(sld.city == "Shore16")
@@ -556,6 +553,8 @@ void LadyBeth_CaimanBitva_1(string qName)
 	// прячем в сундук лут Блеквуда
 	pchar.GenQuestBox.Caiman_Jungle_01.box4.items.LadyBeth_Map = 1;
 	pchar.GenQuestBox.Caiman_Jungle_01.box4.items.mushket9 = 1;
+	pchar.GenQuestBox.Caiman_Jungle_01.box4.items.grapeshot = 29;
+	pchar.GenQuestBox.Caiman_Jungle_01.box4.items.GunPowder = 29;
 	// остальные сундуки
 	pchar.GenQuestBox.Caiman_Jungle_01.box1.items.mushket1 = 1;
 	pchar.GenQuestBox.Caiman_Jungle_01.box1.items.GunPowder = 17;
@@ -564,10 +563,8 @@ void LadyBeth_CaimanBitva_1(string qName)
 	pchar.GenQuestBox.Caiman_Jungle_01.box2.items.potion4 = 1;
 	pchar.GenQuestBox.Caiman_Jungle_01.box2.items.indian_2 = 1;
 	pchar.GenQuestBox.Caiman_Jungle_01.box3.items.talisman11 = 5;
-	pchar.GenQuestBox.Caiman_Jungle_01.box4.items.jewelry5 = 20;
-	pchar.GenQuestBox.Caiman_Jungle_01.box4.items.jewelry4 = 10;
 	pchar.GenQuestBox.Caiman_Jungle_01.box5.items.jewelry6 = 20;
-	pchar.GenQuestBox.Caiman_Jungle_01.box5.items.jewelry3 = 10;
+	pchar.GenQuestBox.Caiman_Jungle_01.box5.items.jewelry3 = 5;
 	// Меняем статы Аркебузы
 	ref itm;
 	makeref(itm, items[FindItem("mushket9")]);
@@ -1354,6 +1351,9 @@ void LadyBeth_BossEtap(string qName)
 		LAi_group_SetLookRadius("LadyBeth_Enemy", 1000.0);
 		LAi_group_SetHearRadius("LadyBeth_Enemy", 1000.0);
 		LAi_group_SetSayRadius("LadyBeth_Enemy", 1000.0);
+		LAi_group_SetRelation("LadyBeth_Enemy", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
+		LAi_group_FightGroups("LadyBeth_Enemy", LAI_GROUP_PLAYER, false);
+		LAi_group_SetCheckFunction("LadyBeth_Enemy", "LadyBeth_PobedaInJungles");
 		
 		DeleteQuestCondition("LadyBeth_HeadShotBoos");
 	}
@@ -1362,9 +1362,6 @@ void LadyBeth_BossEtap(string qName)
 void LadyBeth_HeadShotBoos(string qName)
 {
 	Achievment_Set("ach_CL_148");
-	/*LAi_group_SetRelation("LadyBeth_Enemy", LAI_GROUP_PLAYER, LAI_GROUP_ENEMY);
-	LAi_group_FightGroups("LadyBeth_Enemy", LAI_GROUP_PLAYER, false);
-	LAi_group_SetCheckFunction("LadyBeth_Enemy", "LadyBeth_PobedaInJungles");*/
 }
 
 void LadyBeth_SailorDead(string qName)
@@ -1375,8 +1372,16 @@ void LadyBeth_SailorDead(string qName)
 
 void LadyBeth_PobedaInJungles(string qName)
 {
-	Event("QuestDelayExit","sl", "", 0);
-	DoQuestFunctionDelay("LadyBeth_PobedaInJungles_2", 1.5);
+	if (CharacterIsAlive("LadyBeth_Blackwood"))
+	{
+		DeleteQuestCondition("LadyBeth_BossEtap");
+		DoQuestFunctionDelay("LadyBeth_BossEtap", 0.5);
+	}
+	else
+	{
+		Event("QuestDelayExit","sl", "", 0);
+		DoQuestFunctionDelay("LadyBeth_PobedaInJungles_2", 1.5);
+	}
 }
 
 void LadyBeth_PobedaInJungles_2(string qName)
@@ -1441,6 +1446,7 @@ void LadyBeth_PobedaInJungles_3(string qName)
 		LAi_SetOfficerType(sld);
 		LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
 	}
+	DoQuestFunctionDelay("LadyBeth_PobedaInJungles_4", 2.5);
 	// ставим Алонсо
 	if (CharacterIsAlive("LadyBeth_Alonso"))
 	{
@@ -1482,6 +1488,20 @@ void LadyBeth_PobedaInJungles_3(string qName)
 	sld.DeadWithBlade = true;
 	LAi_SetFightMode(sld, true);
 	LAi_KillCharacter(sld);
+	for (i=1; i<=60; i++)
+	{
+		if (CharacterIsAlive("LadyBeth_Our_crew_"+i))
+		{
+			sld = CharacterFromID("LadyBeth_Our_crew_"+i);
+			sld.lifeday = 0;
+			ChangeCharacterAddressGroup(sld, "none", "", "");
+		}
+	}
+}
+
+void LadyBeth_PobedaInJungles_4(string qName)
+{
+	OfficersFollow();
 }
 
 void LadyBeth_Grot_MatrosySdautsya(string qName)
@@ -2053,6 +2073,8 @@ void LadyBeth_KorablNash(string qName)
 	bQuestDisableMapEnter = false;
 	chrDisableReloadToLocation = false;
 	QuestOpenSeaExit();
+	LocatorReloadEnterDisable("Shore16", "boat", false);
+	LocatorReloadEnterDisable("Shore17", "boat", false);
 	DeleteAttribute(pchar,"questTemp.TimeLock");
 	DeleteAttribute(pchar, "GenQuest.CannotWait");
 	if(CheckAttribute(pchar,"questTemp.BlackMark.IronsBlock")) DeleteAttribute(pchar,"questTemp.BlackMark.IronsBlock");
@@ -2342,18 +2364,19 @@ void LadyBeth_Treasure(int iTier, int iBonus, ref item)
     }
     */
     if(rand(1)) return; // 50% скип
-
-    if(!CheckCharacterItem(pchar, "FirearmStockPart_1"))
+    
+    int iStage = sti(items[FindItem("mushket9")].UpgradeStage);
+    if(!CheckCharacterItem(pchar, "FirearmStockPart_1") && iStage == 1)
     {
         if(iTier < 3) return;
         item.BoxTreasure.FirearmStockPart_1 = 1;
     }
-    else if(!CheckCharacterItem(pchar, "FirearmStockPart_2"))
+    else if(!CheckCharacterItem(pchar, "FirearmStockPart_2") && iStage < 3)
     {
         if(iTier < 6) return;
         item.BoxTreasure.FirearmStockPart_2 = 1;
     }
-    else if(!CheckCharacterItem(pchar, "FirearmStockPart_3"))
+    else if(!CheckCharacterItem(pchar, "FirearmStockPart_3") && iStage < 4)
     {
         if(iTier < 9) return;
         item.BoxTreasure.FirearmStockPart_3 = 1;

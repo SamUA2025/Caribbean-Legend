@@ -1054,7 +1054,7 @@ void LAi_ApplyCharacterAttackDamage(aref attack, aref enemy, string attackType, 
 		{
 			attack.chr_ai.energy = stf(attack.chr_ai.energy) + stf(attack.chr_ai.energy)*1.25;
 			//Log_Chr(enemy, XI_ConvertString("Hat2 Hit"));
-			notification(XI_ConvertString("Hat2 Hit"), "none");
+			notification(XI_ConvertString("Hat2 Hit"), "EnergyPlus");
 		}
 		// boal  check skill -->
 		float ra = 1.0;

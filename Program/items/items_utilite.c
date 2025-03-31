@@ -1651,6 +1651,7 @@ void UpgradeMusketSP(ref chr)
 				itm.type.t2.width   = 4.5;
 				itm.type.t2.height  = 3.75;
 				itm.type.t2.area    = XI_ConvertString("grapes_area_2");
+				Achievment_Set("ach_CL_152");
 			break;
 		}
 		if(IsEquipCharacterByItem(chr, "mushket9"))

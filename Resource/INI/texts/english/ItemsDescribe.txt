@@ -1185,7 +1185,7 @@ itmdescr_talisman18
 {
 Albert Blackwood's personal charter that details the structure of Lady Beth, the positioning of shooters, and the battle tactics of Sea Foxes. 
 A separate section is dedicated to treasure hunting and rewarding skilled marksmen with the recovered riches. 
-Each found treasure enhances the crew's musket volley power and increases damage from the shotguns.
+Each found treasure enhances the crew's musket volley power by 1% and increases damage from the shotguns by 2%.
 ~
 No penalties, no activation limits.
 }

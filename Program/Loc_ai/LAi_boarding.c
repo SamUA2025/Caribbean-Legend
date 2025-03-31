@@ -5,7 +5,7 @@
 
 #define BRDLT_MAXCREW 60
 
-#define LOCINITBRD_DEFAULTLOCATION "BOARDING_U_H_CS_T12"
+#define LOCINITBRD_DEFAULTLOCATION "BOARDING_5_WAR"
 #define LOCINITBRD_DEFAULTLOCATION_FORT "Any_fort_1"
 
 #define MAX_GROUP_SIZE   24
@@ -1747,6 +1747,7 @@ string chooseDeck(ref mchr, ref echr)
 	if(mclass > 2 && eclass > 2)
 	{
 		int HighClass = func_min(mclass, eclass);
+		if(HighClass > 5) HighClass = 5;
 		if(IsMerchantShipType(mchr) || IsMerchantShipType(echr))
 		{
 			if(IsMerchantShipType(mchr) && IsMerchantShipType(echr))

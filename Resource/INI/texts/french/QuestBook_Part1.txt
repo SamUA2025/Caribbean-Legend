@@ -1066,6 +1066,13 @@ Santa Misericordia a été envoyé d'Europe par l'Escurial pour surveiller les c
 Santa Misericordia navigue entre les colonies, commençant et terminant son voyage à La Havane, en se concentrant uniquement sur sa mission. 
 Dans chaque port, Alamida passe plusieurs jours, parfois plus. On dit que pendant ces périodes, on peut même le rencontrer dans la rue, mais les habitants ne sont pas très enthousiastes à l'idée d'une telle rencontre - chez les Espagnols, el señor n'inspire que crainte et effroi.
 Santa Misericordia dispose d'un équipage expérimenté et loyal, personnellement sélectionné par Alamida. Chaque marin est prêt à défendre sa patrie et son capitaine au péril de sa vie. On dit que Don Fernando a ordonné que le Santa Misericordia ne doit jamais être capturé, et on murmure que si l'équipage devait faire face à des obstacles insurmontables lors de l'abordage, il préférerait envoyer le navire dans les profondeurs plutôt que de le voir abordé.
+#TEXT	2
+"Lady Beth"
+***********************
+'Lady Beth' est une vraie beauté. Un chef-d'oeuvre du génie naval britannique, sous le commandement d'Albert Blackwood, ancien officier de la Royal Navy. Peu de gens réussissent une telle désertion avec autant d'éclat ! Il a quitté le service, ruiné une brillante carrière et volé un navire de guerre - tout ça pour chasser des trésors !
+Et il a eu raison. Il en a déjà trouvé assez pour acheter la moitié de la Barbade, mais cela ne lui suffit jamais. Si vous le croisez en mer - n'essayez même pas de l'intercepter. Son navire est excellent, et le capitaine est expérimenté et prudent. Dernièrement, Blackwood fréquente souvent les Caïmans - il y creuse jour et nuit, épuisant ses hommes jusqu'à la mort
+Si vous décidez d'enquêter - prenez au moins 60 hommes et de bonnes armes à feu... Cela pourrait ne pas suffire.J'espère que vous savez tirer, car une compagnie d'anciens marines du colonel Fox a déserté avec lui. Des professionnels, bien supérieurs aux simples bandits. Et ne l'attaquez jamais dans les ports français - il y a des protections et des mécènes qui partagent ses découvertes.
+
 #QUEST StoriesTreasures
 Histoires de trésors
 #TEXT	1

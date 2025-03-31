@@ -1795,10 +1795,11 @@ void ProcessDialogEvent()
 			npchar.CompanionEnemyEnable = true;
 			SetCrewQuantity(npchar, 35);
 			SetCharacterGoods(npchar, GOOD_ROPES, 30);
-			LAi_SetImmortal(sld, false);
+			LAi_SetImmortal(npchar, false);
 			
 			LAi_SetActorType(npchar);
 			LAi_ActorRunToLocation(npchar, "reload", "reload1_back", "", "", "", "", -1);
+			LAi_group_MoveCharacter(npchar, LAI_GROUP_PLAYER);
 			
 			bDisableFastReload = false;
 			chrDisableReloadToLocation = false;

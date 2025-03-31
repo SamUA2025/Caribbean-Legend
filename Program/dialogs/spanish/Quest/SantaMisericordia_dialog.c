@@ -616,53 +616,53 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Alamida_monah_Second_2":
-			dialog.text = "¿Sabe qué tiene de especial esta cripta? Aquí descansan dos almas, unidas... por la sangre. Padre e hijo de Alameda. Uno cayó a manos de pecadores, el otro... hmm, encontró su camino hacia Dios.";
-			link.l1 = "¿Sirve en la parroquia local? ¿Conocía al don Fernando?";
+			dialog.text = "¿Sabes qué tiene de especial esta cripta? Dos almas descansan aquí, unidas por... lazos de sangre. Padre e hijo de Alamida. Uno cayó en manos de los pecadores, el otro... encontró su camino hacia el Señor.";
+			link.l1 = "¿Sirves en la parroquia local? ¿Conocías a don Fernando?";
 			link.l1.go = "Alamida_monah_Second_3";
 		break;
-		
+
 		case "Alamida_monah_Second_3":
-			dialog.text = "Yo... observé su camino. Y ese libro que usted tomó. ¿Sabe qué tiene de especial?";
-			link.l1 = "Parece antigua.";
+			dialog.text = "Yo... observé su camino. Y este manual que tomó. ¿Sabe qué lo hace especial?";
+			link.l1 = "Parece viejo.";
 			link.l1.go = "Alamida_monah_Second_4";
 		break;
-		
+
 		case "Alamida_monah_Second_4":
-			dialog.text = "Tiene una historia rica, y sería sabio de su parte dedicar algo de su fuerza al servicio de los Hermanos en Cristo llevándola consigo. Pero eso no es lo interesante.";
-			link.l1 = "La última vez hablaba en acertijos. ¿También lo hará ahora?";
+			dialog.text = "Tiene una rica historia, y harías bien en dedicar algún esfuerzo a servir a los Hermanos en Cristo llevándola cerca de tu corazón. Pero eso no es lo interesante.";
+			link.l1 = "La última vez hablaste con acertijos. ¿Lo volverás a hacer?";
 			link.l1.go = "Alamida_monah_Second_5";
 		break;
-		
+
 		case "Alamida_monah_Second_5":
-			dialog.text = "\nEl verdadero enigma está frente a mí. Ha reunido muchas... reliquias interesantes. Una Biblia. Un estatuto. ¿Le gusta coleccionar cosas así? ¿Es usted coleccionista?";
-			link.l1 = "¿Cómo sabe sobre el estatuto?";
+			dialog.text = "\nEl verdadero enigma está ante mí ahora. Has coleccionado muchas reliquias... interesantes. La Biblia, la carta. ¿Te gusta coleccionar esas cosas? ¿Eres coleccionista?";
+			link.l1 = "¿Cómo sabes lo del manual?";
 			link.l1.go = "Alamida_monah_Second_6";
 		break;
-		
+
 		case "Alamida_monah_Second_6":
-			dialog.text = "¿Cazador de trofeos?";
-			link.l1 = "Repito mi pregunta: ¿cómo sabe sobre el estatuto?";
+			dialog.text = "¿Un cazador de trofeos?";
+			link.l1 = "Repito mi pregunta: ¿cómo sabes lo del manual?";
 			link.l1.go = "Alamida_monah_Second_7";
 		break;
-		
+
 		case "Alamida_monah_Second_7":
-			dialog.text = "¿Amante de las emociones fuertes?";
+			dialog.text = "¿Buscas emociones fuertes?";
 			link.l1 = "...";
 			link.l1.go = "Alamida_monah_Second_8";
 		break;
-		
+
 		case "Alamida_monah_Second_8":
-			dialog.text = "\nAh. Por supuesto. Naturalmente. Bueno, capitán, no lo detendré más.";
-			link.l1 = "Espere un momento, padre. Aún no ha respondido a mi pregunta.";
+			dialog.text = "\nAh, por supuesto. Bueno, Capitán, no lo entretendré....";
+			link.l1 = "Espere un momento, Santo Padre. Aún no ha respondido a mi pregunta.";
 			link.l1.go = "Alamida_monah_Second_9";
 		break;
-		
+
 		case "Alamida_monah_Second_9":
-			dialog.text = "Oh, capitán. No puedo. A veces las respuestas duelen más que la ignorancia. Vaya en paz. Y cuide su colección... de trofeos. Podrían serle útiles en el viaje que le espera.";
+			dialog.text = "Oh, Capitán. No puedo. A veces las respuestas duelen más que cualquier ignorancia. Ve en paz. Y cuida tu colección... de trofeos. Pueden ser útiles en el viaje que te espera.";
 			link.l1 = "...";
 			link.l1.go = "Alamida_monah_9";
 		break;
-		
+
 		//замечение по обнажённому оружию
 		case "CitizenNotBlade":
 			dialog.text = LinkRandPhrase("¡Oye, ¿qué pasa con todo ese balanceo de armas?! ¡Guárdala de inmediato!","¡Te ordeno que guardes tu arma de inmediato!","¡Eh, "+GetAddress_Form(NPChar)+", ¡deja de asustar a la gente! Guarda tu arma.");

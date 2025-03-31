@@ -359,7 +359,7 @@ bool SetCameraDialogMode(ref chrRef)
 	{
 	    fH = 1.15;
 	}
-	return locCameraToPos(xcam,y1+fH,zcam,false);
+	return locCameraToPosEx(xcam, y1+fH, zcam, false, 0.1);
 }
 // boal <--
 

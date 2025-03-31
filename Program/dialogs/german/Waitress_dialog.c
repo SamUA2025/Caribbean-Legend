@@ -99,7 +99,7 @@ void ProcessDialogEvent()
 						dialog.text = ""+GetSexPhrase("Oh, Kapitän! Möchten Sie heute ein Bett mit mir teilen? Ich prahle nicht gerne mit mir selbst, aber...","Nehmen Sie Platz, Kapitän. Es ist immer eine Freude, einen echten Seewolf wie Sie zu treffen.")+"";
 						link.l1 = "Schade, dass ich jetzt in Eile bin. Bis zum nächsten Mal!";
 						link.l1.go = "exit";
-						bool bOk = (CheckAttribute(pchar, "questTemp.Saga.Helena_officer")) || (CheckAttribute(pchar, "questTemp.LSC.Mary_officer")); // 291112
+						bool bOk = (CheckAttribute(pchar, "questTemp.Saga.Helena_officer")) || (CheckAttribute(pchar, "questTemp.LSC.Mary_officer")) || npchar.city == GetLadyBethCity(); // 291112
 						if (pchar.questTemp.different == "free" && !CheckAttribute(pchar, "questTemp.different.FackWaitress") && PChar.sex != "woman" && pchar.GenQuest.EncGirl != "HorseToTavern" && !bOk)
 						{
 							link.l2 = "Mit großem Vergnügen, Baby!";

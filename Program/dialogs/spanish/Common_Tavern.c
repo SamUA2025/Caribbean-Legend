@@ -980,7 +980,7 @@ void ProcessDialogEvent()
 			}
 			if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_tavern") // Блеквуд в городе
 			{
-				Dialog.text = "Por desgracia, no, capitán. Todas las habitaciones están ocupadas por Blackwood y su gente.";
+				Dialog.text = "Por desgracia, no, Capitán. Todas las habitaciones están ocupadas por Blackwood y sus hombres.";
 				if (CheckAttribute(pchar, "questTemp.LadyBeth_TavernRoomDialog"))
 				{
 					link.l1 = "Eh, qué pena...";
@@ -988,7 +988,7 @@ void ProcessDialogEvent()
 				}
 				else
 				{
-					link.l1 = "¿Todas las habitaciones? ¿Hay más de una aquí?";
+					link.l1 = "¿Todas las habitaciones? ¿Hay más de una habitación aquí?";
 					link.l1.go = "LadyBeth_Room";
 				}
 				break;
@@ -1746,14 +1746,14 @@ void ProcessDialogEvent()
 		
 		// Леди Бет -->
 		case "LadyBeth_Room":
-			dialog.text = "Paga el triple de la tarifa normal, así que... ya se imagina. Y no le recomendaría negarle nada - tiene un carácter difícil. Especialmente últimamente.";
+			dialog.text = "Paga el triple del precio habitual, así que... ya me entiendes. Yo no recomendaría rechazarlo, tiene un temperamento difícil. Sobre todo últimamente.";
 			link.l1 = "¿Qué le pasa?";
 			link.l1.go = "LadyBeth_Room_2";
 		break;
-		
+
 		case "LadyBeth_Room_2":
-			dialog.text = "Obsesión, eso es. Al principio era un tipo generoso y amable. Sus marineros derrochaban dinero en las tabernas, compraban regalos a las chicas. Era una fiesta cuando la 'Lady Beth' llegaba al puerto. ¿Y ahora? Ahora sólo compran provisiones y reclutan gente sin criterio. Como si no necesitaran marineros, sino solo manos para trabajar. Pero puede hablar con él usted mismo.";
-			link.l1 = "Puede que lo haga. Gracias.";
+			dialog.text = "Obsesión, eso es. Al principio, era un tipo generoso y amable. Sus marineros tiraban el dinero en las tabernas, compraban regalos para las chicas. Una verdadera celebración comenzaba cuando el «Lady Beth» llegaba a puerto. ¿Y ahora? Ahora sólo compran provisiones y reclutan gente indiscriminadamente. Como si no necesitaran marineros, solo mano de obra. Bueno, puedes hablar con él en persona.";
+			link.l1 = "Tal vez lo haga. Gracias.";
 			link.l1.go = "exit";
 			pchar.questTemp.LadyBeth_TavernRoomDialog = true;
 		break;

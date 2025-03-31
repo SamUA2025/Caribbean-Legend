@@ -6208,6 +6208,7 @@ void Mtraxx_CartahenaToFort() // в форт
 	pchar.quest.mtraxx_cartahena_tofort2.win_condition.l1.locator_group = "reload";
 	pchar.quest.mtraxx_cartahena_tofort2.win_condition.l1.locator = "reload3_back";
 	pchar.quest.mtraxx_cartahena_tofort2.function = "Mtraxx_CartahenaGoFort";
+	LocatorReloadEnterDisable("Cartahena_Exittown", "reload3_back", true);
 	sld = CharacterFromID("Pelly");
 	LAi_SetActorType(sld);
 	LAi_ActorFollowEverywhere(sld, "", -1);
@@ -9227,6 +9228,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		int iCrewT = iCrew1 + iCrew2 + iCrew3 + iCrew4;
 		pchar.questTemp.Mtraxx.Cartahena.Gold = makeint(iCrew1 * 100 / iCrewT) * 25; // золото ГГ
 		pchar.questTemp.Mtraxx.Cartahena.Money = makeint(iCrew1 * 100 / iCrewT) * 1500; // деньги ГГ
+		LocatorReloadEnterDisable("Cartahena_Exittown", "reload3_back", false);
 	}
 	else if (sQuestName == "Mtraxx_CartahenaComplete") // в городе перед отплытием
 	{

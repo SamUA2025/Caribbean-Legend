@@ -2151,7 +2151,7 @@ bool Tonzag_QuestComplete(string sQuestName, string qname)
 		DoQuestFunctionDelay("Tonzag_KillerGoToTonzag", 3.0);
 	}
 	
-	else if (sQuestName == " Tonzag_KillerPrepareShot") {
+	else if (sQuestName == "Tonzag_KillerPrepareShot") {
 		sld = CharacterFromID("Tonzag_Killer");
 		LAi_ActorTurnToCharacter(sld, CharacterFromID("Tonzag"));
 		DoQuestFunctionDelay("Tonzag_KillerShoots", 1.0);

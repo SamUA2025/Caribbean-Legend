@@ -1191,7 +1191,7 @@ itmname_talisman18	{Amulett 'Blackwoods Charta'}
 itmdescr_talisman18
 {
 Der persönliche Statut von Albert Blackwood. Er beschreibt im Detail die Funktionsweise der Lady Bet, die Positionierung der Schützen und die Taktiken der Seekatzen. Ein separater Abschnitt widmet sich der Schatzsuche und dem Belohnen geübter Schützen mit den gefundenen Reichtümern. 
-Jeder gefundene Schatz verstärkt die Feuerkraft des Musketenfeuerstoßes der Besatzung und erhöht den Schaden der Schrotflinten.
+Jeder gefundene Schatz verstärkt die Feuerkraft des Musketenfeuerstoßes der Besatzung um 1% und erhöht den Schaden der Schrotflinten um 2%.
 }
 
 talisman18_Bonus{Gefundene Schätze : #dQBonus# / 10}

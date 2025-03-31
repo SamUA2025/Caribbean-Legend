@@ -80,6 +80,35 @@ void ProcessDialogEvent()
 			LAi_ActorRunToLocation(npchar, "reload", "reload4_back", "none", "", "", "FMQN_SailMaarten", 10.0);
 			AddQuestRecord("FMQ_Nevis", "1");
 			pchar.questTemp.FMQN = "begin";
+			
+			chrDisableReloadToLocation = false;
+			sld = CharacterFromID("FMQN_seafox_1");
+			LAi_SetActorType(sld);
+			LAi_ActorRunToLocation(sld, "reload", "reload4_back", "", "", "", "", 10.0); // англичане на борт
+			sld.location = "None";
+			AddPassenger(pchar, sld, false);//добавить пассажира
+			SetCharacterRemovable(sld, false);
+			pchar.quest.FMQN_sailing.win_condition.l1 = "location";
+			pchar.quest.FMQN_sailing.win_condition.l1.location = "Shore40";
+			pchar.quest.FMQN_sailing.win_condition.l2 = "Ship_location";
+			pchar.quest.FMQN_sailing.win_condition.l2.location = "Shore40";
+			pchar.quest.FMQN_sailing.function = "FMQN_ArriveMaarten";
+			if(bImCasual)
+			{
+				NewGameTip(StringFromKey("FMQ_69"));
+			}
+			else SetFunctionTimerCondition("FMQN_SailingLate", 0, 0, 10, false);
+			for(i = 0; i < MAX_LOCATIONS; i++)
+			{	
+				sld = &Locations[i];
+				if (CheckAttribute(sld, "islandId") && sld.islandId == "SentMartin")
+				{
+					sld.DisableEncounters = true;	
+				}
+			}
+			sld = &Locations[FindLocation("Shore40")];
+			sld.QuestlockWeather = "23 Hour";
+			AddMapQuestMarkShore("Shore40", true);
 		break;
 		
 		case "seafox_6":

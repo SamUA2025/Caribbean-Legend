@@ -1176,7 +1176,7 @@ itmname_talisman18	{Talisman 'Charte de Blackwood'}
 itmdescr_talisman18
 {
 Le charte personnel d'Albert Blackwood. Il décrit en détail le fonctionnement de la Lady Bet, le positionnement des tireurs et les tactiques des Renards de Mer. Une section séparée est dédiée à la chasse aux trésors et à la récompense des tireurs habiles avec les richesses retrouvées. 
-Chaque trésor trouvé renforce la puissance de la volée de mousquets de l'équipage et augmente les dégâts des fusils de chasse.
+Chaque trésor trouvé renforce la puissance de la volée de mousquets de 1% de l'équipage et augmente les dégâts des fusils de chasse de 2%.
 ~
 Aucune pénalité, aucune limite d'activation.
 }

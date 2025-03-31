@@ -1065,6 +1065,13 @@ Holy Mercy was sent by the Escorial from Europe to oversee the Spanish colonies.
 Holy Mercy cruises between colonies, starting and ending its journey in Havana, focusing solely on its mission. 
 In each port, Alamida spends several days, sometimes longer. They say during these times he can even be met on the street, but locals aren't particularly eager for such encounters - in Spaniards, the señor instills only fear and awe.
 Holy Mercy has an experienced and loyal crew, personally selected by Alamida. Each sailor is ready to defend their Homeland and captain with their life. They say Don Fernando has ordered that Holy Mercy must never be captured, and there are whispers that should the crew face insurmountable odds at boarding, they would sooner send the ship to the depths than see her boarded.
+#TEXT	2
+"Lady Beth"
+***********************
+'Lady Beth' to prawdziwa piękność. Cud brytyjskiej inżynierii morskiej pod dowództwem Alberta Blackwooda, byłego oficera Royal Navy. Nie każdemu udaje się zdezerterować w tak spektakularny sposób! Opuścił służbę, zniszczył świetną karierę i ukradł okręt wojenny - wszystko dla poszukiwania skarbów!
+I słusznie. Już znalazł tyle, że mógłby kupić połowę Barbadosu, ale wciąż mu mało. Jeśli spotkasz go na morzu - nawet nie próbuj go przechwycić. Zbyt dobry statek, a kapitan doświadczony i ostrożny.
+Ostatnio Blackwood często bywa na Kajmanach - kopie tam dniami i nocami, wykańczając ludzi. Jeśli chcesz to sprawdzić - zabierz co najmniej 60 ludzi i dobrą broń palną... Choć może i to nie wystarczy. Mam nadzieję, że potrafisz strzelać, bo wraz z nim zdezerterowała kompania byłych marines pułkownika Foxa.
+Profesjonaliści, nie byle rzezimieszki. I nigdy nie atakuj go we francuskich portach - tam ma ochronę i protektorów, którzy czerpią z jego znalezisk zyski.
 
 #QUEST StoriesTreasures
 Skarbowe opowieści

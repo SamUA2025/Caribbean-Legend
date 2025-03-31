@@ -1215,6 +1215,13 @@ Die Heilige Barmherzigkeit wurde vom Escorial aus Europa ausgesandt, um die span
 Die Holy Mercy kreuzt zwischen den Kolonien, beginnt und endet in Havanna und konzentriert sich ausschließlich auf ihre Mission. 
 In jedem Hafen verbringt Alamida mehrere Tage, manchmal auch länger. Man sagt, dass man ihn in dieser Zeit sogar auf der Straße treffen kann, aber die Einheimischen sind nicht besonders erpicht auf solche Begegnungen - bei den Spaniern löst der Señor nur Angst und Ehrfurcht aus.
 Die Holy Mercy hat eine erfahrene und loyale Besatzung, die von Alamida persönlich ausgewählt wurde. Jeder Matrose ist bereit, sein Heimatland und seinen Kapitän mit seinem Leben zu verteidigen. Es heißt, Don Fernando habe angeordnet, dass die Holy Mercy niemals gekapert werden dürfe, und es wird geflüstert, dass die Besatzung, sollte sie bei der Enternung auf unüberwindbare Hindernisse stoßen, das Schiff lieber in die Tiefe schicken würde, als es entern zu lassen.
+#TEXT	2
+"Lady Beth"
+***********************
+'Lady Beth' ist eine wahre Schönheit. Ein Wunder britischer Marinekunst unter dem Kommando von Albert Blackwood, einem ehemaligen Offizier der Royal Navy. Nicht jeder schafft es, so spektakulär zu desertieren! Er verließ den Dienst, zerstörte eine glänzende Karriere und stahl ein Kriegsschiff - alles wegen der Schatzsuche!
+Und es war nicht umsonst. Er hat schon so viel gefunden, dass er die Hälfte von Barbados kaufen könnte, aber ihm reicht das nicht. Wenn ihr ihm auf See begegnet - versucht gar nicht erst, ihn abzufangen.
+Zu gutes Schiff, und der Kapitän ist erfahren und vorsichtig. In letzter Zeit ist Blackwood oft auf den Kaimaninseln - gräbt dort Tag und Nacht, treibt die Leute bis zum Umfallen. Wenn ihr nachsehen wollt - nehmt mindestens 60 Mann und gute Schusswaffen... Vielleicht reicht selbst das nicht.
+Ich hoffe, ihr könnt schießen, denn mit ihm ist eine Kompanie ehemaliger Marineinfanteristen unter Colonel Fox desertiert. Profis, keine gewöhnlichen Halunken. Und greift ihn niemals in französischen Häfen an - dort hat er Schutz und Gönner, die an seinen Funden mitverdienen.
 
 #QUEST StoriesTreasures
 Geschichten aus den Schatzkammern

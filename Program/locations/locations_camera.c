@@ -52,9 +52,14 @@ bool locCameraFollow()
 //Set camera toPos mode
 bool locCameraToPos(float x, float y, float z, bool isTeleport)
 {
+	locCameraToPosEx(x, y, z, isTeleport, 1.0);
+}
+
+bool locCameraToPosEx(float x, float y, float z, bool isTeleport, float fMorphSpeed)
+{
 	if(IsEntity(&locCamera) == 0) return false;
 	if(locCameraEnableFree == true) return true;
-	bool res = SendMessage(&locCamera, "lfffl", MSG_CAMERA_TOPOS, x, y, z, isTeleport);
+	bool res = SendMessage(&locCamera, "lffflf", MSG_CAMERA_TOPOS, x, y, z, isTeleport, fMorphSpeed);
 	locCameraCurMode = LOCCAMERA_TOPOS;
 	return res;
 }

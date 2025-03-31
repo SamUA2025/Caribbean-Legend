@@ -180,7 +180,7 @@ void ProcessDialogEvent()
 			// Леди Бет -->
 			if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_Bank" && !CheckAttribute(pchar, "questTemp.LadyBeth_Usurer")) // Блеквуд в городе
 			{
-				dialog.Text = "¡Oh, capitán! Por favor, mire lo que tengo hoy. Algunas cosas las adquirí de los hombres de Blackwood. Necesitan dinero para una nueva expedición, y nosotros - bueno, nosotros sacamos provecho, ¿no?";
+				dialog.Text = "¡Oh, Capitán! Por favor, mire lo que tengo hoy. Algunos artículos que adquirí de los hombres de Blackwood. Necesitan dinero para una nueva expedición, y para nosotros... el beneficio, ¿cierto?";
 				link.l1 = "¿Sabe Blackwood que sus hombres están vendiendo sus hallazgos?";
 				link.l1.go = "LadyBeth_Usurer_1";
 				break;
@@ -2700,14 +2700,14 @@ void ProcessDialogEvent()
 		
 		// Леди Бет -->
 		case "LadyBeth_Usurer_1":
-			dialog.text = "¡Por supuesto! Muchos solo quieren su dinero y marcharse. Especialmente con los últimos rumores...";
+			dialog.text = "Por supuesto. Muchos sólo quieren conseguir su dinero e irse. Especialmente considerando los recientes rumores...";
 			link.l1 = "¿Qué rumores?";
 			link.l1.go = "LadyBeth_Usurer_2";
 		break;
-		
+
 		case "LadyBeth_Usurer_2":
-			dialog.text = "Dicen que las condiciones en la tripulación están empeorando. Monsieur Blackwood incluso permite pérdidas regulares - algo que nunca había ocurrido antes. Pero eso no es asunto mío. Yo solo vendo mercancía. Así que, ¿qué le interesa?";
-			link.l1 = "...";
+			dialog.text = "Dicen que las condiciones de su tripulación son cada vez peores. Monsieur Blackwood incluso ha comenzado a tolerar pérdidas regulares, algo que nunca había sucedido antes. Pero ese no es mi negocio. Yo sólo vendo mercancías. Entonces, ¿qué cosas le interesan?";
+			link.l1 = "Vayamos al grano.";
 			link.l1.go = "next";
 			npchar.quest.item_date = "LadyBeth";
 			pchar.questTemp.LadyBeth_Usurer = true;

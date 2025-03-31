@@ -777,7 +777,7 @@ void ProcessDialogEvent()
 				break;
 				
 				case SHIP_LADYBETH:
-					dialog.text = "¿Y has visto al sacerdote? Bueno, lo conocerás. Y será mejor que te abastezcas de cargas de pistola de doble disparo. Si eso no ayuda, intenta con una estaca de madera.";
+					dialog.text = "¿Y has visto al cura? Bueno, lo conocerás. Y será mejor que te abastezcas de balas para pistolas de doble cañón. Si eso no ayuda, prueba con una estaca de madera.";
 				break;
 			}
 		break;

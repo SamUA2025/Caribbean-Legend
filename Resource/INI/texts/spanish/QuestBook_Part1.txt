@@ -1180,6 +1180,13 @@ La Santa Misericordia fue enviada por el Escorial desde Europa para vigilar las 
 La Santa Misericordia navega entre las colonias, comenzando y terminando su viaje en La Habana, centrándose únicamente en su misión.
 En cada puerto, Alamida pasa varios días, a veces más. Dicen que durante esas temporadas se le puede ver por la calle, pero los lugareños no están especialmente dispuestos a tales encuentros. Para los españoles, ese caballero sólo infunde miedo y temor.
 La Santa Misericordia cuenta con una tripulación experimentada y leal, seleccionada personalmente por Alamida. Cada marinero está dispuesto a defender a su Patria y a su capitán con su vida. Dicen que Don Fernando ha ordenado que La Santa Misericordia nunca sea capturado, y les susurra que si la tripulación se enfrentara a dificultades insuperables en el abordaje, preferirían enviar el barco a las profundidades antes que verlo abordado.
+#TEXT	2
+"Lady Beth"
+***********************
+El 'Lady Beth' es una auténtica belleza. Una maravilla del genio naval británico, al mando está Albert Blackwood, un exoficial de la Royal Navy. ¡No todos logran desertar de una forma tan espectacular! Abandonó el servicio, arruinó su brillante carrera y robó un buque de guerra, todo por la caza de tesoros.
+Y no fue en vano. Ya ha encontrado tanto que podría comprar la mitad de Barbados, pero nunca tiene suficiente. Si te lo encuentras en el mar, ni se te ocurra intentar interceptarlo. Su barco es demasiado bueno, y el capitán es experimentado y cauteloso. Últimamente, Blackwood visita con frecuencia las Islas Caimán, donde excava día y noche, llevando a sus hombres al límite.
+Si decides ir a investigar, lleva al menos 60 hombres y buenas armas de fuego... Aunque quizás ni eso baste. Espero que sepas disparar, porque con él desertó una compañía entera de exmarines del coronel Fox. Profesionales, muy por encima de los matones comunes.
+Y nunca lo ataques en puertos franceses - tiene protección y mecenas que comparten sus hallazgos.
 
 #QUEST StoriesTreasures
 Cuentos de tesoros

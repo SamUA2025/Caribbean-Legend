@@ -815,7 +815,8 @@ void ProcessDialogEvent()
 			}
 			dialog.text = "Nie oddamy wam statku bez walki!";
 			link.l1 = "...";
-			link.l1.go = "LadyBeth_EnemyMatros_4";
+			link.l1.go = "exit";
+			AddDialogExitQuestFunction("LadyBeth_ShipInShore_Bitva");
 		break;
 		
 		case "LadyBeth_EnemyMatros_Helena_1":
