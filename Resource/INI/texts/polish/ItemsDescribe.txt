@@ -1649,8 +1649,8 @@ itmdescr_chest_open
 Typowa skrzynia przeznaczona do transportu i przechowywania monet. W tej chwili niestety jest zupełnie pusta.
 }
 
-itmname_incas_collection	{Skarby}
-itmdescr_incas_collection
+itmname_icollection	{Skarby}
+itmdescr_icollection
 {
 Zróżnicowany zestaw drogich, złotych przedmiotów z domieszką klejnotów, cennych dla każdego mężczyzny.
 }

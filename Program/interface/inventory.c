@@ -2754,7 +2754,7 @@ void EquipPress()
             if (itmRef.id == "map_full" || itmRef.id == "map_part1" || itmRef.id == "map_part2")
             {// клады
             	SetNewPicture("MAP_PICTURE", "interfaces\maps\treasure map2.tga");
-            	if (GetCharacterItem(pchar, "map_part1") > 0 && GetCharacterItem(pchar, "map_part2") > 0)
+            	if (itmRef.id != "map_full" && GetCharacterItem(pchar, "map_part1") > 0 && GetCharacterItem(pchar, "map_part2") > 0)
 			    {
                     // Тут применяем логику двух кусков, из них одна карта
 			        TakeNItems(xi_refCharacter, "map_part1", -1);

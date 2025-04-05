@@ -2278,7 +2278,6 @@ void InitTreasureTiers_Additions(bool SandBoxMode)
 {
     // Общие уникальные сокровища
     SetSingleItemToTiers(14, 15, "Special", "indian_poison"); // Яд индейцев таино
-    SetSingleItemToTiers(14, 15, "Special", "KhaelRoa_item"); // Шкура ягуара
 
     // Фриплейные уникальные сокровища
     if(SandBoxMode)

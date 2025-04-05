@@ -1692,8 +1692,8 @@ itmdescr_chest_open
 A typical chest intended for transporting and safekeeping of coins. Right now, unfortunately, it's totally empty.
 }
 
-itmname_incas_collection	{Treasures}
-itmdescr_incas_collection
+itmname_icollection	{Treasures}
+itmdescr_icollection
 {
 A diverse set of expensive gold items with gems, precious to any man.
 }

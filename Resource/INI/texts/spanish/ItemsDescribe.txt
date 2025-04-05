@@ -1700,8 +1700,8 @@ itmdescr_chest_open
 Un cofre típico destinado al transporte y custodia de monedas. Por desgracia, está totalmente vacío.
 }
 
-itmname_incas_collection	{Tesoros}
-itmdescr_incas_collection
+itmname_icollection	{Tesoros}
+itmdescr_icollection
 {
 Un conjunto de diversos artículos caros de oro y gemas, deseados por cualquier hombre.
 }

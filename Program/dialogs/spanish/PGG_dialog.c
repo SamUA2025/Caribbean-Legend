@@ -1045,7 +1045,7 @@ void ProcessDialogEvent()
 		NextDiag.CurrentNode = "Second Time";
 		DialogExit();
 
-		Log_TestInfo("go to loc " + sTmp + " " + NPChar.location);
+		Log_TestInfo("ir a " + sTmp + " " + NPChar.location);
 		NPChar.location = PChar.location;
 		if (PChar.location != "Ship_Deck")
 			sTmp = "reload1_back";

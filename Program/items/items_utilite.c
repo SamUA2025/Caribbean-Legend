@@ -15,7 +15,11 @@ void DoCharacterUsedItem(ref chref, string itmID)
 	 // Warship 13.06.09 fix - если только отравлен, а жизни полные (а такое бывает), то нечего и строку в лог выводить об прибавлении жизней
 	if(CheckAttribute(arItm,"potion.health") && LAi_GetCharacterHP(chref) < LAi_GetCharacterMaxHP(chref))
 	{
-		LAi_UseHealthBottle(chref,stf(arItm.potion.health));
+		if(CheckAttribute(arItm,"potion.drunk") && GetCharacterEquipByGroup(chref, HAT_ITEM_TYPE) == "hat8")
+			LAi_UseHealthBottle(chref,stf(arItm.potion.health)*1.5);
+		else
+			LAi_UseHealthBottle(chref,stf(arItm.potion.health));
+		
 		if(sti(chref.index)!=GetMainCharacterIndex())
 		{
 			if(ShowCharString()) Log_Chr(chref, XI_ConvertString("Health UpLog"));
@@ -1646,11 +1650,13 @@ void UpgradeMusketSP(ref chr)
 				itm.type.t1.width   = 5.5;
 				itm.type.t1.height  = 4.5;
 				itm.type.t1.area    = XI_ConvertString("grapes_area_3");
+				itm.type.t1.ChargeSpeed = 35;
 				itm.type.t2.Accuracy = 70.0;
 				itm.type.t2.basedmg  = 5;
 				itm.type.t2.width   = 4.5;
 				itm.type.t2.height  = 3.75;
 				itm.type.t2.area    = XI_ConvertString("grapes_area_2");
+				itm.type.t2.ChargeSpeed = 25;
 				Achievment_Set("ach_CL_152");
 			break;
 		}

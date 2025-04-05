@@ -305,6 +305,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Trade_2":
+            Partition_GetCargoCostCoeff("after"); // Считаем текущее награбленное, но по выходу из интерфейса вызываем с "before" для честно купленного
 			FillShipStore(NPChar);
 	    	pchar.shiptrade.character = NPChar.id;
    			Diag.CurrentNode = Diag.TempNode;

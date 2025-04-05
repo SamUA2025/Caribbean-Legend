@@ -1869,7 +1869,7 @@ int LocationInitLostShipsCity(int n)
 	locations[n].private2.money = 55000;
 	locations[n].private2.items.gold_dublon = 100;
 	locations[n].private2.items.chest = 2;
-	locations[n].private2.items.incas_collection = 3;
+	locations[n].private2.items.icollection = 3;
 	locations[n].private2.items.jewelry5 = 200;
 	locations[n].private2.items.jewelry5 = 400;
 	locations[n].private2.items.jewelry10 = 3; // 3 Pt
@@ -2347,7 +2347,7 @@ int LocationInitLostShipsCity(int n)
 	locations[n].private3.items.gold_dublon = 100;
 	locations[n].private3.items.chest = 5;
 	locations[n].private3.items.berserker_potion = 1;
-	locations[n].private3.items.incas_collection = 3;
+	locations[n].private3.items.icollection = 3;
 
 	n = n + 1;
 	

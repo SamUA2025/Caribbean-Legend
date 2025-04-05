@@ -72,7 +72,7 @@ void ProcessDialogEvent()
 			string nationManName[4];
 			nationManName[0] = "English";
 			nationManName[1] = "French";
-			nationManName[2] = "If you are seeing this, it's a bug";
+			nationManName[2] = "Si usted está viendo esto, es un error";
 			nationManName[3] = "Spaniard";
 			dialog.text = "Lo siento, me temo que no entendí su nombre, señor. ¿Es usted inglés?";
 			link.l1 = nationManName[sti(pchar.BaseNation)]+"¿Es tan importante? No nos preocupemos por mi nombre por ahora.";
@@ -1042,8 +1042,8 @@ void ProcessDialogEvent()
 		case "Himenes_church_14":
 			sld = characterFromId("Islamona_carpenter");
 			i = sti(sld.crew.qty);
-			if (i >= 50) sTemp = "that we won't have to sit here for weeks waiting for events to unfold.";
-			else sTemp = "that not everyone will have to participate in the battle.";
+			if (i >= 50) sTemp = "que no tendremos que estar aquí sentados durante semanas esperando a que se desarrollen los acontecimientos.";
+			else sTemp = "que no todos tendrán que participar en la batalla.";
 			dialog.text = "Ja-ja-ja-ja-ja... ja. ¡Yo también lo pensé, capitán! Rodgar tiene razón, tu presencia ya significa, "+sTemp+"";
 			link.l1 = "Ya sé lo que pasó. ¿Hay alguna baja?";
 			if (GetCharacterIndex("Mirabella") != -1) link.l1.go = "Himenes_church_15";
@@ -1285,6 +1285,7 @@ void ProcessDialogEvent()
 			bDisableCharacterMenu = true;
 			pchar.GenQuest.FrameLockEsc = true;
 			locCameraRotateAroundHero(0.0, 1.5, 0.0, 0.005, 0.0, 1.5, 0.0, 10000);
+			Pchar.FuncCameraFly = "";
 			DoQuestCheckDelay("IslaMona_ChurchTavernExit", 45.0);
 		break;
 		
@@ -1499,8 +1500,8 @@ void ProcessDialogEvent()
 		case "FraOfficer_3":
 			sld = characterFromId("Islamona_carpenter");
 			i = sti(sld.crew.qty);
-			if (i >= 50) sTemp = "There are probably many more bandits than us - we saw tents on the shore. And besides tents, they also have a wall, gates, cannon!";
-			else sTemp = "There are probably not so many bandits, otherwise they would have kicked us out of here already, but they still have a wall, gates, cannon and plenty of time!";
+			if (i >= 50) sTemp = "Probablemente haya muchos más bandidos que nosotros, vimos tiendas en la orilla. ¡Y además de tiendas, también tienen un muro, puertas, cañones!";
+			else sTemp = "Probablemente no haya tantos bandidos, de lo contrario ya nos habrían echado de aquí. ¡Pero aún disponen de un muro, puertas, cañones y mucho tiempo!";
 			dialog.text = "¿Qué nos impidió?! Solo tenemos doce fusileros y siete marineros. Todos cansados y agotados. Salvamos solo cinco mosquetes, ¡con solo un cartucho cada uno en el mejor de los casos!"+sTemp+"";
 			link.l1 = "¿Pero tienes un plan?";
 			link.l1.go = "FraOfficer_4";
@@ -1602,7 +1603,7 @@ void ProcessDialogEvent()
 			link.l2.go = "FraOfficer_15_2";
 			link.l3 = "Casi la mitad de los habitantes de este agujero son mujeres. No has estado luchando ni siquiera contra la milicia: no ha habido más de una docena de combatientes contra ti todo este tiempo. Son débiles y están desmoralizados.";
 			link.l3.go = "FraOfficer_15_3";
-			link.l4 = "The cannon is out of ammunition. I've seen enough guns in my lifetime and can tell when a crew is ready to fire and when it's not. Without their artillery, they're nothing but poor warriors; they are weak and demoralized.";
+			link.l4 = "El cañón se ha quedado sin munición. He visto bastantes cañones en mi vida y sé distinguir cuándo una dotación está lista para disparar y cuándo no. Sin su artillería, no son más que pobres guerreros; están débiles y desmoralizados.";
 			link.l4.go = "FraOfficer_15_4";
 			link.l5 = "¡Piensa en los trofeos y la gloria, teniente! Una victoria en solitario sobre un asaltante español, capturar un nido de bandidos y una fuente única de madera de bucanero, ¡todo esto reclama comandar tu propio barco! Repito, están débiles y desmoralizados, ¡es hora de aplastarlos!";
 			link.l5.go = "FraOfficer_15_5";
@@ -1896,7 +1897,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "SpaOfficer_9":
-			dialog.text = "Capitán "+GetFullName(pchar)+"! You saved my life and brought me back to my own. I understand how difficult it was to take such a risk - I would never have dared to do such a thing. I owe you, senor. I give you my word that I will never tell anyone about the circumstances of that ill-fated battle. When you return to the Old World, be sure to find me; you will always be welcome at our family estate in Madrid. For now, take this...";
+			dialog.text = "¡Capitán "+GetFullName(pchar)+"! Me has salvado la vida y me has devuelto a los míos. Comprendo lo difícil que fue correr semejante riesgo; yo nunca me habría atrevido a hacer algo así. Estoy en deuda con usted, señor. Le doy mi palabra de que nunca contaré a nadie las circunstancias de aquella nefasta batalla. Cuando regreses al Viejo Mundo, asegúrate de encontrarme; siempre serás bienvenido en nuestra finca familiar de Madrid. Por ahora, toma esto...";
 			link.l1 = "¿Un pedazo de un mapa?";
 			link.l1.go = "SpaOfficer_10";
 		break;
@@ -2054,7 +2055,7 @@ void ProcessDialogEvent()
 		
 		// посетители таверны
 		case "citizen_tavern":
-			dialog.text = LinkRandPhrase("Después de un trabajo agotador, no es pecado tomarse un trago o dos...","I'm almost done and heading home; the wife must be waiting...","Ah, it's nice to relax in our tavern after work! We're all grateful to you, captain!");
+			dialog.text = LinkRandPhrase("Después de un trabajo agotador, no es pecado tomarse un trago o dos...","Casi he terminado y me dirijo a casa, mi esposa debe estar esperando...","¡Ah, es agradable relajarse en nuestra taberna después del trabajo! ¡Todos le estamos agradecidos, capitán!");
 			link.l1 = LinkRandPhrase("¡Disfruta tu bebida, compadre, ja-ja!","Relájate, amigo, pero no te pases, o la esposa te regañará, ¡ja-ja!","Tranquilo, amigo, ¡la vida no es solo trabajo!");
 			link.l1.go = "citizen_tavern_1";
 		break;
@@ -2065,8 +2066,8 @@ void ProcessDialogEvent()
 		break;
 		
 		case "sailor_tavern":
-			if (GetCharacterIndex("Mirabella") != -1) sTemp = "Who's that pretty mulatto woman living here?";
-				else sTemp = "Captain, nice place you got here!";
+			if (GetCharacterIndex("Mirabella") != -1) sTemp = "¿Quién es esa mulata tan guapa que vive aquí?";
+				else sTemp = "¡Capitán, bonito lugar el que tiene aquí!";
 			dialog.text = RandPhraseSimple(RandPhraseSimple("¡Capitán, bonito lugar tienes aquí!","Imagina si de repente nos quedáramos sin ron. Seguro que conseguirías más, ¿verdad?"),RandPhraseSimple("He soñado con unas vacaciones así durante mucho tiempo. Aunque me encantaría un burdel... solo un pensamiento salvaje, Capitán.",sTemp));
 			link.l1 = "...";
 			link.l1.go = "sailor_tavern_1";

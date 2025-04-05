@@ -1315,73 +1315,76 @@ void SetShipToFantom(ref _chr, string _type, bool _setgoods)
 	int ShipType;
 	int Nation = sti(_chr.nation);
 	int Rank = sti(pchar.rank);
-	int iClassFlag = FLAG_SHIP_CLASS_5;
-	int iTypesFlag = FLAG_SHIP_TYPE_MERCHANT;
-	int iNationsFlag = GetNationFlag(Nation);
 	switch (_type)
 	{
-		case "trade":	
-			iTypesFlag = FLAG_SHIP_TYPE_MERCHANT;
+		case "trade":		
 			if (Rank < 11)
 			{
-				iClassFlag = FLAG_SHIP_CLASS_4;
+				ShipType = RandFromFiveDight(SHIP_BARQUE, SHIP_SCHOONER, SHIP_BARKENTINE, SHIP_SHNYAVA, SHIP_FLEUT);
 			}
 			if (Rank >= 11 && Rank <= 20)
 			{
-				iClassFlag = FLAG_SHIP_CLASS_3;
+				ShipType = RandFromThreeDight(SHIP_CARAVEL, SHIP_PINNACE, SHIP_CARACCA);
 			}
             if (Rank > 20 && Rank <= 30)
             {
-				iClassFlag = FLAG_SHIP_CLASS_3;
+                ShipType = RandFromFiveDight(SHIP_CARACCA, SHIP_PINNACE, SHIP_FLEUT);
             }
 			if (Rank > 30)
 			{
-				iClassFlag = FLAG_SHIP_CLASS_2;
+				ShipType = RandFromThreeDight(SHIP_CARACCA, SHIP_NAVIO, SHIP_EASTINDIAMAN);
 			}
 		break;
 		case "pirate":
-			iTypesFlag = FLAG_SHIP_TYPE_MERCHANT + FLAG_SHIP_TYPE_WAR;
 			if (Rank < 4)
 			{
-				iClassFlag = FLAG_SHIP_CLASS_5;
+				ShipType = SHIP_LUGGER;
 			}			
 			if (Rank >= 4 && Rank < 11)
 			{
-				iClassFlag = FLAG_SHIP_CLASS_4;
+				ShipType = RandFromThreeDight(SHIP_SLOOP, SHIP_BRIGANTINE, SHIP_BRIG);
 			}
 			if (Rank >= 11 && Rank <= 20)
 			{
-				iClassFlag = FLAG_SHIP_CLASS_3;
+				ShipType = RandFromThreeDight(SHIP_SCHOONER_W, SHIP_GALEON_L, SHIP_CORVETTE);
 			}
             if (Rank > 20 && Rank <= 30)
             {
-                iClassFlag = FLAG_SHIP_CLASS_3;
+                ShipType = RandFromFiveDight(SHIP_SCHOONER_W, SHIP_CORVETTE, SHIP_POLACRE);
             }
 			if (Rank > 30)
 			{
-				iClassFlag = FLAG_SHIP_CLASS_2;
+				ShipType = RandFromThreeDight(SHIP_CORVETTE, SHIP_GALEON_H, SHIP_LINESHIP);
 			}
 		break;
 
 		case "war":
-			iTypesFlag = FLAG_SHIP_TYPE_WAR;
 			if (Rank < 11)
 			{
-				iClassFlag = FLAG_SHIP_CLASS_4;
+				ShipType = RandFromThreeDight(SHIP_CAREERLUGGER, SHIP_LUGGER, SHIP_SLOOP);
 			}
 			if (Rank >= 11 && Rank <= 30)
 			{
-				iClassFlag = FLAG_SHIP_CLASS_3;					
+				switch (Nation)
+				{
+					case ENGLAND  : ShipType = RandFromThreeDight(SHIP_BRIG, SHIP_GALEON_L, SHIP_CORVETTE); break; 
+					case FRANCE	  : ShipType = RandFromThreeDight(SHIP_SCHOONER_W, SHIP_GALEON_L, SHIP_CORVETTE); break; 					
+					case SPAIN	  : ShipType = RandFromThreeDight(SHIP_BRIGANTINE, SHIP_GALEON_L, SHIP_XebekVML); break; 					
+					case HOLLAND  : ShipType = RandFromFiveDight(SHIP_SCHOONER_W, SHIP_GALEON_L, SHIP_CORVETTE, SHIP_POLACRE, SHIP_SCHOONER_W); break; 
+				}						
 			}
 			if (Rank > 30)
 			{
-				iClassFlag = FLAG_SHIP_CLASS_2;					
+				switch (Nation)
+				{
+					case ENGLAND  : ShipType = RandFromThreeDight(SHIP_FRIGATE, SHIP_FRIGATE_H, SHIP_LINESHIP); break; 
+					case FRANCE	  : ShipType = RandFromThreeDight(SHIP_FRIGATE, SHIP_FRIGATE_H, SHIP_LINESHIP); break; 					
+					case SPAIN	  : ShipType = RandFromFiveDight(SHIP_POLACRE, SHIP_GALEON_H, SHIP_FRIGATE_H, SHIP_GALEON_H, SHIP_LINESHIP); break; 					
+					case HOLLAND  : ShipType = RandFromThreeDight(SHIP_FRIGATE, SHIP_FRIGATE_H, SHIP_LINESHIP); break; 
+				}						
 			}
 		break;
 	}
-	
-	ShipType = GetRandomShipType(iClassFlag, iTypesFlag, iNationsFlag);
-	
 	_chr.Ship.Type = GenerateShipExt(ShipType, true, _chr);
 	SetRandomNameToShip(_chr);
     SetBaseShipData(_chr);

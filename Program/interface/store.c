@@ -145,6 +145,9 @@ void IDoExit(int exitCode)
     	DeleteAttribute(pchar, "PriceList.StoreManIdx");
     }
     // boal 27.02.05 <--
+
+	if(refStore.Colony == "none") Partition_GetCargoCostCoeff("before"); // Эти товары были получены в море честно
+
 	interfaceResultCommand = exitCode;
 	EndCancelInterface(true);
 }

@@ -246,8 +246,8 @@ void ProcessDialogEvent()
 			LAi_ActorDialogDelay(sld, pchar, "", 1.5);
 			GiveItem2Character(pchar, "obereg_5");
 			GiveItem2Character(pchar, "totem_13");
-			Log_Info("You have received amulet 'Turtle'");
-			Log_Info("You have received amulet 'Joker'");
+			Log_Info("Has recibido el amuleto 'Tortuga'.");
+			Log_Info("Has recibido el amuleto 'Joker'.");
 			PlaySound("interface\important_item.wav");
 		break;
 		
@@ -856,7 +856,7 @@ void ProcessDialogEvent()
 			pchar.quest.goldengirl_time_cortny_fail.win_condition.l1.date.month = GetAddingDataMonth(0, 0, 1);
 			pchar.quest.goldengirl_time_cortny_fail.win_condition.l1.date.year  = GetAddingDataYear(0, 0, 1);
 			pchar.quest.goldengirl_time_cortny_fail.function = "GoldenGirl_TimeCortnyFail";
-			if(bImCasual) NewGameTip("Exploration mode: timer is not disabled. Meet the deadline!");
+			if(bImCasual) NewGameTip("Modo exploración: el temporizador no está desactivado. ¡Cumple el plazo!");
 			AddQuestRecord("GoldenGirl", "17");
 		break;
 		

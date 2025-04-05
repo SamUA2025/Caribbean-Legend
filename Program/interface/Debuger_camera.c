@@ -755,23 +755,17 @@ void CalculateInfoDataF13()
     Statistic_AddValue(PChar, "Cheats.F13", 1);
 }*/
 
-string descF13 = "ТЕСТЫ: Включить/Отключить лог-мониторинг анимаций";
+string descF13 = "";
 void CalculateInfoDataF13()
 {
-    TestLogs = !TestLogs;
+
     ProcessCancelExit();
 }
 
-string descF14 = "ТЕСТЫ: Выставить задержки";
+string descF14 = "";
 
 void CalculateInfoDataF14()
 {
-    // Отвечает за переход в mv_none, служит для предотвращения постоянных остановок при спаме одной и той же клавиши, по умолчанию 0.2
-    pchar.input_lag_spam = 0.2;
-    // Отвечает за смену направлений, служит для предотвращения косяков бленда, однако по умолчанию поставил всё же на 0.07
-    pchar.input_lag_switch = 0.0;
-    // Отвечает за отжатие шифта, служит для сохранения спринтового стопа при неодновременном отжатии W и шифта, по умолчанию 0.3
-    pchar.input_lag_shift = 0.3;
 
     ProcessCancelExit();
 }

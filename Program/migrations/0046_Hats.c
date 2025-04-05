@@ -168,26 +168,6 @@ void ApplyMigration(ref migrationState) {
 	itm.ItemType = "SUPPORT";
 	itm.TradeType = ITEM_TRADE_AMMUNITION;
 
-    // Записки в кладах
-    for(int i = 1; i <= TREASURE_NOTES; i++)
-    {
-        ExpandItemsArray();
-        n = TOTAL_ITEMS - 1;
-
-        makeref(itm,Items[n]);
-        itm.id = "treasure_note_" + i;
-        itm.number = i;
-        itm.groupID		= SPECIAL_ITEM_TYPE;
-        itm.name = "itmname_treasure_note_1";
-        itm.describe = "itmdescr_treasure_note_1";
-        itm.model = "";
-        itm.picIndex = 16;
-        itm.picTexture = "ITEMS_26";
-        itm.price = 0;
-        itm.Weight = 0.1;
-        itm.ItemType = "QUESTITEMS";
-    }
-
     // Сокровища
     InitWeightParameters();
 	TreasureTiersInit(SandBoxMode);

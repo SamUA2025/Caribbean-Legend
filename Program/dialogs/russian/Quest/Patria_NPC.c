@@ -1832,7 +1832,7 @@ void ProcessDialogEvent()
 			RemoveCharacterEquip(pchar, CIRASS_ITEM_TYPE);
 			GiveItem2Character(pchar, "suit5");
 			EquipCharacterbyItem(pchar, "suit5");
-			GiveItem2Character(pchar, "hat");
+			GiveItem2Character(pchar, "hat5");
 			EquipCharacterbyItem(pchar, "hat5");
 			AddItems(pchar, "tailor_tool", 1);
 			//Log_Info("Вы получили мундир вице-адмирала!");

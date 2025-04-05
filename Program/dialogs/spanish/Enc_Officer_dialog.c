@@ -1485,7 +1485,7 @@ void ProcessDialogEvent()
 				attr = sld.ID;
 				if(sld.nation == "none" || sld.nation == PIRATE || attr == "Panama" || attr == "FortOrange") continue;
 				attrLoc = "l" + iTemp;
-				Link.(attrLoc) = "In the " + XI_ConvertString("Colony" + attr + "Dat");
+				Link.(attrLoc) = "En la " + XI_ConvertString("Colony" + attr + "Dat");
 				Link.(attrLoc).go = "CompanionTravelToColony_" + attr;
 			}
 				Link.l99 = "He cambiado de opinión.";
@@ -1538,7 +1538,8 @@ void ProcessDialogEvent()
 		break;
 			
 		case "CompanionTravel_LastNode":
-			Dialog.text = RandPhraseSimple("Hoy, zarparé de nuevo...","No olvides nuestra reunión en "+XI_ConvertString("Colonia"+characters[sti(NPChar.realcompanionidx)].CompanionTravel.ToColonyID+"Eso")+".");
+			Dialog.text = RandPhraseSimple("Hoy, zarparé de nuevo...",
+			"No olvides nuestra reunión en "+XI_ConvertString("Colonia"+characters[sti(NPChar.realcompanionidx)].CompanionTravel.ToColonyID+"Dat")+".");
 				link.l2 = "...";
 				link.l2.go = "Exit";
 				Diag.TempNode = "CompanionTravel_LastNode";

@@ -88,7 +88,7 @@ void ProcessDialogEvent()
 				link.l1.go = "patria_x29";
 				break;
 			}
-            dialog.text = NPCStringReactionRepeat(""+GetSexPhrase("¿Tienes algo que decirme? ¿No? ¡Entonces déjame en paz!","Ja, "+pchar.name+"¡Tienes algún asunto conmigo? ¿No? Entonces no me molestes.")+"","Pensé que me había explicado claramente... ¡Te dije que te fueras, pero sigues molestándome!","Bien, me estoy cansando de esta grosería.","repetir",3,npchar,Dialog.CurrentNode);
+            dialog.text = NPCStringReactionRepeat(""+GetSexPhrase("¿Tienes algo que decirme? ¿No? ¡Entonces déjame en paz!","Ja, "+pchar.name+"¡Tienes algún asunto conmigo? ¿No? Entonces no me molestes.")+"","Pensé que me había explicado claramente... ¡Te dije que te fueras, pero sigues molestándome!","Bien, me estoy cansando de esta grosería.","repeat",3,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Ya me voy.","Claro, Marcus...","Lo siento, Marcus...","Ups...",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			NextDiag.TempNode = "First time";
@@ -237,7 +237,7 @@ void ProcessDialogEvent()
 				link.l2 = "Tengo seda para vender.";
 				link.l2.go = "Mtraxx_silktrade";
 			}
-            dialog.text = NPCStringReactionRepeat(GetFullName(pchar)+", ¡me alegra verte! ¿Qué necesitas esta vez, camarada?","¿Qué quieres?","¿Otra vez? ¡No molestes a la gente si no tienes nada que hacer!","Eres un "+GetSexPhrase("buen corsario","buena chica")+", así que puedes vivir por ahora. Pero no quiero hablar contigo más.","repetir",10,npchar,Dialog.CurrentNode);
+            dialog.text = NPCStringReactionRepeat(GetFullName(pchar)+", ¡me alegra verte! ¿Qué necesitas esta vez, camarada?","¿Qué quieres?","¿Otra vez? ¡No molestes a la gente si no tienes nada que hacer!","Eres un "+GetSexPhrase("buen corsario","buena chica")+", así que puedes vivir por ahora. Pero no quiero hablar contigo más.","repeat",10,npchar,Dialog.CurrentNode);
 			link.l1 = HeroStringReactionRepeat("Solo quería verte.","Nada.","Está bien, Marcus, lo siento.","¡Maldita sea, lo siento mucho, Marcus!",npchar,Dialog.CurrentNode);
 			link.l1.go = "exit";
 			NextDiag.TempNode = "I_know_you_good";
@@ -252,7 +252,7 @@ void ProcessDialogEvent()
 					
 		// ======================== блок нод angry ===============>>>>>>>>>>>>>>>
 		case "AngryRepeat_1":
-            dialog.text = RandPhraseSimple("Hola, Amigo."+GetSexPhrase("Vete","Aléjate")+" ¡fuera de aquí!","¡Fuera de mi casa!");
+            dialog.text = RandPhraseSimple(""+GetSexPhrase("Vete","Aléjate")+" ¡fuera de aquí!","¡Fuera de mi casa!");
 			link.l1 = "Ups...";
 		    link.l1.go = "AngryExitAgainWithOut";
             if (CheckAttribute(npchar, "angry.terms")) //примиряемся через 10 дней.
@@ -385,7 +385,7 @@ void ProcessDialogEvent()
 		case "Temptation_exit":
 			DialogExit();
 			TakeNItems(pchar, "gold_dublon", 300);
-			Log_Info("You have received 300 doubloons");
+			Log_Info("Has recibido 300 doblones");
 			PlaySound("interface\important_item.wav");
 			NextDiag.CurrentNode = "I_know_you_good";
 			AddQuestRecord("BarbTemptation", "25");
@@ -689,27 +689,27 @@ void ProcessDialogEvent()
 				{
 					if(!CheckCharacterItem(pchar, "HolTradeLicence")) 
 					{
-						sTemp = ". Wait a minute, take a 60-day trade license and a Spanish flag to land in Santo Domingo. From now on, I recommend getting your own, it will help to fool the simpleton in the trading pelvis. This one will be returned to me.";
+						sTemp = ". Espera un minuto, toma una licencia de comercio de 60 días y una bandera española para desembarcar en Santo Domingo. A partir de ahora, recomiendo obtener la tuya propia, te ayudará a engañar al vigia de la oficina del puerto. Ya me la devolverás.";
 						GiveNationLicence(HOLLAND, 60);
 						SetCharacterPerk(pchar, "FlagSpa");
-						log_info("You have received spanish flag");
+						log_info("Ha recibido la bandera española");
 						pchar.questTemp.GiveMeSpaFlag = true;
 					}
 					else // есть лицензия
 					{	
 						if(GetDaysContinueNationLicence(HOLLAND) < 60) 
 						{
-							sTemp = ". Wait, how are you going to trade without having the right flag?! Here you go, a 60-day trading license, longer than yours. As well as the Spanish flag for landing in Santo Domingo. From now on, I recommend getting your own, it will help to fool the simpleton in the trading pelvis. This one will be returned to me.";
+							sTemp = ". Espera, ¡¿cómo vas a comerciar sin tener la bandera adecuada?! Aquí tienes, una licencia de comercio de 60 días, superior a la tuya. Así como la bandera española para desembarcar en Santo Domingo. A partir de ahora, te recomiendo que te hagas con la tuya, te ayudará a engañar al vígia de la oficina del puerto. Ya me la devolverás.";
 							GiveNationLicence(HOLLAND, 60);
 							SetCharacterPerk(pchar, "FlagSpa");
-							log_info("You have received spanish flag");
+							log_info("Ha recibido la bandera española");
 							pchar.questTemp.GiveMeSpaFlag = true;
 						}
 						else 
 						{
-							sTemp = ". Wait, how are you going to trade without having the right flag?! Here, take the Spanish flag for the Santo Domingo landings. From now on, I recommend getting your own, it will help to fool the simpleton in the trading pelvis. This one will be returned to me.";
+							sTemp = ". Espera, ¿cómo vas a comerciar sin tener la bandera adecuada? Toma, coge la bandera española para el desembarcar en Santo Domingo. A partir de ahora, te recomiendo que te hagas con la tuya, te ayudará a engañar al vigía de la oficina portuaria. Ya me la devolverás.";
 							SetCharacterPerk(pchar, "FlagSpa");
-							log_info("You have received spanish flag");
+							log_info("Ha recibido la bandera española");
 							pchar.questTemp.GiveMeSpaFlag = true;
 						}
 					}
@@ -745,7 +745,7 @@ void ProcessDialogEvent()
 			if (sti(pchar.questTemp.Mtraxx.JewQty) > GetCharacterItem(pchar, "jewelry7"))
 			{
 				PlaySound("interface\important_item.wav");
-				Log_Info("You have given "+FindRussianQtyString(GetCharacterItem(pchar, "jewelry7"))+" pieces of blue amber");
+				Log_Info("Has entregado "+FindRussianQtyString(GetCharacterItem(pchar, "jewelry7"))+" trozos de ámbar azul");
 				RemoveItems(pchar, "jewelry7", GetCharacterItem(pchar, "jewelry7"));
 				dialog.text = "Bueno, bueno... Hijo, ¿recuerdas mi advertencia sobre los peligros de ser una rata? ¿Qué me dijiste entonces? ¿Que ningún perro puede culparte por eso? ¿Crees que soy estúpido, chico? Estoy perfectamente consciente de que has saqueado "+FindRussianQtyString(sti(pchar.questTemp.Mtraxx.JewQty))+" piezas de ámbar azul en la Costa de los Mosquitos. ¡Ahora corre, pequeña rata, corre, y reza para que nunca nos volvamos a encontrar!";
 				link.l1 = "¡Maldita sea!";
@@ -758,13 +758,13 @@ void ProcessDialogEvent()
 				{
 					DeleteAttribute(pchar, "questTemp.GiveMeSpaFlag")); 
 					DeleteAttribute(pchar,"perks.list.FlagSpa"); 
-					log_info("You have given spanish flag");
+					log_info("Has entregado bandera española");
 				}
 			}
 			else
 			{
 				PlaySound("interface\important_item.wav");
-				Log_Info("You have given "+FindRussianQtyString(GetCharacterItem(pchar, "jewelry7"))+" pieces of blue amber");
+				Log_Info("Has entregado "+FindRussianQtyString(GetCharacterItem(pchar, "jewelry7"))+" trozos de ámbar azul");
 				RemoveItems(pchar, "jewelry7", sti(pchar.questTemp.Mtraxx.JewQty));
 				dialog.text = "¡Bien hecho, muchacho! Te has mostrado desde tu mejor lado: te ocupaste de un asunto difícil y trajiste todo lo que saqueaste. ¡Buen trabajo! Me alegra no haberme equivocado contigo.";
 				link.l1 = "¿Qué hay de mi parte, Marcus?";
@@ -775,14 +775,14 @@ void ProcessDialogEvent()
 		case "mtraxx_9":
 			i = sti(pchar.questTemp.Mtraxx.JewQty)/2;
 			PlaySound("interface\important_item.wav");
-			Log_Info("You have received "+FindRussianQtyString(i)+" pieces of blue amber");
+			Log_Info("Has recibido "+FindRussianQtyString(i)+" trozos de ámbar azul");
 			TakeNItems(pchar, "jewelry7", i);
 			// belamour legendary edition забрать флаг обратно
 			if(CheckAttribute(pchar, "questTemp.GiveMeSpaFlag")) 
 			{
 				DeleteAttribute(pchar, "questTemp.GiveMeSpaFlag")); 
 				DeleteAttribute(pchar,"perks.list.FlagSpa"); 
-				log_info("You have given spanish flag");
+				log_info("Has entregado una bandera española");
 			}
             dialog.text = "¡Hablado como un verdadero pirata, ja-ja-ja! La mitad del botín es tuyo. Tómalo.";
 			link.l1 = "Gracias, capitán. ¿Tienes algo más para mí?";
@@ -868,7 +868,7 @@ void ProcessDialogEvent()
 		
 		case "mtraxx_18":
 			TakeNItems(pchar, "gold_dublon", 630);
-			Log_Info("You have received 630 doubloons");
+			Log_Info("Has recibido 630 doblones");
 			PlaySound("interface\important_item.wav");
             dialog.text = "Una cosa más. Puedes obtener un beneficio extra de esto.";
 			link.l1 = "Interesante... Continúa.";
@@ -943,7 +943,7 @@ void ProcessDialogEvent()
 				{
 					if(!CheckCharacterItem(pchar, "HolTradeLicence") || GetDaysContinueNationLicence(HOLLAND) < 40) 
 					{
-						sTemp = ", as well as a trade license for 40 days."; 
+						sTemp = ", así como una licencia comercial válida para 40 días."; 
 						GiveNationLicence(HOLLAND, 40);
 					}
 				}
@@ -951,34 +951,34 @@ void ProcessDialogEvent()
 				{
 					if(!CheckCharacterItem(pchar, "HolTradeLicence")) 
 					{
-						sTemp = ", as well as a trade license for 40 days. Besides, how are you going to fool the bungler in the fort?! You will let me down one day with such sloppiness... Here you go... You will return it back upon arrival. The new generation, pah...";
+						sTemp = ", así como una licencia de comercio para 40 días. Además, ¡¿cómo vas a engañar al vigía del fuerte?! Algún día me decepcionarás con tanta dejadez... Aquí tienes... Me la devolverás cuando llegues. La nuevas generación, pah ...";
 						GiveNationLicence(HOLLAND, 40);
 						SetCharacterPerk(pchar, "FlagSpa");
-						log_info("You have received spanish flag");
+						log_info("Ha recibido la bandera española");
 						pchar.questTemp.GiveMeSpaFlag = true;
 					}
 					else // есть лицензия
 					{	
 						if(GetDaysContinueNationLicence(HOLLAND) < 40) 
 						{
-							sTemp = ". Tell me, how are you going to fool the bungler in the fort?! Your paper won't help you without the right flag. I feel that you will let me down one day with such sloppiness... Here, a trading license for 40 days, more than yours. As well as the Spanish flag for landing in Maracaibo. You will return it upon arrival. The new generation, pah...";
+							sTemp = ". Dime, ¿cómo vas a engañar al vigía del fuerte? Este documento no te ayudará sin la bandera correcta. Siento que algún día me decepcionarás con tanta dejadez... Toma, una licencia de comercio para 40 días, superior a la tuya. Así como la bandera española para desembarcar en Maracaibo. Me la devolverás al llegar. Las nuevas generaciones, pah...";
 							GiveNationLicence(HOLLAND, 40);
 							SetCharacterPerk(pchar, "FlagSpa");
-							log_info("You have received spanish flag");
+							log_info("Ha recibido la bandera española");
 							pchar.questTemp.GiveMeSpaFlag = true;
 						}
 						else 
 						{
-							sTemp = ". Tell me, how are you going to fool the bungler in the fort?! Your paper won't help you without the right flag. I feel that you will let me down one day with such sloppiness... Here you go... You will return it back upon arrival. The new generation, pah...";
+							sTemp = ". Dime, ¿cómo vas a engañar al vigía del fuerte? Este papel no te ayudará sin la bandera correcta. Siento que algún día me decepcionarás con tanta dejadez... Aqui tienes... Me la devolverás cuando llegues. Las nuevas generaciones, pah...";
 							SetCharacterPerk(pchar, "FlagSpa");
-							log_info("You have received spanish flag");
+							log_info("Ha recibido la bandera española");
 							pchar.questTemp.GiveMeSpaFlag = true;
 						}
 					}
 				}
 			}
 			// <-- legendary edition
-            dialog.text = "Then listen closely. Two months ago I had an appointment with a captain by the name of Jean Picard, also known as Jean the Handsome. He didn't show up to the meeting and since I was going to discuss serious matters with him, I did some investigation regarding his whereabouts. Turned out our good brave privateer and his brigantine had managed to engage in a fight with a Spanish heavy galleon under command of don Eduardo de Losad and he is a tough son of a bitch. As a result, Jean and what's left of his crew was taken to Maracaibo and sold to a local plantation. This is where he is, busy with honest labor, at the moment.\nYour tasks are: firstsly - investigate the details of his misfortunes, secondly - get him out from plantation alive and bring him here; I really need details of his story. I am assigning a captain of a barquentine called 'Moray' to assist you in this. Captain's name is Paul Chant also known as Pelly the Cutlass. Remember Geffrey? He is almost as dumb as him, but good at fighting too.\nHe will be waiting for you at cape Ragget Point, on Barbados. Find him and his 'Moray' and sail to Maracaibo. Cutlass will follow your orders without asking stupid questions. Actually, he won't be asking questions at all. Just do your job and come back here, I'll be waiting for you. Here is ten thousand pesos for future expenses"+sTemp+". Any questions?";
+            dialog.text = "Entonces escucha con atención. Hace dos meses tenía una cita con un capitán llamado Jean Picard, también conocido como Jean Handsome. No se presentó y como iba a discutir asuntos serios con él, hice algunas averiguaciones sobre su paradero. Resultó que nuestro valiente corsario y su bergantín se habían enzarzado en una pelea con un galeón pesado español al mando de don Eduardo de Losad y éste es un duro hijo de puta. Como resultado, Jean y lo que quedaba de su tripulación fueron llevados a Maracaibo y vendidos a la plantación. Allí es donde se encuentra, ocupado en trabajos honestos, en este momento.\nTus tareas son: Primero, investigar los detalles de sus desgracias y para a continuación, sacarlo vivo de la plantación y traerlo aquí. Realmente necesito conocer los detalles de su historia. Le asigno el capitán de un barquentine llamado 'Moray' para ayudarle en esto. El nombre del capitán es Paul Chant también conocido como Pelly el Cutlass. ¿Recuerdas a Geffrey? Es casi tan tonto como él, pero también es bueno luchando.\nTe estará esperando en cabo Ragget Point, en Barbados. Encuéntralo junto a su 'Moray' y navega hasta Maracaibo. Cutlass seguirá tus órdenes sin hacer preguntas estúpidas. En realidad, no hará preguntas en absoluto. Haz tu trabajo y vuelve aquí, te estaré esperando. Aquí hay diez mil pesos para gastos futuros "+sTemp+". ¿Alguna pregunta?";
 			link.l1 = "No. Todo está claro. Rumbo a Barbados.";
 			link.l1.go = "mtraxx_25";
 		break;
@@ -1034,7 +1034,7 @@ void ProcessDialogEvent()
 			{
 				DeleteAttribute(pchar, "questTemp.GiveMeSpaFlag")); 
 				DeleteAttribute(pchar,"perks.list.FlagSpa"); 
-				log_info("You have given spanish flag");
+				log_info("Has entregado una bandera española");
 			}
 			CloseQuestHeader("Roger_3");
 			npchar.dialog.currentnode = "mtraxx_wait";
@@ -1597,7 +1597,7 @@ void ProcessDialogEvent()
 		
 		case "mtraxx_85f":
 			SetCharacterPerk(pchar, "FlagSpa");
-			log_info("You have received a spanish flag");
+			log_info("Has recibido una bandera española");
 			pchar.questTemp.GiveMeSpaFlag = true;
             dialog.text = "¿Qué demonios? Eso te rompería con un atizador de la chimenea, Príncipe. No pensé que tendría que hablar de cosas elementales. Sostén la bandera española, de lo contrario arruinarás todo, sin siquiera comenzar. Devuélvemela. ¡Ahora lárgate de aquí!";
 			link.l1 = "Ya estoy en el mar, Jefe";
@@ -1647,7 +1647,7 @@ void ProcessDialogEvent()
 			{
 				DeleteAttribute(pchar, "questTemp.GiveMeSpaFlag")); 
 				DeleteAttribute(pchar,"perks.list.FlagSpa"); 
-				log_info("You have given a spanish flag");
+				log_info("Has entregado una bandera española");
 			}
 			npchar.dialog.currentnode = "First time";
 			pchar.questTemp.Mtraxx = "wait_month";
@@ -1732,7 +1732,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "mtraxx_board_4": // belamour legendary edition увеличиваем срок до 3х месяцев
-            dialog.text = "Definitivamente estaré en La Vega, te esperaré allí durante tres semanas. Ven cuando estés listo. Preferiblemente en un barco más fuerte, pero solo en uno - seremos toda una escuadra. Estoy poniendo a toda mi gente en marcha. Irás bajo mi mando, así como Jean el Guapo, Geoffrey el Calvo, Pelly el Cuchillo y Luke el Duende. Prepárate. Nos espera una expedición seria y un botín bastante grande. Descubrirás todos los detalles más tarde.";
+            dialog.text = "Definitivamente estaré en La Vega, te esperaré allí durante tres semanas. Ven cuando estés listo. Preferiblemente en un barco más fuerte, pero solo en uno - seremos toda una escuadra. Estoy poniendo a toda mi gente en marcha. Irás bajo mi mando, así como Jean Handsome, Geoffrey el Calvo, Pelly el Cuchillo y Luke el Duende. Prepárate. Nos espera una expedición seria y un botín bastante grande. Descubrirás todos los detalles más tarde.";
 			link.l1 = "¡Está bien, jefe! Nos vemos en La Vega en tres semanas.";
 			link.l1.go = "mtraxx_board_5";
 		break;
@@ -1759,7 +1759,7 @@ void ProcessDialogEvent()
 			{
 				DeleteAttribute(pchar, "questTemp.GiveMeSpaFlag")); 
 				DeleteAttribute(pchar,"perks.list.FlagSpa"); 
-				log_info("You have given spanish flag");
+				log_info("Has dado una bandera española");
 			}
 		break;
 		
@@ -2212,7 +2212,7 @@ void ProcessDialogEvent()
 			pchar.questTemp.Patria = "epizode_12_terks";
 			SetFunctionTimerCondition("Patria_CondotierTerks", 0, 0, 7, false);
 			SetFunctionTimerCondition("Patria_CondotierTerksOver", 0, 0, 14, false);
-			if(bImCasual) NewGameTip("Exploration mode: timer is not disabled. Meet the deadline!");
+			if(bImCasual) NewGameTip("Modo exploración: el temporizador no está desactivado. ¡Cumple el plazo!");
 		break;
 		
 		case "patria_15":

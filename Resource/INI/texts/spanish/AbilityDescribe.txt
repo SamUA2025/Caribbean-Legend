@@ -463,7 +463,7 @@ No pierdes energía cuando te hieren.
 10% de probabilidad de infligir un golpe crítico.
 30% de daño extra a la 'Estocada'.
 ~
-10% chance of landing a critical hit.
+10% de probabilidad de golpe crítico.
 ~
 A successful Fast Attack gets a 30% damage bonus.
 ~

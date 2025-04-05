@@ -1425,7 +1425,6 @@ void FMQN_ToGovernor(string qName) // посланец к губеру
 {
 	int iTime, iAddTime;
 	iTime = sti(environment.time);
-	float locx, locy, locz;
 	chrDisableReloadToLocation = true;
 	pchar.GenQuest.Hunter2Pause = true;
 	LAi_LocationFightDisable(&Locations[FindLocation("Marigo_town")], true);
@@ -1433,8 +1432,7 @@ void FMQN_ToGovernor(string qName) // посланец к губеру
 	SetFantomParamFromRank(sld, 15, true);
 	sld.Dialog.Filename = "Quest\LineMiniQuests\FMQ_Nevis.c";
 	sld.Dialog.currentnode = "soldier";
-	GetCharacterPos(pchar, &locx, &locy, &locz);
-	ChangeCharacterAddressGroup(sld, "Marigo_town", "goto", LAi_FindNearestFreeLocator("goto", locx, locy, locz));
+	ChangeCharacterAddressGroup(sld, "Marigo_town", "goto", LAi_FindNearestLocator2Pchar("goto"));
 	LAi_SetActorType(sld);
 	LAi_ActorDialog(sld, pchar, "", -1, 0);
 }

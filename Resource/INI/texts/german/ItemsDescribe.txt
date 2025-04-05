@@ -1697,8 +1697,8 @@ itmdescr_chest_open
 Eine typische Truhe für den Transport und die Aufbewahrung von Münzen. Im Moment ist sie leider völlig leer.
 }
 
-itmname_incas_collection	{Schätze}
-itmdescr_incas_collection
+itmname_icollection	{Schätze}
+itmdescr_icollection
 {
 Eine Reihe von teuren Goldgegenständen mit Edelsteinen, wertvoll für jeden Mann.
 }

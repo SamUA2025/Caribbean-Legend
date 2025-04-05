@@ -919,7 +919,7 @@ void ProcessDialogEvent()
 		LAi_ActorFollowEverywhere(npchar, "", -1);
 		LocatorReloadEnterDisable("Martinique_jungle_04", "reload2_back", false);
 		NextDiag.CurrentNode = "Prosper_16";
-		NewGameTip("A challenging fight awaits ahead. (F6) for quick save.");
+		NewGameTip("Nos espera una lucha difícil. (F6) para guardar rápidamente.");
 		break;
 
 	case "Prosper_16":

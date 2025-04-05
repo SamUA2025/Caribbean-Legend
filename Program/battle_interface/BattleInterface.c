@@ -1804,7 +1804,7 @@ void SetShipPictureDataByShipTypeName(string sType)
 
 void SetShipPictureDataByShipType(int st)
 {
-	if(st>=0 && st<GetArraySize(&ShipsTypes))
+	if(st>=0 && st<SHIP_TYPES_QUANTITY)
 	{
 		SetShipPictureDataByShipTypeName( ShipsTypes[st].name );
 	}
@@ -3275,6 +3275,7 @@ ref ProcessRandomSailDmg()
 
 	if(chrIdx<0) return &BI_g_fRetVal;
 	ref chref = GetCharacter(chrIdx);
+    if(LAi_IsImmortal(chref)) return &BI_g_fRetVal;
 
 	aref arSail;
 	string groupName = ""+grNum;

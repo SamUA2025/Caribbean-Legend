@@ -212,8 +212,8 @@ void ProcessDialogEvent()
 					link.l1.go = "saga_82";
 					break;
 				}
-				if (pchar.questTemp.Saga == "end") sTemp = "Oh, my friend "+pchar.name+"! Pleased to see you! What brings you here?";
-				else sTemp = "Anything else, "+pchar.name+"?";
+				if (pchar.questTemp.Saga == "end") sTemp = "¡Oh, mi amigo "+pchar.name+"! ¡Me alegro de verte! ¿Qué le trae por aquí?";
+				else sTemp = "¡Qué deseas, "+pchar.name+"?";
 				dialog.text = sTemp;
 				link.l1 = "No, Jan. Nada en este momento.";
 				link.l1.go = "exit";
@@ -1055,7 +1055,7 @@ void ProcessDialogEvent()
 			DialogExit();
 			pchar.questTemp.Saga = "molligan"; // обновляем флаг
 			AddQuestRecord("Testament", "3");
-			if(bImCasual) NewGameTip("Exploration mode: timer is not disabled. Meet the deadline!");
+			if(bImCasual) NewGameTip("Modo exploración: el temporizador no está desactivado. ¡Cumple el plazo!");
 			Saga_CreateMolliganInWorld(); // ставим корабль Моллигана на карту
 		break;
 		
@@ -1244,7 +1244,7 @@ void ProcessDialogEvent()
 			else iTemp = sti(npchar.quest.bakaut_sum)-sti(npchar.quest.bakaut_pay);
 			npchar.quest.bakaut_sum = iTemp; // запоминаем остаток
 			RemoveItems(pchar, "gold_dublon", sti(npchar.quest.bakaut_pay));
-			Log_Info("You have given "+sti(npchar.quest.bakaut_pay)+" doubloons");
+			Log_Info("Has dado "+sti(npchar.quest.bakaut_pay)+" doblones");
 			PlaySound("interface\important_item.wav");
 			if (iTemp == 0)
 			{
@@ -1486,7 +1486,7 @@ void ProcessDialogEvent()
 		
 		case "saga_88":
 			GiveItem2Character(pchar, "talisman4");
-			Log_Info("You've received the 'Janissary' amulet.");
+			Log_Info("Has recibido el amuleto 'Janissary'.");
 			PlaySound("interface\important_item.wav");
 			dialog.text = "El segundo es solo un recuerdo de aventuras pasadas. Convencí al Consejo de lanzar este ridículo vestigio de usar fragmentos de piedra al viento. Ya no son necesarios. Te los daré. Tal vez encuentres alguna manera de darles uso.";
 			link.l1 = "¿Un uso para los fragmentos? Hm. No sé... ¡pero como recuerdo, estoy muy agradecido!";
@@ -1499,7 +1499,7 @@ void ProcessDialogEvent()
 			GiveItem2Character(pchar, "splinter_mt"); 
 			GiveItem2Character(pchar, "splinter_zm"); 
 			GiveItem2Character(pchar, "splinter_jb"); 
-			Log_Info("You've received five ornamental pattern fragments");
+			Log_Info("Has recibido cinco fragmentos de patrones ornamentales");
 			dialog.text = "Bueno, no te olvides de tu amigo, "+pchar.name+". Pasa por mi lugar cuando ancles en Blueweld. Nos sentaremos y beberemos un poco de ron. Siempre me alegra verte.";
 			link.l1 = "Definitivamente, Jan. Ahora tenemos algo que recordar, ¿verdad? ¡Ja-ja! De todos modos, debo irme.";
 			link.l1.go = "saga_90";
@@ -1659,7 +1659,7 @@ void ProcessDialogEvent()
 		
 		case "trade_bakaut_1":
 			RemoveDublonsFromPCharTotal(750);
-			Log_Info("You have given 750 doubloons");
+			Log_Info("Has dado 750 doblones");
 			PlaySound("interface\important_item.wav");
 			dialog.text = "Loable. Ordenaré a mi gente que transporte la madera de hierro a tu barco.";
 			link.l1 = "¡Gracias!";

@@ -2794,25 +2794,6 @@ void CCS_SetNewMainCharacter(ref ch, int num)
 			ch.info 				= GetNewMainCharacterParam("hero_4");
 									  
 		break;
-		case 5: // Тестер
-//			return;
-			
-			ch.FaceId 				= 0;
-			ch.HeroModel 			= "Diego_1,Diego_2,Diego_3,Diego_4,Diego_5,protocusto,Diego_6,Diego_8,Diego_1,Diego_9,Diego_1,Diego_11,Diego_12,Diego_13,Diego_14";
-			ch.name 				= "Тестер";
-			ch.lastname				= "Дебаггерович";
-			ch.nameGen				= "Тестера";
-			ch.lastnameGen			= "Дебаггеровича";
-			ch.nameDat				= "Тестеру";
-			ch.lastnameDat			= "Дебаггеровичу";
-			ch.sex					= "man";
-			ch.model.animation 		= "testanim";
-			ch.HeroParam.HeroType 	= "HeroType_3";
-			ch.nation				= FRANCE;
-			ch.BaseNation			= FRANCE;
-			ch.info					= "Никто не знает, как Тестер Дебаггерович попал в наш мир, но одно ясно точно: надо тестить анимки.";
-									  
-		break;
 	}	
 	
 	ch.model = GetSubStringByNum(ch.HeroModel, 0);
@@ -3140,9 +3121,6 @@ void initNewMainCharacter()//инициализация главного гер�
 	SetCurrentTime(11,30); // вытавим время и отменим дождь
 	WeatherParams.Rain 			= false;
 	WeatherParams.Rain.ThisDay 	= false;
-
-    TestHead = false;
-    TestLogs = false;
 }
 
 void initMainCharacterItem()

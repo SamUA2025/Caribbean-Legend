@@ -3635,6 +3635,7 @@ void Mtraxx_MeridaGorit_1(string qName)
 void Mtraxx_MeridaGorit_2(string qName)
 {
 	locCameraFlyToPositionLookToHero(-4.09, 2.37, 39.60, 7.29, 2.47, 28.49, 0.001300*GetDeltaTime(), -1);
+	Pchar.FuncCameraFly = "";
 	DoQuestFunctionDelay("Mtraxx_MeridaGorit_3", 10.0);
 }
 
@@ -3749,6 +3750,7 @@ void Mtraxx_MeridaReturnEnd(string qName) // уплываем назад по р
 
 void Mtraxx_MeridaFinal(string qName) // на берегу, дележ добычи
 {
+	chrDisableReloadToLocation = true;
 	pchar.GenQuest.Hunter2Pause = true;
 	// чистим нпс
 	for (int i=5; i<=9; i++) // ребята Леприкона
@@ -6517,6 +6519,7 @@ void Mtraxx_RetributionRunAway_1(string qName)
 void Mtraxx_RetributionRunAway_2(string qName) // бежим!
 {
 	locCameraFlyToPositionLookToHero(-26.42, -1.43, -62.00, -30.26, -2.5, -87.83, 0.001850*GetDeltaTime(), -1);
+	Pchar.FuncCameraFly = "";
 	LAi_SetActorType(pchar);
 	LAi_ActorGoToLocator(pchar, "rld", "aloc21", "", -1);
 	DoQuestFunctionDelay("Mtraxx_RetributionRunAway_3", 1.5);
@@ -8142,33 +8145,18 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		sld.id = "IgnasioClone";
 		ChangeCharacterAddressGroup(sld, PChar.location, "reload", "reload1");
 		LAi_SetActorType(sld);
-		LAi_ActorGoToLocator(sld, "goto", "goto13", "Mtraxx_CorridaControlMarko2", -1);
+		LAi_ActorGoToLocator(sld, "goto", "goto13", "", -1);
 		SetCameraDialogMode(sld);
 		locCameraFlyToPositionLookToHero(53.88, 3.68, 61.22, 43.42, 7.21, 23.34, -1, 15000/GetDeltaTime());
-		DoQuestCheckDelay("Mtraxx_CorridaControlMarko2", 8.0);
+		Pchar.FuncCameraFly = "";
 		DoQuestCheckDelay("Mtraxx_CorridaControlMarko3", 3.0);
-		DoQuestCheckDelay("Mtraxx_CorridaControlMarko5", 14.0);
-	}
-	else if (sQuestName == "Mtraxx_CorridaControlMarko2")
-	{
-		sld = CharacterFromID("IgnasioClone");
-		LAi_ActorGoToLocation(sld, "reload", "reload3_back", "none", "", "", "Mtraxx_CorridaWaitMarko", -1);
+		DoQuestCheckDelay("Mtraxx_CorridaControlMarko6", 8.0);
 	}
 	else if (sQuestName == "Mtraxx_CorridaControlMarko3")
 	{
 		ChangeCharacterAddressGroup(pchar, PChar.location, "quest", "quest3");
-		Log_Info(StringFromKey("Roger_112"));
-		PlaySound("interface\notebook.wav");
-	}
-	else if (sQuestName == "Mtraxx_CorridaControlMarko5")
-	{
-		LAi_Fade("Mtraxx_CorridaControlMarko5_1", "");
-	}
-	else if (sQuestName == "Mtraxx_CorridaControlMarko5_1")
-	{
-		locCameraResetState();
-		locCameraFlyToPositionLookToHero(31.71, 3.89, 17.41, 20.28, 6.27, 17.44, -1, 15000.0/GetDeltaTime());
-		DoQuestCheckDelay("Mtraxx_CorridaControlMarko6", 13.0);
+		//Log_Info(StringFromKey("Roger_112"));
+		//PlaySound("interface\notebook.wav");
 	}
 	else if (sQuestName == "Mtraxx_CorridaControlMarko6")
 	{
@@ -8176,12 +8164,17 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 	}
 	else if (sQuestName == "Mtraxx_CorridaControlMarko6_1")
 	{
+		sld = CharacterFromID("IgnasioClone");
+		LAi_type_actor_Reset(sld);
+		ChangeCharacterAddressGroup(sld, PChar.location, "reload", "houseH9");
+		LAi_ActorGoToLocation(sld, "reload", "reload3_back", "none", "", "", "Mtraxx_CorridaWaitMarko", -1);
 		locCameraResetState();
 		locCameraFlyToPositionLookToHero(8.72, 3.33, 32.14, 5.25, 6.12, 30.81, -1, 15000/GetDeltaTime());
+		Pchar.FuncCameraFly = "";
 	}
 	else if (sQuestName == "Mtraxx_CorridaWaitMarko") // 
 	{
-		DoQuestCheckDelay("Mtraxx_CorridaWaitMarkoFrame", 5.0);
+		DoQuestCheckDelay("Mtraxx_CorridaWaitMarkoFrame", 2.5);
 	}
 	else if (sQuestName == "Mtraxx_CorridaWaitMarkoFrame") // 
 	{
@@ -8210,9 +8203,9 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 	}
 	else if (sQuestName == "Mtraxx_CorridaMarkoExit2") // 
 	{
-		Log_Info(StringFromKey("Roger_114"));
-		Log_Info(StringFromKey("Roger_115"));
-		PlaySound("interface\notebook.wav");
+		//Log_Info(StringFromKey("Roger_114"));
+		//Log_Info(StringFromKey("Roger_115"));
+		//PlaySound("interface\notebook.wav");
 		sld = CharacterFromID("IgnasioClone");
 		ChangeCharacterAddressGroup(sld, "LeFransua_town", "reload", "reload3_back");
 		LAi_SetActorType(sld);
@@ -8226,39 +8219,30 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		LAi_SetActorType(sld);
 		LAi_ActorGoToLocation(sld, "reload", "reload1", "none", "", "", "", -1);
 		DoQuestCheckDelay("Mtraxx_CorridaMarkoExit2_1", 2.5);
-		DoQuestCheckDelay("Mtraxx_CorridaMarkoExit3", 13.9);
 		locCameraSleep(true);
 	}
 	else if (sQuestName == "Mtraxx_CorridaMarkoExit2_1")
 	{
 		locCameraSleep(false);
 		locCameraResetState();
+		locCameraFlyToPositionLookToPoint(40.09, 4.10, 28.11, 46.58, 3.68, 63.22, 44.19, 2.13, 57.48, -1, 24000/GetDeltaTime());
 		sld = CharacterFromID("IgnasioClone");
-		SetCameraDialogMode(sld);
-		locCameraFlyToPositionLookToHero(0.06, 4.17, 28.91, 20.28, 6.27, 17.44, -1, 15000/GetDeltaTime());
-	}
-	else if (sQuestName == "Mtraxx_CorridaMarkoExit3")
-	{
-		LAi_Fade("Mtraxx_CorridaMarkoExit3_1", "");
-	}
-	else if (sQuestName == "Mtraxx_CorridaMarkoExit3_1")
-	{
-		locCameraResetState();
-		locCameraFlyToPositionLookToHero(27.20, 3.89, 22.67, 43.42, 7.21, 23.34, -1, 15000/GetDeltaTime());
-		DoQuestCheckDelay("Mtraxx_CorridaMarkoExit4", 9.0);
-	}
-	else if (sQuestName == "Mtraxx_CorridaMarkoExit4")
-	{
-		LAi_Fade("Mtraxx_CorridaMarkoExit4_1", "");
-	}
-	else if (sQuestName == "Mtraxx_CorridaMarkoExit4_1")
-	{
-		locCameraResetState();
-		locCameraFlyToPositionLookToHero(49.09, 3.55, 35.11, 53.88, 3.68, 61.22, -1, 15000/GetDeltaTime());
+		LAi_type_actor_Reset(sld);
+		TeleportCharacterToPosAy(sld, 42.59, 2.02, 35.65, 0.00);
+		LAi_ActorGoToLocation(sld,  "reload", "reload1", "none", "", "", "Mtraxx_CorridaMarkoGone", -1);
+		sld = CharacterFromID("Mtr_Vagrant");
+		LAi_type_actor_Reset(sld);
+		TeleportCharacterToPosAy(sld, 41.59, 2.02, 34.65, 0.00);
+		LAi_ActorGoToLocation(sld,  "reload", "reload1", "none", "", "", "Mtraxx_CorridaMarkoGone", -1);
+		sld = CharacterFromID("Mtr_vampire");
+		LAi_type_actor_Reset(sld);
+		TeleportCharacterToPosAy(sld, 43.59, 2.02, 34.65, 0.00);
+		LAi_ActorGoToLocation(sld,  "reload", "reload1", "none", "", "", "Mtraxx_CorridaMarkoGone", -1);
+		Pchar.FuncCameraFly = "";
 	}
 	else if (sQuestName == "Mtraxx_CorridaMarkoGone")
 	{
-		DoQuestCheckDelay("Mtraxx_CorridaMarkoGone_2", 2.5);
+		DoQuestCheckDelay("Mtraxx_CorridaMarkoGone_2", 1.5);
 	}
 	else if (sQuestName == "Mtraxx_CorridaMarkoGone_2")
 	{
@@ -8268,6 +8252,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 	}
 	else if (sQuestName == "Mtraxx_CorridaMarkoGone_3")
 	{
+		
 		LAi_LocationDisableOfficersGen("LeFransua_town", false);
 		bDisableCharacterMenu = false;
 		LAi_SetPlayerType(pchar);
@@ -8289,6 +8274,12 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		AddCharacterExpToSkill(pchar, "Sneak", 200);
 		sld = CharacterFromID("IgnasioClone");
 		sld.lifeday = 0;
+		sld = CharacterFromID("Mtr_Vagrant");
+		LAi_type_actor_Reset(sld);
+		ChangeCharacterAddressGroup(sld, "none", "", "");
+		sld = CharacterFromID("Mtr_vampire");
+		LAi_type_actor_Reset(sld);
+		ChangeCharacterAddressGroup(sld, "none", "", "");
 	}
 	else if (sQuestName == "Mtraxx_CartahenaReloadInTavern") // телепорт в таверну
 	{
@@ -8391,6 +8382,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		InterfaceStates.Buttons.Save.enable = false;
 		bDisableCharacterMenu = true;
 		locCameraRotateAroundHero(0.0, 1.5, 0.0, 0.005, 0.0, 1.5, 0.0, 10000);
+		Pchar.FuncCameraFly = "";
 		DoQuestCheckDelay("Mtraxx_CartahenaTavernExit", 60.0);
 	}
 	else if (sQuestName == "Mtraxx_CartahenaTavernExit") // закончили пьянку
@@ -8721,6 +8713,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		n = 0;
 		for (i = 1; i <= iTotalTemp; i++)
 		{
+			if(!CharacterIsAlive("Mtr_CartahenaFort1Pirate_" + i)) continue;
 			sld = CharacterFromID("Mtr_CartahenaFort1Pirate_" + i);
 			if (LAi_GetCharacterHP(sld) > 0) n++;
 			sld.lifeday = 0; // патч 17/1
@@ -8822,6 +8815,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		n = 0;
 		for (i = 1; i <= iTotalTemp; i++)
 		{
+			if(!CharacterIsAlive("Mtr_CartahenaFort2Pirate_" + i)) continue;
 			sld = CharacterFromID("Mtr_CartahenaFort2Pirate_" + i);
 			if (LAi_GetCharacterHP(sld) > 0) n++;
 			sld.lifeday = 0; // патч 17/1
@@ -8902,6 +8896,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		n = 0;
 		for (i = 1; i <= iTotalTemp; i++)
 		{
+			if(!CharacterIsAlive("Mtr_CartahenaFort3Pirate_" + i)) continue;
 			sld = CharacterFromID("Mtr_CartahenaFort3Pirate_" + i); // belamour: убрать пиратов Тесака из Бастиона
 			if (LAi_GetCharacterHP(sld) > 0) n++;
 			sld.lifeday = 0; // патч 17/1
@@ -8912,28 +8907,26 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 	}
 	else if (sQuestName == "Mtraxx_CartahenaExittownBattle") // бой на выходе из города
 	{
-		// прячем нищеброда
-		sld = characterFromId("Cartahena_Poorman");
-		ChangeCharacterAddressGroup(sld, "none", "", "");
-		PlaySound("interface\" + LanguageGetLanguage() + "\_GTBoard2.wav");
-		iRank = sti(pchar.rank) + MOD_SKILL_ENEMY_RATE + 5;
+		PlaySound("interface\" + LanguageGetLanguage() + "\_GTBoard2.wav");;
+		iRank = sti(pchar.rank)+MOD_SKILL_ENEMY_RATE+5;
+		chrDisableReloadToLocation = true;
 		// наши
-		for (i = 1; i <= 3; i++) // офицеры ГГ
+		for (i=1; i<=3; i++) // офицеры ГГ
 		{
 			idx = GetOfficersIndex(pchar, i);
 			if (idx < 1) continue;
 			sld = &Characters[idx];
-			ChangeCharacterAddressGroup(sld, "Cartahena_ExitTown", "officers", "gate_back_" + i);
+			ChangeCharacterAddressGroup(sld, "Cartahena_ExitTown", "officers", "reload3_"+i);
 		}
-		sld = CharacterFromID("Terrax"); // Тиракс
+		sld = CharacterFromID("Lepricon"); // Леприкон
 		LAi_CharacterDisableDialog(sld);
 		LAi_SetWarriorType(sld);
 		LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
-		ChangeCharacterAddressGroup(sld, "Cartahena_ExitTown", "reload", "houseSp2");
-		for (i = 1; i <= 10; i++) // буканьеры Леприкона
+		ChangeCharacterAddressGroup(sld, "Cartahena_ExitTown", "rld", "aloc12");
+		for (i=5; i<=10; i++) // буканьеры Леприкона
 		{
-			sld = CharacterFromID("Lepricons_bukaneers_" + i);
-			if (i < 10) ChangeCharacterAddressGroup(sld, "Cartahena_ExitTown", "rld", "aloc" + (i - 4));
+			sld = CharacterFromID("Lepricons_bukaneers_"+i);
+			if (i < 10) ChangeCharacterAddressGroup(sld, "Cartahena_ExitTown", "rld", "aloc"+(i-4));
 			else ChangeCharacterAddressGroup(sld, "Cartahena_ExitTown", "rld", "aloc11");
 			LAi_CharacterDisableDialog(sld);
 			LAi_SetWarriorType(sld);
@@ -8942,11 +8935,11 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		}
 		// испанцы
 		LAi_group_Delete("EnemyFight");
-		for (i = 1; i <= 12; i++)
+		for (i=1; i<=12; i++)
 		{
 			if (i < 3) // мушкетеры, 2 шт
 			{
-				sld = GetCharacter(NPC_GenerateCharacter("Mtr_CartahenaExittownGuard_" + i, "mush_spa_" + (rand(2) + 1), "man", "mushketer", iRank, SPAIN, -1, false, "soldier"));
+				sld = GetCharacter(NPC_GenerateCharacter("Mtr_CartahenaExittownGuard_"+i, "mush_spa_"+(rand(2)+1), "man", "mushketer", iRank, SPAIN, -1, false, "soldier"));
 				FantomMakeCoolFighter(sld, iRank, 60, 60, "", "mushket1", "cartridge", 170);
 				LAi_SetCharacterUseBullet(sld, MUSKET_ITEM_TYPE, "cartridge");
 				if (MOD_SKILL_ENEMY_RATE > 2) sld.cirassId = Items_FindItemIdx("cirass1");
@@ -8956,8 +8949,8 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 			{
 				if (i == 12) // офицер
 				{
-					sld = GetCharacter(NPC_GenerateCharacter("Mtr_CartahenaExittownGuard_" + i, "off_spa_5", "man", "man", iRank + 5, SPAIN, -1, false, "soldier"));
-					FantomMakeCoolFighter(sld, iRank + 5, 70, 70, "topor_04", "pistol4", "cartridge", 200);
+					sld = GetCharacter(NPC_GenerateCharacter("Mtr_CartahenaExittownGuard_"+i, "off_spa_5", "man", "man", iRank+5, SPAIN, -1, false, "soldier"));
+					FantomMakeCoolFighter(sld, iRank+5, 70, 70, "topor_04", "pistol4", "cartridge", 200);
 					SetCharacterPerk(sld, "SwordplayProfessional");
 					SetCharacterPerk(sld, "Gunman");
 					SetCharacterPerk(sld, "GunProfessional");
@@ -8966,10 +8959,10 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 				}
 				else
 				{
-					sld = GetCharacter(NPC_GenerateCharacter("Mtr_CartahenaExittownGuard_" + i, "sold_spa_" + (rand(7) + 1), "man", "man", iRank, SPAIN, -1, false, "soldier"));
-					FantomMakeCoolFighter(sld, iRank, 60, 60, LinkRandPhrase("blade_08", "blade_12", "blade_14"), "pistol1", "bullet", 150);
+					sld = GetCharacter(NPC_GenerateCharacter("Mtr_CartahenaExittownGuard_"+i, "sold_spa_"+(rand(7)+1), "man", "man", iRank, SPAIN, -1, false, "soldier"));
+					FantomMakeCoolFighter(sld, iRank, 60, 60, LinkRandPhrase("blade_08","blade_12","blade_14"), "pistol1", "bullet", 150);
 					if (MOD_SKILL_ENEMY_RATE > 2) sld.cirassId = Items_FindItemIdx("cirass2");
-					if (i > 5 && i < 11) ChangeCharacterAddressGroup(sld, "Cartahena_ExitTown", "rld", "aloc" + i);
+					if (i > 5 && i < 11) ChangeCharacterAddressGroup(sld, "Cartahena_ExitTown", "rld", "aloc"+i);
 					else ChangeCharacterAddressGroup(sld, "Cartahena_ExitTown", "rld", "aloc14");
 				}
 			}
@@ -8994,6 +8987,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		DoQuestFunctionDelay("Mtraxx_CartahenaTownReload", 5.0);
 		for (i = 5; i <= 10; i++) // патч 17/1
 		{
+			if(!CharacterIsAlive("Lepricons_bukaneers_" + i)) continue;
 			sld = CharacterFromID("Lepricons_bukaneers_" + i);
 			sld.lifeday = 0; 
 		}
@@ -9006,36 +9000,69 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		// прячем нищеброда
 		sld = characterFromId("Cartahena_Poorman");
 		ChangeCharacterAddressGroup(sld, "none", "", "");
-		PlaySound("interface\" + LanguageGetLanguage() + "\_GTBoard2.wav");
-		iRank = sti(pchar.rank) + MOD_SKILL_ENEMY_RATE + 5;
+		PlaySound("interface\" + LanguageGetLanguage() + "\_GTBoard2.wav");;
+		iRank = sti(pchar.rank)+MOD_SKILL_ENEMY_RATE+5;
+		// считаем выживших бойцов. Участвует только 20 рыл. Их запоминаем.
+		if (iTotalTemp > 20) n = 20;
+		else n = iTotalTemp;
+		iTotalTemp = n; // запомнили в глобальную переменную
+		pchar.questTemp.Mtraxx.Cartahena.TownCrew = n;
 		// наши
-		for (i = 1; i <= 3; i++) // офицеры ГГ
+		for (i=1; i<=3; i++) // офицеры ГГ
 		{
 			idx = GetOfficersIndex(pchar, i);
 			if (idx < 1) continue;
 			sld = &Characters[idx];
-			ChangeCharacterAddressGroup(sld, "Cartahena_Town", "officers", "gate_back_" + i);
+			ChangeCharacterAddressGroup(sld, "Cartahena_Town", "officers", "gate_back_"+i);
 		}
 		sld = CharacterFromID("Terrax"); // Тиракс
 		LAi_CharacterDisableDialog(sld);
 		LAi_SetWarriorType(sld);
 		LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
 		ChangeCharacterAddressGroup(sld, "Cartahena_Town", "reload", "houseSp2");
-		for (i = 1; i <= 10; i++) // буканьеры Леприкона
+		sld = CharacterFromID("Jeffry"); // Лысый
+		LAi_CharacterDisableDialog(sld);
+		LAi_SetWarriorType(sld);
+		LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
+		ChangeCharacterAddressGroup(sld, "Cartahena_Town", "reload", "houseSp1");
+		sld = CharacterFromID("Pelly"); // Тесак
+		LAi_CharacterDisableDialog(sld);
+		LAi_SetWarriorType(sld);
+		LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
+		ChangeCharacterAddressGroup(sld, "Cartahena_Town", "reload", "houseF2");
+		sld = CharacterFromID("Lepricon"); // Леприкон
+		LAi_CharacterDisableDialog(sld);
+		LAi_SetWarriorType(sld);
+		LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
+		ChangeCharacterAddressGroup(sld, "Cartahena_Town", "reload", "houseS2");
+		log_Testinfo("Наших с оружием - "+iTotalTemp+" бойцов");
+		for (i=1; i<=iTotalTemp; i++)
 		{
-			sld = CharacterFromID("Lepricons_bukaneers_" + i);
-			if (i < 10) ChangeCharacterAddressGroup(sld, "Cartahena_Town", "rld", "aloc" + (i - 4));
-			else ChangeCharacterAddressGroup(sld, "Cartahena_Town", "rld", "aloc11");
-			LAi_CharacterDisableDialog(sld);
+			if (i < 3) // мушкетеры, 2 шт
+			{
+				sld = GetCharacter(NPC_GenerateCharacter("Mtr_CartahenaTownPirate_"+i, "mush_ctz_"+(i+6), "man", "mushketer", iRank, PIRATE, -1, false, "soldier"));
+				FantomMakeCoolFighter(sld, iRank, 60, 60, "", "mushket3", "grapeshot", 170);
+				LAi_SetCharacterUseBullet(sld, MUSKET_ITEM_TYPE, "grapeshot");
+				if (iTotalTemp > 17) sld.cirassId = Items_FindItemIdx("cirass1");
+			}
+			else
+			{
+					sld = GetCharacter(NPC_GenerateCharacter("Mtr_CartahenaTownPirate_"+i, "citiz_"+(rand(9)+41), "man", "man", iRank, PIRATE, -1, false, "soldier"));
+					FantomMakeCoolFighter(sld, iRank, 60, 60, LinkRandPhrase("blade_03","blade_05","blade_07"), "pistol1", "bullet", 150);
+					if (iTotalTemp > 17) sld.cirassId = Items_FindItemIdx("cirass2");
+			}
+			ChangeCharacterAddressGroup(sld, "Cartahena_Town", "goto", "goto"+i);
 			LAi_SetWarriorType(sld);
 			LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
-			sld.lifeday = 3;
+			DeleteAttribute(sld, "SaveItemsForDead");
+			DeleteAttribute(sld, "DontClearDead");
+			LAi_CharacterDisableDialog(sld);
 		}
 		// испанцы
 		LAi_group_Delete("EnemyFight");
 		// офицер
-		sld = GetCharacter(NPC_GenerateCharacter("Mtr_CartahenaTownOfficer_" + i, "off_spa_5", "man", "man", iRank + 7, SPAIN, -1, false, "soldier"));
-		FantomMakeCoolFighter(sld, iRank + 7, 75, 75, "topor_04", "pistol4", "cartridge", 220);
+		sld = GetCharacter(NPC_GenerateCharacter("Mtr_CartahenaTownOfficer_"+i, "off_spa_5", "man", "man", iRank+7, SPAIN, -1, false, "soldier"));
+		FantomMakeCoolFighter(sld, iRank+7, 75, 75, "topor_04", "pistol4", "cartridge", 220);
 		SetCharacterPerk(sld, "SwordplayProfessional");
 		SetCharacterPerk(sld, "Gunman");
 		SetCharacterPerk(sld, "GunProfessional");
@@ -9046,25 +9073,26 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		DeleteAttribute(sld, "SaveItemsForDead");
 		DeleteAttribute(sld, "DontClearDead");
 		// мушкетеры
-		for (i = 3; i <= 8; i++)
+		for (i=3; i<=8; i++)
 		{
-			sld = GetCharacter(NPC_GenerateCharacter("Mtr_CartahenaTownMushketer_" + i, "mush_spa_" + (rand(2) + 1), "man", "mushketer", iRank, SPAIN, -1, false, "soldier"));
+			
+			sld = GetCharacter(NPC_GenerateCharacter("Mtr_CartahenaTownMushketer_"+i, "mush_spa_"+(rand(2)+1), "man", "mushketer", iRank, SPAIN, -1, false, "soldier"));
 			FantomMakeCoolFighter(sld, iRank, 60, 60, "", "mushket1", "cartridge", 170);
 			LAi_SetCharacterUseBullet(sld, MUSKET_ITEM_TYPE, "cartridge");
 			if (MOD_SKILL_ENEMY_RATE > 2) sld.cirassId = Items_FindItemIdx("cirass1");
 			sld.MusketerDistance = 0;
-			ChangeCharacterAddressGroup(sld, "Cartahena_Town", "reload", "reload4");
+			ChangeCharacterAddressGroup(sld, "Cartahena_Town", "reload", "reload"+i);
 			LAi_SetWarriorType(sld);
 			LAi_group_MoveCharacter(sld, "EnemyFight");
 			DeleteAttribute(sld, "SaveItemsForDead");
 			DeleteAttribute(sld, "DontClearDead");
 		}
-		for (i = 1; i <= 20; i++)
+		for (i=1; i<=20; i++)
 		{
-			sld = GetCharacter(NPC_GenerateCharacter("Mtr_CartahenaTownGuard_" + i, "sold_spa_" + (rand(7) + 1), "man", "man", iRank, SPAIN, -1, false, "soldier"));
-			FantomMakeCoolFighter(sld, iRank, 60, 60, LinkRandPhrase("blade_08", "blade_12", "blade_14"), "pistol1", "bullet", 150);
+			sld = GetCharacter(NPC_GenerateCharacter("Mtr_CartahenaTownGuard_"+i, "sold_spa_"+(rand(7)+1), "man", "man", iRank, SPAIN, -1, false, "soldier"));
+			FantomMakeCoolFighter(sld, iRank, 60, 60, LinkRandPhrase("blade_08","blade_12","blade_14"), "pistol1", "bullet", 150);
 			if (MOD_SKILL_ENEMY_RATE > 2) sld.cirassId = Items_FindItemIdx("cirass2");
-			ChangeCharacterAddressGroup(sld, "Cartahena_Town", "patrol", "patrol" + i);
+			ChangeCharacterAddressGroup(sld, "Cartahena_Town", "patrol", "patrol"+i);
 			LAi_SetWarriorType(sld);
 			LAi_group_MoveCharacter(sld, "EnemyFight");
 			DeleteAttribute(sld, "SaveItemsForDead");
@@ -9095,6 +9123,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		n = 0;
 		for (i = 1; i <= iTotalTemp; i++)
 		{
+			if(!CharacterIsAlive("Mtr_CartahenaTownPirate_" + i)) continue;
 			sld = CharacterFromID("Mtr_CartahenaTownPirate_" + i);
 			if (LAi_GetCharacterHP(sld) > 0) n++;
 			sld.lifeday = 3;
@@ -9297,6 +9326,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		InterfaceStates.Buttons.Save.enable = false;
 		bDisableCharacterMenu = true;
 		locCameraRotateAroundHero(0.0, 1.5, 0.0, 0.005, 0.0, 1.5, 0.0, 10000);
+		Pchar.FuncCameraFly = "";
 		DoQuestCheckDelay("Mtraxx_RetributionFrameInBrothel", 30.0);
 		for (i = 1; i <= 3; i++)
 		{
@@ -10515,6 +10545,7 @@ bool Roger_QuestComplete(string sQuestName, string qname)
 		InterfaceStates.Buttons.Save.enable = false;
 		bDisableCharacterMenu = true;
 		locCameraRotateAroundHero(0.0, 1.5, 0.0, 0.005, 0.0, 1.5, 0.0, 10000);
+		Pchar.FuncCameraFly = "";
 		DoQuestCheckDelay("Mtraxx_RetributionPromice", 5.0);
 		PlaySound("ambient\church\zvon.wav");
 	}

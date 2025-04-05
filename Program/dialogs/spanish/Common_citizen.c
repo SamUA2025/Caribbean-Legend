@@ -105,7 +105,7 @@ void ProcessDialogEvent()
 
 				Link.l1 = pcharrepphrase(LinkRandPhrase("¡Por el trueno!","¡Campanas del infierno!","¡Mala suerte para ti!")+"Sí, soy el Capitán "+GetFullName(Pchar)+LinkRandPhrase(", ¿realmente no has oído hablar de mí"+NPCharSexPhrase(NPChar,", ¿pícaro?","?")," y "+GetSexPhrase("el pirata más notorio","la dama pirata más notoria")+" ¡en estas aguas! "," ¡y que arda en el Infierno si eso no es cierto!"),LinkRandPhrase("Soy Capitán"+GetFullName(Pchar)+".","Mi nombre es "+GetFullName(Pchar)+".","Puedes llamarme Capitán "+GetFullName(Pchar)));
 
-                //LinkRandPhrase("I am Captain" + GetFullName(Pchar) + ".", "My name is " + GetFullName(Pchar) + ".", "You may call me Captain " + GetFullName(Pchar));
+                //LinkRandPhrase("Soy el Capitán" + GetFullName(Pchar) + ".", "Me llamo " + GetFullName(Pchar) + ".", "Puedes llamarme Capitán " + GetFullName(Pchar));
 				Link.l1.go = "Meeting";
 			}
 			else
@@ -475,7 +475,7 @@ void ProcessDialogEvent()
 				
 			//sTemp = "randitem" + (rand(1)+1); // Т.е. может получиться, что его вовсе найти не удастся. И это гуд.
 			sTemp = "randitem1";
-			Log_TestInfo("The ring shall be in the locator - " + sTemp);
+			Log_TestInfo("El anillo estará en la ubicación - " + sTemp);
 			PChar.GenQuest.CitizenFindItem.ItemLocator = sTemp;
 			ChangeItemDescribe("DOjeronRing", "itmdescr_WeddingRing");			
 			items[FindItem("DOjeronRing")].Name = "itmname_WeddingRing";

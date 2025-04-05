@@ -502,12 +502,12 @@ void ProcessDialogEvent()
 			dialog.text = "Ahoy, capitán. ¿Qué tienes para mí?";
 			
 			if (CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.p1") && !CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.p1.Completed") && PCharDublonsTotal() >= 2000) {
-				link.p1 = "Here are your doubloons. It's hard enough to carry that damned metal around... but it is even harder to part with it!";
+				link.p1 = "Aquí están tus doblones. ¡Ya es bastante difícil cargar con ese maldito metal... pero es aún más difícil desprenderse de él!";
 				link.p1.go = "joruba_p1";
 			}
 			
 			if (CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.p2") && !CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.p2.Completed") && GetCharacterItem(pchar, "cannabis7") >= 15) {
-				link.p2 = "I kept my end of the bargain. Here's your herb, Aruba.";
+				link.p2 = "Cumplí mi parte del trato. Aquí está tu hierba, Aruba.";
 				link.p2.go = "joruba_p2";
 			}
 			
@@ -517,11 +517,11 @@ void ProcessDialogEvent()
 				
 					chref = GetCharacter(questShips[i]);
 					sld = GetRealShip(sti(chref.ship.type));
-					link.(sTemp) = "Aruba, ahoy! " + GetStrSmallRegister(XI_ConvertString(sld.BaseName)) + " '" + chref.Ship.Name + "' is all yours!";
+					link.(sTemp) = "¡Aruba, a la vista! ¡" + GetStrSmallRegister(XI_ConvertString(sld.BaseName)) + " '" + chref.Ship.Name + "' es todo tuyo!";
 					link.(sTemp).go = "joruba_p3_ship_" + questShips[i];
 					if (FindCompanionShips(SHIP_PINK) && sti(pchar.questTemp.ChickenGod.Tasks.Schyot) <= 1 && startHeroType != 4)
 					{
-						link.(sTemp) = "Aruba, ahoy! Pink '" + chref.Ship.Name + "' is all yours!";
+						link.(sTemp) = "¡Aruba, a la vista! ¡El Pink '" + chref.Ship.Name + "' es todo tuyo!";
 						link.(sTemp).go = "joruba_p3_PinkOtkaz";
 					}
 					/*if (FindCompanionShips(SHIP_GALEON_SM))
@@ -533,33 +533,33 @@ void ProcessDialogEvent()
 			}
 			
 			if (CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.p4") && !CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.p4.Completed")) {
-				link.p3 = "I'm willing to make a sacrifice.";
+				link.p3 = "Estoy dispuesto a hacer un sacrificio.";
 				link.p3.go = "joruba_p4";
 			}
 			
 			if (CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.o2.Lady") && !CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.o2.Completed")) {
-				link.o2 = "I am bringing you a bride and troubles with the Spanish authorities, sir. The lady is taking a stroll outside, well protected by my men. I will not give her to you until you convince me of the nobility of your intentions.";
+				link.o2 = "Le traigo una novia y problemas con las autoridades españolas, señor. La dama está paseando fuera, bien protegida por mis hombres. No os la entregaré hasta que me convenzáis de la nobleza de vuestras intenciones.";
 				link.o2.go = "joruba_o2";
 			}
 			
 			if (CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.o3") && !CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.o3.Completed") && GetCharacterFreeItem(pchar, "cirass4") >= 1) {
-				link.o3 = "Here's your armor, Aruba. Make sure my reward will make up for it.";
+				link.o3 = "Aquí está tu armadura, Aruba. Asegúrate de que mi recompensa te compense.";
 				link.o3.go = "joruba_o3";
 			}
 			
 			if (CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.o4") && !CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.o4.Completed") && GetPrisonerQty() >= 30) {
-				link.o4 = "I have the prisoners you asked for.";
+				link.o4 = "Tengo los prisioneros que pediste.";
 				link.o4.go = "joruba_o4";
 			}
 			
 			if (CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.o5") && !CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.o5.Completed") && GetCharacterItem(pchar, "talisman11") >= 113) {
-				link.p2 = "I brought you your junk. Here, a hundred and thirteen stones, just like you asked for.";
+				link.p2 = "Te traje tu basura. Toma, ciento trece piedras, como me pediste.";
 				link.p2.go = "joruba_o5";
 			}
 			
 			bOk = (PCharDublonsTotal() >= 25000) || (ChickenGod_HaveOfficers());
 			if (CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.o6") && !CheckAttribute(pchar, "questTemp.ChickenGod.Tasks.o6.Completed") && bOk) {
-				link.p3 = "I'm willing to make a sacrifice.";
+				link.p3 = "Estoy dispuesto a hacer un sacrificio.";
 				link.p3.go = "joruba_o6";
 			}
 			
@@ -814,9 +814,9 @@ void ProcessDialogEvent()
 			dialog.text = "¡Cualquier barco que comandéis será bendecido con un casco más fuerte, mientras que vuestros enemigos sufrirán lo contrario! Además, el tiempo en el mar pasará más lento para vos. Y si eso no es suficiente para que pongáis de rodillas a este agujero maldito, ¡mejor id con vuestro padre y exigid un reembolso!";
 			link.l1 = "Si no funciona, ¡juro que volveré aquí esta noche y quemaré tu pirámide! ¡Cuéntame sobre el próximo trato!";
 			link.l1.go = "joruba_p3_3";
-			notification("+10% hull defence", "None");
-			notification("+10% damage to enemy ships hull", "None");
-			notification("+5% speed on the Global Map", "None");
+			notification("+10% defensa del casco", "None");
+			notification("+10% de daño al casco de los barcos enemigos", "None");
+			notification("+5% de velocidad en el Mapa Global", "None");
 			PlaySound("Interface\new_level.wav");
 		break;
 		
@@ -1087,7 +1087,7 @@ void ProcessDialogEvent()
 			
 			if (PCharDublonsTotal() >= 25000)
 			{
-				link.money = "Here's your gold, you greedy bastard.";
+				link.money = "Aquí está tu oro, bastardo codicioso.";
 				link.money.go = "joruba_o6_money";
 			}
 			
@@ -1191,7 +1191,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "joruba_final_2":
-			dialog.text = "You know what? I'll tell you.\nI'm fed up with this world, and I want out. Every day, it's the same old routine: an ancient pyramid with a crumbling ceiling, those loathsome identical palm trees, and a never-ending stream of captains, each with their own ingenious ideas. Yes, I provide people with what they desire; it's my calling, and I take pride in it. But by the gods, how I detest all of you!";
+			dialog.text = "¿Sabes una cosa? Estoy harto de este mundo y quiero salir de él. Todos los días, la misma rutina: una antigua pirámide con el techo derruido, esas repugnantes palmeras idénticas y un sinfín de capitanes, cada uno con sus propias ideas ingeniosas. Sí, proporciono a la gente lo que desea; es mi vocación, y me enorgullezco de ello. Pero, por los dioses, ¡cómo os detesto a todos!";
 			link.l1 = "¿Alguien te está reteniendo aquí? ¡La salida está justo ahí, genio!";
 			link.l1.go = "joruba_final_3";
 		break;

@@ -218,7 +218,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "cumvana_2_1":
-			Log_Info("You have given a pistol");
+			Log_Info("Has dado una pistola");
 			//Log_Info("You have received amulets");
 			PlaySound("interface\important_item.wav");
 			RemoveItems(pchar, "pistol5", 1);
@@ -231,7 +231,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "cumvana_2_2":
-			Log_Info("You have given a compass");
+			Log_Info("Has dado una brújula");
 			//Log_Info("You have received amulets");
 			PlaySound("interface\important_item.wav");
 			RemoveItems(pchar, "compass1", 1);
@@ -244,7 +244,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "cumvana_2_3":
-			Log_Info("You have given a cheap spy glass");
+			Log_Info("Has dado un catalejo barato");
 			//Log_Info("You have received amulets");
 			PlaySound("interface\important_item.wav");
 			RemoveItems(pchar, "spyglass1", 1);
@@ -257,7 +257,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "cumvana_2_4":
-			Log_Info("You have given a common spy glass");
+			Log_Info("Has dado un catalejo común");
 			//Log_Info("You have received amulets");
 			PlaySound("interface\important_item.wav");
 			RemoveItems(pchar, "spyglass2", 1);
@@ -270,7 +270,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "cumvana_2_5":
-			Log_Info("You have given a decent spy glass");
+			Log_Info("Has dado un catalejo decente");
 			//Log_Info("You have received amulets");
 			PlaySound("interface\important_item.wav");
 			RemoveItems(pchar, "spyglass3", 1);
@@ -307,7 +307,7 @@ void ProcessDialogEvent()
 			npchar.dialog.currentnode = "cumvana_7";
 			//AddQuestRecord("Roger_5", "6");
 			AddCharacterExpToSkill(pchar, "Leadership", 150);
-			SetLaunchFrameFormParam("The next day...", "Mtraxx_MeridaVozhdDialog", 0, 4.0);
+			SetLaunchFrameFormParam("Al día siguiente....", "Mtraxx_MeridaVozhdDialog", 0, 4.0);
 			LaunchFrameForm();
 			WaitDate("", 0, 0, 1, 0, 0);
 			RecalculateJumpTable();
@@ -491,7 +491,7 @@ void ProcessDialogEvent()
 			dialog.text = "No, yalanaui. El rostro pálido nunca mantiene su palabra. El rostro pálido habla, y la palabra inmediatamente se va al vacío. El Kapong matará a Tagofa y luego vendrá a nuestro pueblo, matará al Lokono.";
 			link.l1 = "¿Crees que estos Kapongs son todo lo que tienes que preocuparte? Estás muy equivocado...";
 			link.l1.go = "hayamee_bad_4";
-			if (stf(pchar.questTemp.Indian.relation) < 40.0) notification("The Indians don't respect you "+stf(pchar.questTemp.Indian.relation)+"/40", "None");
+			if (stf(pchar.questTemp.Indian.relation) < 40.0) notification("Los indios no te respetan "+stf(pchar.questTemp.Indian.relation)+"/40", "None");
 			if (!IsCharacterPerkOn(pchar, "Trustworthy")) notification("Perk Check Failed", "Trustworthy");
 		break;
 		
@@ -517,7 +517,7 @@ link.l1.go = "hayamee_1_1";
 			dialog.text = "Lokono no confía en los Yalanaui. Yalanaui engaña al indio, convierte al indio en esclavo. Pero Lokono oye tu nombre, cara pálida. Mi confianza es tuya. Ven mañana después del atardecer, hijo del mar. Estaré con Tagofa en esa choza. Le preguntaré si irá contigo o no.";
 			link.l1 = "Dile a Tagofa que le daré mi pistola más hermosa. Y para ti tengo muchas joyas.";
 			link.l1.go = "hayamee_2";
-			notification("The Indians respect you "+stf(pchar.questTemp.Indian.relation)+"/40", "None");
+			notification("Los indios te respetan "+stf(pchar.questTemp.Indian.relation)+"/40", "None");
 			notification("Trustworthy", "Trustworthy");
 		break;
 		

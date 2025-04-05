@@ -383,7 +383,7 @@ void ProcessDialogEvent()
                 {
 					if (pchar.location == pchar.questTemp.LadyBeth.CaptainInColony + "_tavern") // Блеквуд в городе
 					{
-						Dialog.text = "Capitán, hoy no hay ni un alma en la taberna. Todos los que querían se han ido con el capitán Blackwood.";
+						Dialog.text = "Ah, lo siento capitán, llegas un poco tarde. Todos los muchachos que buscaban navegación ya zarparon con el gallardo capitán Blackwood.";
 						link.l1 = "¡Qué lástima!";
 						link.l1.go = "exit";
 						break;
@@ -488,7 +488,7 @@ void ProcessDialogEvent()
 
 				if(pchar.GenQuest.CaptainComission.variant == "A2" && pchar.GenQuest.CaptainComission == "Begin_1")
 				{
-					link.l9 = "¿Sabes dónde puedo encontrar al capitán de una patrulla?"+GetStrSmallRegister(XI_ConvertString(GetBaseShipParamFromType(sti(pchar.GenQuest.CaptainComission.ShipType),"Nombre")+"Acc"))+" "+pchar.GenQuest.CaptainComission.Name+"¿?";
+					link.l9 = "¿Sabes dónde puedo encontrar al capitán de una patrulla?"+GetStrSmallRegister(XI_ConvertString(GetBaseShipParamFromType(sti(pchar.GenQuest.CaptainComission.ShipType),"Name")+"Acc"))+" "+pchar.GenQuest.CaptainComission.Name+"¿?";
 					link.l9.go = "CaptainComission_Tavern7";					
 				}				
 				if(pchar.GenQuest.CaptainComission.variant == "A3" && pchar.GenQuest.CaptainComission == "Begin_1")
@@ -500,7 +500,7 @@ void ProcessDialogEvent()
 					}
 					else
 					{					
-						link.l9 = "¿Sabes algo sobre el capitán de una patrulla "+GetStrSmallRegister(XI_ConvertString(GetBaseShipParamFromType(sti(pchar.GenQuest.CaptainComission.ShipType),"Nombre")+"Acc"))+" "+pchar.GenQuest.CaptainComission.Name+"¿?";
+						link.l9 = "¿Sabes algo sobre el capitán de una patrulla "+GetStrSmallRegister(XI_ConvertString(GetBaseShipParamFromType(sti(pchar.GenQuest.CaptainComission.ShipType),"Name")+"Acc"))+" "+pchar.GenQuest.CaptainComission.Name+"¿?";
 						link.l9.go = "CaptainComission_Tavern1";
 						if(!CheckAttribute(pchar,"GenQuest.CaptainComission.GetRumour"))
 						{
@@ -546,27 +546,27 @@ void ProcessDialogEvent()
 					switch (drand(3))
 					{
 						case 0:
-							pchar.GenQuest.Hold_GenQuest.foundStr = "the church";						
+							pchar.GenQuest.Hold_GenQuest.foundStr = "la iglesia";						
 							pchar.GenQuest.Hold_GenQuest.found = "church";
 						break;
 						case 1:
 							if (npchar.city != "Panama")
 							{
-							pchar.GenQuest.Hold_GenQuest.foundStr = "the shipyard";						
+							pchar.GenQuest.Hold_GenQuest.foundStr = "el astillero";						
 							pchar.GenQuest.Hold_GenQuest.found = "shipyard";
 							}
 							else
 							{
-								pchar.GenQuest.Hold_GenQuest.foundStr = "the church";						
+								pchar.GenQuest.Hold_GenQuest.foundStr = "la iglesia";						
 								pchar.GenQuest.Hold_GenQuest.found = "church";
 							}
 						break;
 						case 2:
-							pchar.GenQuest.Hold_GenQuest.foundStr = "the usurer";												
+							pchar.GenQuest.Hold_GenQuest.foundStr = "el usurero";												
 							pchar.GenQuest.Hold_GenQuest.found = "bank";
 						break;
 						case 3:
-							pchar.GenQuest.Hold_GenQuest.foundStr = "the shop";						
+							pchar.GenQuest.Hold_GenQuest.foundStr = "la tienda";						
 							pchar.GenQuest.Hold_GenQuest.found = "store";
 						break;
 					} 
@@ -1525,11 +1525,11 @@ void ProcessDialogEvent()
 			// belamour gen: Добряку недолго осталось -->
 			if(CheckAttribute(pchar, "questTemp.LongHappy"))
 			{
-				AddQuestUserData("Marginpassenger", "sBaron", "to Puerto Principe, to the Black Pastor");
+				AddQuestUserData("Marginpassenger", "sBaron", "a Puerto Príncipe, con Black Pastor");
 			}
 			else
 			{
-				AddQuestUserData("Marginpassenger", "sBaron", "to Le Francois, to Kindly Jacques");
+				AddQuestUserData("Marginpassenger", "sBaron", "a Le Francois, con Kindly Jacques");
 			}
 			// <-- belamour gen
 			pchar.GenQuest.Marginpassenger = "cabin";
@@ -1710,7 +1710,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Helen_room_day_next":
-			dialog.text = "Por supuesto, Helen. Serán diez pesos.";
+			dialog.text = "Por supuesto, Ellen. Serán diez pesos.";
 			if (makeint(pchar.money) >= 10)
 			{
 				link.l1 = "Por supuesto, aquí tienes.";
@@ -1721,7 +1721,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Helen_night_exit":
-			dialog.text = "Como desees, Helen.";
+			dialog.text = "Como desees, Ellen.";
 			link.l1 = "Mhm.";
 			link.l1.go = "exit";
 		break;

@@ -1138,7 +1138,7 @@ void ProcessDialogEvent()
 		
 		case "patria_57_3":
 			GiveItem2Character(pchar, "talisman9");
-			Log_Info("You've received the Order of Saint Louis! You are the hero of the nation!");
+			Log_Info("Has recibido la Orden de San Luis. ¡Eres el héroe de la nación!");
 			PlaySound("interface\important_item.wav");
 			DoQuestCheckDelay("sea_victory", 0.5);
 			dialog.text = "¡Palabras de un verdadero oficial! Estoy verdaderamente orgulloso de ti, Charles. Ahora descansa un poco. Te lo mereces. Mientras tanto, atenderé las negociaciones con Stuyvesant; quizás ya se haya dado cuenta de que es mucho más desventajoso para él estar en enemistad con nosotros que ser amigos. No abandones la ciudad, te necesitaré en dos días.";
@@ -1292,7 +1292,7 @@ void ProcessDialogEvent()
 		
 		case "patria_74":
 			TakeNItems(pchar, "chest", 10);
-			Log_Info("You've received 10 chests of doublons");
+			Log_Info("Has recibido 10 cofres de doblones");
 			PlaySound("interface\important_item.wav");
 			dialog.text = "Ahora, puedes irte. ¡Buena suerte, capitán! ¡Todos esperamos tu victoria!";
 			link.l1 = "Adiós, Chevalier.";
@@ -1302,7 +1302,7 @@ void ProcessDialogEvent()
 		case "patria_75":
 			DialogExit();
 			sTemp = "";
-			if (CheckAttribute(pchar, "questTemp.Patria.Ecliaton_Bastion")) sTemp = "The warship 'Eclatant' will also be under my command.";
+			if (CheckAttribute(pchar, "questTemp.Patria.Ecliaton_Bastion")) sTemp = "El buque de guerra 'Eclatant' también estará bajo mi mando.";
 			AddQuestRecord("Patria", "48");
 			AddQuestUserData("Patria", "sText", sTemp);
 			pchar.questTemp.Patria = "epizode_9_continue";
@@ -1486,7 +1486,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "patria_coat_12":
-			dialog.text = "Indeed... And even on your uniform, I see the cuts left by sabers; some cuts have been stitched, and some are clearly fresh. This needs to be corrected.";
+			dialog.text = "En efecto... E incluso en su uniforme, veo los cortes dejados por los sables; algunos cortes han sido cosidos, y otros son claramente recientes. Esto necesita ser corregido.";
 			link.l1 = "¿Qué tiene en mente, señor Gobernador General?";
 			link.l1.go = "patria_coat_13";
 		break;
@@ -1652,7 +1652,7 @@ void ProcessDialogEvent()
 			itm.curve = 1.0;
 			itm.Balance = 1.9;
 			GiveItem2Character(pchar, "blade_36");
-			Log_Info("You've received the Maltese Sword");
+			Log_Info("Has recibido la Espada Maltesa");
 			PlaySound("interface\important_item.wav");
 			dialog.text = "¡Así es! Y mientras estés aquí, te esperan grandes cambios. Buenos cambios. Vicealmirante Charles de Maure, ¡te nombro gobernador de San Martín!";
 			link.l1 = "¡Ja! ¿Te oí correctamente?";

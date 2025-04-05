@@ -491,6 +491,7 @@ void ProcessDialogEvent()
 			PlayStereoOGG("music_romantic");
 			InterfaceStates.Buttons.Save.enable = false;//запретить сохраняться
 			locCameraRotateAroundHero(0.0, 2.0, 0.0, 0.01, 0.0, 2.0, 0.0, 580);
+			Pchar.FuncCameraFly = "";
 			DoQuestCheckDelay("Saga_HelenaRomantic", 20.0);
 			pchar.GenQuest.MusicContinue = true;
 			AddCharacterExpToSkill(pchar, "Leadership", 100);

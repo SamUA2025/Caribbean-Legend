@@ -1940,13 +1940,6 @@ void ProcessDialogEvent()
 				LAi_SetWarriorType(sld);
 				LAi_CharacterDisableDialog(sld);
 			}
-			sld = ItemsFromID("KhaelRoa_item");
-			sld.groupID	= ITEM_SLOT_TYPE;
-			sld.ItemType = "ARTEFACT";
-			sld.Type = ITEM_AMULET;
-			sld.time = 2;
-			sld.price = 5000;
-			sld.Weight = 10.0;
 			AddQuestRecord("Caleuche", "38");
 			AddCharacterExpToSkill(pchar, "Fortune", 200);
 			AddCharacterExpToSkill(pchar, "Leadership", 200);

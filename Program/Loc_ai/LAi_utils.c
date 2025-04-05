@@ -269,6 +269,18 @@ string LAi_FindNearestFreeLocator2Pchar(string group)
     GetCharacterPos(Pchar, &locx, &locy, &locz);
     return LAi_FindNearestFreeLocator(group, locx, locy, locz);
 }
+string LAi_FindNearestLocator2Pchar(string group)
+{
+	float locx, locy, locz;
+    GetCharacterPos(Pchar, &locx, &locy, &locz);
+    return LAi_FindNearestLocator(group, locx, locy, locz);
+}
+string LAi_FindFarLocator2Pchar(string group)
+{
+	float locx, locy, locz;
+    GetCharacterPos(Pchar, &locx, &locy, &locz);
+    return LAi_FindFarLocator(group, locx, locy, locz);
+}
 //Найти ближайшего видимого персонажа в заданном радиусе
 int LAi_FindNearestCharacter(aref chr, float radius)
 {

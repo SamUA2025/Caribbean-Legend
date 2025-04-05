@@ -53,20 +53,20 @@ void InitRandomShipsNames()
     
 	// France names
 	n = 0;
-	n = AddStr2Array(&sRndShpFrName, n, "Vendome,Jupiter,Cesar,Cardinal,Mazarin,Saint Louis,Triomphant,Bourbon,Conquerant,Invincible,Victoire,Couronne,Lune,Eminent,Colosse,Regine");
-	n = AddStr2Array(&sRndShpFrName, n, "Monarque,Parfait,Toulon,Intrepide,Inflexible,Royal Duc,Terrible,Bretagne,Glorieux,Hercule,Redoutable,Aventurier,Magnifique,Tigre");
-	n = AddStr2Array(&sRndShpFrName, n, "Formidable,Vierge,Dragon,Hasardeux,Capable,Arc en Ciel,Faucon,Bizarre,Dunkerquois,Mignon,Neptune,Opiniatre");
-	n = AddStr2Array(&sRndShpFrName, n, "Renommee,Sirene,Brutal,Avenant,Francoise,Ville de Rouen,Eole,Triomphe,Courageux,Royale,Solide,Fidele,Sourdis");
-	n = AddStr2Array(&sRndShpFrName, n, "Prince,Brillant,Infante,Bayonnais,Volontaire,Le Havre,Elboeuf,Hermione,Palmier,Entendu,Trompeuse,Vigilant,Triton");
-	n = AddStr2Array(&sRndShpFrName, n, "Provencal,Tourbillon,Hermine,Emerillon,Soleil Afrique,Eveille,Hardi,Lion,Ferme,Cache,Serieux,Adroit,Sauveur,Ecureuil,Leger");
-	n = AddStr2Array(&sRndShpFrName, n, "Arrogant,Favori,Actif,Perle,Flamand,Marquis,Saint Sebastien,Laurier,Aigle,Orage,Capricieux,Petillant");
-	n = AddStr2Array(&sRndShpFrName, n, "Emporte,Africain,Change,Assure,Francais,Grand Ponton,Embuscade,Heroine,Madeleine,Perilleux");
-	n = AddStr2Array(&sRndShpFrName, n, "Bouffonne,Eclair,Naiade,Alcyon,Mutine,Volante,Saint Joseph,Tempete,Hirondelle,Ecueil,Bayonne,Christine,Dangereux,Valeur");
-	n = AddStr2Array(&sRndShpFrName, n, "Seditieux,Vipere,Sybille,Joyeuse,Postillon,Sans Peur,Emeraude,Incommode,Nereide,Etoile,Salamandre,Belle,Serpent");
-	n = AddStr2Array(&sRndShpFrName, n, "Commode,Galathee,Dieppoise,Abondante,Brune,Fleur de Lis,Choquante,Surprenante,Rochelaise,Gaillard,Gentille,Meduse,Inconnu");
-	n = AddStr2Array(&sRndShpFrName, n, "Lutine,Joli,Mechante,Duc,Turbulente,Agathe,Petite Infante,Curieuse,Diligente,Gracieuse,Discrete,Entreprenant,Sorciere,Bravoure");
-	n = AddStr2Array(&sRndShpFrName, n, "Beaufort,Insensee,Suffisante,Effrontee,Comte,Saint Michel,Superbe,Furieuse,Reine,Esperance,Topaze,Moqueuse,Volage,Rusee,Flatteuse,Courtisan");
-	n = AddStr2Array(&sRndShpFrName, n, "Trompette,Railleuse,Boussole,Mercure,Brusque,Arche de Noe,Foudroyant,Levrette,Maure,Jalouse");
+	n = AddStr2Array(&sRndShpFrName, n, "Vendôme,Jupiter,César,Cardinal,Richelieu,Mazarin,Saint Louis,Triomphant,Bourbon,Conquérant,Invincible,Victoire,Couronne,Lune,Éminent,Colosse,Régine");
+	n = AddStr2Array(&sRndShpFrName, n, "Monarque,Parfait,Toulon,Intrépide,Inflexible,Duc Royal,Terrible,Bretagne,Glorieux,Hercule,Redoutable,Aventurier,Magnifique,Tigre");
+	n = AddStr2Array(&sRndShpFrName, n, "Formidable,Vierge,Dragon,Hasardeux,Capable,Arc-en-Ciel,Faucon,Bizarre,Dunkerquois,Mignon,Neptune,Opiniâtre");
+	n = AddStr2Array(&sRndShpFrName, n, "Renommée,Sirène,Brutal,Avenant,Françoise,Ville de Rouen,Éole,Triomphe,Courageux,Royale,Solide,Fidèle,Sourdis");
+	n = AddStr2Array(&sRndShpFrName, n, "Prince,Brillant,Infante,Bayonnais,Volontaire,Le Havre,Elbeuf,Hermione,Palmier,Entendu,Trompeuse,Vigilant,Triton");
+	n = AddStr2Array(&sRndShpFrName, n, "Provençal,Tourbillon,Hermine,Émerillon,Soleil Afrique,Éveillé,Hardi,Lion,Ferme,Caché,Sérieux,Adroit,Sauveur,Écureuil,Léger");
+	n = AddStr2Array(&sRndShpFrName, n, "Arrogant,Favori,Actif,Perle,Flamand,Marquis,Saint Sébastien,Laurier,Aigle,Orage,Capricieux,Pétillant");
+	n = AddStr2Array(&sRndShpFrName, n, "Emporte,Africain,Change,Assure,Français,Grand Ponton,Embuscade,Héroïne,Madeleine,Périlleux");
+	n = AddStr2Array(&sRndShpFrName, n, "Bouffonne,Éclair,Naïade,Alcyon,Mutine,Volante,Saint Joseph,Tempête,Hirondelle,Écueil,Bayonne,Christine,Dangereux,Valeur");
+	n = AddStr2Array(&sRndShpFrName, n, "Séditieux,Vipère,Sybille,Joyeuse,Postillon,Sans Peur,Émeraude,Incommode,Néréide,Étoile,Salamandre,Belle,Serpent");
+	n = AddStr2Array(&sRndShpFrName, n, "Commode,Galatée,Dieppoise,Abondante,Brune,Fleur de Lys,Choquante,Surprenante,Rochelaise,Gaillard,Gentille,Méduse,Inconnu");
+	n = AddStr2Array(&sRndShpFrName, n, "Lutine,Joli,Méchante,Duc,Turbulente,Agathe,Petite Infante,Curieuse,Diligente,Grâcieuse,Discrète,Entreprenant,Sorcière,Bravoure");
+	n = AddStr2Array(&sRndShpFrName, n, "Beaufort,Insensée,Suffisante,Effrontée,Comte,Saint Michel,Superbe,Furieuse,Reine,Esperance,Topaze,Moqueuse,Volage,Rusée,Flatteuse,Courtisan");
+	n = AddStr2Array(&sRndShpFrName, n, "Trompette,Railleuse,Boussole,Mercure,Brusque,Arche de Noé,Foudroyant,Levrette,Maure,Jalouse");
 	//14
 	
 	// Pirate names
@@ -74,12 +74,12 @@ void InitRandomShipsNames()
 	n = AddStr2Array(&sRndShpPiName, n, "Roebuck,Ghost,Revenge,Dolphin,Dragon,Sea Devil,Margaret,Destiny,Hirondelle,Pearl,Cobra,Jacob,Spider,Coquette Sue,Tornado,Victory,Horror of Main,Fancy");
 	n = AddStr2Array(&sRndShpPiName, n, "Snake,Demon,Hurricane,Liberty,Pegasus,Shark,Wheel of Fortune,Wolverine,Shooter,Prophet,Lightning,Warrior,Pilgrim,Prude,Widowmaker,Delilah,Lucky Hugh,Predator");
 	n = AddStr2Array(&sRndShpPiName, n, "Neptune,Princess,Sentence,Abaddon,Moray,Blood Feast,Friponne,Pelican,Lachesis,Sea Urchin,Pandora,Atropos,Cruel Joke,Grey Angel");
-	n = AddStr2Array(&sRndShpPiName, n, "Black Prince,Kitty,Flying Dragon,Pluto,Ball Lightning,Hawk,Trident,Poudriere,Bell of Revenge,Avenger,Shine,Fortune,Stormcaller,Eye of the Abyss,Hermes");
-	n = AddStr2Array(&sRndShpPiName, n, "Rising Sun,Cheerful Dead Man,Valiant,Angel of the Night,Concord,Fallen Angel,Furious,Bloody Bill,Providence,Wild Boar,Irresistible,Faithful Death,Charles,Happy Delivery,Adventure");
+	n = AddStr2Array(&sRndShpPiName, n, "Black Prince,Kitty,Flying Dragon,Pluto,Ball Lightning,Hawk,Trident,Poudrière,Bell of Revenge,Avenger,Shine,Fortune,Stormcaller,Eye of the Abyss,Hermes");
+	n = AddStr2Array(&sRndShpPiName, n, "Rising Sun,Cheerful Dead Man,Valiant,Angel of the Night,Concord,Fallen Angel,Furious,Bloody Bill,Providence,Wild Boar,Irrésistible,Faithful Death,Charles,Happy Delivery,Adventure");
 	n = AddStr2Array(&sRndShpPiName, n, "Black Death,Favorite of Fortune,Dainty,Flying Fish,Fury,Mermaid,Hardi,Will of Fate,Witch,Great Fortune,Eye of Storm,Teaser,Repentance,Golden Fortune,Agile,Rover,Antelope,Bonne Chance");
 	n = AddStr2Array(&sRndShpPiName, n, "Spanker,Hound Dog,Tiger,Black Bull,Racehorse,Sea Hawk,Falcon,Black Diamond,Swallow,Adventurer,Ranger,Nightmare,Diamond,Chasseur,Sea Horse,Aquilon,Sea Witch,Hellion");
-	n = AddStr2Array(&sRndShpPiName, n, "Belle Poule,Surprise,Fatal Beauty,Black Cuttlefish,Raging Bill,Wanderer,Blackadder,Black Dragon,Postilion,Jupiter,Medusa,Angry Lion,Black Swan,Black Witch,Phenix,Bloodhound,Omnipresent,Sea Snake");
-	n = AddStr2Array(&sRndShpPiName, n, "Phantom,Thunderbird,Venerable,William,Serpents Venimeux,Meurtrier,Gabriel,Clotho,Black Lightning,Griffin,Trompeur,Trinity,Striking Arrow,Bachelor's Delight,Swan,Misogynist,Old Roger,Black Raven,Great Ranger");
+	n = AddStr2Array(&sRndShpPiName, n, "Belle Poule,Surprise,Fatal Beauty,Black Cuttlefish,Raging Bill,Wanderer,Blackadder,Black Dragon,Postilion,Jupiter,Medusa,Angry Lion,Black Swan,Black Witch,Phénix,Bloodhound,Omniprésent,Sea Snake");
+	n = AddStr2Array(&sRndShpPiName, n, "Phantom,Thunderbird,Vénérable,William,Serpents Venimeux,Meurtrier,Gabriel,Clotho,Black Lightning,Griffin,Trompeur,Trinity,Striking Arrow,Bachelor's Delight,Swan,Misogynist,Old Roger,Black Raven,Great Ranger");
     //9
     
 	// Holland names

@@ -52,7 +52,7 @@ bool locCameraFollow()
 //Set camera toPos mode
 bool locCameraToPos(float x, float y, float z, bool isTeleport)
 {
-	locCameraToPosEx(x, y, z, isTeleport, 1.0);
+	return locCameraToPosEx(x, y, z, isTeleport, 1.0);
 }
 
 bool locCameraToPosEx(float x, float y, float z, bool isTeleport, float fMorphSpeed)

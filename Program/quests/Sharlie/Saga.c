@@ -1696,6 +1696,7 @@ void LSC_DrinkGo(string qName) // бухалово
 	bDisableCharacterMenu = true;//лоченые интерфейсы
 	SetMusic("spa_music_tavern");
 	locCameraRotateAroundHero(0.0, 2.0, 0.0, 0.005, 0.0, 2.0, 0.0, 1700);
+	Pchar.FuncCameraFly = "";
 	DoQuestFunctionDelay("LSC_DrinkResult", 32.5);
 	if(!IsEquipCharacterByArtefact(pchar, "totem_01"))
 	{
@@ -7247,6 +7248,7 @@ bool Saga_QuestComplete(string sQuestName, string qname)
 		SetMusic("music_romantic");
 		ChangeShowIntarface();
 		locCameraRotateAroundHero(0.0, 1.5, 0.0, 0.005, 0.0, 1.5, 0.0, 850);
+		Pchar.FuncCameraFly = "";
 		DoQuestCheckDelay("Saga_HelenaRomantic_3", 14.0);
 	}
 	else if (sQuestName == "Saga_HelenaRomantic_3") // третий... теперь ГГ как честный человек обязан жениться

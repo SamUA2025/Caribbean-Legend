@@ -346,7 +346,7 @@ void ProcessDialogEvent()
 			else SetPassengerParameter("Townpassenger", true);
 			if (!CheckAttribute(pchar, "GenQuest.Townpassenger.Enemycity"))
 			{
-				dialog.text = "Capitán, necesito llegar a la colonia llamada "+XI_ConvertString("Colony"+pchar.GenQuest.Townpassenger.City)+", lo antes posible, está en "+XI_ConvertString(GetIslandByCityName(pchar.GenQuest.Townpassenger.City)+"Eso")+", en "+FindRussianDaysString(sti(pchar.GenQuest.Townpassenger.DaysQty))+". Tu barco parece sólido en comparación con la mayoría de esos pequeños botes que navegan por aquí. Puedo pagarte "+FindRussianMoneyString(sti(pchar.GenQuest.Townpassenger.Money))+"¿Qué dices?";
+				dialog.text = "Capitán, necesito llegar a la colonia llamada "+XI_ConvertString("Colony"+pchar.GenQuest.Townpassenger.City)+", lo antes posible, está en "+XI_ConvertString(GetIslandByCityName(pchar.GenQuest.Townpassenger.City)+"Dat")+", en "+FindRussianDaysString(sti(pchar.GenQuest.Townpassenger.DaysQty))+". Tu barco parece sólido en comparación con la mayoría de esos pequeños botes que navegan por aquí. Puedo pagarte "+FindRussianMoneyString(sti(pchar.GenQuest.Townpassenger.Money))+"¿Qué dices?";
 			}
 			else
 			{
@@ -407,7 +407,7 @@ void ProcessDialogEvent()
 			AddQuestRecordEx(sTitle, "Citizpassenger", "1");
 			AddQuestUserDataForTitle(sTitle, "sType", "citizen");
 			AddQuestUserDataForTitle(sTitle, "sName", GetFullName(npchar));
-			sTemp = XI_ConvertString("Colony" +pchar.GenQuest.Townpassenger.City) + ", which is on " + XI_ConvertString(GetIslandByCityName(pchar.GenQuest.Townpassenger.City)+"Voc")+"."; // belamour gen
+			sTemp = XI_ConvertString("Colony" +pchar.GenQuest.Townpassenger.City) + ", que se encuentra en " + XI_ConvertString(GetIslandByCityName(pchar.GenQuest.Townpassenger.City)+"Voc")+"."; // belamour gen
 			AddQuestUserDataForTitle(sTitle, "sCity", sTemp);
 			AddQuestUserData(sTitle, "sName", GetFullName(npchar));
 			AddQuestUserData(sTitle, "sCity", sTemp);

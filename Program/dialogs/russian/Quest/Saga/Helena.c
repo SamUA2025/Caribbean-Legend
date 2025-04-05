@@ -490,6 +490,7 @@ void ProcessDialogEvent()
 			StartQuestMovie(true, false, true);
 			PlayStereoOGG("music_romantic");
 			locCameraRotateAroundHero(0.0, 2.0, 0.0, 0.01, 0.0, 2.0, 0.0, 580);
+			Pchar.FuncCameraFly = "";
 			DoQuestCheckDelay("Saga_HelenaRomantic", 20.0);
 			pchar.GenQuest.MusicContinue = true;
 			AddCharacterExpToSkill(pchar, "Leadership", 100);

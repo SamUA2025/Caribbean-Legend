@@ -1706,8 +1706,8 @@ itmdescr_chest_open
 Типичный сундук для переноски или хранения монет. Но пока он, увы, совершенно пуст.
 }
 
-itmname_incas_collection	{Сокровища}
-itmdescr_incas_collection
+itmname_icollection	{Сокровища}
+itmdescr_icollection
 {
 Разнообразный набор дорогих сердцу и кошельку предметов из золота и драгоценных камней. 
 }

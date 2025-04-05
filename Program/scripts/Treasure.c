@@ -421,7 +421,7 @@ void SetTreasureBoxFromMap()
 		if(IsEquipCharacterByArtefact(pchar, "talisman18"))
 		{
 			addArticlesBonus();
-			notification("Вы стали лучше понимать Устав Блэквуда", "LogBook");
+			notification(XI_ConvertString("TreasuresBlackwood"), "LogBook");
 		}
     }
 }

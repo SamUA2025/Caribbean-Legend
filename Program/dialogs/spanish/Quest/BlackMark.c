@@ -634,7 +634,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "BM_IronsThirdJungle_7":
-			dialog.text = "That was a joke too. I wasn't collecting them; I was selecting them. Needed a cartridge that was close to perfect. This one will do. Yeah, with this round, the bullet will go far and true. Just like when I blew old Reasley's head off, ha-ha-ha!";
+			dialog.text = "Eso también era una broma. No los coleccionaba; los seleccionaba. Necesitaba un cartucho que fuera casi perfecto. Este servirá. Sí, con este cartucho, la bala irá lejos y certera. Igual que cuando le volé la cabeza al viejo Reasley, ¡ja, ja, ja!";
 			link.l1 = "Viejo Reasley, dijiste... Frankie el Cornudo, ¿verdad? ¿El que disparaste en el faro? Entonces, ¿se conocen desde hace mucho tiempo?";
 			link.l1.go = "BM_IronsThirdJungle_8";
 		break;
@@ -2081,7 +2081,7 @@ void ProcessDialogEvent()
 			if (iTemp < 0)
 			{
 				dialog.text = ""+GetSexPhrase("No deberías intentar hacer humor.","Aún tienes mucho que aprender de mí sobre el humor, muchacha. ¡Pero estás progresando!")+"";
-				link.l1 = ""+GetSexPhrase("That's odd; I've always been told the opposite.","Very funny, Tommy.")+"";
+				link.l1 = ""+GetSexPhrase("Qué raro, a mí siempre me han dicho lo contrario.","Muy gracioso, Tommy.")+"";
 				if (pchar.sex == "man" && pchar.rank >= 15)
 				{
 					dialog.text = "No es tu peor chiste. Tal vez algún día dejes de ser un aguafiestas, je-je.";
@@ -2098,7 +2098,7 @@ void ProcessDialogEvent()
 			if (iTemp == 0)
 			{
 				dialog.text = "Bueno, entonces me quedaré quieto y mantendré mi posición. Si luchas contra ellos desde muy lejos, es tu trasero el que está en juego, jeje.";
-				link.l1 = "Don't be sarcastic; holding your ground is exactly what I want you to do from now.";
+				link.l1 = "No seas sarcástico; mantenerte firme es exactamente lo que quiero que hagas a partir de ahora.";
 				if (pchar.sex == "man" && pchar.rank >= 15)
 				{
 					dialog.text = "Je, podrías haberme dicho que aguantara la línea, y no hablar de distancias y números.";

@@ -511,6 +511,7 @@ void ProcessDialogEvent()
 			SetMusic("music_romantic");
 			bDisableCharacterMenu = true;//лоченые интерфейсы
 			locCameraRotateAroundHero(0.0, 2.0, 0.0, 0.005, 0.0, 2.0, 0.0, 1000);
+			Pchar.FuncCameraFly = "";
 			DoQuestCheckDelay("LSC_DanielleRomantic", 15.0);
 		break;
 		

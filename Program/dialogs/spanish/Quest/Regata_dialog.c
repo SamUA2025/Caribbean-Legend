@@ -389,7 +389,7 @@ void ProcessDialogEvent()
 		case "Regata_Start_1":
 			DialogExit();
 			PlaySound("people fight\mushketshot.wav");
-			log_info("The regatta has started! Get aboard! Head to Belize!");
+			log_info("¡La regata ha comenzado! ¡Sube a bordo! ¡Rumbo a Belice!");
 			for (i=1; i <=5; i++)
 			{
 				sld = characterFromId("Regata_Cap_F"+i);
@@ -511,8 +511,8 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Regata_Contra_3":
-			if (sti(pchar.questTemp.Regata.Index != 1)) sTemp = "letting you pass ahead of him and take his position";
-			else sTemp = "therefore you will be taking a lead for a long time";
+			if (sti(pchar.questTemp.Regata.Index != 1)) sTemp = "dejándote pasar por delante de él y tomar su posición";
+			else sTemp = "por lo tanto estarás en cabeza durante mucho tiempo";
 			dialog.text = "Absolutamente. Ahora vamos al grano. Te ofrecemos nuestra ayuda por tu dinero. Hemos colocado cuatro cañones de nuestro barco en el cabo detrás de la bahía de Gonaives. Cualquier barco de regata debe doblarlo\nLos cañones están cargados con balas encadenadas. Si llegamos a un acuerdo, le diré a nuestros amigos artilleros que arruinen las velas de tu competidor, para que se vea obligado a perder tiempo reparándolas."+sTemp+".";
 			link.l1 = "¿Cuánto quieres por este servicio?";
 			link.l1.go = "Regata_Contra_4";
@@ -814,10 +814,10 @@ void ProcessDialogEvent()
 		case "Regata_Hovernor_2":
 			switch (sti(Pchar.BaseNation))
 			{
-				case ENGLAND: sTemp = "You are English , help us to save English citizens and what is important - women!" break;
-				case FRANCE: sTemp = "You are French, so you basically are our ally, help us to save English citizens and what is more important - women!" break;
-				case SPAIN: sTemp = "I know that you are Spanish and these are your people in the sea, so I know that I am already asking for a lot, but these women are innocent and have nothing to do with this battle. So please I beg of you, help them!" break;
-				case HOLLAND: sTemp = "I know that you are Dutch and our nations are at war, but you are participating in the English regatta under the English flag. Don't you think that it is right to fight for innocent and peaceful people, for women? Please captain, help them!" break;
+				case ENGLAND: sTemp = "Usted es inglés, ayúdenos a salvar a los ciudadanos ingleses y lo que es importante a las mujeres." break;
+				case FRANCE: sTemp = "Eres francés, así que básicamente eres nuestro aliado, ayúdanos a salvar a los ciudadanos ingleses y lo que es más importante a las mujeres." break;
+				case SPAIN: sTemp = "Sé que sois españoles y que vuestra gente está en el mar, así que sé que te estoy pidiendo mucho, pero estas mujeres son inocentes y no tienen nada que ver con esta batalla. ¡Así que por favor os lo ruego, ayudadlas!" break;
+				case HOLLAND: sTemp = "Sé que sois holandeses y que nuestras naciones están en guerra, pero estáis participando en la regata inglesa bajo bandera inglesa. ¿No cree que es justo luchar por gente inocente y pacífica como estas mujeres? ¡Por favor, capitán, ayúdelas!" break;
 			}
 			dialog.text = "Ni uno ni otro. Te pido solo una cosa. Lleva a las mujeres y los niños lejos de aquí en tu barco. No son muchos, alrededor de cien. Llévalos a Cabo Harrison junto con el teniente Mahony, él se asegurará de que estén seguros en la cueva.\nEstoy seguro de que los españoles no los buscarán. No tengo barcos de sobra, todo lo que teníamos fue hundido por el escuadrón español. Eres mi última esperanza. Puedes llevarlos al cabo en un solo viaje, aunque tu nave estará sobrecargada. Los navíos de línea no te seguirán.\nNo puedo pedirle a nadie más que lo haga."+sTemp+"";
 			link.l1 = "Señor, lo siento, pero mi barco ya está sobrecargado y no podrá llevar a tanta gente ni siquiera en dos viajes. Cualquier bala de cañón que caiga cerca enviará mi barco y a sus mujeres al fondo del mar. Perdóneme, pero no puedo ayudarle.";
@@ -1119,7 +1119,7 @@ void ProcessDialogEvent()
 			RemovePassenger(Pchar, sld);
 			DeleteAttribute(sld, "Payment");
 			DeleteAttribute(Pchar, "questTemp.FiringOfficerIDX");//удаляем из офицеров
-			log_info("Woodrow Dougherty has landed");
+			log_info("Woodrow Dougherty ha desembarcado");
 			pchar.quest.SiegeSkiperOver.over = "yes"; //снять таймер
 		}
 		else
@@ -1132,8 +1132,8 @@ void ProcessDialogEvent()
 		break;
 		
 		case "First_result":
-			if (CheckAttribute(pchar, "questTemp.Regata.Rate")) sTemp = "Come and see me in my office. I will give you your prize for your stake.";
-			else sTemp = "And if you had made a stake on your victory as I offered you to, you would have gotten an extra prize too.";
+			if (CheckAttribute(pchar, "questTemp.Regata.Rate")) sTemp = "Venga a verme a mi despacho. Te daré el premio por tu apuesta.";
+			else sTemp = "Y si hubieras hecho una apuesta por tu victoria como te ofrecí, también te habrías llevado un premio extra.";
 			dialog.text = "Visita al gobernador general mañana y él te dará tus 250 000 pesos y valiosos regalos. "+sTemp+" No abandones el pueblo, según las tradiciones los premios se entregarán al tesoro del pueblo en caso de que el ganador no los reclame en el plazo de una semana.";
 			link.l1 = "Lo tengo, señor. ¡Lo visitaré mañana!";
 			link.l1.go = "First_result_1";
@@ -1153,14 +1153,14 @@ void ProcessDialogEvent()
 			pchar.quest.Regata_Final.function = "RegataFinal";
 			SetFunctionTimerCondition("RegataFinalOver", 0, 0, 8, false);//таймер не снимаем - через 8 дней подчистится все автоматически
 			// слухи
-			AddSimpleRumour("Ah, you are the legendary captain, the winner of the regatta! It's such a pleasure to see you in flesh!", ENGLAND, 60, 10);
-			AddSimpleRumour("Ha, look at this, a master of wind and waves, the winner of the regatta! You have my respect...", ENGLAND, 60, 10);
-			AddSimpleRumour("Oh, a great sailor, a king of the wind and the sea, the winner of regatta has visited our city! We are glad to see you, captain!", ENGLAND, 60, 10);
-			AddSimpleRumour("Oh, yes I was lucky to chat with a living legend, the captain who is capable of crossing the archipelago in three days even facing a headwind! My respects, captain!", ENGLAND, 60, 10);
-			AddSimpleRumour("Ah, so you are the legendary captain, the winner of the regatta! Pleasure to see you!", FRANCE, 60, 10);
-			AddSimpleRumour("Ha, aren't you the master of wind and waves, the winner of the regatta! You have my respects...", FRANCE, 60, 10);
-			AddSimpleRumour("Oh, a great sailor, a king of the wind and the sea, the winner of regatta has visited our city! We are glad to see you, captain!", FRANCE, 60, 10);
-			AddSimpleRumour("Oh, yes I was lucky to chat with a living legend, the captain capable of crossing the archipelago in three days even facing a headwind! My respects, captain!", FRANCE, 60, 10);
+			AddSimpleRumour("¡Ah, eres el legendario capitán, el ganador de la regata! Es un placer verte en persona.", ENGLAND, 60, 10);
+			AddSimpleRumour("Ja, mira esto, un maestro del viento y las olas, ¡el ganador de la regata! Tienes mi respeto...", ENGLAND, 60, 10);
+			AddSimpleRumour("Oh, un gran navegante, un rey del viento y del mar, ¡el ganador de la regata ha visitado nuestra ciudad! Nos alegramos de verle, capitán.", ENGLAND, 60, 10);
+			AddSimpleRumour("Ah, sí, tuve la suerte de charlar con una leyenda viva, el capitán capaz de cruzar el archipiélago en tres días ¡incluso con el viento en contra! ¡Mis respetos, capitán!", ENGLAND, 60, 10);
+			AddSimpleRumour("¡Ah, así que usted es el legendario capitán, el ganador de la regata! Encantado de verle.", FRANCE, 60, 10);
+			AddSimpleRumour("Ja, ¿no eres tú el maestro del viento y las olas, el ganador de la regata? Tienes mis respetos...", FRANCE, 60, 10);
+			AddSimpleRumour("Oh, un gran navegante, un rey del viento y del mar, ¡el ganador de la regata ha visitado nuestra ciudad! Nos alegramos de verle, capitán.", FRANCE, 60, 10);
+			AddSimpleRumour("Sí, tuve la suerte de charlar con una leyenda viva, el capitán capaz de cruzar el archipiélago en tres días ¡incluso con el viento en contra! ¡Mis respetos, capitán!", FRANCE, 60, 10);
 			// экспа
 			AddComplexSeaExpToScill(2000, 300, 300, 0, 500, 500, 0);
 			AddCharacterExpToSkill(pchar, "Leadership", 2000);//авторитет

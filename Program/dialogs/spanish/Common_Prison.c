@@ -147,7 +147,7 @@ void ProcessDialogEvent()
 					bool zMsm = (CheckAttribute(pchar,"GenQuest.CaptainComission.GetRumour")) && (!CheckAttribute(pchar,"GenQuest.CaptainComission.SpeakMayor"));
 					if(pchar.GenQuest.CaptainComission == "MayorTalkBad" || zMsm) //говорил с губером и отказался или узнал слухи, но не говорил с губером
 					{
-						link.l6 = "He oído que el antiguo capitán de una patrulla "+GetStrSmallRegister(XI_ConvertString(GetBaseShipParamFromType(sti(pchar.GenQuest.CaptainComission.ShipType),"Nombre")+"Acc"))+" "+pchar.GenQuest.CaptainComission.Name+" está aquí bajo custodia. ¿Puedo hablar con él?";
+						link.l6 = "He oído que el antiguo capitán de una patrulla "+GetStrSmallRegister(XI_ConvertString(GetBaseShipParamFromType(sti(pchar.GenQuest.CaptainComission.ShipType),"Name")+"Acc"))+" "+pchar.GenQuest.CaptainComission.Name+" está aquí bajo custodia. ¿Puedo hablar con él?";
 						link.l6.go = "CapComission_PrisonBad1";
 					}
 					if(pchar.GenQuest.CaptainComission == "MayorTalkGood")
@@ -207,7 +207,7 @@ void ProcessDialogEvent()
 		
 		case "Marginpassenger_1":
 			dialog.text = "Mmm... Eso es muy intrigante - ¡por favor, continúa!";
-			link.l1 = "Él conocía el nombre del barco, en el cual "+pchar.GenQuest.Marginpassenger.q1Name+" planeaba zarpar. Es "+GetStrSmallRegister(XI_ConvertString(GetBaseShipParamFromType(sti(pchar.GenQuest.Marginpassenger.ShipType),"Nombre")))+" llamado '"+pchar.GenQuest.Marginpassenger.ShipName+"'. Además, me dijo la hora en que ese barco debía zarpar.";
+			link.l1 = "Él conocía el nombre del barco, en el cual "+pchar.GenQuest.Marginpassenger.q1Name+" planeaba zarpar. Es "+GetStrSmallRegister(XI_ConvertString(GetBaseShipParamFromType(sti(pchar.GenQuest.Marginpassenger.ShipType),"Name")))+" llamado '"+pchar.GenQuest.Marginpassenger.ShipName+"'. Además, me dijo la hora en que ese barco debía zarpar.";
 			link.l1.go = "Marginpassenger_2";
 		break;
 	
@@ -346,7 +346,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "ReasonToFast_Prison_GoodRep_11":
-			dialog.text = "Nonetheless, I think that your efforts should still be rewarded. Here, take this map; it was found in the belongings of a pirate who has recently gone to the gallows. God willing, perhaps you will actually find that treasure, although I find it quite unlikely...";
+			dialog.text = "No obstante, creo que tus esfuerzos deben ser recompensados. Toma este mapa; se encontró entre las pertenencias de un pirata que ha ido recientemente a la horca. Si Dios quiere, tal vez encuentres realmente ese tesoro, aunque lo veo bastante improbable...";
 			link.l1 = "¡Gracias, eso es muy generoso de tu parte!";
 			link.l1.go = "exit";
 			AddQuestRecord("ReasonToFast", "15");
@@ -614,13 +614,13 @@ void ProcessDialogEvent()
         case "KnowAboutPrisoner":
 			switch (pchar.questTemp.jailCanMove.ownerPrison)
 			{
-				case "0": sTemp = "For murder."; break;
-				case "1": sTemp = "He is accused of piracy."; break;
-				case "2": sTemp = "For banditry and robbery."; break;
-				case "3": sTemp = "He was caught stealing."; break;
-				case "4": sTemp = "For petty theft."; break;
-				case "5": sTemp = "For cheating."; break;
-				case "6": sTemp = "For vagrancy and begging."; break;
+				case "0": sTemp = "Por asesinato."; break;
+				case "1": sTemp = "Se le acusa de piratería."; break;
+				case "2": sTemp = "Por bandidaje y robo."; break;
+				case "3": sTemp = "Le pillaron robando."; break;
+				case "4": sTemp = "Por hurto."; break;
+				case "5": sTemp = "Por hacer trampas."; break;
+				case "6": sTemp = "Por vagabundeo y mendicidad."; break;
 			}
 			dialog.text = sTemp;
 			// генерал-губернатор
@@ -704,7 +704,7 @@ void ProcessDialogEvent()
 			link.l1.go = "exit";
 			pchar.questTemp.jailCanMove = true;
 			RemoveDublonsFromPCharTotal(sti(pchar.questTemp.jailCanMove.ownerPrison.money));
-			Log_Info("You have given " + FindRussianDublonString(sti(pchar.questTemp.jailCanMove.ownerPrison.money)) + "");
+			Log_Info("Has dado " + FindRussianDublonString(sti(pchar.questTemp.jailCanMove.ownerPrison.money)) + "");
 			DeleteAttribute(pchar, "questTemp.jailCanMove.ownerPrison");
 			sld = characterFromId(pchar.questTemp.jailCanMove.prisonerId)
 			LAi_CharacterEnableDialog(sld);
@@ -863,7 +863,7 @@ void ProcessDialogEvent()
 				bool bGenGov = CheckAttribute(pchar, "questTemp.Patria.GenGovernor") && npchar.nation == GetBaseHeroNation());
 				if(!bAdmiral && !bGenGov)
 				{
-				link.l2 = "Bueno, podría valer la pena correr un riesgo... Sugiero lo siguiente: puedo eliminar a los guardias en la prisión y llevarte a mi barco. Si todo sale bien, quiero que te quedes a mi lado todo el tiempo hasta que lleguemos a la gruta en  "+XI_ConvertString(pchar.questTemp.jailCanMove.islandId+"Voz")+". ¿Trato?"; // belamour gen
+				link.l2 = "Bueno, podría valer la pena correr un riesgo... Sugiero lo siguiente: puedo eliminar a los guardias en la prisión y llevarte a mi barco. Si todo sale bien, quiero que te quedes a mi lado todo el tiempo hasta que lleguemos a la gruta en  "+XI_ConvertString(pchar.questTemp.jailCanMove.islandId+"Voc")+". ¿Trato?"; // belamour gen
 				link.l2.go = "Prisoner_agree"; //силовой способ вызволения
 				}
 				link.l3 = "Está bien, intentaré ayudarte. Hablaré con el alcaide de la prisión. Quizás, pueda sacarte bajo fianza.";
@@ -971,7 +971,7 @@ void ProcessDialogEvent()
 		break;
         case "ToPrisonHead_canMove_1":
             dialog.text = "¡Entonces vámonos de aquí! ¡Oh, Señor, qué feliz estoy!";
-			link.l1 = "Resumamos. Quiero que te quedes a mi lado todo el tiempo hasta que lleguemos a la gruta en "+XI_ConvertString(pchar.questTemp.jailCanMove.islandId+"Eso")+", no te quedarás más atrás que un solo paso. Solo por si acaso. ¿Estás de acuerdo?";
+			link.l1 = "Resumamos. Quiero que te quedes a mi lado todo el tiempo hasta que lleguemos a la gruta en "+XI_ConvertString(pchar.questTemp.jailCanMove.islandId+"Dat")+", no te quedarás más atrás que un solo paso. Solo por si acaso. ¿Estás de acuerdo?";
 			link.l1.go = "ToPrisonHead_canMove_2";
 		break;
         case "ToPrisonHead_canMove_2":
@@ -1095,7 +1095,7 @@ void ProcessDialogEvent()
 			dialog.text = "Por supuesto, como se acordó. La mitad del tesoro es tuyo.";
 			link.l1 = "¡Santo Señor, ahora hay seguramente un montón de cosas preciosas!";
 			link.l1.go = "PrisonerInPlace_3";
-			Log_Info("You have received your share of the treasure");
+			Log_Info("Has recibido tu parte del tesoro");
 			PlaySound("interface\important_item.wav");
 			TakeNItems(pchar, "icollection", 1+drand(1));
 			TakeNItems(pchar, "chest", 4+drand(4));
@@ -1118,7 +1118,7 @@ void ProcessDialogEvent()
 			dialog.text = "Capitán, también está ese objeto indígena entre otras cosas. Puedes tenerlo además de tu parte.";
 			link.l1 = "Bueno, ¡al menos algo valioso para tu liberación! Entrégamelo.";
 			link.l1.go = "PrisonerInPlace_3";
-			Log_Info("You have received your share of the treasure");
+			Log_Info("Has recibido tu parte del tesoro");
 			PlaySound("interface\important_item.wav");
 			sTemp = pchar.questTemp.jailCanMove.Item1;
 			TakeNItems(pchar, sTemp, 1);
@@ -1140,7 +1140,7 @@ void ProcessDialogEvent()
 			dialog.text = "Espera, Capitán, no te exaltes, déjame hablar. También soy marino, igual que tú. Fui encarcelado por error, lo juro. Tú eras mi única oportunidad de escapar, y tuve que mentirte acerca del tesoro.\nNo hay tesoro, pero escondí algo bueno allí. Tómalo, y déjame ir en paz. Quizás, en una batalla algún día, te ayude a sobrevivir.";
 			link.l1 = "Está bien, de todas formas no esperaba mucho de ti. Gracias a Dios que no guardo rencor.";
 			link.l1.go = "PrisonerInPlace_3";
-			Log_Info("You have received equipment");
+			Log_Info("Ha recibido material");
 			PlaySound("interface\important_item.wav");
 			sTemp = pchar.questTemp.jailCanMove.Item2;
 			TakeNItems(pchar, sTemp, 1);
@@ -1359,7 +1359,7 @@ void ProcessDialogEvent()
 			PChar.Quest.JusticeOnSale_ShoreEnterWithSmuggler.win_condition.l1  = "location";
 			PChar.Quest.JusticeOnSale_ShoreEnterWithSmuggler.win_condition.l1.location = PChar.GenQuest.JusticeOnSale.ShoreId;
 			PChar.Quest.JusticeOnSale_ShoreEnterWithSmuggler.function = "JusticeOnSale_ShoreEnterWithSmuggler";
-			Log_Info("Smuggler's captain on a board");
+			Log_Info("El capitán contrabandista está abordo");
 			PlaySound("interface\notebook.wav");
 			LAi_Fade("", "");
 			WaitDate("",0,0,0,0,60); // 280313 // лесник. прокрутка времени было так WaitDate("",0,0,0,2,5);

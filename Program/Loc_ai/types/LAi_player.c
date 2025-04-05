@@ -39,13 +39,6 @@ void LAi_type_player_Init(aref chr)
 //Процессирование типа персонажа
 void LAi_type_player_CharacterUpdate(aref chr, float dltTime)
 {
-    if(TestLogs)
-    {
-        string sAniName;
-        SendMessage(chr, "le", MSG_CHARACTER_GETCURANIMATION, &sAniName);
-        Log_Info(sAniName);
-    }
-
 	float time;
 	if (CheckAttribute(chr, "showTimer")) 
 	{

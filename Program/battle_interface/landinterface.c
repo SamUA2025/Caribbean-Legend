@@ -1092,7 +1092,7 @@ void BLI_SetObjectData()
 	objLandInterface.textinfo.MusCtrl.text = "";
 	objLandInterface.textinfo.MusCtrl.refreshable = true;
 	
-    GetWeaponQty();
+    //GetWeaponQty();
 	if(iShowTime < 7) iShowTime = 15;
 	
     // Это у вас нет, у меня все есть ;) - boal
@@ -2228,6 +2228,10 @@ string GetItemVis(string type)
 			{
 				Itm = &Items[FindItem(pchar.GenQuest.Potion_choice)];
 				objLandInterface.equipment.PotionQty = GetCharacterFreeItem(pchar, Itm.id);
+				if(CheckAttribute(Itm,"potion.drunk") && GetCharacterEquipByGroup(pchar, HAT_ITEM_TYPE) == "hat8")
+				{
+					return GetConvertStr(Itm.name, "ItemsDescribe.txt")+ " + "+sti(Itm.potion.health) * 15 / 10);
+				}
 				return GetConvertStr(Itm.name, "ItemsDescribe.txt")+ " + "+sti(Itm.potion.health));
 			}	
 			else 

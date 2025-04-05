@@ -538,7 +538,7 @@ void ProcessDialogEvent()
 		break;
 			
 		case "Church_GenQuest1_Node_FillInfoOfCapColony_3":
-			dialog.text = "Lo hizo. Pero alabado sea todos los Santos, justo esta mañana nos libró de su presencia y se dirigió a "+XI_ConvertString("Colony"+PChar.GenQuest.ChurchQuest_1.CapGoToColony+"Accidente")+"Y siento sinceramente lástima por cualquiera que tenga que tratar con él.";
+			dialog.text = "Lo hizo. Pero alabado sea todos los Santos, justo esta mañana nos libró de su presencia y se dirigió a "+XI_ConvertString("Colony"+PChar.GenQuest.ChurchQuest_1.CapGoToColony+"Acc")+"Y siento sinceramente lástima por cualquiera que tenga que tratar con él.";
 			link.l1 = "En ese caso, deséame suerte - y gracias por tu ayuda.";
 			link.l1.go = "Church_GenQuest1_Node_FillInfoOfCapColony_4";
 		break;
@@ -553,7 +553,7 @@ void ProcessDialogEvent()
 			PChar.GenQuest.ChurchQuest_1.AskPortMan_InColony = PChar.GenQuest.ChurchQuest_1.CapGoToColony; // Спрашиваем портмана в колонии, куда отправился кэп.
 			if(rand(2) == 1) 
 			{
-				Log_TestInfo("The next colony is the last");
+				Log_TestInfo("La siguiente colonia es la última");
 				PChar.GenQuest.ChurchQuest_1.NextColonyIsLast = true; // Флаг - следующая колония будет последней
 			}
 		break;
@@ -610,8 +610,8 @@ void ProcessDialogEvent()
 				
 		case "ShipLetters_Portman1_1":
 			pchar.questTemp.different.GiveShipLetters.speakPortman = true;
-			s1 = "Let me take a look! Yes, this vessel and its captain are both registered in my documents. ";
-			s1 = s1 + "Your conscientiousness, captain, reflects credit upon yourself! Of course, your efforts must not go unrewarded.  ";
+			s1 = "¡Déjame echar un vistazo! Sí, este buque y su capitán están registrados en mis documentos. ";
+			s1 = s1 + "¡Su conciencia, capitán, le honra! Por supuesto, sus esfuerzos no deben quedar sin recompensa....  ";
 			dialog.text = s1+"Decid, ¿consideraréis una suma de "+sti(pchar.questTemp.different.GiveShipLetters.price1)+"¿pesos una recompensa adecuada?";
 			link.l1 = "¡Por supuesto que no!";
 			link.l1.go = "exit";
@@ -1911,7 +1911,7 @@ void ProcessDialogEvent()
 					link.l2.go = "Postcureer_LevelDown";
 					pchar.questTemp.WPU.Postcureer.TargetPortmanID = pchar.questTemp.WPU.Postcureer.City +"_Mayor";//ИД губера
 					if (pchar.questTemp.WPU.Postcureer.TargetPortmanID == "Villemstad_Mayor") pchar.questTemp.WPU.Postcureer.TargetPortmanID = "hol_guber"; // фикс Матиаса Бека #717
-					pchar.questTemp.WPU.Current.Add = "a dispatch for the governor";
+					pchar.questTemp.WPU.Current.Add = "un despacho para el gobernador";
 					pchar.questTemp.WPU.Current.Item = "letter_2";//предмет
 					pchar.questTemp.WPU.Current.Itemdescr = "itmdescr_letter_2_PortmanLevelUp1";//описание
 				break;
@@ -1924,7 +1924,7 @@ void ProcessDialogEvent()
 					link.l2.go = "Postcureer_LevelDown";
 					pchar.questTemp.WPU.Postcureer.TargetPortmanID = pchar.questTemp.WPU.Postcureer.City +"_trader";//ИД торговца
 //					pchar.questTemp.WPU.Current.Add = "сводку цен для хозяина магазина";
-					pchar.questTemp.WPU.Current.Add = "a price list for the store owner";     // LDH 23Jan17 translated
+					pchar.questTemp.WPU.Current.Add = "una lista de precios para el propietario de la tienda";     // LDH 23Jan17 translated
 					pchar.questTemp.WPU.Current.Item = "letter_2";//предмет
 					pchar.questTemp.WPU.Current.Itemdescr = "itmdescr_letter_2_PortmanLevelUp2";//описание
 				break;
@@ -1936,7 +1936,7 @@ void ProcessDialogEvent()
 					link.l2 = "No, supongo que pasaré.";
 					link.l2.go = "Postcureer_LevelDown";
 					pchar.questTemp.WPU.Postcureer.TargetPortmanID = pchar.questTemp.WPU.Postcureer.City +"_usurer";//ИД ростовщика
-					pchar.questTemp.WPU.Current.Add = "a packet of information for the moneylender";   // LDH 23Jan17 translated
+					pchar.questTemp.WPU.Current.Add = "un paquete de información para el prestamista";   // LDH 23Jan17 translated
 					pchar.questTemp.WPU.Current.Item = "letter_2";//предмет
 					pchar.questTemp.WPU.Current.Itemdescr = "itmdescr_letter_2_PortmanLevelUp3";//описание
 				break;
@@ -1948,7 +1948,7 @@ void ProcessDialogEvent()
 					link.l2 = "No, supongo que pasaré.";
 					link.l2.go = "Postcureer_LevelDown";
 					pchar.questTemp.WPU.Postcureer.TargetPortmanID = pchar.questTemp.WPU.Postcureer.City +"_shipyarder";//ИД верфиста
-					pchar.questTemp.WPU.Current.Add = "the draft of a new ship for the owner of the shipyard";
+					pchar.questTemp.WPU.Current.Add = "el proyecto de un nuevo buque para el propietario del astillero";
 					pchar.questTemp.WPU.Current.Item = "ShipyardsMap";//предмет
 					pchar.questTemp.WPU.Current.Itemdescr = "itmdescr_ShipyardsMap_PortmanLevelUp4";//описание
 				break;
@@ -2689,15 +2689,15 @@ void ProcessDialogEvent()
 			switch(attrL)
 			{
 				case "speedrate":
-					attrL = "His " + GetStrSmallRegister(XI_ConvertString(ShipsTypes[iTest].Name + "Acc")) + "'s wind speed was more than " + NPChar.Quest.BurntShip.ShipNeededValue + " knots. That was the privateer's pride... And now he'd just tell his boys to hang me in the yard. What devil has brought him to our harbor together with that pirate tub...";
+					attrL = "Su " + GetStrSmallRegister(XI_ConvertString(ShipsTypes[iTest].Name + "Acc")) + "tenía una velocidad contra el viento superior a " + NPChar.Quest.BurntShip.ShipNeededValue + " nudos. Era el orgullo como corsario... Y ahora les dice a sus muchachos que me cuelguen del palo mayor. Qué diablo lo trajo a nuestro puerto junto con esa bañera pirata...";
 				break;
 				
 				case "turnrate":
-					attrL = "His " + GetStrSmallRegister(XI_ConvertString(ShipsTypes[iTest].Name + "Acc")) + "'s maneuverability was more than " + NPChar.Quest.BurntShip.ShipNeededValue + " units. That was the soldier's pride... And now he'd just have me flogged to death. What devil advised him to leave his tub there...";
+					attrL = "Su " + GetStrSmallRegister(XI_ConvertString(ShipsTypes[iTest].Name + "Acc")) + "tenía una maniobrabilidad superior a " + NPChar.Quest.BurntShip.ShipNeededValue + " unidades. Ese era el orgullo del soldado... Y ahora me haría azotar hasta la muerte. ¿Qué diablo le aconsejó dejar su bañera allí...";
 				break;
 				
 				case "capacity":
-					attrL = "His " + GetStrSmallRegister(XI_ConvertString(ShipsTypes[iTest].Name + "Acc")) + "' had a deadweight of over " + NPChar.Quest.BurntShip.ShipNeededValue + " units. Greed is bad, I'll tell ya. And now he'd just have me quartered in court. What devil advised him to leave his tub there...";
+					attrL = "Su " + GetStrSmallRegister(XI_ConvertString(ShipsTypes[iTest].Name + "Acc")) + " tenía un peso muerto de más de " + NPChar.Quest.BurntShip.ShipNeededValue + " unidades. La codicia es mala, te lo aseguro. Y ahora me habría descuartizado en la corte. ¿Qué diablo le aconsejó dejar su bañera allí...?";
 				break;
 			}
 			
@@ -2742,15 +2742,15 @@ void ProcessDialogEvent()
 			switch(attrL)
 			{
 				case "speedrate":
-					attrL = "speed. The wind speed of the " + GetStrSmallRegister(XI_ConvertString(ShipsTypes[iTest].name + "Gen")) + " must be at least " + NPChar.Quest.BurntShip.ShipNeededValue;
+					attrL = "velocidad. La velocidad contra el viento del" + GetStrSmallRegister(XI_ConvertString(ShipsTypes[iTest].name + "Gen")) + " debe ser como mínimo " + NPChar.Quest.BurntShip.ShipNeededValue;
 				break;
 				
 				case "turnrate":
-					attrL = "manoeuvrability. Manoeuvrability of the " + GetStrSmallRegister(XI_ConvertString(ShipsTypes[iTest].name + "Gen")) + " must be no less than " + NPChar.Quest.BurntShip.ShipNeededValue;
+					attrL = "maniobrabilidad. La maniobrabilidad del " + GetStrSmallRegister(XI_ConvertString(ShipsTypes[iTest].name + "Gen")) + " no debe ser inferior a " + NPChar.Quest.BurntShip.ShipNeededValue;
 				break;
 				
 				case "capacity":
-					attrL = "hold. Hold of the " + GetStrSmallRegister(XI_ConvertString(ShipsTypes[iTest].name + "Gen")) + " has to be no less than " + NPChar.Quest.BurntShip.ShipNeededValue;
+					attrL = "bodega. La capacidad de la bodega del " + GetStrSmallRegister(XI_ConvertString(ShipsTypes[iTest].name + "Gen")) + " no debe ser inferior a " + NPChar.Quest.BurntShip.ShipNeededValue;
 				break;
 			}
 			
@@ -2936,7 +2936,7 @@ void ProcessDialogEvent()
 		
 		case "BurntShip20_exit":
 			TakeNItems(pchar, "chest", makeint(sti(NPChar.Quest.BurntShip.Money)/12000));
-			Log_Info("You have received credit chests");
+			Log_Info("Has recibido unos cofres");
 			PlaySound("interface\important_item.wav");
 			sTitle = "BurntShipQuest" + NPChar.location;
 			AddQuestRecordEx(sTitle, "BurntShipQuest", "4");
@@ -3029,7 +3029,7 @@ void ProcessDialogEvent()
 			AddQuestUserData(sTitle, "sTargetCity", XI_ConvertString("Colony" + npchar.quest.PortmansJornal.city + "Acc"));
 			if (GetIslandByCityName(npchar.quest.PortmansJornal.city) != npchar.quest.PortmansJornal.city)
 			{
-				AddQuestUserData(sTitle, "sAreal", ", which is on " + XI_ConvertString(GetIslandByCityName(npchar.quest.PortmansJornal.city) + "Dat"));
+				AddQuestUserData(sTitle, "sAreal", ", que se encuentra en " + XI_ConvertString(GetIslandByCityName(npchar.quest.PortmansJornal.city) + "Dat"));
 			}			
 		break;
 		// -------------------------------- квест розыска украденного корабля ----------------------------------
@@ -3138,7 +3138,7 @@ void ProcessDialogEvent()
 					sCapitainId = GetAttributeName(arCapLocal);
 					sld = characterFromId(sCapitainId);
 					attrL = "l" + i;
-					link.(attrL) = GetFullName(sld) + ", captain of " + GetStrSmallRegister(XI_ConvertString(RealShips[sti(sld.Ship.Type)].BaseName + "Gen")) + " '" + sld.Ship.name + "'.";
+					link.(attrL) = GetFullName(sld) + ", capitán del " + GetStrSmallRegister(XI_ConvertString(RealShips[sti(sld.Ship.Type)].BaseName + "Gen")) + " '" + sld.Ship.name + "'.";
 					link.(attrL).go = "CapList_"+attrL;
 				}
 			}
@@ -3169,7 +3169,7 @@ void ProcessDialogEvent()
 			AddQuestUserData(arCapLocal.QBString1, "sTargetCity", XI_ConvertString("Colony" + arCapLocal + "Acc"));
 			if (GetIslandByCityName(arCapBase.(sCapitainId)) != arCapBase.(sCapitainId))
 			{
-				AddQuestUserData(arCapLocal.QBString1, "sAreal", " that is in " + XI_ConvertString(GetIslandByCityName(arCapBase.(sCapitainId)) + "Dat"));
+				AddQuestUserData(arCapLocal.QBString1, "sAreal", " que se encuentra en " + XI_ConvertString(GetIslandByCityName(arCapBase.(sCapitainId)) + "Dat"));
 			}
 			//убираем из списка
 			DeleteAttribute(arCapBase, sCapitainId); 
@@ -3194,7 +3194,7 @@ void ProcessDialogEvent()
 			AddQuestUserData(arCapLocal.QBString1, "sTargetCity", XI_ConvertString("Colony" + arCapLocal + "Acc"));
 			if (GetIslandByCityName(arCapBase.(sCapitainId)) != arCapBase.(sCapitainId))
 			{
-				AddQuestUserData(arCapLocal.QBString1, "sAreal", " that is in " + XI_ConvertString(GetIslandByCityName(arCapBase.(sCapitainId)) + "Dat"));
+				AddQuestUserData(arCapLocal.QBString1, "sAreal", " que se encuentra en " + XI_ConvertString(GetIslandByCityName(arCapBase.(sCapitainId)) + "Dat"));
 			}
 			//убираем из списка
 			DeleteAttribute(arCapBase, sCapitainId); 
@@ -3219,7 +3219,7 @@ void ProcessDialogEvent()
 			AddQuestUserData(arCapLocal.QBString1, "sTargetCity", XI_ConvertString("Colony" + arCapLocal + "Acc"));
 			if (GetIslandByCityName(arCapBase.(sCapitainId)) != arCapBase.(sCapitainId))
 			{
-				AddQuestUserData(arCapLocal.QBString1, "sAreal", " that is in " + XI_ConvertString(GetIslandByCityName(arCapBase.(sCapitainId)) + "Dat"));
+				AddQuestUserData(arCapLocal.QBString1, "sAreal", " que se encuentra en " + XI_ConvertString(GetIslandByCityName(arCapBase.(sCapitainId)) + "Dat"));
 			}
 			//убираем из списка
 			DeleteAttribute(arCapBase, sCapitainId); 
@@ -3244,7 +3244,7 @@ void ProcessDialogEvent()
 			AddQuestUserData(arCapLocal.QBString1, "sTargetCity", XI_ConvertString("Colony" + arCapLocal + "Acc"));
 			if (GetIslandByCityName(arCapBase.(sCapitainId)) != arCapBase.(sCapitainId))
 			{
-				AddQuestUserData(arCapLocal.QBString1, "sAreal", " that is in " + XI_ConvertString(GetIslandByCityName(arCapBase.(sCapitainId)) + "Dat"));
+				AddQuestUserData(arCapLocal.QBString1, "sAreal", " que se encuentra en " + XI_ConvertString(GetIslandByCityName(arCapBase.(sCapitainId)) + "Dat"));
 			}
 			//убираем из списка
 			DeleteAttribute(arCapBase, sCapitainId); 
@@ -3269,7 +3269,7 @@ void ProcessDialogEvent()
 			AddQuestUserData(arCapLocal.QBString1, "sTargetCity", XI_ConvertString("Colony" + arCapLocal + "Acc"));
 			if (GetIslandByCityName(arCapBase.(sCapitainId)) != arCapBase.(sCapitainId))
 			{
-				AddQuestUserData(arCapLocal.QBString1, "sAreal", " that is in " + XI_ConvertString(GetIslandByCityName(arCapBase.(sCapitainId)) + "Dat"));
+				AddQuestUserData(arCapLocal.QBString1, "sAreal", " que se encuentra en " + XI_ConvertString(GetIslandByCityName(arCapBase.(sCapitainId)) + "Dat"));
 			}
 			//убираем из списка
 			DeleteAttribute(arCapBase, sCapitainId); 
@@ -3573,12 +3573,12 @@ void ProcessDialogEvent()
 			attrL = "l"+nListSize;
 			if (q == 0)
 				{
-				Link.(attrL) = RandSwear() + "I forgot to bring an officer with me for this ship.";
+				Link.(attrL) = RandSwear() + "Olvidé traer un oficial conmigo para esta nave.";
 				Link.(attrL).go = "exit";
 				}
 			else
 				{
-				Link.(attrL) = "No, I've changed my mind..";
+				Link.(attrL) = "No, he cambiado de opinión ..";
 				Link.(attrL).go = "exit";
 				}
 			}
@@ -3980,7 +3980,7 @@ void SetJornalCapParam(ref npchar)
 	sld.quest.firstCity = npchar.city; //капитану знать откуда вышел в самом начале
 	sld.quest.stepsQty = 1; //количество выходов в море
 	sld.quest.money = ((sti(RealShips[sti(sld.Ship.Type)].basetype)+1) * 150) + (sti(pchar.rank)*150); //вознаграждение
-	Log_TestInfo("The absent-minded cap " + sld.id + " went to: " + sld.quest.targetCity);
+	Log_TestInfo("El distraído capitán " + sld.id + " se fue a: " + sld.quest.targetCity);
 	//определим бухту, куда ставить энкаунтер. чтобы сразу не генерился перед ГГ у города
 	string sTemp = GetArealByCityName(npchar.city);
 	sld.quest.baseShore = GetIslandRandomShoreId(sTemp);

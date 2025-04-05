@@ -595,7 +595,7 @@ void ProcessDialogEvent()
 			LAi_ActorGoToLocation(npchar, "reload", "sea", "none", "", "", "", 10.0);
 			pchar.questTemp.Patria = "epizode_12_stivesant";
 			AddQuestRecord("Patria", "83");
-			if(bImCasual) NewGameTip("Exploration mode: timer is not disabled. Meet the deadline!");
+			if(bImCasual) NewGameTip("Modo exploración: el temporizador no está desactivado. ¡Cumple el plazo!");
 			SetFunctionTimerCondition("Patria_CondotierStivesantTimeOver", 0, 0, 30, false); // таймер на месяц
 		break;
 		
@@ -1681,7 +1681,7 @@ void ProcessDialogEvent()
 		
 		case "Tailor_13":
 			dialog.text = "Se suponía que debían entregar un tricornio de almirante desde París, pero puedo hacerlo yo mismo si tengo el material. Aunque el tricornio para ti debía ser de tela, el cuero sería mejor para los vientos salados y el sol abrasador del Caribe. Duraría más.";
-			link.l1 = "I'll get you the leather; don't worry. I won't even have to chase bulls through the jungles of Espanola. Is that all?";
+			link.l1 = "Te conseguiré el cuero; no te preocupes. No tendré que perseguir toros por las selvas de España. ¿Eso es todo?";
 			link.l1.go = "Tailor_14";
 		break;
 		
@@ -1820,10 +1820,10 @@ void ProcessDialogEvent()
 			RemoveCharacterEquip(pchar, CIRASS_ITEM_TYPE);
 			GiveItem2Character(pchar, "suit5");
 			EquipCharacterbyItem(pchar, "suit5");
-			GiveItem2Character(pchar, "hat");
+			GiveItem2Character(pchar, "hat5");
 			EquipCharacterbyItem(pchar, "hat5");
 			AddItems(pchar, "tailor_tool", 1);
-			Log_Info("You have received the Vice-Admiral's uniform!");
+			Log_Info("¡Has recibido el uniforme de Vicealmirante!");
 			AddQuestRecord("Patria", "65_2");
 		break;
 		

@@ -61,7 +61,7 @@ void ProcessDialogEvent()
 		dialog.text = "Bueno, eso simplemente no servirá. ¡Eso no es un barco, señor, es un bote! Ay, monsieur, usted no encaja en el papel. ¡Salude a Fadey de mi parte, buen día!";
 		link.l1 = "Mm...";
 		link.l1.go = "lecrua_exit";
-		sTotalTemp = "My ship wasn't big enough for him";
+		sTotalTemp = "Mi barco no era lo suficientemente grande para él";
 		break;
 
 	case "lecrua_exit":

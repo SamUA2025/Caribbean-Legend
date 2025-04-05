@@ -312,6 +312,7 @@ void ProcessDialogEvent()
 		break;
 
 	case "Trade_2":
+        Partition_GetCargoCostCoeff("after");
 		FillShipStore(NPChar);
 		pchar.shiptrade.character = NPChar.id;
 		Diag.CurrentNode = Diag.TempNode;

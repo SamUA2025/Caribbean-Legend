@@ -1731,45 +1731,6 @@ void CreateHabitues(aref loc)
 					if (chr.quest.last_theme == 0) chr.greeting = "habitue"; // пьянтос
 					else chr.greeting = "player"; // игрок
 					
-					// belamour legendary edition локаторы на полу (таверна7)
-					if(loc.filespath.models == "locations\inside\tavern07\")
-					{
-						for (i = 1; i <=5; i++)
-						{
-							if (CheckFreeLocator(loc.id, "sit_ground" + i, -1))
-							{
-								if(IsDay() && rand(10) > 0 ) continue;
-								else 
-								{
-									if(rand(10) > 2) continue;
-								}
-								sType = RandPhraseSimple("citizen","sailor");
-								if (Colonies[iColony].nation == PIRATE) sType = RandPhraseSimple("pirate","sailor");
-								iChar = NPC_GeneratePhantomCharacter(sType, iNation, MAN, 1);
-								chr = &characters[iChar];
-								SetNPCModelUniq(chr, sType, MAN);
-								chr.City = Colonies[iColony].id;
-								chr.CityType = "citizen";
-								ChangeCharacterAddressGroup(chr, loc.id, "sit", "sit_ground" + i);
-								chr.Default           = loc.id;
-								chr.Default.group     = "sit";
-								chr.Default.ToLocator = "sit_ground" + i;
-								LAi_SetLoginTime(chr, 0.0, 24.0);
-								LAi_SetGroundSitType(chr);
-								if (sti(Colonies[iColony].HeroOwn) == true)
-								{
-									LAi_group_MoveCharacter(chr, LAI_GROUP_PLAYER_OWN);
-								}
-								else
-								{
-									LAi_group_MoveCharacter(chr, slai_group);
-								}
-								chr.dialog.filename = "Habitue_dialog.c";
-								chr.dialog.currentnode = "first time";
-								chr.greeting = "habitue"; // пьянтос
-							}
-						}
-					}
 					// Warship, 30.05.11. "Дело чести" -->
 					// belamour legendary edition встречается значительно чаще
 					bool bAh = (drand(4) == 4) && (!CheckAttribute(pchar, "questTemp.Sharlie.Lock")) && (!CheckAttribute(pchar, "GenQuest.Escort.Trader"))
@@ -1796,6 +1757,45 @@ void CreateHabitues(aref loc)
 						}
 					}
 					// <--
+				}
+			}
+			// belamour legendary edition локаторы на полу (таверна7)
+			if(loc.filespath.models == "locations\inside\tavern07\")
+			{
+				for (i = 1; i <=5; i++)
+				{
+					if (CheckFreeLocator(loc.id, "sit_ground" + i, -1))
+					{
+						if(IsDay() && rand(10) > 0 ) continue;
+						else 
+						{
+							if(rand(10) > 2) continue;
+						}
+						sType = RandPhraseSimple("citizen","sailor");
+						if (Colonies[iColony].nation == PIRATE) sType = RandPhraseSimple("pirate","sailor");
+						iChar = NPC_GeneratePhantomCharacter(sType, iNation, MAN, 1);
+						chr = &characters[iChar];
+						SetNPCModelUniq(chr, sType, MAN);
+						chr.City = Colonies[iColony].id;
+						chr.CityType = "citizen";
+						ChangeCharacterAddressGroup(chr, loc.id, "sit", "sit_ground" + i);
+						chr.Default           = loc.id;
+						chr.Default.group     = "sit";
+						chr.Default.ToLocator = "sit_ground" + i;
+						LAi_SetLoginTime(chr, 0.0, 24.0);
+						LAi_SetGroundSitType(chr);
+						if (sti(Colonies[iColony].HeroOwn) == true)
+						{
+							LAi_group_MoveCharacter(chr, LAI_GROUP_PLAYER_OWN);
+						}
+						else
+						{
+							LAi_group_MoveCharacter(chr, slai_group);
+						}
+						chr.dialog.filename = "Habitue_dialog.c";
+						chr.dialog.currentnode = "first time";
+						chr.greeting = "habitue"; // пьянтос
+					}
 				}
 			}
 			iChar = GetCharacterIndex(Colonies[iColony].id + "_Smuggler");

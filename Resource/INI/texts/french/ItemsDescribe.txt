@@ -1685,8 +1685,8 @@ itmdescr_chest_open
 Un coffre typique destiné au transport et à la conservation des pièces de monnaie. Pour l'instant, malheureusement, il est totalement vide.
 }
 
-itmname_incas_collection	{Trésors}
-itmdescr_incas_collection
+itmname_icollection	{Trésors}
+itmdescr_icollection
 {
 Un ensemble varié d'objets en or coûteux avec des pierres précieuses, précieux pour tout homme.
 }

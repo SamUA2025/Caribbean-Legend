@@ -2214,6 +2214,7 @@ bool Caleuche_QuestComplete(string sQuestName, string qname)
 	else if (sQuestName == "Caleuche_RotatePause") // крутим камеру
 	{
 		locCameraRotateAroundHero(0.0, 2.0, 0.0, 0.005, 0.0, 2.0, 0.0, 1700);
+		Pchar.FuncCameraFly = "";
 		DoQuestCheckDelay("Caleuche_RotatePauseOver", 25.0);
 	}
 	else if (sQuestName == "Caleuche_RotatePauseOver") // идем к вождю чавинави

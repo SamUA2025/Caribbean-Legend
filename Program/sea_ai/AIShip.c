@@ -463,6 +463,7 @@ float Ship_MastDamage()
 	switch (iDamageType)
 	{
 		case SHIP_MAST_TOUCH_ISLAND:
+            if(CheckAttribute(rCharacter, "AlwaysSandbankManeuver")) return 0.0; // Тупым запрет ломать мачты о берег
 			fDamage = fDamage + 0.25*fBonus;
 		break;
 		case SHIP_MAST_TOUCH_SHIP:
@@ -784,7 +785,7 @@ void Ship_Add2Sea(int iCharacterIndex, bool bFromCoast, string sFantomType, bool
 		if (MOD_BETTATESTMODE == "On") Log_Info("Ship_Add2Sea ERROR : SHIP " + iShipType + ", have no name!   NPCid = "+ rCharacter.id);
 		return;
 	}
-	if (iRealShip >= GetArraySize(&ShipsTypes))
+	if (iRealShip >= SHIP_TYPES_QUANTITY)
 	{
 		Trace("Character.id = " + rCharacter.id + ", have invalid ship type = " + iShipType + ", and try load to sea");
 		return;

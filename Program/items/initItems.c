@@ -322,8 +322,8 @@ int InitItems()
 	
 	makeref(itm,Items[n]);
 	itm.id = "icollection";
-	itm.name = "itmname_incas_collection";
-	itm.describe = "itmdescr_incas_collection";
+	itm.name = "itmname_icollection";
+	itm.describe = "itmdescr_icollection";
 	itm.model = "";
 	itm.picIndex = 16;
 	itm.picTexture = "ITEMS_31";
@@ -2150,16 +2150,19 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 	
-	makeref(itm,Items[n]); //резервный предмет для храма Хаэль Роа
-	itm.id = "KhaelRoa_item"; 
+	makeref(itm,Items[n]); // Шкура ягуара
+	itm.id = "KhaelRoa_item";
+    itm.groupID	= ITEM_SLOT_TYPE;
 	itm.name = "itmname_KhaelRoa_item";
 	itm.describe = "itmdescr_KhaelRoa_item";
 	itm.model = "";
 	itm.picIndex = 12;
 	itm.picTexture = "ITEMS_36";
-	itm.price = 0;
-	itm.Weight = 2.0;
-	itm.ItemType = "QUESTITEMS";
+	itm.price = 5000;
+	itm.Weight = 10.0;
+    itm.Type = ITEM_AMULET;
+    itm.time = 2;
+	itm.ItemType = "ARTEFACT";
 	n++;
 	
 	makeref(itm,Items[n]); //резервный предмет для иного случая

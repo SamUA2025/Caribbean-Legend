@@ -159,7 +159,7 @@ void ProcessDialogEvent()
 			if (startHeroType == 4)
 			{
 				dialog.text = "¿Una doncella con espada? Vaya, nunca pensé que viviría para ver semejante espectáculo. Y, ¿quién podrías ser tú, señorita, para atreverte a atacar al 'Santa Misericordia'?";
-				link.l1 = "Capitana Helen McArthur. Y esa expresión de sorpresa en tu rostro es una que conozco bien.";
+				link.l1 = "Capitana Hellen McArthur. Y esa expresión de sorpresa en tu rostro es una que conozco bien.";
 				link.l1.go = "Alamida_HelenaCaptain";
 			}
 			else

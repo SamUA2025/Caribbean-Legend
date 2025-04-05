@@ -740,10 +740,10 @@ void CalculateInfoDataF13()
     Statistic_AddValue(PChar, "Cheats.F13", 1);
 }*/
 
-string descF13 = "ТЕСТЫ: Включить/Отключить лог-мониторинг анимаций";
+string descF13 = "";
 void CalculateInfoDataF13()
 {
-    TestLogs = !TestLogs;
+
     ProcessCancelExit();
 }
 

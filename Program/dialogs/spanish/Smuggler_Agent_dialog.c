@@ -503,7 +503,8 @@ void ProcessDialogEvent()
 
 	case "Meeting_2":
 		Dialog.Text = "¿Para qué?";
-		Link.l1 = "Quizás, ¿estarás interesado en algunas mercancías especiales? O quizás, ¿tienes algo que ofrecerme a cambio?" Link.l1.go = "Encuentro_3";
+		Link.l1 = "Quizás, ¿estarás interesado en algunas mercancías especiales? O quizás, ¿tienes algo que ofrecerme a cambio?";
+		Link.l1.go = "Meeting_3";
 		break;
 
 	case "Meeting_3":

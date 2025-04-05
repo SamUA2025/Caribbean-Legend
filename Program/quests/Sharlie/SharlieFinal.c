@@ -5815,6 +5815,7 @@ bool SharlieFinal_QuestComplete(string sQuestName, string qname)
 	else if (sQuestName == "Ksochitam_GuardCryptRotate")
 	{
 		locCameraRotateAroundHero(0.0, 2.0, 0.0, 0.01, 0.0, 2.0, 0.0, 1700);
+		Pchar.FuncCameraFly = "";
 		DoQuestCheckDelay("Ksochitam_GoGuardCryptMask", 9.5);
 	}
 	else if (sQuestName == "Ksochitam_GoGuardCryptMask")
@@ -5825,6 +5826,7 @@ bool SharlieFinal_QuestComplete(string sQuestName, string qname)
 	else if (sQuestName == "Ksochitam_GuardCryptRotateNext")
 	{
 		locCameraRotateAroundHero(0.0, 2.0, 0.0, 0.005, 0.0, 2.0, 0.0, 1700);
+		Pchar.FuncCameraFly = "";
 		//DoQuestCheckDelay("Ksochitam_GuardCryptBack", 4.0);
 		DoQuestCheckDelay("Video_GuardMask", 4.0);
 	}
@@ -6623,6 +6625,7 @@ bool SharlieFinal_QuestComplete(string sQuestName, string qname)
 	else if (sQuestName == "Tieyasal_Fail_RoundTempleRotate")
 	{
 		locCameraRotateAroundHero(0.0, 2.0, 0.0, 0.01, 0.0, 2.0, 0.0, 1700);
+		Pchar.FuncCameraFly = "";
 		DoQuestCheckDelay("Tieyasal_Fail_RoundTempleStop", 9.5);
 	}
 	else if (sQuestName == "Tieyasal_Fail_RoundTempleStop")
@@ -6831,6 +6834,7 @@ bool SharlieFinal_QuestComplete(string sQuestName, string qname)
 		SetMainCharacterIndex(GetCharacterIndex("Piter"));
 		PChar = GetMainCharacter();
 		locCameraFlyToPositionLookToHero(-22.5, 9.0, 3.25, 0, 14.0, 0.2, 0.01, -1);
+		Pchar.FuncCameraFly = "";
 		DoQuestCheckDelay("Europe_FinalFrame", 36.0);
 	}
 	else if (sQuestName == "Europe_FinalFrame")

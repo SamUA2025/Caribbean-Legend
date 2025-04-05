@@ -294,12 +294,12 @@ void ProcessDialogEvent()
 		
 		case "Sharlie_sailor_1":
 			dialog.text = "Oui, eso es correcto. ¿Quieres contratarme a mí y a mis compañeros? ¿Qué tipo de barco tienes?";
-			link.l1 = "Un barco común, "+GetStrSmallRegister(XI_ConvertString(GetBaseShipParamFromType(sti(RealShips[sti(pchar.ship.type)].basetype),"Nombre")))+".  ¿Por qué te importa siquiera?";
+			link.l1 = "Un barco común, "+GetStrSmallRegister(XI_ConvertString(GetBaseShipParamFromType(sti(RealShips[sti(pchar.ship.type)].basetype),"Name")))+".  ¿Por qué te importa siquiera?";
 			link.l1.go = "Sharlie_sailor_2";
 		break;
 		
 		case "Sharlie_sailor_2":
-			dialog.text = "Bueno, Monsieur, ningún marinero decente quiere servir apretujado en un tartán o en una lancha, pero "+GetStrSmallRegister(XI_ConvertString(GetBaseShipParamFromType(sti(RealShips[sti(pchar.ship.type)].basetype),"Nombre")))+" estará bien. Debo advertirte, capitán, puedes contratarnos solo a todos nosotros a la vez. Verás, somos un equipo y venimos como un paquete.";
+			dialog.text = "Bueno, Monsieur, ningún marinero decente quiere servir apretujado en un tartán o en una lancha, pero "+GetStrSmallRegister(XI_ConvertString(GetBaseShipParamFromType(sti(RealShips[sti(pchar.ship.type)].basetype),"Name")))+" estará bien. Debo advertirte, capitán, puedes contratarnos solo a todos nosotros a la vez. Verás, somos un equipo y venimos como un paquete.";
 			link.l1 = "¿Cuántos hombres tienes?";
 			link.l1.go = "Sharlie_sailor_3";
 		break;
@@ -444,7 +444,7 @@ void ProcessDialogEvent()
 			dialog.text = "¡Aye aye, capitán! Te esperaré en tu camarote. *Usa el menú de acciones mientras estés en el mar para acceder al camarote y otras áreas del barco*";
 			link.l1 = "Gracias, Folke. Nos vemos a bordo.";
 			link.l1.go = "Folke_5";
-			Log_Info("You have received amulet 'Merchant's Rosary'");
+			Log_Info("Has recibido el amuleto 'Rosario del mercader'.");
 			PlaySound("interface\important_item.wav");
 			GiveItem2Character(pchar, "obereg_8");
 			if(CheckAttribute(pchar,"systeminfo.tutorial.Amulet"))
@@ -472,7 +472,7 @@ void ProcessDialogEvent()
 			pchar.quest.NewGameTip2.win_condition.l1 = "location";
 			pchar.quest.NewGameTip2.win_condition.l1.location = "Martinique";
 			pchar.quest.NewGameTip2.function = "ShowNewGameTip";
-			pchar.quest.NewGameTip2.text = "Your first officer is waiting for you. Use the action menu (ENTER) to go to the cabin.";
+			pchar.quest.NewGameTip2.text = "Su primer oficial le está esperando. Utiliza el menú de acción (ENTER) para ir al camarote.";
 		break;
 		
 		case "Folke_6":
@@ -616,7 +616,7 @@ void ProcessDialogEvent()
 			Npchar.loyality = makeint(Npchar.loyality) - 5;
 			ChangeCharacterComplexReputation(pchar,"authority", 5);
 			dialog.text = "Entonces ponme como navegante y me iré a mi lugar en cubierta.";
-			link.l1 = "I'm here to find my brother, Michel de Montpe.";
+			link.l1 = "Estoy aquí para encontrar a mi hermano, Michel de Montpe.";
 			link.l1.go = "Folke_14";
 		break;
 		
@@ -659,7 +659,7 @@ void ProcessDialogEvent()
 		
 		case "Folke_wait":
 			dialog.text = "¡Listo para zarpar, capitán!";
-			link.l1 = "I'm ready to translate. Please provide the English text for translation.";
+			link.l1 = "...";
 			
 			if (!CheckAttribute(npchar, "navigator")) {
 				dialog.text = "Capitán, ponme como navegante, de lo contrario encallaremos en un santiamén.";
@@ -1416,7 +1416,7 @@ case "Europe":
 			AddCharacterExpToSkill(pchar, "Commerce", 50);
 			ChangeIndianRelation(3.0);
 			AddItems(pchar, "jewelry53", 180);
-			Log_Info("You have received 180 small pearls");
+			Log_Info("Has recibido 180 pequeñas perlas");
 			PlaySound("Interface\important_item.wav");
 			DeleteAttribute(pchar, "questTemp.ZsI_PokupaemPistolety");
 			if (sti(pchar.items.pistol1) >= 2 && sti(pchar.items.GunPowder) >= 20 && sti(pchar.items.bullet) >= 20)
@@ -1579,10 +1579,10 @@ case "Europe":
 			AddItems(pchar, "cannabis1", 3);
 			GiveItem2Character(pchar, "indian_10");
 			GiveItem2Character(pchar, "talisman11");
-			Log_Info("You have received 180 small pearls");
-			Log_info("You have received Amulet 'Cascavella'}");
-			Log_info("You have received Ward 'Adder stone'");
-			Log_info("You have received 3 Datura herbs");
+			Log_Info("Has recibido 180 pequeñas perlas");
+			Log_info("Has recibido el amuleto 'Cascavella'");
+			Log_info("Has recibido la 'Piedra víbora' de Ward");
+			Log_info("Has recibido 3 hierbas Datura");
 			PlaySound("Interface\important_item.wav");
 		break;
 		
@@ -1658,10 +1658,10 @@ case "Europe":
 			AddItems(pchar, "cannabis1", 3);
 			GiveItem2Character(pchar, "indian_10");
 			GiveItem2Character(pchar, "talisman11");
-			Log_Info("You have received 180 small pearls");
-			Log_info("You have received Amulet 'Cascavella'}");
-			Log_info("You have received Ward 'Adder stone'");
-			Log_info("You have received 3 Datura herbs");
+			Log_Info("Has recibido 180 pequeñas perlas");
+			Log_info("Has recibido el amuleto 'Cascavella'");
+			Log_info("Has recibido la 'Piedra víbora' de Ward");
+			Log_info("Has recibido 3 hierbas Datura");
 			PlaySound("Interface\important_item.wav");
 		break;
 		
@@ -1738,7 +1738,7 @@ case "Europe":
 			link.l1.go = "MOT_Barbie_Escadra";
 			
 			AddItems(pchar, "gold_dublon", 40);
-			Log_info("You've received 40 doubloons");
+			Log_info("Has recibido 40 doblones");
 			PlaySound("Interface\important_item.wav");
 			AddCharacterExpToSkill(pchar, "Leadership", 20);
 			AddCharacterExpToSkill(pchar, "Commerce", 20);
@@ -1808,7 +1808,7 @@ case "Europe":
 				dialog.text = "Gracias por tu escolta ejemplar, Capitán. Me complace que no hayamos encontrado incidentes. Aquí está tu pago - cuarenta doblones en su totalidad.";
 				link.l1 = "Un placer hacer negocios con usted, Monsieur. Ahora, si me disculpa, tengo mucho que atender.";
 				AddItems(pchar, "gold_dublon", 40);
-				Log_info("You've received 40 doubloons");
+				Log_info("Has recibido 40 doblones");
 				PlaySound("Interface\important_item.wav");
 			}
 			link.l1.go = "MOT_Barbie_102";
@@ -1841,7 +1841,7 @@ case "Europe":
 		break;
 		
 		case "MOT_Barbie_107":
-			dialog.text = "Yes. Unfortunately, I had a falling out with Santiago smugglers last year. I had nearly forgotten about it, but these individuals maintain close connections and long memories. Here's a piece of advice: avoid incensing them and reneging on deals; it's a situation you won't rectify later.";
+			dialog.text = "Sí. Por desgracia, el año pasado tuve un desencuentro con los contrabandistas de Santiago. Casi lo había olvidado, pero estos individuos mantienen vínculos estrechos y una gran memoria. Un consejo: evite indignarlos e incumplir los tratos; es una situación que no podrá rectificar más adelante.";
 			link.l1 = "Gracias, pero el contrabando no me interesa.";
 			link.l1.go = "MOT_Barbie_108";
 		break;
@@ -1874,7 +1874,7 @@ case "Europe":
 			link.l1.go = "MOT_Barbie_ContraSoglasen_2";
 			AddCharacterGoodsSimple(pchar, GOOD_ROPES, 30);
 			AddMoneyToCharacter(pchar, -10000);
-			Log_info("You've received 30 ropes");
+			Log_info("Has recibido 30 cuerdas");
 			PlaySound("Interface\important_item.wav");
 		break;
 		
@@ -1903,7 +1903,7 @@ case "Europe":
 				link.l1.go = "MOT_Barbie_ContraSoglasen_2";
 				AddCharacterGoodsSimple(pchar, GOOD_ROPES, 30);
 				AddMoneyToCharacter(pchar, -7000);
-				Log_info("You've received 30 ropes");
+				Log_info("Has recibido 30 cuerdas");
 				PlaySound("Interface\important_item.wav");
 			}
 			else
@@ -2728,7 +2728,7 @@ case "Europe":
 			AddCharacterExpToSkill(pchar, "Repair", 20);
 			AddMoneyToCharacter(pchar, -1000);
 			GiveItem2Character(PChar, "obereg_1");
-			Log_info("You have received Amulet 'Teredo'");
+			Log_info("Has recibido el amuleto 'Teredo'.");
 			LAi_SetCitizenType(npchar);
 			LAi_CharacterDisableDialog(npchar);
 		break;

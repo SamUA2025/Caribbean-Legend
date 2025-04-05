@@ -333,7 +333,7 @@ A diferencia de las armas cuerpo a cuerpo, las armas de fuego ofrecen una mayor 
 
 Mushket_controlsimg1 {Inventario}
 
-CCameraControl{¡Ahoy!}
+CameraControl{¡Ahoy!}
 CameraControl_descr
 {
 Bienvenido al Modo Historia.  

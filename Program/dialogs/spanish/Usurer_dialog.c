@@ -260,7 +260,7 @@ void ProcessDialogEvent()
 			}
 			if (CheckAttribute(pchar, "GenQuest.Noblelombard.Giveregard") && npchar.city == pchar.GenQuest.Noblelombard.City)
 			{
-				link.l11 = "Tuvimos una reunión hace tres meses y hablamos sobre la reliquia de un hombre. Su nombre era "+pchar.GenQuest.Noblelombard.Name+". ¿Recuerdas eso? Tuvo que abrir un depósito a mi nombre. La suma es "+FindRussianMoneyString(sti(pchar.GenQuest.Noblelombard.Regard))+"Got it. Please provide the text you need translated.";
+				link.l11 = "Tuvimos una reunión hace tres meses y hablamos sobre la reliquia de un hombre. Su nombre era "+pchar.GenQuest.Noblelombard.Name+". ¿Recuerdas eso? Tuvo que abrir un depósito a mi nombre. La suma es "+FindRussianMoneyString(sti(pchar.GenQuest.Noblelombard.Regard))+"...";
 				link.l11.go = "Noblelombard_5";			
 			}
 			//<-- семейная реликвия
@@ -524,7 +524,7 @@ void ProcessDialogEvent()
 			}
 			if(pchar.questTemp.Slavetrader == "wingalleon" && pchar.questTemp.Slavetrader.UsurerId == npchar.id)
 			{
-				link.l8 = "Понял, готов переводить. Пожалуйста, предоставьте текст для перевода."+npchar.name+", pude interceptar ese llamado 'galeón'.";
+				link.l8 = ""+npchar.name+", pude interceptar ese llamado 'galeón'.";
 				link.l8.go = "Wingalleon";
 				break;
 			}
@@ -542,7 +542,7 @@ void ProcessDialogEvent()
 			}
 			if(pchar.questTemp.Slavetrader == "wincorvette" && pchar.questTemp.Slavetrader.UsurerId == npchar.id)
 			{
-				link.l8 = "Entendido. Подготовьте текст для перевода."+npchar.name+", tu misión está completa. Ese bastardo de Gontier está muerto y su tripulación también.";
+				link.l8 = ""+npchar.name+", tu misión está completa. Ese bastardo de Gontier está muerto y su tripulación también.";
 				link.l8.go = "Wincorvette";
 				break;
 			}
@@ -627,14 +627,14 @@ void ProcessDialogEvent()
 			}
 			if(sti(pchar.questTemp.different.GiveShipLetters.variant) == 1)
 			{
-				s1 = "Well... I know the owner of this ship. He is not a very rich man, but he has some wealth.";
+				s1 = "Bueno... Conozco al dueño de este barco. No es un hombre muy rico, pero tiene algo de riqueza.";
 				dialog.text = s1+"Dicen que es un contrabandista exitoso. ¿Eso es lo que querías escuchar?";
 				link.l1 = "Parece que sí...";
 				link.l1.go = "ShipLetters_Usurer2_2";
 			}
 			if(sti(pchar.questTemp.different.GiveShipLetters.variant) == 2)
 			{
-				s1 = "Well... I am not sure that I can congratulate you for your found.";
+				s1 = "Bueno... No estoy seguro de poder felicitarle por su hallazgo.";
 				dialog.text = s1+"Estos documentos están firmados para nuestro barco de patrulla colonial y su capitán es conocido por sus fuertes principios.";
 				link.l1 = "¿Una patrulla? ¿Bajo el mando del comandante?";
 				link.l1.go = "ShipLetters_Usurer2_3";
@@ -654,7 +654,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "ShipLetters_Usurer2_3":
-			s1 = "Exactly. Our smugglers are bearing a grudge against this captain by the way.";
+			s1 = "Exactamente. Por cierto, nuestros contrabandistas le guardan rencor a ese capitán.";
 			dialog.text = s1+"Y como mencioné antes, el dueño del papel es un hombre de principios y realmente no le gustan los crímenes locales.";
 			link.l1 = "Ya veo. ¡Mi gratitud!";
 			link.l1.go = "exit";		
@@ -1141,7 +1141,7 @@ void ProcessDialogEvent()
 		case "deposit_dub":
 			dialog.text = LinkRandPhrase("¡Veo a un hombre sabio! ¿Qué suma le gustaría invertir?","Bien. Confía en mí, esta suma te esperará aquí a salvo y con todos tus intereses.","Veo que sabes lo que realmente importa en esta vida. ¿Cuánto te gustaría invertir?");
 			link.l1.edit = 3;
-			link.l1 = "Entendido. ¿Hay какие-нибудь другие тексты, которые нужно перевести?";	
+			link.l1 = "";	
 			Link.l1.go = "result_dub";
 		break;
 		
@@ -1684,7 +1684,7 @@ void ProcessDialogEvent()
 		break;
 			
 		case "Yestatue_1":
-			Log_Info("You gave a talisman");
+			Log_Info("Le diste un talismán");
 			PlaySound("interface\important_item.wav");
 			dialog.text = "Vaya-vaya... Así es. Escucha, "+pchar.name+", véndemelo. Estoy dispuesto a pagar cien mil pesos.";
 			link.l1 = "¿Cien mil? Hm.. Estoy de acuerdo. ¡Ahí tienes!";
@@ -1715,7 +1715,7 @@ void ProcessDialogEvent()
 			link.l1 = "Nos vemos, "+npchar.name+".";
 			link.l1.go = "exit";
 			TakeNItems(pchar, "cirass7", 1);
-			Log_Info("You have received a Brigandine");
+			Log_Info("Has recibido una Brigandine");
 			PlaySound("interface\important_item.wav");
 			SaveCurrentQuestDateParam("pchar.questTemp.Slavetrader_wait_1");
 			pchar.questTemp.Slavetrader = "wait_1";
@@ -1726,7 +1726,7 @@ void ProcessDialogEvent()
 			link.l1 = "Adiós.";
 			link.l1.go = "exit";
 			TakeNItems(pchar, "talisman8", 1);
-			Log_Info("You have received a talisman");
+			Log_Info("Has recibido un talismán");
 			PlaySound("interface\important_item.wav");
 			SaveCurrentQuestDateParam("pchar.questTemp.Slavetrader_wait_1");
 			pchar.questTemp.Slavetrader = "wait_1";
@@ -2057,7 +2057,7 @@ void ProcessDialogEvent()
 			link.l1 = "Entiendo.";
 			link.l1.go = "exit";
 			SlavetraderGalleonInWorld();
-			if(bImCasual) NewGameTip("Exploration mode: timer is not disabled. Meet the deadline!");
+			if(bImCasual) NewGameTip("¡Modo exploración: el temporizador no está desactivado. Cumple el plazo!");
 			SetFunctionTimerCondition("Slavetrader_SlaveGalleonOver", 0, 0, 20, false);
 			pchar.questTemp.Slavetrader = "wait1";
 			AddQuestRecord("Slavetrader", "18");
@@ -2127,7 +2127,7 @@ void ProcessDialogEvent()
 			
 		case "Wingalleon_yes_1":
 			TakeNItems(pchar, "chest", 15);
-			Log_Info("You've received credit chests");
+			Log_Info("Has recibido unos cofres");
 			PlaySound("interface\important_item.wav");
 			SaveCurrentQuestDateParam("pchar.questTemp.Slavetrader_wait_4");
 			pchar.questTemp.Slavetrader = "wait_4";
@@ -2176,7 +2176,7 @@ void ProcessDialogEvent()
 			link.l1 = "Bien. ¿Y eso es todo lo que te interesa...";
 			link.l1.go = "BG_PF";
 			AddMoneyToCharacter(pchar, 30000);
-			Log_Info("You've given a golden knife");
+			Log_Info("Has entregado un cuchillo de oro");
 			PlaySound("interface\important_item.wav");
 			RemoveItems(PChar, "talisman16", 1);
 		break;
@@ -2185,8 +2185,8 @@ void ProcessDialogEvent()
 			dialog.text = "¡Espléndido! Aquí tienes tu amuleto y este cuchillo indio es mío ahora.";
 			link.l1 = "Bien. Y eso es todo en lo que estás interesado...";
 			link.l1.go = "BG_PF";
-			Log_Info("You've given a golden knife");
-			Log_Info("You've received an amulet of 'Ehecatl'");
+			Log_Info("Has entregado un cuchillo de oro");
+			Log_Info("Has recibido un amuleto de 'Ehecatl'");
 			PlaySound("interface\important_item.wav");
 			RemoveItems(PChar, "talisman16", 1);
 			TakeNItems(pchar, "obereg_9", 1);
@@ -2228,7 +2228,7 @@ void ProcessDialogEvent()
 			link.l1 = "Bien. Me siento bien con nuestro trato.";
 			link.l1.go = "FindRat_3";
 			AddMoneyToCharacter(pchar, 20000);
-			Log_Info("You've given a magic bone");
+			Log_Info("Has entregado un hueso mágico");
 			PlaySound("interface\important_item.wav");
 			RemoveItems(PChar, "mineral31", 1);
 		break;
@@ -2237,8 +2237,8 @@ void ProcessDialogEvent()
 			dialog.text = "¡Espléndido! Aquí está tu amuleto y este hueso es mío ahora.";
 			link.l1 = "Excelente. Me siento bien con nuestro trato.";
 			link.l1.go = "FindRat_3";
-			Log_Info("You've given a magic bone");
-			Log_Info("I've received an amulet of 'Cimaruta'");
+			Log_Info("Has dado un hueso mágico");
+			Log_Info("He recibido un amuleto de 'Cimaruta'");
 			PlaySound("interface\important_item.wav");
 			RemoveItems(PChar, "mineral31", 1);
 			TakeNItems(pchar, "amulet_11", 1);
@@ -2306,7 +2306,7 @@ void ProcessDialogEvent()
 			dialog.text = "Aparte, aquí tienes 100 000 pesos como tu pago principal y 50 000 como compensación por tus propios gastos.";
 			link.l1 = "Gracias, "+npchar.name+"Reitero que es un verdadero placer tratar con usted.";
 			link.l1.go = "Wincorvette_3";
-			Log_Info("You've received an excellent spyglass");
+			Log_Info("Has recibido un excelente catalejo");
 			PlaySound("interface\important_item.wav");
 			TakeNItems(pchar, "spyglass4", 1);
 		break;
@@ -2450,7 +2450,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "Havana_Fort_yes_2":
-			dialog.text = "Hola, Amigo."+pchar.name+", por favor, no. Somos socios y no hay lugar para trampas y desconfianza entre nosotros. Te prometí muchas monedas y las has recibido. Te prometí tareas interesantes y también las has recibido. Siempre he estado compensando tus costos incluso en los días más oscuros para mi negocio. ¿Acaso no he cumplido siempre mi palabra?";
+			dialog.text = ""+pchar.name+", por favor, no. Somos socios y no hay lugar para trampas y desconfianza entre nosotros. Te prometí muchas monedas y las has recibido. Te prometí tareas interesantes y también las has recibido. Siempre he estado compensando tus costos incluso en los días más oscuros para mi negocio. ¿Acaso no he cumplido siempre mi palabra?";
 			link.l1 = "Hmm... No... Solo quiero que me paguen, eso es todo.";
 			link.l1.go = "Havana_Fort_yes_3";
 		break;
@@ -2672,7 +2672,7 @@ void ProcessDialogEvent()
 		break;
 		
 		case "FMQG_x1":
-			dialog.text = "Hola, amigo.";
+			dialog.text = "";
 			link.l1 = "Así que te sugiero rezar por mi buena salud en la iglesia cada mañana en lugar de enviar asesinos a por mi vida. ¡Una última advertencia! Haz un movimiento contra mí y estás jodido. ¿Entendido? Bien. Respira hondo y sigue contando tus doblones.";
 			link.l1.go = "FMQG_x2";
 		break;
@@ -2910,7 +2910,7 @@ void SlavetraderGalleonInWorld()
 	sld.cityShore = pchar.questTemp.Slavetrader.Island.Shore;
 	sld.quest.targetCity = "Santiago"; //определим колонию, в бухту которой он придёт
 	sld.quest.targetShore = GetIslandRandomShoreId(GetArealByCityName(sld.quest.targetCity));
-	//Log_TestInfo("Captain of the galleon sailed away from " + sld.city + "and heading to " + sld.quest.targetShore);
+	//Log_TestInfo("El capitán del galeón zarpó de " + sld.city + " y se dirige a " + sld.quest.targetShore);
 	//==> на карту
 	sld.mapEnc.type = "trade";
 	//выбор типа кораблика на карте
