@@ -56,6 +56,7 @@ void InitInterface_RI(string iniName, ref pTrader, int mode)
 	SetEventHandler("evntDoPostExit","DoPostExit",0);
 
 	SetEventHandler("OnTableClick", "OnTableClick", 0);
+	SetEventHandler("OnHeaderClick", "OnHeaderClick", 0);
 	SetEventHandler("MouseRClickUP","EndTooltip",0);
 	SetEventHandler("ShowHelpHint", "ShowHelpHint", 0);
 	SetEventHandler("ShowItemInfo", "ShowItemInfo", 0);
@@ -140,6 +141,7 @@ void IDoExit(int exitCode)
 	DelEventHandler("evntDoPostExit","DoPostExit");
 
 	DelEventHandler("OnTableClick", "OnTableClick");
+	DelEventHandler("OnHeaderClick", "OnHeaderClick");
 	DelEventHandler("MouseRClickUP","EndTooltip");
 	DelEventHandler("ShowHelpHint", "ShowHelpHint");
 	DelEventHandler("ShowItemInfo", "ShowItemInfo");
@@ -520,6 +522,12 @@ void OnTableClick()
 
 	string sRow = "tr" + (iRow + 1);
     Table_UpdateWindow(sControl);
+}
+
+void OnHeaderClick()
+{
+	string sNode = GetEventData();
+	int iCol = GetEventData();
 }
 
 void ChangePosTable()

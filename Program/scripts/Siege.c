@@ -77,6 +77,11 @@ bool CheckQuestColonyList(string sColony)
 		ref rCity = GetColonyRefByID(sColony);
         if (sti(rCity.nation) == SPAIN) return false;
 	}
+	if(CheckAttribute(pchar, "questTemp.LadyBeth") && CharacterIsAlive("LadyBeth_cap"))
+	{
+		bool isLBCity = (sColony == "BasTer") || (sColony == "FortFrance") || (sColony == "Charles") || (sColony == "Tortuga");
+		if(isLBCity) return false;
+	}
 	
     if (CheckAttribute(pchar, "questTemp.State") && pchar.questTemp.State == "EndOfQuestLine") return true;
 

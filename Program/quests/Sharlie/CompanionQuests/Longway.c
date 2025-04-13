@@ -3221,7 +3221,7 @@ bool Longway_QuestComplete(string sQuestName, string qname)
 			sld.dialog.filename = "Quest\CompanionQuests\Longway.c";
 			sld.dialog.currentnode = "PZ_Tichingitu_11";
 			LAi_SetActorType(sld);
-			sld.MusketerDistance = 10.0;
+			//sld.MusketerDistance = 10;
 			return true;
 		}
 		sld = GetCharacter(NPC_GenerateCharacter("PZ_RandomSailor", "citiz_39", "man", "man", sti(pchar.rank), pchar.nation, 0, true, "soldier"));

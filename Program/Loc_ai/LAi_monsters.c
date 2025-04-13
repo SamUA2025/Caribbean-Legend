@@ -9,10 +9,10 @@ void LAi_GenerateFantomFromMe(aref chr)
 	if(LAi_CharacterIsReincarnation(chr) == false) return;
 	//Проверяем какую модельку использовать для перерождения
 	bool isGen = LAi_CharacterReincarnationMode(chr);
-	if(CheckAttribute(chr, "model") == false) isGen = true;
-	if(CheckAttribute(chr, "model.animation") == false) isGen = true;
-	if(chr.model == "") isGen = true;
-	if(chr.model.animation == "") isGen = true;
+	if(!CheckAttribute(chr, "model") || !CheckAttribute(chr, "model.animation") || chr.model == "" || chr.model.animation == "")
+    {
+        isGen = true;
+    }
 	string model, ani;
 	if(isGen)
 	{
@@ -41,13 +41,12 @@ void LAi_GenerateFantomFromMe(aref chr)
 		{
 			ani = fantoms.(m);
 		}
-	}else{
+	}
+    else
+    {
 		model = chr.model;
 		ani = chr.model.animation;
 	}
-	//Сохраняем параметры персонажа
-	object tmp;
-	CopyAttributes(&tmp, chr);
 	//Создаём фантома	
 	if(ani == "mushketer")
 	{
@@ -79,7 +78,7 @@ void LAi_GenerateFantomFromMe(aref chr)
 		ref fnt = LAi_CreateFantomCharacterEx(model, ani, LAi_CharacterReincarnationGroup(chr), "");
 		string curidx = fnt.index;
 		//Устанавливаем параметры предыдущего персонажа
-		CopyAttributes(fnt, &tmp);
+        CopyAttributes(fnt, chr);
 		// boal оружие дать! 19.01.2004 -->
 		// фантомы точные клоны SetFantomParam(fnt);  
 		//--> eddy. шаг на увеличение ранга фантома.
@@ -107,7 +106,7 @@ void LAi_GenerateFantomFromMe(aref chr)
 		if(!CheckAttribute(fnt, "chr_ai.type")) fnt.chr_ai.type = "";
 		string chrtype = fnt.chr_ai.type;
 		SetRandomNameToCharacter(fnt);
-		fnt.id = tmp.id;
+		fnt.id = chr.id;
 		fnt.index = curidx;
 		LAi_tmpl_stay_InitTemplate(fnt);
 		fnt.chr_ai.type = "";

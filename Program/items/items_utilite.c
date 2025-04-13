@@ -857,11 +857,12 @@ int GetItemIndex(string _ItemID)
 
 ref ItemsFromID(string _Items)
 {
-	if(GetItemIndex(_Items) == -1) 
+    int idx = GetItemIndex(_Items);
+	if(idx == -1) 
 	{
 		trace("Bad index for item : " + _Items);
 	}
-	return &items[GetItemIndex(_Items)];
+	return &items[idx];
 }
 
 void ChangeItemDescribe(string _Items, string _Describe)

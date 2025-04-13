@@ -475,20 +475,9 @@ void Items_HideItem(int itemN)
 
 int Items_FindItem(string itemID, ref itemARef)
 {
-	aref curItem;
-	
-	for(int i = 0; i < TOTAL_ITEMS; i++)
-	{
-		makearef(curItem,Items[i]);
-		
-		if(CheckAttribute(curItem, "ID") && curItem.id == itemID)
-		{
-			itemARef = curItem;
-			return i;
-		}
-	}
-	
-	return -1;
+	int idx = FindItem(itemID);
+    if (idx >= 0) makearef(itemARef,Items[idx]);
+	return idx;
 }
 
 int Items_FindItemIdx(string itemID) // нужно для поиска только номера
@@ -1039,4 +1028,4 @@ void RemoveItemFromLocation(string location, string locator) {
 	DeleteAttribute(&locations[index], "itemShow." + locator);
 }
 
-object g_TmpModelVariable; // код от к3, в скриптах нет вообще, есть проверка в ядре
+object g_TmpModelVariable; // TO_DO: код от к3, в скриптах нет вообще, есть проверка в ядре

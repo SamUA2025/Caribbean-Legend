@@ -61,6 +61,7 @@ void InitInterface_R(string iniName, ref pStore)
 	SetEventHandler("evntDoPostExit","DoPostExit",0);
 
 	SetEventHandler("OnTableClick", "OnTableClick", 0);
+	SetEventHandler("OnHeaderClick", "OnHeaderClick", 0);
 	SetEventHandler("MouseRClickUP","EndTooltip",0);
 	SetEventHandler("ShowItemInfo", "ShowItemInfo", 0);
 	SetEventHandler("TableSelectChange", "CS_TableSelectChange", 0);
@@ -110,6 +111,7 @@ void IDoExit(int exitCode)
 	DelEventHandler("evntDoPostExit","DoPostExit");
 
 	DelEventHandler("OnTableClick", "OnTableClick");
+	DelEventHandler("OnHeaderClick", "OnHeaderClick");
 	DelEventHandler("MouseRClickUP","EndTooltip");
 	DelEventHandler("ShowItemInfo", "ShowItemInfo");
 	DelEventHandler("TableSelectChange", "CS_TableSelectChange");
@@ -270,6 +272,12 @@ void OnTableClick()
 	XI_WindowShow("QTY_WINDOW", true);
 	bShowChangeWin = true;
 	SetNodeUsing("QTY_BUYSELL_BUTTON", false);	
+}
+
+void OnHeaderClick()
+{
+	string sNode = GetEventData();
+	int iCol = GetEventData();
 }
 
 void ChangePosTable()

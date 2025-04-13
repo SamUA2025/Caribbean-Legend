@@ -964,13 +964,14 @@ void FillTableOther()
 	int     i;
 	string  row, skillName;
     int     diff, skillVal;
+
     // boal оптимизация скилов -->
     DelBakSkillAttr(xi_refCharacter);
     ClearCharacterExpRate(xi_refCharacter);
     RefreshCharacterSkillExpRate(xi_refCharacter);
-
     SetEnergyToCharacter(xi_refCharacter);
     // boal оптимизация скилов <--
+
 	////  остальное
 	GameInterface.TABLE_OTHER.select = 0;
 	GameInterface.TABLE_OTHER.hr.td1.str = "";
@@ -1782,13 +1783,14 @@ void FillItemsTable(int _mode) // 1 - все 2 - снаряжение 3 - эли
 	
 	// Заполним вещами от нас
 	makearef(rootItems, xi_refCharacter.Items);
-    for (i=0; i<GetAttributesNum(rootItems); i++)
+    int num = GetAttributesNum(rootItems);
+    for (i=0; i<num; i++)
     {
 		curItem = GetAttributeN(rootItems, i);
 		groupID = "";
 		itemType = "";
 
-		if (Items_FindItem(GetAttributeName(curItem), &arItem)>=0 )
+		if (Items_FindItem(GetAttributeName(curItem), &arItem) >= 0)
 		{
 			row = "tr" + n;
 			sGood = arItem.id;
@@ -1907,10 +1909,9 @@ void FillItemsTable(int _mode) // 1 - все 2 - снаряжение 3 - эли
 
 void FillItemsSelected() 
 {
-	int    i, picIndex;
-	string sGood, sSlot, remainTime;
-	int iLastGunItem;
-	ref rLastGunItem;
+    aref arEquip, curItem;
+	string sItem, sSlot, remainTime;
+    int i, picIndex, num, idx;
 	ref rAmmoGunItem;
 	int nColor1 = argb(155,128,128,128);
 	int nColor2 = argb(0,128,128,128);
@@ -1955,198 +1956,202 @@ void FillItemsSelected()
 	SetNodeUsing("SLOT_PIC_2", false);
 	SetNodeUsing("SLOT_PIC_3", false);
 	SetNodeUsing("SLOT_PIC_6", false);
-		
-    for (i = 0; i< TOTAL_ITEMS; i++)
-	{
-		if(!CheckAttribute(&Items[i], "ID"))
-		{
-			continue;
-		}
-		
-		sGood = Items[i].id;
-		
-		if (GetCharacterItem(xi_refCharacter, sGood) > 0)
-		{		
-			/// экипировка
-			if (IsEquipCharacterByItem(xi_refCharacter, sGood))
-			{
-				switch (Items[i].groupID) 
-				{
-					case BLADE_ITEM_TYPE:
-						SetNewGroupPicture("ITEM_1", Items[i].picTexture, "itm" + Items[i].picIndex);
-						SetNodeUsing("ITEM_1" , true);
-						sColor1 = nColor2;
-					break;
-					case GUN_ITEM_TYPE:
-						if (CheckAttribute(xi_refCharacter,"chr_ai.gun.bullet"))
-						{
-							rAmmoGunItem = ItemsFromID(xi_refCharacter.chr_ai.gun.bullet);
-							SetNewGroupPicture("ITEM_2B", rAmmoGunItem.picTexture, "itm" + rAmmoGunItem.picIndex);
-							if (rAmmoGunItem.id != GetAmmoPortrait(GetCharacterEquipByGroup(xi_refCharacter, GUN_ITEM_TYPE)))
-							{
-								SetNodeUsing("TABBTNSLOT_2B", true);
-								SetNodeUsing("ITEM_2B", true);
-							}
-						}
-						
-						SetNewGroupPicture("ITEM_2", Items[i].picTexture, "itm" + Items[i].picIndex);
-						SetNodeUsing("TABBTNSLOT_2B", true);
-						SetNodeUsing("ITEM_2", true);
-						sColor2 = nColor2;
-					break;
-					case MUSKET_ITEM_TYPE:
-						if (CheckAttribute(xi_refCharacter,"chr_ai.musket.bullet"))
-						{
-							rAmmogunItem = ItemsFromID(xi_refCharacter.chr_ai.musket.bullet);
-							SetNewGroupPicture("ITEM_5B", rAmmogunItem.picTexture, "itm" + rAmmogunItem.picIndex);
-							if (rAmmoGunItem.id != GetAmmoPortrait(GetCharacterEquipByGroup(xi_refCharacter, MUSKET_ITEM_TYPE)))
-							{
-								SetNodeUsing("TABBTNSLOT_5B", true);
-								SetNodeUsing("ITEM_5B", true);
-							}
-						}
-						SetNewGroupPicture("ITEM_5", Items[i].picTexture, "itm" + Items[i].picIndex);
-						SetNodeUsing("TABBTNSLOT_5B", true);
-						SetNodeUsing("ITEM_5", true);
-						sColor5 = nColor2;
-					break;
-					case SPYGLASS_ITEM_TYPE:
-						SetNewGroupPicture("ITEM_3", Items[i].picTexture, "itm" + Items[i].picIndex);
-						SetNodeUsing("ITEM_3" , true);
-						sColor3 = nColor2;
-					break;
-					case CIRASS_ITEM_TYPE:
-						SetNewGroupPicture("ITEM_4", Items[i].picTexture, "itm" + Items[i].picIndex);
-						SetNodeUsing("ITEM_4" , true);
-						sColor4 = nColor2;
-					break;
-					case TALISMAN_ITEM_TYPE:
-						SetNewGroupPicture("ITEM_6", Items[i].picTexture, "itm" + Items[i].picIndex);
-						SetNodeUsing("ITEM_6" , true);
-						sColor6 = nColor2;
-						if (IsEquipCharacterByArtefact(xi_refCharacter, "talisman17"))
-						{
-							ref Liber = ItemsFromID("talisman17");
-							int iQBonus = 0;
-							if(CheckAttribute(Liber, "QBonus"))
-							{
-								iQBonus = sti(Liber.QBonus);
-							}
-							picIndex = iQBonus*2; // у картинки 10 делений
-							SetNewGroupPicture("SLOT_PIC_6", "ITEMS_USE10", "items_use" + picIndex);
-							SetNodeUsing("SLOT_PIC_6", true);
-							SetFormatedText("SLOT6_TEXT", iQBonus +"/5");
-							SetNodeUsing("SLOT6_TEXT", true);
-						}
-						//TODO переписать в один метод (расставить предметам QBonus в квестах)
-						if (IsEquipCharacterByArtefact(xi_refCharacter, "talisman18"))
-						{
-							ref Articles = ItemsFromID("talisman18");
-							int QBonus = 0;
-							if(CheckAttribute(Articles, "QBonus"))
-							{
-								QBonus = sti(Articles.QBonus);
-							}
-							picIndex = QBonus;
-							SetNewGroupPicture("SLOT_PIC_6", "ITEMS_USE10", "items_use" + picIndex);
-							SetNodeUsing("SLOT_PIC_6", true);
-							SetFormatedText("SLOT6_TEXT", QBonus +"/10");
-							SetNodeUsing("SLOT6_TEXT", true);
-						}
-					break;
-					case TOOL_ITEM_TYPE:
-						SetNewGroupPicture("ITEM_7", Items[i].picTexture, "itm" + Items[i].picIndex);
-						SetNodeUsing("ITEM_7" , true);
-						sColor7 = nColor2;
-					break;
-					case LANTERN_ITEM_TYPE:
-						SetNewGroupPicture("ITEM_4L", Items[i].picTexture, "itm" + Items[i].picIndex);
-						SetNodeUsing("ITEM_4L", true);
-						SetNodeUsing("TABBTNSLOT_4L", true);
-					break;
-					case HAT_ITEM_TYPE:
-						SetNewGroupPicture("ITEM_11", Items[i].picTexture, "itm" + Items[i].picIndex);
-						SetNodeUsing("ITEM_11", true);
-						SetNodeUsing("TABBTNSLOT_11", true);
-					break;
-				}
-			}
-			if(CheckAttribute(&Items[i], "groupID") && Items[i].groupID == ITEM_SLOT_TYPE && IsEquipCharacterByArtefact(xi_refCharacter, sGood))
-			{
-				sSlot = GetCharacterEquipSlot(xi_refCharacter, sGood);								
-				switch (sSlot)
-				{
-					case ITEM_SLOT1_TYPE:
-						SetNewGroupPicture("SLOT_ITEM_1", Items[i].picTexture, "itm" + Items[i].picIndex);
-						SetNodeUsing("SLOT_ITEM_1" , true);
-						sColor8 = nColor2;
-						remainTime = GetCharacterSlotRemainTime(xi_refCharacter, ITEM_SLOT1_TYPE);
-						if(CheckAttribute(&Items[i],"time") && Items[i].time > -1 && remainTime != "")
-						{
-							SetFormatedText("SLOT1_TEXT", remainTime + "/" + Items[i].time);
-							SetNodeUsing("SLOT1_TEXT", true);	
-							SetVAligmentFormatedText("SLOT1_TEXT");	
-						}	
 
-						picIndex = GetCharacterEquipSlotUsedPicture(xi_refCharacter, ITEM_SLOT1_TYPE);
-						if(picIndex > 0) 
-						{
-							SetNewGroupPicture("SLOT_PIC_1", "ITEMS_USE", "items_use" + picIndex);
-							SetNodeUsing("SLOT_PIC_1", true);
-						}
-					break;
-					case ITEM_SLOT2_TYPE:
-						SetNewGroupPicture("SLOT_ITEM_2", Items[i].picTexture, "itm" + Items[i].picIndex);
-						SetNodeUsing("SLOT_ITEM_2" , true);
-						sColor9 = nColor2;
-						remainTime = GetCharacterSlotRemainTime(xi_refCharacter, ITEM_SLOT2_TYPE);
-						if(CheckAttribute(&Items[i],"time") && Items[i].time > -1 && remainTime != "")
-						{
-							SetFormatedText("SLOT2_TEXT", remainTime + "/" + Items[i].time);
-							SetNodeUsing("SLOT2_TEXT", true);	
-							SetVAligmentFormatedText("SLOT2_TEXT");		
-						}	
-						
-						picIndex = GetCharacterEquipSlotUsedPicture(xi_refCharacter, ITEM_SLOT2_TYPE);
-						if(picIndex > 0) 
-						{
-							SetNewGroupPicture("SLOT_PIC_2", "ITEMS_USE", "items_use" + picIndex);
-							SetNodeUsing("SLOT_PIC_2", true);	
-						}
-					break;
-					case ITEM_SLOT3_TYPE:
-						SetNewGroupPicture("SLOT_ITEM_3", Items[i].picTexture, "itm" + Items[i].picIndex);
-						SetNodeUsing("SLOT_ITEM_3" , true);
-						sColor10 = nColor2;
-						remainTime = GetCharacterSlotRemainTime(xi_refCharacter, ITEM_SLOT3_TYPE);
-						if(CheckAttribute(&Items[i],"time") && Items[i].time > -1 && remainTime != "")
-						{
-							SetFormatedText("SLOT3_TEXT", remainTime + "/" + Items[i].time);
-							SetNodeUsing("SLOT3_TEXT", true);	
-							SetVAligmentFormatedText("SLOT3_TEXT");		
-						}	
-						
-						picIndex = GetCharacterEquipSlotUsedPicture(xi_refCharacter, ITEM_SLOT3_TYPE);
-						if(picIndex > 0) 
-						{
-							SetNewGroupPicture("SLOT_PIC_3", "ITEMS_USE", "items_use" + picIndex);
-							SetNodeUsing("SLOT_PIC_3", true);	
-						}
-					break;
-				}				
-			}
-		}			
-		SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 0, sColor1);
-		SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 1, sColor2);
-		SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 2, sColor3);
-		SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 3, sColor4);
-		SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 4, sColor5);
-		SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 5, sColor6);
-		SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 6, sColor7);
-		SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 7, sColor8);
-		SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 8, sColor9);
-		SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 9, sColor10);
+    makearef(arEquip, xi_refCharacter.equip);
+    num = GetAttributesNum(arEquip);
+    for (i=0; i<num; i++)
+	{
+		sItem = GetAttributeValue(GetAttributeN(arEquip,i));
+        //if(sItem == "") continue;
+        idx = FindItem(sItem);
+        if (idx >= 0) makearef(curItem, Items[idx]);
+        else continue;
+
+        switch (curItem.groupID) 
+        {
+            case BLADE_ITEM_TYPE:
+                SetNewGroupPicture("ITEM_1", curItem.picTexture, "itm" + curItem.picIndex);
+                SetNodeUsing("ITEM_1" , true);
+                sColor1 = nColor2;
+            break;
+            case GUN_ITEM_TYPE:
+                if (CheckAttribute(xi_refCharacter,"chr_ai.gun.bullet"))
+                {
+                    rAmmoGunItem = ItemsFromID(xi_refCharacter.chr_ai.gun.bullet);
+                    SetNewGroupPicture("ITEM_2B", rAmmoGunItem.picTexture, "itm" + rAmmoGunItem.picIndex);
+                    if (rAmmoGunItem.id != GetAmmoPortrait(GetCharacterEquipByGroup(xi_refCharacter, GUN_ITEM_TYPE)))
+                    {
+                        SetNodeUsing("TABBTNSLOT_2B", true);
+                        SetNodeUsing("ITEM_2B", true);
+                    }
+                }
+                
+                SetNewGroupPicture("ITEM_2", curItem.picTexture, "itm" + curItem.picIndex);
+                SetNodeUsing("TABBTNSLOT_2B", true);
+                SetNodeUsing("ITEM_2", true);
+                sColor2 = nColor2;
+            break;
+            case MUSKET_ITEM_TYPE:
+                if (CheckAttribute(xi_refCharacter,"chr_ai.musket.bullet"))
+                {
+                    rAmmogunItem = ItemsFromID(xi_refCharacter.chr_ai.musket.bullet);
+                    SetNewGroupPicture("ITEM_5B", rAmmogunItem.picTexture, "itm" + rAmmogunItem.picIndex);
+                    if (rAmmoGunItem.id != GetAmmoPortrait(GetCharacterEquipByGroup(xi_refCharacter, MUSKET_ITEM_TYPE)))
+                    {
+                        SetNodeUsing("TABBTNSLOT_5B", true);
+                        SetNodeUsing("ITEM_5B", true);
+                    }
+                }
+                SetNewGroupPicture("ITEM_5", curItem.picTexture, "itm" + curItem.picIndex);
+                SetNodeUsing("TABBTNSLOT_5B", true);
+                SetNodeUsing("ITEM_5", true);
+                sColor5 = nColor2;
+            break;
+            case SPYGLASS_ITEM_TYPE:
+                SetNewGroupPicture("ITEM_3", curItem.picTexture, "itm" + curItem.picIndex);
+                SetNodeUsing("ITEM_3" , true);
+                sColor3 = nColor2;
+            break;
+            case CIRASS_ITEM_TYPE:
+                SetNewGroupPicture("ITEM_4", curItem.picTexture, "itm" + curItem.picIndex);
+                SetNodeUsing("ITEM_4" , true);
+                sColor4 = nColor2;
+            break;
+            case TALISMAN_ITEM_TYPE:
+                SetNewGroupPicture("ITEM_6", curItem.picTexture, "itm" + curItem.picIndex);
+                SetNodeUsing("ITEM_6" , true);
+                sColor6 = nColor2;
+                if (IsEquipCharacterByArtefact(xi_refCharacter, "talisman17"))
+                {
+                    ref Liber = ItemsFromID("talisman17");
+                    int iQBonus = 0;
+                    if(CheckAttribute(Liber, "QBonus"))
+                    {
+                        iQBonus = sti(Liber.QBonus);
+                    }
+                    picIndex = iQBonus*2; // у картинки 10 делений
+                    SetNewGroupPicture("SLOT_PIC_6", "ITEMS_USE10", "items_use" + picIndex);
+                    SetNodeUsing("SLOT_PIC_6", true);
+                    SetFormatedText("SLOT6_TEXT", iQBonus +"/5");
+                    SetNodeUsing("SLOT6_TEXT", true);
+                }
+                //TODO переписать в один метод (расставить предметам QBonus в квестах)
+                if (IsEquipCharacterByArtefact(xi_refCharacter, "talisman18"))
+                {
+                    ref Articles = ItemsFromID("talisman18");
+                    int QBonus = 0;
+                    if(CheckAttribute(Articles, "QBonus"))
+                    {
+                        QBonus = sti(Articles.QBonus);
+                    }
+                    picIndex = QBonus;
+                    SetNewGroupPicture("SLOT_PIC_6", "ITEMS_USE10", "items_use" + picIndex);
+                    SetNodeUsing("SLOT_PIC_6", true);
+                    SetFormatedText("SLOT6_TEXT", QBonus +"/10");
+                    SetNodeUsing("SLOT6_TEXT", true);
+                }
+            break;
+            case TOOL_ITEM_TYPE:
+                SetNewGroupPicture("ITEM_7", curItem.picTexture, "itm" + curItem.picIndex);
+                SetNodeUsing("ITEM_7" , true);
+                sColor7 = nColor2;
+            break;
+            case LANTERN_ITEM_TYPE:
+                SetNewGroupPicture("ITEM_4L", curItem.picTexture, "itm" + curItem.picIndex);
+                SetNodeUsing("ITEM_4L", true);
+                SetNodeUsing("TABBTNSLOT_4L", true);
+            break;
+            case HAT_ITEM_TYPE:
+                SetNewGroupPicture("ITEM_11", curItem.picTexture, "itm" + curItem.picIndex);
+                SetNodeUsing("ITEM_11", true);
+                SetNodeUsing("TABBTNSLOT_11", true);
+            break;
+        }
 	}
+
+    makearef(arEquip, xi_refCharacter.equip_item);
+    num = GetAttributesNum(arEquip);
+    for (i=0; i<num; i++)
+	{
+		sItem = GetAttributeValue(GetAttributeN(arEquip,i));
+        //if(sItem == "") continue;
+        idx = FindItem(sItem);
+        if (idx >= 0) makearef(curItem, Items[idx]);
+        else continue;
+
+        sSlot = GetCharacterEquipSlot(xi_refCharacter, sItem);
+        switch (sSlot)
+        {
+            case ITEM_SLOT1_TYPE:
+                SetNewGroupPicture("SLOT_ITEM_1", curItem.picTexture, "itm" + curItem.picIndex);
+                SetNodeUsing("SLOT_ITEM_1" , true);
+                sColor8 = nColor2;
+                remainTime = GetCharacterSlotRemainTime(xi_refCharacter, ITEM_SLOT1_TYPE);
+                if(CheckAttribute(curItem,"time") && curItem.time > -1 && remainTime != "")
+                {
+                    SetFormatedText("SLOT1_TEXT", remainTime + "/" + curItem.time);
+                    SetNodeUsing("SLOT1_TEXT", true);	
+                    SetVAligmentFormatedText("SLOT1_TEXT");	
+                }	
+
+                picIndex = GetCharacterEquipSlotUsedPicture(xi_refCharacter, ITEM_SLOT1_TYPE);
+                if(picIndex > 0) 
+                {
+                    SetNewGroupPicture("SLOT_PIC_1", "ITEMS_USE", "items_use" + picIndex);
+                    SetNodeUsing("SLOT_PIC_1", true);
+                }
+            break;
+            case ITEM_SLOT2_TYPE:
+                SetNewGroupPicture("SLOT_ITEM_2", curItem.picTexture, "itm" + curItem.picIndex);
+                SetNodeUsing("SLOT_ITEM_2" , true);
+                sColor9 = nColor2;
+                remainTime = GetCharacterSlotRemainTime(xi_refCharacter, ITEM_SLOT2_TYPE);
+                if(CheckAttribute(curItem,"time") && curItem.time > -1 && remainTime != "")
+                {
+                    SetFormatedText("SLOT2_TEXT", remainTime + "/" + curItem.time);
+                    SetNodeUsing("SLOT2_TEXT", true);	
+                    SetVAligmentFormatedText("SLOT2_TEXT");		
+                }	
+                
+                picIndex = GetCharacterEquipSlotUsedPicture(xi_refCharacter, ITEM_SLOT2_TYPE);
+                if(picIndex > 0) 
+                {
+                    SetNewGroupPicture("SLOT_PIC_2", "ITEMS_USE", "items_use" + picIndex);
+                    SetNodeUsing("SLOT_PIC_2", true);	
+                }
+            break;
+            case ITEM_SLOT3_TYPE:
+                SetNewGroupPicture("SLOT_ITEM_3", curItem.picTexture, "itm" + curItem.picIndex);
+                SetNodeUsing("SLOT_ITEM_3" , true);
+                sColor10 = nColor2;
+                remainTime = GetCharacterSlotRemainTime(xi_refCharacter, ITEM_SLOT3_TYPE);
+                if(CheckAttribute(curItem,"time") && curItem.time > -1 && remainTime != "")
+                {
+                    SetFormatedText("SLOT3_TEXT", remainTime + "/" + curItem.time);
+                    SetNodeUsing("SLOT3_TEXT", true);	
+                    SetVAligmentFormatedText("SLOT3_TEXT");		
+                }	
+                
+                picIndex = GetCharacterEquipSlotUsedPicture(xi_refCharacter, ITEM_SLOT3_TYPE);
+                if(picIndex > 0) 
+                {
+                    SetNewGroupPicture("SLOT_PIC_3", "ITEMS_USE", "items_use" + picIndex);
+                    SetNodeUsing("SLOT_PIC_3", true);	
+                }
+            break;
+        }
+	}
+
+    SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 0, sColor1);
+    SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 1, sColor2);
+    SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 2, sColor3);
+    SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 3, sColor4);
+    SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 4, sColor5);
+    SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 5, sColor6);
+    SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 6, sColor7);
+    SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 7, sColor8);
+    SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 8, sColor9);
+    SendMessage( &GameInterface,"lslll",MSG_INTERFACE_MSG_TO_NODE,"EMPTY_ITEMS", 3, 9, sColor10);
 }
 
 void ShowBoxMove()
@@ -2760,7 +2765,7 @@ void EquipPress()
 			        TakeNItems(xi_refCharacter, "map_part1", -1);
 			        TakeNItems(xi_refCharacter, "map_part2", -1);
 			        TakeNItems(pchar, "map_full",   1);
-			        itmRef = &Items[Items_FindItem("map_full", &itmRef)];
+			        itmRef = &Items[FindItem("map_full")];
 			        pchar.GenQuest.TreasureBuild = true;
 			        FillMapForTreasure(itmRef);
 			        SetVariable();

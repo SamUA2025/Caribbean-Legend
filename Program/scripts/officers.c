@@ -217,38 +217,43 @@ void OfficersReactionResult()
 
 bool isOfficerInShip(ref _chr, bool _withBoard)
 {
-	if(sti(pchar.Fellows.Passengers.navigator) == sti(_chr.index))
+    int idx = sti(_chr.index);
+
+	if(sti(pchar.Fellows.Passengers.navigator) == idx)
 	{
   		return true;
 	}
 
-	if(sti(pchar.Fellows.Passengers.boatswain) == sti(_chr.index))
+	if(sti(pchar.Fellows.Passengers.boatswain) == idx)
 	{
 		return true;
 	}
 
-	if(sti(pchar.Fellows.Passengers.cannoner) == sti(_chr.index))
+	if(sti(pchar.Fellows.Passengers.cannoner) == idx)
 	{
   		return true;
 	}
 
-	if(sti(pchar.Fellows.Passengers.doctor) == sti(_chr.index))
+	if(sti(pchar.Fellows.Passengers.doctor) == idx)
 	{
   		return true;
 	}
 
-	if(sti(pchar.Fellows.Passengers.carpenter) == sti(_chr.index))
+	if(sti(pchar.Fellows.Passengers.carpenter) == idx)
 	{
   		return true;
 	}
-    if(sti(pchar.Fellows.Passengers.treasurer) == sti(_chr.index))
+
+    if(sti(pchar.Fellows.Passengers.treasurer) == idx)
 	{
   		return true;
 	}
+
 	if(_withBoard && IsOfficer(_chr))
 	{
 		return true;
 	}
+
 	return false;
 }
 // метод увольняет офицера - название левое, наследие к3

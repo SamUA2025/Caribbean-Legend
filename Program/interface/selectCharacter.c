@@ -47,6 +47,7 @@ void InitInterface(string iniName)
 	SetEventHandler("MouseRClickUP","HideInfo",0);
 	SetEventHandler("ShowInfo","ShowInfo",0);
 	SetEventHandler("OnTableClick", "OnTableClick", 0);
+	SetEventHandler("OnHeaderClick", "OnHeaderClick", 0);
 	SetEventHandler("TableSelectChange", "CS_TableSelectChange", 0);
 	SetEventHandler("noteOk","procNoteOk",0);
 
@@ -615,6 +616,7 @@ void IDoExit(int exitCode, bool bCode)
 	DelEventHandler("noteOk","procNoteOk");	
 	DelEventHandler("frame","IProcessFrame");
 	DelEventHandler("OnTableClick", "OnTableClick");
+	DelEventHandler("OnHeaderClick", "OnHeaderClick");
 	DelEventHandler("TableSelectChange", "CS_TableSelectChange");
 	DelEventHandler("ievnt_command","ProcessCommandExecute");
 
@@ -1007,6 +1009,12 @@ void OnTableClick()
     CurRow   =  "tr" + (iSelected);
 	CurCol   =  "td" + (iSelectedCol);
 	Table_UpdateWindow(sControl);
+}
+
+void OnHeaderClick()
+{
+	string sNode = GetEventData();
+	int iCol = GetEventData();
 }
 
 void CS_TableSelectChange()

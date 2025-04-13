@@ -370,7 +370,7 @@ bool BlackMark_QuestComplete(string sQuestName, string qname)
 		sld.dialog.filename = "Quest\BlackMark.c";
 		sld.dialog.currentnode = "BM_Irons_1";
 		LAi_SetActorType(sld);
-		sld.MusketerDistance = 10;
+		//sld.MusketerDistance = 10;
 		LAi_ActorDialog(sld, pchar, "", 1, 0);
 	}
 	
@@ -638,7 +638,6 @@ bool BlackMark_QuestComplete(string sQuestName, string qname)
 	else if (sQuestName == "BM_IronsCloneMushket") {
 		sld = CharacterFromID("IronsClone");
 		LAi_SetWarriorType(sld);
-		sld.MusketerDistance = 5;
 		LAi_group_MoveCharacter(sld, LAI_GROUP_PLAYER);
 	}
 	
@@ -961,7 +960,7 @@ bool BlackMark_QuestComplete(string sQuestName, string qname)
 		LAi_LocationFightDisable(loadedLocation, false);
 		sld = characterFromID("Irons");
 		LAi_SetCheckMinHP(sld, 1, true, "");
-		sld.MusketerDistance = 10;
+		//sld.MusketerDistance = 10;
 		Return_IronsOfficer();
 	
 		sld = characterFromID("BM_GabeCallow");

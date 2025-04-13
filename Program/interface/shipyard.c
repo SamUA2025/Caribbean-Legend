@@ -63,6 +63,7 @@ void InitInterface_R(string iniName, ref _shipyarder)
 	SetEventHandler("ShowInfoWindow","ShowInfoWindow",0);
 	SetEventHandler("MouseRClickUp","HideInfoWindow",0);
 	SetEventHandler("OnTableClick", "OnTableClick", 0);
+	SetEventHandler("OnHeaderClick", "OnHeaderClick", 0);
 	SetEventHandler("TableSelectChange", "TableSelectChange", 0);
 	SetEventHandler("ExitMsgMenu", "ExitMsgMenu", 0);
 	SetEventHandler("ExitRepairMenu", "ExitRepairMenu", 0);
@@ -125,6 +126,7 @@ void IDoExit(int exitCode)
 	DelEventHandler("ShowInfoWindow","ShowInfoWindow");
 	DelEventHandler("MouseRClickUp","HideInfoWindow");
 	DelEventHandler("OnTableClick", "OnTableClick");
+	DelEventHandler("OnHeaderClick", "OnHeaderClick");
 	DelEventHandler("TableSelectChange", "TableSelectChange");
 	DelEventHandler("ExitMsgMenu", "ExitMsgMenu");
 	DelEventHandler("ShowOtherClick", "ShowOtherClick");
@@ -662,6 +664,12 @@ void OnTableClick()
 	FillShipParam(refNPCShipyard);
 	bShipyardOnTop = true;
 	SetButtonsAccess();
+}
+
+void OnHeaderClick()
+{
+	string sNode = GetEventData();
+	int iCol = GetEventData();
 }
 
 void ExitRPGHint()

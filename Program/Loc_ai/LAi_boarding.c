@@ -153,6 +153,11 @@ void LAi_StartBoarding(int locType, ref echr, bool isMCAttack)
 		}
 	}
 	
+	if(!GetAchievement("ach_CL_123") && locType != BRDLT_FORT)
+ 	{
+ 		if(GetHullPercent(mchr)<10.0) Achievment_Set("ach_CL_123");
+ 	}
+	
 	// Сдача в плен -->
 	bool ok = (TestRansackCaptain) && (boarding_location_type != BRDLT_FORT);
     if (!CheckAttribute(echr, "DontRansackCaptain")) //квестовые не сдаются

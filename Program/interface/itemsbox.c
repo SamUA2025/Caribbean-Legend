@@ -178,6 +178,7 @@ void InitInterface_RS(string iniName, ref itemsRef, string faceID)
 	SetEventHandler("ievnt_command","ProcCommand",0);
 	SetEventHandler("evntDoPostExit","DoPostExit",0);
 	SetEventHandler("OnTableClick", "OnTableClick", 0);
+	SetEventHandler("OnHeaderClick", "OnHeaderClick", 0);
 	SetEventHandler("MouseRClickUP","EndTooltip",0);
 	SetEventHandler("ShowItemInfo", "ShowItemInfo", 0);
 	SetEventHandler("ShowBoxMove", "ShowBoxMove", 0);
@@ -523,6 +524,7 @@ void IDoExit(int exitCode)
 	DelEventHandler("evntDoPostExit","DoPostExit");
 
 	DelEventHandler("OnTableClick", "OnTableClick");
+	DelEventHandler("OnHeaderClick", "OnHeaderClick");
 	DelEventHandler("MouseRClickUP","EndTooltip");
 	DelEventHandler("ShowItemInfo", "ShowItemInfo");
 	DelEventHandler("ShowBoxMove", "ShowBoxMove");
@@ -1297,6 +1299,12 @@ void OnTableClick()
 	
 	string sRow = "tr" + (iRow + 1);
 	Table_UpdateWindow(sControl);
+}
+
+void OnHeaderClick()
+{
+	string sNode = GetEventData();
+	int iCol = GetEventData();
 }
 
 void ChangePosTable()

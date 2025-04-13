@@ -550,7 +550,7 @@ void Alamida_abordage_OfficerPodhodit(string sQuest)
 	{
 		sld = GetCharacter(CreateCharacterClone(CharacterFromID("Irons"), 0));
 		sld.id = "Irons_Clone";
-		sld.MusketerDistance = 10;
+		//sld.MusketerDistance = 10;
 		ChangeCharacterAddressGroup(sld, PChar.location, "reload", "reload1");
 		sld.Dialog.FileName = "Quest\SantaMisericordia_dialog.c";
 		sld.dialog.currentnode = "Alamida_Tommi";
@@ -562,7 +562,7 @@ void Alamida_abordage_OfficerPodhodit(string sQuest)
 	{
 		sld = GetCharacter(CreateCharacterClone(CharacterFromID("Tichingitu"), 0));
 		sld.id = "Tichingitu_Clone";
-		sld.MusketerDistance = 10;
+		//sld.MusketerDistance = 10;
 		ChangeCharacterAddressGroup(sld, PChar.location, "reload", "reload1");
 		sld.Dialog.FileName = "Quest\SantaMisericordia_dialog.c";
 		sld.dialog.currentnode = "Alamida_Tichingitu";
