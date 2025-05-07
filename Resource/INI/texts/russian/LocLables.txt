@@ -57,7 +57,7 @@ BasTer_town	{Бас-Тер}
 SantoDomingo_town	{Санто-Доминго}
 LaVega_town	{Ла Вега}
 PortPax_town	{Порт-о-Пренс}
-PortRoyal_town	{Порт-Ройял}
+PortRoyal_town	{Порт-Ройал}
 Maracaibo_town	{Маракайбо}
 FortFrance_town	{Сен-Пьер}
 LeFransua_town	{Ле Франсуа}
@@ -89,18 +89,18 @@ Shore8	{бухта Четумаль}
 Shore9	{бухта Аматике}
 Shore10	{лагуна Каратаска}
 Shore11	{мыс Камагуэй}
-Shore12	{залив Анна Мария}
+Shore12	{залив Анна-Мария}
 Shore13	{залив Батабано}
 Shore14	{бухта Хувентуд}
-Shore15	{мыс Сан Антонио}
+Shore15	{мыс Сан-Антонио}
 Shore16	{Пустынный пляж}
 Shore17	{залив Эсмеральды}
-Shore18	{берег Бока де ла Сьерпе}
+Shore18	{берег Бока-де-ла-Сьерпе}
 Shore19	{бухта Карупано}
 Shore20	{пляж Лос Текес}
 Shore21	{мыс Аруба}
 Shore22	{берег Ван Хато}
-Shore23	{мыс Санта Мария}
+Shore23	{мыс Санта-Мария}
 Shore24	{лагуна Бланка}
 Shore25	{бухта Ковеньяс}
 Shore26	{пляж Касл Брус}
@@ -132,7 +132,7 @@ Shore51	{залив Коронадо}
 Shore52	{залив Гольфо Дульсе}
 Shore53	{Берег Москитов}
 Shore54	{мыс Перлас}
-Shore55	{залив Сан Хуан дель Норте}
+Shore55	{залив Сан-Хуан дель Норте}
 Shore56	{залив Северный}
 Shore57	{залив Южный}
 Shore58	{пляж Глаз Рыбы}
@@ -140,7 +140,7 @@ Shore59	{бухта Скарборо}
 Shore60	{мыс Галера}
 Shore61	{Тепейакак}
 Shore62	{Истапалапу}
-Shore63	{залив Сан Мигель}
+Shore63	{залив Сан-Мигель}
 Shore64 {Рифовая бухта}
 Shore65 {бухта Скалистая}
 Shore66 {Акулий пляж}
@@ -170,7 +170,7 @@ Shore_mask {грот Стража}
 
 Mayak1 {Маяк Тринидада}
 Mayak2 {Маяк Барбадоса}
-Mayak3 {Маяк Порт-Ройяла}
+Mayak3 {Маяк Порт-Ройала}
 Mayak4 {Маяк Гваделупы}
 Mayak5 {Маяк Сент-Кристофера}
 Mayak6 {Маяк Тортуги}
@@ -205,10 +205,10 @@ SentJons Town {Сент-Джонс}
 SentJons Fort {форт Сент-Джонса}
 SentJons Port {порт Сент-Джонса}
 
-PortRoyal {Порт-Ройял}
-PortRoyal Town {Порт-Ройял}
-PortRoyal Fort {форт Порт-Ройяла}
-PortRoyal Port {порт Порт-Ройяла}
+PortRoyal {Порт-Ройал}
+PortRoyal Town {Порт-Ройал}
+PortRoyal Fort {форт Порт-Ройала}
+PortRoyal Port {порт Порт-Ройала}
 
 FortOrange {Марун-Таун}
 FortOrange Town {Марун-Таун}
@@ -313,8 +313,8 @@ SanAndres Town {Сан-Андрес}
 SanAndres Fort {форт Сан-Андреса}
 SanAndres Port {порт Сан-Андреса}
 
-IslaMona {Исла Мона}
-IslaMona Town {Исла Мона}
+IslaMona {Исла-Мона}
+IslaMona Town {Исла-Мона}
 
 Minentown {рудник Лос-Текес}
 Minentown Town {рудник Лос-Текес}

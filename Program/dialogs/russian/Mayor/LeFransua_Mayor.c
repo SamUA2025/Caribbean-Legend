@@ -158,7 +158,7 @@ void ProcessCommonDialogEvent(ref NPChar, aref Link, aref NextDiag)
 		break;
 		
 		case "CapComission3":
-			dialog.text = "Ну что, " + GetFullName(pchar) + ", пустил на дно моего приятеля?.. хе-хе-хе...";
+			dialog.text = "Ну что, " + GetFullName(pchar) + ", пустил на дно моего приятеля?.. Хе-хе-хе...";
 			if(pchar.GenQuest.CaptainComission.PirateShips == "goaway")
 			{
 				link.l1 = "Нет. Я не успел"+ GetSexPhrase("","а") +" их догнать. И на обратном пути они мне не попадались.";

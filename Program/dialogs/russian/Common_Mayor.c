@@ -288,7 +288,7 @@ void ProcessDialogEvent()
 						{// Addon-2016 Jason
 							if (npchar.city == "Bridgetown" || npchar.city == "Charles" || npchar.city == "FortFrance" || npchar.city == "Marigo" || npchar.city == "Panama" || npchar.city == "PortRoyal" || npchar.city == "SantoDomingo" || npchar.city == "Tortuga")
 							{
-        						dialog.text = "Послушайте, у меня есть к вам дело, хм.. несколько необычного порядка.";
+        						dialog.text = "Послушайте, у меня есть к вам дело, хм... несколько необычного порядка.";
 								link.l1 = "Слушаю вас внимательно.";
         						link.l1.go = "TakeRing_1";
 								SaveCurrentNpcQuestDateParam(npchar, "questTakeRing");
@@ -791,7 +791,7 @@ void ProcessDialogEvent()
 			link.l1.go = "TakeRing_3";
 		break;
 		case "TakeRing_3":
-			dialog.text = "Хм, сочувствия не требуется. Нужно вернуть кольцо. Разыщите до полуночи, и в случае успеха я буду очень щедр. А в случае неудачи - мне конец.";
+			dialog.text = "Хм, сочувствия не требуется. Нужно вернуть кольцо. Разыщите его до девяти вечера, и в случае успеха я буду очень щедр. А в случае неудачи - мне конец.";
 			link.l1 = "Понятно... А где конкретно вы могли его потерять? Вы что-нибудь можете сказать более или менее точно?";
 			link.l1.go = "TakeRing_4";
 		break;
@@ -803,7 +803,7 @@ void ProcessDialogEvent()
 			link.l2.go = "TakeRing_6";
 		break;	
 		case "TakeRing_5":
-			dialog.text = "Очень хорошо! Но помните - до полуночи вы должны его найти.";
+			dialog.text = "Очень хорошо! Но помните - сегодня до конца приёмного времени вы должны его найти и вернуть мне.";
 			link.l1 = "Я помню. Ждите меня с новостями.";
 			link.l1.go = "exit";
 			pchar.questTemp.different = "TakeMayorsRing";
